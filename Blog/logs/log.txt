@@ -33553,3 +33553,23 @@ INFO  2016-10-02 21:27:51,807 163912272ms WebRequestsCBR         GetCurrentCours
 INFO  2016-10-02 21:27:51,908 163912373ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
 INFO  2016-10-02 21:27:51,913 163912378ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/10/2016
 INFO  2016-10-02 21:27:51,993 163912458ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:34:05,912  3115ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=04/10/2016
+INFO  2016-10-03 20:34:06,124  3327ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:34:06,272  3475ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=03/10/2016
+INFO  2016-10-03 20:34:06,347  3550ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:34:08,894  6097ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=04/10/2016
+INFO  2016-10-03 20:34:09,006  6209ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:34:09,007  6210ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=03/10/2016
+INFO  2016-10-03 20:34:09,082  6285ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:39:08,898 306101ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=04/10/2016
+INFO  2016-10-03 20:39:08,984 306187ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:39:08,985 306188ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=03/10/2016
+INFO  2016-10-03 20:39:09,046 306249ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:45:26,750   202ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=04/10/2016
+INFO  2016-10-03 20:45:26,857   309ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:45:26,872   324ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=03/10/2016
+INFO  2016-10-03 20:45:26,949   401ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:47:46,401   219ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=04/10/2016
+INFO  2016-10-03 20:47:46,508   326ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200
+INFO  2016-10-03 20:47:46,521   339ms WebRequestsCBR         GetCurrentCourses  - http://www.cbr.ru/scripts/XML_daily.asp?date_req=03/10/2016
+INFO  2016-10-03 20:47:46,602   420ms WebRequestsCBR         GetCurrentCourses  - HttpAnswer: 200

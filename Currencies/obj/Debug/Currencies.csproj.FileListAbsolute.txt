@@ -3,3 +3,8 @@ D:\Проекты\ASP.NET MVC\Bankiru\Currencies\bin\Debug\Currencies.pdb
 D:\Проекты\ASP.NET MVC\Bankiru\Currencies\bin\Debug\log4net.dll
 D:\Проекты\ASP.NET MVC\Bankiru\Currencies\obj\Debug\Currencies.dll
 D:\Проекты\ASP.NET MVC\Bankiru\Currencies\obj\Debug\Currencies.pdb
+D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Debug\Currencies.dll
+D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Debug\Currencies.pdb
+D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Debug\log4net.dll
+D:\Проекты\ASP.NET MVC\probanki_net\Currencies\obj\Debug\Currencies.dll
+D:\Проекты\ASP.NET MVC\probanki_net\Currencies\obj\Debug\Currencies.pdb
