@@ -1,0 +1,107 @@
+﻿/*Фильтр
+--------------------------------------------------------------------*/
+#news-filters {
+    padding: 5px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+#news-filters .editor-field{
+    display: block;
+    float: left;
+    padding: 3px 5px;
+    position: relative;
+    height: 30px;
+    margin: 0;
+}
+
+#news-filters .editor-field-title input {
+    width: 340px;
+    padding: 3px;
+}
+#news-filters .editor-field-category select {
+    width: 160px;
+    padding: 3px;
+}
+#news-filters .editor-field-active select {
+    width: 120px;
+    padding: 3px;
+}
+
+#news-filters input[type=submit] {
+    height: 24px;    
+}
+
+
+/*Новая организация
+--------------------------------------------------------------------*/
+
+
+/*Редактирование организации
+--------------------------------------------------------------------*/
+#news-editor .editor-field input[type=text],
+#news-editor .editor-field select{
+    padding: 5px;
+    border: 1px solid #9ba6b3;
+}
+
+#news-editor .editor-field{
+    margin: 0 0 3px 0;
+}
+
+#news-editor .editor-field-alias span,
+#news-editor .editor-field-icon span{
+    font-weight: 600;
+    color: navy;
+}
+
+#news-editor .editor-title, #news-editor .editor-main, 
+#news-editor .editor-images, #news-editor .editor-meta, 
+#news-editor .editor-lists, #news-editor .editor-date {
+    padding: 10px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+}
+
+#news-editor .editor-title input[type=text]{
+    width: 930px;
+}
+
+#news-editor .editor-main input[type=text]{
+    width: 930px;
+}
+
+#news-editor .editor-images input[type=text]{
+    width: 500px;
+}
+
+#news-editor .editor-meta input[type=text]{
+    width: 930px;
+}
+
+#news-editor .editor-label {
+    color: #76818f;
+}
+
+#news-editor input[type=submit]{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#news-editor #Title{
+    font-size:1.2em;
+}

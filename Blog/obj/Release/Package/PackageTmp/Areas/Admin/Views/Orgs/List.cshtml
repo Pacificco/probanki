@@ -1,0 +1,32 @@
+﻿@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_Orgs
+@{
+    ViewBag.Title = "Организации";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";    
+}
+@section styles{
+    @Styles.Render("~/Content/admin/orgs/css")
+}
+@section adminTools{
+    <div id="admin-tools">
+        <p>@Html.ActionLink("Создать новую организацию", "New")</p>
+    </div>
+}
+@section scripts
+{
+    <script>
+        $("#content .del-org").click(function (event) {
+            var orgName = $(this).attr("data-org-name");
+            if (!confirm("Вы действительно хотите удалить " + orgName + "?"))
+            {
+                event.preventDefault();
+            }
+        });
+    </script>
+}
+@Html.Action("_getOrgListFilter", "Orgs", new {filter = Model.Filters })
+@Html.Action("_getOrgList", "Orgs", new { model = Model})
+@Html.PageLinks(@Model.PagingInfo, x => Url.Action("List", "Orgs", new { categoryId = Model.Filters.CategoryId,
+    regionId = Model.Filters.RegionId, title = Model.Filters.Title, IsActive = (int)Model.Filters.IsActive, page = x }))
+

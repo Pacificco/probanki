@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="@ViewBag.metaRobots" />    
+    <base href="http://probanki.net/" />
+    <title>@ViewBag.metaTitle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="@ViewBag.metaKeywords" />
+    <meta name="description" content="@ViewBag.metaDescription" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/arts/css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="header">
+        <div id="header-inner">
+            <section id="header-line-top">
+                <div id="logo">
+                    <a href="/" title="ProBanki.net - профессиональное мнение">
+                        <img src="~/Content/system/logo.jpg" title="ProBanki.net - профессиональное мнение о финансовом рынке РФ и финансовых учреждениях Воронежского региона" alt="ProBanki.net" />
+                    </a>
+                </div>
+                <aside id="top-baner">
+                    <img src="~/Content/baners/top.jpg" title="ProBanki.net - профессиональное мнение о финансовом рынке РФ и финансовых учреждениях Воронежского региона" alt="ProBanki.net" />                    
+                </aside>
+                <aside id="login">
+                    
+                </aside>
+            </section>
+            @Html.Action("_getModuleMainMenu", "Home", new { current_item = String.IsNullOrEmpty(ViewBag.CurrentMenuItem) ? "" : ViewBag.CurrentMenuItem })
+        </div>
+    </header>
+    <section id="wrapper">
+        <div id="column-middle-left">            
+            <div id="main">
+                @if (ViewData["InfoMessage"] != null)
+                { 
+                    <div id="info-title">@Convert.ToString(ViewData["InfoMessage"])</div>
+                }
+                @if (ViewData["WarningMessage"] != null)
+                { 
+                    <div id="warning-title">@ViewData["WarningMessage"]</div>
+                }
+                @if (ViewData["ErrorMessage"] != null)
+                { 
+                    <div id="error-title">@Convert.ToString(ViewData["ErrorMessage"])</div>
+                }
+                @RenderSection("middle_top", required: false)
+                @RenderBody()                
+                @RenderSection("middle_bottom", required: false)
+            </div>            
+            <div id="column-left">
+                <div id="column-left-top"></div>
+                @RenderSection("left_top", required: false)
+                @RenderSection("left_middle", required: false)
+                @RenderSection("left_bottom", required: false)
+                <div id="column-left-bottom"></div>
+            </div>
+        </div>
+        <div id="column-right">
+            <div id="column-right-top"></div>   
+            <section id="currencies">         
+                <h3>Курсы валют</h3>
+                <p>Курс ЦБ РФ на @Bankiru.Models.OutApi.CurrenciesManager.RateDate</p>
+                @Html.Raw(Bankiru.Models.OutApi.CurrenciesManager.CurrenciesToHtml())                
+            </section>
+            @RenderSection("right_top", required: false)
+            @RenderSection("right_middle", required: false)
+            @RenderSection("right_bottom", required: false)
+            <div id="column-right-bottom"></div>
+        </div>
+        <div id="wrapper2"></div>        
+    </section>
+    <footer id="footer">
+        <section id="footer-wrapper">
+            <div id="footer-advertising">
+                <p class="p-header">Реклама на сайте</p>
+            </div>
+            <div id="copyright">
+                <img src="~/Content/system/logo.jpg" title="ProBanki.net - профессиональное мнение" alt="ProBanki.net" /><br />
+                © @DateTime.Now.Year.ToString() г. ProBanki.net<br />                                                
+            </div>
+            <div id="footer-top"></div>    
+        </section>        
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+    @Html.Action("_getModuleCounters", "Home", null);
+   
+</body>
+</html>

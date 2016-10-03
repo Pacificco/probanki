@@ -1,0 +1,57 @@
+﻿@model Bankiru.Models.Domain.Home.VM_Feedback
+@{
+    ViewBag.metaTitle = "Банки. Курсы валют на сегодня. ProBanki.net";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "feedback";
+}
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = "Общие вопросы",
+        Value = "question",
+        Selected = true
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Техническая поддержка",
+        Value = "support",
+        Selected = false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "По вопросам  рекламы",
+        Value = "marketing",
+        Selected = false
+    });
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home")
+    <section class="leave-review">
+        <a href="№" title="Оставить отзыв">
+            <img src="~/Content/system/leave_review.png" title="Оставить отзыв" alt="Оставить отзыв" />
+        </a>
+    </section>
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<section id="feedback">
+    <hgroup>
+        <h1>
+            <span>Форма обратной связи</span>
+        </h1>
+        <h2>Вы можете направить нам свои вопросы, предложения или замечания.</h2>
+    </hgroup>
+    <p>Наши специалисты в кратчайшие сроки рассмотрят Ваше сообщение, после чего Вам будет направлено ответное письмо (в случае если Вы указали реальный email).</p>
+</section>

@@ -1,0 +1,90 @@
+﻿table.org-reviews {
+    width: 980px;
+    border: 2px solid #c8ceda;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.org-reviews tr {
+    background: #ffffff;
+}
+table.org-reviews tr.evel {
+    background: #f4f5f8;
+}
+
+table.org-reviews td {
+    border-right: 1px solid #c8ceda;
+}
+
+table.org-reviews th {
+    background: #3d3d3d;
+    background: url(/Content/system/bg-dark-strips.gif) top left repeat;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+table.org-reviews td.tools, table.org-reviews td.confirmed, table.org-reviews td.published, 
+table.org-reviews td.org-title, table.org-reviews td.author, table.org-reviews td.id {
+    text-align: center;
+}
+
+table.org-reviews th.tools {
+    width: 7%;    
+}
+table.org-reviews th.confirmed {
+    width: 3%;    
+}
+table.org-reviews th.published {
+    width: 3%;    
+}
+table.org-reviews th.review-text {
+    width: 50%;
+}
+table.org-reviews th.org-title {
+    width: 20%;
+}
+table.org-reviews th.author {
+    width: 12%;
+}
+table.org-reviews th.id {
+    width: 5%;    
+}
+
+table.org-reviews td {
+    border-bottom: 1px solid #c8ceda;
+}
+
+table.org-reviews td {
+    padding: 5px;
+}
+
+table.org-reviews th {
+    padding: 8px 4px;
+}
+
+table.org-reviews td a{
+    color: #5280c5;
+    text-decoration: underline; 
+}
+table.org-reviews td a:hover{
+    color: #5f88be;
+    text-decoration: none; 
+}
+table.org-reviews td img.indicator {
+    display: none;
+}
+table.org-reviews td span.alias {
+    font-size: 0.8em;
+    color: gray;
+}
+table.org-reviews td.phones,
+table.org-reviews td.schedule,
+table.org-reviews td.region,
+table.org-reviews td.point-type {
+    font-size: 0.9em;
+}
+table.org-reviews td.schedule p {
+    margin: 0;
+    padding: 0;
+}

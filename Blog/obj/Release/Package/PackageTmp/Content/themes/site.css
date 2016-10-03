@@ -1,0 +1,1339 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;   
+    background:url(/Content/system/bg-body.png) top left repeat-x;
+    background-color: #f1f3fb;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+textarea, input, select {    
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-size: 1.0em;
+}
+header, footer, nav, section, aside, article {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+div {
+     margin: 0;
+     padding: 0;
+     display: block;
+     /*border: 1px solid gray;*/
+}
+a:hover {
+   text-decoration: none;    
+}
+h1, h2, h3 {
+    font-size: 1.1em;
+    margin: 5px;
+    padding: 5px;
+}
+/* Сообщения
+-----------------------------------------------------------*/
+#error-title {
+    background-color: #ffc7c7;
+    border: dashed 1px maroon;
+    color: red;
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#warning-title {
+    background-color: #ffdcbb;
+    border: dashed 1px #dc7505;
+    color: black;
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#info-title {
+    background-color: #dcf8ff;
+    border: dashed 1px navy;
+    color: navy;
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+textarea {
+    min-height: 75px;
+}
+.editor-label {
+    margin: 1em 0 0 0;
+}
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+.field-validation-valid {
+    display: none;
+}
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+.validation-summary-valid {
+    display: none;
+}
+
+/* Общие классы
+-----------------------------------------------------------*/
+.text-red {
+    color: red;
+}
+.text-navy {
+    color: navy;
+}
+img.left-float {
+    float: left;
+    margin: 0 10px 5px 0;
+}
+img.right-float {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+/* Header
+-----------------------------------------------------------*/
+header {
+    position: relative;
+    width: 100%;    
+    background: none;
+    overflow: hidden;    
+}
+#header-inner {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    background:url(/Content/system/bg-top.png) 770px 0px no-repeat;
+}
+#header-line-top {
+    height: 90px;
+    /*background-color: #ffffff;*/
+    width: 1200px;
+    position: relative;        
+}
+#logo {
+    width: 240px;
+    position: relative;
+    float: left;
+    margin: 15px 10px 0 20px;    
+}
+
+/* Банер верхний
+-----------------------------------------------------------*/
+#top-baner {    
+    position: relative;
+    float: left;
+    /*border: 2px solid #e9edf0;*/
+    background-color: white;
+    padding: 3px;
+    margin-top: 9px;    
+}
+
+/* Курсы валют
+-----------------------------------------------------------*/
+#currencies {    
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+#currencies h3{
+    text-transform: uppercase;
+    color: #ffffff;
+    background: none;
+    background: url(/Content/system/right_column_h3_bg.png) top left no-repeat;
+    height: 28px;
+    padding: 5px 0 0 26px;
+    margin: 5px 0;
+}
+#currencies p {
+    color: white;
+    padding: 0 0 0 10px;
+}
+#currencies .currency {    
+    overflow: hidden;    
+    margin: 0;
+    padding: 0 0 0 10px;
+    display: block;
+    color: #87afe2;    
+    float: left;
+}
+#currencies .currency-name {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+#currencies .currency-rate {
+    margin: 0 7px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ffff9b;    
+}
+#currencies .currency-up {
+    color: #c8ffa0;
+    padding-left: 20px;
+}
+#currencies .currency-down {
+    color: #ff87a5;    
+    padding-left: 40px;
+}
+
+#login {
+    width: 240px;
+    position: relative;
+    float: right;
+}
+
+/* Верхнее меню
+-----------------------------------------------------------*/
+#top-menu {
+    height: 60px;
+    background: none;
+    width: 1200px;
+    position: relative;     
+    padding-top: 10px;
+}
+#top-menu ul {
+    list-style-type: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    position: relative;
+}
+#top-menu ul li {
+    float: left;
+    position: relative;
+    margin: 0 2px;
+    padding: 0;
+}
+#top-menu ul li a {
+    text-decoration: none;
+    color: #373c40;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px;
+}
+#top-menu ul li a:hover {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.50);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+#top-menu ul li.current a,
+#top-menu ul li.current a:hover {    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #4b78bc;
+    background-color: #87afe2;
+    color: white; 
+}
+
+/* Wrapper
+-----------------------------------------------------------*/
+#wrapper {
+    width: 1200px;    
+    padding: 0 0 50px 0;
+    margin: 0 auto;
+    position: relative;
+    background: none;
+    overflow: hidden;
+    /*background: url(/Content/system/right_column_top.png) 908px 0px no-repeat;*/
+}
+#wrapper2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 78%;
+    background-color: white;
+    z-index: -1;
+}
+
+/* Центральная и левая колонка
+-----------------------------------------------------------*/
+#column-middle-left {
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 78%;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Левая колонка
+-----------------------------------------------------------*/
+#column-left {
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 25%;
+    padding: 10px 0 50px 0;
+    background: none;
+    background: url(/Content/system/left_column_bg.jpg) top right repeat-y;
+}
+#column-left-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/Content/system/left_column_top_bg.png) top left repeat-x;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+}
+#column-left-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(/Content/system/left_column_bottom_bg.png) top left repeat-x;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+
+/* Левая колонка МЕНЮ
+-----------------------------------------------------------*/
+#column-left section.org-menu {
+    padding-left: 15px;
+}
+#column-left section.org-menu h3{
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 0 10px 5px;
+    margin: 10px 0 5px 0;
+}
+#column-left section.org-menu ul{
+    position: relative;    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+    background: url(/Content/system/org_menu_item_separator_bg.jpg) top right no-repeat;
+}
+#column-left section.org-menu ul li{        
+    background: url(/Content/system/org_menu_item_separator_bg.jpg) bottom right no-repeat;
+}
+#column-left section.org-menu ul li a {
+    text-decoration: none;
+    color: #373c41;
+    padding: 7px 10px 10px 18px;
+    display: block;
+    background: url(/Content/system/org_menu_item_bg.png) left center no-repeat;
+}
+#column-left section.org-menu ul li.current a,
+#column-left section.org-menu ul li.current a:hover {
+    color: #6594d6;
+    font-weight: 500;
+    background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
+}
+#column-left section.org-menu ul li a:hover {    
+    color: #6594d6;
+    background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
+}
+
+/* Левая колонка ОСТАВИТЬ ОТЗЫВ
+-----------------------------------------------------------*/
+#column-left section.leave-review {    
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+
+/* Левая колонка ПОСЛЕДНИЕ КОММЕНТАРИИ
+-----------------------------------------------------------*/
+#column-left section.last-comments {
+    padding-left: 10px;
+}
+#column-left section.last-comments h3{
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 0 10px 10px;
+    margin: 10px 0 0 0;
+}
+#column-left section.last-comments ul.comments{
+    position: relative;    
+    list-style-type: none;
+    margin: 0 12px 0 2px;
+    padding: 0;
+    font-size: 0.95em;
+    background: url(/Content/system/left_column_item_separator.png) center top repeat-x;
+}
+#column-left section.last-comments ul.comments li{
+    margin: 5px 0 5px 0;
+    padding: 5px 0 10px 0;    
+    background: url(/Content/system/left_column_item_separator.png) center bottom repeat-x;
+}
+#column-left section.last-comments ul.comments li span.comment-author {
+    color: gray;
+}
+#column-left section.last-comments ul.comments li span.comment-date {
+    color: #5280c5;
+}
+#column-left section.last-comments ul.comments li span.comment-text {
+    color: #373c41;
+}
+#column-left section.last-comments ul.comments li span.comment-readmore a{
+    color: #4972b1;    
+    text-decoration: underline;
+}
+#column-left section.last-comments ul.comments li span.comment-readmore a:hover{
+    text-decoration: none;
+}
+
+/* Главный блок
+-----------------------------------------------------------*/
+#main {
+    position: relative;
+    float: right;
+    margin: 0;
+    width: 75%;
+    padding: 0;
+    background: none;
+    overflow:hidden;
+}
+
+/* Правая колонка
+-----------------------------------------------------------*/
+#column-right {
+    position: relative;
+    float: right;
+    margin: 30px 0 0 0;
+    width: 22%;
+    padding: 10px 0 0 0;
+    background-color: #485566;
+    background: url(/Content/system/bg-dark-strips.gif) top left repeat;
+}
+#column-right-bottom {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    background: url(/Content/system/right_column_bottom.png) top left no-repeat;
+    width: 50px;
+    height: 38px;
+    z-index: 3;
+}
+#column-right-top {
+    position: absolute;
+    top: -30px;
+    left: -28px;
+    background: url(/Content/system/right_column_top.png) top left no-repeat;
+    width: 65px;
+    height: 58px;
+    z-index: -1;
+}
+
+/* Правая колонка НОВОСТИ
+-----------------------------------------------------------*/
+#column-right section.last-news {
+    padding: 0;    
+    margin: 0;
+}
+#column-right section.last-news h3{
+    text-transform: uppercase;
+    color: #ffffff;
+    background: none;
+    background: url(/Content/system/right_column_h3_bg.png) top left no-repeat;
+    height: 28px;
+    padding: 5px 0 0 26px;
+    margin: 5px 0;
+}
+#column-right section.last-news ul.news{
+    position: relative;    
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 0;
+    font-size: 0.95em;
+}
+#column-right section.last-news ul.news li{
+    margin: 5px 0 5px 0;
+    background-color: #5a697c;
+    background-color: rgba(90,105,124,0.54);
+    padding: 5px 7px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#column-right section.last-news ul.news li:hover{    
+    background-color: #5c708a;
+    background-color: rgba(126,157,200,0.33);
+}
+#column-right section.last-news ul.news li span.news-title {
+    color: white;
+}
+#column-right section.last-news ul.news li span.news-date {
+    color: #b1d3fd;
+}
+#column-right section.last-news ul.news li span.news-readmore a{
+    color: #b1d3fd;
+    /*padding-left: 140px;*/
+    text-decoration: underline;
+}
+#column-right section.last-news ul.news li span.news-readmore a:hover {
+    text-decoration: none;
+}
+#column-right section.last-news p.all-news-readmore {
+    text-align: right;
+    margin: 8px 10px 20px 10px;
+}
+#column-right section.last-news p.all-news-readmore a{
+    color: #b1d3fd;    
+    text-decoration: underline;
+}
+#column-right section.last-news p.all-news-readmore a:hover{
+    text-decoration: none;
+}
+
+/* Последние отзывы на главной странице
+-----------------------------------------------------------*/
+#main .last-reviews {
+    position: relative;
+    padding: 0;
+    margin: 10px;
+    border-top: 2px dashed #d2dde6;
+}
+#main .reviews{
+    position: relative;    
+    overflow: hidden;
+}
+#main .review{
+    position: relative;    
+    overflow: hidden;
+}
+#main .review-arrow {
+    position: absolute;
+    z-index: 5;
+    left: -8px;
+    top: 20px;
+    width: 8px;
+    height: 15px;
+    background: url(/Content/system/review_arrow.png) top left no-repeat;
+}
+#main .last-reviews h3 {
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 0 10px 10px;
+    margin: 5px 0 0 0;
+    margin-bottom: 10px;
+}
+#main .review-left-column {
+    position: relative;
+    float: left;
+    width: 70px;
+}
+#main .review-main-column {
+    position: relative;
+    float: right;
+    width: 580px;
+    border: 1px solid #d3dde6;
+    background-color: #f5f6fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#main .review-main-column p{
+    margin: 0 0 5px 0;
+}
+#main .review-main-column .review-org a{
+    color: #3f4b5b;
+    font-size: 1.2em;
+}
+#main .review-main-column .review-author{
+    color: #5180c4;
+}
+#main .review-main-column .review-author time {
+    color: #71859d;
+    font-size: 0.9em;
+}
+#main .review-main-column .review-raiting {
+    color: gray;
+    margin: 0 0 5px 10px;
+    float: right;
+    width: 80px;
+}
+#main .review-main-column .green{
+    color: green;
+}
+#main .review-main-column .red{
+    color: red;
+}
+#main .review-main-column .orange{
+    color: orange;
+}
+#main .review-main-column .navy{
+    color: navy;
+}
+#main .review-main-column .violet{
+    color: darkviolet;    
+}
+#main .review-main-column .review-raiting-value {
+    font-size: 1.3em;
+}
+#main .review-main-column .review-readmore {
+    text-align: right;
+}
+#main .review-main-column .review-readmore a {
+    color: #4972b1;
+}
+
+/* Список организаций
+-----------------------------------------------------------*/
+#orgs-list {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#orgs-list h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#orgs-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#orgs-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#orgs-list .org-list-header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#orgs-list .org-list-letters {    
+    position: relative;    
+}
+#orgs-list .org-list-letters a{
+    font-size: 1.0em;
+    color: #5280c5;
+    font-weight: 500;
+    margin-right: 5px;
+}
+#orgs-list .org-list-letters a.current {
+    background-color: #83abe0;
+    padding: 3px;
+    color: white;
+    text-decoration: none;    
+}
+#orgs-list .org-list-letters span {
+    margin-left: 10px;    
+}
+#orgs-list .org-list-letters span {
+    color: #75818f;
+}
+#orgs-list .org-list-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+}
+#orgs-list .org-list-count span {
+    color: black;
+}
+#orgs-list table.orgs tr.odd {
+    /*background-color :#f5f6fa;*/
+    background-color :#f0faff;
+}
+#orgs-list table.orgs td.logo{
+    width: 120px;    
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+#orgs-list table.orgs td.logo a img {
+    max-width: 100px;
+    max-height: 80px;
+}   
+#orgs-list table.orgs td.title{
+    width: 530px;    
+    padding: 5px;
+}
+#orgs-list table.orgs td p{
+    margin: 0 0 5px 0;
+}
+#orgs-list table.orgs td p span.org-title {
+    margin: 0;    
+}
+#orgs-list table.orgs td p span.org-title a{    
+    font-size: 1.3em;
+    color: black;
+}
+#orgs-list table.orgs td p span.org-points a{
+    color: #4972b1;       
+}
+#orgs-list table.orgs td p span.org-reviews {
+    margin-left: 10px;
+}
+#orgs-list table.orgs td p span.org-reviews a{
+    color: #4972b1;    
+}
+
+/* Организация детали
+-----------------------------------------------------------*/
+#org-detail,
+#org-review-detail {
+    padding: 10px 15px 0px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#org-detail h1,
+#org-review-detail h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#org-detail h1 span,
+#org-review-detail h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#org-detail h2,
+#org-review-detail h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#org-detail .org-menu,
+#org-review-detail .org-menu {
+    position: relative;
+    overflow: hidden;    
+    margin: 10px 0 0 5px;
+    background: url(/Content/system/border_pixel.gif) left bottom repeat-x;
+}
+#org-detail .org-menu div,
+#org-review-detail .org-menu div{
+    font-size: 1.2em;
+    padding: 5px 10px 5px 10px;
+    border-left: 1px solid #d2dde6;
+    border-top: 1px solid #d2dde6;
+    border-right: 1px solid #d2dde6;
+    border-bottom: 1px solid #d2dde6;        
+    float: left;
+    position: relative;
+    background-color: #f5f6f9;
+    margin-left: 10px;
+    font-weight: 500;
+}
+#org-detail .org-menu .current,
+#org-review-detail .org-menu .current {
+    border-bottom: 1px solid #ffffff;
+    background-color: white;
+}
+#org-detail .org-menu a,
+#org-review-detail .org-menu a{
+    color: #5280c5;
+}
+#org-detail .logo{
+    float: left;
+    padding: 0 10px 10px 0;
+}
+#org-detail .logo img{
+    max-width: 150px;
+}
+#org-detail .org-desc {
+    padding: 5px 10px 0 10px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+#org-detail .org-desc p {
+    text-indent: 30px;
+    text-align: justify;
+}
+#org-detail .org-desc .org-desc-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    background: url(/Content/system/left_column_bottom_bg.png) top left repeat-x;
+    display: none;
+}
+#org-detail .org-desc-show {
+    margin: 0 0 10px 0;
+    background: url(/Content/system/border_pixel.gif) top left repeat-x;
+    display: none;
+    position: relative;    
+    text-align: center;
+    clear: both;
+}
+#org-detail .org-desc-show img{
+    cursor: pointer;
+}
+/* Отзывы на странице организации
+-----------------------------------------------------------*/
+.org-reviews-readmore {
+    text-align: right;
+    margin: 0 10px;
+    padding-right: 10px;
+}
+.org-reviews-readmore a {
+    color: #5280c5;
+    font-size: 1.2em;
+}
+/* Отзывы организации
+-----------------------------------------------------------*/
+#org-detail .org-reviews,
+#org-review-detail .org-review {
+    margin-top: 10px;
+}
+#org-detail .org-reviews-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*padding-left: 70px;*/
+    /*text-align: right;*/
+}
+#org-detail .org-reviews-count span {
+    color: black;
+}
+/* Форма отзыва
+-----------------------------------------------------------*/
+.org-reviews-form-link{
+    margin-left: 10px;
+    margin-right: 70px;
+}
+.org-reviews-form-link span{
+    color: gray;
+    padding-top: 5px;    
+}
+#module-form-review {    
+    border: 2px dashed #c2cbd7;
+    padding: 20px;
+    margin: 20px 10px 10px 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: url(/Content/system/form_review_bg.png) top right no-repeat;
+    background-color: #f5f7f9;
+}
+#module-form-review h3{
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 5px 0 5px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#form-review label {
+    color: #75818f;
+}
+#form-review #UserName
+{
+    padding: 5px;
+    color: #3c4249;
+    width: 300px;
+}
+#form-review #ReviewText{
+    padding: 5px;
+    color: #3c4249;
+    width: 620px;
+    height: 100px;
+}
+#form-review #Rating {
+    padding: 5px;
+    color: #39397b;
+    margin-left: 5px;
+}
+#form-review #CaptchaCode
+{
+    padding: 5px;
+    color: #3c4249;
+    width: 88px;
+}
+#form-review .editor-field-submit {
+    padding-top: 10px;
+}
+#form-review input[type=submit] {
+    padding: 5px 10px;
+}
+
+/* Captcha
+-----------------------------------------------------------*/
+#captcha-block {
+    padding-bottom: 5px
+}
+#captcha-refresh-link{
+    
+}
+#imgCaptchaRefresh {
+    opacity: 0.4;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#imgCaptchaRefresh:hover {
+    opacity: 1.0;
+}
+#review-creating {
+    display: none;
+}
+#comment-creating {
+    display: none;
+}
+#review-created {
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+/* Офисы и банкоматы организации
+-----------------------------------------------------------*/
+#org-points-menu {
+    margin-top: 10px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+}
+#org-points-menu a {
+    display: block;
+    padding: 5px 10px 7px 10px;
+    margin-left: 10px;
+    border: 1px solid #d2dde6;
+    background-color: #f4f6f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: underline;
+    color: #5280c5;
+    float: left;
+    cursor: pointer;
+}
+#org-points-menu .current,
+#org-points-menu a:hover {
+    text-decoration: none;    
+    color: #000000;
+    border: 1px solid #8badd8;
+    background-color: #dfe8f3;
+    font-weight: 500;
+}
+#org-detail .org-points-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+#org-detail .org-points-count span {
+    color: black;
+}
+#org-office-list,
+#org-atm-list {
+    list-style-type: none;  
+    margin: 5px 0;
+    position: relative;
+    padding: 5px 0 0 0;
+}
+#org-office-list li,
+#org-atm-list li {
+    /*padding: 5px;*/
+    /*position: relative;*/
+    white-space: nowrap;
+    padding: 10px 5px 10px 14px;
+    border-bottom: 2px solid #ecf0f1;
+}
+#org-office-list li.header,
+#org-atm-list li.header{
+    background-color :#dfe8f3;
+    font-weight: 500;
+}
+#org-office-list li div,
+#org-atm-list li div {
+    /*position: relative;
+    float: left;*/
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 1%;
+}
+#org-office-list li div p,
+#org-atm-list li div p{
+    margin: 0;
+    padding: 0;
+}
+/* Офисы */
+#org-office-list li .office-title {
+    width: 30%;
+}
+#org-office-list li .office-address {
+    width: 40%;
+}
+#org-office-list li .office-schedule {
+    width: 25%;    
+    color: #3c4249;
+}
+/* Банкомат */
+#org-atm-list li .atm-title {
+    width: 30%;
+}
+#org-atm-list li .atm-address {
+    width: 40%;
+}
+#org-atm-list li .atm-schedule {
+    width: 25%;    
+    color: #3c4249;
+}
+#org-office-list li .office-title span,
+#org-atm-list li .atm-title span{
+    color: #6594d6;
+    font-size: 0.9em;
+}
+#org-office-list li .office-address .office-phone{
+    color: navy;    
+}
+
+/* Список новостей
+-----------------------------------------------------------*/
+#news-list {
+    padding: 10px;
+    position: relative;    
+    overflow: hidden;
+}
+#news-list h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#news-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#news-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#news-list .news-list-header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#news-list .news-list-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+    padding-left: 0px;
+}
+#news-list .news-list-count span {
+    color: black;
+}
+#news-list ul.news {
+    padding: 5px;
+    margin: 0;
+    list-style-type: none;
+}
+#news-list ul.news li{
+    margin-bottom: 7px;
+}
+#news-list ul.news li time {
+    font-size: 0.9em;
+    color: #75818f;
+}
+#news-list ul.news li a {
+    color: #628ac9;
+    margin-left: 5px;
+}
+/* Новость
+-----------------------------------------------------------*/
+#news-detail {
+    margin: 10px 20px;
+}
+#news-detail h1 {
+    background: none;
+    color: #3c4249;
+    margin: 10px 0 5px 0;
+    font-size: 1.3em;
+}
+#news-detail .news-info p{
+    margin: 5px 0 15px 0;
+}
+#news-detail .news-info p time {
+    padding: 5px 7px;
+    background-color: #83abe0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+}
+#news-detail .news-info p a {
+    color: #5f8fd4;
+}
+#news-detail .news-text {
+    clear: both;
+}
+#news-detail .news-text img.img-art-big {
+    clear: both;
+    padding: 0 0;
+    margin: 0 10px 10px 0;
+    max-width: 660px;
+}
+#news-detail .news-text img.img-art-avg {
+    float: left;
+    padding: 0 10px 10px 0;
+    max-width: 300px;
+}
+#news-detail .news-text img.img-art-small {
+    float: left;
+    padding: 0 10px 10px 0;
+    max-width: 150px;
+}
+#news-detail .news-source{
+    color: #75818f;
+    margin-top: 20px;
+}
+#news-detail .news-source a,
+#news-detail .news-text a{
+    color: #628ac9;
+    margin-left: 3px;
+}
+
+/* Стили текстовых блоков
+ -----------------------------------------------------------*/
+.text-section {
+    font-weight: 500;
+    color: #465262;
+    font-size: 1.2em;
+    background-color: #dfe8f3;
+    padding: 3px 5px 5px 5px;
+}
+.text-explain {
+    color: #b1815e;
+}
+.text-footnote {
+    color: #000000;
+    background-color: #e3eec2;
+    padding: 2px 4px;
+}
+.text-warning {
+    color: maroon;
+    background-color: #ffe2ca;
+    border-bottom: 1px solid maroon;
+    border-top: 1px solid maroon;
+    padding: 5px;
+    font-size: 1.1em;
+}
+.article-author {
+    text-align: right;
+    font-style: italic;
+}
+.article-author span{
+    /*font-weight: bold;*/
+    font-size: 1.2em;
+}
+
+/* Форма обратной связи
+-----------------------------------------------------------*/
+#feedback, #rules {
+    padding: 10px 15px 0px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#feedback h1, #rules h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#feedback h1 span, #rules h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#feedback h2, #rules h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+
+#form-feedback label {
+    color: #75818f;
+}
+#form-feedback #Name,
+#form-feedback #Email
+{
+    padding: 5px;
+    color: #3c4249;
+    width: 300px;
+}
+#form-feedback #Message{
+    padding: 5px;
+    color: #3c4249;
+    width: 620px;
+    height: 100px;
+}
+#form-feedback #Subject {
+    padding: 5px;
+    color: #39397b;    
+    width: 315px;
+}
+#form-feedback #CaptchaCode
+{
+    padding: 5px;
+    color: #3c4249;
+    width: 88px;
+}
+#form-feedback .editor-field-submit {
+    padding-top: 10px;    
+}
+#form-feedback input[type=submit] {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Постраничная навигация
+-----------------------------------------------------------*/
+.page-nav {    
+    clear: both;
+    padding: 3px 3px 10px 3px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page-nav a {    
+    color: #628ac9;
+    margin: 4px;
+    font-size: 1.3em;
+}
+.page-nav a.selected {    
+    background-color: #83abe0;
+    padding: 3px 6px 5px 6px;
+    color: white;
+    text-decoration: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.page-nav .page-nav-total {    
+    color: #628ac9;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+.page-nav a img {
+    margin-bottom: -5px;
+}
+
+
+/* Footer
+-----------------------------------------------------------*/
+#footer {
+    position: relative;
+    width: 100%;    
+    background-color: white;
+    overflow: hidden;
+    margin-top: 35px;
+    border-top: 2px solid #dbe5f1;
+}
+#footer-wrapper {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+}
+#footer-top {
+    position: absolute;
+    top: -10px;
+    left: 15px;    
+    background: url(/Content/system/bg_footer.png) top left no-repeat;
+    width: 99px;
+    height: 58px;
+    z-index: 3;
+}
+
+/* Реклама в footer
+-----------------------------------------------------------*/
+#footer-advertising {
+    width: 75%;
+    position: relative;
+    float: left;
+    padding: 10px 1%;
+}
+#footer-advertising p.p-header {
+    text-align: right;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #596778;
+    margin: 5px 0 10px 0;
+}
+
+/* CopyRight
+-----------------------------------------------------------*/
+#copyright {
+    width: 20%;
+    position: relative;
+    float: right;    
+    border-left: 1px solid #dbe5f1;
+    /*height: 300px;*/
+    padding: 10px 1% 50px 1%;
+    background: url(/Content/system/left_column_bottom_bg.png) bottom left repeat-x;
+    background-color: #fbfbfb;
+    color: #363b41;
+}

@@ -1,0 +1,14 @@
+﻿@model string
+<div id="image-loader">
+    <p>Загрузка изображений <span>(разрешенные форматы изображений: .jpg, .png, .gif)</span></p>
+    @using (Html.BeginForm("Upload", "Images", new { path = Model }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken();
+        @Html.Hidden("path", Model);
+        <div class="editor-field">
+            <input id="uploads" multiple="multiple" name="uploads" type="file" />
+            <input type="submit" value="Загрузить" />
+        </div>
+    }
+</div>

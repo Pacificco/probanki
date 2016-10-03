@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /cgi-bin
+Disallow: /bin
+Disallow: /admin
+Disallow: /Areas
+Disallow: /logs
+Disallow: /Scripts
+Disallow: /Views
+Disallow: /Content

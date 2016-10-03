@@ -1,0 +1,5 @@
+D:\Проекты\ASP.NET MVC\Bankiru\Currencies\bin\Release\Currencies.dll
+D:\Проекты\ASP.NET MVC\Bankiru\Currencies\bin\Release\Currencies.pdb
+D:\Проекты\ASP.NET MVC\Bankiru\Currencies\bin\Release\log4net.dll
+D:\Проекты\ASP.NET MVC\Bankiru\Currencies\obj\Release\Currencies.dll
+D:\Проекты\ASP.NET MVC\Bankiru\Currencies\obj\Release\Currencies.pdb

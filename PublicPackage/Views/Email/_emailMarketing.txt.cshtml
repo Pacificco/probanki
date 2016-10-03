@@ -1,0 +1,11 @@
+﻿@model Bankiru.Models.OutApi.EmailModel
+@{
+    Layout = null;
+}
+<html>
+    <body>
+        <h1>@Model.Subject</h1>
+        <p>Email: @Model.To.ToString()</p>
+        <p>@Model.Body</p>
+    </body>
+</html>

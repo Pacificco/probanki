@@ -1,0 +1,142 @@
+﻿@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_Org
+@{
+    if (String.IsNullOrEmpty(Model.MetaTitle))
+    {
+        ViewBag.metaTitle = Model.MetaTitle;
+    }
+    else
+    {
+        ViewBag.metaTitle = Model.Title;
+    }
+    if (String.IsNullOrEmpty(Model.MetaDescriptions))
+    {
+        ViewBag.metaDescription = "";
+    }
+    else
+    {
+        ViewBag.metaDescription = Model.MetaDescriptions;
+    }
+    if (String.IsNullOrEmpty(Model.MetaKeywords))
+    {
+        ViewBag.metaKeywords = Model.MetaKeywords;
+    }
+    else
+    {
+        ViewBag.metaKeywords = "";
+    }
+    
+    //ViewBag.metaRobots = String.Format("{0},{1}",
+    //    Model.MetaNoIndex ? "noindex" : "index",
+    //    Model.MetaNoFollow ? "nofollow" : "follow");
+    ViewBag.metaRobots = "noindex, nofollow";
+    
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "orgs";
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = Model.CategoryId > 0 ? Model.CategoryId : -1 })
+    @Html.Action("_getModuleSideLeaveOrgReview", "Home", new { url = Url.RouteUrl("org_leave_review")})
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true})
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{ 
+    <article id="org-detail">        
+        <hgroup>
+            <h1>
+                <span>@Model.Title</span>
+            </h1>
+            <h2>@Model.Title - подробная справочная информация, рейтинг, отзывы, услуги и предложения</h2>
+        </hgroup>
+        <div class="org-menu">
+            <div class="current">Общая информация</div>            
+            <div>
+                @if (Model.CategoryId == 1)
+                { 
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Офисы и банкоматы @Model.Title">Офисы и банкоматы  (@Model.PointsCount)</a>
+                }
+                else
+                {
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Офисы @Model.Title">Офисы (@Model.PointsCount)</a>
+                }
+            </div>
+            <div><a href="@Url.RouteUrl("org_reviews", new { org_id = Model.Alias })" title="Читать отзывы о @Model.Title">Отзывы (@Model.ReviewsCount)</a></div>
+        </div>
+        <div class="org-desc">
+            <div class="org-desc-bottom"></div>
+            @if (!String.IsNullOrEmpty(Model.Icon))
+            { 
+                <div class="logo">
+                    <img src="@Model.Icon" title="@Model.Title" alt="Логотип" />
+                </div>
+            }
+            @Html.Raw(Model.Descriptions)
+        </div>
+        <div class="org-desc-show">
+            <img class="show" src="/Content/system/hor_info_show.jpg" title="Показать описание полностью" alt="Показать" />            
+        </div>
+    </article>
+    @section middle_bottom
+    {        
+        <div class="org-reviews-form-link"><a href="#href-form-review" title="Оставить отзыв">
+                <img src="~/Content/system/leave_org_review.png" title="Оставить отзыв" alt="Оставить отзыв" /></a>                
+            </div>
+        @Html.Action("_getModuleLastReviews", "Home", new { org_id = Model.Id})
+        <div class="org-reviews-readmore">
+            <a href="@Url.RouteUrl("org_reviews", new { org_id = Model.Alias })" title="Читать все отзывы @Model.Title">Читать все отзывы</a>
+        </div>
+        <a id="href-form-review"></a>
+        <div id="ajax-review-form-wrapper">
+            @Html.Action("_getModuleLeaveOrgReview", "Orgs", new { org_id = Model.Id, page = 1, org_alias = Model.Alias })
+        </div>
+    }    
+    @section scripts
+    {
+        <script>
+            function formReviewComplete(request, status) {
+                if ($('.form-review-success')[0]) {
+                    $("#form-review #UserName").attr("value", "");
+                    $("#form-review #ReviewText").val("");
+                    $("#form-review #Rating [value='0']").attr("selected", "selected");
+                }
+            }
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var h = $("#org-detail .org-desc").height();                
+                if (h > 500) {
+                    $("#org-detail .org-desc").css("height", "500px");
+                    $("#org-detail .org-desc .org-desc-bottom").css("display", "block");
+                    $("#org-detail .org-desc-show").css("display", "block");                    
+                }
+
+                $("#org-detail .org-desc-show img").click(function () {
+                    if ($(this).hasClass("show")) {
+                        $(this).removeClass("show");
+                        $(this).addClass("hide");
+                        $("#org-detail .org-desc").stop().animate({ height: h }, 2000);
+                        $("#org-detail .org-desc .org-desc-bottom").css("display", "none");
+                        $(this).attr("src", "/Content/system/hor_info_hide.jpg");
+                    }
+                    else {
+                        $(this).removeClass("hide");
+                        $(this).addClass("show");
+                        $("#org-detail .org-desc").stop().animate({ height: 500 }, 2000);
+                        $("#org-detail .org-desc .org-desc-bottom").css("display", "block");
+                        $(this).attr("src", "/Content/system/hor_info_show.jpg");
+                    }
+                });
+            })
+        </script>
+    }    
+}

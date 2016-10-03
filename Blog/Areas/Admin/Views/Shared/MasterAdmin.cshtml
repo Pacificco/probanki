@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/admin/css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+
+            <nav>
+                <ul id="top-menu">
+                    <li><a href="@Url.Action("Index", "Info")" title="">Главная</a></li>
+                    <li>
+                        <a href="@Url.Action("List", "Orgs")" title="">Организации</a>
+                        <ul>
+                            <li><a href="@Url.Action("List", "Orgs")" title="">Организации</a></li>
+                            <li><a href="@Url.Action("ReviewsList", "Reviews")" title="">Отзывы</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="@Url.Action("List", "Articles")" title="">Публикации</a>
+                        <ul>
+                            <li><a href="@Url.Action("List", "Articles")" title="">Публикации</a></li>
+                            @*<li><a href="@Url.Action("List", "Категории")" title="">Создать статью</a></li>*@
+                            <li><a href="@Url.Action("List", "Comments")" title="">Комментарии</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Images")" title="">Галерея</a>                        
+                    </li>
+                    <li>
+                        <a href="@Url.Action("List", "News")" title="">Новости</a>
+                    </li>
+                </ul>
+            </nav>
+
+            @if (!String.IsNullOrEmpty(@Bankiru.Models.Security.SessionPersister.Username))
+            {
+                <div class="login">
+                    <p>
+                        <span class="username">@Bankiru.Models.Security.SessionPersister.Username</span>
+                        <a href="@Url.Action("Logout", "Account")" title="Выйти из панели управления">Выйти</a>
+                    </p>
+                </div>
+            }
+        </header>
+
+        <div id="main-title">
+            <h1>@ViewBag.Title</h1>            
+        </div>
+        @RenderSection("adminTools", required: false)
+        @if (ViewData["InfoMessage"] != null)
+        { 
+            <div id="info-title">@Convert.ToString(ViewData["InfoMessage"])</div>
+        }
+        @if (ViewData["WarningMessage"] != null)
+        { 
+            <div id="warning-title">@ViewData["WarningMessage"]</div>
+                }
+        @if (ViewData["ErrorMessage"] != null)
+        { 
+            <div id="error-title">@Convert.ToString(ViewData["ErrorMessage"])</div>
+        }
+        <div id="wrapper2">
+            <div id="content">
+                @RenderBody()
+            </div>
+        </div>
+        <footer>
+            <p>© @DateTime.Now.Year.ToString() г. ProBanki.net</p>
+        </footer>
+    </div>            
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")    
+    @RenderSection("scripts", required: false)
+    <script>
+        $().ready(function () {
+            //var doc_h = $(document).height();
+            //var wrap_h = $("#wrapper").height();
+            ////alert(wrap_h + " = " + doc_h);
+            //if (doc_h > wrap_h) {
+            //    var h = doc_h - $("header").height() - $("footer").height() - $("#main-title").height() - 20;
+            //    $("#content").css("height", h + "px");
+            //}
+        });
+    </script>
+</body>
+</html>

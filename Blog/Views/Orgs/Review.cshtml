@@ -1,0 +1,98 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_OrgReview
+@{
+    ViewBag.metaTitle = Model.Org.Title + " - отзыв.";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    //ViewBag.metaRobots = String.Format("{0},{1}",
+    //    Model.Org.MetaNoIndex ? "noindex" : "index",
+    //    Model.Org.MetaNoFollow ? "nofollow" : "follow");
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "orgs";
+    
+    string ratingClass = "";
+    bool needMoreLink = false;
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = Model.Org.CategoryId > 0 ? Model.Org.CategoryId : -1 })
+    @Html.Action("_getModuleSideLeaveOrgReview", "Home", new { url = Url.RouteUrl("org_leave_review") })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true})
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{ 
+    <section id="org-review-detail">
+        <hgroup>
+            <h1>
+                <span>@Model.Org.Title</span>
+            </h1>
+            <h2>@Model.Org.Title - отзывы, мнения, народный рейтинг</h2>
+        </hgroup>
+        <div class="org-menu">
+            <div><a href="@Url.RouteUrl("org_item", new { org_id = Model.Org.Alias })" title="Читать отзывы о @Model.Org.Title">Общая информация</a></div>
+            <div>
+                @if (Model.Org.CategoryId == 1)
+                { 
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Org.Alias })" title="Офисы и банкоматы @Model.Org.Title">Офисы и банкоматы  (@Model.Org.PointsCount)</a>
+                }
+                else
+                {
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Org.Alias, kind = 1 })" title="Офисы @Model.Org.Title">Офисы (@Model.Org.PointsCount)</a>
+                }
+            </div>
+            <div><a href="@Url.RouteUrl("org_reviews", new { org_id = Model.Org.Alias })" title="Читать отзывы о @Model.Org.Title">Отзывы (@Model.Org.ReviewsCount)</a></div>
+        </div>
+        <div class="org-review">
+
+            @switch (Model.Review.Rating)
+            {
+                case 1:
+                    ratingClass = "red";
+                    break;
+                case 2:
+                    ratingClass = "orange";
+                    break;
+                case 3:
+                    ratingClass = "violet";
+                    break;
+                case 4:
+                    ratingClass = "navy";
+                    break;
+                case 5:
+                    ratingClass = "green";
+                    break;
+                default:
+                    ratingClass = "gray";
+                    break;
+            }
+            <article class="review">
+                <div class="review-left-column">
+                    <div class="review-avatar">
+                        <img src="~/Content/system/avatar-anonymous.png" title="Аватарка" alt="Аватарка" />
+                    </div>
+                </div>
+                <div class="review-main-column">
+                    <div class="review-arrow"></div>
+                    <div class="review-raiting @ratingClass">Оценка <span class="review-raiting-value">@Model.Review.Rating</span></div>
+                    <p class="review-author">
+                        @Model.Review.UserName (<time pubdate datetime="@Model.Review.CreatedAt.ToString()">@Model.Review.CreatedAt.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>)
+                    </p>
+                    <p class="review-text">
+                        @Html.Raw(Bankiru.Models.Helpers.ConvertHelper.TextToHtmlParagraphs(Model.Review.ReviewText, 0, ref needMoreLink))
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+}

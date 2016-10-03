@@ -1,0 +1,120 @@
+﻿#folder-content {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 5px 0 5px 8px;
+    border: 2px solid #cfdee7;
+}
+#folder-content .image-block {    
+    position: relative;
+    float: left;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #5ea3df;
+    background-color: #f4f7f9;
+}
+#folder-content .image-block .folder-img,
+#folder-content .image-block .file-img {
+    width: 178px;
+    height: 178px;
+    position: relative;
+    border: 1px solid #5ea3df;
+    padding: 0;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+}
+#folder-content .image-block .folder-img img{
+    position: relative;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#folder-content .image-block .file-img img{
+    max-width: 178px;
+    max-height: 178px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#folder-content .image-block .folder-name,
+#folder-content .image-block .file-name {
+    width: 180px;
+    height: 40px;
+    position: relative;    
+    padding: 0;
+    margin: 3px 0 0 0;
+    overflow: hidden;
+}
+#folder-content .image-block .folder-name p,
+#folder-content .image-block .file-name p{    
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #5259d0;
+    font-size: 0.9em;
+}
+#folder-content .image-block .folder-name p{
+    color: black;
+}
+
+/* Создание категории
+------------------------------------------*/
+#folder-creator {
+    padding: 10px;
+    background-color: #f4f7f9;
+    margin: 2px 0 5px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+}
+#folder-creator .editor-field {
+    margin: 0;
+}
+#folder-creator input[type=text] {
+    padding: 5px;
+    width: 260px;
+    border: 1px solid #5ea3df;
+}
+
+/* Загрузка изображений
+------------------------------------------*/
+#image-loader {
+    padding: 10px;
+    background-color: #f4f7f9;
+    margin: 2px 0 5px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+}
+#image-loader p {
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+#image-loader p span{
+    color: maroon;
+}
+#image-loader input[type=file] {
+    width: 300px;
+    padding: 3px;
+    border: 1px solid #5ea3df;
+}
+
+/*Детали
+ --------------------------------------*/
+#image-details {
+    text-align: center;
+    position: relative;
+}
+#image-details img {
+    max-width: 90%;
+    border: 2px solid #cfdee7;
+}
+
+#image-details p.image-name{
+    text-align: center;
+}

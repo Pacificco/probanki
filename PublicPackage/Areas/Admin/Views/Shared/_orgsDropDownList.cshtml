@@ -1,0 +1,35 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Orgs
+@model VM_DropDownOrgItems
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    if (Model.FirstItem != EnumFirstDropDownItem.None)
+    {
+        SelectListItem firstItem = new SelectListItem();
+        switch (Model.FirstItem)
+        {
+            case EnumFirstDropDownItem.All:
+                firstItem.Text = "ВСЕ";
+                break;
+            case EnumFirstDropDownItem.NotSelected:
+                firstItem.Text = "Не выбрана";
+                break;
+        }
+        firstItem.Value = "0";
+        firstItem.Selected = Model.SelectedId == 0 ? true : false;
+        _items.Add(firstItem);
+    }
+    if(Model.Items != null && Model.Items.Count > 0)
+    {
+        foreach(VM_OrgItem item in Model.Items)
+        {
+            _items.Add(new SelectListItem() {
+                Text = item.Title,
+                Value = item.Id.ToString(),
+                Selected = Model.SelectedId == item.Id ? true : false
+            });
+        }
+    }
+    
+}
+@Html.DropDownList(Model.Name, _items)

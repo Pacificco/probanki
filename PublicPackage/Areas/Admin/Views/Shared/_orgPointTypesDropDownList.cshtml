@@ -1,0 +1,38 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Orgs
+@model VM_DropDownOrgPointTypes
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    if (Model.FirstItem != EnumFirstDropDownItem.None)
+    {
+        SelectListItem firstItem = new SelectListItem();
+        switch (Model.FirstItem)
+        {
+            case EnumFirstDropDownItem.All:
+                firstItem.Text = "ВСЕ";
+                break;
+            case EnumFirstDropDownItem.NotSelected:
+                firstItem.Text = "Не выбрана";
+                break;
+        }
+        firstItem.Value = "0";
+        firstItem.Selected = Model.SelectedId == 0 ? true : false;
+        _items.Add(firstItem);
+    }
+    if (Model.Items != null && Model.Items.Count > 0)
+    {
+        int i = 1;
+        foreach (string item in Model.Items)
+        {
+            _items.Add(new SelectListItem()
+            {
+                Text = item,
+                Value = i.ToString(),
+                Selected = Model.SelectedId == i ? true : false                
+            });
+            i++;
+        }
+    }
+    
+}
+@Html.DropDownList(Model.Name, _items)

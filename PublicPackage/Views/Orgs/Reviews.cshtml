@@ -1,0 +1,165 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_OrgReviews
+@{
+    ViewBag.metaTitle = Model.Org.Title + " - отзывы.";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    //ViewBag.metaRobots = String.Format("{0},{1}",
+    //    Model.Org.MetaNoIndex ? "noindex" : "index",
+    //    Model.Org.MetaNoFollow ? "nofollow" : "follow");
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "orgs";
+
+    int n = Model.PagingInfo.GetFirstNumInCurrentPage();
+    string ratingClass = "";
+
+    string text = String.Empty;
+    string all_text = String.Empty;
+    bool needMoreLink = false;
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = Model.Org.CategoryId > 0 ? Model.Org.CategoryId : -1 })
+    @Html.Action("_getModuleSideLeaveOrgReview", "Home", new { url = Url.RouteUrl("org_leave_review") })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@section scripts{
+    <script>
+        function formReviewComplete(request, status) {
+            if ($('.form-review-success')[0]) {
+                $("#form-review #UserName").attr("value", "");
+                $("#form-review #ReviewText").val("");
+                $("#form-review #Rating [value='0']").attr("selected", "selected");
+            }
+        }
+    </script>
+}
+@if (Model != null)
+{ 
+    <section id="org-detail">
+        <hgroup>
+            <h1>
+                <span>@Model.Org.Title</span>
+            </h1>
+            <h2>@Model.Org.Title - отзывы, мнения, народный рейтинг</h2>
+        </hgroup>
+        <div class="org-menu">
+            <div><a href="@Url.RouteUrl("org_item", new { org_id = Model.Org.Alias })" title="Читать отзывы о @Model.Org.Title">Общая информация</a></div>
+            <div>
+                @if (Model.Org.CategoryId == 1)
+                { 
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Org.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Офисы и банкоматы @Model.Org.Title">Офисы и банкоматы  (@Model.Org.PointsCount)</a>
+                }
+                else
+                {
+                    <a href="@Url.RouteUrl("org_points", new { org_id = Model.Org.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Офисы @Model.Org.Title">Офисы (@Model.Org.PointsCount)</a>
+                }
+            </div>
+            <div class="current">Отзывы (@Model.Org.ReviewsCount)</div>
+        </div>
+        <div class="org-reviews">
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                <div class="org-reviews-form-link">
+                    <a href="#href-form-review" title="Оставить отзыв">
+                        <img src="~/Content/system/leave_org_review.png" title="Оставить отзыв" alt="Оставить отзыв" /></a>
+                </div>
+            }
+            <div class="org-reviews-count">Всего: <span>@Model.PagingInfo.TotalItems</span></div>
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                foreach (VM_Review item in Model.Items)
+                {
+                    switch (item.Rating)
+                    {
+                        case 1:
+                            ratingClass = "red";
+                            break;
+                        case 2:
+                            ratingClass = "orange";
+                            break;
+                        case 3:
+                            ratingClass = "violet";
+                            break;
+                        case 4:
+                            ratingClass = "navy";
+                            break;
+                        case 5:
+                            ratingClass = "green";
+                            break;
+                        default:
+                            ratingClass = "gray";
+                            break;
+                    }
+                <article class="review">
+                    <div class="review-left-column">
+                        <div class="review-avatar">
+                            <img src="~/Content/system/avatar-anonymous.png" title="Аватарка" alt="Аватарка" />
+                        </div>
+                    </div>
+                    <div class="review-main-column">
+                        <div class="review-arrow"></div>
+                        <div class="review-raiting @ratingClass">Оценка <span class="review-raiting-value">@item.Rating</span></div>
+                        <div class="review-author">
+                            @item.UserName (<time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>)
+                        </div>
+                        <div class="review-text">
+                            @Html.Raw(Bankiru.Models.Helpers.ConvertHelper.TextToHtmlParagraphs(item.ReviewText, 255, ref needMoreLink))
+                        </div>
+                        @if (needMoreLink)
+                        { 
+                            <p class="review-readmore">
+                                @Html.RouteLink("Читать отзыв полностью", "org_review", new
+                           {
+                               org_id = Model.Org.Alias,
+                               review_id = item.Id,
+                               cat_id = Model.Org.CategoryAlias
+                           }, new { title = "Читать отзыв полностью" })
+                            </p>
+                        }
+                    </div>
+                </article>
+                }
+            }
+            else
+            { 
+                <p>Отзывов не найдено.</p>
+                <p>Вы можете стать первым! Оставьте свой отзывы о @Model.Org.Title</p>
+            }
+        </div>
+        @if (Model.Items.Count > 0)
+        {
+            @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("org_reviews", new
+       {
+           cat_id = Model.Org.CategoryId > 0 ? Model.Org.CategoryAlias : null,
+           org_id = Model.Org.Alias,
+           page = x
+       }))
+        }
+    </section>
+}
+@section middle_bottom
+{
+    <a id="href-form-review"></a>
+    @if (Model.FormReviewData == null)
+    {
+        <div id="ajax-review-form-wrapper">
+            @Html.Action("_getModuleLeaveOrgReview", "Orgs", new { org_id = Model.Org.Id, page = Model.PagingInfo.CurrentPage, org_alias = Model.Org.Alias })
+        </div>
+    }
+    else
+    {
+        @Html.Action("_getModuleSendOrgReview", "Orgs", new { data = Model.FormReviewData }) 
+    }
+}

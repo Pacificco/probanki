@@ -1,0 +1,30 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Orgs
+@model VM_OrgsReviewsFilters
+
+<div id="org-reviews-filters">
+    @using (Html.BeginForm("ReviewsList","Orgs", FormMethod.Get))
+    {
+        @Html.ValidationSummary(true)        
+        <div class="editor-field editor-field-title">
+            @Html.LabelFor(model => model.ReviewText)
+            @Html.EditorFor(model => model.ReviewText)
+            @Html.ValidationMessageFor(model => model.ReviewText)
+        </div>        
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.IsActive)
+            @Html.Action("_getActiveDropDownList", "Orgs", new { selectedId = Model.IsActive, 
+           firstItem = EnumFirstDropDownItem.All, id = "IsActive" })
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.Confirmed)
+            @Html.Action("_getConfirmDropDownList", "Orgs", new { selectedId = Model.Confirmed, 
+           firstItem = EnumFirstDropDownItem.All, id = "Confirmed" })
+            @Html.ValidationMessageFor(model => model.Confirmed)
+        </div>
+        <div class="editor-field editor-field-submit">
+            <input type="submit" value="Показать" />
+        </div>        
+    }
+</div>

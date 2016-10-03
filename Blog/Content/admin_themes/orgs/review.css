@@ -1,0 +1,112 @@
+﻿/*Фильтр
+--------------------------------------------------------------------*/
+#org-reviews-filters {
+    padding: 5px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+#org-reviews-filters .editor-field{
+    display: block;
+    float: left;
+    padding: 3px 5px;
+    position: relative;
+    height: 30px;
+    margin: 0;
+}
+
+#org-reviews-filters .editor-field-title input,
+#org-reviews-filters .editor-field-address input {
+    width: 300px;
+    padding: 3px;
+}
+#org-reviews-filters .editor-field-region select {
+    width: 160px;
+    padding: 3px;
+}
+#org-reviews-filters .editor-field-review-types select {
+    width: 120px;
+    padding: 3px;
+}
+#org-reviews-filters .editor-field-active select {
+    width: 120px;
+    padding: 3px;
+}
+
+#org-reviews-filters input[type=submit] {
+    height: 24px;    
+}
+
+
+/*Новая организация
+--------------------------------------------------------------------*/
+
+
+/*Редактирование организации
+--------------------------------------------------------------------*/
+#org-review-editor .editor-field input[type=text],
+#org-review-editor .editor-field select{
+    padding: 5px;
+    border: 1px solid #9ba6b3;
+}
+
+#org-review-editor .editor-field{
+    margin: 0 0 3px 0;
+}
+
+#org-review-editor .editor-field-alias span,
+#org-review-editor .editor-field-icon span{
+    font-weight: 600;
+    color: navy;
+}
+
+#org-review-editor .editor-title, #org-review-editor .editor-main, 
+#org-review-editor .editor-images, #org-review-editor .editor-meta, 
+#org-review-editor .editor-lists, #org-review-editor editor-date {
+    padding: 10px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+}
+
+#org-review-editor .editor-title input[type=text]{
+    width: 930px;
+}
+
+#org-review-editor .editor-main input[type=text]{
+    width: 930px;
+}
+
+#org-review-editor .editor-images input[type=text]{
+    width: 500px;
+}
+
+#org-review-editor .editor-meta input[type=text]{
+    width: 930px;
+}
+
+#org-review-editor .editor-label {
+    color: #76818f;
+}
+
+#org-review-editor input[type=submit]{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#org-review-editor #Title{
+    font-size:1.2em;
+}

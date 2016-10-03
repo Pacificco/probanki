@@ -1,0 +1,41 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Orgs
+@model VM_OrgsPointsFilters
+
+<div id="org-point-filters">
+    @using (Html.BeginForm("PointsList","Orgs", FormMethod.Get))
+    {
+        @Html.ValidationSummary(true)        
+        <div class="editor-field editor-field-title">
+            @Html.LabelFor(model => model.Title)
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+        <div class="editor-field editor-field-address">
+            @Html.LabelFor(model => model.Address)
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+        <div class="editor-field editor-field-region">
+            @Html.LabelFor(model => model.RegionId)
+            @Html.Action("_getRegionsDropDownList", "Orgs", new { selectedId = Model.RegionId == Guid.Empty ? Guid.Parse("b756fe6b-bbd3-44d5-9302-5bfcc740f46e") : Model.RegionId, 
+           firstItem = EnumFirstDropDownItem.All, id = "RegionId" })
+            @Html.ValidationMessageFor(model => model.RegionId)
+        </div>
+        <div class="editor-field editor-field-point-types">
+            @Html.LabelFor(model => model.PointType)
+            @Html.Action("_getOrgPointTypesDropDownList", "Orgs", new { selectedId = (int)Model.PointType, 
+           firstItem = EnumFirstDropDownItem.All, id = "PointType" })
+            @Html.ValidationMessageFor(model => model.PointType)
+        </div>
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.IsActive)
+            @Html.Action("_getActiveDropDownList", "Orgs", new { selectedId = Model.IsActive, 
+           firstItem = EnumFirstDropDownItem.All, id = "IsActive" })
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+        <div class="editor-field editor-field-submit">
+            <input type="submit" value="Показать" />
+        </div>        
+    }
+</div>

@@ -1,0 +1,25 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.News
+@model List<VM_NewsItem>
+@if (Model != null && Model.Count > 0)
+{
+    <section class="last-news">
+        <h3>Новости</h3>
+        <ul class="news">
+        @foreach (VM_NewsItem item in Model)
+        {
+            
+            <li>
+                <span class="news-date">
+                    <time pubdate datetime="@item.PublishedAt.AddHours(3)">@item.PublishedAt.AddHours(3).ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                </span><br />
+                <span class="news-title">@item.Title</span><br />
+                <span class="news-readmore">
+                    @Html.RouteLink("Подробнее...", "news_item", new { news_id = item.Alias }, new { title = "Читать подробнее..." })
+                </span>
+            </li>            
+        }
+        </ul>
+        <p class="all-news-readmore">@Html.RouteLink("Все новости", "news_items", null, new { title = "Смотреть все новости" })</p>
+    </section>
+}

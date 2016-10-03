@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>Что-то сломалось:(</title>
+    @Styles.Render("~/Content/errors/css")
+</head>
+<body>
+    <h1>
+        Что-то сломалось:(
+    </h1>
+    <h2>
+        Произошла ошибка при обработке вашего запроса.
+    </h2>
+    <p>@ViewBag.ErrorMessage;</p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain
+@model Bankiru.Models.Domain.Comments.VM_Comment
+@{
+    ViewBag.Title = "Редактировать комментарий";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles{    
+    @Styles.Render("~/Content/admin/comments/css")
+}
+<div class="back-to-list">
+    @Html.ActionLink("Вернуться к списку", "List")
+</div>
+<div id="comment-editor">
+    @using (Html.BeginForm(Html.BeginForm("Edit", "Comments", FormMethod.Post)))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        <div class="editor-title">
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IsActive) @Html.LabelFor(model => model.IsActive)
+                @Html.ValidationMessageFor(model => model.IsActive)
+            </div>
+            <div class="editor-field">                
+                @Html.Action("_getConfirmDropDownList", "Comments", new { selectedId = Model.Confirmed, firstItem = EnumFirstDropDownItem.None,
+                    id = "Confirmed" })
+                @Html.ValidationMessageFor(model => model.Confirmed)                
+            </div>
+        </div>
+        <div class="editor-main">
+            <div class="editor-field editor-field-article">
+                Статья: <strong>@Model.Article.Title</strong>
+            </div>
+            <div class="editor-field editor-field-author">
+                Автор: <strong>@Model.UserName</strong>
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CommentText)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.CommentText)
+                @Html.ValidationMessageFor(model => model.CommentText)
+            </div>            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LikeCount)
+            </div>
+        <div class="editor-field">
+            @if (@Model.DisLikeCount > 0)
+            {
+                <strong>-@Model.DisLikeCount.ToString()</strong>
+            }
+            else
+            {
+                <strong>0</strong>
+            }
+
+            @if (@Model.LikeCount > 0)
+            {
+                <strong>+@Model.LikeCount.ToString()</strong>
+            }
+            else
+            {
+                <strong>0</strong>
+            }
+        </div>        
+        </div>
+        <div class="editor-date">
+            <div class="editor-field editor-field-createdat">
+                Дата создания: <strong>@Model.CreatedAt.ToString("dd MMMM yyyy hh:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+            </div>
+        </div>        
+        <div class="editor-field">
+            <input type="submit" value="Сохранить" />
+        </div>
+    }
+</div>
+@section scripts{
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            theme: "modern",
+            selector: '#CommentText',
+            language: "ru_RU",
+            height: "300",
+            plugins: "image imagetools code link textcolor"
+        });
+    </script>
+}

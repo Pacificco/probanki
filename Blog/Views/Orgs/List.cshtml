@@ -1,0 +1,127 @@
+﻿@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_Orgs
+@{
+    if (Model.CurrentCategory.Id > 0)
+    {
+        ViewBag.metaTitle = Model.CurrentCategory.Title;
+        ViewBag.metaDescription = Model.CurrentCategory.Description;
+        ViewBag.metaKeywords = Model.CurrentCategory.MetaKeywords;
+        //ViewBag.metaRobots = String.Format("{0},{1}",
+        //    Model.CurrentCategory.MetaNoIndex ? "noindex" : "index",
+        //    Model.CurrentCategory.MetaNoFollow ? "nofollow" : "follow");
+        ViewBag.metaRobots = "noindex, nofollow";
+    }
+    else
+    {
+        ViewBag.metaTitle = "Банки. Курсы валют на сегодня. ProBanki.net";
+        ViewBag.metaDescription = "";
+        ViewBag.metaKeywords = "";
+        ViewBag.metaRobots = "noindex, nofollow";
+    }
+    ViewBag.CurrentMenuItem = "orgs";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    bool evel = true;
+    string classEvel = "odd";
+    int n = Model.PagingInfo.GetFirstNumInCurrentPage();
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = Model.CurrentCategory.Id > 0 ? Model.CurrentCategory.Id : -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true})
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{
+    <section id="orgs-list">
+        <hgroup>
+            <h1>
+                @if (Model.CurrentCategory.Id > 0)
+                {
+                    <span>@Model.CurrentCategory.Title</span>                
+                }
+                else
+                {
+                    <span>Финансовые организации</span>
+                }
+            </h1>
+            @if (Model.CurrentCategory.Id > 0)
+            {
+                <h2>@Model.CurrentCategory.Title Воронежа и Воронежской области</h2>
+            }
+            else
+            {
+                <h2>Финансовые организации и учреждения Воронежа и Воронежской области</h2>
+            }
+        </hgroup>
+        <div class="org-list-header">
+            @Html.Action("_getModuleOrgsLetterFilter", "Home")
+            <div class="org-list-count">Всего: <span>@Model.PagingInfo.TotalItems</span></div>
+        </div>
+            @if (Model.Items.Count > 0)
+            {
+                <table class="orgs">
+                    <tbody>
+                        @foreach (VM_OrgItem item in Model.Items)
+                        {
+                            <tr class="@classEvel">
+                                <td class="logo">
+                                    @if (!String.IsNullOrEmpty(item.Icon))
+                                    {                            
+                                        <a href="@Url.RouteUrl("org_item", new { org_id = item.Alias })" title="Перейти к @item.Title">
+                                            <img src="@item.Icon" title="Перейти к @item.Title" alt="Логотип" />
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.RouteUrl("org_item", new { org_id = item.Alias })" title="Перейти к @item.Title">
+                                            <img src="/Content/system/no_logo.jpg" title="Перейти к @item.Title" alt="Логотип" />
+                                        </a>
+                                    }
+                                </td>
+                                <td class="title">
+                                    <p>
+                                        <span class="org-title"><a href="@Url.RouteUrl("org_item", new { org_id = item.Alias, cat_id = item.Category.Alias })" title="Перейти к @item.Title">@item.Title</a></span>
+                                    </p>
+                                    <p>
+                                        <span class="org-points"><a href="@Url.RouteUrl("org_points", new { org_id = item.Alias, cat_id = item.Category.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Офисы и банкоматы @item.Title">Офисы и банкоматы (@item.PointsCount)</a></span>
+                                        <span class="org-reviews"><a href="@Url.RouteUrl("org_reviews", new { org_id = item.Alias, cat_id = item.Category.Alias, region_id = "voronezhskaya-oblast", type = "office" })" title="Отзывы @item.Title">Отзывов (@item.ReviewsCount)</a></span>
+                                    </p>
+                                </td>
+                            </tr>
+                                    evel = !evel;
+                                    if (evel)
+                                    {
+                                        classEvel = "odd";
+                                    }
+                                    else
+                                    {
+                                        classEvel = "evel";
+                                    }
+                                    n++;
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>По Вашему запросу организаций не найдено.</p>
+            }        
+        @if (Model.Items.Count > 0)
+        {
+            @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("org_items", new
+       {
+           cat_id = Model.CurrentCategory.Id > 0 ? Model.CurrentCategory.Alias : "",
+           letter = String.IsNullOrEmpty(Model.Filters.Letter) ? null : Model.Filters.Letter,
+           page = x
+       }))
+        }
+    </section>
+}

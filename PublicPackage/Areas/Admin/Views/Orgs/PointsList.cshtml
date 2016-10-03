@@ -1,0 +1,24 @@
+﻿@using Bankiru.Models.Domain.Orgs
+@using Bankiru.Models.Helpers
+@model VM_OrgPoints
+@{
+    ViewBag.Title = Model.Org.Title + " (Офисы и банкоматы)";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+    if (Context.Request.Cookies != null && Context.Request.Cookies[""] != null)
+    {
+        
+    }
+}
+@section styles{
+    @Styles.Render("~/Content/admin/org_points/css")
+}
+@section adminTools{
+    <div id="admin-tools">
+        <p>@Html.Action("_backToOrgList") @Html.ActionLink("Создать офис / банкомат", "PointNew", new { org_id = Model.Org.Id })</p>
+    </div>
+}
+@Html.Action("_getOrgPointsListFilter", "Orgs", new {filter = Model.Filters })
+@Html.Action("_getOrgPointsList", "Orgs", new { model = Model})
+@Html.PageLinks(@Model.PagingInfo, x => Url.Action("PointsList", "Orgs", new { org_id = Model.Org.Id, pointType = (int)Model.Filters.PointType,
+    regionId = Model.Filters.RegionId, title = Model.Filters.Title, address = Model.Filters.Address, IsActive = (int)Model.Filters.IsActive, page = x }))
+
