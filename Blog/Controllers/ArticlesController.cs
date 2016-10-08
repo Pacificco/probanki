@@ -135,7 +135,6 @@ namespace Bankiru.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[OutputCache(Location = System.Web.UI.OutputCacheLocation.None)]
         [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public ActionResult CommentAjax(VM_CommentResponse model)
         {

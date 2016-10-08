@@ -5,7 +5,11 @@ using System.Web;
 
 namespace Bankiru.Models.Domain.Users
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class VM_User
     {
+
     }
 }

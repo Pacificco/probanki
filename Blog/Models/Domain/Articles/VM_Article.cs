@@ -14,9 +14,11 @@ namespace Bankiru.Models.Domain.Articles
         public int Id { get; set; }
         [Display(Name = "Заголовок")]
         [Required(ErrorMessage = "Вы не указали заголовок статьи")]
+        [MaxLength(500, ErrorMessage = "Максимальная длина заголовка не должна превышать 500 символов")]
         public string Title { get; set; }
         [Display(Name = "Псевдоним")]
         public string Alias { get; set; }
+        [MaxLength(255, ErrorMessage = "Максимальная длина подзаголовка не должна превышать 255 символов")]
         [Display(Name = "Подзаголовок")]
         public string SubTitle { get; set; }
         [Display(Name = "Предпросмотр")]
@@ -46,7 +48,7 @@ namespace Bankiru.Models.Domain.Articles
         [Display(Name = "NoFollow")]
         public bool MetaNoFollow { get; set; }
         [Display(Name = "Дата публикации")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date)]        
         public DateTime PublishedAt { get; set; }        
         [Display(Name = "Дата изменения")]
         [DataType(DataType.DateTime)]

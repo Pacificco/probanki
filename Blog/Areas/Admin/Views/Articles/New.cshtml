@@ -29,6 +29,13 @@
                 @Html.ValidationMessageFor(model => model.IsCentral)
             </div>
             <div class="editor-label">
+                @Html.LabelFor(model => model.PublishedAt)
+            </div>
+            <div class="editor-field">
+                <input class="text-box single-line" data-val="true" data-val-date="Поле Дата публикации должно содержать дату." data-val-required="Требуется поле Дата публикации." id="PublishedAt" name="PublishedAt" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                @Html.ValidationMessageFor(model => model.PublishedAt)
+            </div>
+            <div class="editor-label">
                 @Html.LabelFor(model => model.Title)
             </div>
             <div class="editor-field">

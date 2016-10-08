@@ -438,7 +438,7 @@ namespace Bankiru.Models.Domain.Articles
             if (String.IsNullOrEmpty(alias)) return false;
             art.Alias = alias;
             art.UserId = 2;
-            art.PublishedAt = DateTime.Now;
+            //art.PublishedAt = DateTime.Now;
             //Формирование запроса
             string SQLQuery = _sqlCreateArt(art);
             SqlCommand _command = null;
@@ -474,7 +474,7 @@ namespace Bankiru.Models.Domain.Articles
         public bool UpdateArt(int id, VM_Article art)
         {            
             //Формирование запроса
-            art.PublishedAt = DateTime.Now;
+            //art.PublishedAt = DateTime.Now;
             string SQLQuery = _sqlUpdateArt(id, art);
             SqlCommand _command = null;
             lock (GlobalParams._DBAccessLock)
@@ -1966,8 +1966,8 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += DbStruct.Articles.FIELDS.MetaNoFollow + " = ";
             SqlQuery += art.MetaNoIndex ? "1," : "0,";
             SqlQuery += DbStruct.Articles.FIELDS.ChangedAt + " = ";
-            SqlQuery += DbStruct.SE.GETDATE + ",";            
-            //SqlQuery += DbStruct.Articles.FIELDS.UserId + " = ";
+            SqlQuery += DbStruct.SE.GETDATE + ",";
+            //SqlQuery += DbStruct.Articles.FIELDS.PublishedAt + " = ";
             //SqlQuery += art.UserId.ToString() + ",";
             SqlQuery += DbStruct.Articles.FIELDS.TextFull + " = ";
             SqlQuery += "'" + DbStruct.SQLRealEscapeString(art.TextFull) + "',";

@@ -380,6 +380,8 @@
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -620,6 +622,8 @@
     <Content Include="Views\Email\_emailSupport.txt.cshtml" />
     <Content Include="Views\Shared\_moduleCaptchaBlock.cshtml" />
     <Content Include="Views\Shared\_moduleCounters.cshtml" />
+    <Content Include="Views\Email\_emailPublication.html.cshtml" />
+    <Content Include="Views\Email\_emailPublication.txt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

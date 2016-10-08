@@ -21,6 +21,7 @@
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.Alias)
+
         <div class="editor-title">
             <div class="editor-field">
                 @Html.EditorFor(model => model.IsActive) @Html.LabelFor(model => model.IsActive)
@@ -83,14 +84,7 @@
             <div class="editor-field">
                 @Html.EditorFor(model => model.OtherUser)
                 @Html.ValidationMessageFor(model => model.OtherUser)
-            </div>*@
-            @*<div class="editor-label">
-                @Html.LabelFor(model => model.PublishedAt)
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.PublishedAt)
-                @Html.ValidationMessageFor(model => model.PublishedAt)
-            </div>*@
+            </div>*@            
             <div class="editor-label">
                 @Html.LabelFor(model => model.Hits)
             </div>
@@ -131,6 +125,14 @@
             </div>
         </div>
         <div class="editor-date">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PublishedAt)
+            </div>
+            <div class="editor-field">
+                <input class="text-box single-line" data-val="true" data-val-date="Поле Дата публикации должно содержать дату." data-val-required="Требуется поле Дата публикации." id="PublishedAt" name="PublishedAt" type="date" value="@Model.PublishedAt.ToString("yyyy-MM-dd")">
+                @*@Html.EditorFor(model => model.PublishedAt)                               *@
+                @Html.ValidationMessageFor(model => model.PublishedAt)
+            </div>
             <div class="editor-field editor-field-createdat">
                 Дата создания: <strong>@Model.CreatedAt.ToString("dd MMMM yyyy hh:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
             </div>
@@ -159,16 +161,14 @@
             height: "400",
             plugins: "image imagetools code link"
         });        
-    </script>    
-    @*<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    </script>
+    @*<script src="~/Scripts/jquery.maskedinput.min.js"></script>
     <script>
+        //Код jQuery, установливающий маску для ввода телефона элементу input
+        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
         $(function () {
-            $("#PublishedAt").datepicker({
-                minDate: -20,
-                maxDate: "+1M",
-                dateFormat: "dd-mm-yy"                
-            });
-        });        
+            //2. Получить элемент, к которому необходимо добавить маску  , { placeholder: "01.01.2016" }
+            $("#PublishedAt").mask("9999-99-99");
+        });
     </script>*@
 }
