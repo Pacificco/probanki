@@ -9,32 +9,57 @@ namespace Bankiru.Models.Domain.Account
 {
     public class VM_User
     {
-        [HiddenInput]
         public int Id { get; set; }
-        [Display(Name = "Имя")]
-        [Required(ErrorMessage = "Имя - обязательное поле")]
         public string Name{ get; set; }
-        [Required(ErrorMessage = "Email - обязательное поле")]
-        [Display(Name = "Email")]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.EmailAddress)]
         public string Email{ get; set; }
-        [Display(Name = "Пароль")]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
+        public bool EmailConfirmed { get; set; }
         public string Password{ get; set; }
-        [Display(Name = "Пол")]
-        [Required(ErrorMessage = "Пол - обязательное поле")]
-        public EnumSex Sex{ get; set; }
-        [Display(Name = "Фамилия")]
+        public VM_UserSex Sex { get; set; }
         public string LastName{ get; set; }
-        [Display(Name = "Отчество")]        
         public string FatherName{ get; set; }
-        [Display(Name = "Активный")]
         public bool IsActive{ get; set; }
-        [Display(Name = "Подписан на рассылку")]
         public bool IsSubscribed{ get; set; }
-        [Display(Name = "Ник/псевдоним")]
         public string Nic{ get; set; }
-        [Display(Name = "Роли")]
-        public string[] Rols { get; set; }       
+        public string[] Rols { get; set; }
+        public string Avatar { get; set; }
+        public string Country { get; set; }
+        public Guid? RegionId { get; set; }
+        public string City { get; set; }
+        public DateTime RegistrationDate { get; set; }
+        public DateTime? LastVisitDate { get; set; }
+        public bool IsBan { get; set; }
+        public DateTime? BanDate { get; set; }
+        public string Comment { get; set; }
+
+        public VM_User()
+        {
+            Id = -1;
+            Rols = null;
+            IsActive = false;            
+            Nic = String.Empty;
+            Name = String.Empty;
+            LastName = String.Empty;
+            FatherName = String.Empty;
+            Sex = VM_UserSex.Undefined;
+            Email = String.Empty;
+            EmailConfirmed = false;
+            IsSubscribed = false;
+            Avatar = String.Empty;
+            Country = String.Empty;
+            RegionId = Guid.Empty;
+            City = String.Empty;
+            RegistrationDate = DateTime.Now;
+            LastVisitDate = null;
+            IsBan = false;
+            BanDate = null;
+            Comment = String.Empty;
+        }
+    }
+
+    public enum VM_UserSex
+    {
+        Undefined = 0,
+        Male,
+        Female
     }
 }

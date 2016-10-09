@@ -757,12 +757,49 @@ namespace Bankiru.Models.DataBase
         public static class PROCEDURES
         {
             /// <summary>
-            /// Процедура 
-            /// Параметры:
-            /// @sku int = -1 - Код товара
-            /// @instock int = 0 - Количество товара, которое необходимо списать
+            /// Создает нового пользователя в базе данных
             /// </summary>
-            public const string proc = "proc";
+            public static class CreateNewUser
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "CreateNewUser";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    /// <summary>
+                    /// Никнейм
+                    /// </summary>
+                    public static string NicName = "@NicName";
+                    /// <summary>
+                    /// Имя
+                    /// </summary>
+                    public static string Name = "@Name";
+                    /// <summary>
+                    /// Email
+                    /// </summary>
+                    public static string Email = "@Email";
+                    /// <summary>
+                    /// Пароль
+                    /// </summary>
+                    public static string Password = "@Password";
+                    /// <summary>
+                    /// Пол
+                    /// </summary>
+                    public static string Sex = "@Sex";
+                    /// <summary>
+                    /// Подписка
+                    /// </summary>
+                    public static string Subscribed = "@Subscribed";
+                    /// <summary>
+                    /// Роль
+                    /// </summary>
+                    public static string Role = "@Role";
+                }
+            }
 
         }
     }

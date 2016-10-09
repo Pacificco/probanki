@@ -154,6 +154,7 @@
     <Compile Include="Areas\Admin\Controllers\OrgsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ReviewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
@@ -218,8 +219,8 @@
     <Compile Include="Models\Domain\Other\VM_DropDownRegions.cs" />
     <Compile Include="Models\Domain\Other\VM_Region.cs" />
     <Compile Include="Models\Domain\Types.cs" />
-    <Compile Include="Models\Domain\Users\VM_User.cs" />
-    <Compile Include="Models\Domain\Users\VM_UserItem.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserItem.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserRegistration.cs" />
     <Compile Include="Models\Helpers\ArticleHelper.cs" />
     <Compile Include="Models\Helpers\ConvertHelper.cs" />
     <Compile Include="Models\Helpers\DbHelper.cs" />
@@ -624,6 +625,7 @@
     <Content Include="Views\Shared\_moduleCounters.cshtml" />
     <Content Include="Views\Email\_emailPublication.html.cshtml" />
     <Content Include="Views\Email\_emailPublication.txt.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
