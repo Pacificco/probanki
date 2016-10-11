@@ -31,6 +31,8 @@ namespace Bankiru.Models.Domain.Account
         public DateTime? BanDate { get; set; }
         public string Comment { get; set; }
 
+        public string Token { get; set; }
+
         public VM_User()
         {
             Id = -1;
@@ -53,6 +55,8 @@ namespace Bankiru.Models.Domain.Account
             IsBan = false;
             BanDate = null;
             Comment = String.Empty;
+
+            Token = "";
         }
     }
 

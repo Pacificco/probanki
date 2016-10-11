@@ -23,17 +23,21 @@ namespace Bankiru.Models.Domain.Account
         }
 
         #region BACKEND
+        
+        #endregion
+
+        #region FRONTEND
         public bool RegisterNewUser(VM_UserRegistration user, string role)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CreateNewUser.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.NicName, user.NicName.Trim());
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Name, user.Name.Trim());
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Email, user.Email.Trim());
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Password, _getMd5Hash(user.Password.Trim()));
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Sex, (int)user.Sex);
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Subscribed, user.Subscribed);
-            command.Parameters.Add(DbStruct.PROCEDURES.CreateNewUser.Params.Role, role);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.NicName, user.NicName.Trim());
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Name, user.Name.Trim());
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Email, user.Email.Trim());
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Password, _getMd5Hash(user.Password.Trim()));
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Sex, (int)user.Sex);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Subscribed, user.Subscribed);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Role, role);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -42,7 +46,7 @@ namespace Bankiru.Models.Domain.Account
                     if (command.ExecuteNonQuery() == 1)
                     {
                         _lastError = "Во время регистрации пользователя произошла ошибка!";
-                        log.Error(String.Format("Во время регистрации пользователя произошла ошибка!", ex.ToString()));
+                        log.Error("Во время регистрации пользователя произошла ошибка!");
                         return false;
                     }
                 }
@@ -60,10 +64,6 @@ namespace Bankiru.Models.Domain.Account
             }
             return true;
         }
-        #endregion
-
-        #region FRONTEND
-
         #endregion
 
         #region ОБЩИЕ МЕТОДЫ
@@ -113,7 +113,7 @@ namespace Bankiru.Models.Domain.Account
                                 Name = _reader.GetString(1),
                                 Email = _reader.GetString(2),
                                 Password = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
-                                Sex = (EnumSex)_reader.GetInt32(4),
+                                Sex = (VM_UserSex)_reader.GetInt32(4),
                                 LastName = _reader.GetString(5),
                                 FatherName = _reader.GetString(6),
                                 IsActive = _reader.GetBoolean(7),
@@ -128,7 +128,7 @@ namespace Bankiru.Models.Domain.Account
                 }
                 catch (Exception ex)
                 {
-                    LastError = "Ошибка во время загрузки пользователя!\n" + ex.ToString();
+                    _lastError = "Ошибка во время загрузки пользователя!\n" + ex.ToString();
                     return null;
                 }
                 finally

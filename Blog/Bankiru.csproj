@@ -626,6 +626,8 @@
     <Content Include="Views\Email\_emailPublication.html.cshtml" />
     <Content Include="Views\Email\_emailPublication.txt.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\_moduleFormLogin.cshtml" />
+    <Content Include="Views\Account\_moduleWellcomeBlock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -633,6 +635,7 @@
     <Folder Include="Content\Images\Articles\" />
     <Folder Include="Content\Images\Editor\" />
     <Folder Include="Content\Images\Orgs\Icons\" />
+    <Folder Include="Content\lk\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

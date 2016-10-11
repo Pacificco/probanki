@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+    bool isAuthorized = false;
+    if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+        isAuthorized = true;   
+
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -30,7 +36,14 @@
                     <img src="~/Content/baners/top.jpg" title="ProBanki.net - профессиональное мнение о финансовом рынке РФ и финансовых учреждениях Воронежского региона" alt="ProBanki.net" />                    
                 </aside>
                 <aside id="login">
-                    
+                    @if (isAuthorized)
+                    {
+                         @Html.Action("_getModuleLogin", "Account")
+                    }
+                    else
+                    {
+                        @Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.Username })
+                    }   
                 </aside>
             </section>
             @Html.Action("_getModuleMainMenu", "Home", new { current_item = String.IsNullOrEmpty(ViewBag.CurrentMenuItem) ? "" : ViewBag.CurrentMenuItem })

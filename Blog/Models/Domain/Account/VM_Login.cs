@@ -15,6 +15,8 @@ namespace Bankiru.Models.Domain.Account
         [Required(ErrorMessage = "Пароль - обязательное поле")]
         [Display(Name = "Введите пароль")]
         [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
-        public string Password { get; set; }        
+        public string Password { get; set; }
+        [Display(Name = "Запомнить меня")]
+        public bool RememberMe { get; set; }      
     }
 }

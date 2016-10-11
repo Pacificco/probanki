@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bankiru.Models.Domain.Account;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,10 @@ namespace Bankiru.Models.Security
     public static class SessionPersister
     {
         static string usernameSessionVar = "Email";
+        //static string usernameSessionVar = "Token";
+
+        public static VM_User CurrentUser { get; set; }
+
         public static string Username
         {
             get
@@ -24,6 +29,11 @@ namespace Bankiru.Models.Security
                 HttpContext.Current.Session[usernameSessionVar] = value;
                 HttpContext.Current.Session.Timeout = 60;
             }
+        }
+
+        public static void SetTimeout(int timeOut)
+        {
+            HttpContext.Current.Session.Timeout = timeOut;
         }
     }
 }

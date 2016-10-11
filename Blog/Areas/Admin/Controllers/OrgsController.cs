@@ -832,7 +832,7 @@ namespace Bankiru.Areas.Admin.Controllers
                     return Json(new { resultMessage = "ERROR" });
                 }
             }
-            catch (Exception e)
+            catch
             {
                 return Json(new { resultMessage = "ERROR" });
             }

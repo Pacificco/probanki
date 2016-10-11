@@ -581,6 +581,37 @@ namespace Bankiru.Controllers
         {
             return PartialView("_moduleCounters");
         }
+        [ChildActionOnly]
+        public ActionResult _getModuleLogin()
+        {
+            try
+            {
+                return PartialView("_moduleFormLogin", new VM_Login());
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getModuleWellcomeBlock(string user_name)
+        {
+            try
+            {
+                AccountManager manager = new AccountManager();
+                VM_User user = manager.Find(user_name);
+                if (user == null)
+                    return PartialView(_errPartialPage);
+                else
+                    return PartialView("_moduleWellcomeBlock", user);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
         #endregion
 
         #region ДОПОЛНИТЕЛЬНЫЕ МЕТОДЫ

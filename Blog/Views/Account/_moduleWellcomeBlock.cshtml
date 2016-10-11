@@ -1,0 +1,7 @@
+﻿@model Bankiru.Models.Domain.Account.VM_User
+
+<div id="login-block">
+    <div id="logout"><a href="@Url.Action("Logout", "Account")" title="Выйти из личного кабинета"><img src="~/Content/lk/logout.png" title="Выйти из личного кабинета" alt="Выход" /></a></div>
+    <p class="user-nic"><strong>@Model.Nic</strong></p>
+    <p>@Html.ActionLink("Личный кабинет", "Index", "Home", new { user_id = Model.Id }, new { title = "Личный кабинет" })</p>    
+</div>
