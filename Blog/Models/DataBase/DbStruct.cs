@@ -756,6 +756,8 @@ namespace Bankiru.Models.DataBase
         /// </summary>
         public static class PROCEDURES
         {
+            //Пользователи - Регистрация / Авторизация / Восстановление пароля
+
             /// <summary>
             /// Создает нового пользователя в базе данных
             /// </summary>
@@ -798,9 +800,154 @@ namespace Bankiru.Models.DataBase
                     /// Роль
                     /// </summary>
                     public static string Role = "@Role";
+                    /// <summary>
+                    /// Token
+                    /// </summary>
+                    public static string Token = "@Token";
+                }
+            }
+            /// <summary>
+            /// Проверяет существование Email в базе данных
+            /// </summary>
+            public static class MailExists
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "MailExists";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Email = "@Email";
+                }
+            }
+            /// <summary>
+            /// Проверяет существование Никнейма в базе данных
+            /// </summary>
+            public static class NicExists
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "NicExists";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Nic = "@Nic";
+                }
+            }
+            /// <summary>
+            /// Обновляет состояние подтверждения Email в базе данных
+            /// </summary>
+            public static class UserEmailConfirmedEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserEmailConfirmedEdit";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                    public static string Confirmed = "@Confirmed";
+                }
+            }
+            /// <summary>
+            /// Обновляет Token
+            /// </summary>
+            public static class UserTokenEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserTokenEdit";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                    public static string Token = "@Token";
+                }
+            }
+            /// <summary>
+            /// Изменяет пароль
+            /// </summary>
+            public static class UserPasswordEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserPasswordEdit";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                    public static string Password = "@Password";
                 }
             }
 
+            //Пользователи - общее
+
+            /// <summary>
+            /// Возвращает пользователя по идентификатору
+            /// </summary>
+            public static class UserView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
+            /// Возвращает активного пользователя по идентификатору
+            /// </summary>
+            public static class ActiveUserView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ActiveUserView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
+            /// Возвращает активного пользователя по Email
+            /// </summary>
+            public static class ActiveUserByEmailView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ActiveUserByEmailView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Email = "@Email";
+                }
+            }
         }
     }
 }

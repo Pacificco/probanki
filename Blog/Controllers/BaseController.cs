@@ -586,7 +586,7 @@ namespace Bankiru.Controllers
         {
             try
             {
-                return PartialView("_moduleFormLogin", new VM_Login());
+                return PartialView("_moduleFormLogin", new VM_UserLogin());
             }
             catch (Exception ex)
             {
@@ -600,7 +600,7 @@ namespace Bankiru.Controllers
             try
             {
                 AccountManager manager = new AccountManager();
-                VM_User user = manager.Find(user_name);
+                VM_User user = manager.FindUser(user_name);
                 if (user == null)
                     return PartialView(_errPartialPage);
                 else

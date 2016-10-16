@@ -1,8 +1,9 @@
 ﻿@{
     bool isAuthorized = false;
     if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
-        isAuthorized = true;   
-
+    {
+        isAuthorized = true;
+    }
 }
 <!DOCTYPE html>
 <html>
@@ -38,11 +39,11 @@
                 <aside id="login">
                     @if (isAuthorized)
                     {
-                         @Html.Action("_getModuleLogin", "Account")
+                         @Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.Username })
                     }
                     else
                     {
-                        @Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.Username })
+                        @Html.Action("_getModuleLogin", "Account")
                     }   
                 </aside>
             </section>

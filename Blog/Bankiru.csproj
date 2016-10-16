@@ -162,12 +162,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\OrgsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
     <Compile Include="Models\Domain\Account\VM_User.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserChangePassword.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserEmailConfirmed.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserPasswordRecovery.cs" />
     <Compile Include="Models\Domain\Articles\ArtsManager.cs" />
     <Compile Include="Models\Domain\Articles\VM_ArtCommentInfocs.cs" />
     <Compile Include="Models\Domain\Articles\VM_Article.cs" />
@@ -230,7 +234,7 @@
     <Compile Include="Models\Helpers\PagingHelpers.cs" />
     <Compile Include="Models\Infrastructure\BaseController.cs" />
     <Compile Include="Models\Infrastructure\GlobalParams.cs" />
-    <Compile Include="Models\Domain\Account\VM_Login.cs" />
+    <Compile Include="Models\Domain\Account\VM_UserLogin.cs" />
     <Compile Include="Models\OutApi\CurrenciesDownloader.cs" />
     <Compile Include="Models\OutApi\CurrenciesManager.cs" />
     <Compile Include="Models\OutApi\EmailModel.cs" />
@@ -628,6 +632,15 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\_moduleFormLogin.cshtml" />
     <Content Include="Views\Account\_moduleWellcomeBlock.cshtml" />
+    <Content Include="Views\Account\EmailSent.cshtml" />
+    <Content Include="Views\Email\_emailRegister.html.cshtml" />
+    <Content Include="Views\Account\EmailSuccsessConfirmed.cshtml" />
+    <Content Include="Views\Account\EmailAlreadyConfirmed.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Email\_emailPasswordRecover.html.cshtml" />
+    <Content Include="Views\Account\PasswordRecover.cshtml" />
+    <Content Include="Views\Account\PasswordRecoverEmailSent.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

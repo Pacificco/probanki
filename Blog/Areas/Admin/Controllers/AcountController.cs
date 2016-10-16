@@ -15,11 +15,11 @@ namespace Bankiru.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            return View(new VM_Login());
+            return View(new VM_UserLogin());
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(VM_Login model)
+        public ActionResult Login(VM_UserLogin model)
         {
             try
             {

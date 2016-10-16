@@ -21,7 +21,7 @@ namespace Bankiru.Models.Security
             else
             {
                 AccountManager _manager = new AccountManager();
-                VM_User user = _manager.Find(SessionPersister.Username);
+                VM_User user = _manager.FindUser(SessionPersister.Username);
                 
                 if (user == null)
                     filterContext.Result = new RedirectToRouteResult(

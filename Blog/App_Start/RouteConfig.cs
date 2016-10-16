@@ -132,6 +132,25 @@ namespace Bankiru
                 defaults: new { controller = "News", action = "List" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
+            //Пользователи
+            routes.MapRoute(
+                name: "user_forecast",
+                url: "lk/{user_id}/forecasts/{section_id}/{item_id}",
+                defaults: new { controller = "Users", action = "Forecasts", section_id = "dollar" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "user_info",
+                url: "lk/{user_id}/info/{section_id}/",
+                defaults: new { controller = "Users", action = "Info", section_id = "main" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "user_archive",
+                url: "lk/{user_id}/archive/{item_id}",
+                defaults: new { controller = "Users", action = "Archive", item_id = UrlParameter.Optional },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
             //Статические страницы
             routes.MapRoute(
                 name: "rules",

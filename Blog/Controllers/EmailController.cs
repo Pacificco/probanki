@@ -1,4 +1,5 @@
 ﻿using ActionMailer.Net.Mvc;
+using Bankiru.Models.Domain.Account;
 using Bankiru.Models.Domain.Other;
 using Bankiru.Models.OutApi;
 using System;
@@ -14,13 +15,14 @@ namespace Bankiru.Controllers
 {
     public class EmailController : MailerBase
     {
-        public EmailResult SendEmail(EmailModel model, HttpPostedFileBase file)
+        [ChildActionOnly]
+        public EmailResult SendEmailFromFeedback(EmailModel model, HttpPostedFileBase file)
         {
             To.Add(model.To);
             From = model.From;
             Subject = model.Subject;
-            MessageEncoding = Encoding.UTF8;            
-                        
+            MessageEncoding = Encoding.UTF8;
+
             if (file != null)
             {
                 string fileName = Path.GetFileName(file.FileName);
@@ -38,7 +40,7 @@ namespace Bankiru.Controllers
                 }
                 Attachments.Add(attachName, fileData);
             }
-            switch(model.Subject)
+            switch (model.Subject)
             {
                 case "question":
                     Subject = "Общие вопросы";
@@ -54,7 +56,27 @@ namespace Bankiru.Controllers
                     return Email("_emailPublication", model);
                 default:
                     return null;
-            }            
+            }
+        }
+        [ChildActionOnly]
+        public EmailResult SendEmailRegister(EmailModel model, VM_UserEmailConfirmed user)
+        {
+            To.Add(model.To);
+            From = model.From;
+            Subject = model.Subject;
+            MessageEncoding = Encoding.UTF8;
+            Subject = "Регистрация на ProBanki.net";
+            return Email("_emailRegister", user);
+        }
+        [ChildActionOnly]
+        public EmailResult SendEmailPasswordRecover(EmailModel model, VM_UserEmailConfirmed user)
+        {
+            To.Add(model.To);
+            From = model.From;
+            Subject = model.Subject;
+            MessageEncoding = Encoding.UTF8;
+            Subject = "Восстановление пароля";
+            return Email("_emailPasswordRecover", user);
         }
     }
 }

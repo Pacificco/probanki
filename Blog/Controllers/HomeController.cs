@@ -103,7 +103,7 @@ namespace Bankiru.Controllers
                     } 
                                                             
                     var mailController = new EmailController();
-                    var email = mailController.SendEmail(emailModel, MessageFile);
+                    var email = mailController.SendEmailFromFeedback(emailModel, MessageFile);
                     email.Deliver();
                     
                     ViewData["InfoMessage"] = "Ваше сообщение успешно отправлено";

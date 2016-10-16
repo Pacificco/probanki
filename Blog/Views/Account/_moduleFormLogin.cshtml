@@ -1,32 +1,40 @@
-﻿@model Bankiru.Models.Domain.Account.VM_Login
-
+﻿@model Bankiru.Models.Domain.Account.VM_UserLogin
+@{
+    AjaxOptions options = new AjaxOptions();
+    options.LoadingElementId = "spinning-submit-login";
+    options.HttpMethod = "post";
+    options.Url = "/Account/LoginAjax";
+    options.UpdateTargetId = "login";
+    options.InsertionMode = InsertionMode.Replace;
+    //options.OnComplete = "formAuthorizeComplete";    
+}
 <div id="login-block">
 
-    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    @using (Ajax.BeginForm("Login", "Account", null, options, new { id = "form-login-ajax" }))
     {            
         @Html.AntiForgeryToken()
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Username)
+        <div class="form-login-element-wrapper">
+            <div class="editor-label-submit">
+                <input id="login-submit" type="submit" value="Войти" />
+            </div>
+            <div class="editor-label-password">
+                @Html.LabelFor(model => model.Password)<br />
+                @Html.EditorFor(model => model.Password)            
+            </div>
+            <div class="editor-label-email">            
+                @Html.LabelFor(model => model.Username)<br />
+                @Html.EditorFor(model => model.Username)            
+            </div>
+            <img src="/Content/system/spinning.gif" alt="Запрос..." title="Авторизация" id="spinning-submit-login">
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Username)<br />
-            @Html.ValidationMessageFor(model => model.Username)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Password)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Password)<br />
+        <div class="form-login-valid-mes">        
             @Html.ValidationMessageFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Username)
+            @Html.ValidationSummary(true)
         </div>
-
-        <p>
-            <input id="login-submit" type="submit" value="Войти" />
-        </p>
-         
-        @Html.ValidationSummary(true)   
     }
-
+    <div class="under-login">
+        @Html.ActionLink("Регистрация", "Register", "Account", null, new { title = "Зарегистрироваться в клубе Probanki.net" }) &nbsp;&nbsp;
+        @Html.ActionLink("Забыли пароль?", "PasswordRecover", "Account", null, new { title = "Забыли пароль?" })
+    </div>
 </div>

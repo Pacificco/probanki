@@ -27,8 +27,8 @@ namespace Bankiru.Models.Domain.Account
         #endregion
 
         #region FRONTEND
-        public bool RegisterNewUser(VM_UserRegistration user, string role)
-        {
+        public int RegisterNewUser(VM_UserRegistration user, string role, string token)
+        {            
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CreateNewUser.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.NicName, user.NicName.Trim());
@@ -38,22 +38,61 @@ namespace Bankiru.Models.Domain.Account
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Sex, (int)user.Sex);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Subscribed, user.Subscribed);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Role, role);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewUser.Params.Token, token);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
                 try
                 {
-                    if (command.ExecuteNonQuery() == 1)
+                    object objId = command.ExecuteScalar();
+                    if(objId == null)
                     {
                         _lastError = "Во время регистрации пользователя произошла ошибка!";
                         log.Error("Во время регистрации пользователя произошла ошибка!");
-                        return false;
+                        return -1;
                     }
+                    int id = Convert.ToInt32(objId.ToString());
+                    if (id == 0)
+                    {
+                        _lastError = "Во время регистрации пользователя произошла ошибка!";
+                        return -1;
+                    }
+                    return id;
                 }
                 catch (Exception ex)
                 {
                     _lastError = "Во время регистрации пользователя произошла ошибка!";
                     log.Error(String.Format("Во время регистрации пользователя произошла ошибка!", ex.ToString()));
+                    return -1;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }            
+        }
+        public bool ChangeUserPassword(int userId, string password)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserPasswordEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserPasswordEdit.Params.Id, userId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserPasswordEdit.Params.Password, _getMd5Hash(password.Trim()));
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+
+                    if (command.ExecuteNonQuery() > 0)
+                        return true;
+                    else
+                        return false;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время изменения пароля! " + ex.ToString();
+                    log.Error(_lastError);
                     return false;
                 }
                 finally
@@ -62,7 +101,6 @@ namespace Bankiru.Models.Domain.Account
                         command.Dispose();
                 }
             }
-            return true;
         }
         #endregion
 
@@ -77,14 +115,174 @@ namespace Bankiru.Models.Domain.Account
             else
                 return null;
         }
-        public VM_User Find(string email)
+        public VM_User FindUser(string email)
         {
             return _getUser(email);
         }
+        public VM_User FindUser(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserView.Params.Id, id);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    VM_User user = new VM_User();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null || !reader.HasRows)
+                            return null;
+                        reader.Read();
+                        for (int j = 0; j < reader.FieldCount; j++)
+                            user.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                    }
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки пользователя из базы данных!";
+                    log.Error(String.Format("Ошибка во время загрузки пользователя из базы данных! ", ex.ToString()));
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public VM_User FindActiveUser(string email)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ActiveUserByEmailView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ActiveUserByEmailView.Params.Email, email);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    VM_User user = new VM_User();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null || !reader.HasRows)
+                            return null;
+                        reader.Read();
+                        for (int j = 0; j < reader.FieldCount; j++)
+                            user.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                    }
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки пользователя из базы данных!";
+                    log.Error(String.Format("Ошибка во время загрузки пользователя из базы данных! ", ex.ToString()));
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public VM_User FindActiveUser(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ActiveUserView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ActiveUserView.Params.Id, id);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    VM_User user = new VM_User();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null || !reader.HasRows)
+                            return null;
+                        reader.Read();
+                        for (int j = 0; j < reader.FieldCount; j++)
+                            user.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                    }
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки пользователя из базы данных!";
+                    log.Error(String.Format("Ошибка во время загрузки пользователя из базы данных! ", ex.ToString()));
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool MailExists(string email)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.MailExists.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.MailExists.Params.Email, email.Trim());
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    object exists = command.ExecuteScalar();
+                    if (exists == null)
+                        return true;
+
+                    return Convert.ToInt32(exists.ToString()) == 1 ? true : false;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время проверки Email на существование!";
+                    log.Error(String.Format("Ошибка во время проверки Email на существование!", ex.ToString()));
+                    return true;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool NicExists(string nic)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.NicExists.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.NicExists.Params.Nic, nic.Trim());
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    object exists = command.ExecuteScalar();
+                    if (exists == null)
+                        return true;
+
+                    return Convert.ToInt32(exists.ToString()) == 1 ? true : false;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время проверки Никнейма на существование!";
+                    log.Error(String.Format("Ошибка во время проверки Никнейма на существование!", ex.ToString()));
+                    return true;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }        
         #endregion
 
         #region СКРЫТЫЕ МЕТОДЫ
-        //Пользователи
+        //Пользователи        
         private VM_User _getUser(string email)
         {
             string SQLQuery = _sqlGetUser(email);

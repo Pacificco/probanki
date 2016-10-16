@@ -17,13 +17,13 @@ namespace Bankiru.Models.Domain.Account
         public string Name { get; set; }
 
         [Display(Name = "Пол")]        
-        [MinLength(1, ErrorMessage = "Поле \"Пол\" обязательно для заполнения!")]
+        [Range(1,2, ErrorMessage = "Поле \"Пол\" обязательно для заполнения!")]
         public int Sex { get; set; }
 
         [Display(Name = "Электронная почта")]
         [Required(ErrorMessage = "Поле \"Email\" обязательно для заполнения!")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный адрес электронной почты")]
-        [DataType(DataType.EmailAddress)]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Не корректный Email!")]
+        //[DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Display(Name = "Пароль")]

@@ -33,7 +33,7 @@ namespace Bankiru.Models.Infrastructure
             {
                 if (_SqlConnection == null || _SqlConnection.State != System.Data.ConnectionState.Open)
                 {
-                    _SqlConnection = new SqlConnection("Data Source=ДОМ\\SQLEXPRESS; Initial Catalog=ProBanki; User ID=UserInvest; Password=1q2w3e");
+                    _SqlConnection = new SqlConnection("Data Source=ДОМ\\SQLEXPRESS; Initial Catalog=Bankiru; User ID=UserInvest; Password=1q2w3e");
                     //_SqlConnection = new SqlConnection("Data Source=probanki.mssql.somee.com; Initial Catalog=probanki; User ID=pcliskiweb_SQLLogin_1; Password=88xnxg87bk");
                     //_SqlConnection = new SqlConnection("Data Source=localhost;Integrated Security=False;User ID=u0201459_probanki_user;Connect Timeout=15;Encrypt=False;Packet Size=4096;Password=Qce7%0w4");
                     _SqlConnection.Open();

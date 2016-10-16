@@ -100,8 +100,18 @@ textarea {
     background-color: #fee;
 }
 .validation-summary-errors {
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: #f00;
+    padding: 0;
+    margin: 0;
+}
+.validation-summary-errors ul{
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+.validation-summary-errors ul li{
+   display: block;
 }
 .validation-summary-valid {
     display: none;
@@ -122,6 +132,10 @@ img.left-float {
 img.right-float {
     float: right;
     margin: 0 0 10px 10px;
+}
+#CaptchaCode {
+    width: 80px;
+    font-size: 1.2em;
 }
 
 /* Header
@@ -214,16 +228,97 @@ header {
 /* Авторизация
 -----------------------------------------------------------*/
 #login {
-    width: 240px;
+    width: 340px;
     position: relative;
     float: right;
 }
+#login-block {
+    padding-top: 5px;
+}
+#form-login-ajax {
+    position: relative;
+    overflow: hidden;
+    /*float: right;*/
+}
+#login-block .editor-label-email,
+#login-block .editor-label-password,
+#login-block .editor-label-submit {
+    float: right;
+    /*height: 46px;*/
+    margin-left: 4px; 
+}
+#spinning-submit-login {
+    float: right;
+    margin-top: 20px;
+    display: none;
+}
+#login-block .form-login-element-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+#login-block .form-login-valid-mes {
+    position: relative;
+    overflow: hidden;
+    padding-left: 73px;
+    font-size: 0.9em;
+}
+#login-block .form-login-valid-mes ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#login-block .form-login-valid-mes ul li{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+#login-block label {
+    font-size: 0.9em;
+}
+#login-block .editor-label-email input{
+    width: 120px;
+}
+#login-block .editor-label-password input{
+    width: 80px;
+}
+#login-block .editor-label-submit{    
+    padding-top: 17px;
 
+}
+#login-block .under-login {
+    text-align: right;
+    padding-right: 75px;
+}
+#login-block .under-login a{
+    color: #6594d6;
+    text-decoration: underline;
+}
+#login-block .under-login a:hover{    
+    text-decoration: none;
+}
+/* Блок информации о пользователе
+-----------------------------------------------------------*/
 #logout {
     float: right;
     margin: 0 0 5px 5px;
 }
-
+#login-block .club-member {
+    text-align: right;
+    color: #5f8fd4;
+}
+#login-block .club-member .nic {
+    color: black;
+    background-color: #ccf28d;
+    font-size: 1.1em;
+    padding: 2px 7px;
+    margin: 0 3px 0 3px;
+}
+#login-block .lk {
+    text-align: right;
+}
+#login-block .lk a {
+    color: #4972b1;
+}
 
 /* Верхнее меню
 -----------------------------------------------------------*/
@@ -618,6 +713,144 @@ header {
 }
 #main .review-main-column .review-readmore a {
     color: #4972b1;
+}
+
+/* Регистрация
+-----------------------------------------------------------*/
+#register {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#register h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#register h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#form-register {
+    padding-top: 10px;
+}
+#form-register .editor-label{
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: #4b78b9;
+}
+#form-register .editor-field{
+    margin: 0;
+    padding: 0 0 7px 0;
+}
+#form-register .editor-field input[type=text],
+#form-register .editor-field input[type=email],
+#form-register .editor-field input[type=password] {
+    width: 300px;
+    padding: 5px 10px;
+}
+#form-register .editor-field select {
+    padding: 5px 10px;
+}
+#captcha-block {
+    margin-top: 3px;
+}
+#form-register #CaptchaCode {
+    width: 80px;
+    font-size: 1.2em;
+}
+#form-register #login-submit {
+    padding: 5px 10px;
+}
+
+/* Восстановление пароля
+-----------------------------------------------------------*/
+#password-recover {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#password-recover h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#password-recover h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#form-password-recover {
+    padding-top: 10px;
+}
+#form-password-recover .editor-label{
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: #4b78b9;
+}
+#form-password-recover .editor-field{
+    margin: 0;
+    padding: 0 0 7px 0;
+}
+#form-password-recover .editor-field input[type=text] {
+    width: 300px;
+    padding: 5px 10px;
+}
+#form-password-recover #CaptchaCode {
+    width: 80px;
+    font-size: 1.2em;
+}
+#form-password-recover #password-recover-submit {
+    padding: 5px 10px;
+}
+
+/* Изменение пароля
+-----------------------------------------------------------*/
+#change-password {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#change-password h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#change-password h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#form-change-password {
+    padding-top: 10px;
+}
+#form-change-password .editor-label{
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: #4b78b9;
+}
+#form-change-password .editor-field{
+    margin: 0;
+    padding: 0 0 7px 0;
+}
+#form-change-password .editor-field input[type=password],
+#form-change-password .editor-field input[type=text] {
+    width: 300px;
+    padding: 5px 10px;
+}
+#form-change-password #CaptchaCode {
+    width: 80px;
+    font-size: 1.2em;
+}
+#form-change-password #change-password-submit {
+    padding: 5px 10px;
 }
 
 /* Список организаций

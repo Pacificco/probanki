@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.metaTitle = "Регистрация";
+    ViewBag.metaRobots = "noindex,nofollow";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<section id="register">
+    <hgroup>
+        <h1>
+            <span>Регистрация в клубе Probanki.net</span>
+        </h1>
+        <h2>Ваш Email уже подтвержден.</h2>
+    </hgroup>
+    <div id="register-block">        
+        <p>Вы можете авторизоваться на сайте.</p>
+    </div>
+</section>
