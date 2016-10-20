@@ -948,6 +948,51 @@ namespace Bankiru.Models.DataBase
                     public static string Email = "@Email";
                 }
             }
+
+            //Пользователи - админка
+
+            /// <summary>
+            /// Возвращает количество пользователей по фильтру
+            /// </summary>
+            public static class UsersCount
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UsersCount";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Nic = "@Nic";
+                    public static string Email = "@Email";
+                    public static string Name = "@Name";
+                    public static string IsActive = "@IsActive";
+                }
+            }
+            /// <summary>
+            /// Возвращает количество пользователей по фильтру
+            /// </summary>
+            public static class UsersView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UsersView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Nic = "@Nic";
+                    public static string Email = "@Email";
+                    public static string Name = "@Name";
+                    public static string IsActive = "@IsActive";
+                    public static string From = "@From";
+                    public static string To = "@To";
+                }
+            }
         }
     }
 }

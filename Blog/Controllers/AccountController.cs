@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.Domain.Account;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.OutApi;
 using Bankiru.Models.Security;
 using log4net;

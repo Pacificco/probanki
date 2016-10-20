@@ -14,6 +14,7 @@ namespace Bankiru.Areas.Admin.Controllers
     [CustomAuthorize(Roles = "admin")]
     public class ArticlesController : BaseController
     {
+        [HttpGet]
         public ActionResult List(VM_ArtsFilters filter, int page = 1)
         {
             try

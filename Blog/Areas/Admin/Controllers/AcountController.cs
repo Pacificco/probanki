@@ -1,5 +1,6 @@
 ﻿using Bankiru.Controllers;
 using Bankiru.Models.Domain.Account;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Infrastructure;
 using Bankiru.Models.Security;
 using System;

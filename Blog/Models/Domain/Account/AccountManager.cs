@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.DataBase;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Infrastructure;
 using log4net;
 using System;

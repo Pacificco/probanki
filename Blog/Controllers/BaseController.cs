@@ -6,6 +6,7 @@ using Bankiru.Models.Domain.News;
 using Bankiru.Models.Domain.Orgs;
 using Bankiru.Models.Domain.OrgsCategories;
 using Bankiru.Models.Domain.Other;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Helpers;
 using Bankiru.Models.Infrastructure;
 using Bankiru.Models.Security;
@@ -587,6 +588,20 @@ namespace Bankiru.Controllers
             try
             {
                 return PartialView("_moduleFormLogin", new VM_UserLogin());
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        [OutputCache(Duration = 60)]
+        public ActionResult _getModuleShareInSocial()
+        {
+            try
+            {
+                return PartialView("_moduleShareInSocial");
             }
             catch (Exception ex)
             {
