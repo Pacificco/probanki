@@ -66,6 +66,11 @@ namespace Bankiru
                 "~/Content/admin_themes/arts/art.css",
                 "~/Content/admin_themes/arts/table.css"
                 ));
+            //Пользователи
+            bundles.Add(new StyleBundle("~/Content/admin/users/css").Include(
+                "~/Content/admin_themes/users/users.css",
+                "~/Content/admin_themes/users/table.css"
+                ));
             //Комментарии
             bundles.Add(new StyleBundle("~/Content/admin/comments/css").Include(
                 "~/Content/admin_themes/comments/comments.css",

@@ -20,6 +20,13 @@
                 <ul id="top-menu">
                     <li><a href="@Url.Action("Index", "Info")" title="">Главная</a></li>
                     <li>
+                        <a href="@Url.Action("List", "Users")" title="">Пользователи</a>
+                        <ul>
+                            <li><a href="@Url.Action("List", "Users")" title="">Пользователи</a></li>                            
+                        </ul>
+
+                    </li>
+                    <li>
                         <a href="@Url.Action("List", "Orgs")" title="">Организации</a>
                         <ul>
                             <li><a href="@Url.Action("List", "Orgs")" title="">Организации</a></li>

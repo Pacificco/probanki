@@ -34,7 +34,8 @@ namespace Bankiru.Models.Domain.Users
             if(filter.IsActive == EnumBoolType.None)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersCount.Params.IsActive, DBNull.Value);
             else
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersCount.Params.IsActive, (int)filter.IsActive);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersCount.Params.IsActive,
+                    filter.IsActive == EnumBoolType.True ? 1 : 0);
             if(String.IsNullOrEmpty(filter.Nic))
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersCount.Params.Nic, DBNull.Value);
             else
@@ -77,7 +78,8 @@ namespace Bankiru.Models.Domain.Users
             if (filter.IsActive == EnumBoolType.None)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersView.Params.IsActive, DBNull.Value);
             else
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersView.Params.IsActive, (int)filter.IsActive);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersView.Params.IsActive, 
+                    filter.IsActive == EnumBoolType.True ? 1 : 0);
             if (String.IsNullOrEmpty(filter.Nic))
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersView.Params.Nic, DBNull.Value);
             else

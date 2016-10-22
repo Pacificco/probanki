@@ -99,5 +99,31 @@ namespace Bankiru.Models.Domain.Users
             }
             return true;
         }
+        
+        public string GetFIO()
+        {
+            string fio = "";
+            if (!String.IsNullOrEmpty(LastName))
+                fio += LastName + " ";
+            if (!String.IsNullOrEmpty(Name))
+                fio += Name + " ";
+            if (!String.IsNullOrEmpty(FatherName))
+                fio += FatherName + " ";
+            return fio.Trim();
+        }
+        public string GetRols()
+        {
+            if (Rols == null)
+                return "";
+            if (Rols.Length == 0)
+                return "";
+            else
+            {
+                string str = "";
+                foreach (string r in Rols)
+                    str += ", " + r;
+                return str.Substring(2);
+            }
+        }
     }
 }

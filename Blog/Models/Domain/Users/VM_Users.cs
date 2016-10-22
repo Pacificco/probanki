@@ -17,6 +17,6 @@ namespace Bankiru.Models.Domain.Users
             Filters = new VM_UsersFilters();
             Items = new List<VM_UserItem>();
             PagingInfo = new VM_PagingInfo();
-        }
+        }        
     }
 }

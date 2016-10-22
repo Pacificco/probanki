@@ -262,6 +262,8 @@
     <Content Include="Content\admin_themes\orgs\points_table.css" />
     <Content Include="Content\admin_themes\orgs\reviews_table.css" />
     <Content Include="Content\admin_themes\orgs\review.css" />
+    <Content Include="Content\admin_themes\users\users.css" />
+    <Content Include="Content\admin_themes\users\table.css" />
     <Content Include="Content\system\spinning.gif" />
     <Content Include="Content\themes\arts\articles.css" />
     <Content Include="Content\themes\arts\comments.css" />
@@ -373,6 +375,9 @@
     <Content Include="Areas\Admin\Views\Orgs\_orgReviewsList.cshtml" />
     <Content Include="Areas\Admin\Views\Orgs\_orgReviewsListFilter.cshtml" />
     <Content Include="Areas\Admin\Views\Orgs\_backToOrgReviewsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_usersListFilter.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_usersList.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">
