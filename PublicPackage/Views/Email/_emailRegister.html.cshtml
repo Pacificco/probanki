@@ -1,0 +1,21 @@
+﻿@model Bankiru.Models.Domain.Account.VM_UserEmailConfirmed
+@{
+    Layout = null;
+    string url = String.Format("{2}/Account/EmailConfirmed?user_id={0}&token={1}",
+        Model.UserId,
+        Model.Token,
+        "http://localhost:9461"
+        );
+}
+<html>
+    <body>
+        <h1>@String.Format("Здравствуйте, {0}!", Model.UserName)</h1>
+        <p>Вы успешно заркгистрировались на сайте ProBanki.net и стали участников нашего Клуба.</p>
+        <p>Для продолжения регистрации перейдите по ссылке ниже:</p>
+        <p><a href="@url" target="_blank" title = "Завершить регистрацию">Подтвердить Email и завершить регистрацию</a></p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p>Если Вы не регистрировались на сайте ProBanki.net, просто проигнорируйте данное письмо.</p>
+    </body>
+</html>

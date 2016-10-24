@@ -106,7 +106,8 @@
             </div>        
         <div class="article-text">
             @Html.Raw(Model.TextFull)            
-        </div>        
+        </div>
+        @Html.Action("_getModuleShareInSocial", "Articles")      
     </article>
     @section middle_bottom
     {                

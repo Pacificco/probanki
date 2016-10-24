@@ -8,53 +8,29 @@ create proc UsersCount (
 	@IsActive bit
 	) as
 begin	
-	if @Nic is not null and @Name is not null and @Email is not null and @IsActive is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%' and u.Name like @Name + '%'
-			and u.Email like @Email + '%' and u.IsActive = @IsActive
-	else 
-	if @Nic is not null and @Name is not null and @Email is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%' and u.Name like @Name + '%'
-			and u.Email like @Email + '%'
-	else 
-	if @Nic is not null and @Name is not null and @IsActive is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%' and u.Name like @Name + '%'
-			and u.IsActive = @IsActive
-	else
-	if @Nic is not null and @Email is not null and @IsActive is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%'
-			and u.Email like @Email + '%' and u.IsActive = @IsActive
-	else
-	if @Name is not null and @Email is not null and @IsActive is not null
-		select COUNT(1) from Users u where u.Name like @Name + '%'
-			and u.Email like @Email + '%' and u.IsActive = @IsActive
-	else
-	if @Email is not null and @IsActive is not null
-		select COUNT(1) from Users u where
-			u.Email like @Email + '%' and u.IsActive = @IsActive
-	else
-	if @Nic is not null and @IsActive is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%'
-			and u.IsActive = @IsActive
-	else
-	if @Nic is not null and @Name is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%' and u.Name like @Name + '%'			
-	else
-	if @Name is not null and @Email is not null
-		select COUNT(1) from Users u where u.Name like @Name + '%'
-			and u.Email like @Email + '%'
-	else
-	if @IsActive is not null
-		select COUNT(1) from Users u where u.IsActive = @IsActive
-	else
-	if @Email is not null
-		select COUNT(1) from Users u where u.Email like @Email + '%'
-	else
+	declare @sqlSelect nvarchar(2800)
+	declare @sqlWhere nvarchar(2800)
+	
+	set @sqlSelect = ''
+	set @sqlWhere = ''
+
+	if @isActive is not null
+		select @sqlWhere = @sqlWhere + ' and u.IsActive = ' + case when @isActive = 1 then '1' else '0' end
 	if @Nic is not null
-		select COUNT(1) from Users u where u.Nic like @Nic + '%'
-	else
+		select @sqlWhere = @sqlWhere + ' and u.Nic like ''' + @Nic + '%'''
 	if @Name is not null
-		select COUNT(1) from Users u where u.Name like @Name + '%'
-	else
-		select COUNT(1) from Users u
+		select @sqlWhere = @sqlWhere + ' and u.Name like ''' + @Name + '%'''
+	if @Email is not null
+		select @sqlWhere = @sqlWhere + ' and u.Email like ''' + @Email + '%'''
+	
+	select @sqlSelect = 'select count(1)'	
+	select @sqlSelect = @sqlSelect + ' from Users u'	
+	
+	if @sqlWhere <> '' begin
+		select @sqlWhere = SUBSTRING(@sqlWhere,6,LEN(@sqlWhere) - 5)
+		select @sqlSelect = @sqlSelect + ' where ' + @sqlWhere
+	end;
+				
+	exec (@sqlSelect)
 end
 go

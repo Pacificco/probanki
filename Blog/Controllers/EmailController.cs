@@ -62,6 +62,7 @@ namespace Bankiru.Controllers
         public EmailResult SendEmailRegister(EmailModel model, VM_UserEmailConfirmed user)
         {
             To.Add(model.To);
+            To.Add("info@probanki.net");
             From = model.From;
             Subject = model.Subject;
             MessageEncoding = Encoding.UTF8;
@@ -72,6 +73,7 @@ namespace Bankiru.Controllers
         public EmailResult SendEmailPasswordRecover(EmailModel model, VM_UserEmailConfirmed user)
         {
             To.Add(model.To);
+            To.Add("info@probanki.net");
             From = model.From;
             Subject = model.Subject;
             MessageEncoding = Encoding.UTF8;

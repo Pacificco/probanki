@@ -52,18 +52,29 @@ namespace Bankiru.Models.OutApi
         public string CurrencyToHtml()
         {
             string result = String.Empty;
+
+            string rate = RateNow.ToString(CultureInfo.CurrentCulture);
+            if (rate.Length < 7)
+                while (rate.Length < 7)
+                    rate += "0";
+
+            string dif = Math.Round(Math.Abs(RateNow - RatePrev), 4).ToString(CultureInfo.CurrentCulture);
+                if(dif.Length < 6)
+                    while (dif.Length < 6)
+                        dif += "0";
+
             if (RateNow > 0.0F & RatePrev > 0.0F)
             {
                 bool up = (RateNow - RatePrev) > 0.0F ? true : false; 
                 result += "<span class=\"currency-rate\">";
-                result += RateNow.ToString(CultureInfo.CurrentCulture);
+                result += rate;
                 result += "</span>";
                 result += String.Format("<img src=\"/Content/system/{0}\" title=\"Динамика курса\" alt=\"курс\" />",
                     up ? "rate_up.png" : "rate_down.png");
                 result += "<br />";
                 result += String.Format("<span class=\"currency-{0}\">", up ? "up" : "down");
                 result += up ? "+" : "-";
-                result += Math.Round(Math.Abs(RateNow - RatePrev),4).ToString(CultureInfo.CurrentCulture);
+                result += dif;
                 result += "</span>";
             }
             else if (RateNow > 0.0F)

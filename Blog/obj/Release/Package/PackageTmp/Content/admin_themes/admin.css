@@ -18,6 +18,16 @@ div {
     padding: 0;
 }
 
+.text-red {
+    color: red;
+}
+.text-green {
+    color: green;
+}
+.text-navy {
+    color: navy;
+}
+
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {

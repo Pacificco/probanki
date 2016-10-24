@@ -6,10 +6,10 @@
     ViewBag.metaTitle = Model.Org.Title + " - отзывы.";
     ViewBag.metaDescription = "";
     ViewBag.metaKeywords = "";
-    //ViewBag.metaRobots = String.Format("{0},{1}",
-    //    Model.Org.MetaNoIndex ? "noindex" : "index",
-    //    Model.Org.MetaNoFollow ? "nofollow" : "follow");
-    ViewBag.metaRobots = "noindex, nofollow";
+    ViewBag.metarobots = string.Format("{0},{1}",
+        Model.Org.MetaNoIndex ? "noindex" : "index",
+        Model.Org.MetaNoFollow ? "nofollow" : "follow");
+    //ViewBag.metaRobots = "index, follow";
 
     Layout = "~/Views/Shared/Master.cshtml";
     ViewBag.CurrentMenuItem = "orgs";

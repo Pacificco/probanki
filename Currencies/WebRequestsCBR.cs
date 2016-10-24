@@ -20,7 +20,7 @@ namespace Currencies
         public static WebResponseAnswer GetCurrentCourses(DateTime today, WebProxy proxy = null)
         {            
             string query = string.Format("{0}?date_req={1}/{2}/{3}", _baseUrl, today.Day.ToString("00"), today.Month.ToString("00"), today.Year);
-            log.Info(query);
+            //log.Info(query);
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(query);
             req.Method = WebRequestMethods.Http.Get;
             req.ContentType = "application/xml";
@@ -36,13 +36,13 @@ namespace Currencies
             {
                 WebResponse resp = req.GetResponse();
                 int code = (int)(resp as HttpWebResponse).StatusCode;
-                log.Info(string.Format("HttpAnswer: {0}", code));
+                //log.Info(string.Format("HttpAnswer: {0}", code));
                 Stream stream = resp.GetResponseStream();
                 return new WebResponseAnswer(code, string.Empty, stream);
             }
             catch (WebException ex)
             {
-                log.Info(ex.ToString());
+                log.Error("[currencies]\r\n" + ex.ToString());
                 return new WebResponseAnswer(null, ex.ToString(), null);
             }
         }

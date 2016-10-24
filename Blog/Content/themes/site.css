@@ -1338,6 +1338,21 @@ header {
     color: #628ac9;
     margin-left: 5px;
 }
+
+#news-list p.news-item {
+    padding: 5px 5px 0 5px;
+    margin: 0;
+}
+#news-list p.news-item time {
+    font-size: 0.9em;
+    color: #75818f;
+    margin-right: 3px;
+}
+#news-list p.news-item a{
+    color: #628ac9;
+    margin-left: 5px;
+    font-size: 0.9em;
+}
 /* Новость
 -----------------------------------------------------------*/
 #news-detail {
@@ -1523,6 +1538,57 @@ header {
     margin-bottom: -5px;
 }
 
+/* Социальные сети
+-----------------------------------------------------------*/
+#footer-socials  {
+    position: relative;
+    width: 100%;        
+    overflow: hidden;
+    margin: 15px 0;
+}
+#footer-socials-wrapper {
+    width: 936px;
+    position: relative;
+    margin: 0 auto;
+    padding-right:264px;
+    text-align: right;    
+}
+#footer-socials-wrapper span {
+    color: gray;
+    margin-right: 10px;
+}
+#footer-socials-wrapper a {
+    background-image: url(/Content/system/socials.png);    
+    width: 34px;
+    height: 34px;
+    position: relative;
+    margin-left: 0.08em;
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#footer-socials-wrapper .socials_vk {
+    background-position: -68px -174px;
+}
+#footer-socials-wrapper .socials_fb {
+    background-position: -228px 0px;
+}
+#footer-socials-wrapper .socials_ok {
+    background-position: -170px -174px;
+}
+#footer-socials-wrapper .socials_g {
+    background-position: -34px -174px;
+}
+
+/* Поделиться в социальных сетях
+-----------------------------------------------------------*/
+.share-in-socials {
+    text-align: right;
+}
+.share-in-socials span {
+    padding-bottom: 5px;
+}
 
 /* Footer
 -----------------------------------------------------------*/
@@ -1531,7 +1597,7 @@ header {
     width: 100%;    
     background-color: white;
     overflow: hidden;
-    margin-top: 35px;
+    margin-top: 10px;
     border-top: 2px solid #dbe5f1;
 }
 #footer-wrapper {

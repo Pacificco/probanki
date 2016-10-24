@@ -1,0 +1,86 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
+@model VM_Users
+@{
+    bool evel = true;
+    string classEvel = "odd";    
+}
+<div class="users-list">
+    <table class="users">
+        <tbody>
+            <tr>
+                <th class="tools"></th>
+                <th class="published">A</th>
+                <th class="nic">Ник</th>
+                <th class="fio">ФИО</th>
+                <th class="email">Email</th>
+                <th class="user-group">Группа</th>
+                <th class="registered-at">Дата публикации</th>
+                <th class="id">Id</th>
+            </tr>
+            @if (Model.Items != null)
+            {
+                foreach (VM_UserItem item in Model.Items)
+                {
+                <tr class="@classEvel">
+                    <td class="tools">
+                        <a class="del-user" data-art-name="@item.Nic" href="@Url.Action("Del", "Users", new { id = item.Id })" title="Удалить @item.Nic">
+                            <img src="~/Content/system/del.png" title="Удалить @item.Nic" alt="Удалить" />
+                        </a>
+                        <a href="@Url.Action("Edit", "Users", new { id = item.Id })" title="Редактировать @item.Nic">
+                            <img src="~/Content/system/edit.png" title="Редактировать" />
+                        </a>
+                    </td>
+                    <td class="published">
+                        @if (item.IsActive)
+                        {
+                            <a href="@Url.RouteUrl("admin_users", new { action = "Active", id = item.Id })" title="Активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                                <img src="~/Content/system/active.png" title="Активен" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@Url.RouteUrl("admin_users", new { action = "Disactivate", id = item.Id })" title="Не активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">id="art_@item.Id">*
+                                <img src="~/Content/system/disactive.png" title="Не активен" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" />
+                    </td>
+                    <td class="nic">
+                        @item.Nic
+                    </td>
+                    <td class="fio">
+                        @item.GetFIO()
+                    </td>
+                    <td class="email">
+                        @item.Email
+                        @if(!item.EmailConfirmed)
+                        {
+                            <br />
+                            <span class="text-red">Не подтвержден!</span>
+                        }
+                    </td>
+                    <td class="user-group text-navy">
+                        @item.GetRols()
+                    </td>
+                    <td class="registered-at">
+                        @item.RegistrationDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))
+                    </td>
+                    <td class="id">
+                        @item.Id.ToString()
+                    </td>
+                </tr>
+                        evel = !evel;
+                        if (evel)
+                        {
+                            classEvel = "odd";
+                        }
+                        else
+                        {
+                            classEvel = "evel";
+                        }
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,104 @@
+﻿/*Фильтр
+--------------------------------------------------------------------*/
+#users-filters {
+    padding: 5px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+#users-filters .editor-field{
+    display: block;
+    float: left;
+    padding: 3px 5px;
+    position: relative;
+    height: 30px;
+    margin: 0;
+}
+
+#users-filters .editor-field-nic input,
+#users-filters .editor-field-name input,
+#users-filters .editor-field-email input {
+    width: 200px;
+    padding: 3px;
+}
+#users-filters .editor-field-active select {
+    width: 120px;
+    padding: 3px;
+}
+#users-filters input[type=submit] {
+    height: 24px;    
+}
+
+
+/*Новая организация
+--------------------------------------------------------------------*/
+
+
+/*Редактирование организации
+--------------------------------------------------------------------*/
+#user-editor .editor-field input[type=text],
+#user-editor .editor-field select{
+    padding: 5px;
+    border: 1px solid #9ba6b3;
+}
+
+#user-editor .editor-field{
+    margin: 0 0 3px 0;
+}
+
+#user-editor .editor-field-alias span,
+#user-editor .editor-field-icon span{
+    font-weight: 600;
+    color: navy;
+}
+
+#user-editor .editor-title, #user-editor .editor-main, 
+#user-editor .editor-images, #user-editor .editor-meta, 
+#user-editor .editor-lists, #user-editor .editor-date {
+    padding: 10px;
+    background-color: #f4f7f9;
+    margin: 2px 0 10px 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #cfdee7;
+}
+
+#user-editor .editor-title input[type=text]{
+    width: 930px;
+}
+
+#user-editor .editor-main input[type=text]{
+    width: 930px;
+}
+
+#user-editor .editor-images input[type=text]{
+    width: 500px;
+}
+
+#user-editor .editor-meta input[type=text]{
+    width: 930px;
+}
+
+#user-editor .editor-label {
+    color: #76818f;
+}
+
+#user-editor input[type=submit]{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#user-editor #Title{
+    font-size:1.2em;
+}

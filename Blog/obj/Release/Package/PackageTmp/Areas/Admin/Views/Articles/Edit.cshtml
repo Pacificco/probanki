@@ -32,6 +32,13 @@
                 @Html.ValidationMessageFor(model => model.IsCentral)
             </div>
             <div class="editor-label">
+                @Html.LabelFor(model => model.PublishedAt)
+            </div>
+            <div class="editor-field">
+                <input class="text-box single-line" data-val="true" data-val-date="Поле Дата публикации должно содержать дату." data-val-required="Требуется поле Дата публикации." id="PublishedAt" name="PublishedAt" type="date" value="@Model.PublishedAt.ToString("yyyy-MM-dd")">              
+                @Html.ValidationMessageFor(model => model.PublishedAt)
+            </div>
+            <div class="editor-label">
                 @Html.LabelFor(model => model.Title)
             </div>
             <div class="editor-field">
@@ -124,15 +131,7 @@
                 @Html.ValidationMessageFor(model => model.MetaNoFollow)
             </div>
         </div>
-        <div class="editor-date">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.PublishedAt)
-            </div>
-            <div class="editor-field">
-                <input class="text-box single-line" data-val="true" data-val-date="Поле Дата публикации должно содержать дату." data-val-required="Требуется поле Дата публикации." id="PublishedAt" name="PublishedAt" type="date" value="@Model.PublishedAt.ToString("yyyy-MM-dd")">
-                @*@Html.EditorFor(model => model.PublishedAt)                               *@
-                @Html.ValidationMessageFor(model => model.PublishedAt)
-            </div>
+        <div class="editor-date">            
             <div class="editor-field editor-field-createdat">
                 Дата создания: <strong>@Model.CreatedAt.ToString("dd MMMM yyyy hh:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
             </div>

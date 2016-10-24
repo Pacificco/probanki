@@ -21,10 +21,10 @@
             {
                 <tr class="@classEvel">
                     <td class="tools">
-                        <a class="del-org" data-org-name="@item.Title" href="@Url.Action("ReviewDel", "Orgs", new { id = item.Id })" title="Удалить @item.Title">
+                        <a class="del-org" data-org-name="@item.Title" href="@Url.Action("Del", "Orgs", new { id = item.Id })" title="Удалить @item.Title">
                             <img src="~/Content/system/del.png" title="Удалить @item.Title" alt="Удалить" />
                         </a>
-                        <a href="@Url.Action("ReviewEdit", "Orgs", new { id = item.Id })" title="Редактировать @item.Title">
+                        <a href="@Url.Action("Edit", "Orgs", new { id = item.Id })" title="Редактировать @item.Title">
                             <img src="~/Content/system/edit.png" title="Редактировать"  alt="Редактировать" />
                         </a>
                     </td>

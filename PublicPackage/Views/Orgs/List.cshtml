@@ -10,7 +10,7 @@
         //ViewBag.metaRobots = String.Format("{0},{1}",
         //    Model.CurrentCategory.MetaNoIndex ? "noindex" : "index",
         //    Model.CurrentCategory.MetaNoFollow ? "nofollow" : "follow");
-        ViewBag.metaRobots = "noindex, nofollow";
+        ViewBag.metaRobots = "index, follow";
     }
     else
     {
@@ -54,11 +54,11 @@
             </h1>
             @if (Model.CurrentCategory.Id > 0)
             {
-                <h2>@Model.CurrentCategory.Title Воронежа и Воронежской области</h2>
+                <h2>@Model.CurrentCategory.Title Воронежа и Воронежской области:</h2>
             }
             else
             {
-                <h2>Финансовые организации и учреждения Воронежа и Воронежской области</h2>
+                <h2>Финансовые организации и учреждения Воронежа и Воронежской области:</h2>
             }
         </hgroup>
         <div class="org-list-header">

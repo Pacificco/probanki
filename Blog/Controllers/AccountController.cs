@@ -27,6 +27,14 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
+                    log.Info(String.Format("[try register] nic={0}, name={1}, email={2}, sex={3}, subscribed={4}",
+                        model.NicName,
+                        model.Name,
+                        model.Email,
+                        model.Sex.ToString(),
+                        model.Subscribed ? "Да" : "Нет"
+                        ));
+
                     if (ModelState.IsValid)
                     {
                         if (Session["captcha_code"] != null)
@@ -34,6 +42,7 @@ namespace Bankiru.Controllers
                             if (!model.CaptchaCode.ToLower().Equals(Session["captcha_code"].ToString().ToLower()))
                             {
                                 ModelState.AddModelError("CaptchaCode", "Код с картинки указан не верно!");
+                                log.Warn("[incorrect register] Код с картинки указан не верно!");
                                 return View(model);
                             }
                         }
@@ -44,6 +53,7 @@ namespace Bankiru.Controllers
                             ModelState.AddModelError("NicName", "Указанный Никнейм уже зарегистрирован в системе!");
                             model.Password = "";
                             model.PasswordConfirmed = "";
+                            log.Warn("[incorrect register] Указанный Никнейм уже зарегистрирован в системе!");
                             return View(model);
                         }
                         if (manager.MailExists(model.Email))
@@ -51,6 +61,7 @@ namespace Bankiru.Controllers
                             ModelState.AddModelError("Email", "Указанный Email уже зарегистрирован в системе!");
                             model.Password = "";
                             model.PasswordConfirmed = "";
+                            log.Warn("[incorrect register] Указанный Email уже зарегистрирован в системе!");
                             return View(model);
                         }
                         string token = Guid.NewGuid().ToString().ToLower().Replace("-","");
@@ -60,6 +71,7 @@ namespace Bankiru.Controllers
                             ModelState.AddModelError("", "Ошибка во время регистрации! Повторите попытку через несколько минут.");
                             model.Password = "";
                             model.PasswordConfirmed = "";
+                            log.Info("[error register] Ошибка во время регистрации!\r\n" + manager.LastError);
                             return View(model);
                         }
 
@@ -67,9 +79,8 @@ namespace Bankiru.Controllers
                         {
                             EmailModel emailModel = new EmailModel();
                             emailModel.From = "no-reply@probanki.net";
-                            emailModel.Subject = "";
-                            emailModel.To = "pacificco@mail.ru";
-                            //emailModel.To = model.Email.Trim();
+                            emailModel.Subject = "";                            
+                            emailModel.To = model.Email.Trim();
 
                             VM_UserEmailConfirmed emailConfirmed = new VM_UserEmailConfirmed();
                             emailConfirmed.UserId = id;
@@ -83,28 +94,29 @@ namespace Bankiru.Controllers
                         }
                         catch (Exception ex)
                         {
-                            log.Error("Ошибка во время отправки письма на Email! " + ex.ToString());
+                            log.Error("[error register] Ошибка во время отправки Email!\r\n" + ex.ToString());
                             ModelState.AddModelError("", "Ошибка регистрации!");
                             return View(model);
                         }
-
+                        log.Info("[success register] Успешно!");
                         return View("EmailSent");
                     }
                     else
                     {
+                        log.Warn("[incorrect register] Данные с формы не прошли валидацию!");
                         return View(model);
                     }
                 }
                 else
                 {
-                    log.Error(_errMassage);
+                    log.Error("[error register] " + _errMassage);
                     ModelState.AddModelError("", "Ошибка регистрации!");
                     return View(model);
                 }
             }
             catch (Exception ex)
             {
-                log.Error(ex.ToString());
+                log.Error("[error register] " + ex.ToString());
                 ModelState.AddModelError("", "Ошибка регистрации!");
                 return View(model);
             }
@@ -265,6 +277,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
+                    log.Info("[try password_recover] " + model.Email);
                     if (ModelState.IsValid)
                     {
                         if (Session["captcha_code"] != null)
@@ -272,6 +285,7 @@ namespace Bankiru.Controllers
                             if (!model.CaptchaCode.ToLower().Equals(Session["captcha_code"].ToString().ToLower()))
                             {
                                 ModelState.AddModelError("CaptchaCode", "Код с картинки указан не верно!");
+                                log.Warn("[incorrect password_recover] Код с картинки указан не верно!");
                                 return View(model);
                             }
                         }
@@ -281,6 +295,7 @@ namespace Bankiru.Controllers
                         if (user == null)
                         {
                             ModelState.AddModelError("Email", "Указанный Вами Email не зарегистрирован в системе!");
+                            log.Warn("[incorrect password_recover] Указанный Вами Email не зарегистрирован в системе!");
                             return View(model);
                         }
                             
@@ -288,6 +303,7 @@ namespace Bankiru.Controllers
                         if (!user.UpdateToken(token))
                         {
                             ModelState.AddModelError("", "Ошибка во время восстановления пароля!");
+                            log.Error("[error password_recover] Ошибка!\r\n" + user.LastError);
                             return View(model);
                         }
 
@@ -311,29 +327,31 @@ namespace Bankiru.Controllers
                         }
                         catch (Exception ex)
                         {
-                            log.Error("Ошибка во время восстановления пароля! " + ex.ToString());
+                            log.Error("[error password_recover] Ошибка во время отправки Email!]\r\n" + ex.ToString());
                             ModelState.AddModelError("", "Ошибка во время восстановления пароля!");
                             return View(model);
                         }
 
+                        log.Info("[success password_recover] Успешно!");
                         return View("PasswordRecoverEmailSent");
                     }
                     else
                     {
+                        log.Warn("[incorrect password_recover] Данные с формы не прошли валидацию!");
                         return View(model);
                     }
                 }
                 else
                 {
-                    log.Error(_errMassage);
+                    log.Error("[error password_recover] " + _errMassage);
                     ModelState.AddModelError("", "Ошибка во время восстановления пароля!");
                     return View(model);
                 }
             }
             catch (Exception ex)
             {
-                log.Error(ex.ToString());
-                ModelState.AddModelError("", "Ошибка регистрации!");
+                log.Error("[error password_recover] " + ex.ToString());
+                ModelState.AddModelError("", "Ошибка во время восстановления пароля!");
                 return View(model);
             }
         }
@@ -375,12 +393,14 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
+                    log.Info("[try change_password]");
                     if (ModelState.IsValid)
                     {
                         if (Session["captcha_code"] != null)
                         {
                             if (!model.CaptchaCode.ToLower().Equals(Session["captcha_code"].ToString().ToLower()))
                             {
+                                log.Warn("[incorrect change_password] Код с картинки указан не верно!");
                                 ModelState.AddModelError("CaptchaCode", "Код с картинки указан не верно!");
                                 return View(model);
                             }
@@ -391,41 +411,46 @@ namespace Bankiru.Controllers
                         if (user == null)
                         {
                             ModelState.AddModelError("", "Ошибка во время изменения пароля!");
+                            log.Error("[error change_password] Пользователь не определен!\r\n" + manager.LastError);
                             return View(model);
                         }
 
                         if (!user.Token.Equals(model.Token))
                         {
                             ModelState.AddModelError("", "Ключ безопасности нарушен!");
+                            log.Warn("[incorrect change_password] Ключ безопасности нарушен!");
                             return View(model);
                         }
 
                         if (!manager.ChangeUserPassword(user.Id, model.Password))
                         {
                             ModelState.AddModelError("", "Ошибка во время изменения пароля!");
+                            log.Error("[error change_password] Ошибка во время изменения пароля!\r\n" + manager.LastError);
                             return View(model);
                         }
 
                         SessionPersister.Username = String.Empty;
                         SessionPersister.CurrentUser = null;
 
+                        log.Info("[success change_password] Успешно!");
                         return View("ChangePasswordSuccess");
                     }
                     else
                     {
+                        log.Warn("[incorrect change_password] Данные с формы не прошли валидацию!");
                         return View(model);
                     }
                 }
                 else
                 {
-                    log.Error(_errMassage);
+                    log.Error("[error change_password] Ошибка!\r\n" + _errMassage);
                     ModelState.AddModelError("", "Ошибка во время изменения пароля!");
                     return View(model);
                 }
             }
             catch (Exception ex)
             {
-                log.Error(ex.ToString());
+                log.Error("[error change_password] Ошибка!\r\n" + ex.ToString());
                 ModelState.AddModelError("", "Ошибка во время изменения пароля!");
                 return View(model);
             }

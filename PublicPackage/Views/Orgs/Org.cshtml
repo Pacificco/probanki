@@ -26,11 +26,11 @@
     {
         ViewBag.metaKeywords = "";
     }
-    
-    //ViewBag.metaRobots = String.Format("{0},{1}",
-    //    Model.MetaNoIndex ? "noindex" : "index",
-    //    Model.MetaNoFollow ? "nofollow" : "follow");
-    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.metaRobots = String.Format("{0},{1}",
+        Model.MetaNoIndex ? "noindex" : "index",
+        Model.MetaNoFollow ? "nofollow" : "follow");
+    //ViewBag.metaRobots = "noindex, nofollow";
     
     Layout = "~/Views/Shared/Master.cshtml";
     ViewBag.CurrentMenuItem = "orgs";

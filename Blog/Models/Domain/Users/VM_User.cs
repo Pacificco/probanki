@@ -36,7 +36,7 @@ namespace Bankiru.Models.Domain.Users
         public string Token { get; set; }
 
         private string _lastError;
-        public string LfstError { get { return _lastError; } }
+        public string LastError { get { return _lastError; } }
 
         public VM_User()
         {
