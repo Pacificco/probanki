@@ -993,6 +993,97 @@ namespace Bankiru.Models.DataBase
                     public static string To = "@To";
                 }
             }
+
+            //Прогнозы
+            /// <summary>
+            /// Создает новые прогнозы на указанную дату
+            /// </summary>
+            public static class CreateNewForecasts
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "CreateNewForecasts";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string ForecastDate = "@ForecastDate";                    
+                }
+            }
+            /// <summary>
+            /// Выполняет проверку участвует ли пользователь в прогнозе
+            /// </summary>
+            public static class ForecastHasUser
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastHasUser";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string ForecastId = "@ForecastId";
+                    public static string UserId = "@UserId";
+                }
+            }
+            /// <summary>
+            /// Добавляет участника к прогнозу
+            /// </summary>
+            public static class AddUserToForecast
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "AddUserToForecast";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string ForecastId = "@ForecastId";
+                    public static string UserId = "@UserId";
+                    public static string ForecastValue = "@ForecastValue";
+                }
+            }
+            /// <summary>
+            /// Закрывает прогнозы по указанной дате
+            /// </summary>
+            public static class CloseForecasts
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "CloseForecasts";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string ForecastDate = "@ForecastDate";
+                }
+            }
+            /// <summary>
+            /// Возвращает список прогнозов
+            /// </summary>
+            public static class ForecastsView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastsView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string IsClosed = "@IsClosed";
+                    public static string SubjectId = "@SubjectId";
+                }
+            }
         }
     }
 }

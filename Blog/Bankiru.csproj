@@ -168,6 +168,8 @@
     </Compile>
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
+    <Compile Include="Models\Domain\Forecasts\ForecastsManager.cs" />
+    <Compile Include="Models\Domain\Forecasts\VM_Forecast.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
     <Compile Include="Models\Domain\Account\VM_UserChangePassword.cs" />
     <Compile Include="Models\Domain\Account\VM_UserEmailConfirmed.cs" />
