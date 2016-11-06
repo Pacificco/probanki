@@ -16,7 +16,7 @@ namespace Bankiru.Models.Domain.Forecasts
         public double WinAmount { get; set; }
         public DateTime ForecastDate { get; set; }
         public DateTime CreateDate { get; set; }
-        public DateTime ReportDate { get; set; }
+        public DateTime? ReportDate { get; set; }
         public int ReportUserId { get; set; }
 
         public VM_Forecast()
@@ -36,6 +36,50 @@ namespace Bankiru.Models.Domain.Forecasts
             CreateDate = DateTime.Now;
             ReportDate = DateTime.Now;
             ReportUserId = -1;
+        }
+        
+        public bool SetFieldValue(string fName, object fValue)
+        {
+            switch (fName)
+            {
+                case "Id":
+                    Id = (int)fValue;
+                    break;
+                case "SubjectId":
+                    Subject = (ForecastSubject)(byte)fValue;
+                    break;
+                case "IsClosed":
+                    IsClosed = (bool)fValue;
+                    break;
+                case "WinnerId":
+                    Winner.Id = fValue == DBNull.Value ? -1 : (int)fValue;
+                    break;
+                case "WinnerNic":
+                    Winner.Nic = fValue == DBNull.Value ? "" : (string)fValue;
+                    break;
+                case "WinValue":
+                    WinValue = fValue == DBNull.Value ? 0.0F : (double)fValue;
+                    break;
+                case "WinAmount":
+                    WinAmount = fValue == DBNull.Value ? 0.0F : (double)fValue;
+                    break;
+                case "ForecastDate":
+                    ForecastDate = (DateTime)fValue;
+                    break;
+                case "CreateDate":
+                    CreateDate = (DateTime)fValue;
+                    break;
+                case "ReportDate":
+                    ReportDate = fValue == DBNull.Value ? null : (DateTime?)fValue;
+                    break;
+                case "ReportUserId":
+                    ReportUserId = fValue == DBNull.Value ? -1 : (int)fValue;
+                    break;                
+                default:
+
+                    return false;
+            }
+            return true;
         }
     }
 
