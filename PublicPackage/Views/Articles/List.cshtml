@@ -23,7 +23,7 @@
     Layout = "~/Views/Shared/Master.cshtml";
 
     string desc = String.Empty;
-    string feedBackLink = Html.RouteLink("Обратная связь", "feedback", null, new { title = "Обратная связь" }).ToString();
+    string feedBackLink = Html.RouteLink("oбратная связь", "feedback", null, new { title = "Обратная связь" }).ToString();
     switch (Model.CurrentCategory.Id)
     {
         case 1: ViewBag.CurrentMenuItem = "statii";

@@ -278,13 +278,13 @@ namespace Bankiru.Controllers
 
         #region МОДУЛИ
         [ChildActionOnly]
-        [OutputCache(Duration = 86400, VaryByParam = "current_item")]
+        //[OutputCache(Duration = 86400, VaryByParam = "current_item")]
         public ActionResult _getModuleMainMenu(string current_item = "home")
         {
             return PartialView("_moduleMainMenu", current_item);
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 86400, VaryByParam = "cur_id")]
+        [OutputCache(Duration = 60, VaryByParam = "cur_id")]
         public ActionResult _getModuleOrgMenu(int cur_id = -1)
         {
             try
@@ -318,7 +318,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 86400, VaryByParam = "letter")]
+        [OutputCache(Duration = 60, VaryByParam = "letter")]
         public ActionResult _getModuleOrgsLetterFilter(string letter)
         {
             try

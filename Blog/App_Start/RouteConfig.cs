@@ -151,6 +151,49 @@ namespace Bankiru
                 defaults: new { controller = "Users", action = "Archive", item_id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
+            //Прогнозы
+            routes.MapRoute(
+                name: "club_forecast_adduser_ajax",
+                url: "club/forecasts/{subject_id}/{id}/adduser_ajax",
+                defaults: new { controller = "Forecasts", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_forecast_adduser",
+                url: "club/forecasts/{subject_id}/{id}/adduser",
+                defaults: new { controller = "Forecasts", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_forecast",
+                url: "club/forecasts/{subject_id}/{id}",
+                defaults: new { controller = "Forecasts", action = "Forecast", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_forecasts",
+                url: "club/forecasts/{subject_id}",
+                defaults: new { controller = "Forecasts", action = "List", subject_id = "all" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_forecasts_archive",
+                url: "club/forecasts/archive/{subject_id}",
+                defaults: new { controller = "Forecasts", action = "Archive", subject_id = "all" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_info",
+                url: "club/info",
+                defaults: new { controller = "Forecasts", action = "Info" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "club_rules",
+                url: "club/rules",
+                defaults: new { controller = "Forecasts", action = "Rules" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
             //Статические страницы
             routes.MapRoute(
                 name: "rules",

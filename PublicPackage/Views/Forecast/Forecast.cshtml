@@ -1,0 +1,119 @@
+﻿@using Bankiru.Models.Domain.Articles
+@model VM_Article
+@{
+    if (!String.IsNullOrEmpty(Model.MetaTitle))
+    {
+        ViewBag.metaTitle = Model.MetaTitle;
+    }
+    else
+    {
+        ViewBag.metaTitle = Model.Title;
+    }
+    if (String.IsNullOrEmpty(Model.MetaDesc))
+    {
+        ViewBag.metaDescription = "";
+    }
+    else
+    {
+        ViewBag.metaDescription = Model.MetaDesc;
+    }
+    if (String.IsNullOrEmpty(Model.MetaKeys))
+    {
+        ViewBag.metaKeywords = Model.MetaKeys;
+    }
+    else
+    {
+        ViewBag.metaKeywords = "";
+    }
+
+    ViewBag.metaRobots = "index,follow";
+    //ViewBag.metaRobots = String.Format("{0},{1}",
+    //    Model.MetaNoIndex ? "noindex" : "index",
+    //    Model.MetaNoFollow ? "nofollow" : "follow");
+    
+    Layout = "~/Views/Shared/Master.cshtml";
+    
+    switch(Model.CategoryId)
+    {
+        case 1: ViewBag.CurrentMenuItem = "statii";
+            break;
+        case 2: ViewBag.CurrentMenuItem = "intervju";
+            break;
+        case 3: ViewBag.CurrentMenuItem = "mnenija";
+            break;
+        case 7: ViewBag.CurrentMenuItem = "lirika";
+            break;
+        case 8: ViewBag.CurrentMenuItem = "revizija";
+            break;
+        default:
+            ViewBag.CurrentMenuItem = "";
+            break;
+    }
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Articles", new { cur_id = -1 })
+    @Html.Action("_getModuleSideLeaveOrgReview", "Articles", new { url = Url.RouteUrl("org_leave_review")})
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Articles", new { show_article_link = true})
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Articles")
+}
+@section scripts{
+    <script>
+        function formCommentReset() {
+        
+        }
+
+        function formCommentComplete(request, status)
+        {            
+            if ($('.form-comment-success')[0]) {
+                $("#form-comment #UserName").attr("value", "");
+                $("#form-comment #CommentText").val("");
+            }
+        }
+
+        function formCommentFailure(request, error) {
+        
+        }
+
+        function formCommentError() {
+        
+        }
+    </script>
+}
+@if (Model != null)
+{ 
+    <article id="article-detail">        
+        <hgroup>
+            <h1>
+                <span>@Model.Title</span>
+            </h1>
+            @if (!String.IsNullOrEmpty(Model.SubTitle))
+            {
+                <h2>@Model.SubTitle</h2>
+            }
+        </hgroup>
+        <div class="article-info">
+                <p>
+                    <time pubdate datetime="@Model.CreatedAt.ToString()">@Model.CreatedAt.ToString("dd MMMM yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))</time>                    
+                    @Html.RouteLink(Model.Category.Title, "art_items", new { cat_id = Model.Category.Alias }, new { title = Model.Category.Title })
+                </p>
+            </div>        
+        <div class="article-text">
+            @Html.Raw(Model.TextFull)            
+        </div>
+        @Html.Action("_getModuleShareInSocial", "Articles")      
+    </article>
+    @section middle_bottom
+    {                
+        @Html.Action("_getModuleLastArtComments", "Articles", new { art_id = Model.Id })
+        <div id="ajax-comment-form-wrapper">
+            @Html.Action("_getModuleLeaveArtComment", "Articles", new { art_id = Model.Id})
+        </div>
+    }
+}

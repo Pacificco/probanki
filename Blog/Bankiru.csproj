@@ -159,6 +159,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ClubController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\OrgsController.cs" />
@@ -168,8 +169,14 @@
     </Compile>
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
-    <Compile Include="Models\Domain\Forecasts\ForecastsManager.cs" />
-    <Compile Include="Models\Domain\Forecasts\VM_Forecast.cs" />
+    <Compile Include="Models\Domain\Club\ClubManager.cs" />
+    <Compile Include="Models\Domain\Club\VM_ClubMenber.cs" />
+    <Compile Include="Models\Domain\Club\VM_Forecast.cs" />
+    <Compile Include="Models\Domain\Club\VM_Forecasts.cs" />
+    <Compile Include="Models\Domain\Club\VM_ForecastMenuItem.cs" />
+    <Compile Include="Models\Domain\Club\VM_ForecastsFilters.cs" />
+    <Compile Include="Models\Domain\Club\VM_ForecastSubject.cs" />
+    <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
     <Compile Include="Models\Domain\Account\VM_UserChangePassword.cs" />
     <Compile Include="Models\Domain\Account\VM_UserEmailConfirmed.cs" />
@@ -653,6 +660,10 @@
     <Content Include="Views\Account\PasswordRecoverEmailSent.cshtml" />
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Shared\_moduleShareInSocial.cshtml" />
+    <Content Include="Views\Club\List.cshtml" />
+    <Content Include="Views\Club\_moduleUserForecastList.cshtml" />
+    <Content Include="Views\Club\Forecast.cshtml" />
+    <Content Include="Views\Club\_moduleForecastMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

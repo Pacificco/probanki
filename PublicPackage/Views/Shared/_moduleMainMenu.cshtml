@@ -1,5 +1,12 @@
 ﻿@using Bankiru.Models.Helpers
 @model string
+@{
+    bool isAuthorized = false;
+    if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+    {
+        isAuthorized = true;
+    }
+}
 <nav id="top-menu">
     <ul>
         <li class="@Html.GetMenuItemClass("home", Model)">@Html.RouteLink("Главная", "default", new { controller = "", action = "" }, new
@@ -30,6 +37,13 @@
        {
            title = "Ревизия"
        })</li>
+        @if(isAuthorized)
+        {
+            <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", new { subject_id = "all" }, new
+            {
+                title = "Клуб"
+            })</li>
+        }
         <li class="@Html.GetMenuItemClass("news", Model)">@Html.RouteLink("Новости", "news_items", null, new
        {
            title = "Новости"

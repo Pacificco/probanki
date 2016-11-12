@@ -9,9 +9,11 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://probanki.net/favicon.ico" />
+	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="@ViewBag.metaRobots" />    
-    @*<base href="http://probanki.net/" />*@
+    <base href="http://probanki.net/" />
     <title>@ViewBag.metaTitle</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="@ViewBag.metaKeywords" />
@@ -116,7 +118,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
-    @*@Html.Action("_getModuleCounters", "Home", null);*@
+    @Html.Action("_getModuleCounters", "Home", null);
    
 </body>
 </html>

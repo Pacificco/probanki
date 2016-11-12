@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Bankiru.Models.Domain.Forecasts
+namespace Bankiru.Models.Domain.Club
 {
     public class ForecastsManager
     {
@@ -191,8 +191,8 @@ namespace Bankiru.Models.Domain.Forecasts
                             while (reader.Read())
                             {
                                 f = new VM_Forecast();
-                                //for (int j = 0; j < reader.FieldCount; j++)
-                                //    f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
                                 forecasts.Add(f);
                             }
                         }
