@@ -756,8 +756,7 @@ namespace Bankiru.Models.DataBase
         /// </summary>
         public static class PROCEDURES
         {
-            //Пользователи - Регистрация / Авторизация / Восстановление пароля
-
+            #region ПОЛЬЗОВАТЕЛИ (Регистрация / Авторизация / Восстановление пароля)
             /// <summary>
             /// Создает нового пользователя в базе данных
             /// </summary>
@@ -894,9 +893,9 @@ namespace Bankiru.Models.DataBase
                     public static string Password = "@Password";
                 }
             }
+            #endregion
 
-            //Пользователи - общее
-
+            #region ПОЛЬЗОВАТЕЛИ
             /// <summary>
             /// Возвращает пользователя по идентификатору
             /// </summary>
@@ -948,9 +947,9 @@ namespace Bankiru.Models.DataBase
                     public static string Email = "@Email";
                 }
             }
+            #endregion
 
-            //Пользователи - админка
-
+            #region ПОЛЬЗОВАТЕЛИ (АДМИНКА)
             /// <summary>
             /// Возвращает количество пользователей по фильтру
             /// </summary>
@@ -993,8 +992,9 @@ namespace Bankiru.Models.DataBase
                     public static string To = "@To";
                 }
             }
+            #endregion
 
-            //Прогнозы
+            #region ПРОГНОЗЫ
             /// <summary>
             /// Создает новые прогнозы на указанную дату
             /// </summary>
@@ -1084,6 +1084,74 @@ namespace Bankiru.Models.DataBase
                     public static string SubjectId = "@SubjectId";
                 }
             }
+            /// <summary>
+            /// Возвращает пользователей текущих прогнозов
+            /// </summary>
+            public static class CurrentForecastsUsersView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "CurrentForecastsUsersView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id1 = "@Id1";
+                    public static string Id2 = "@Id2";
+                    public static string Id3 = "@Id3";
+                    public static string Id4 = "@Id4";
+                }
+            }
+            /// <summary>
+            /// Возвращает членов клуба
+            /// </summary>
+            public static class ClubUsersView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ClubUsersView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Limit = "@Limit";
+                }
+            }
+            #endregion
+
+            #region ПРЕДМЕТ ПРОГНОЗА
+            /// <summary>
+            /// Возвращает предмет прогноза по псевдониму
+            /// </summary>
+            public static class ForecastSubjectView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastSubjectView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string SubjectAlias = "@SubjectAlias";
+                }
+            }
+            /// <summary>
+            /// Возвращает предметы прогнозов
+            /// </summary>
+            public static class ForecastSubjectsView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastSubjectsView";
+            }
+            #endregion
         }
     }
 }

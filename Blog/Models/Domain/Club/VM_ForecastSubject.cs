@@ -10,7 +10,7 @@ namespace Bankiru.Models.Domain.Club
     public class VM_ForecastSubject
     {
         [HiddenInput]
-        public int Id { get; set; }
+        public byte Id { get; set; }
         [Display(Name = "Псевдоним")]
         public string Alias { get; set; }
         [Display(Name = "Название категории")]
@@ -31,5 +31,36 @@ namespace Bankiru.Models.Domain.Club
         public bool MetaNoIndex { get; set; }
         [Display(Name = "Активна")]
         public bool IsActive { get; set; }
+
+        public void Clear()
+        {
+            Id = 0;
+            Alias = "";
+            Name = "";
+            Description = "";
+            Icon = "";
+            MetaTitle = "";
+            MetaDescriptions = "";
+            MetaKeywords = "";
+            MetaNoFollow = false;
+            MetaNoIndex = false;
+            IsActive = true;
+        }
+        public void Assign(VM_ForecastSubject obj)
+        {
+            if (obj == null)
+                return;
+
+            Alias = obj.Alias;
+            Name = obj.Name;
+            Description = obj.Description;
+            Icon = obj.Icon;
+            MetaTitle = obj.MetaTitle;
+            MetaDescriptions = obj.MetaDescriptions;
+            MetaKeywords = obj.MetaKeywords;
+            MetaNoFollow = obj.MetaNoFollow;
+            MetaNoIndex = obj.MetaNoIndex;
+            IsActive = obj.IsActive;
+        }
     }
 }

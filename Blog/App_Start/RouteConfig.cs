@@ -13,7 +13,7 @@ namespace Bankiru
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //Публикации            
+            #region ПУБЛИКАЦИИ
             routes.MapRoute(
                 name: "art_comment",
                 url: "publikacii/{cat_id}/{art_id}/comments/{id}",
@@ -43,13 +43,16 @@ namespace Bankiru
                 url: "publikacii/comment",
                 defaults: new { controller = "Articles", action = "Comment" },
                 namespaces: new[] { "Bankiru.Controllers" }
-            );            
+            );
             routes.MapRoute(
                 name: "art_items",
                 url: "publikacii/{cat_id}",
                 defaults: new { controller = "Articles", action = "List" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
+            #endregion
+            
+            #region ОРГАНИЗАЦИИ
             //Организации (офисы)
             routes.MapRoute(
                 name: "org_point",
@@ -63,12 +66,6 @@ namespace Bankiru
                 defaults: new { controller = "Orgs", action = "Points" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //routes.MapRoute(
-            //    name: "org_points",
-            //    url: "orgs/{cat_id}/{org_id}/points/{region_id}",
-            //    defaults: new { controller = "Orgs", action = "Points", region_id = UrlParameter.Optional },
-            //    namespaces: new[] { "Bankiru.Controllers" }
-            //);
             //Организации (отзывы)
             routes.MapRoute(
                 name: "org_leave_review_ajax",
@@ -119,7 +116,9 @@ namespace Bankiru
                 defaults: new { controller = "Orgs", action = "List", cat_id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //Новости            
+            #endregion
+
+            #region НОВОСТИ
             routes.MapRoute(
                 name: "news_item",
                 url: "news/{news_id}",
@@ -132,7 +131,9 @@ namespace Bankiru
                 defaults: new { controller = "News", action = "List" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //Пользователи
+            #endregion
+                        
+            #region ПОЛЬЗОВАТЕЛИ
             routes.MapRoute(
                 name: "user_forecast",
                 url: "lk/{user_id}/forecasts/{section_id}/{item_id}",
@@ -151,54 +152,58 @@ namespace Bankiru
                 defaults: new { controller = "Users", action = "Archive", item_id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //Прогнозы
+            #endregion
+            
+            #region ПРОГНОЗЫ
             routes.MapRoute(
                 name: "club_forecast_adduser_ajax",
                 url: "club/forecasts/{subject_id}/{id}/adduser_ajax",
-                defaults: new { controller = "Forecasts", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Club", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecast_adduser",
                 url: "club/forecasts/{subject_id}/{id}/adduser",
-                defaults: new { controller = "Forecasts", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Club", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecast",
                 url: "club/forecasts/{subject_id}/{id}",
-                defaults: new { controller = "Forecasts", action = "Forecast", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Club", action = "Forecasts", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecasts",
-                url: "club/forecasts/{subject_id}",
-                defaults: new { controller = "Forecasts", action = "List", subject_id = "all" },
+                url: "club/forecasts",
+                defaults: new { controller = "Club", action = "List" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecasts_archive",
                 url: "club/forecasts/archive/{subject_id}",
-                defaults: new { controller = "Forecasts", action = "Archive", subject_id = "all" },
+                defaults: new { controller = "Club", action = "Archive", subject_id = "all" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_info",
                 url: "club/info",
-                defaults: new { controller = "Forecasts", action = "Info" },
+                defaults: new { controller = "Club", action = "Info" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_rules",
                 url: "club/rules",
-                defaults: new { controller = "Forecasts", action = "Rules" },
+                defaults: new { controller = "Club", action = "Rules" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //Статические страницы
+            #endregion            
+
+            #region СТАТИЧЕСКИЕ СТРАНИЦЫ
             routes.MapRoute(
                 name: "rules",
                 url: "rules",
-                defaults: new { controller = "Home", action = "Rules" },                
+                defaults: new { controller = "Home", action = "Rules" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
@@ -224,7 +229,10 @@ namespace Bankiru
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
-            );            
+            );
+            #endregion                        
+
+            #region ОШИБКИ + 404
             //Ошибки
             routes.MapRoute(
               name: "error",
@@ -232,7 +240,6 @@ namespace Bankiru
               defaults: new { controller = "Error", action = "Error" },
               namespaces: new[] { "Bankiru.Controllers" }
             );
-
             //404
             routes.MapRoute(
                 name: "404_catch_all",
@@ -240,13 +247,15 @@ namespace Bankiru
                 defaults: new { controller = "Error", action = "NotFound" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
-            //404
-            //routes.MapRoute(
-            //    name: "404_admin_catch_all",
-            //    url: "{*catchall}",
-            //    defaults: new { controller = "Error", action = "NotFound" },
-            //    namespaces: new[] { "Bankiru.Areas.Admin.Controllers" }
-            //);             
+            #endregion
+            
+            /*404
+            routes.MapRoute(
+                name: "404_admin_catch_all",
+                url: "{*catchall}",
+                defaults: new { controller = "Error", action = "NotFound" },
+                namespaces: new[] { "Bankiru.Areas.Admin.Controllers" }
+            );*/
         }
     }
 }

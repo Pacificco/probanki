@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bankiru.Models.Domain.Club;
+using Bankiru.Models.Domain.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,13 +8,43 @@ using System.Web.Mvc;
 
 namespace Bankiru.Controllers
 {
-    public class ClubController : Controller
-    {        
-        public ActionResult List()
+    public class ClubController : BaseController
+    {
+        [HttpGet]
+        //[Authorize(Roles = "admin,club_member")]
+        public ActionResult Forecasts()
         {
-            return View();
+            try
+            {
+                if (_connected)
+                {
+                    ClubManager manager = new ClubManager();
+                    List<VM_Forecast> model = manager.GetCurrentForecasts();                    
+                    if (model != null)
+                    {
+                        return View(model);
+                    }
+                    else
+                    {
+                        //log.Error("[Forecasts] Не удалось загрузить текущие прогнозы!\n" + manager.LastError);
+                        return View("Error");
+                    }
+                }
+                else
+                {                    
+                    log.Error("[Forecasts] Не удалось загрузить текущие прогнозы!\n" + _errMassage);
+                    return View("Error");
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error("[Forecasts] Не удалось загрузить текущие прогнозы!\n" + e.ToString());
+                return View("Error");
+            }
         }
-        public ActionResult Forecast()
+        [HttpGet]
+        //[Authorize(Roles = "admin,club_member")]
+        public ActionResult Forecast(int id)
         {
             return View();
         }
@@ -21,6 +53,54 @@ namespace Bankiru.Controllers
             return View();
         }
 
-
+        #region ДОЧЕРНИЕ МЕТОДЫ
+        [ChildActionOnly]
+        [OutputCache(Duration = 60, VaryByParam = "cur_item")]
+        public ActionResult _getModuleClubMenu(string cur_item = "none")
+        {
+            try
+            {
+                return PartialView("_moduleClubMenu");
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());                
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        [OutputCache(Duration = 60)]
+        public ActionResult _getModuleClubMembers()
+        {
+            try
+            {
+                if (_connected)
+                {
+                    ClubManager manager = new ClubManager();
+                    List<VM_User> model = new List<VM_User>();
+                    model = manager.GetUsers(15);
+                    if (model != null)
+                    {
+                        return PartialView("_moduleClubMembers", model);
+                    }
+                    else
+                    {
+                        log.Error(manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        #endregion
     }
 }

@@ -9,7 +9,7 @@ namespace Bankiru.Models.Domain.Club
     public class VM_Forecast
     {
         public int Id { get; set; }
-        public ForecastSubject Subject { get; set; }
+        public VM_ForecastSubject Subject { get; set; }
         public bool IsClosed { get; set; }
         public VM_User Winner { get; set; }
         public double WinValue { get; set; }
@@ -19,14 +19,18 @@ namespace Bankiru.Models.Domain.Club
         public DateTime? ReportDate { get; set; }
         public int ReportUserId { get; set; }
 
+        public List<VM_ForecastUser> Users { get; set; }
+
         public VM_Forecast()
         {
+            Subject = new VM_ForecastSubject();
+            Users = new List<VM_ForecastUser>();
             Clear();
         }
         public void Clear()
         { 
             Id = -1;
-            Subject = ForecastSubject.Undefined;
+            Subject.Clear();
             IsClosed = false;
             Winner = null;
             Winner = new VM_User();
@@ -36,6 +40,8 @@ namespace Bankiru.Models.Domain.Club
             CreateDate = DateTime.Now;
             ReportDate = DateTime.Now;
             ReportUserId = -1;
+
+            Users.Clear();
         }
         
         public bool SetFieldValue(string fName, object fValue)
@@ -46,7 +52,7 @@ namespace Bankiru.Models.Domain.Club
                     Id = (int)fValue;
                     break;
                 case "SubjectId":
-                    Subject = (ForecastSubject)(byte)fValue;
+                    Subject.Id = (byte)fValue;
                     break;
                 case "IsClosed":
                     IsClosed = (bool)fValue;

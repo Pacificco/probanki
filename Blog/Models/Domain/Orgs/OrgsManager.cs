@@ -3243,7 +3243,7 @@ namespace Bankiru.Models.Domain.Orgs
                     return 5;
                 case "lombardy":
                     return 6;
-                case "тза":
+                case "npf":
                     return 7;
                 case "kollektorskie-kompanii":
                     return 8;
@@ -3262,7 +3262,7 @@ namespace Bankiru.Models.Domain.Orgs
                 case 3: return "investicionnie-kompanii";
                 case 5: return "strahovie-kompanii";
                 case 6: return "lombardy";
-                case 7: return "тза";
+                case 7: return "npf";
                 case 8: return "kollektorskie-kompanii";
                 case 9: return "juridicheskie-kompanii";
                 default:

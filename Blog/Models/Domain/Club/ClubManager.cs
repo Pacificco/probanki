@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.DataBase;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Infrastructure;
 using log4net;
 using System;
@@ -9,13 +10,13 @@ using System.Web;
 
 namespace Bankiru.Models.Domain.Club
 {
-    public class ForecastsManager
+    public class ClubManager
     {
         private string _lastError;
         public string LastError { get { return _lastError; } }
-        public static readonly ILog log = LogManager.GetLogger(typeof(ForecastsManager));
+        public static readonly ILog log = LogManager.GetLogger(typeof(ClubManager));
 
-        public ForecastsManager()
+        public ClubManager()
         {
             _lastError = "";
         }
@@ -168,16 +169,31 @@ namespace Bankiru.Models.Domain.Club
         /// <param name="IsClosed">Закрытые</param>
         /// <param name="subject">Предмет прогноза</param>
         /// <returns>Список прогнозов</returns>
-        public List<VM_Forecast> GetForecasts(bool IsClosed, ForecastSubject subject)
+        public List<VM_Forecast> GetCurrentForecasts(string subjectAlias = "all")
         {
+            VM_ForecastSubject subject = null;
+            if (subjectAlias == "all")
+            {
+                subject = new VM_ForecastSubject();
+            }
+            else
+            {
+                subject = _getForecastSubject(subjectAlias);
+                if (subject == null)
+                {
+                    return new List<VM_Forecast>();
+                }
+            }
+
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, IsClosed);
-            if (subject == ForecastSubject.Undefined)
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, true);
+            if (subject.Id <= 0)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.SubjectId, DBNull.Value);
             else
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.SubjectId, (byte)subject);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.SubjectId, subject.Id);
             command.CommandTimeout = 15;
+
             lock (GlobalParams._DBAccessLock)
             {
                 try
@@ -197,6 +213,31 @@ namespace Bankiru.Models.Domain.Club
                             }
                         }
                     }
+
+                    if (forecasts.Count > 0)
+                    {
+                        //Предмет прогноза
+                        List<VM_ForecastSubject> subjects = _getForecastSubjects();
+                        if (subjects == null)
+                            return null;
+                        foreach (VM_Forecast f in forecasts)
+                            f.Subject.Assign(subjects.FirstOrDefault(s => s.Id == f.Subject.Id));
+
+                        //Пользователи
+                        int[] ids = (from f in forecasts select f.Id).ToArray<int>();
+                        List<VM_ForecastUser> users = _getCurrentForecastUsers(ids);
+                        if (users == null || users.Count == 0)
+                            return null;
+                        List<VM_ForecastUser> fUsers = null;
+                        foreach (VM_Forecast f in forecasts)
+                        {
+                            fUsers = users.FindAll(u => u.Forecast.Id == f.Id);
+                            if (fUsers != null)
+                                foreach (VM_ForecastUser u in fUsers)
+                                    f.Users.Add(u);
+                        }
+                    }
+
                     return forecasts;
                 }
                 catch (Exception ex)
@@ -213,5 +254,237 @@ namespace Bankiru.Models.Domain.Club
                 }
             }
         }
+        /// <summary>
+        /// Возвращает список пользователей
+        /// </summary>
+        /// <returns>Список пользователей</returns>
+        public List<VM_User> GetUsers(int limit)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ClubUsersView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ClubUsersView.Params.Limit, limit);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    List<VM_User> users = new List<VM_User>();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_User u = null;
+                            while (reader.Read())
+                            {
+                                u = new VM_User();
+                                
+                                users.Add(u);
+                            }
+                        }
+                    }                    
+                    return users;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ClubUsersView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+
+        #region ВСПОМАГАТЕЛЬНЫЕ МЕТОДЫ
+        private VM_ForecastSubject _getForecastSubject(string subjectAlias)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastSubjectView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastSubjectView.Params.SubjectAlias, subjectAlias);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null)
+                        {
+                            _lastError = String.Format("Ошибка во время загрузки предмета прогноза по псевдониму ({0})!\nСервер вернул Null.", subjectAlias);
+                            log.Error(LastError);
+                            return null;
+                        }
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                VM_ForecastSubject forecast = new VM_ForecastSubject()
+                                {
+                                    Id = reader.GetByte(0),
+                                    Alias = reader.GetString(1),
+                                    Name = reader.GetString(2),
+                                    Description = reader.GetString(3),
+                                    Icon = reader.IsDBNull(4) ? String.Empty : reader.GetString(4),
+                                    MetaTitle = reader.GetString(5),
+                                    MetaDescriptions = reader.GetString(6),
+                                    MetaKeywords = reader.GetString(7),
+                                    MetaNoFollow = reader.GetBoolean(8),
+                                    MetaNoIndex = reader.GetBoolean(9),
+                                    IsActive = reader.GetBoolean(10)
+                                };
+                                return forecast;
+                            }
+                        }
+                        else
+                        {
+                            _lastError = String.Format("Ошибка во время загрузки предмета прогноза по псевдониму ({0})!\nСервер вернул пустой ответ.", subjectAlias);
+                            log.Error(LastError);
+                            return null;
+                        }
+                    }
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время загрузки предмета прогноза по псевдониму ({0})!\n{1}", subjectAlias, ex.ToString());
+                    log.Error(LastError);
+                    return null;
+                }
+                finally
+                {                    
+                    if (command != null)
+                        command.Dispose();
+                }
+            }            
+        }
+        private List<VM_ForecastSubject> _getForecastSubjects()
+        {
+            List<VM_ForecastSubject> subjects = new List<VM_ForecastSubject>();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastSubjectsView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;            
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null)
+                        {
+                            _lastError = "Ошибка во время загрузки предметов прогнозов!\nСервер вернул Null.";
+                            log.Error(LastError);
+                            return null;
+                        }
+                        if (reader.HasRows)
+                        {
+                            VM_ForecastSubject subject = null;
+                            while (reader.Read())
+                            {
+                                subject = new VM_ForecastSubject()
+                                {
+                                    Id = reader.GetByte(0),
+                                    Alias = reader.GetString(1),
+                                    Name = reader.GetString(2),
+                                    Description = reader.GetString(3),
+                                    Icon = reader.IsDBNull(4) ? String.Empty : reader.GetString(4),
+                                    MetaTitle = reader.GetString(5),
+                                    MetaDescriptions = reader.GetString(6),
+                                    MetaKeywords = reader.GetString(7),
+                                    MetaNoFollow = reader.GetBoolean(8),
+                                    MetaNoIndex = reader.GetBoolean(9),
+                                    IsActive = reader.GetBoolean(10)
+                                };
+                                subjects.Add(subject);
+                            }
+                        }
+                        else
+                        {
+                            _lastError = "Ошибка во время загрузки предметов прогнозов!\nСервер вернул пустой ответ.";
+                            log.Error(LastError);
+                            return null;
+                        }
+                    }
+                    return subjects;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время загрузки предметов прогнозов!\n{0}", ex.ToString());
+                    log.Error(LastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        private List<VM_ForecastUser> _getCurrentForecastUsers(int[] forecasIds)
+        {
+            if (forecasIds == null || forecasIds.Length != 4)
+                return null;
+
+            List<VM_ForecastUser> users = new List<VM_ForecastUser>();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CurrentForecastsUsersView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CurrentForecastsUsersView.Params.Id1, forecasIds[0]);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CurrentForecastsUsersView.Params.Id2, forecasIds[1]);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CurrentForecastsUsersView.Params.Id3, forecasIds[2]);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CurrentForecastsUsersView.Params.Id4, forecasIds[3]);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader == null)
+                        {
+                            _lastError = "Ошибка во время загрузки пользователей текущих прогнозов!\nСервер вернул Null.";
+                            log.Error(LastError);
+                            return null;
+                        }
+                        if (reader.HasRows)
+                        {
+                            VM_ForecastUser user = null;
+                            while (reader.Read())
+                            {
+                                user = new VM_ForecastUser();
+                                user.User.Id = reader.GetInt32(reader.GetOrdinal("UserId"));
+                                user.User.Nic = reader.GetString(reader.GetOrdinal("Nic"));
+                                user.User.Avatar = reader.GetString(reader.GetOrdinal("Avatar"));
+                                user.Forecast.Id = reader.GetInt32(reader.GetOrdinal("ForecastId"));
+                                user.ReportDate = reader.GetDateTime(reader.GetOrdinal("ReportDate"));
+                                user.Value = reader.GetDouble(reader.GetOrdinal("Value"));                                                                
+                                users.Add(user);
+                            }
+                        }
+                        else
+                        {
+                            _lastError = "Ошибка во время загрузки пользователей текущих прогнозов!\nСервер вернул пустой ответ.";
+                            log.Error(LastError);
+                            return null;
+                        }
+                    }
+                    return users;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время загрузки пользователей текущих прогнозов!\n{0}", ex.ToString());
+                    log.Error(LastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        #endregion
     }
 }

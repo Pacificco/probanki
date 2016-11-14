@@ -1,0 +1,62 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.Club
+@model List<VM_Forecast>
+@{  
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Прогнозы";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";    
+}
+@section left_top
+{
+    @Html.Action("_getModuleClubMenu", "Club", new { cur_item = "forecasts" })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Club", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{
+    <section id="current-forecasts">
+        <hgroup>
+            <h1>
+                <span>Открытые прогнозы</span>
+            </h1>
+            <h2>Прогнозы, в которых Вы можете принять участие</h2>
+        </hgroup>        
+        @if (Model.Count > 0)
+        {
+            <div class="forecast">
+
+                @foreach (VM_Forecast item in Model)
+                {
+                    <section class="forecast-prev">
+                        <hgroup>
+                            <h1>@item.Subject.Name</h1>
+                            @if (!String.IsNullOrEmpty(item.Subject.Description))
+                            {
+                                <h2>@item.Subject.Description</h2>
+                            }
+                        </hgroup>
+                        <div class="forecast-prev-info">
+                            <p> Принять участие в данном прогнозе Вы можете до 
+                                <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>                                
+                            </p>
+                        </div>                        
+                    </section>                                    
+                }
+            </div>
+        }
+        else
+        {
+            <p>На данный момент открытых прогнозов не найдено.</p>
+        }        
+    </section>
+}

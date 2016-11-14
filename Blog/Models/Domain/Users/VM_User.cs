@@ -40,9 +40,13 @@ namespace Bankiru.Models.Domain.Users
 
         public VM_User()
         {
+            Clear();
+        }
+        public void Clear()
+        {
             Id = -1;
             Rols = null;
-            IsActive = false;            
+            IsActive = false;
             Nic = String.Empty;
             Name = String.Empty;
             LastName = String.Empty;
