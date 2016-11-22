@@ -1,0 +1,26 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
+@model List<VM_User>
+@if (Model.Items != null && Model.Items.Count > 0)
+{
+    <section class="club-users">
+        <h3>Члены клуба</h3>
+        <ul class="users">
+            @foreach (VM_User u in Model)
+            {
+                <li>
+                    <span class="user-nic">
+                        @u.Nic
+                    </span>
+                    <span class="user-reg-date">
+                        <time pubdate datetime="@u.RegistrationDate">@u.RegistrationDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                    </span>
+                    <br />
+                    <span class="user-forecast-count">
+                        0
+                    </span>                    
+                </li>
+            }
+        </ul>
+    </section>
+}

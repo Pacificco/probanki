@@ -429,17 +429,20 @@ header {
 
 /* Левая колонка МЕНЮ
 -----------------------------------------------------------*/
-#column-left section.org-menu {
+#column-left section.org-menu,
+#column-left section.club-menu {
     padding-left: 15px;
 }
-#column-left section.org-menu h3{
+#column-left section.org-menu h3,
+#column-left section.club-menu h3{
     text-transform: uppercase;
     color: #4b78b9;
     background: none;        
     padding: 5px 0 10px 5px;
     margin: 10px 0 5px 0;
 }
-#column-left section.org-menu ul{
+#column-left section.org-menu ul,
+#column-left section.club-menu ul{
     position: relative;    
     list-style-type: none;
     margin: 0;
@@ -447,10 +450,12 @@ header {
     font-size: 1.0em;
     background: url(/Content/system/org_menu_item_separator_bg.jpg) top right no-repeat;
 }
-#column-left section.org-menu ul li{        
+#column-left section.org-menu ul li,
+#column-left section.club-menu ul li{        
     background: url(/Content/system/org_menu_item_separator_bg.jpg) bottom right no-repeat;
 }
-#column-left section.org-menu ul li a {
+#column-left section.org-menu ul li a,
+#column-left section.club-menu ul li a {
     text-decoration: none;
     color: #373c41;
     padding: 7px 10px 10px 18px;
@@ -458,12 +463,15 @@ header {
     background: url(/Content/system/org_menu_item_bg.png) left center no-repeat;
 }
 #column-left section.org-menu ul li.current a,
-#column-left section.org-menu ul li.current a:hover {
+#column-left section.org-menu ul li.current a:hover,
+#column-left section.club-menu ul li.current a,
+#column-left section.club-menu ul li.current a:hover {
     color: #6594d6;
     font-weight: 500;
     background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
 }
-#column-left section.org-menu ul li a:hover {    
+#column-left section.org-menu ul li a:hover,
+#column-left section.club-menu ul li a:hover {    
     color: #6594d6;
     background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
 }
@@ -1406,6 +1414,35 @@ header {
 #news-detail .news-text a{
     color: #628ac9;
     margin-left: 3px;
+}
+
+/* Список прогнозов
+-----------------------------------------------------------*/
+#forecast-list {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#forecast-list h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#forecast-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#forecast-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
 }
 
 /* Стили текстовых блоков

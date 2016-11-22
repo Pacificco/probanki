@@ -57,7 +57,7 @@ namespace Bankiru.Models.Domain.Club
                 case "IsClosed":
                     IsClosed = (bool)fValue;
                     break;
-                case "WinnerId":
+                case "Winner":
                     Winner.Id = fValue == DBNull.Value ? -1 : (int)fValue;
                     break;
                 case "WinnerNic":

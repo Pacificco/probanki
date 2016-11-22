@@ -1,5 +1,6 @@
 ﻿using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ using System.Web.Mvc;
 
 namespace Bankiru.Controllers
 {
+    [CustomAuthorize(Roles = "admin,club_member")]
     public class ClubController : BaseController
     {
-        [HttpGet]
-        //[Authorize(Roles = "admin,club_member")]
+        [HttpGet]                
         public ActionResult Forecasts()
         {
             try
@@ -26,7 +27,7 @@ namespace Bankiru.Controllers
                     }
                     else
                     {
-                        //log.Error("[Forecasts] Не удалось загрузить текущие прогнозы!\n" + manager.LastError);
+                        log.Error("[Forecasts] Не удалось загрузить текущие прогнозы!\n" + manager.LastError);
                         return View("Error");
                     }
                 }
@@ -42,12 +43,12 @@ namespace Bankiru.Controllers
                 return View("Error");
             }
         }
-        [HttpGet]
-        //[Authorize(Roles = "admin,club_member")]
+        [HttpGet]        
         public ActionResult Forecast(int id)
         {
             return View();
         }
+        [HttpGet]
         public ActionResult Archive()
         {
             return View();
@@ -60,7 +61,7 @@ namespace Bankiru.Controllers
         {
             try
             {
-                return PartialView("_moduleClubMenu");
+                return PartialView("_moduleClubMenu", cur_item);
             }
             catch (Exception e)
             {

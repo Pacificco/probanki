@@ -39,7 +39,7 @@
        })</li>
         @if(isAuthorized)
         {
-            <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", new { subject_id = "all" }, new
+            <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", null, new
             {
                 title = "Клуб"
             })</li>

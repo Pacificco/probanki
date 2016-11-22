@@ -187,7 +187,7 @@ namespace Bankiru.Models.Domain.Club
 
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, true);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, false);
             if (subject.Id <= 0)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.SubjectId, DBNull.Value);
             else

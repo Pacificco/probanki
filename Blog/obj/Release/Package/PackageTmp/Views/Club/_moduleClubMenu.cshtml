@@ -1,0 +1,48 @@
+﻿@model string
+<section class="club-menu">
+    <h3>Клуб</h3>
+    <nav>
+        <ul>
+            @if(Model.Equals("about"))
+            {
+                <li class = "current">@Html.RouteLink("О клубе", "club_info", null, new { title = "О клубе" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("О клубе", "club_info", null, new { title = "О клубе" })</li>
+            }
+            @if(Model.Equals("rules"))
+            {
+                <li class = "current">@Html.RouteLink("Правила", "club_rules", null, new { title = "Правила" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Правила", "club_rules", null, new { title = "Правила" })</li>
+            }
+            @if(Model.Equals("forecasts"))
+            {
+                <li class = "current">@Html.RouteLink("Прогнозы", "club_forecasts", null, new { title = "Прогнозы" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Прогнозы", "club_forecasts", null, new { title = "Прогнозы" })</li>
+            }
+            @if(Model.Equals("archive"))
+            {
+                <li class = "current">@Html.RouteLink("Архив", "club_forecasts_archive", null, new { title = "Архив" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Архив", "club_forecasts_archive", null, new { title = "Архив" })</li>
+            }
+            @if(Model.Equals("users"))
+            {
+                <li class = "current">@Html.RouteLink("Члены клуба", "club_users", null, new { title = "Члены клуба" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Члены клуба", "club_users", null, new { title = "Члены клуба" })</li>
+            }
+        </ul>
+    </nav>
+</section>

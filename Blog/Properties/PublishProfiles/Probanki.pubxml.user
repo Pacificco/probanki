@@ -177,7 +177,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>11/12/2016 20:18:15</publishTime>
+      <publishTime>11/21/2016 23:02:03</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -3507,7 +3507,7 @@
       <publishTime>04/13/2016 22:33:36</publishTime>
     </File>
     <File Include="Content/themes/site.css">
-      <publishTime>11/12/2016 20:13:29</publishTime>
+      <publishTime>11/15/2016 20:04:12</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/09/2016 21:09:00</publishTime>
@@ -4116,7 +4116,7 @@
       <publishTime>10/16/2016 15:37:55</publishTime>
     </File>
     <File Include="Views/Account/EmailSent.cshtml">
-      <publishTime>10/16/2016 17:52:35</publishTime>
+      <publishTime>11/21/2016 21:43:04</publishTime>
     </File>
     <File Include="Views/Account/EmailSuccsessConfirmed.cshtml">
       <publishTime>10/16/2016 14:37:17</publishTime>
@@ -4154,6 +4154,21 @@
     <File Include="Views/Articles/_commentsList.cshtml">
       <publishTime>04/14/2016 22:19:31</publishTime>
     </File>
+    <File Include="Views/Club/Forecast.cshtml">
+      <publishTime>11/12/2016 14:16:55</publishTime>
+    </File>
+    <File Include="Views/Club/Forecasts.cshtml">
+      <publishTime>11/14/2016 21:39:49</publishTime>
+    </File>
+    <File Include="Views/Club/_moduleClubMembers.cshtml">
+      <publishTime>11/14/2016 20:57:32</publishTime>
+    </File>
+    <File Include="Views/Club/_moduleClubMenu.cshtml">
+      <publishTime>11/12/2016 21:15:36</publishTime>
+    </File>
+    <File Include="Views/Club/_moduleUserForecastList.cshtml">
+      <publishTime>11/12/2016 14:16:55</publishTime>
+    </File>
     <File Include="Views/Email/_emailInfo.html.cshtml">
       <publishTime>07/18/2016 22:45:47</publishTime>
     </File>
@@ -4185,7 +4200,7 @@
       <publishTime>10/05/2016 22:40:48</publishTime>
     </File>
     <File Include="Views/Error/Error.cshtml">
-      <publishTime>06/07/2016 14:52:10</publishTime>
+      <publishTime>11/14/2016 22:02:55</publishTime>
     </File>
     <File Include="Views/Error/NotFound.cshtml">
       <publishTime>04/13/2016 21:25:31</publishTime>
@@ -4245,10 +4260,10 @@
       <publishTime>02/27/2016 12:53:34</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>04/02/2016 16:04:42</publishTime>
+      <publishTime>11/14/2016 22:08:30</publishTime>
     </File>
     <File Include="Views/Shared/Master.cshtml">
-      <publishTime>11/12/2016 20:46:01</publishTime>
+      <publishTime>11/21/2016 23:01:56</publishTime>
     </File>
     <File Include="Views/Shared/PartialError.cshtml">
       <publishTime>01/25/2016 22:53:06</publishTime>
@@ -4269,7 +4284,7 @@
       <publishTime>06/08/2016 18:33:22</publishTime>
     </File>
     <File Include="Views/Shared/_moduleLastArticlesLinkList.cshtml">
-      <publishTime>10/31/2016 20:51:33</publishTime>
+      <publishTime>11/14/2016 21:40:29</publishTime>
     </File>
     <File Include="Views/Shared/_moduleLastComments.cshtml">
       <publishTime>06/14/2016 07:26:40</publishTime>
@@ -4281,7 +4296,7 @@
       <publishTime>06/07/2016 22:14:32</publishTime>
     </File>
     <File Include="Views/Shared/_moduleMainMenu.cshtml">
-      <publishTime>11/07/2016 22:48:15</publishTime>
+      <publishTime>11/14/2016 20:40:44</publishTime>
     </File>
     <File Include="Views/Shared/_moduleOrgLettersFilter.cshtml">
       <publishTime>04/25/2016 20:19:58</publishTime>
@@ -4308,7 +4323,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/12/2016 20:46:09</publishTime>
+      <publishTime>11/21/2016 23:02:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

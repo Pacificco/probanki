@@ -10,7 +10,7 @@
             {
                 <li>
                     @Html.RouteLink(item.Title, "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
-                     <span>(@item.Category.Title)</span>
+                     @*<span>(@item.Category.Title)</span>*@
                 </li>
             }
         </ul>

@@ -429,17 +429,20 @@ header {
 
 /* Левая колонка МЕНЮ
 -----------------------------------------------------------*/
-#column-left section.org-menu {
+#column-left section.org-menu,
+#column-left section.club-menu {
     padding-left: 15px;
 }
-#column-left section.org-menu h3{
+#column-left section.org-menu h3,
+#column-left section.club-menu h3{
     text-transform: uppercase;
     color: #4b78b9;
     background: none;        
     padding: 5px 0 10px 5px;
     margin: 10px 0 5px 0;
 }
-#column-left section.org-menu ul{
+#column-left section.org-menu ul,
+#column-left section.club-menu ul{
     position: relative;    
     list-style-type: none;
     margin: 0;
@@ -447,10 +450,12 @@ header {
     font-size: 1.0em;
     background: url(/Content/system/org_menu_item_separator_bg.jpg) top right no-repeat;
 }
-#column-left section.org-menu ul li{        
+#column-left section.org-menu ul li,
+#column-left section.club-menu ul li{        
     background: url(/Content/system/org_menu_item_separator_bg.jpg) bottom right no-repeat;
 }
-#column-left section.org-menu ul li a {
+#column-left section.org-menu ul li a,
+#column-left section.club-menu ul li a {
     text-decoration: none;
     color: #373c41;
     padding: 7px 10px 10px 18px;
@@ -458,12 +463,15 @@ header {
     background: url(/Content/system/org_menu_item_bg.png) left center no-repeat;
 }
 #column-left section.org-menu ul li.current a,
-#column-left section.org-menu ul li.current a:hover {
+#column-left section.org-menu ul li.current a:hover,
+#column-left section.club-menu ul li.current a,
+#column-left section.club-menu ul li.current a:hover {
     color: #6594d6;
     font-weight: 500;
     background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
 }
-#column-left section.org-menu ul li a:hover {    
+#column-left section.org-menu ul li a:hover,
+#column-left section.club-menu ul li a:hover {    
     color: #6594d6;
     background: url(/Content/system/org_menu_item_hover_bg.png) left center no-repeat;
 }

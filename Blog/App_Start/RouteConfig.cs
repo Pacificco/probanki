@@ -197,6 +197,12 @@ namespace Bankiru
                 defaults: new { controller = "Club", action = "Rules" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
+            routes.MapRoute(
+                name: "club_users",
+                url: "club/users",
+                defaults: new { controller = "Club", action = "Users" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
             #endregion            
 
             #region СТАТИЧЕСКИЕ СТРАНИЦЫ

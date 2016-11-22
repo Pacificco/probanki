@@ -666,6 +666,7 @@
     <Content Include="Views\Club\Forecast.cshtml" />
     <Content Include="Views\Club\_moduleClubMenu.cshtml" />
     <Content Include="Views\Club\_moduleClubMembers.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
