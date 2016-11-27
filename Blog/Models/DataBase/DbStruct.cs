@@ -914,6 +914,23 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Возвращает информацию о прогнозах пользователя по идентификатору
+            /// </summary>
+            public static class UserForecastInfoView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserForecastInfoView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
             /// Возвращает активного пользователя по идентификатору
             /// </summary>
             public static class ActiveUserView
@@ -1107,19 +1124,12 @@ namespace Bankiru.Models.DataBase
             /// <summary>
             /// Возвращает членов клуба
             /// </summary>
-            public static class ClubUsersView
+            public static class ClubTopUsersView
             {
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "ClubUsersView";
-                /// <summary>
-                /// Параметры хранимой процедуры                 
-                /// </summary>
-                public static class Params
-                {
-                    public static string Limit = "@Limit";
-                }
+                public static string Name = "ClubTopUsersView";
             }
             #endregion
 

@@ -31,6 +31,7 @@ namespace Bankiru.Models.Domain.Articles
         {
             VM_Articles _arts = new VM_Articles();
             int catId = _getCategoryIdByAlias(catAlias);
+            _arts.PagingInfo.ItemsPerPage = 3;
             _arts.PagingInfo.SetData(page, _getArtsTotalCount(catId));
             if (_arts.PagingInfo.TotalItems == -1) return null;
             _arts.PagingInfo.CurrentPage = page;
@@ -372,7 +373,7 @@ namespace Bankiru.Models.Domain.Articles
             }
             return arts;
         }
-        public List<VM_ArtItem> GetArtItems(List<int> excludeIds, List<int> catIds, int rowCount = 5)
+        public List<VM_ArtItem> GetArtItems(List<int> excludeIds, List<int> catIds, int rowCount = 3)
         {
             string SQLQuery = _sqlGetArtItems(excludeIds, catIds, rowCount);
             List<VM_ArtItem> arts = new List<VM_ArtItem>();

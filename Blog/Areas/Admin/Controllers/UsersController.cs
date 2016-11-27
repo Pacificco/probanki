@@ -50,6 +50,34 @@ namespace Bankiru.Areas.Admin.Controllers
                 return RedirectToAction("Error", "Error", null);
             }
         }
+        [HttpGet]
+        public ActionResult User(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    VM_User model = manager.GetUser(user_id);
+                    if (model == null)
+                    {
+                        log.Error("Ошибка во время загрузки пользователя!\r\n" + manager.LastError);
+                        return View(_errPage);
+                    }
+                    return View(model);
+                }
+                else
+                {
+                    log.Error("Ошибка во время загрузки пользователя!\r\n" + _errMassage);
+                    return View(_errPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время загрузки пользователя!\r\n" + ex.ToString());
+                return View(_errPage);
+            }
+        }
 
         #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]
@@ -93,6 +121,62 @@ namespace Bankiru.Areas.Admin.Controllers
             {
                 ViewBag.ErrorMessage = ex.ToString();
                 log.Error("Ошибка во время отображения фильтра пользователей!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getUserBalanceBlock(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    VM_UserForecastInfo balance = manager.GetUserForecastInfo(user_id);
+                    if(balance == null)
+                    {
+                        log.Error("Ошибка во время отображения блока с балансом пользователя!\r\n" + manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                    return PartialView("_userBalanceBlock", balance);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения блока с балансом пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения блока с балансом пользователя!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getUserBalanceHistory(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    List<VM_UserBalanceHistoryItem> history = manager.GetUserBalanceHistory(user_id);
+                    if (history == null)
+                    {
+                        log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                    return PartialView("_userBalanceBlock", history);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + ex.ToString());
                 return PartialView(_errPartialPage);
             }
         }

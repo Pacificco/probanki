@@ -21,7 +21,9 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/arts/css")
     @RenderSection("styles", required: false)
+    
     @Scripts.Render("~/bundles/modernizr")
+
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -46,6 +48,9 @@
                     else
                     {
                         @Html.Action("_getModuleLogin", "Account")
+
+                        //@Ajax.ActionLink("Войти", "LoginAjax", "Account", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "login-popup", InsertionMode = InsertionMode.Replace, OnSuccess="openPopup" })
+                        
                     }   
                 </aside>
             </section>
@@ -116,8 +121,8 @@
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryval")    
+    @RenderSection("scripts", required: false)    
     @*@Html.Action("_getModuleCounters", "Home", null);*@
    
 </body>

@@ -236,6 +236,8 @@
     <Compile Include="Models\Domain\Account\VM_UserItem.cs" />
     <Compile Include="Models\Domain\Account\VM_UserRegistration.cs" />
     <Compile Include="Models\Domain\Users\UserManager.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserForecastInfo.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserBalanceHistoryItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UserItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UsersFilters.cs" />
     <Compile Include="Models\Domain\Users\VM_Users.cs" />
@@ -388,6 +390,9 @@
     <Content Include="Areas\Admin\Views\Users\List.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_usersListFilter.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_usersList.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\User.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_userBalanceHistory.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_userBalanceBlock.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">

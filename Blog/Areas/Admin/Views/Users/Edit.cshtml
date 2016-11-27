@@ -1,0 +1,237 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain
+@model Bankiru.Models.Domain.Users.VM_User
+@{
+    ViewBag.Title = @Model.GetFIO();
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles{
+    @Styles.Render("~/Content/admin/arts/css")
+    @Styles.Render("~/Content/admin/arts/css")
+    @Scripts.Render("~/bundles/jqueryui");
+}
+<div class="back-to-list">
+    @Html.ActionLink("Вернуться к списку", "List")
+</div>
+<div id="user-editor">
+    @using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        
+        <div class="editor-account">
+            <p>Аккаунт</p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IsActive)
+                @if (Model.IsActive)
+                {
+                     <label class="editor-label-green">Активен</label>
+                }
+                else
+                {
+                    <label class="editor-label-red">Не Активен</label>
+                }
+                @Html.ValidationMessageFor(model => model.IsActive)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Nic)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Nic)
+                @Html.ValidationMessageFor(model => model.Nic)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.EmailConfirmed)
+                @if (Model.EmailConfirmed)
+                {
+                     <label class="editor-label-green">Email подтвержден</label>
+                }
+                else
+                {
+                    <label class="editor-label-red">Email не подтвержден</label>
+                }
+                @Html.ValidationMessageFor(model => model.EmailConfirmed)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IsSubscribed) @Html.LabelFor(model => model.IsSubscribed)
+                @Html.ValidationMessageFor(model => model.IsSubscribed)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IsBan) @Html.LabelFor(model => model.IsBan)
+                @Html.ValidationMessageFor(model => model.IsBan)
+            </div>
+            @if (Model.IsBan)
+            {
+                <div class="editor-field editor-field-bandate">
+                    Пользователь был забанин: <strong>@Model.BanDate.ToString("dd MMMM yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+                </div>
+            }
+            <div class="editor-field editor-field-regdate">
+                Зарегистрирован на сайте: <strong>@Model.RegistrationDate.ToString("dd MMMM yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+            </div>
+            <div class="editor-field editor-field-lastvisitdate">
+                Последний раз был на сайте: <strong>@Model.LastVisitDate.ToString("dd MMMM yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+            </div>
+            <div class="editor-field">
+                Роль: <strong>@Model.Rols[0].ToString()</strong>
+            </div>
+        </div>
+        
+        <div class="editor-account">
+            <p>Персональные данные</p>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Name)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FatherName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FatherName)
+                @Html.ValidationMessageFor(model => model.FatherName)
+            </div>
+            
+        </div>
+        
+        
+        
+        <div class="editor-lists">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CategoryId)
+            </div>
+            <div class="editor-field">
+                @Html.Action("_getCategoriesDropDownList", "Articles", new
+           {
+               selectedId = Model.CategoryId,
+               firstItem = EnumFirstDropDownItem.NotSelected,
+               id = "CategoryId"
+           })
+                @Html.ValidationMessageFor(model => model.CategoryId)
+            </div>
+        </div>
+        <div class="editor-main">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SubTitle)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SubTitle)
+                @Html.ValidationMessageFor(model => model.SubTitle)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.TextPrev)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.TextPrev)
+                @Html.ValidationMessageFor(model => model.TextPrev)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.TextFull)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.TextFull)
+                @Html.ValidationMessageFor(model => model.TextFull)
+            </div>
+            @*<div class="editor-label">
+                @Html.LabelFor(model => model.OtherUser)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.OtherUser)
+                @Html.ValidationMessageFor(model => model.OtherUser)
+            </div>*@            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Hits)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Hits)
+                @Html.ValidationMessageFor(model => model.Hits)
+            </div>
+        </div>
+        <div class="editor-meta">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MetaTitle)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MetaTitle)
+                @Html.ValidationMessageFor(model => model.MetaTitle)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MetaDesc)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MetaDesc)
+                @Html.ValidationMessageFor(model => model.MetaDesc)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MetaKeys)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MetaKeys)
+                @Html.ValidationMessageFor(model => model.MetaKeys)
+            </div>            
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MetaNoIndex) @Html.LabelFor(model => model.MetaNoIndex)
+                @Html.ValidationMessageFor(model => model.MetaNoIndex)
+            </div>            
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MetaNoFollow) @Html.LabelFor(model => model.MetaNoFollow)
+                @Html.ValidationMessageFor(model => model.MetaNoFollow)
+            </div>
+        </div>
+        <div class="editor-date">            
+            <div class="editor-field editor-field-createdat">
+                Дата создания: <strong>@Model.CreatedAt.ToString("dd MMMM yyyy hh:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+            </div>
+            <div class="editor-field editor-field-updateat">
+                Дата последнего изменения: <strong>@Model.UpdatedAt.ToString("dd MMMM yyyy hh:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+            </div>            
+        </div>        
+        <div class="editor-field">
+            <input type="submit" value="Сохранить" />
+        </div>
+    }
+</div>
+@section scripts{    
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            theme: "modern",
+            selector: '#TextPrev',
+            language: "ru_RU",
+            height: "300",
+            plugins: "image imagetools code link textcolor"            
+        });
+        tinymce.init({
+            selector: '#TextFull',
+            language: "ru_RU",
+            height: "400",
+            plugins: "image imagetools code link"
+        });        
+    </script>
+    @*<script src="~/Scripts/jquery.maskedinput.min.js"></script>
+    <script>
+        //Код jQuery, установливающий маску для ввода телефона элементу input
+        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+        $(function () {
+            //2. Получить элемент, к которому необходимо добавить маску  , { placeholder: "01.01.2016" }
+            $("#PublishedAt").mask("9999-99-99");
+        });
+    </script>*@
+}

@@ -226,18 +226,18 @@ namespace Bankiru.Models.Domain.Club
                         //Пользователи
                         int[] ids = (from f in forecasts select f.Id).ToArray<int>();
                         List<VM_ForecastUser> users = _getCurrentForecastUsers(ids);
-                        if (users == null || users.Count == 0)
-                            return null;
-                        List<VM_ForecastUser> fUsers = null;
-                        foreach (VM_Forecast f in forecasts)
+                        if (users != null && users.Count > 0)
                         {
-                            fUsers = users.FindAll(u => u.Forecast.Id == f.Id);
-                            if (fUsers != null)
-                                foreach (VM_ForecastUser u in fUsers)
-                                    f.Users.Add(u);
+                            List<VM_ForecastUser> fUsers = null;
+                            foreach (VM_Forecast f in forecasts)
+                            {
+                                fUsers = users.FindAll(u => u.Forecast.Id == f.Id);
+                                if (fUsers != null)
+                                    foreach (VM_ForecastUser u in fUsers)
+                                        f.Users.Add(u);
+                            }
                         }
                     }
-
                     return forecasts;
                 }
                 catch (Exception ex)
@@ -260,9 +260,9 @@ namespace Bankiru.Models.Domain.Club
         /// <returns>Список пользователей</returns>
         public List<VM_User> GetUsers(int limit)
         {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ClubUsersView.Name, GlobalParams.GetConnection());
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ClubTopUsersView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ClubUsersView.Params.Limit, limit);
+            //command.Parameters.AddWithValue(DbStruct.PROCEDURES.ClubUsersView.Params.Limit, limit);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -277,7 +277,14 @@ namespace Bankiru.Models.Domain.Club
                             while (reader.Read())
                             {
                                 u = new VM_User();
-                                
+                                u.Id = reader.GetInt32(reader.GetOrdinal("Id"));
+                                u.Nic = reader.GetString(reader.GetOrdinal("Nic"));
+                                u.Avatar = reader.IsDBNull(reader.GetOrdinal("Avatar")) ? 
+                                    "" : reader.GetString(reader.GetOrdinal("Avatar"));
+                                u.ForecastCount = reader.IsDBNull(reader.GetOrdinal("ForecastCount")) ?
+                                    0 : reader.GetInt32(reader.GetOrdinal("ForecastCount"));
+                                u.WinCount = reader.IsDBNull(reader.GetOrdinal("WinCount")) ?
+                                    0 : reader.GetInt32(reader.GetOrdinal("WinCount"));
                                 users.Add(u);
                             }
                         }
@@ -287,7 +294,7 @@ namespace Bankiru.Models.Domain.Club
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.ClubUsersView.Name, ex.ToString());
+                        DbStruct.PROCEDURES.ClubTopUsersView.Name, ex.ToString());
                     log.Error(_lastError);
                     return null;
                 }
@@ -387,8 +394,8 @@ namespace Bankiru.Models.Domain.Club
                                 subject = new VM_ForecastSubject()
                                 {
                                     Id = reader.GetByte(0),
-                                    Alias = reader.GetString(1),
-                                    Name = reader.GetString(2),
+                                    Name = reader.GetString(1),
+                                    Alias = reader.GetString(2),
                                     Description = reader.GetString(3),
                                     Icon = reader.IsDBNull(4) ? String.Empty : reader.GetString(4),
                                     MetaTitle = reader.GetString(5),

@@ -55,5 +55,6 @@ namespace Bankiru.Areas.Admin.Controllers
             SessionPersister.Username = String.Empty;
             return RedirectToAction("Login");
         }
+
     }
 }

@@ -1419,3 +1419,248 @@ ERROR 2016-11-22 23:10:10,050 145234ms BaseController         Forecasts         
 System.InvalidCastException: Заданное приведение является недопустимым.
    в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
    в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:47:53,483 912309ms ClubManager            etCurrentForecasts - Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:47:53,520 912346ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:49:49,225 1028050ms ClubManager            etCurrentForecasts - Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:49:49,233 1028058ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:51:52,854 1151679ms ClubManager            etCurrentForecasts - Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:51:52,855 1151680ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время выполнения хранимой процедуры ForecastsView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Club.VM_Forecast.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\VM_Forecast.cs:строка 70
+   в Bankiru.Models.Domain.Club.ClubManager.GetCurrentForecasts(String subjectAlias) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 211
+ERROR 2016-11-23 20:57:43,083 39433ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 20:57:43,105 39455ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 20:58:57,539 18115ms ClubManager            SetFieldValue      - Поле WinAmount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-11-23 20:59:19,010 39586ms ClubManager            SetFieldValue      - Поле WinAmount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-11-23 20:59:19,011 39587ms ClubManager            SetFieldValue      - Поле WinAmount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-11-23 20:59:19,011 39587ms ClubManager            SetFieldValue      - Поле WinAmount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-11-23 20:59:19,014 39590ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 20:59:19,015 39591ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:01:16,588 105512ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:01:51,288 140212ms BaseController         Forecasts          - [Forecasts] Не удалось загрузить текущие прогнозы!
+Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:02:42,961 23343ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:02:45,287 25669ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:dc91012d-beb7-40f0-956b-d2f5d90361c0
+ERROR 2016-11-23 21:02:45,292 25674ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:dc91012d-beb7-40f0-956b-d2f5d90361c0
+ERROR 2016-11-23 21:07:53,942 13830ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:07:54,988 14876ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:c957ffc3-1ebe-4389-8dec-11e02933791d
+ERROR 2016-11-23 21:07:54,993 14881ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:c957ffc3-1ebe-4389-8dec-11e02933791d
+ERROR 2016-11-23 21:08:03,238 23127ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:08:19,597 39486ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:09:19,237 99126ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:10:31,237 171125ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:c957ffc3-1ebe-4389-8dec-11e02933791d
+ERROR 2016-11-23 21:10:31,239 171127ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "ClubUsersView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 272
+ClientConnectionId:c957ffc3-1ebe-4389-8dec-11e02933791d
+ERROR 2016-11-23 21:58:22,496 14154ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:58:37,281 28939ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 21:58:37,285 28943ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 21:59:05,524 21171ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 21:59:32,589 48235ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 22:00:01,603 77250ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 22:00:05,684 81330ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 22:00:54,559 37293ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 22:01:32,294 75027ms ClubManager            GetUsers           - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 22:01:32,299 75032ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ClubManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ClubManager.cs:строка 282
+ERROR 2016-11-23 22:02:20,309 19184ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 22:06:59,807  2504ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2016-11-23 22:06:59,818  2515ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2016-11-23 22:07:10,153 12849ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 22:11:02,608 23870ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-23 23:08:20,466 2102832ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2016-11-23 23:08:20,501 2102867ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2016-11-23 23:13:32,433 2414799ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2016-11-23 23:13:32,434 2414800ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2016-11-24 20:43:10,705 30916ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 20:45:07,743 21302ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:52:12,729 39810ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:53:36,927 31457ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:54:40,645 17304ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:55:41,183 10263ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:57:09,543 18052ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:57:45,548 12709ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:57:47,744 14905ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:58:08,626 35787ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:58:12,156 39317ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-24 21:58:14,448 41608ms ClubManager            rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-11-25 11:02:07,593 43504250ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2016-11-25 11:02:07,613 43504270ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2016-11-26 00:02:20,294 90316951ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2016-11-26 00:02:20,318 90316975ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!

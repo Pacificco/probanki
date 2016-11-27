@@ -254,6 +254,28 @@ namespace Bankiru.Controllers
                 return PartialView("_moduleFormLogin", model);
             }
         }
+        [HttpGet]        
+        [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        public PartialViewResult LoginAjax()
+        {
+            try
+            {
+                if (_connected || !Request.IsAjaxRequest())
+                {
+                    return PartialView("_moduleFormLogin", new VM_UserLogin());
+                }
+                else
+                {
+                    log.Error("Ошибка авторизации! Нет доступа к базе данных или запрос не является Ajax-запросом.");
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
         [HttpGet]
         public ActionResult Logout()
         {

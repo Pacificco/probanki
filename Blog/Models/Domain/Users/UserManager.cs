@@ -25,6 +25,92 @@ namespace Bankiru.Models.Domain.Users
             _users.Items = _getUsers(filter, _users.PagingInfo.GetNumberFrom(), _users.PagingInfo.GetNumberTo());
             return _users;
         }
+        public VM_User GetUser(int userId, bool allInfo = false)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserView.Params.Id, userId);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    VM_User user = new VM_User();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    user.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                            }
+                        }
+                    }
+                    if (allInfo)
+                    {
+                        user.ForecastInfo = GetUserForecastInfo(userId);
+                        if (user.ForecastInfo == null)
+                            return null;
+                    }
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки пользователя!\n" + ex.ToString();
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }            
+        }
+        public VM_UserForecastInfo GetUserForecastInfo(int userId)
+        {            
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserView.Params.Id, userId);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    VM_UserForecastInfo forecastInfo = new VM_UserForecastInfo();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    forecastInfo.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                            }
+                        }
+                    }
+                    return forecastInfo;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки информации о прогнозах пользователя!\n" + ex.ToString();
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            } 
+        }
+        public List<VM_UserBalanceHistoryItem> GetUserBalanceHistory(int userId)
+        {
+            List<VM_UserBalanceHistoryItem> history = new List<VM_UserBalanceHistoryItem>();
+
+            return history;
+        }
 
         #region ЧАСТНЫЕ МЕТОДЫ
         private int _getUsersTotalCount(VM_UsersFilters filter)

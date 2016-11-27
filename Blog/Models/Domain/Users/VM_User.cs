@@ -12,6 +12,7 @@ namespace Bankiru.Models.Domain.Users
 {
     public class VM_User
     {
+        #region ПОЛЯ и СВОЙСТВА
         public int Id { get; set; }
         public string Name{ get; set; }
         public string Email{ get; set; }
@@ -35,11 +36,18 @@ namespace Bankiru.Models.Domain.Users
         public string Comment { get; set; }
         public string Token { get; set; }
 
+        public VM_UserForecastInfo ForecastInfo { get; set; }
+
+        public int ForecastCount { get; set; }
+        public int WinCount { get; set; }
+
         private string _lastError;
         public string LastError { get { return _lastError; } }
+        #endregion
 
         public VM_User()
         {
+            ForecastInfo = new VM_UserForecastInfo();
             Clear();
         }
         public void Clear()
@@ -65,6 +73,11 @@ namespace Bankiru.Models.Domain.Users
             BanDate = null;
             Comment = String.Empty;
             Token = "";
+
+            ForecastInfo.Clear();
+
+            ForecastCount = 0;
+            WinCount = 0;
 
             _lastError = "";
         }
@@ -206,6 +219,17 @@ namespace Bankiru.Models.Domain.Users
             }
             return true;
         }
+        public string GetFIO()
+        {
+            string result = "";
+            if (!String.IsNullOrEmpty(LastName))
+                result += LastName + " ";
+            if (!String.IsNullOrEmpty(Name))
+                result += Name + " ";
+            if (!String.IsNullOrEmpty(FatherName))
+                result += FatherName + " ";
+            return result.Trim();
+        }
     }
 
     public static class VM_UserGroup
@@ -217,11 +241,18 @@ namespace Bankiru.Models.Domain.Users
         public static string ClubMember = "club_member";
         public static string Guest = "guest";
     }
-
     public enum VM_UserSex
     {
         Undefined = 0,
         Male,
         Female
+    }
+    public enum VM_ForecastTariff
+    {
+        Undefined = 0,
+        Platinum = 1,
+        Gold = 2,
+        Silver = 3,
+        Bronze = 4
     }
 }

@@ -170,7 +170,7 @@ namespace Bankiru
             routes.MapRoute(
                 name: "club_forecast",
                 url: "club/forecasts/{subject_id}/{id}",
-                defaults: new { controller = "Club", action = "Forecasts", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Club", action = "Forecast", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(

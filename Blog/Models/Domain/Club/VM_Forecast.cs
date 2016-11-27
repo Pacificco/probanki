@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.Domain.Users;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,10 @@ namespace Bankiru.Models.Domain.Club
 
         public List<VM_ForecastUser> Users { get; set; }
 
+        private string _lastError;
+        public string LastError { get { return _lastError; } }
+        public static readonly ILog log = LogManager.GetLogger(typeof(ClubManager));
+
         public VM_Forecast()
         {
             Subject = new VM_ForecastSubject();
@@ -42,6 +47,8 @@ namespace Bankiru.Models.Domain.Club
             ReportUserId = -1;
 
             Users.Clear();
+
+            _lastError = String.Empty;
         }
         
         public bool SetFieldValue(string fName, object fValue)
@@ -67,7 +74,7 @@ namespace Bankiru.Models.Domain.Club
                     WinValue = fValue == DBNull.Value ? 0.0F : (double)fValue;
                     break;
                 case "WinAmount":
-                    WinAmount = fValue == DBNull.Value ? 0.0F : (double)fValue;
+                    WinAmount = fValue == DBNull.Value ? 0.0f : (double)fValue;
                     break;
                 case "ForecastDate":
                     ForecastDate = (DateTime)fValue;
@@ -82,7 +89,8 @@ namespace Bankiru.Models.Domain.Club
                     ReportUserId = fValue == DBNull.Value ? -1 : (int)fValue;
                     break;                
                 default:
-
+                    _lastError = String.Format("Поле {0} не определено в классе {1}!", fName, this.GetType().ToString());
+                    log.Error(_lastError);
                     return false;
             }
             return true;

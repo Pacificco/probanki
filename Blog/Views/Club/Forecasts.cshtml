@@ -24,7 +24,7 @@
 }
 @if (Model != null)
 {
-    <section id="forecast-list">
+    <section id="forecast-list"  style="border:2px dashed #f00; padding:5px; margin:5px;">
         <hgroup>
             <h1>
                 <span>Открытые прогнозы</span>
@@ -37,7 +37,7 @@
 
                 @foreach (VM_Forecast item in Model)
                 {
-                    <section class="forecast-prev">
+                    <section class="forecast-prev"  style="border:2px dashed #f00; padding:5px; margin:5px;">
                         <hgroup>
                             <h1>@item.Subject.Name</h1>
                             @if (!String.IsNullOrEmpty(item.Subject.Description))
@@ -46,9 +46,20 @@
                             }
                         </hgroup>
                         <div class="forecast-prev-info">
-                            <p> Принять участие в данном прогнозе Вы можете до 
-                                <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>                                
-                            </p>
+                            @if(item.ForecastDate.AddDays(-2).Date > DateTime.Now.Date)
+                            {
+                                <p> Принять участие в данном прогнозе Вы можете до 
+                                    <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                                </p>
+                            }
+                            else
+                            {
+                                <p>
+                                    В этом прогнозе уже нельзя принять участия. Результаты прогноза и победитель будут опубликованы на сайте 
+                                    <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                                </p>
+                            }
+                            <p>@Html.RouteLink("Подробнее...", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</p>
                         </div>                        
                     </section>                                    
                 }
