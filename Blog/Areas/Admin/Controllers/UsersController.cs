@@ -51,7 +51,7 @@ namespace Bankiru.Areas.Admin.Controllers
             }
         }
         [HttpGet]
-        public ActionResult User(int user_id)
+        public ActionResult Edit(int user_id)
         {
             try
             {

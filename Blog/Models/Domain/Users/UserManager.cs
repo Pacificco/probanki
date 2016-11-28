@@ -107,9 +107,42 @@ namespace Bankiru.Models.Domain.Users
         }
         public List<VM_UserBalanceHistoryItem> GetUserBalanceHistory(int userId)
         {
-            List<VM_UserBalanceHistoryItem> history = new List<VM_UserBalanceHistoryItem>();
-
-            return history;
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserBalanceHistory.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserBalanceHistory.Params.Id, userId);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    List<VM_UserBalanceHistoryItem> history = new List<VM_UserBalanceHistoryItem>();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_UserBalanceHistoryItem historyItem = null;
+                            while (reader.Read())
+                            {
+                                historyItem = new VM_UserBalanceHistoryItem();
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    historyItem.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                            }
+                        }
+                    }
+                    return history;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = "Ошибка во время загрузки истории баланса пользователя!\n" + ex.ToString();
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            } 
         }
 
         #region ЧАСТНЫЕ МЕТОДЫ

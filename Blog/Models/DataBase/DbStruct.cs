@@ -931,6 +931,23 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Возвращает историю изменения баланса пользователя по идентификатору
+            /// </summary>
+            public static class UserBalanceHistory
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserBalanceHistory";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
             /// Возвращает активного пользователя по идентификатору
             /// </summary>
             public static class ActiveUserView

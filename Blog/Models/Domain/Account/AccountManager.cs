@@ -312,7 +312,7 @@ namespace Bankiru.Models.Domain.Account
                                 Name = _reader.GetString(1),
                                 Email = _reader.GetString(2),
                                 Password = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
-                                Sex = (VM_UserSex)_reader.GetInt32(4),
+                                Sex = _reader.GetInt32(4),
                                 LastName = _reader.GetString(5),
                                 FatherName = _reader.GetString(6),
                                 IsActive = _reader.GetBoolean(7),

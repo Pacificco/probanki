@@ -2071,7 +2071,7 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += " = " + art_id.ToString();
             SqlQuery += " " + DbStruct.SE.ORDER_BY + " ";
             SqlQuery += DbStruct.Comments.FIELDS.CreatedAt;
-            SqlQuery += " " + DbStruct.SE.DESC;
+            //SqlQuery += " " + DbStruct.SE.DESC;
             SqlQuery += ";";
             return SqlQuery;
         }

@@ -13,29 +13,93 @@ namespace Bankiru.Models.Domain.Users
     public class VM_User
     {
         #region ПОЛЯ и СВОЙСТВА
-        public int Id { get; set; }
-        public string Name{ get; set; }
-        public string Email{ get; set; }
-        public bool EmailConfirmed { get; set; }
-        public string Password{ get; set; }
-        public VM_UserSex Sex { get; set; }
-        public string LastName{ get; set; }
-        public string FatherName{ get; set; }
-        public bool IsActive{ get; set; }
-        public bool IsSubscribed{ get; set; }
-        public string Nic{ get; set; }
-        public string[] Rols { get; set; }
-        public string Avatar { get; set; }
-        public string Country { get; set; }
-        public Guid? RegionId { get; set; }
-        public string City { get; set; }
-        public DateTime RegistrationDate { get; set; }
-        public DateTime? LastVisitDate { get; set; }
-        public bool IsBan { get; set; }
-        public DateTime? BanDate { get; set; }
-        public string Comment { get; set; }
-        public string Token { get; set; }
 
+        [HiddenInput]
+        public int Id { get; set; }
+
+        [Display(Name = "Имя")]
+        [Required(ErrorMessage = "Вы не указали имени")]
+        [MaxLength(20, ErrorMessage = "Максимальная длина Имени не должна превышать 20 символов")]
+        [MinLength(2, ErrorMessage = "Минимальная длина Имени не должна превышать 20 символов")]
+        public string Name{ get; set; }
+
+        [Display(Name = "Фамилия")]        
+        [MaxLength(20, ErrorMessage = "Максимальная длина Фамилии не должна превышать 20 символов")]
+        [MinLength(2, ErrorMessage = "Минимальная длина Фамилии не должна превышать 20 символов")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Отчество")]
+        [MaxLength(20, ErrorMessage = "Максимальная длина Отчества не должна превышать 20 символов")]
+        [MinLength(2, ErrorMessage = "Минимальная длина Отчества не должна превышать 20 символов")]
+        public string FatherName { get; set; }
+
+        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Вы не указали Email")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный Email!")]
+        public string Email{ get; set; }
+
+        [Display(Name = "Email подтвержден")]
+        public bool EmailConfirmed { get; set; }
+
+        [Display(Name = "Пароль")]
+        public string Password{ get; set; }
+
+        [Display(Name = "Пол")]
+        [Range(1, 2, ErrorMessage = "Вы не указали Пол!")]
+        public int Sex { get; set; }
+
+        [Display(Name = "Активен")]
+        public bool IsActive{ get; set; }
+
+        [Display(Name = "Подписан на рассылку")]
+        public bool IsSubscribed{ get; set; }
+
+        [Display(Name = "Ник")]
+        [Required(ErrorMessage = "Вы не указали Ник")]
+        [MaxLength(20, ErrorMessage = "Максимальная длина Ника не должна превышать 20 символов")]
+        [MinLength(2, ErrorMessage = "Минимальная длина Ника не должна превышать 20 символов")]
+        public string Nic{ get; set; }
+
+        [Display(Name = "Роль")]
+        [HiddenInput]
+        public string[] Rols { get; set; }
+
+        [Display(Name = "Аватарка")]
+        public string Avatar { get; set; }
+
+        [Display(Name = "Страна")]
+        public string Country { get; set; }
+
+        [Display(Name = "Регион")]
+        public Guid? RegionId { get; set; }
+
+        [Display(Name = "Город, населенный пункт")]
+        public string City { get; set; }
+
+        [Display(Name = "Дата регистрации")]
+        [DataType(DataType.Date)]
+        public DateTime RegistrationDate { get; set; }
+
+        [Display(Name = "Дата последнего визита")]
+        [DataType(DataType.Date)]
+        public DateTime? LastVisitDate { get; set; }
+
+        [Display(Name = "Забанин")]
+        public bool IsBan { get; set; }
+
+        [Display(Name = "Пользователь был забанин")]
+        [DataType(DataType.Date)]
+        public DateTime? BanDate { get; set; }
+
+        [Display(Name = "Комментарий")]
+        [DataType(DataType.MultilineText)]
+        [AllowHtml]
+        [MaxLength(20, ErrorMessage = "Максимальная длина Комментария не должна превышать 255 символов!")]
+        public string Comment { get; set; }
+
+        [HiddenInput]
+        public string Token { get; set; }
+                
         public VM_UserForecastInfo ForecastInfo { get; set; }
 
         public int ForecastCount { get; set; }
@@ -59,7 +123,7 @@ namespace Bankiru.Models.Domain.Users
             Name = String.Empty;
             LastName = String.Empty;
             FatherName = String.Empty;
-            Sex = VM_UserSex.Undefined;
+            Sex = 0; // VM_UserSex.Undefined;
             Email = String.Empty;
             EmailConfirmed = false;
             IsSubscribed = false;
@@ -160,7 +224,7 @@ namespace Bankiru.Models.Domain.Users
                     Password = "";
                     break;
                 case "Sex":
-                    Sex = (VM_UserSex)(int)fValue;
+                    Sex = (int)fValue;
                     break;
                 case "LastName":
                     LastName = (string)fValue;
