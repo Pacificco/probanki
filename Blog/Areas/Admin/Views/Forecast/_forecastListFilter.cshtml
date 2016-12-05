@@ -1,0 +1,24 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Club
+@model VM_ForecastsFilters
+<div id="forecast-filters">
+    @using (Html.BeginForm("List","Forecast", FormMethod.Get))
+    {
+        @Html.ValidationSummary(true)               
+        <div class="editor-field editor-field-subject">
+            @Html.LabelFor(model => model.SubjectId)
+            @Html.Action("_getForecastSubjectDropDownList", "Forecast", new { selectedId = Model.SubjectId, 
+           firstItem = EnumFirstDropDownItem.All, id = "SubjectId" })
+            @Html.ValidationMessageFor(model => model.SubjectId)
+        </div>
+        <div class="editor-field editor-field-archive">
+            @Html.LabelFor(model => model.IsArchive)
+            @Html.Action("_getActiveDropDownList", "Forecast", new { selectedId = Model.IsArchive, 
+           firstItem = EnumFirstDropDownItem.All, id = "IsArchive" })
+            @Html.ValidationMessageFor(model => model.IsArchive)
+        </div>
+        <div class="editor-field editor-field-submit">
+            <input type="submit" value="Показать" />
+        </div>        
+    }
+</div>

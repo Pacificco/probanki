@@ -21,6 +21,7 @@ namespace Bankiru.Models.Domain.Club
             _lastError = "";
         }
 
+        #region ПРОГНОЗЫ
         /// <summary>
         /// Создает новые дни прогнозов
         /// </summary>
@@ -305,6 +306,156 @@ namespace Bankiru.Models.Domain.Club
                 }
             }
         }
+        /// <summary>
+        /// Возвращает прогноз по его идентификатору
+        /// </summary>
+        /// <param name="id">Идентификатор прогноза</param>
+        /// <returns>Прогноз</returns>
+        public VM_Forecast GetForecast(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastView.Params.Id, id);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {                    
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                VM_Forecast f = new VM_Forecast();
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                return f;
+                            }
+                        }
+                    }
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ForecastView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// Возвращает прогнозы по фильтру
+        /// </summary>
+        /// <param name="id">Фильтр</param>
+        /// <returns>Прогнозы</returns>
+        public VM_Forecasts GetForecasts(VM_ForecastsFilters filter, int page)
+        {
+            VM_Forecasts forecasts = new VM_Forecasts();
+            forecasts.PagingInfo.ItemsPerPage = 20;
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            if (filter.IsArchive == EnumBoolType.None)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, filter.IsArchive == EnumBoolType.True ? true : false);
+            if (filter.SubjectId > 0)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, filter.SubjectId);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, DBNull.Value);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                VM_Forecast f = new VM_Forecast();
+                                for (int j = 0; j < reader.FieldCount; j++)
+                                    f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                return f;
+                            }
+                        }
+                    }
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ForecastsView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        #endregion
+
+        #region ПРЕДМЕТ ПРОГНОЗОВ
+        public List<VM_ForecastSubject> GetForecastSubjects()
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastSubjectsView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    List<VM_ForecastSubject> forecasts = new List<VM_ForecastSubject>();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_ForecastSubject fs = null;
+                            while (reader.Read())
+                            {
+                                fs = new VM_ForecastSubject();
+                                fs.Id = reader.GetByte(reader.GetOrdinal("Id"));
+                                fs.Icon = reader.GetString(reader.GetOrdinal("Icon"));
+                                fs.IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"));
+                                fs.Name = reader.GetString(reader.GetOrdinal("Avatar"));
+                                fs.Alias = reader.GetString(reader.GetOrdinal("Alias"));
+                                fs.Description = reader.GetString(reader.GetOrdinal("Descriptions"));
+                                fs.MetaTitle = reader.GetString(reader.GetOrdinal("MetaTitle"));
+                                fs.MetaDescriptions = reader.GetString(reader.GetOrdinal("MetaDescriptions"));
+                                fs.MetaKeywords = reader.GetString(reader.GetOrdinal("MetaKeywords"));
+                                fs.MetaNoFollow = reader.GetBoolean(reader.GetOrdinal("MetaNoFollow"));
+                                fs.MetaNoIndex = reader.GetBoolean(reader.GetOrdinal("MetaNoIndex"));
+                                forecasts.Add(fs);
+                            }
+                        }
+                    }
+                    return forecasts;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ForecastSubjectsView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        #endregion
 
         #region ВСПОМАГАТЕЛЬНЫЕ МЕТОДЫ
         private VM_ForecastSubject _getForecastSubject(string subjectAlias)

@@ -1063,6 +1063,12 @@ header {
 #org-detail .org-desc-show img{
     cursor: pointer;
 }
+#org-detail .org-desc p.org-author{
+    /*text-indent: 0px;*/
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+}
 /* Отзывы на странице организации
 -----------------------------------------------------------*/
 .org-reviews-readmore {
@@ -1414,6 +1420,35 @@ header {
 #news-detail .news-text a{
     color: #628ac9;
     margin-left: 3px;
+}
+
+/* Список прогнозов
+-----------------------------------------------------------*/
+#forecast-list {
+    padding: 10px 15px 10px 15px;
+    position: relative;    
+    overflow: hidden;
+}
+#forecast-list h1{
+    background: none;
+    background: url(/Content/system/h1_bg.gif) center right repeat-x;
+    color: #4b78b9;
+    margin: 13px 5px 10px 5px;
+    padding: 0;
+}
+#forecast-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#forecast-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
 }
 
 /* Стили текстовых блоков

@@ -28,7 +28,7 @@
 }
 @section middle_bottom
 {
-    @Html.Action("_getModuleLastReviews", "Orgs")
+    @*@Html.Action("_getModuleLastReviews", "Orgs")*@
 }
 @if (Model != null)
 {
@@ -68,6 +68,6 @@
                 </div>
             </div>
         </article>
-         @Html.Action("_getModuleLastArticlesLinkList", "Home", new { exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ 1, 2, 3, 8 }/*Model.CategoryId*/, row_count = 5 })
+         @Html.Action("_getModuleLastArticlesLinkList", "Home", new { exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ 1, 2, 3, 8 }/*Model.CategoryId*/, row_count = 3 })
     </section>
 }

@@ -148,6 +148,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\CommentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ErrorController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ForecastController.cs" />
     <Compile Include="Areas\Admin\Controllers\ImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfoController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
@@ -170,7 +171,8 @@
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
     <Compile Include="Models\Domain\Club\ClubManager.cs" />
-    <Compile Include="Models\Domain\Club\VM_ClubMenber.cs" />
+    <Compile Include="Models\Domain\Club\VM_ClubMember.cs" />
+    <Compile Include="Models\Domain\Club\VM_DropDownForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_Forecast.cs" />
     <Compile Include="Models\Domain\Club\VM_Forecasts.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastMenuItem.cs" />
@@ -267,6 +269,8 @@
     <Content Include="Content\admin_themes\arts\table.css" />
     <Content Include="Content\admin_themes\comments\comments.css" />
     <Content Include="Content\admin_themes\comments\table.css" />
+    <Content Include="Content\admin_themes\forecasts\forecast.css" />
+    <Content Include="Content\admin_themes\forecasts\table.css" />
     <Content Include="Content\admin_themes\images\images.css" />
     <Content Include="Content\admin_themes\news\news.css" />
     <Content Include="Content\admin_themes\news\table.css" />
@@ -393,6 +397,12 @@
     <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_userBalanceHistory.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_userBalanceBlock.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\_forecastList.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\_forecastListFilter.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\New.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_forecastSubjectDropDownList.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">

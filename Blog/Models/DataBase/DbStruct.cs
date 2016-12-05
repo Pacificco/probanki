@@ -1101,6 +1101,23 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Возвращает прогноз
+            /// </summary>
+            public static class ForecastView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
             /// Возвращает список прогнозов
             /// </summary>
             public static class ForecastsView

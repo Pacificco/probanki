@@ -2,7 +2,7 @@
 @using Bankiru.Models.Helpers
 @model VM_Org
 @{
-    if (String.IsNullOrEmpty(Model.MetaTitle))
+    if (!String.IsNullOrEmpty(Model.MetaTitle))
     {
         ViewBag.metaTitle = Model.MetaTitle;
     }
@@ -10,15 +10,15 @@
     {
         ViewBag.metaTitle = Model.Title;
     }
-    if (String.IsNullOrEmpty(Model.MetaDescriptions))
-    {
-        ViewBag.metaDescription = "";
-    }
-    else
+    if (!String.IsNullOrEmpty(Model.MetaDescriptions))
     {
         ViewBag.metaDescription = Model.MetaDescriptions;
     }
-    if (String.IsNullOrEmpty(Model.MetaKeywords))
+    else
+    {
+        ViewBag.metaDescription = "";
+    }
+    if (!String.IsNullOrEmpty(Model.MetaKeywords))
     {
         ViewBag.metaKeywords = Model.MetaKeywords;
     }

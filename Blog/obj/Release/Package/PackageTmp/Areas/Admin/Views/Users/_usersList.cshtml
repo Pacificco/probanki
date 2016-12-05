@@ -24,23 +24,23 @@
                 {
                 <tr class="@classEvel">
                     <td class="tools">
-                        <a class="del-user" data-art-name="@item.Nic" href="@Url.Action("Del", "Users", new { id = item.Id })" title="Удалить @item.Nic">
+                        <a class="del-user" data-art-name="@item.Nic" href="@Url.Action("Del", "Users", new { user_id = item.Id })" title="Удалить @item.Nic">
                             <img src="~/Content/system/del.png" title="Удалить @item.Nic" alt="Удалить" />
                         </a>
-                        <a href="@Url.Action("Edit", "Users", new { id = item.Id })" title="Редактировать @item.Nic">
+                        <a href="@Url.Action("Edit", "Users", new { user_id = item.Id })" title="Редактировать @item.Nic">
                             <img src="~/Content/system/edit.png" title="Редактировать" />
                         </a>
                     </td>
                     <td class="published">
                         @if (item.IsActive)
                         {
-                            <a href="@Url.RouteUrl("admin_users", new { action = "Active", id = item.Id })" title="Активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                            <a href="@Url.RouteUrl("admin_users", new { action = "Active", user_id = item.Id })" title="Активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
                                 <img src="~/Content/system/active.png" title="Активен" class="img-active-@item.Id" />
                             </a>
                         }
                         else
                         {
-                            <a href="@Url.RouteUrl("admin_users", new { action = "Disactivate", id = item.Id })" title="Не активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">id="art_@item.Id">*
+                            <a href="@Url.RouteUrl("admin_users", new { action = "Disactivate", user_id = item.Id })" title="Не активен" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false" id="art_@item.Id">
                                 <img src="~/Content/system/disactive.png" title="Не активен" class="img-active-@item.Id" />
                             </a>
                         }

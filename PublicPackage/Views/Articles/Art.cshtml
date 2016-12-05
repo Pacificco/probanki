@@ -9,15 +9,15 @@
     {
         ViewBag.metaTitle = Model.Title;
     }
-    if (String.IsNullOrEmpty(Model.MetaDesc))
+    if (!String.IsNullOrEmpty(Model.MetaDesc))
     {
-        ViewBag.metaDescription = "";
+        ViewBag.metaDescription = Model.MetaDesc; 
     }
     else
     {
-        ViewBag.metaDescription = Model.MetaDesc;
+        ViewBag.metaDescription = "";
     }
-    if (String.IsNullOrEmpty(Model.MetaKeys))
+    if (!String.IsNullOrEmpty(Model.MetaKeys))
     {
         ViewBag.metaKeywords = Model.MetaKeys;
     }
@@ -111,6 +111,8 @@
     </article>
     @section middle_bottom
     {                
+        @Html.Action("_getModuleLastArticlesLinkList", "Home", new { exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ Model.CategoryId }/*Model.CategoryId*/, row_count = 3 })
+
         @Html.Action("_getModuleLastArtComments", "Articles", new { art_id = Model.Id })
         <div id="ajax-comment-form-wrapper">
             @Html.Action("_getModuleLeaveArtComment", "Articles", new { art_id = Model.Id})

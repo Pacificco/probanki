@@ -81,6 +81,11 @@ namespace Bankiru
                 "~/Content/admin_themes/news/news.css",
                 "~/Content/admin_themes/news/table.css"
                 ));
+            //Прогнозы
+            bundles.Add(new StyleBundle("~/Content/admin/forecasts/css").Include(
+                "~/Content/admin_themes/forecasts/forecast.css",
+                "~/Content/admin_themes/forecasts/table.css"
+                ));
             //Галерея изображений
             bundles.Add(new StyleBundle("~/Content/admin/images/css").Include(
                 "~/Content/admin_themes/images/images.css"                

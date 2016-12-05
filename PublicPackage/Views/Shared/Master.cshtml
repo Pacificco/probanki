@@ -13,7 +13,7 @@
 	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="@ViewBag.metaRobots" />    
-    <base href="http://probanki.net/" />
+    @*<base href="http://probanki.net/" />*@
     <title>@ViewBag.metaTitle</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="@ViewBag.metaKeywords" />
@@ -21,7 +21,9 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/arts/css")
     @RenderSection("styles", required: false)
+    
     @Scripts.Render("~/bundles/modernizr")
+
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -45,7 +47,7 @@
                     }
                     else
                     {
-                        @Html.Action("_getModuleLogin", "Account")
+                        @Html.Action("_getModuleLogin", "Account")                        
                     }   
                 </aside>
             </section>
@@ -116,9 +118,9 @@
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @RenderSection("scripts", required: false)
-    @Html.Action("_getModuleCounters", "Home", null);
+    @Scripts.Render("~/bundles/jqueryval")    
+    @RenderSection("scripts", required: false)    
+    @*@Html.Action("_getModuleCounters", "Home", null);*@
    
 </body>
 </html>

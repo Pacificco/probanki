@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Bankiru.Models.Domain.Club
 {
-    public class VM_ClubMenber
+    public class VM_ClubMember
     {
 
     }

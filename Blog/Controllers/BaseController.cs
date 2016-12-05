@@ -1,6 +1,7 @@
 ﻿using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Account;
 using Bankiru.Models.Domain.Articles;
+using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Comments;
 using Bankiru.Models.Domain.News;
 using Bankiru.Models.Domain.Orgs;
@@ -22,6 +23,7 @@ namespace Bankiru.Controllers
 {
     public abstract class BaseController : Controller
     {
+        #region ПОЛЯ И СВОЙСТВА        
         /// <summary>
         /// Подключение
         /// </summary>
@@ -54,6 +56,7 @@ namespace Bankiru.Controllers
         protected string _errPartialPage;
 
         public static readonly ILog log = LogManager.GetLogger(typeof(BaseController));
+        #endregion
 
         public BaseController()
             : base()
@@ -209,6 +212,33 @@ namespace Bankiru.Controllers
             catch (Exception e)
             {
                 log.Error(e.ToString());                
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getForecastSubjectDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    ClubManager manager = new ClubManager();
+                    VM_DropDownForecastSubject model = new VM_DropDownForecastSubject();
+                    model.SelectedId = selectedId;
+                    model.Items = manager.GetForecastSubjects();
+                    model.FirstItem = firstItem;
+                    model.Name = id;
+                    return PartialView("_forecastSubjectDropDownList", model);
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
                 return PartialView(_errPartialPage);
             }
         }
