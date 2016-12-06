@@ -1,7 +1,12 @@
 -- Возвращает прогнозы
 if exists(select 1 from sysobjects where name = N'ForecastsView' and xtype='P') drop proc ForecastsView
 go
-create proc ForecastsView (@IsClosed bit, @SubjectId tinyint) as	
+create proc ForecastsView (
+	@IsClosed bit, 
+	@SubjectId tinyint,
+	@RowBegin int,
+	@RowEnd int
+) as	
 begin	
 	if @IsClosed = 1 begin
 		if @SubjectId is null

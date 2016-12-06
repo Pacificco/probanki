@@ -1030,20 +1030,60 @@ namespace Bankiru.Models.DataBase
 
             #region ПРОГНОЗЫ
             /// <summary>
-            /// Создает новые прогнозы на указанную дату
+            /// Создает новый прогнозы
             /// </summary>
-            public static class CreateNewForecasts
+            public static class CreateForecast
             {
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "CreateNewForecasts";
+                public static string Name = "CreateForecast";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
                 public static class Params
                 {
-                    public static string ForecastDate = "@ForecastDate";                    
+                    public static string ForecastDate = "@ForecastDate";
+                    public static string UserId = "@UserId";
+                    public static string SubjectId = "@SubjectId";
+                    public static string WinAmount = "@WinAmount";                  
+                }
+            }
+            /// <summary>
+            /// Обновляет прогнозы
+            /// </summary>
+            public static class EditForecast
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "EditForecast";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                    public static string SubjectId = "@SubjectId";
+                    public static string ForecastDate = "@ForecastDate";
+                    public static string WinAmount = "@WinAmount";
+                }
+            }
+            /// <summary>
+            /// Удаляет прогнозы
+            /// </summary>
+            public static class DeleteForecast
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "DeleteForecast";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
                 }
             }
             /// <summary>
@@ -1133,6 +1173,8 @@ namespace Bankiru.Models.DataBase
                 {
                     public static string IsClosed = "@IsClosed";
                     public static string SubjectId = "@SubjectId";
+                    public static string RowBegin = "@RowBegin";
+                    public static string RowEnd = "@RowEnd";
                 }
             }
             /// <summary>

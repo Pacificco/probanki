@@ -19,7 +19,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     List<VM_Forecast> model = manager.GetCurrentForecasts();                    
                     if (model != null)
                     {
@@ -77,7 +77,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     List<VM_User> model = new List<VM_User>();
                     model = manager.GetUsers(15);
                     if (model != null)

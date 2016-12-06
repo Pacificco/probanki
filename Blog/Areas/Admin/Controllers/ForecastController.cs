@@ -21,7 +21,7 @@ namespace Bankiru.Areas.Admin.Controllers
                 if (_connected)
                 {
                     HttpCookie cookie = _setForecastFiltersCookie(filter, page);
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     VM_Forecasts model = manager.GetForecasts(filter, page);
                     if (model != null)
                     {
@@ -70,7 +70,7 @@ namespace Bankiru.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult New(VM_Forecast art)
+        public ActionResult New(VM_Forecast forecast)
         {
             try
             {
@@ -78,8 +78,8 @@ namespace Bankiru.Areas.Admin.Controllers
                 {
                     if (ModelState.IsValid)
                     {
-                        ClubManager manager = new ClubManager();
-                        if (manager.CreateNewForecasts(DateTime.Now))
+                        ForecastManager manager = new ForecastManager();
+                        if (manager.CreateForecasts(forecast))
                         {
                             ViewBag.InfoMessage = "Прогноз успешно создан!";
                             VM_ForecastsFilters f = _getForecastFiltersFromCookie(HttpContext.Request.Cookies["forecast_filters"]);
@@ -96,7 +96,7 @@ namespace Bankiru.Areas.Admin.Controllers
                     }
                     else
                     {
-                        return View(art);
+                        return View(forecast);
                     }
                 }
                 else
@@ -118,7 +118,7 @@ namespace Bankiru.Areas.Admin.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     VM_Forecast model = manager.GetForecast(id);
                     if (model != null)
                     {
@@ -152,7 +152,7 @@ namespace Bankiru.Areas.Admin.Controllers
                 {
                     if (ModelState.IsValid)
                     {
-                        ClubManager manager = new ClubManager();
+                        ForecastManager manager = new ForecastManager();
                         if (manager.UpdateForecast(id, forecast))
                         {
                             ViewBag.InfoMessage = "Прогноз успешно изменен!";
@@ -192,7 +192,7 @@ namespace Bankiru.Areas.Admin.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     if (manager.DeleteForecast(id))
                     {
                         ViewBag.InfoMessage = String.Format("Прогноз успешно удален!");
@@ -227,7 +227,7 @@ namespace Bankiru.Areas.Admin.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     if (manager.SetArtActive(id, is_active))
                     {
                         return Json(new { resultMessage = "OK" });

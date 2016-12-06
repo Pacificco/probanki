@@ -1,6 +1,7 @@
 ﻿using Bankiru.Models.DataBase;
 using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Infrastructure;
+using Bankiru.Models.Security;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,13 @@ using System.Web;
 
 namespace Bankiru.Models.Domain.Club
 {
-    public class ClubManager
+    public class ForecastManager
     {
         private string _lastError;
         public string LastError { get { return _lastError; } }
-        public static readonly ILog log = LogManager.GetLogger(typeof(ClubManager));
+        public static readonly ILog log = LogManager.GetLogger(typeof(ForecastManager));
 
-        public ClubManager()
+        public ForecastManager()
         {
             _lastError = "";
         }
@@ -27,11 +28,14 @@ namespace Bankiru.Models.Domain.Club
         /// </summary>
         /// <param name="forecastDate">Дата прогнозов</param>
         /// <returns>Логическое значение</returns>
-        public bool CreateNewForecasts(DateTime forecastDate)
+        public bool CreateForecasts(VM_Forecast forecast)
         {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CreateNewForecasts.Name, GlobalParams.GetConnection());
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CreateForecast.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateNewForecasts.Params.ForecastDate, forecastDate);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.ForecastDate, forecast.ForecastDate);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.SubjectId, forecast.Subject);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.WinAmount, forecast.WinAmount);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.UserId, SessionPersister.CurrentUser.Id);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -44,8 +48,80 @@ namespace Bankiru.Models.Domain.Club
                 }
                 catch (Exception ex)
                 {
-                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}", 
-                        DbStruct.PROCEDURES.CreateNewForecasts.Name, ex.ToString());
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.CreateForecast.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// Обновляет прогноз в базе данных
+        /// </summary>
+        /// <param name="id">Идентификатор прогноза</param>
+        /// <param name="forecast">Прогноз</param>
+        /// <returns>Логическое значение</returns>
+        public bool UpdateForecast(int id, VM_Forecast forecast)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.EditForecast.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.ForecastDate, forecast.ForecastDate);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.SubjectId, forecast.Subject);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.WinAmount, forecast.WinAmount);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.Id, id);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    if (command.ExecuteNonQuery() == 1)
+                        return false;
+                    else
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.EditForecast.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// Удаялет прогноз
+        /// </summary>
+        /// <param name="id">Идентификатор прогноза</param>
+        /// <returns>Логическое значение</returns>
+        public bool DeleteForecast(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.DeleteForecast.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DeleteForecast.Params.Id, id);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    if (command.ExecuteNonQuery() == 1)
+                        return false;
+                    else
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.DeleteForecast.Name, ex.ToString());
                     log.Error(_lastError);
                     return false;
                 }
@@ -359,6 +435,7 @@ namespace Bankiru.Models.Domain.Club
         {
             VM_Forecasts forecasts = new VM_Forecasts();
             forecasts.PagingInfo.ItemsPerPage = 20;
+            forecasts.PagingInfo.CurrentPage = page;
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             if (filter.IsArchive == EnumBoolType.None)
@@ -383,7 +460,7 @@ namespace Bankiru.Models.Domain.Club
                                 VM_Forecast f = new VM_Forecast();
                                 for (int j = 0; j < reader.FieldCount; j++)
                                     f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
-                                return f;
+                                forecasts.Items.Add(f);
                             }
                         }
                     }
@@ -402,7 +479,7 @@ namespace Bankiru.Models.Domain.Club
                         command.Dispose();
                 }
             }
-        }
+        }        
         #endregion
 
         #region ПРЕДМЕТ ПРОГНОЗОВ

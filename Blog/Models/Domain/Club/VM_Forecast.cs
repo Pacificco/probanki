@@ -24,7 +24,7 @@ namespace Bankiru.Models.Domain.Club
 
         private string _lastError;
         public string LastError { get { return _lastError; } }
-        public static readonly ILog log = LogManager.GetLogger(typeof(ClubManager));
+        public static readonly ILog log = LogManager.GetLogger(typeof(ForecastManager));
 
         public VM_Forecast()
         {

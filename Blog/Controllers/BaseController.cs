@@ -222,7 +222,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
-                    ClubManager manager = new ClubManager();
+                    ForecastManager manager = new ForecastManager();
                     VM_DropDownForecastSubject model = new VM_DropDownForecastSubject();
                     model.SelectedId = selectedId;
                     model.Items = manager.GetForecastSubjects();
