@@ -2,19 +2,33 @@
 using log4net;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Bankiru.Models.Domain.Club
 {
     public class VM_Forecast
     {
+        [HiddenInput]
         public int Id { get; set; }
         public VM_ForecastSubject Subject { get; set; }
+        [Display(Name = "Предмет прогноза")]
+        [Range(1, 10)]
+        public byte SubjectId {
+            get { return Subject.Id; }
+            set { Subject.Id = value; }
+        }
+        [Display(Name = "Закрыт")]
         public bool IsClosed { get; set; }
         public VM_User Winner { get; set; }
+        [Display(Name = "Значение прогноза")]
         public double WinValue { get; set; }
+        [Display(Name = "Сумма выигрыша")]
         public double WinAmount { get; set; }
+        [Display(Name = "Дата окончания прогноза")]
+        [DataType(DataType.Date)] 
         public DateTime ForecastDate { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime? ReportDate { get; set; }

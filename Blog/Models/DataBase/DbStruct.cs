@@ -1046,7 +1046,7 @@ namespace Bankiru.Models.DataBase
                     public static string ForecastDate = "@ForecastDate";
                     public static string UserId = "@UserId";
                     public static string SubjectId = "@SubjectId";
-                    public static string WinAmount = "@WinAmount";                  
+                    public static string WinAmount = "@WinAmount";                    
                 }
             }
             /// <summary>
@@ -1067,6 +1067,7 @@ namespace Bankiru.Models.DataBase
                     public static string SubjectId = "@SubjectId";
                     public static string ForecastDate = "@ForecastDate";
                     public static string WinAmount = "@WinAmount";
+                    public static string UserId = "@UserId";
                 }
             }
             /// <summary>
@@ -1173,8 +1174,28 @@ namespace Bankiru.Models.DataBase
                 {
                     public static string IsClosed = "@IsClosed";
                     public static string SubjectId = "@SubjectId";
+                }
+            }
+            /// <summary>
+            /// Возвращает список прогнозов
+            /// </summary>
+            public static class ForecastsList
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastsList";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string IsClosed = "@IsClosed";
+                    public static string SubjectId = "@SubjectId";
                     public static string RowBegin = "@RowBegin";
                     public static string RowEnd = "@RowEnd";
+                    //out
+                    public static string RowTotalCount = "@RowTotalCount";
                 }
             }
             /// <summary>

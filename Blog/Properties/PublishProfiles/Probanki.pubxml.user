@@ -47,6 +47,24 @@
     <File Include="Areas/Admin/Views/Error/NotFound.cshtml">
       <publishTime>04/02/2016 13:57:54</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/Forecast/Edit.cshtml">
+      <publishTime>12/08/2016 22:59:58</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Forecast/List.cshtml">
+      <publishTime>12/08/2016 23:42:23</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Forecast/New.cshtml">
+      <publishTime>12/08/2016 23:01:51</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Forecast/_closeForecast.cshtml">
+      <publishTime>12/08/2016 23:04:02</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Forecast/_forecastList.cshtml">
+      <publishTime>12/08/2016 23:42:13</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Forecast/_forecastListFilter.cshtml">
+      <publishTime>12/08/2016 22:29:12</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Image/Index.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
@@ -132,16 +150,22 @@
       <publishTime>05/13/2016 23:09:41</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/MasterAdmin.cshtml">
-      <publishTime>10/22/2016 20:03:10</publishTime>
+      <publishTime>12/05/2016 17:53:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_activeDropDownList.cshtml">
       <publishTime>02/21/2016 15:23:01</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_archiveDropDownList.cshtml">
+      <publishTime>12/08/2016 22:26:07</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_categoriesDropDownList.cshtml">
       <publishTime>02/29/2016 22:02:21</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_confirmDropDownList.cshtml">
       <publishTime>08/08/2016 21:19:38</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_forecastSubjectDropDownList.cshtml">
+      <publishTime>12/05/2016 22:15:42</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_orgCategoriesDropDownList.cshtml">
       <publishTime>04/06/2016 21:44:34</publishTime>
@@ -186,7 +210,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>11/30/2016 21:43:10</publishTime>
+      <publishTime>12/08/2016 23:54:05</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -201,7 +225,7 @@
       <publishTime>02/14/2016 00:07:49</publishTime>
     </File>
     <File Include="bin/Currencies.dll">
-      <publishTime>10/24/2016 22:55:00</publishTime>
+      <publishTime>12/08/2016 23:47:24</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>01/21/2016 18:01:35</publishTime>
@@ -3308,6 +3332,12 @@
     <File Include="Content/admin_themes/comments/table.css">
       <publishTime>06/30/2016 21:57:27</publishTime>
     </File>
+    <File Include="Content/admin_themes/forecasts/forecast.css">
+      <publishTime>12/08/2016 22:55:41</publishTime>
+    </File>
+    <File Include="Content/admin_themes/forecasts/table.css">
+      <publishTime>12/08/2016 22:40:52</publishTime>
+    </File>
     <File Include="Content/admin_themes/images/images.css">
       <publishTime>03/06/2016 18:38:16</publishTime>
     </File>
@@ -4335,7 +4365,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/30/2016 21:43:11</publishTime>
+      <publishTime>12/08/2016 23:54:05</publishTime>
     </File>
   </ItemGroup>
 </Project>

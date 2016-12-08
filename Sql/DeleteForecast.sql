@@ -12,11 +12,14 @@ begin
 	select @trancount = @@TRANCOUNT
 
 	begin try 
-
-	delete from ForecastsUsers where ForecastId = @Id
-	delete from Forecasts where Id = @Id
 	
-	if @trancount = 0
+		if @trancount = 0
+			begin transaction
+
+		delete from ForecastsUsers where ForecastId = @Id
+		delete from Forecasts where Id = @Id
+	
+		if @trancount = 0
 			commit transaction
 		return 0
 	end try 

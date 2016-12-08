@@ -11,6 +11,9 @@ begin
 
 	begin try 
 
+	if @trancount = 0
+		begin transaction
+
 	insert into Forecasts(IsClosed,CreateDate,ForecastDate,ReportDate,ReportUserId,SubjectId,WinAmount,WinValue,Winner)
 	values (
 		0,

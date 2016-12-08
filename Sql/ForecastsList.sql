@@ -11,7 +11,7 @@ create proc ForecastsList (
 begin	
 
 	create table #tblForecasts(
-		RowNum				int			not null
+		RowNum			int				not null
 		,Id				int				not null
 		,SubjectId		tinyint			not null
 		,SubjectName	nvarchar(255)	not null
@@ -27,26 +27,30 @@ begin
 	
 	if @IsClosed = 1 begin
 		if @SubjectId is null
-			insert #tblForecasts(RowNum,Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate,UserCount)			
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
 				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
-					Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate, 0
-					from Forecasts f where f.IsClosed = 1
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id
+				where f.IsClosed = 1
 		else
-			insert #tblForecasts(RowNum,Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate,UserCount)			
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
 				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
-					Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate, 0
-					from Forecasts f where f.IsClosed = 1 and f.SubjectId = @SubjectId
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id
+				where f.IsClosed = 1 and f.SubjectId = @SubjectId
 	end else begin
 		if @SubjectId is null
-			insert #tblForecasts(RowNum,Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate,UserCount)			
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
 				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
-					Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate, 0
-					from Forecasts f where f.IsClosed = 0 order by f.CreateDate desc, f.ForecastDate
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id
+				where f.IsClosed = 0
 		else
-			insert #tblForecasts(RowNum,Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate,UserCount)			
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
 				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
-					Id,SubjectId,IsClosed,Winner,WinValue,WinAmount,ForecastDate, 0
-					from Forecasts f where f.IsClosed = 0 and f.SubjectId = @SubjectId order by f.CreateDate desc, f.ForecastDate
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id
+				where f.IsClosed = 0 and f.SubjectId = @SubjectId
 	end
 	
 	
@@ -65,7 +69,7 @@ begin
 	set UserCount = fu.UserCount
 	from #tblForecasts f join #tblForecastsUsers fu on f.Id = fu.Id
 	
-	select * from #tblForecasts where RowNum >= @RowBegin and RowNum <= @RowEnd
+	select * from #tblForecasts where RowNum >= @RowBegin and RowNum <= @RowEnd order by RowNum
 	
 	select @RowTotalCount = count(1) from #tblForecasts
 	

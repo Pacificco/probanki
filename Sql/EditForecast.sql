@@ -5,7 +5,8 @@ create proc EditForecast (
 	@Id				int,
 	@SubjectId		tinyint,	
 	@WinAmount		float,
-	@ForecastDate	datetime	
+	@ForecastDate	datetime,	
+	@UserId			int
 	) as
 begin
 	
@@ -24,11 +25,11 @@ begin
 		
 		update Forecasts 
 		set 			
-			@SubjectId =	@SubjectId,			
+			SubjectId =	@SubjectId,			
 			WinAmount =		@WinAmount,		
 			ForecastDate =	@ForecastDate,			
 			ReportDate =	GETDATE(),	
-			ReportUserId =	2
+			ReportUserId =	@UserId
 		where Id = @Id
 		
 		if @trancount = 0

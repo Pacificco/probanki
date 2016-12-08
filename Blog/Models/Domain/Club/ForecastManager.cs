@@ -5,6 +5,7 @@ using Bankiru.Models.Security;
 using log4net;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -32,10 +33,11 @@ namespace Bankiru.Models.Domain.Club
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CreateForecast.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.ForecastDate, forecast.ForecastDate);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.SubjectId, forecast.Subject);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.ForecastDate,
+                new DateTime(forecast.ForecastDate.Year, forecast.ForecastDate.Month, forecast.ForecastDate.Day, 23, 59, 59, 0));
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.SubjectId, forecast.Subject.Id);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.WinAmount, forecast.WinAmount);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.UserId, SessionPersister.CurrentUser.Id);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CreateForecast.Params.UserId, 2);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -70,9 +72,11 @@ namespace Bankiru.Models.Domain.Club
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.EditForecast.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.ForecastDate, forecast.ForecastDate);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.SubjectId, forecast.Subject);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.ForecastDate,
+                new DateTime(forecast.ForecastDate.Year, forecast.ForecastDate.Month, forecast.ForecastDate.Day, 23, 59, 59, 0));
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.SubjectId, forecast.Subject.Id);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.WinAmount, forecast.WinAmount);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.UserId, 2);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.EditForecast.Params.Id, id);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
@@ -434,19 +438,26 @@ namespace Bankiru.Models.Domain.Club
         public VM_Forecasts GetForecasts(VM_ForecastsFilters filter, int page)
         {
             VM_Forecasts forecasts = new VM_Forecasts();
+            forecasts.Filters.Assign(filter);
             forecasts.PagingInfo.ItemsPerPage = 20;
             forecasts.PagingInfo.CurrentPage = page;
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsView.Name, GlobalParams.GetConnection());
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastsList.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             if (filter.IsArchive == EnumBoolType.None)
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, DBNull.Value);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.IsClosed, DBNull.Value);
             else
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, filter.IsArchive == EnumBoolType.True ? true : false);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.IsClosed, filter.IsArchive == EnumBoolType.True ? true : false);
             if (filter.SubjectId > 0)
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, filter.SubjectId);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.SubjectId, filter.SubjectId);
             else
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsView.Params.IsClosed, DBNull.Value);
-            command.CommandTimeout = 15;
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.SubjectId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.RowBegin, forecasts.PagingInfo.GetNumberFrom());
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.RowEnd, forecasts.PagingInfo.GetNumberTo());
+
+            SqlParameter rowCount = command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastsList.Params.RowTotalCount, SqlDbType.Int);
+            rowCount.Direction = ParameterDirection.InputOutput;
+            
+            command.CommandTimeout = 15;                        
             lock (GlobalParams._DBAccessLock)
             {
                 try
@@ -455,21 +466,24 @@ namespace Bankiru.Models.Domain.Club
                     {
                         if (reader != null && reader.HasRows)
                         {
+                            VM_Forecast f = null;
                             while (reader.Read())
                             {
-                                VM_Forecast f = new VM_Forecast();
+                                f = new VM_Forecast();
                                 for (int j = 0; j < reader.FieldCount; j++)
                                     f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                f.Subject.Name = reader.GetString(reader.GetOrdinal("SubjectName"));
                                 forecasts.Items.Add(f);
                             }
                         }
                     }
-                    return null;
+                    forecasts.PagingInfo.SetData(page, Convert.IsDBNull(rowCount.Value) ? -1 : (int)rowCount.Value);
+                    return forecasts;
                 }
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.ForecastsView.Name, ex.ToString());
+                        DbStruct.PROCEDURES.ForecastsList.Name, ex.ToString());
                     log.Error(_lastError);
                     return null;
                 }
@@ -504,7 +518,7 @@ namespace Bankiru.Models.Domain.Club
                                 fs.Id = reader.GetByte(reader.GetOrdinal("Id"));
                                 fs.Icon = reader.GetString(reader.GetOrdinal("Icon"));
                                 fs.IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"));
-                                fs.Name = reader.GetString(reader.GetOrdinal("Avatar"));
+                                fs.Name = reader.GetString(reader.GetOrdinal("Name"));
                                 fs.Alias = reader.GetString(reader.GetOrdinal("Alias"));
                                 fs.Description = reader.GetString(reader.GetOrdinal("Descriptions"));
                                 fs.MetaTitle = reader.GetString(reader.GetOrdinal("MetaTitle"));

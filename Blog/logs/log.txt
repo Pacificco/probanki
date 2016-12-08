@@ -1664,3 +1664,752 @@ System.Net.WebException: Время ожидания операции истекло
    в System.Net.HttpWebRequest.GetResponse()
    в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
 ERROR 2016-11-26 00:02:20,318 90316975ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2016-12-08 21:56:09,302 93594ms ForecastManager        GetForecasts       - Ошибка во время выполнения хранимой процедуры ForecastsList!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "ForecastsList" ожидает параметр "@SubjectId", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecasts(VM_ForecastsFilters filter, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 461
+ClientConnectionId:fe9f0eda-b439-45a1-8e39-a1e08b31b4d3
+ERROR 2016-12-08 21:57:22,059 63551ms ForecastManager        GetForecasts       - Ошибка во время выполнения хранимой процедуры ForecastsList!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "ForecastsList" ожидает параметр "@RowTotalCount", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecasts(VM_ForecastsFilters filter, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 461
+ClientConnectionId:1a37b418-a048-43b5-bea9-72cea75faa4c
+ERROR 2016-12-08 22:12:38,558 65602ms ForecastManager        GetForecasts       - Ошибка во время выполнения хранимой процедуры ForecastsList!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "ForecastsList" ожидает параметр "@RowTotalCount", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecasts(VM_ForecastsFilters filter, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 461
+ClientConnectionId:f9e6f094-1a8a-479d-9af2-9832276357d2
+ERROR 2016-12-08 22:13:25,430 36442ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:55,910 66922ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:56,539 67551ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:57,289 68301ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:57,637 68649ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:57,980 68992ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:58,337 69349ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:58,705 69717ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:59,129 70141ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:59,501 70513ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:13:59,897 70909ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:14:00,321 71333ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:14:45,359 116371ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:15:52,504 183516ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,639 185650ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,639 185650ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,640 185651ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,640 185651ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,640 185651ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,640 185651ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,641 185652ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,641 185652ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,641 185652ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,641 185652ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:54,642 185653ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:15:57,645 188656ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:17:47,896 298908ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:18:37,127 11091ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,143 11107ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,144 11108ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,144 11108ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,145 11109ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,145 11109ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,145 11109ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,146 11110ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,146 11110ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,146 11110ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,147 11111ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,147 11111ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:37,615 11579ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:18:40,570 14534ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:18:42,877 16841ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,877 16841ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,878 16842ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,878 16842ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,878 16842ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,879 16843ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,879 16843ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,879 16843ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,880 16844ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,880 16844ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,880 16844ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,880 16844ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:18:42,935 16899ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:19:14,258 48223ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,259 48224ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,260 48225ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,260 48225ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,261 48226ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,261 48226ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,262 48227ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,262 48227ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,262 48227ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,263 48228ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,263 48228ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,264 48229ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:19:14,322 48287ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 516
+ERROR 2016-12-08 22:32:06,905 18635ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,927 18658ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,927 18658ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,928 18659ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,928 18659ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,929 18660ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,929 18660ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,930 18661ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,930 18661ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,930 18661ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,931 18662ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:06,931 18662ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:32:07,354 19085ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 518
+ERROR 2016-12-08 22:32:22,469 34199ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 518
+ERROR 2016-12-08 22:33:32,086 103816ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,086 103816ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,087 103817ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,087 103817ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,087 103817ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,088 103818ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,088 103818ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,089 103819ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,089 103819ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,090 103820ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,090 103820ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,090 103820ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:33:32,191 103921ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 518
+ERROR 2016-12-08 22:33:37,206 108936ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 518
+ERROR 2016-12-08 22:45:25,067 18219ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,089 18241ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,090 18242ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,091 18243ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,091 18243ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,091 18243ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,092 18244ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,092 18244ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,093 18245ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,093 18245ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,093 18245ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:25,094 18246ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:45:48,051 41203ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.IndexOutOfRangeException: Avatar
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 518
+ERROR 2016-12-08 22:49:54,741 200176ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,760 200195ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,760 200195ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,761 200196ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,761 200196ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,761 200196ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,762 200197ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,762 200197ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,763 200198ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,763 200198ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,763 200198ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:49:54,764 200199ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,721 207155ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,722 207156ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,722 207156ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,722 207156ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,723 207157ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,723 207157ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,723 207157ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,724 207158ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,724 207158ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,724 207158ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,725 207159ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:01,725 207159ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,666 211101ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,667 211102ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,667 211102ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,668 211103ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,669 211104ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,670 211105ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,671 211106ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,671 211106ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,672 211107ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,673 211108ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,674 211109ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:05,674 211109ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,130 213565ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,131 213566ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,132 213567ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,132 213567ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,133 213568ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,134 213569ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,134 213569ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,135 213570ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,135 213570ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,136 213571ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,136 213571ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:50:08,136 213571ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,615 308050ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,616 308051ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,616 308051ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,616 308051ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,617 308052ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,617 308052ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,617 308052ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,617 308052ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,618 308053ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,618 308053ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,618 308053ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:51:42,618 308053ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,102 437536ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,104 437538ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,105 437539ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,106 437540ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,106 437540ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,107 437541ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,108 437542ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,108 437542ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,109 437543ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,110 437544ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,111 437545ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:53:52,111 437545ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,088  4105ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,109  4126ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,109  4126ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,110  4127ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,110  4127ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,111  4128ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,111  4128ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,111  4128ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,112  4129ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,112  4129ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,112  4129ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:55:03,113  4130ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,504 72521ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,504 72521ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,504 72521ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,504 72521ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,514 72531ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,515 72532ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,515 72532ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,516 72533ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,517 72534ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,517 72534ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,518 72535ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:11,519 72536ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:15,746 76763ms ForecastManager        UpdateForecast     - Ошибка во время выполнения хранимой процедуры EditForecast!
+System.ArgumentException: Отсутствует сопоставление типа объекта Bankiru.Models.Domain.Club.VM_ForecastSubject с известным собственным типом управляемого поставщика.
+   в System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   в System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   в System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   в System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Int32 startCount, Boolean inSchema, SqlParameterCollection parameters)
+   в System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.UpdateForecast(Int32 id, VM_Forecast forecast) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 83
+ERROR 2016-12-08 22:56:25,752 86769ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,753 86770ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,754 86771ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,755 86772ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,755 86772ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,756 86773ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,757 86774ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,757 86774ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,758 86775ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,759 86776ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,760 86777ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:56:25,760 86777ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,879 19430ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,902 19453ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,903 19454ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,903 19454ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,904 19455ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,904 19455ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,905 19456ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,905 19456ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,905 19456ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,906 19457ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,906 19457ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 22:59:20,907 19458ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,085  5549ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,102  5566ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,103  5567ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,104  5568ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,104  5568ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,104  5568ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,105  5569ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,105  5569ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,106  5570ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,106  5570ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,107  5571ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:08:08,107  5571ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:09:57,241 114705ms ForecastManager        UpdateForecast     - Ошибка во время выполнения хранимой процедуры EditForecast!
+System.ArgumentException: Отсутствует сопоставление типа объекта Bankiru.Models.Domain.Club.VM_ForecastSubject с известным собственным типом управляемого поставщика.
+   в System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   в System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   в System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   в System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Int32 startCount, Boolean inSchema, SqlParameterCollection parameters)
+   в System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.UpdateForecast(Int32 id, VM_Forecast forecast) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 83
+ERROR 2016-12-08 23:12:51,677 22006ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,691 22020ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,692 22021ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,692 22021ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,692 22021ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,693 22022ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,693 22022ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,693 22022ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,693 22022ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,694 22023ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,694 22023ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:12:51,694 22023ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,220 31549ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,221 31550ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,221 31550ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,221 31550ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,221 31550ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,221 31550ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,222 31551ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,222 31551ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,222 31551ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,222 31551ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,222 31551ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:01,223 31552ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,096 38425ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,097 38426ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,097 38426ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,098 38427ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,098 38427ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,099 38428ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,099 38428ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,099 38428ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,100 38429ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,100 38429ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,101 38430ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:08,101 38430ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,248 41577ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,248 41577ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,249 41578ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,249 41578ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,250 41579ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,250 41579ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,251 41580ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,251 41580ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,252 41581ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,252 41581ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,253 41582ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:11,253 41582ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,567 45896ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,567 45896ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,567 45896ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,568 45897ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,568 45897ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,568 45897ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,569 45898ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,569 45898ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,569 45898ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,570 45899ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,570 45899ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:13:15,570 45899ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,229 177558ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,230 177559ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,230 177559ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,231 177560ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,231 177560ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,232 177561ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,232 177561ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,232 177561ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,233 177562ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,233 177562ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,234 177563ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:15:27,234 177563ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,093 17791ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,119 17817ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,120 17818ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,120 17818ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,121 17819ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,122 17820ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,122 17820ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,122 17820ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,123 17821ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,123 17821ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,124 17822ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:21:21,124 17822ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,297 12748ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,313 12764ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,314 12765ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,314 12765ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,314 12765ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,315 12766ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,315 12766ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,315 12766ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,316 12767ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,316 12767ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,316 12767ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:12,316 12767ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:25:23,561 24012ms ForecastManager        UpdateForecast     - Ошибка во время выполнения хранимой процедуры EditForecast!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных nvarchar к datetime.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.UpdateForecast(Int32 id, VM_Forecast forecast) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 86
+ClientConnectionId:22198566-9ea5-4329-af6b-91194265619e
+ERROR 2016-12-08 23:26:25,372 85823ms ForecastManager        UpdateForecast     - Ошибка во время выполнения хранимой процедуры EditForecast!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных nvarchar к datetime.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.UpdateForecast(Int32 id, VM_Forecast forecast) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 86
+ClientConnectionId:22198566-9ea5-4329-af6b-91194265619e
+ERROR 2016-12-08 23:27:01,052 14529ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,074 14551ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,074 14551ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,075 14552ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,076 14553ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,076 14553ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,076 14553ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,077 14554ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,077 14554ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,078 14555ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,078 14555ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:01,079 14556ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,179 62656ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,179 62656ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,179 62656ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,179 62656ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,180 62657ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,180 62657ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,180 62657ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,180 62657ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,180 62657ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,181 62658ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,181 62658ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:27:49,181 62658ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,227 342704ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,227 342704ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,227 342704ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,228 342705ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,228 342705ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,228 342705ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,228 342705ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,228 342705ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,229 342706ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,229 342706ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,229 342706ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:29,229 342706ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,934 353411ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,935 353412ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,935 353412ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,935 353412ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,935 353412ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,936 353413ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,936 353413ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,936 353413ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,936 353413ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,936 353413ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,937 353414ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:32:39,937 353414ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,119 378596ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,120 378597ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,120 378597ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,120 378597ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,121 378598ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,121 378598ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,121 378598ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,121 378598ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,121 378598ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,122 378599ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,122 378599ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:05,122 378599ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:33:28,296 401772ms ForecastManager        CreateForecasts    - Ошибка во время выполнения хранимой процедуры CreateForecast!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных nvarchar к datetime.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.CreateForecasts(VM_Forecast forecast) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 46
+ClientConnectionId:7f587d98-ac2a-4184-9da4-abdccab85bd2
+ERROR 2016-12-08 23:36:35,529 17679ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,545 17695ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,545 17695ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,546 17696ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,546 17696ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,546 17696ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,546 17696ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,547 17697ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,547 17697ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,547 17697ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,548 17698ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:35,548 17698ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,886 34035ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,886 34035ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,886 34035ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,886 34035ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,887 34036ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,887 34036ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,887 34036ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,887 34036ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,887 34036ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,888 34037ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,888 34037ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,888 34037ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,888 34037ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,888 34037ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:36:51,889 34038ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,219 93368ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,220 93369ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,221 93370ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,221 93370ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,221 93370ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,246 93395ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,246 93395ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,246 93395ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,247 93396ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,247 93396ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,247 93396ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,247 93396ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,247 93396ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,248 93397ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:37:51,248 93397ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,960 157109ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,960 157109ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,961 157110ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,961 157110ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,961 157110ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,962 157111ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,962 157111ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,962 157111ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,963 157112ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,963 157112ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,964 157113ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,964 157113ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,964 157113ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,965 157114ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:54,965 157114ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,819 158969ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,819 158969ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,820 158970ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,820 158970ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,820 158970ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,821 158971ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,821 158971ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,822 158972ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,822 158972ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,823 158973ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,823 158973ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,823 158973ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,824 158974ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,824 158974ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:38:56,824 158974ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,098 237247ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,098 237247ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,099 237248ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,099 237248ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,099 237248ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,100 237249ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,100 237249ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,100 237249ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,101 237250ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,101 237250ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,101 237250ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,102 237251ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,102 237251ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,102 237251ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:15,102 237251ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:40:29,802 251951ms ForecastManager        DeleteForecast     - Ошибка во время выполнения хранимой процедуры DeleteForecast!
+System.Data.SqlClient.SqlException (0x80131904): Запрос ROLLBACK TRANSACTION не имеет соответствующей инструкции BEGIN TRANSACTION.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.DeleteForecast(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 120
+ClientConnectionId:52f3193b-760a-489d-ad56-4a7b6d0c99d3
+ERROR 2016-12-08 23:43:10,862 23648ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,875 23661ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,875 23661ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,875 23661ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,875 23661ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,876 23662ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,876 23662ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,876 23662ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,876 23662ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,877 23663ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,877 23663ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:43:10,877 23663ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,091 112877ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,091 112877ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,091 112877ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,092 112878ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,092 112878ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,092 112878ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,092 112878ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,092 112878ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,093 112879ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,093 112879ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,093 112879ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,093 112879ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,094 112880ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,094 112880ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:40,094 112880ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,127 122913ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,129 122915ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,129 122915ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,130 122916ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,131 122917ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,132 122918ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,133 122919ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,134 122920ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,134 122920ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,135 122921ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,135 122921ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,136 122922ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,136 122922ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,137 122923ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:50,137 122923ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:44:57,421 130207ms ForecastManager        DeleteForecast     - Ошибка во время выполнения хранимой процедуры DeleteForecast!
+System.Data.SqlClient.SqlException (0x80131904): Запрос ROLLBACK TRANSACTION не имеет соответствующей инструкции BEGIN TRANSACTION.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Club.ForecastManager.DeleteForecast(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 120
+ClientConnectionId:69d2acd2-8410-489f-a509-9182ebfccb83
+ERROR 2016-12-08 23:45:33,451 166237ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,452 166238ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,452 166238ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,453 166239ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,453 166239ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,453 166239ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,454 166240ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,454 166240ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,454 166240ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,455 166241ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,455 166241ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:45:33,455 166241ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,867 231653ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,867 231653ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,868 231654ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,868 231654ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,868 231654ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,868 231654ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,869 231655ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,869 231655ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,869 231655ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,869 231655ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,869 231655ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,870 231656ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,870 231656ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,870 231656ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:38,870 231656ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,510 242296ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,510 242296ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,511 242297ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,511 242297ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,511 242297ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,511 242297ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,511 242297ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!

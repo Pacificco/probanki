@@ -260,6 +260,23 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
+        public ActionResult _getArchiveDropDownList(EnumBoolType selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_DropDownArchive model = new VM_DropDownArchive();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_archiveDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
         public ActionResult _getConfirmDropDownList(EnumBoolType selectedId, EnumFirstDropDownItem firstItem, string id)
         {
             try

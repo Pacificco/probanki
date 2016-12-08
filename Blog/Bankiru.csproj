@@ -170,7 +170,7 @@
     </Compile>
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
-    <Compile Include="Models\Domain\Club\ClubManager.cs" />
+    <Compile Include="Models\Domain\Club\ForecastManager.cs" />
     <Compile Include="Models\Domain\Club\VM_ClubMember.cs" />
     <Compile Include="Models\Domain\Club\VM_DropDownForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_Forecast.cs" />
@@ -180,6 +180,7 @@
     <Compile Include="Models\Domain\Club\VM_ForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastUser.cs" />
     <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
+    <Compile Include="Models\Domain\Other\VM_DropDownArchive.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
     <Compile Include="Models\Domain\Account\VM_UserChangePassword.cs" />
     <Compile Include="Models\Domain\Account\VM_UserEmailConfirmed.cs" />
@@ -403,6 +404,8 @@
     <Content Include="Areas\Admin\Views\Forecast\List.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\New.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_forecastSubjectDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_archiveDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\_closeForecast.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">

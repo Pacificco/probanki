@@ -228,14 +228,15 @@ namespace Bankiru.Areas.Admin.Controllers
                 if (_connected)
                 {
                     ForecastManager manager = new ForecastManager();
-                    if (manager.SetArtActive(id, is_active))
-                    {
-                        return Json(new { resultMessage = "OK" });
-                    }
-                    else
-                    {
-                        return Json(new { resultMessage = "ERROR" });
-                    }
+                    //if (manager.SetForecastActive(id, is_active))
+                    //{
+                    //    return Json(new { resultMessage = "OK" });
+                    //}
+                    //else
+                    //{
+                    //    return Json(new { resultMessage = "ERROR" });
+                    //}
+                    return Json(new { resultMessage = "ERROR" });
                 }
                 else
                 {

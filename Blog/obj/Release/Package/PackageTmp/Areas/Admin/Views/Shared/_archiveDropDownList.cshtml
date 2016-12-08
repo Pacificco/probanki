@@ -1,0 +1,25 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Other
+@model VM_DropDownArchive
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = "ВСЕ",
+        Value = "0",
+        Selected = Model.SelectedId == EnumBoolType.None ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Архивные",
+        Value = "1",
+        Selected = Model.SelectedId == EnumBoolType.True ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Не архивные",
+        Value = "2",
+        Selected = Model.SelectedId == EnumBoolType.False ? true : false
+    });
+}
+@Html.DropDownList(Model.Name, _items)
