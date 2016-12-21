@@ -27,26 +27,36 @@
     switch (Model.CurrentCategory.Id)
     {
         case 1: ViewBag.CurrentMenuItem = "statii";
-            ViewBag.metaTitle = "Лучшие статьи о финансовом рынке РФ на ProBanki.net";
+            ViewBag.metaTitle = "Мнения экспертов об экономике РФ. Публикация статей по тематике.";
+            ViewBag.metaDescription = "Статьи на новостном портале ProBanki — размышления авторов об экономике и субъектах финансового рынка. Читайте профессиональное мнение простыми словами.";
+            
             desc = "Размышления авторов об экономике и субъектах финансового рынка.<br />" +
             "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
             break;
         case 2: ViewBag.CurrentMenuItem = "intervju";
-            ViewBag.metaTitle = "Интервью. Интервью для ProBanki.net";
+            ViewBag.metaTitle = "Интервью с экспертами об экономике, финансах и банковской сфере.";
+            ViewBag.metaDescription = "Интервью на новостном портале ProBanki — обсуждение юридических услуг, защиты интересов перед банками, микрофинансовыми организациями, коллекторами.";
+            
             desc = "Наши специалисты беседуют с интересными людьми.";
             break;
         case 3: ViewBag.CurrentMenuItem = "mnenija";
-            ViewBag.metaTitle = "Мнение эксперта. Мнение специалистов. Мнение ProBanki.net";
+            ViewBag.metaTitle = "Мнения экспертов об экономике РФ. Публикация статей по тематике.";
+            ViewBag.metaDescription = "Мнения экспертов на новостном портале ProBanki по наиболее злободневным и дискуссионным темам. Открытое обсуждение с авторами публикаций.";
+            
             desc = "Авторы выражают свое мнение по наиболее злободневным и дискуссионным темам.<br />" +
             "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
             break;
         case 7: ViewBag.CurrentMenuItem = "lirika";
-            ViewBag.metaTitle = "Лирика";
+            ViewBag.metaTitle = "Лирика - раздел на новостном портале ProBanki для мнений на разные темы.";
+            ViewBag.metaDescription = "В разделе лирика наши авторы выражают свое мнение о фильмах, книгах, телепередачах и многом другом. Вы также можете разместить статью на нашем сайте.";
+            
             desc = "В данном разделе наши авторы выражают свое мнение о фильмах, книгах, телепередачах и многом другом.<br />" +
             "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
             break;
         case 8: ViewBag.CurrentMenuItem = "revizija";
-            ViewBag.metaTitle = "Надежность банков. Банки условия.";
+            ViewBag.metaTitle = "Ревизии финансовых учреждений проведенные сотрудниками ProBanki.";
+            ViewBag.metaDescription = "В рубрике ревизия, на портале ProBanki, наши эксперты - сотрудники отдела мониторинга, публикуют свое впечатление о посещенных финансовых учреждениях.";
+            
             desc = "В данном разделе наши эксперты публикуют свое впечатление о посещенных финансовых учреждениях.";
             break;
         default:
@@ -72,17 +82,15 @@
 @if (Model != null)
 {
     <section id="arts-list">
-        <hgroup>
-            <h1>
+        <hgroup>            
                 @if (Model.CurrentCategory.Id > 0)
                 {
-                    <span>@Model.CurrentCategory.Title</span>                
+                    <h1>@Model.CurrentCategory.Title</h1>
                 }
                 else
                 {
-                    <span>Публикации</span>
-                }
-            </h1>
+                    <h1>Публикации</h1>
+                }            
             <h2>@Html.Raw(desc)</h2>
         </hgroup>
         <div class="art-list-header">
@@ -122,7 +130,7 @@
                             <div class="article-prev-footer-tab article-prev-footer-tab-comments">
                                 <div class="article-prev-footer-tab-left"></div>
                                 <div class="read-more-comments">
-                                    @Html.RouteLink(String.Format("Комментариев ({0})", item.CommentsInfo.CommentsCount), "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
+                                    @Html.RouteLink(String.Format("{0}", item.CommentsInfo.CommentsCount), "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
                                 </div>
                                 <div class="article-prev-footer-tab-right"></div>
                             </div>

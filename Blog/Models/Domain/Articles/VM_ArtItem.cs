@@ -36,6 +36,8 @@ namespace Bankiru.Models.Domain.Articles
         public string OtherUser { get; set; }
         [Display(Name = "Активная")]
         public bool IsActive { get; set; }
+        [Display(Name = "Центральная статья")]
+        public bool IsCentral { get; set; }
         [Display(Name = "Просмотров")]
         public int Hits { get; set; }
 

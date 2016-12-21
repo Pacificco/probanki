@@ -32,6 +32,13 @@
                 @Html.ValidationMessageFor(model => model.IsCentral)
             </div>
             <div class="editor-label">
+                @Html.LabelFor(model => model.CentralNumber)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.CentralNumber)
+                @Html.ValidationMessageFor(model => model.CentralNumber)
+            </div>
+            <div class="editor-label">
                 @Html.LabelFor(model => model.PublishedAt)
             </div>
             <div class="editor-field">

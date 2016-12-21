@@ -370,6 +370,7 @@ namespace Bankiru.Areas.Admin.Controllers
             {
                 HttpCookie cookie = new HttpCookie("art_filters");
                 cookie["is_active"] = ((int)filter.IsActive).ToString();
+                cookie["is_central"] = filter.IsCentral ? "1" : "0";
                 cookie["category_id"] = filter.CategoryId.ToString();                
                 cookie["title"] = filter.Title.ToString();
                 cookie["page"] = page.ToString();
@@ -393,6 +394,10 @@ namespace Bankiru.Areas.Admin.Controllers
                         filter.IsActive = (EnumBoolType)(Convert.ToInt32(cookie["is_active"]));
                     else
                         filter.IsActive = EnumBoolType.None;
+                    if (cookie["is_active"] != null)
+                        filter.IsCentral = cookie["is_central"] == "1" ? true : false;
+                    else
+                        filter.IsCentral = false;
                     if (cookie["category_id"] != null)
                         filter.CategoryId = (Convert.ToInt32(cookie["category_id"]));
                     else

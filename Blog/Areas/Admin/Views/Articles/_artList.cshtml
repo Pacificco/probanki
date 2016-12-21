@@ -48,6 +48,10 @@
                     </td>
                     <td class="title">
                         <a href="@Url.Action("Edit", "Articles", new { id = item.Id })" title="">@item.Title</a>
+                        @if (item.IsCentral)
+                        {
+                            <br /><span>(центральная публикация)</span>
+                        }
                     </td>
                     <td class="category">
                         @item.Category.Title

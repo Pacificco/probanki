@@ -14,8 +14,8 @@
     }
     else
     {
-        ViewBag.metaTitle = "Банки. Курсы валют на сегодня. ProBanki.net";
-        ViewBag.metaDescription = "";
+        ViewBag.metaTitle = "Финансовые организации, учреждения Воронежа и Воронежской области.";
+        ViewBag.metaDescription = "Финансовые организации, учреждения Воронежа и Воронежской области: банки, инвестиционные компании, страховые компании, юридические компании, ломбарды.";
         ViewBag.metaKeywords = "";
         ViewBag.metaRobots = "index, follow";
     }
@@ -41,17 +41,15 @@
 @if (Model != null)
 {
     <section id="orgs-list">
-        <hgroup>
-            <h1>
+        <hgroup>            
                 @if (Model.CurrentCategory.Id > 0)
                 {
-                    <span>@Model.CurrentCategory.Title</span>                
+                    <h1>@Model.CurrentCategory.Title</h1>
                 }
                 else
                 {
-                    <span>Финансовые организации</span>
-                }
-            </h1>
+                    <h1>Финансовые организации</h1>
+               }            
             @if (Model.CurrentCategory.Id > 0)
             {
                 <h2>@Model.CurrentCategory.Title Воронежа и Воронежской области:</h2>

@@ -77,3 +77,9 @@ table.arts td.published img {
 .art-list table.arts img.indicator {
     display: none;
 }
+
+table.arts td.title span{
+    color: green;
+    font-weight: 700;
+    font-size: 0.9em;
+}

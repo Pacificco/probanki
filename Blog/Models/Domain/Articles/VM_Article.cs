@@ -64,6 +64,10 @@ namespace Bankiru.Models.Domain.Articles
         public bool IsActive { get; set; }
         [Display(Name = "Центральная статья")]
         public bool IsCentral { get; set; }
+        [Display(Name = "Порядковый номер центральной статьи")]
+        [Required(ErrorMessage = "Вы не указали порядковый номер центральной статьи! Если статья не является центральной укажите 0.")]
+        [Range(0, 100, ErrorMessage = "Порядковый номер центральной статьи должен быть равен или больше 0 и меньше или равен 100!")]
+        public int CentralNumber { get; set; }
         [Display(Name = "Просмотров")]
         public int Hits { get; set; }
         

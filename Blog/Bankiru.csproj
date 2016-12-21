@@ -160,7 +160,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
-    <Compile Include="Controllers\ClubController.cs" />
+    <Compile Include="Controllers\ForecastController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\OrgsController.cs" />
@@ -244,13 +244,14 @@
     <Compile Include="Models\Domain\Users\VM_UserItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UsersFilters.cs" />
     <Compile Include="Models\Domain\Users\VM_Users.cs" />
-    <Compile Include="Models\Helpers\ArticleHelper.cs" />
+    <Compile Include="Models\Helpers\CustomHtmlHelper.cs" />
     <Compile Include="Models\Helpers\ConvertHelper.cs" />
     <Compile Include="Models\Helpers\DbHelper.cs" />
     <Compile Include="Models\Helpers\MenuHelpers.cs" />
     <Compile Include="Models\Helpers\HelpTypes.cs" />
     <Compile Include="Models\Helpers\OrgsHelper.cs" />
     <Compile Include="Models\Helpers\PagingHelpers.cs" />
+    <Compile Include="Models\Helpers\TextHelper.cs" />
     <Compile Include="Models\Infrastructure\BaseController.cs" />
     <Compile Include="Models\Infrastructure\GlobalParams.cs" />
     <Compile Include="Models\Domain\Account\VM_UserLogin.cs" />
@@ -433,6 +434,7 @@
     <Content Include="Scripts\JsActions\load-comments.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Scripts\tinymce\langs\ru_RU.js" />
@@ -679,12 +681,16 @@
     <Content Include="Views\Account\PasswordRecoverEmailSent.cshtml" />
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Shared\_moduleShareInSocial.cshtml" />
-    <Content Include="Views\Club\Forecasts.cshtml" />
-    <Content Include="Views\Club\_moduleUserForecastList.cshtml" />
-    <Content Include="Views\Club\Forecast.cshtml" />
-    <Content Include="Views\Club\_moduleClubMenu.cshtml" />
-    <Content Include="Views\Club\_moduleClubMembers.cshtml" />
+    <Content Include="Views\Forecast\List.cshtml" />
+    <Content Include="Views\Forecast\_moduleUserForecastList.cshtml" />
+    <Content Include="Views\Forecast\Forecast.cshtml" />
+    <Content Include="Views\Forecast\_moduleClubMenu.cshtml" />
+    <Content Include="Views\Forecast\_moduleClubMembers.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_widget_vk.cshtml" />
+    <Content Include="Views\Shared\_widget_ok.cshtml" />
+    <Content Include="Views\Shared\_widget_fb.cshtml" />
+    <Content Include="Views\Shared\_moduleLastArticlesImageList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

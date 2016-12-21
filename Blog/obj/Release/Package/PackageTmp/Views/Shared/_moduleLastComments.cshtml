@@ -8,12 +8,13 @@
         <ul class="comments">
             @foreach (VM_CommentItem item in Model.Items)
             {
-                <li>
-                    <span class="comment-author">
-                        @item.Author
-                    </span>
+                <li>                    
                     <span class="comment-date">
                         <time pubdate datetime="@item.CreatedAt">@item.CreatedAt.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                    </span>
+                    <br />
+                    <span class="comment-author">
+                        @item.Author:
                     </span>
                     <br />
                     <span class="comment-text">

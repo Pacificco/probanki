@@ -15,19 +15,19 @@
       <publishTime>10/12/2016 22:37:38</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Articles/Edit.cshtml">
-      <publishTime>10/08/2016 16:29:17</publishTime>
+      <publishTime>12/19/2016 19:04:37</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Articles/List.cshtml">
       <publishTime>05/18/2016 22:34:56</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Articles/New.cshtml">
-      <publishTime>10/08/2016 15:49:32</publishTime>
+      <publishTime>12/19/2016 18:55:32</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Articles/_artList.cshtml">
-      <publishTime>06/26/2016 16:24:20</publishTime>
+      <publishTime>12/19/2016 19:42:36</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Articles/_artListFilter.cshtml">
-      <publishTime>02/28/2016 23:51:46</publishTime>
+      <publishTime>12/19/2016 19:35:34</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Comments/Edit.cshtml">
       <publishTime>08/08/2016 21:33:27</publishTime>
@@ -210,7 +210,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>12/08/2016 23:54:05</publishTime>
+      <publishTime>12/21/2016 23:14:25</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -3321,10 +3321,10 @@
       <publishTime>10/22/2016 21:34:56</publishTime>
     </File>
     <File Include="Content/admin_themes/arts/art.css">
-      <publishTime>02/29/2016 19:57:03</publishTime>
+      <publishTime>12/19/2016 19:28:53</publishTime>
     </File>
     <File Include="Content/admin_themes/arts/table.css">
-      <publishTime>03/01/2016 18:16:27</publishTime>
+      <publishTime>12/19/2016 19:43:00</publishTime>
     </File>
     <File Include="Content/admin_themes/comments/comments.css">
       <publishTime>03/02/2016 23:19:12</publishTime>
@@ -3375,7 +3375,7 @@
       <publishTime>05/15/2016 17:55:20</publishTime>
     </File>
     <File Include="Content/themes/arts/articles.css">
-      <publishTime>11/29/2016 22:45:06</publishTime>
+      <publishTime>12/18/2016 22:40:09</publishTime>
     </File>
     <File Include="Content/themes/arts/comments.css">
       <publishTime>03/27/2016 22:11:27</publishTime>
@@ -3546,7 +3546,7 @@
       <publishTime>04/13/2016 22:33:36</publishTime>
     </File>
     <File Include="Content/themes/site.css">
-      <publishTime>11/30/2016 21:43:02</publishTime>
+      <publishTime>12/21/2016 23:11:28</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/09/2016 21:09:00</publishTime>
@@ -3619,6 +3619,9 @@
     </File>
     <File Include="Scripts/knockout-2.1.0.js">
       <publishTime>01/21/2016 18:01:44</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>12/20/2016 22:27:17</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>01/21/2016 18:01:41</publishTime>
@@ -4179,7 +4182,7 @@
       <publishTime>10/20/2016 22:18:47</publishTime>
     </File>
     <File Include="Views/Articles/Art.cshtml">
-      <publishTime>11/30/2016 21:42:46</publishTime>
+      <publishTime>12/18/2016 19:58:59</publishTime>
     </File>
     <File Include="Views/Articles/Article.cshtml">
       <publishTime>01/24/2016 19:04:05</publishTime>
@@ -4188,7 +4191,7 @@
       <publishTime>02/12/2016 22:41:21</publishTime>
     </File>
     <File Include="Views/Articles/List.cshtml">
-      <publishTime>11/12/2016 19:48:37</publishTime>
+      <publishTime>12/20/2016 20:55:54</publishTime>
     </File>
     <File Include="Views/Articles/_categoriesMenu.cshtml">
       <publishTime>04/14/2016 22:19:26</publishTime>
@@ -4248,52 +4251,58 @@
       <publishTime>04/13/2016 21:25:31</publishTime>
     </File>
     <File Include="Views/Forecast/Forecast.cshtml">
-      <publishTime>11/12/2016 14:16:55</publishTime>
+      <publishTime>12/21/2016 22:31:32</publishTime>
     </File>
     <File Include="Views/Forecast/List.cshtml">
-      <publishTime>11/12/2016 14:16:55</publishTime>
+      <publishTime>12/21/2016 22:40:48</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleClubMembers.cshtml">
+      <publishTime>11/24/2016 21:56:03</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleClubMenu.cshtml">
+      <publishTime>11/24/2016 21:57:22</publishTime>
     </File>
     <File Include="Views/Forecast/_moduleForecastMenu.cshtml">
       <publishTime>11/12/2016 19:26:17</publishTime>
     </File>
     <File Include="Views/Forecast/_moduleUserForecastList.cshtml">
-      <publishTime>11/12/2016 14:16:55</publishTime>
+      <publishTime>12/21/2016 22:18:42</publishTime>
     </File>
     <File Include="Views/Home/Feedback.cshtml">
-      <publishTime>08/24/2016 21:12:26</publishTime>
+      <publishTime>12/18/2016 20:53:30</publishTime>
     </File>
     <File Include="Views/Home/FeedbackSuccess.cshtml">
       <publishTime>06/20/2016 21:38:45</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/27/2016 17:31:29</publishTime>
+      <publishTime>12/20/2016 21:48:04</publishTime>
     </File>
     <File Include="Views/Home/Rules.cshtml">
-      <publishTime>10/24/2016 20:05:41</publishTime>
+      <publishTime>12/18/2016 20:53:15</publishTime>
     </File>
     <File Include="Views/News/List.cshtml">
-      <publishTime>11/06/2016 21:38:48</publishTime>
+      <publishTime>12/20/2016 20:58:09</publishTime>
     </File>
     <File Include="Views/News/Show.cshtml">
-      <publishTime>06/20/2016 21:47:32</publishTime>
+      <publishTime>12/18/2016 19:39:44</publishTime>
     </File>
     <File Include="Views/Orgs/List.cshtml">
-      <publishTime>11/12/2016 20:40:14</publishTime>
+      <publishTime>12/20/2016 20:56:36</publishTime>
     </File>
     <File Include="Views/Orgs/NewReview.cshtml">
       <publishTime>08/27/2016 15:03:11</publishTime>
     </File>
     <File Include="Views/Orgs/Org.cshtml">
-      <publishTime>11/27/2016 17:42:58</publishTime>
+      <publishTime>12/18/2016 19:21:14</publishTime>
     </File>
     <File Include="Views/Orgs/Points.cshtml">
-      <publishTime>10/08/2016 14:31:21</publishTime>
+      <publishTime>12/18/2016 19:38:16</publishTime>
     </File>
     <File Include="Views/Orgs/Review.cshtml">
-      <publishTime>10/08/2016 14:25:59</publishTime>
+      <publishTime>12/18/2016 19:38:56</publishTime>
     </File>
     <File Include="Views/Orgs/Reviews.cshtml">
-      <publishTime>10/08/2016 14:31:36</publishTime>
+      <publishTime>12/18/2016 19:39:07</publishTime>
     </File>
     <File Include="Views/Shared/EditorTemplates/tinymce_full.cshtml">
       <publishTime>02/27/2016 14:25:24</publishTime>
@@ -4305,7 +4314,7 @@
       <publishTime>11/14/2016 22:08:30</publishTime>
     </File>
     <File Include="Views/Shared/Master.cshtml">
-      <publishTime>11/29/2016 23:48:54</publishTime>
+      <publishTime>12/21/2016 23:14:11</publishTime>
     </File>
     <File Include="Views/Shared/PartialError.cshtml">
       <publishTime>01/25/2016 22:53:06</publishTime>
@@ -4325,11 +4334,14 @@
     <File Include="Views/Shared/_moduleLastArtComments.cshtml">
       <publishTime>06/08/2016 18:33:22</publishTime>
     </File>
+    <File Include="Views/Shared/_moduleLastArticlesImageList.cshtml">
+      <publishTime>12/20/2016 21:45:10</publishTime>
+    </File>
     <File Include="Views/Shared/_moduleLastArticlesLinkList.cshtml">
       <publishTime>11/27/2016 17:32:00</publishTime>
     </File>
     <File Include="Views/Shared/_moduleLastComments.cshtml">
-      <publishTime>06/14/2016 07:26:40</publishTime>
+      <publishTime>12/18/2016 13:58:55</publishTime>
     </File>
     <File Include="Views/Shared/_moduleLastNews.cshtml">
       <publishTime>06/07/2016 22:05:09</publishTime>
@@ -4358,6 +4370,15 @@
     <File Include="Views/Shared/_partialView.cshtml">
       <publishTime>06/14/2016 07:24:25</publishTime>
     </File>
+    <File Include="Views/Shared/_widget_fb.cshtml">
+      <publishTime>12/19/2016 18:21:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_widget_ok.cshtml">
+      <publishTime>12/18/2016 23:41:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_widget_vk.cshtml">
+      <publishTime>12/18/2016 23:04:51</publishTime>
+    </File>
     <File Include="Views/Web.config">
       <publishTime>05/10/2016 21:02:09</publishTime>
     </File>
@@ -4365,7 +4386,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/08/2016 23:54:05</publishTime>
+      <publishTime>12/21/2016 23:30:42</publishTime>
     </File>
   </ItemGroup>
 </Project>

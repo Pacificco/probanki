@@ -22,6 +22,10 @@
            firstItem = EnumFirstDropDownItem.All, id = "IsActive" })
             @Html.ValidationMessageFor(model => model.IsActive)
         </div>
+        <div class="editor-field editor-field-active">
+            @Html.EditorFor(model => model.IsCentral) 
+            Центральные публикации
+        </div>
         <div class="editor-field editor-field-submit">
             <input type="submit" value="Показать" />
         </div>        

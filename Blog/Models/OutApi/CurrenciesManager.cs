@@ -23,8 +23,9 @@ namespace Bankiru.Models.OutApi
                     foreach (var c in Currencies)
                     {
                         result += "<div class=\"currency\">";
-                        result += "<span class=\"currency-name\">";                        
-                        result += c.Key;
+                        result += "<span class=\"currency-name\">";
+                        result += c.Key == "USD" ? "<img src=\"/Content/system/usd.png\" title=\"Динамика курса доллара\" alt=\"Курс доллара\" />" :
+                            "<img src=\"/Content/system/euro.png\" title=\"Динамика курса евро\" alt=\"Курс евро\" />";
                         result += "</span>";
                         result += c.Value.CurrencyToHtml();
                         result += "</div>";

@@ -81,6 +81,7 @@ namespace Bankiru.Models.Domain.Articles
                             art.PublishedAt = _reader.GetDateTime(17);
                             art.Hits = _reader.GetInt32(18);
                             art.IsCentral = _reader.GetBoolean(19);
+                            art.CentralNumber = _reader.GetInt32(20);
                         }
                     }
                 }
@@ -244,10 +245,10 @@ namespace Bankiru.Models.Domain.Articles
             }
             return art;
         }
-        public VM_ArtItem GetCentralArtItem()
+        public List<VM_ArtItem> GetCentralArtItem()
         {
             string SQLQuery = _sqlGetCentralArticle();
-            VM_ArtItem art = null;
+            List<VM_ArtItem> arts = new List<VM_ArtItem>();
             SqlCommand _command = null;
             SqlDataReader _reader = null;
             lock (GlobalParams._DBAccessLock)
@@ -263,7 +264,8 @@ namespace Bankiru.Models.Domain.Articles
                     }
                     if (_reader.HasRows)
                     {
-                        if (_reader.Read())
+                        VM_ArtItem art = null;
+                        while (_reader.Read())
                         {
                             art = new VM_ArtItem();
                             art.Id = _reader.GetInt32(0);
@@ -285,6 +287,8 @@ namespace Bankiru.Models.Domain.Articles
                             art.Category.Alias = _getCategoryAliasById(art.CategoryId);
 
                             art.CommentsInfo = new VM_ArtCommentInfo();
+
+                            arts.Add(art);
                         }
                     }
                 }
@@ -306,15 +310,30 @@ namespace Bankiru.Models.Domain.Articles
                     }
                 }
             }
-            if (art != null && art.Id > 0)
+            if (arts.Count > 0)
             {
-                Dictionary<int, VM_ArtCommentInfo> artComments = _getArtsCommentsInfo(new int[] { art.Id });
-                if (artComments != null && artComments.Count > 0)
+                int[] ids = (from i in arts
+                             select i.Id).Distinct().ToArray<int>();
+                if (ids != null && ids.Length > 0)
                 {
-                    art.CommentsInfo.Assign(artComments.First().Value);
+                    Dictionary<int, VM_ArtCommentInfo> comments = _getArtsCommentsInfo(ids);
+                    if (comments != null && comments.Count > 0)
+                    {
+                        VM_ArtItem item = null;
+                        foreach (var r in comments)
+                        {
+                            item = arts.FirstOrDefault(i => i.Id == r.Key);
+                            if (item != null)
+                            {
+                                item.CommentsInfo.CommentsCount = r.Value.CommentsCount;
+                                item.CommentsInfo.LikesCount = r.Value.LikesCount;
+                                item.CommentsInfo.DisLikesCount = r.Value.DisLikesCount;
+                            }
+                        }
+                    }
                 }
             }
-            return art;
+            return arts;
         }
         public List<VM_ArtItem> GetArtItems()
         {
@@ -404,7 +423,9 @@ namespace Bankiru.Models.Domain.Articles
                             item.Hits = _reader.GetInt32(5);
                             item.UserId = _reader.GetInt32(6);
                             item.OtherUser = _reader.IsDBNull(7) ? "" : _reader.GetString(7);
-                            item.CreatedAt = _reader.GetDateTime(8);                            
+                            item.CreatedAt = _reader.GetDateTime(8);
+                            item.TextPrev = _reader.GetString(9);
+
                             item.Category.Id = item.CategoryId;
                             item.Category.Alias = _getCategoryAliasById(item.CategoryId);
                             item.Category.Title = _getCategoryNameById(item.CategoryId);
@@ -1280,6 +1301,7 @@ namespace Bankiru.Models.Domain.Articles
                             art.OtherUser = _reader.IsDBNull(8) ? "" : _reader.GetString(8);
                             art.PublishedAt = _reader.GetDateTime(9);
                             art.CreatedAt = _reader.GetDateTime(10);
+                            art.IsCentral = _reader.GetBoolean(11);
 
                             if (art.Category == null) art.Category = new VM_Category();
                             art.Category.Id = art.CategoryId;
@@ -1577,7 +1599,8 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += DbStruct.Articles.FIELDS.UserId + ",";
             SqlQuery += DbStruct.Articles.FIELDS.OtherUser + ",";
             SqlQuery += DbStruct.Articles.FIELDS.PublishedAt + ",";
-            SqlQuery += DbStruct.Articles.FIELDS.CreatedAt;
+            SqlQuery += DbStruct.Articles.FIELDS.CreatedAt + ",";
+            SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
             SqlQuery += " " + DbStruct.SE.FROM + " ";
             SqlQuery += DbStruct.Articles.TABLENAME;
             if (!String.IsNullOrEmpty(SqlConds))
@@ -1643,6 +1666,12 @@ namespace Bankiru.Models.Domain.Articles
                     SqlConds += " = 1";
                 else
                     SqlConds += " = 0";
+            }
+            if (filter.IsCentral)
+            {
+                SqlConds += " " + DbStruct.SE.AND + " ";
+                SqlConds += DbStruct.Articles.FIELDS.IsCentral;
+                SqlConds += " = 1";                
             }
             if (!String.IsNullOrEmpty(filter.Title))
             {
@@ -1782,6 +1811,11 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += " " + DbStruct.SE.WHERE + " ";
             SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
             SqlQuery += " = 1";
+            SqlQuery += " " + DbStruct.SE.AND + " ";
+            SqlQuery += DbStruct.Articles.FIELDS.IsActive;
+            SqlQuery += " = 1";
+            SqlQuery += " " + DbStruct.SE.ORDER_BY + " ";
+            SqlQuery += DbStruct.Articles.FIELDS.CentralNumber;
             SqlQuery += ";";
             return SqlQuery;
         }
@@ -1843,7 +1877,8 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += DbStruct.Articles.FIELDS.Hits + ",";
             SqlQuery += DbStruct.Articles.FIELDS.UserId + ",";
             SqlQuery += DbStruct.Articles.FIELDS.OtherUser + ",";
-            SqlQuery += DbStruct.Articles.FIELDS.CreatedAt;
+            SqlQuery += DbStruct.Articles.FIELDS.CreatedAt + ",";
+            SqlQuery += DbStruct.Articles.FIELDS.TextPrev;
             SqlQuery += " " + DbStruct.SE.FROM + " ";
             SqlQuery += DbStruct.Articles.TABLENAME;
             if (!String.IsNullOrEmpty(sqlFilter))
@@ -1861,18 +1896,18 @@ namespace Bankiru.Models.Domain.Articles
         {
             string SqlQuery = String.Empty;
             //Если центральная статья
-            if (art.IsCentral)
-            {
-                SqlQuery += DbStruct.SE.UPDATE + " ";
-                SqlQuery += DbStruct.Articles.TABLENAME;
-                SqlQuery += " " + DbStruct.SE.SET + " ";
-                SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
-                SqlQuery += " = 0";
-                SqlQuery += " " + DbStruct.SE.WHERE + " ";
-                SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
-                SqlQuery += " = 1";
-                SqlQuery += ";";
-            }
+            //if (art.IsCentral)
+            //{
+            //    SqlQuery += DbStruct.SE.UPDATE + " ";
+            //    SqlQuery += DbStruct.Articles.TABLENAME;
+            //    SqlQuery += " " + DbStruct.SE.SET + " ";
+            //    SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
+            //    SqlQuery += " = 0";
+            //    SqlQuery += " " + DbStruct.SE.WHERE + " ";
+            //    SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
+            //    SqlQuery += " = 1";
+            //    SqlQuery += ";";
+            //}
             //Создание новой публикации
             SqlQuery += DbStruct.SE.INSERT + " ";
             SqlQuery += DbStruct.Articles.TABLENAME;
@@ -1885,6 +1920,7 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += DbStruct.Articles.FIELDS.CategoryId + ",";
             SqlQuery += DbStruct.Articles.FIELDS.IsActive + ",";
             SqlQuery += DbStruct.Articles.FIELDS.IsCentral + ",";
+            SqlQuery += DbStruct.Articles.FIELDS.CentralNumber + ",";
             SqlQuery += DbStruct.Articles.FIELDS.MetaTitle + ",";
             SqlQuery += DbStruct.Articles.FIELDS.MetaKeys + ",";
             SqlQuery += DbStruct.Articles.FIELDS.MetaDesc + ",";
@@ -1906,6 +1942,7 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += art.CategoryId.ToString() + ",";
             SqlQuery += art.IsActive ? "1," : "0,";
             SqlQuery += art.IsCentral ? "1," : "0,";
+            SqlQuery += art.CentralNumber.ToString() + ",";
             SqlQuery += "'" + DbStruct.SQLRealEscapeString(art.MetaTitle) + "',";
             SqlQuery += "'" + DbStruct.SQLRealEscapeString(art.MetaKeys) + "',";
             SqlQuery += "'" + DbStruct.SQLRealEscapeString(art.MetaDesc) + "',";
@@ -1928,18 +1965,18 @@ namespace Bankiru.Models.Domain.Articles
         {
             string SqlQuery = String.Empty;
             //Если центральная статья
-            if (art.IsCentral)
-            {
-                SqlQuery += DbStruct.SE.UPDATE + " ";
-                SqlQuery += DbStruct.Articles.TABLENAME;
-                SqlQuery += " " + DbStruct.SE.SET + " ";
-                SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
-                SqlQuery += " = 0";
-                SqlQuery += " " + DbStruct.SE.WHERE + " ";
-                SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
-                SqlQuery += " = 1";
-                SqlQuery += ";";
-            }
+            //if (art.IsCentral)
+            //{
+            //    SqlQuery += DbStruct.SE.UPDATE + " ";
+            //    SqlQuery += DbStruct.Articles.TABLENAME;
+            //    SqlQuery += " " + DbStruct.SE.SET + " ";
+            //    SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
+            //    SqlQuery += " = 0";
+            //    SqlQuery += " " + DbStruct.SE.WHERE + " ";
+            //    SqlQuery += DbStruct.Articles.FIELDS.IsCentral;
+            //    SqlQuery += " = 1";
+            //    SqlQuery += ";";
+            //}
             //Обновление публикации
             SqlQuery += DbStruct.SE.UPDATE + " ";
             SqlQuery += DbStruct.Articles.TABLENAME;
@@ -1956,6 +1993,8 @@ namespace Bankiru.Models.Domain.Articles
             SqlQuery += art.IsActive ? "1," : "0,";
             SqlQuery += DbStruct.Articles.FIELDS.IsCentral + " = ";
             SqlQuery += art.IsCentral ? "1," : "0,";
+            SqlQuery += DbStruct.Articles.FIELDS.CentralNumber + " = ";
+            SqlQuery += art.CentralNumber.ToString() + ",";
             SqlQuery += DbStruct.Articles.FIELDS.MetaTitle + " = ";
             SqlQuery += "'" + DbStruct.SQLRealEscapeString(art.MetaTitle) + "',";
             SqlQuery += DbStruct.Articles.FIELDS.MetaKeys + " = ";
@@ -2017,13 +2056,13 @@ namespace Bankiru.Models.Domain.Articles
         private string _sqlArticleAsCentral(int id)
         {
             string SqlQuery = String.Empty;
-            SqlQuery += DbStruct.SE.UPDATE + " ";
-            SqlQuery += DbStruct.Articles.TABLENAME;
-            SqlQuery += " " + DbStruct.SE.SET + " ";
-            SqlQuery += DbStruct.Articles.FIELDS.IsCentral + " = 0";
-            SqlQuery += " " + DbStruct.SE.WHERE + " ";
-            SqlQuery += DbStruct.Articles.FIELDS.IsCentral + " = 1";
-            SqlQuery += ";";
+            //SqlQuery += DbStruct.SE.UPDATE + " ";
+            //SqlQuery += DbStruct.Articles.TABLENAME;
+            //SqlQuery += " " + DbStruct.SE.SET + " ";
+            //SqlQuery += DbStruct.Articles.FIELDS.IsCentral + " = 0";
+            //SqlQuery += " " + DbStruct.SE.WHERE + " ";
+            //SqlQuery += DbStruct.Articles.FIELDS.IsCentral + " = 1";
+            //SqlQuery += ";";
             SqlQuery += DbStruct.SE.UPDATE + " ";
             SqlQuery += DbStruct.Articles.TABLENAME;
             SqlQuery += " " + DbStruct.SE.SET + " ";

@@ -3,9 +3,7 @@ if exists(select 1 from sysobjects where name = N'ForecastsView' and xtype='P') 
 go
 create proc ForecastsView (
 	@IsClosed bit, 
-	@SubjectId tinyint,
-	@RowBegin int,
-	@RowEnd int
+	@SubjectId tinyint
 ) as	
 begin	
 	if @IsClosed = 1 begin

@@ -12,11 +12,11 @@
 }
 @section left_top
 {
-    @Html.Action("_getModuleClubMenu", "Club", new { cur_item = "forecasts" })
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
 }
 @section left_middle
 {
-    @Html.Action("_getModuleClubMembers", "Club", null)
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
 }
 @section right_middle
 {
@@ -24,10 +24,10 @@
 }
 @if (Model != null)
 {
-    <section id="forecast-list"  style="border:2px dashed #f00; padding:5px; margin:5px;">
+    <section id="forecast-list">
         <hgroup>
             <h1>
-                <span>Открытые прогнозы</span>
+                Открытые прогнозы
             </h1>
             <h2>Прогнозы, в которых Вы можете принять участие</h2>
         </hgroup>        
@@ -37,7 +37,7 @@
 
                 @foreach (VM_Forecast item in Model)
                 {
-                    <section class="forecast-prev"  style="border:2px dashed #f00; padding:5px; margin:5px;">
+                    <section class="forecast-prev @item.Subject.Alias">
                         <hgroup>
                             <h1>@item.Subject.Name</h1>
                             @if (!String.IsNullOrEmpty(item.Subject.Description))

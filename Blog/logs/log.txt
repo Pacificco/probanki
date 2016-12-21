@@ -2413,3 +2413,27 @@ ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue     
 ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
 ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
 ERROR 2016-12-08 23:46:49,512 242298ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-21 22:30:43,254 33647ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:33:13,925 35996ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:36:47,220 249290ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:37:07,598 269668ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:39:14,466 396536ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:39:51,165 433235ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:39:58,445 440515ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:40:39,897 481967ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:40:49,533 491603ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:41:14,561 516631ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 22:42:00,930 563000ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2016-12-21 23:11:33,674 2335744ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.

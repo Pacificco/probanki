@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace Bankiru.Models.Helpers
 {
-    public static class ArticleHelper
+    public static class CustomHtmlHelper
     {
         public static MvcHtmlString GetCommentsList(this HtmlHelper html, List<VM_Comment> comments, int articleId, Func<int, string> pageUrl)
         {
@@ -48,6 +48,6 @@ namespace Bankiru.Models.Helpers
                 result.Append(tagDiv.ToString());    
             }
             return MvcHtmlString.Create(result.ToString());
-        }
+        }        
     }
 }

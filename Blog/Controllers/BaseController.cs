@@ -425,7 +425,7 @@ namespace Bankiru.Controllers
         }
         [ChildActionOnly]
         [OutputCache(Duration = 60, VaryByParam = "categoryId;show_article_link")]
-        public ActionResult _getModuleLastComments(int categoryId = 0, int row_count = 10, bool show_article_link = true)
+        public ActionResult _getModuleLastComments(int categoryId = 0, int row_count = 3, bool show_article_link = true)
         {
             try
             {
@@ -494,7 +494,7 @@ namespace Bankiru.Controllers
         }
         [ChildActionOnly]
         [OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
-        public ActionResult _getModuleLastArticlesLinkList(List<int> exclude_ids, List<int> cat_ids, int row_count = 5)
+        public ActionResult _getModuleLastArticlesLinkList(List<int> exclude_ids, List<int> cat_ids, int row_count = 3)
         {
             try
             {
@@ -505,6 +505,38 @@ namespace Bankiru.Controllers
                     if (model != null)
                     {
                         return PartialView("_moduleLastArticlesLinkList", model);
+                    }
+                    else
+                    {
+                        log.Error(manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        [OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
+        public PartialViewResult _getModuleLastArticlesImageList(List<int> exclude_ids, List<int> cat_ids, int row_count = 3)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    ArtsManager manager = new ArtsManager();
+                    List<VM_ArtItem> model = manager.GetArtItems(exclude_ids, cat_ids, row_count);
+                    if (model != null)
+                    {
+                        return PartialView("_moduleLastArticlesImageList", model);
                     }
                     else
                     {
@@ -667,6 +699,48 @@ namespace Bankiru.Controllers
                     return PartialView(_errPartialPage);
                 else
                     return PartialView("_moduleWellcomeBlock", user);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        #endregion
+
+        #region СОЦ СЕТИ
+        [ChildActionOnly]
+        public PartialViewResult _getWidget_VK()
+        {
+            try
+            {
+                return PartialView("_widget_vk");
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getWidget_OK()
+        {
+            try
+            {
+                return PartialView("_widget_ok");
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getWidget_FB()
+        {
+            try
+            {
+                return PartialView("_widget_fb");
             }
             catch (Exception ex)
             {

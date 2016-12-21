@@ -158,49 +158,49 @@ namespace Bankiru
             routes.MapRoute(
                 name: "club_forecast_adduser_ajax",
                 url: "club/forecasts/{subject_id}/{id}/adduser_ajax",
-                defaults: new { controller = "Club", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Forecast", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecast_adduser",
                 url: "club/forecasts/{subject_id}/{id}/adduser",
-                defaults: new { controller = "Club", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Forecast", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecast",
                 url: "club/forecasts/{subject_id}/{id}",
-                defaults: new { controller = "Club", action = "Forecast", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                defaults: new { controller = "Forecast", action = "Forecast" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecasts",
                 url: "club/forecasts",
-                defaults: new { controller = "Club", action = "List" },
+                defaults: new { controller = "Forecast", action = "List" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_forecasts_archive",
                 url: "club/forecasts/archive/{subject_id}",
-                defaults: new { controller = "Club", action = "Archive", subject_id = "all" },
+                defaults: new { controller = "Forecast", action = "Archive", subject_id = "all" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_info",
                 url: "club/info",
-                defaults: new { controller = "Club", action = "Info" },
+                defaults: new { controller = "Forecast", action = "Info" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_rules",
                 url: "club/rules",
-                defaults: new { controller = "Club", action = "Rules" },
+                defaults: new { controller = "Forecast", action = "Rules" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
                 name: "club_users",
                 url: "club/users",
-                defaults: new { controller = "Club", action = "Users" },
+                defaults: new { controller = "Forecast", action = "Users" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             #endregion            

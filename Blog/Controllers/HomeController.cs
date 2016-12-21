@@ -22,7 +22,7 @@ namespace Bankiru.Controllers
                 if (_connected)
                 {
                     ArtsManager _manager = new ArtsManager();
-                    VM_ArtItem model = _manager.GetCentralArtItem();                    
+                    List<VM_ArtItem> model = _manager.GetCentralArtItem();                    
                     if (model != null)
                     {
                         return View(model);

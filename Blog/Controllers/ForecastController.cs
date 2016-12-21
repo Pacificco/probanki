@@ -10,10 +10,10 @@ using System.Web.Mvc;
 namespace Bankiru.Controllers
 {
     [CustomAuthorize(Roles = "admin,club_member")]
-    public class ClubController : BaseController
+    public class ForecastController : BaseController
     {
-        [HttpGet]                
-        public ActionResult Forecasts()
+        [HttpGet]
+        public ActionResult List()
         {
             try
             {
@@ -44,9 +44,35 @@ namespace Bankiru.Controllers
             }
         }
         [HttpGet]        
-        public ActionResult Forecast(int id)
+        public ActionResult Forecast(string subject_id, int id)
         {
-            return View();
+            try
+            {
+                if (_connected)
+                {
+                    ForecastManager manager = new ForecastManager();
+                    VM_Forecast model = manager.GetForecast(id);
+                    if (model != null)
+                    {
+                        return View(model);
+                    }
+                    else
+                    {
+                        log.Error("[Forecasts] Не удалось загрузить прогноз!\n" + manager.LastError);
+                        return View("Error");
+                    }
+                }
+                else
+                {
+                    log.Error("[Forecasts] Не удалось загрузить прогноз!\n" + _errMassage);
+                    return View("Error");
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error("[Forecasts] Не удалось загрузить прогноз!\n" + e.ToString());
+                return View("Error");
+            }
         }
         [HttpGet]
         public ActionResult Archive()

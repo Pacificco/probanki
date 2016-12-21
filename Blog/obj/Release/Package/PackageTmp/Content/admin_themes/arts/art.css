@@ -41,11 +41,11 @@
 }
 
 
-/*Новая организация
+/*Новая публикации
 --------------------------------------------------------------------*/
 
 
-/*Редактирование организации
+/*Редактирование публикации
 --------------------------------------------------------------------*/
 #art-editor .editor-field input[type=text],
 #art-editor .editor-field select{
@@ -81,6 +81,10 @@
 
 #art-editor .editor-main input[type=text]{
     width: 930px;
+}
+
+#art-editor #CentralNumber {
+    width: 40px;
 }
 
 #art-editor .editor-images input[type=text]{

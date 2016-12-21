@@ -221,6 +221,7 @@ namespace Bankiru.Models.DataBase
                 public const string CategoryId = "CategoryId";
                 public const string IsActive = "IsActive";
                 public const string IsCentral = "IsCentral";
+                public const string CentralNumber = "CentralNumber";
                 public const string MetaTitle = "MetaTitle";
                 public const string MetaKeys = "MetaKeys";
                 public const string MetaDesc = "MetaDesc";
