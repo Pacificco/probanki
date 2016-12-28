@@ -493,7 +493,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
+        //[OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
         public ActionResult _getModuleLastArticlesLinkList(List<int> exclude_ids, List<int> cat_ids, int row_count = 3)
         {
             try
@@ -525,7 +525,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
+        //[OutputCache(Duration = 60, VaryByParam = "exclude_ids;cat_ids")]
         public PartialViewResult _getModuleLastArticlesImageList(List<int> exclude_ids, List<int> cat_ids, int row_count = 3)
         {
             try

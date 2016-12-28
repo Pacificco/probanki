@@ -318,7 +318,7 @@
 /* Комментарии к публикации */
 #article-comments {
     padding: 0;
-    margin: 10px;
+    margin: 10px 20px;
     border-top: 2px solid #dfdfdf;
     border-bottom: 2px solid #dfdfdf;
 }

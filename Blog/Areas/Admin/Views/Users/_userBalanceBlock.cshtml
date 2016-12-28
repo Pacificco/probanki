@@ -1,1 +1,22 @@
-﻿
+﻿@using System.Globalization
+@using Bankiru.Models.Domain
+@model Bankiru.Models.Domain.Users.VM_UserForecastInfo
+@{
+    AjaxOptions option = new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "user-balance-block",
+        LoadingElementId = ""
+    };
+}
+<div id="user-balance-block">
+     @using (Ajax.BeginForm("Edit", "Users", ))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.UserId)
+
+        <p>Текущий баланс пользователя</p>
+    }
+</div>

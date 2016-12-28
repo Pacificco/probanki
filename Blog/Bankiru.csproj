@@ -252,7 +252,6 @@
     <Compile Include="Models\Helpers\OrgsHelper.cs" />
     <Compile Include="Models\Helpers\PagingHelpers.cs" />
     <Compile Include="Models\Helpers\TextHelper.cs" />
-    <Compile Include="Models\Infrastructure\BaseController.cs" />
     <Compile Include="Models\Infrastructure\GlobalParams.cs" />
     <Compile Include="Models\Domain\Account\VM_UserLogin.cs" />
     <Compile Include="Models\OutApi\CurrenciesDownloader.cs" />

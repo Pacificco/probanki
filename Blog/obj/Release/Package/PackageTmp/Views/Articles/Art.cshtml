@@ -107,12 +107,14 @@
         <div class="article-text">
             @Html.Raw(Model.TextFull)            
         </div>
-        @Html.Action("_getModuleShareInSocial", "Articles")      
+        @Html.Action("_getModuleShareInSocial", "Articles") 
+
+        @Html.Action("_getModuleLastArticlesImageList", "Home", new {exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ Model.CategoryId }, row_count = 3 })
     </article>
     @section middle_bottom
     {                
-        @Html.Action("_getModuleLastArticlesLinkList", "Home", new { exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ Model.CategoryId }/*Model.CategoryId*/, row_count = 3 })
-
+        @*@Html.Action("_getModuleLastArticlesLinkList", "Home", new { exclude_ids = new List<int>{ Model.Id }, cat_ids = new List<int>{ Model.CategoryId }/*Model.CategoryId*/, row_count = 3 })*@
+        
         @Html.Action("_getModuleLastArtComments", "Articles", new { art_id = Model.Id })
         <div id="ajax-comment-form-wrapper">
             @Html.Action("_getModuleLeaveArtComment", "Articles", new { art_id = Model.Id})

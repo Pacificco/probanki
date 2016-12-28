@@ -2437,3 +2437,15 @@ ERROR 2016-12-21 22:42:00,930 563000ms ForecastManager        rrentForecastUsers
 Сервер вернул пустой ответ.
 ERROR 2016-12-21 23:11:33,674 2335744ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
 Сервер вернул пустой ответ.
+ERROR 2016-12-26 23:08:44,744 69792ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,802 69850ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,802 69850ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,803 69851ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,803 69851ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,803 69851ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,803 69851ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,804 69852ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,804 69852ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,804 69852ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,804 69852ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2016-12-26 23:08:44,805 69853ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!

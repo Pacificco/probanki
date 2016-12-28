@@ -2,7 +2,7 @@
 @using Bankiru.Models.Domain
 @model Bankiru.Models.Domain.Users.VM_User
 @{
-    ViewBag.Title = @Model.GetFIO();
+    ViewBag.Title = Model.Nic + " (" + Model.Rols[0] + ")";
     Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
 }
 @section styles{
@@ -15,7 +15,6 @@
 </div>
 <div id="user-editor">
 
-    <div id="user-editor-main">
     @using (Html.BeginForm("Edit", "Users", FormMethod.Post))
     {
         @Html.ValidationSummary(true)            
@@ -121,13 +120,13 @@
         <div class="editor-field">
             <input type="submit" value="Сохранить" />
         </div>
-    }
-    </div>
-
-    <div id="user-editor-forecastinfo">
-
-    </div>
+    }    
 </div>
+
+@Html.Action("_getUserBalanceBlock", "Users", new { user_id = Model.Id })
+@Html.Action("_getUserBalanceHistory", "Users", new { user_id = Model.Id })
+
+
 @section scripts{    
     <script src="~/Scripts/tinymce/tinymce.min.js"></script>
     <script>

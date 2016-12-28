@@ -1804,8 +1804,20 @@ header {
     text-decoration: none;
 }
 
-/* CopyRight
+/* Реклама + CopyRight
 -----------------------------------------------------------*/
+#copyright .order-advertising{
+    display: block;
+    background-color: #00adee;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 5px;
+    text-transform: uppercase;    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 #copyright {
     width: 20%;
     position: relative;
