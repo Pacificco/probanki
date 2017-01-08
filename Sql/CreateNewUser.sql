@@ -15,7 +15,14 @@ begin
 	
 	SET NOCOUNT ON;
 
+	declare @trancount int
+	select @trancount = @@TRANCOUNT
+
 	begin try 
+	
+		if @trancount = 0
+			begin transaction
+		
 		--Создаем запись в таблице Users
 		insert Users(Nic, Name, Sex, Email, Password, IsSubscribed, IsActive, Rols, Token)
 		values (@NicName, @Name, @Sex, @Email, @Password, @Subscribed, 0, @Role, @Token)
@@ -27,9 +34,15 @@ begin
 		insert UsersForecastInfo(UserId,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,ReportDate,UserReportId,Balance)
 		values(@newId,0,0,null,null,0,GETDATE(),2,0)		
 		
+		if @trancount = 0
+			commit transaction
+		
 		select @newId
 	end try 
 	begin catch 
+		if @trancount = 0
+			rollback transaction
+			
 		select 0 as returnResult
 	end catch
     

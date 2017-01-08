@@ -5,5 +5,7 @@ create proc UserForecastInfoView (
 	@Id int
 	) as
 begin	
-	select * from UsersForecastInfo where UserId = @Id    
+	select u.*, dbo.GetUserForecastTryCountForThisMonth(@Id) as forecastTryCount 
+	from UsersForecastInfo u 
+	where u.UserId = @Id
 end
