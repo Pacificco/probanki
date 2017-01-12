@@ -1,0 +1,73 @@
+﻿@model Bankiru.Models.Domain.Users.VM_UserAddBalance
+@{
+    AjaxOptions option = new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "user-balance-block",
+        LoadingElementId = "spinning-balance-submit",
+        Url = "/Users/AddBalanceAjax"
+
+    };
+}
+<div id="user-add-balance-block">
+    @using (Ajax.BeginForm("AddBalance", "Users", option, new { id = "form-add-balance" }))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.UserId)
+
+        <div class="stat-block">
+            <h2>Пополнение баланса пользователя</h2>
+            <div class="stat-block-body">
+                <div class="editor-row">
+                    <div class="editor-column">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.TariffId)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.TariffId)
+                            @Html.ValidationMessageFor(model => model.TariffId)
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Sum)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Sum)
+                            @Html.ValidationMessageFor(model => model.Sum)
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Period)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Period)
+                            @Html.ValidationMessageFor(model => model.Period)
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Comment)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Comment)
+                            @Html.ValidationMessageFor(model => model.Comment)
+                        </div>
+                    </div>
+                </div>
+                <div class="editor-row">
+                    <div class="editor-field">
+                        <input type="submit" value="Пополнить баланс"  class="button-ok" />
+                        <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" id="spinning-balance-submit" />
+                    </div>
+                </div>
+            </div>
+        </div>     
+    }
+</div>

@@ -239,6 +239,7 @@
     <Compile Include="Models\Domain\Account\VM_UserItem.cs" />
     <Compile Include="Models\Domain\Account\VM_UserRegistration.cs" />
     <Compile Include="Models\Domain\Users\UserManager.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserAddBalance.cs" />
     <Compile Include="Models\Domain\Users\VM_UserForecastInfo.cs" />
     <Compile Include="Models\Domain\Users\VM_UserBalanceHistoryItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UserItem.cs" />
@@ -396,8 +397,8 @@
     <Content Include="Areas\Admin\Views\Users\_usersListFilter.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_usersList.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Users\_userBalanceHistory.cshtml" />
-    <Content Include="Areas\Admin\Views\Users\_userBalanceBlock.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_userBalanceHistoryBlock.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_userForecastInfoBlock.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_forecastList.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_forecastListFilter.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\Edit.cshtml" />
@@ -406,6 +407,7 @@
     <Content Include="Areas\Admin\Views\Shared\_forecastSubjectDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_archiveDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_closeForecast.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_userAddBalanceBlock.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">

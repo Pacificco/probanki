@@ -17,6 +17,7 @@ namespace Bankiru.Models.Domain.Users
         public bool IsTariffLetterSent { get; set; }
         public DateTime ReportDate { get; set; }
         public int UserReportId { get; set; }
+        public int ForecastTriesOnThisMonth { get; set; }
         #endregion
 
         public VM_UserForecastInfo()
@@ -34,7 +35,7 @@ namespace Bankiru.Models.Domain.Users
             IsTariffLetterSent = false;
             ReportDate = DateTime.Now;
             UserReportId = -1;
-
+            ForecastTriesOnThisMonth = 0;
         }
 
         public bool SetFieldValue(string fName, object fValue)
@@ -67,6 +68,9 @@ namespace Bankiru.Models.Domain.Users
                     break;
                 case "Balance":
                     Balance = (double)fValue;
+                    break;
+                case "forecastTryCount":
+                    ForecastTriesOnThisMonth = (int)fValue;
                     break;
                 default:
 

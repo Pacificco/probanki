@@ -373,9 +373,8 @@ header nav {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 2px solid #cfdee7;
+    border: 1px solid #cfdee7;
 }
-
 .stat-block h2 {
     color: #374048;
     margin: 5px;
@@ -383,6 +382,31 @@ header nav {
     background: url(/Content/system/bg-light-strips.gif) top left repeat;
     padding: 5px 10px 10px 10px;
     border-top: 2px solid #cfdee7;
+}
+.stat-block .stat-block-body {
+    padding: 10px;
+}
+.stat-block .stat-block-body p{
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* Кнопки
+-----------------------------------------------------------*/
+input.button-ok{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #008000;
+    color: white;    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 2px solid #006400;
+    font-size: 1.1em;
+}
+input.button-ok:hover{
+    background-color: #159615;
+    border: 2px solid #159615;
 }
 
 

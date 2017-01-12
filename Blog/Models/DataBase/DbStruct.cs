@@ -1027,6 +1027,27 @@ namespace Bankiru.Models.DataBase
                     public static string To = "@To";
                 }
             }
+            /// <summary>
+            /// Выполняет пополнение баланса пользователя
+            /// </summary>
+            public static class AddBalance
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "AddBalance";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
+                    public static string TariffId = "@TariffId";
+                    public static string Sum = "@Sum";
+                    public static string Period = "@Period";
+                    public static string Comment = "@Comment";
+                }
+            }
             #endregion
 
             #region ПРОГНОЗЫ

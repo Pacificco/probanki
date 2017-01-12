@@ -69,10 +69,10 @@ namespace Bankiru.Models.Domain.Users
             }            
         }
         public VM_UserForecastInfo GetUserForecastInfo(int userId)
-        {            
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserView.Name, GlobalParams.GetConnection());
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastInfoView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserView.Params.Id, userId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastInfoView.Params.Id, userId);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -94,7 +94,9 @@ namespace Bankiru.Models.Domain.Users
                 }
                 catch (Exception ex)
                 {
-                    _lastError = "Ошибка во время загрузки информации о прогнозах пользователя!\n" + ex.ToString();
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.UserForecastInfoView.Name, 
+                        ex.ToString());
                     log.Error(_lastError);
                     return null;
                 }
@@ -133,9 +135,59 @@ namespace Bankiru.Models.Domain.Users
                 }
                 catch (Exception ex)
                 {
-                    _lastError = "Ошибка во время загрузки истории баланса пользователя!\n" + ex.ToString();
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                         DbStruct.PROCEDURES.UserBalanceHistory.Name,
+                         ex.ToString());
                     log.Error(_lastError);
                     return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            } 
+        }
+        public bool AddBalance(VM_UserAddBalance info)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.AddBalance.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.UserId, info.UserId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.TariffId, info.TariffId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Sum, info.Sum);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Period, info.Period);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Comment, info.Comment);
+
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    int result = command.ExecuteNonQuery();
+                    switch (result)
+                    {
+                        case 2:
+                            _lastError = "Ошибка во время пополнения баланса пользователя!\nПользователь не найден.";
+                            log.Error(_lastError);
+                            return false;
+                        case 1:
+                            _lastError = "Ошибка во время пополнения баланса пользователя!\nОшибка во время выполнения хранимой процедуры AddBalance.";
+                            log.Error(_lastError);
+                            return false;
+                        case 0:
+                            return true;
+                        default:
+                            return true;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.AddBalance.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
                 }
                 finally
                 {

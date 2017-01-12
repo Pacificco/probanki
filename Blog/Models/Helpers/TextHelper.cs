@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.Domain.Comments;
+using Bankiru.Models.Domain.Users;
 using Bankiru.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,22 @@ namespace Bankiru.Models.Helpers
                 }
             }
             return imgText +"<br />";
+        }
+        public static string GetTariffName(VM_ForecastTariff tariff)
+        {
+            switch (tariff)
+            {
+                case VM_ForecastTariff.Platinum:
+                    return "Платинум";
+                case VM_ForecastTariff.Gold:
+                    return "Золото";
+                case VM_ForecastTariff.Silver:
+                    return "Серебро";
+                case VM_ForecastTariff.Bronze:
+                    return "Бронза";
+                default:
+                    return "?";
+            }
         }
     }
 }
