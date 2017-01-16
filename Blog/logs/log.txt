@@ -4297,3 +4297,51 @@ System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "U
    в System.Data.SqlClient.SqlCommand.ExecuteReader()
    в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 121
 ClientConnectionId:7646791a-f206-4fbb-b616-9d371eab64b3
+ERROR 2017-01-16 20:20:45,790 268401ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 121
+ClientConnectionId:c4606377-4126-4408-a8bf-8fff373b95d4
+ERROR 2017-01-16 20:20:45,853 268464ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 121
+ClientConnectionId:c4606377-4126-4408-a8bf-8fff373b95d4
+ERROR 2017-01-16 22:36:56,254 5703932ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-16 22:36:56,296 5703974ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-16 22:41:56,318 6003996ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-16 22:41:56,318 6003996ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-16 22:46:56,308 6303986ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-16 22:46:56,309 6303987ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!

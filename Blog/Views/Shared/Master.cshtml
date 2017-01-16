@@ -28,12 +28,30 @@
     @RenderSection("styles", required: false)
     
     @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body>    
+<body>
+
+    <!-- Модальное окно Регистрация/Авторизация -->
+    <div id="sign-in-box">
+        <div id="sign-in-dialog" class="window">
+            @if (!isAuthorized)
+            {
+                @Html.Action("_getModuleLogin", "Account")
+            }
+            @*Текст модального окна
+            <div class="top"><a href="#" class="link close">Закрыть</a></div>
+            <div class="content">Текст в модальном окне.</div>*@
+        </div>
+    </div>
+
+    <!-- Маска, затемняющая фон -->
+    <div id="mask"></div>
+
     <header id="header">
         <div id="header-inner">
             <section id="header-line-top">
@@ -51,6 +69,7 @@
                     {
                         /*@Html.Action("_getModuleLogin", "Account")*/
                         @*<a class="login-button" href="#" title="Регистрация/Вход"><img src="~/Content/system/login-button.png" title="Регистрация / Вход на ProBanki.net" alt="Регистрация/Вход" /></a>*@
+                        <a class="login-button" href="#sign-in-dialog" name="modal"><img src="~/Content/system/login-button.png" title="Регистрация / Вход на ProBanki.net" alt="Регистрация/Вход" /></a>
                     }                    
                 </aside>
             </section>            
@@ -152,7 +171,7 @@
             </div>
         </section>        
     </footer>
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
     @RenderSection("scripts", required: false)    
@@ -169,9 +188,9 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-    </script>
+    </script>*@
 
-    <script src="~/Scripts/main.js"></script>*@
+    <script src="~/Scripts/main.js"></script>
 
 </body>
 </html>
