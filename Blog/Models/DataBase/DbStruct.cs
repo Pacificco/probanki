@@ -915,20 +915,37 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
-            /// Возвращает информацию о прогнозах пользователя по идентификатору
+            /// Возвращает информацию о тарифах пользователя из базы данных по идентификатору
             /// </summary>
-            public static class UserForecastInfoView
+            public static class UserTariffInfoView
             {
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "UserForecastInfoView";
+                public static string Name = "UserTariffInfoView";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
                 public static class Params
                 {
-                    public static string Id = "@Id";
+                    public static string UserId = "@UserId";
+                }
+            }
+            /// <summary>
+            /// Возвращает информацию о прогнозах пользователя по идентификатору
+            /// </summary>
+            public static class UserForecastsForMonthView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserForecastsForMonthView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
                 }
             }
             /// <summary>

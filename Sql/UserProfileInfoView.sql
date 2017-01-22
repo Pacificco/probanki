@@ -1,7 +1,7 @@
 -- Возвращает информацию о прогнозах пользователя из базы данных по идентификатору
-if exists(select 1 from sysobjects where name = N'UserForecastInfoView' and xtype='P') drop proc UserForecastInfoView
+if exists(select 1 from sysobjects where name = N'UserProfileInfoView' and xtype='P') drop proc UserProfileInfoView
 go
-create proc UserForecastInfoView (
+create proc UserProfileInfoView (
 	@Id int
 	) as
 begin	

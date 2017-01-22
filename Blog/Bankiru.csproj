@@ -240,11 +240,13 @@
     <Compile Include="Models\Domain\Account\VM_UserRegistration.cs" />
     <Compile Include="Models\Domain\Users\UserManager.cs" />
     <Compile Include="Models\Domain\Users\VM_UserAddBalance.cs" />
-    <Compile Include="Models\Domain\Users\VM_UserForecastInfo.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserForecast.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserProfileInfo.cs" />
     <Compile Include="Models\Domain\Users\VM_UserBalanceHistoryItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UserItem.cs" />
     <Compile Include="Models\Domain\Users\VM_UsersFilters.cs" />
     <Compile Include="Models\Domain\Users\VM_Users.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserTariffInfo.cs" />
     <Compile Include="Models\Helpers\CustomHtmlHelper.cs" />
     <Compile Include="Models\Helpers\ConvertHelper.cs" />
     <Compile Include="Models\Helpers\DbHelper.cs" />
@@ -253,6 +255,7 @@
     <Compile Include="Models\Helpers\OrgsHelper.cs" />
     <Compile Include="Models\Helpers\PagingHelpers.cs" />
     <Compile Include="Models\Helpers\TextHelper.cs" />
+    <Compile Include="Models\Helpers\UserTariffHelper.cs" />
     <Compile Include="Models\Infrastructure\GlobalParams.cs" />
     <Compile Include="Models\Domain\Account\VM_UserLogin.cs" />
     <Compile Include="Models\OutApi\CurrenciesDownloader.cs" />
@@ -263,6 +266,7 @@
     <Compile Include="Models\Security\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\Security\CustomPrincipal.cs" />
     <Compile Include="Models\Security\SessionPersister.cs" />
+    <Compile Include="Models\ViewModels\VM_Menu.cs" />
     <Compile Include="Models\ViewModels\VM_PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -413,6 +417,7 @@
     <Content Include="robots.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\countdown.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
@@ -692,6 +697,9 @@
     <Content Include="Views\Shared\_widget_ok.cshtml" />
     <Content Include="Views\Shared\_widget_fb.cshtml" />
     <Content Include="Views\Shared\_moduleLastArticlesImageList.cshtml" />
+    <Content Include="Views\Users\_moduleSideUserProfile.cshtml" />
+    <Content Include="Views\Users\_moduleHeaderUserProfile.cshtml" />
+    <Content Include="Views\Users\_modelSideUserMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -699,7 +707,7 @@
     <Folder Include="Content\Images\Articles\" />
     <Folder Include="Content\Images\Editor\" />
     <Folder Include="Content\Images\Orgs\Icons\" />
-    <Folder Include="Content\lk\" />
+    <Folder Include="Content\lk\avatars\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

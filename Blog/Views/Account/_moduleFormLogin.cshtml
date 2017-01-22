@@ -6,35 +6,41 @@
     options.Url = "/Account/LoginAjax";
     options.UpdateTargetId = "sign-in-dialog";
     options.InsertionMode = InsertionMode.Replace;
-    //options.OnComplete = "formAuthorizeComplete";    
+    options.OnComplete = "auth_success";    
 }
-@*<div id="sign-in-block">*@
 
-    @using (Ajax.BeginForm("Login", "Account", null, options, new { id = "form-login-ajax" }))
-    {            
-        @Html.AntiForgeryToken()
+<div class="top"><a href="#" class="link close"></a></div>
 
-        <div class="form-sign-in-wrapper">            
-            <div class="editor-label-email">            
-                @Html.LabelFor(model => model.Username)<br />
-                @Html.EditorFor(model => model.Username)            
-            </div>
-            <div class="editor-label-password">
-                @Html.LabelFor(model => model.Password) @Html.ActionLink("Забыли пароль?", "PasswordRecover", "Account", null, new { title = "Забыли пароль?", @class = "forgot-password" })<br />
-                @Html.EditorFor(model => model.Password)            
-            </div>            
-            <div class="editor-label-submit">
-                <input class="button-ok" type="submit" value="Войти" />
-                <img src="/Content/system/spinning.gif" alt="Запрос..." title="Авторизация" id="spinning-submit-login">
-            </div>            
+@using (Ajax.BeginForm("Login", "Account", null, options, new { id = "form-login-ajax" }))
+{            
+    @Html.AntiForgeryToken()
+
+    <div class="form-sign-in-wrapper">
+
+        @if (!String.IsNullOrEmpty(Model.AuthSuccessMes))
+        {
+            <p id="auth-success-mes">@Model.AuthSuccessMes</p>
+        }
+
+        <div class="editor-label-email">
+            @Html.LabelFor(model => model.Username)<br />
+            @Html.EditorFor(model => model.Username)
         </div>
-        <div class="form-sign-in-valid-mes">        
-            @Html.ValidationMessageFor(model => model.Password)
-            @Html.ValidationMessageFor(model => model.Username)
-            @Html.ValidationSummary(true)
+        <div class="editor-label-password">
+            @Html.LabelFor(model => model.Password) @Html.ActionLink("Забыли пароль?", "PasswordRecover", "Account", null, new { title = "Забыли пароль?", @class = "forgot-password" })<br />
+            @Html.EditorFor(model => model.Password)
         </div>
-    }
-    <div class="under-sign-in">
-        @Html.ActionLink("Регистрация нового пользователя", "Register", "Account", null, new { title = "Зарегистрироваться в клубе Probanki.net" }) &nbsp;&nbsp;            
+        <div class="editor-label-submit">
+            <input class="button-ok" type="submit" value="Войти" />
+            <img src="/Content/system/spinning.gif" alt="Запрос..." title="Авторизация" id="spinning-submit-login">
+        </div>
     </div>
-@*</div>*@
+    <div class="form-sign-in-valid-mes">
+        @Html.ValidationMessageFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Username)
+        @Html.ValidationSummary(true)
+    </div>
+}
+<div class="under-sign-in">
+    @Html.ActionLink("Регистрация нового пользователя", "Register", "Account", null, new { title = "Зарегистрироваться в клубе Probanki.net" }) &nbsp;&nbsp;            
+</div>

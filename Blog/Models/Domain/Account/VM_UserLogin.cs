@@ -18,6 +18,16 @@ namespace Bankiru.Models.Domain.Account
         [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]        
         public string Password { get; set; }
         [Display(Name = "Запомнить меня")]
-        public bool RememberMe { get; set; }      
+        public bool RememberMe { get; set; }
+        
+        /// <summary>
+        /// Сообщение об успешной авторизации
+        /// </summary>
+        public string AuthSuccessMes { get; set; }
+
+        public VM_UserLogin()
+        {
+            AuthSuccessMes = "";
+        }
     }
 }

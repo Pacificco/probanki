@@ -5,22 +5,19 @@ using System.Web;
 
 namespace Bankiru.Models.Domain.Users
 {
-    public class VM_UserForecastInfo
+    public class VM_UserTariffInfo
     {
-        #region ПОЛЯ и СВОЙСТВАv
         public int UserId { get; set; }
         public double Balance { get; set; }
         public VM_ForecastTariff Tariff { get; set; }
         public byte ForecastTries { get; set; }
-        public DateTime? ForecastBeginDate { get; set; }
-        public DateTime? ForecastEndDate { get; set; }
+        public DateTime? TariffBeginDate { get; set; }
+        public DateTime? TariffEndDate { get; set; }
         public bool IsTariffLetterSent { get; set; }
         public DateTime ReportDate { get; set; }
-        public int UserReportId { get; set; }
-        public int ForecastTriesOnThisMonth { get; set; }
-        #endregion
+        public int ReportUserId { get; set; }
 
-        public VM_UserForecastInfo()
+        public VM_UserTariffInfo()
         {
             Clear();
         }
@@ -30,14 +27,13 @@ namespace Bankiru.Models.Domain.Users
             Balance = 0.0F;
             Tariff = VM_ForecastTariff.Undefined;
             ForecastTries = 0;
-            ForecastBeginDate = null;
-            ForecastEndDate = null;
+            TariffBeginDate = null;
+            TariffEndDate = null;
             IsTariffLetterSent = false;
             ReportDate = DateTime.Now;
-            UserReportId = -1;
-            ForecastTriesOnThisMonth = 0;
+            ReportUserId = -1;
         }
-
+        
         public bool SetFieldValue(string fName, object fValue)
         {
             switch (fName)
@@ -52,10 +48,10 @@ namespace Bankiru.Models.Domain.Users
                     ForecastTries = (byte)fValue;
                     break;
                 case "ForecastBeginDate":
-                    ForecastBeginDate = fValue == DBNull.Value ? null : (DateTime?)fValue;
+                    TariffBeginDate = fValue == DBNull.Value ? null : (DateTime?)fValue;
                     break;
                 case "ForecastEndDate":
-                    ForecastEndDate = fValue == DBNull.Value ? null : (DateTime?)fValue;
+                    TariffEndDate = fValue == DBNull.Value ? null : (DateTime?)fValue;
                     break;
                 case "IsTariffLetterSent":
                     IsTariffLetterSent = (bool)fValue;
@@ -64,14 +60,11 @@ namespace Bankiru.Models.Domain.Users
                     ReportDate = (DateTime)fValue;
                     break;
                 case "UserReportId":
-                    UserReportId = (int)fValue;
+                    ReportUserId = (int)fValue;
                     break;
                 case "Balance":
                     Balance = (double)fValue;
-                    break;
-                case "forecastTryCount":
-                    ForecastTriesOnThisMonth = (int)fValue;
-                    break;
+                    break;                
                 default:
 
                     return false;

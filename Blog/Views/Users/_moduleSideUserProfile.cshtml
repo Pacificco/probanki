@@ -1,0 +1,144 @@
+﻿@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.Users
+@model VM_UserProfileInfo
+
+<section class="side-user-profile">
+    <h3>Ваш профиль</h3>
+
+    <div class="side-block-body">
+    @if (Model != null)
+    {
+        <div class="user-info">
+            <div class="avatar">
+                @if (String.IsNullOrEmpty(Model.User.Avatar))
+                {
+                    <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                }
+                else
+                {
+                    <img src="~/Content/lk/avatars/@Model.User.Avatar" title="" alt="@Model.User.Nic" />
+                }
+                <div class="avater-mask"></div>
+                <div class="online-state"></div>
+            </div>
+            <div class="nic">
+            </div>
+        </div>
+
+        <div class="user-tariff-info">
+            <div class="tariff">
+                Статус: <span>@TextHelper.GetTariffName(Model.TariffInfo.Tariff)</span>
+                <span>(прогнозов <span class="used-forecasts-count">@Model.GetUsedForecastsCountForMonth()</span> из 
+                <span class="enabled-forecasts-count">@Model.GetEnabledForecastsCountForMonth()</span>)</span>
+            </div>
+            <div class="balance">
+                Баланс: <span>@Model.TariffInfo.Balance руб.</span>
+            </div>
+        </div>
+
+        <div class="current-forecasts">
+            <span>Текущие прогнозы:</span>
+            <div class="usd">
+                <span>Курс доллара </span>
+                @if (Model.ForecastsForMonth != null && Model.ForecastsForMonth.Count > 0)
+                {
+                    foreach (VM_UserForecast uf in Model.ForecastsForMonth)
+                    {
+                        if (uf.Forecast.SubjectId != 1)
+                        {
+                            continue;
+                        }
+
+                        if (uf.Value == null)
+                        {
+                            if (uf.Forecast.IsClosed)
+                            { 
+                                <img class="part-state" src="~/Content/lk/disable.png" alt="Да" title="" />
+                            }
+                            else
+                            {
+                                <img class="part-state" src="~/Content/lk/unused.png" alt="Да" title="" />
+                            }
+                        }
+                        else
+                        { 
+                            <img class="part-state" src="~/Content/lk/used.png" alt="Да" title="" />
+                        }
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="current-forecasts-enddate">
+            <span>Завершение текущих прогнозов:</span>
+            <div id="cdt"></div>
+        </div>
+
+    }
+    else
+    {
+        <div class="user-info">
+            <div class="avatar">
+                <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                <div class="avatar-mask"></div>
+                <div class="online-state"></div>
+            </div>
+            <div class="nic">Гость</div>
+            <div class="rang"><span>требуется авторизация</span></div>
+        </div>
+        
+            <div class="user-tariff">
+                Статус:&nbsp;&nbsp;<span>не определен</span>                
+            </div>
+            <div class="user-balance">
+                Баланс:&nbsp;&nbsp;<span>не определен</span>
+            </div>
+
+        <div class="current-forecasts">
+            <div class="caption">Текущие прогнозы:</div>
+
+            <div class="forecast usd">
+                <div class="subject">Курс доллара</div>
+                <div class="state">
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                </div>
+            </div>
+            <div class="forecast eur">
+                <div class="subject">Курс евро</div>
+                <div class="state">
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                </div>
+            </div>
+            <div class="forecast oil">
+                <div class="subject">Нефть</div>
+                <div class="state">
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                </div>
+            </div>
+            <div class="forecast sber">
+                <div class="subject">Акции Сбербанка</div>
+                <div class="state">
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                    <img class="part-state" src="~/Content/lk/unused.png" alt="Нет" title="" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="current-forecasts-enddate">
+            <div class="caption">До завершение текущих прогнозов осталось:</div>
+            <div id="cdt"></div>
+        </div>
+    }
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        var tl = new Date('2017/01/25 23:59:59');
+        var timer = new CountdownTimer('cdt', tl, '<span class="number-wrapper"><div class="line"></div><span class="number end">Время вышло!</span></span>');
+        timer.countDown();
+    });
+</script>

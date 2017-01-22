@@ -23,13 +23,12 @@
     <meta name="description" content="@ViewBag.metaDescription" />    
     <meta name="keywords" content="@ViewBag.metaKeywords" />
     
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/arts/css")
+    @Styles.Render("~/Content/css")    
     @RenderSection("styles", required: false)
     
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -38,14 +37,11 @@
 
     <!-- Модальное окно Регистрация/Авторизация -->
     <div id="sign-in-box">
-        <div id="sign-in-dialog" class="window">
+        <div id="sign-in-dialog" class="window">            
             @if (!isAuthorized)
             {
                 @Html.Action("_getModuleLogin", "Account")
             }
-            @*Текст модального окна
-            <div class="top"><a href="#" class="link close">Закрыть</a></div>
-            <div class="content">Текст в модальном окне.</div>*@
         </div>
     </div>
 
@@ -71,8 +67,8 @@
                         @*<a class="login-button" href="#" title="Регистрация/Вход"><img src="~/Content/system/login-button.png" title="Регистрация / Вход на ProBanki.net" alt="Регистрация/Вход" /></a>*@
                         <a class="login-button" href="#sign-in-dialog" name="modal"><img src="~/Content/system/login-button.png" title="Регистрация / Вход на ProBanki.net" alt="Регистрация/Вход" /></a>
                     }                    
-                </aside>
-            </section>            
+                </aside>                
+            </section>                            
         </div>
     </header>
     <div id="top-menu-wrapper">
@@ -98,6 +94,7 @@
                 @RenderSection("middle_bottom", required: false)
             </div>            
             <div id="column-left">
+                @Html.Action("_getModuleSideUserProfile", "Users", null)
                 @RenderSection("left_top", required: false)
 
                 <section id="social-widgets">
@@ -191,6 +188,7 @@
     </script>*@
 
     <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/countdown.js"></script>
 
 </body>
 </html>

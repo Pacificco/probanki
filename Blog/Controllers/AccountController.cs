@@ -232,7 +232,9 @@ namespace Bankiru.Controllers
                         SessionPersister.Username = model.Username;
                         SessionPersister.SetTimeout(86400);
 
-                        return PartialView("_moduleWellcomeBlock", user);
+                        //return PartialView("_moduleWellcomeBlock", user);
+                        model.AuthSuccessMes = "Вы успешно авторизовались!";
+                        return PartialView("_moduleFormLogin", model);
                     }
                     else
                     {

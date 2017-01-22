@@ -49,7 +49,7 @@ namespace Bankiru.Models.Domain.Users
                     }
                     if (allInfo)
                     {
-                        user.ForecastInfo = GetUserForecastInfo(userId);
+                        user.ForecastInfo = GetUserProfiletInfo(userId);
                         if (user.ForecastInfo == null)
                             return null;
                     }
@@ -68,34 +68,34 @@ namespace Bankiru.Models.Domain.Users
                 }
             }            
         }
-        public VM_UserForecastInfo GetUserForecastInfo(int userId)
+        public VM_UserTariffInfo GetUserTariffInfo(int userId)
         {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastInfoView.Name, GlobalParams.GetConnection());
+            VM_UserTariffInfo tariff = new VM_UserTariffInfo();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserTariffInfoView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastInfoView.Params.Id, userId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserTariffInfoView.Params.UserId, userId);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
                 try
                 {
-                    VM_UserForecastInfo forecastInfo = new VM_UserForecastInfo();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader != null && reader.HasRows)
                         {
                             while (reader.Read())
-                            {
+                            {                                
                                 for (int j = 0; j < reader.FieldCount; j++)
-                                    forecastInfo.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                    tariff.SetFieldValue(reader.GetName(j), reader.GetValue(j));
                             }
                         }
                     }
-                    return forecastInfo;
+                    return tariff;
                 }
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.UserForecastInfoView.Name, 
+                        DbStruct.PROCEDURES.UserTariffInfoView.Name,
                         ex.ToString());
                     log.Error(_lastError);
                     return null;
@@ -105,7 +105,78 @@ namespace Bankiru.Models.Domain.Users
                     if (command != null)
                         command.Dispose();
                 }
-            } 
+            }
+        }
+        public List<VM_UserForecast> GetUserForecastsForMonth(int userId)
+        {
+            List<VM_UserForecast> result = new List<VM_UserForecast>();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastsForMonthView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsForMonthView.Params.UserId, userId);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {                            
+                            VM_UserForecast uf = null;
+                            while (reader.Read())
+                            {
+                                uf = new VM_UserForecast();
+
+                                //Пользователь не принимает участие в текущем прогнозе
+                                if (reader.IsDBNull(0))
+                                {
+                                    uf.Value = null;
+                                    uf.ValueDate = null;
+                                    uf.User.Clear();
+                                }
+                                else
+                                {
+                                    uf.User.Id = reader.GetInt32(0);
+                                    uf.User.Nic = reader.GetString(1);
+                                    uf.Value = reader.GetDouble(2);
+                                    uf.ValueDate = reader.GetDateTime(3);
+                                }
+                                for (int j = 4; j < reader.FieldCount; j++)
+                                    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                result.Add(uf);
+                            }
+                        }
+                    }
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.UserForecastsForMonthView.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public VM_UserProfileInfo GetUserProfiletInfo(int userId)
+        {
+            VM_UserProfileInfo profile = new VM_UserProfileInfo();
+
+            //Загружаем информацию о пользователе
+            profile.User = GetUser(userId);
+            if (profile.User == null)
+                return null;
+
+            //Загружаем информацию о прогнозах
+            profile.ForecastsForMonth = GetUserForecastsForMonth(userId);
+
+            return profile;
         }
         public List<VM_UserBalanceHistoryItem> GetUserBalanceHistory(int userId)
         {

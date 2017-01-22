@@ -127,7 +127,7 @@ namespace Bankiru.Areas.Admin.Controllers
             }
         }
         
-        #region ДОЧЕРНИЕ МЕТОДЫ
+        #region ДОЧЕРНИЕ МЕТОДЫ        
         [ChildActionOnly]
         public ActionResult _getUsersList(VM_Users model)
         {
@@ -180,7 +180,7 @@ namespace Bankiru.Areas.Admin.Controllers
                 if (_connected)
                 {
                     UserManager manager = new UserManager();
-                    VM_UserForecastInfo info = manager.GetUserForecastInfo(user_id);
+                    VM_UserProfileInfo info = manager.GetUserProfiletInfo(user_id);
                     if(info == null)
                     {
                         log.Error("Ошибка во время отображения блока с информацией о прогнозах пользователя!\r\n" + manager.LastError);
