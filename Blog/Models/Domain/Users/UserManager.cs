@@ -49,9 +49,9 @@ namespace Bankiru.Models.Domain.Users
                     }
                     if (allInfo)
                     {
-                        user.ForecastInfo = GetUserProfiletInfo(userId);
-                        if (user.ForecastInfo == null)
-                            return null;
+                        //user.ForecastInfo = GetUserProfiletInfo(userId);
+                        //if (user.ForecastInfo == null)
+                        //    return null;
                     }
                     return user;
                 }

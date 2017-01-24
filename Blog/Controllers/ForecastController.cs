@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace Bankiru.Controllers
 {
-    [CustomAuthorize(Roles = "admin,club_member")]
+    //[CustomAuthorize(Roles = "admin,club_member")]
     public class ForecastController : BaseController
     {
         [HttpGet]

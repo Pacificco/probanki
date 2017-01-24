@@ -100,7 +100,7 @@ namespace Bankiru.Models.Domain.Users
         [HiddenInput]
         public string Token { get; set; }
                 
-        public VM_UserProfileInfo ForecastInfo { get; set; }
+        //public VM_UserProfileInfo ForecastInfo { get; set; }
 
         public int ForecastCount { get; set; }
         public int WinCount { get; set; }
@@ -111,7 +111,7 @@ namespace Bankiru.Models.Domain.Users
 
         public VM_User()
         {
-            ForecastInfo = new VM_UserProfileInfo();
+            //ForecastInfo = new VM_UserProfileInfo();
             Clear();
         }
         public void Clear()
@@ -138,7 +138,7 @@ namespace Bankiru.Models.Domain.Users
             Comment = String.Empty;
             Token = "";
 
-            ForecastInfo.Clear();
+            //ForecastInfo.Clear();
 
             ForecastCount = 0;
             WinCount = 0;

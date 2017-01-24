@@ -1,6 +1,13 @@
 ﻿@using Bankiru.Models.Helpers
 @using Bankiru.Models.Domain.Users
 @model VM_UserProfileInfo
+@{
+    DateTime endForecastsDate = DateTime.Now.AddDays(5);    
+    if(Model != null && Model.ForecastsForMonth.Count > 0)
+    {
+        endForecastsDate = (from f in Model.ForecastsForMonth select f.Forecast.ForecastDate).Max();
+    }
+}
 
 <section class="side-user-profile">
     <h3>Ваш профиль</h3>
@@ -21,8 +28,8 @@
                 <div class="avater-mask"></div>
                 <div class="online-state"></div>
             </div>
-            <div class="nic">
-            </div>
+            <div class="nic">@Model.User.Nic</div>
+            <div class="rang"><span>Ранг не определен</span></div>
         </div>
 
         <div class="user-tariff-info">
@@ -137,7 +144,7 @@
 
 <script>
     $(document).ready(function () {
-        var tl = new Date('2017/01/25 23:59:59');
+        var tl = new Date('@endForecastsDate.ToString("yyyy/MM/dd HH:mm:ss")');
         var timer = new CountdownTimer('cdt', tl, '<span class="number-wrapper"><div class="line"></div><span class="number end">Время вышло!</span></span>');
         timer.countDown();
     });

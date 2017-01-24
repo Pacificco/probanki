@@ -24,8 +24,9 @@ namespace Bankiru.Controllers
                     VM_UserProfileInfo profile = null;
                     if(String.IsNullOrEmpty(SessionPersister.Username))
                     {
-                        profile = new VM_UserProfileInfo();                        
-                        profile.ForecastsForMonth = manager.GetUserForecastsForMonth(0);
+                        profile = null;
+                        //profile = new VM_UserProfileInfo();                        
+                        //profile.ForecastsForMonth = manager.GetUserForecastsForMonth(0);
                     }
                     else
                     {
