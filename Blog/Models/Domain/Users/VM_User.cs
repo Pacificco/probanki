@@ -305,18 +305,5 @@ namespace Bankiru.Models.Domain.Users
         public static string ClubMember = "club_member";
         public static string Guest = "guest";
     }
-    public enum VM_UserSex
-    {
-        Undefined = 0,
-        Male,
-        Female
-    }
-    public enum VM_ForecastTariff
-    {
-        Undefined = 0,
-        Platinum = 1,
-        Gold = 2,
-        Silver = 3,
-        Bronze = 4
-    }
+    
 }

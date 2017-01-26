@@ -397,6 +397,7 @@ namespace Bankiru.Models.Domain.Club
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastView.Params.Id, id);
             command.CommandTimeout = 15;
+            VM_Forecast forecast = new VM_Forecast();
             lock (GlobalParams._DBAccessLock)
             {
                 try
@@ -405,21 +406,68 @@ namespace Bankiru.Models.Domain.Club
                     {
                         if (reader != null && reader.HasRows)
                         {
-                            while (reader.Read())
-                            {
-                                VM_Forecast f = new VM_Forecast();
+                            if (reader.Read())
+                            {                                
                                 for (int j = 0; j < reader.FieldCount; j++)
-                                    f.SetFieldValue(reader.GetName(j), reader.GetValue(j));
-                                return f;
+                                    forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));                                
                             }
                         }
-                    }
-                    return null;
+                    }                    
                 }
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
                         DbStruct.PROCEDURES.ForecastView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+                forecast.Users = GetUsersByForecastsId(id);
+                return forecast;
+            }
+        }
+        /// <summary>
+        /// Возвращает пользователей, принявших участие в прогнозе
+        /// </summary>
+        /// <param name="id">Идентификатор прогноза</param>
+        /// <returns>Список пользователей</returns>
+        public List<VM_ForecastUser> GetUsersByForecastsId(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastUsers.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ForecastUsers.Params.Id, id);
+            command.CommandTimeout = 15;
+            List<VM_ForecastUser> users = new List<VM_ForecastUser>();
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_ForecastUser uf = null;
+                            while (reader.Read())
+                            {
+                                uf = new VM_ForecastUser();
+                                uf.Value = reader.GetDouble(0);
+                                uf.ValueDate = reader.GetDateTime(1);
+                                for (int j = 2; j < reader.FieldCount; j++)
+                                    uf.User.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                users.Add(uf);
+                            }
+                        }
+                    }
+                    return users;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ForecastUsers.Name, ex.ToString());
                     log.Error(_lastError);
                     return null;
                 }
@@ -707,7 +755,7 @@ namespace Bankiru.Models.Domain.Club
                                 user.User.Nic = reader.GetString(reader.GetOrdinal("Nic"));
                                 user.User.Avatar = reader.GetString(reader.GetOrdinal("Avatar"));
                                 user.Forecast.Id = reader.GetInt32(reader.GetOrdinal("ForecastId"));
-                                user.ReportDate = reader.GetDateTime(reader.GetOrdinal("ReportDate"));
+                                user.ValueDate = reader.IsDBNull(reader.GetOrdinal("ReportDate")) ? null : (DateTime?)reader.GetDateTime(reader.GetOrdinal("ReportDate"));
                                 user.Value = reader.GetDouble(reader.GetOrdinal("Value"));                                                                
                                 users.Add(user);
                             }

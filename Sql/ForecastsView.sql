@@ -6,16 +6,16 @@ create proc ForecastsView (
 	@SubjectId tinyint
 ) as	
 begin	
-	if @IsClosed = 1 begin
+	if @IsClosed = 1 begin -- архивные прогнозы
 		if @SubjectId is null
-			select * from Forecasts f where f.IsClosed = 1 order by f.SubjectId
+			select * from Forecasts f where f.IsClosed = 1 order by f.ForecastDate desc, f.SubjectId	-- все
 		else
-			select * from Forecasts f where f.IsClosed = 1 and f.SubjectId = @SubjectId
-	end else begin
+			select * from Forecasts f where f.IsClosed = 1 and f.SubjectId = @SubjectId order by f.ForecastDate desc
+	end else begin -- не архивные прогнозы
 		if @SubjectId is null
-			select * from Forecasts f where f.IsClosed = 0 order by f.CreateDate desc, f.ForecastDate
+			select * from Forecasts f where f.IsClosed = 0 order by f.SubjectId		-- все
 		else
-			select * from Forecasts f where f.IsClosed = 0 and f.SubjectId = @SubjectId order by f.CreateDate desc, f.ForecastDate
+			select * from Forecasts f where f.IsClosed = 0 and f.SubjectId = @SubjectId order by f.ForecastDate desc
 	end
 end
 go

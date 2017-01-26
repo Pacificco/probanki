@@ -128,6 +128,40 @@ namespace Bankiru.Controllers
                 return PartialView(_errPartialPage);
             }
         }
+        [ChildActionOnly]
+        [OutputCache(Duration = 60, VaryByParam = "cur_item")]
+        public PartialViewResult _getModuleForecastAsHeader(int cur_item)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    ForecastManager manager = new ForecastManager();
+                    VM_ForecastHeader model = new VM_ForecastHeader();
+                    model.Subjects = manager.GetForecastSubjects();
+                    model.CurItemId = cur_item;
+                    if (model.Subjects != null)
+                    {
+                        return PartialView("_moduleForecastAsHeader", model);
+                    }
+                    else
+                    {
+                        log.Error(manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }            
+        }
         #endregion
     }
 }

@@ -1,0 +1,17 @@
+﻿@model Bankiru.Models.Domain.Club.VM_ForecastHeader
+@if (Model.Subjects != null && Model.Subjects.Count > 0)
+{
+    <div id="forecast-header">
+        @foreach (Bankiru.Models.Domain.Club.VM_ForecastSubject item in Model.Subjects)
+        {
+        <div class="forecast-prev usd">
+            <div class="header">@Html.Raw(item.Name.Replace(" ","<br />"))</div>
+            @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Alias/*, id = item.Id*/ }, new { @class = "do-forecast" })
+            @if (Model.CurItemId != item.Id)
+            {
+                <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Alias/*, id = item.Id*/ })</div>
+            }
+        </div>
+        }    
+    </div>
+}

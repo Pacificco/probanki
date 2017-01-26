@@ -5,6 +5,20 @@ using System.Web;
 
 namespace Bankiru.Models.Domain
 {
+    public enum VM_UserSex
+    {
+        Undefined = 0,
+        Male,
+        Female
+    }
+    public enum VM_ForecastTariff
+    {
+        Undefined = 0,
+        Platinum = 1,
+        Gold = 2,
+        Silver = 3,
+        Bronze = 4
+    }
     public enum EnumBoolType
     {
         None = 0,

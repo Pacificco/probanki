@@ -13,7 +13,7 @@
 }
 @section left_top
 {
-    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    @*@Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })*@
 }
 @section left_middle
 {
@@ -21,30 +21,21 @@
 }
 @section right_middle
 {
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
     @Html.Action("_getModuleLastNews", "Home")
 }
+@Html.Action("_getModuleForecastAsHeader", "Forecast", new { cur_item = Model.Subject.Id })
 @if (Model != null)
 { 
-    <article id="forecast-detail" style="border:2px dashed #f00; padding:5px; margin:5px;">        
+    <article id="forecast">        
         <hgroup>
             <h1>
-                <span>@Model.Subject.Name</span>
+                <span>@Bankiru.Models.Helpers.TextHelper.GetForecastName(Model.Subject.Id, Model.ForecastDate)</span>
             </h1>
         </hgroup>
-        <div class="forecast-prev-info">
-                            @if(Model.ForecastDate.AddDays(-2).Date > DateTime.Now.Date)
-                            {
-                                <p> Принять участие в данном прогнозе Вы можете до 
-                                    <time pubdate datetime="@Model.ForecastDate.ToString()">@Model.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
-                                </p>
-                            }
-                            else
-                            {
-                                <p>
-                                    В этом прогнозе уже нельзя принять участия. Результаты прогноза и победитель будут опубликованы на сайте 
-                                    <time pubdate datetime="@Model.ForecastDate.ToString()">@Model.ForecastDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
-                                </p>
-                            }                            
-                        </div>      
+        <div class="forecast-info">
+            <div class="win-amount">Приз лучшему аналитику<br /><span>10 000 рублей</span></div>
+            <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
+        </div>      
     </article>
 }

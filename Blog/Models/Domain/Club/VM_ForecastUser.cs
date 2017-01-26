@@ -10,8 +10,8 @@ namespace Bankiru.Models.Domain.Club
     {
         public VM_User User { get; set; }
         public VM_Forecast Forecast { get; set; }
-        public DateTime ReportDate { get; set; }
-        public double Value { get; set; }
+        public double? Value { get; set; }
+        public DateTime? ValueDate { get; set; }
 
         public VM_ForecastUser()
         {
@@ -23,8 +23,8 @@ namespace Bankiru.Models.Domain.Club
         {
             User.Clear();
             Forecast.Clear();
-            ReportDate = DateTime.MinValue;
-            Value = 0.0F;
+            Value = null;
+            ValueDate = null;
         }
     }
 }

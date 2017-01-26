@@ -1,8 +1,10 @@
-﻿using Bankiru.Models.Domain.Comments;
+﻿using Bankiru.Models.Domain;
+using Bankiru.Models.Domain.Comments;
 using Bankiru.Models.Domain.Users;
 using Bankiru.Models.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -35,20 +37,20 @@ namespace Bankiru.Models.Helpers
             }
             return imgText +"<br />";
         }
-        public static string GetTariffName(VM_ForecastTariff tariff)
+        public static string GetForecastName(int subjectId, DateTime endDate)
         {
-            switch (tariff)
+            switch(subjectId)
             {
-                case VM_ForecastTariff.Platinum:
-                    return "Платинум";
-                case VM_ForecastTariff.Gold:
-                    return "Золото";
-                case VM_ForecastTariff.Silver:
-                    return "Серебро";
-                case VM_ForecastTariff.Bronze:
-                    return "Бронза";
+                case 1:
+                    return String.Format("Текущие прогнозы курса доллара на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                case 2:
+                    return String.Format("Текущие прогнозы курса евро на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                case 3:
+                    return String.Format("Текущие прогнозы стоимости нефти на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                case 4:
+                    return String.Format("Текущие прогнозы акций Сбербанка на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 default:
-                    return "?";
+                    return "Текущие прогнозы";
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.DataBase;
+using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Infrastructure;
 using log4net;
 using System;
@@ -107,9 +108,9 @@ namespace Bankiru.Models.Domain.Users
                 }
             }
         }
-        public List<VM_UserForecast> GetUserForecastsForMonth(int userId)
+        public List<VM_ForecastUser> GetUserForecastsForMonth(int userId)
         {
-            List<VM_UserForecast> result = new List<VM_UserForecast>();
+            List<VM_ForecastUser> result = new List<VM_ForecastUser>();
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastsForMonthView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsForMonthView.Params.UserId, userId);
@@ -122,10 +123,10 @@ namespace Bankiru.Models.Domain.Users
                     {
                         if (reader != null && reader.HasRows)
                         {                            
-                            VM_UserForecast uf = null;
+                            VM_ForecastUser uf = null;
                             while (reader.Read())
                             {
-                                uf = new VM_UserForecast();
+                                uf = new VM_ForecastUser();
 
                                 //Пользователь не принимает участие в текущем прогнозе
                                 if (reader.IsDBNull(0))

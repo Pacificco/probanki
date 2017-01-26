@@ -1,23 +1,23 @@
 ﻿@using System.Globalization
 @using Bankiru.Models.Helpers
-@model Bankiru.Models.Domain.Users.VM_UserForecastInfo
+@model Bankiru.Models.Domain.Users.VM_UserTariffInfo
 <div class="user-balance-block">
     <div class="stat-block">
         <h2>Информация о тарифе и статусе пользователя в Клубе аналитиков</h2>
         <div class="stat-block-body">
-            @if (Model.ForecastEndDate >= DateTime.Now)
+            @if (Model.TariffEndDate >= DateTime.Now)
             {
-                <p>Ткущий тариф: <strong>@TextHelper.GetTariffName(Model.Tariff)</strong></p>
-                if (@Model.ForecastEndDate == null)
+                <p>Ткущий тариф: <strong>@UserTariffHelper.GetTariffName(Model.Tariff)</strong></p>
+                if (@Model.TariffEndDate == null)
                 { 
                 <p>Действителен до: <strong>Период не определен!</strong></p>
                 }
                 else
                 {
-                <p>Действителен до: <strong>@(((DateTime)Model.ForecastEndDate).ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU")))</strong></p>
+                <p>Действителен до: <strong>@(((DateTime)Model.TariffEndDate).ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU")))</strong></p>
                 }
                 <p>Последнее поступление: <strong>@Model.Balance руб.</strong></p>
-                <p>В текущем месяце осталось прогнозов: <strong>@Model.ForecastTriesOnThisMonth</strong></p>
+                <p>В текущем месяце осталось прогнозов: <strong>@Model.ForecastTries</strong></p>
             }
             else
             {

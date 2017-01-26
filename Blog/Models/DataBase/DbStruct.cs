@@ -1198,6 +1198,23 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Возвращает пользователей, принявших участие в прогнозе
+            /// </summary>
+            public static class ForecastUsers
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ForecastUsers";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string Id = "@Id";
+                }
+            }
+            /// <summary>
             /// Возвращает список прогнозов
             /// </summary>
             public static class ForecastsView

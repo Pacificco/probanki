@@ -1,5 +1,6 @@
 ﻿@using Bankiru.Models.Helpers
 @using Bankiru.Models.Domain.Users
+@using Bankiru.Models.Domain.Club
 @model VM_UserProfileInfo
 @{
     DateTime endForecastsDate = DateTime.Now.AddDays(5);    
@@ -34,7 +35,7 @@
 
         <div class="user-tariff-info">
             <div class="tariff">
-                Статус: <span>@TextHelper.GetTariffName(Model.TariffInfo.Tariff)</span>
+                Статус: <span>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</span>
                 <span>(прогнозов <span class="used-forecasts-count">@Model.GetUsedForecastsCountForMonth()</span> из 
                 <span class="enabled-forecasts-count">@Model.GetEnabledForecastsCountForMonth()</span>)</span>
             </div>
@@ -49,7 +50,7 @@
                 <span>Курс доллара </span>
                 @if (Model.ForecastsForMonth != null && Model.ForecastsForMonth.Count > 0)
                 {
-                    foreach (VM_UserForecast uf in Model.ForecastsForMonth)
+                    foreach (VM_ForecastUser uf in Model.ForecastsForMonth)
                     {
                         if (uf.Forecast.SubjectId != 1)
                         {

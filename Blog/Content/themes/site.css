@@ -1688,11 +1688,11 @@ header {
     width: 155px;    
     border: 1px solid #e5e5e5;
 }
-#forecast-list .forecasts .forecast-prev.eur {
+#forecast-list .forecasts .forecast-prev.usd {
     float: left;
     margin: 5px 11px 10px 0;
 }
-#forecast-list .forecasts .forecast-prev.usd {
+#forecast-list .forecasts .forecast-prev.eur {
     float: left;
     margin: 5px 0 10px 0;
 }

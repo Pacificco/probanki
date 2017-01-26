@@ -62,7 +62,7 @@
                                             <div class="online-state"></div>
                                         </div>
                                         <div class="value">@user.Value</div>
-                                        <div class="value-data">@user.ReportDate.ToString("dd.MM.yyyy", CultureInfo.GetCultureInfo("ru-RU"))</div>
+                                        <div class="value-data">@(((DateTime)user.ValueDate).ToString("dd.MM.yyyy", CultureInfo.CreateSpecificCulture("ru-RU")))</div>
                                     </div>
                                 </div>
                                 }
