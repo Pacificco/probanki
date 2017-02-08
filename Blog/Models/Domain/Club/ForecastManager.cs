@@ -250,7 +250,7 @@ namespace Bankiru.Models.Domain.Club
         /// <param name="IsClosed">Закрытые</param>
         /// <param name="subject">Предмет прогноза</param>
         /// <returns>Список прогнозов</returns>
-        public List<VM_Forecast> GetCurrentForecasts(string subjectAlias = "all")
+        public List<VM_Forecast> GetCurrentForecasts(bool loadUsers, string subjectAlias = "all")
         {
             VM_ForecastSubject subject = null;
             if (subjectAlias == "all")
@@ -305,17 +305,20 @@ namespace Bankiru.Models.Domain.Club
                             f.Subject.Assign(subjects.FirstOrDefault(s => s.Id == f.Subject.Id));
 
                         //Пользователи
-                        int[] ids = (from f in forecasts select f.Id).ToArray<int>();
-                        List<VM_ForecastUser> users = _getCurrentForecastUsers(ids);
-                        if (users != null && users.Count > 0)
+                        if (loadUsers)
                         {
-                            List<VM_ForecastUser> fUsers = null;
-                            foreach (VM_Forecast f in forecasts)
+                            int[] ids = (from f in forecasts select f.Id).ToArray<int>();
+                            List<VM_ForecastUser> users = _getCurrentForecastUsers(ids);
+                            if (users != null && users.Count > 0)
                             {
-                                fUsers = users.FindAll(u => u.Forecast.Id == f.Id);
-                                if (fUsers != null)
-                                    foreach (VM_ForecastUser u in fUsers)
-                                        f.Users.Add(u);
+                                List<VM_ForecastUser> fUsers = null;
+                                foreach (VM_Forecast f in forecasts)
+                                {
+                                    fUsers = users.FindAll(u => u.Forecast.Id == f.Id);
+                                    if (fUsers != null)
+                                        foreach (VM_ForecastUser u in fUsers)
+                                            f.Users.Add(u);
+                                }
                             }
                         }
                     }

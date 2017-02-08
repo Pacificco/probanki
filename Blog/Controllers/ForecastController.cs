@@ -20,7 +20,7 @@ namespace Bankiru.Controllers
                 if (_connected)
                 {
                     ForecastManager manager = new ForecastManager();
-                    List<VM_Forecast> model = manager.GetCurrentForecasts();                    
+                    List<VM_Forecast> model = manager.GetCurrentForecasts(true);                    
                     if (model != null)
                     {
                         return View(model);
@@ -138,9 +138,9 @@ namespace Bankiru.Controllers
                 {
                     ForecastManager manager = new ForecastManager();
                     VM_ForecastHeader model = new VM_ForecastHeader();
-                    model.Subjects = manager.GetForecastSubjects();
+                    model.Forecasts = manager.GetCurrentForecasts(false);                    
                     model.CurItemId = cur_item;
-                    if (model.Subjects != null)
+                    if (model.Forecasts != null)
                     {
                         return PartialView("_moduleForecastAsHeader", model);
                     }

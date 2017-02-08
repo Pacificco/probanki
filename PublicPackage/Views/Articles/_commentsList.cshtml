@@ -1,7 +1,0 @@
-﻿@using Bankiru.Models.Domain.Comments
-@using Bankiru.Models.Helpers
-@*@model List<VM_Comment>
-@{        
-    Layout = null;
-}
-@Html.GetCommentsList(Model, 0, x => Url.Action("Comment", "Articles", new {articleId = x}))*@

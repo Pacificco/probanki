@@ -4441,3 +4441,355 @@ ERROR 2017-01-26 22:26:15,423 519501ms ForecastManager        rrentForecastUsers
 Сервер вернул пустой ответ.
 ERROR 2017-01-26 22:28:46,575 670654ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
 Сервер вернул пустой ответ.
+ERROR 2017-01-29 14:05:38,878 33258ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 14:06:06,323 60704ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 14:57:26,781 2751439ms ForecastManager        SetFieldValue      - Поле SubjectAlias не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-01-29 14:57:26,916 2751574ms ForecastManager        SetFieldValue      - Поле SubjectName не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-01-29 17:39:04,353 35849ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 18:46:00,049 4051544ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 18:49:35,128 4266624ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 18:50:23,817 12690ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 18:53:29,407 16888ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-29 18:55:01,807 109289ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-30 06:48:43,271 42930753ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 06:48:43,469 42930951ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 06:53:42,691 43230172ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 06:53:42,691 43230172ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 06:58:42,698 43530180ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 06:58:42,698 43530180ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:03:42,713 43830195ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:03:42,713 43830195ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:08:42,711 44130193ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:08:42,727 44130209ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:13:42,712 44430194ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:13:42,712 44430194ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:18:42,719 44730201ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:18:42,719 44730201ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:23:42,723 45030205ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:23:42,723 45030205ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:28:42,757 45330238ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:28:42,758 45330239ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:33:42,740 45630222ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:33:42,740 45630222ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:38:42,738 45930220ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:38:42,738 45930220ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:43:42,749 46230231ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:43:42,749 46230231ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:48:42,756 46530238ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:48:42,756 46530238ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:53:42,756 46830238ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:53:42,756 46830238ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 07:58:42,769 47130250ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 07:58:42,769 47130250ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:03:42,766 47430248ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:03:42,766 47430248ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:08:42,774 47730256ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:08:42,774 47730256ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:13:42,781 48030263ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:13:42,781 48030263ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:18:42,785 48330267ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:18:42,785 48330267ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:23:42,794 48630276ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:23:42,794 48630276ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:28:42,803 48930284ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:28:42,803 48930284ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:33:42,802 49230284ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:33:42,802 49230284ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:38:42,942 49530424ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:38:42,943 49530425ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:43:42,844 49830326ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:43:42,844 49830326ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:48:42,850 50130332ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:48:42,850 50130332ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:53:42,858 50430340ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:53:42,858 50430340ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 08:58:42,860 50730341ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 08:58:42,860 50730341ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:03:42,874 51030356ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:03:42,874 51030356ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:08:42,874 51330356ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:08:42,874 51330356ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:13:42,881 51630363ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:13:42,881 51630363ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:18:42,887 51930369ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:18:42,887 51930369ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:23:42,888 52230370ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:23:42,888 52230370ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:28:42,894 52530376ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:28:42,894 52530376ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:33:42,900 52830381ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:33:42,900 52830381ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:38:42,952 53130434ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:38:42,952 53130434ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:43:42,912 53430394ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:43:42,912 53430394ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:48:42,915 53730397ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:48:42,915 53730397ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:53:42,917 54030399ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:53:42,917 54030399ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 09:58:42,936 54330418ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 09:58:42,936 54330418ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:03:42,945 54630426ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:03:42,945 54630426ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:08:42,945 54930427ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:08:42,945 54930427ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:13:42,939 55230421ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:13:42,939 55230421ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:18:42,954 55530436ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:18:42,954 55530436ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:23:42,955 55830437ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:23:42,955 55830437ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:28:42,968 56130450ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:28:42,968 56130450ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:33:42,966 56430447ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:33:42,966 56430447ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:38:42,973 56730455ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:38:42,973 56730455ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:43:42,992 57030474ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:43:42,992 57030474ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:48:42,982 57330464ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:48:42,982 57330464ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:53:42,988 57630470ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:53:42,988 57630470ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 10:58:43,001 57930483ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 10:58:43,001 57930483ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:03:43,004 58230485ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:03:43,004 58230485ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:08:43,010 58530491ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:08:43,010 58530491ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:13:43,014 58830496ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:13:43,014 58830496ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:18:43,016 59130498ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:18:43,016 59130498ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:23:43,020 59430502ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:23:43,020 59430502ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:28:43,031 59730513ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:28:43,031 59730513ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:33:43,028 60030510ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:33:43,028 60030510ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:38:43,044 60330525ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:38:43,044 60330525ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:43:43,045 60630527ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:43:43,045 60630527ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:48:43,056 60930538ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:48:43,056 60930538ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:53:43,056 61230538ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:53:43,056 61230538ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 11:58:43,064 61530546ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 11:58:43,081 61530563ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 12:03:43,061 61830543ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 12:03:43,061 61830543ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 12:08:43,081 62130562ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 12:08:43,081 62130562ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 12:13:43,090 62430572ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-01-30 12:13:43,090 62430572ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-01-30 22:22:34,375 32374ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-01-30 22:23:33,476 29576ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.

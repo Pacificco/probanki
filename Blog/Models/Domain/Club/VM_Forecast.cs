@@ -74,6 +74,13 @@ namespace Bankiru.Models.Domain.Club
                     break;
                 case "SubjectId":
                     Subject.Id = (byte)fValue;
+                    SubjectId = (byte)fValue;
+                    break;
+                case "SubjectAlias":
+                    Subject.Alias = (string)fValue;
+                    break;
+                case "SubjectName":
+                    Subject.Name = (string)fValue;
                     break;
                 case "IsClosed":
                     IsClosed = (bool)fValue;

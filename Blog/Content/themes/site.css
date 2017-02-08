@@ -1678,7 +1678,7 @@ header {
     font-style: italic;
     text-align: left;
 }
-##forecast-list .forecasts {
+#forecast-list .forecasts {
     position: relative;
     overflow: hidden;
 }
@@ -1800,7 +1800,170 @@ header {
 
 /* Прогноз детали
  -----------------------------------------------------------*/
-
+#forecast-header {
+    position: relative;
+    overflow: hidden;    
+    padding: 10px 20px 0 20px;
+}
+#forecast-header .forecast-prev {    
+    position: relative;
+    padding: 0;    
+    width: 155px;    
+    /*border: 1px solid #e5e5e5;*/
+    margin: 0;
+}
+#forecast-header .forecast-prev.usd {
+    float: left;
+    margin: 5px 13px 0px 0;
+    background-color: #823494;
+}
+#forecast-header .forecast-prev.eur {
+    float: left;
+    margin: 5px 0 0px 0;
+    background-color: #38a0cf;
+}
+#forecast-header .forecast-prev.oil {
+    margin: 5px 0 0px 13px;
+    float: right;
+    background-color: #e1ab52;
+}
+#forecast-header .forecast-prev.sberbank {
+    float: right;
+    margin: 5px 0 0px 0;
+    background-color: #3ab37f;
+}
+#forecast-header .forecast-prev.current{
+    height: 165px;
+}
+#forecast-header .forecast-prev .header{
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#forecast-header .forecast-prev.usd .header{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .header{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .header{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .header{
+    background-color: #17a668;
+}
+#forecast-header .forecast-prev .do-forecast {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 116px;
+    margin: 0 0 10px 9px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ffffff;
+    opacity: 0.8;
+}
+#forecast-header .forecast-prev .do-forecast:hover {
+    opacity: 1.0;
+}
+#forecast-header .forecast-prev.usd .do-forecast{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .do-forecast{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .do-forecast{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .do-forecast{
+    background-color: #17a668;
+}
+#forecast-header .forecast-prev .read-more{
+    padding: 5px 5px 7px 5px;
+    text-align: center;
+}
+#forecast-header .forecast-prev .read-more a{
+    color: white;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+#forecast-header .forecast-prev.usd .read-more{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .read-more{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .read-more{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .read-more{
+    background-color: #17a668;
+}
+#forecast {
+    padding: 0 20px 10px 20px;
+}
+#forecast h1{
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#forecast h1.usd{
+    background-color: #741d88;
+}
+#forecast h1.eur{
+    background-color: #2195c9;
+}
+#forecast h1.oil{
+    background-color: #da9627;
+}
+#forecast h1.sberbank{
+    background-color: #17a668;
+}
+#forecast .info {
+    position: relative;
+    margin: 10px;
+    padding-left: 55px;
+    background: url(/Content/system/cap.png) top left no-repeat;
+    overflow: hidden;
+}
+#forecast .win-amount{    
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+#forecast .win-amount span{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #38a0cf;
+}
+#forecast .sponsor{    
+    position: relative;
+    float: right;
+}
+#forecast .sponsor span{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #38a0cf;
+}
+#forecast .users {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+}
+#forecast .users h2{
+    color: #2195c9;
+    text-transform: uppercase;    
+}
 /* Блок Читать также
  -----------------------------------------------------------*/
 #main .related-articles-img {

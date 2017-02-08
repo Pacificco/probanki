@@ -1315,6 +1315,44 @@ namespace Bankiru.Models.DataBase
                 public static string Name = "ForecastSubjectsView";
             }
             #endregion
+
+            #region ГРАФИКИ
+            /// <summary>
+            /// Сохраняет данные для графиков
+            /// </summary>
+            public static class ChartsDataSave{
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ChartsDataSave";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string SubjectId = "@SubjectId";
+                    public static string ChartDate = "@ChartDate";
+                    public static string ChartValue = "@ChartValue";
+                }
+            }
+            /// <summary>
+            /// Удаляет данные графиков
+            /// </summary>
+            public static class ChartsDataDelete
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ChartsDataDelete";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string SubjectId = "@SubjectId";
+                }
+            }
+            #endregion
         }
     }
 }

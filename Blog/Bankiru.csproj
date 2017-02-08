@@ -262,6 +262,7 @@
     <Compile Include="Models\OutApi\CurrenciesManager.cs" />
     <Compile Include="Models\OutApi\EmailModel.cs" />
     <Compile Include="Models\OutApi\NewsDownloader.cs" />
+    <Compile Include="Models\OutApi\ChartYahooDownloader.cs" />
     <Compile Include="Models\Security\CaptchaImageResult.cs" />
     <Compile Include="Models\Security\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\Security\CustomPrincipal.cs" />
@@ -714,6 +715,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChartsApi\ChartsApi.csproj">
+      <Project>{a40833a8-102a-4a4b-b5ef-050138ee1639}</Project>
+      <Name>ChartsApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Currencies\Currencies.csproj">
       <Project>{563145bf-c771-4152-b51f-5a6eacb7faf5}</Project>
       <Name>Currencies</Name>

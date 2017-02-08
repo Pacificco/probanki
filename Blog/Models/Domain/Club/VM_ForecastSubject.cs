@@ -31,6 +31,8 @@ namespace Bankiru.Models.Domain.Club
         public bool MetaNoIndex { get; set; }
         [Display(Name = "Активна")]
         public bool IsActive { get; set; }
+        [Display(Name = "Ticker (yahoo instrument)")]
+        public string Ticker { get; set; }
 
         public void Clear()
         {
@@ -45,6 +47,7 @@ namespace Bankiru.Models.Domain.Club
             MetaNoFollow = false;
             MetaNoIndex = false;
             IsActive = true;
+            Ticker = String.Empty;
         }
         public void Assign(VM_ForecastSubject obj)
         {
@@ -61,6 +64,7 @@ namespace Bankiru.Models.Domain.Club
             MetaNoFollow = obj.MetaNoFollow;
             MetaNoIndex = obj.MetaNoIndex;
             IsActive = obj.IsActive;
+            Ticker = obj.Ticker;
         }
     }
 }

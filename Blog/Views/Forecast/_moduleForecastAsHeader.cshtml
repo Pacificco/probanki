@@ -1,15 +1,15 @@
 ﻿@model Bankiru.Models.Domain.Club.VM_ForecastHeader
-@if (Model.Subjects != null && Model.Subjects.Count > 0)
+@if (Model.Forecasts != null && Model.Forecasts.Count > 0)
 {
     <div id="forecast-header">
-        @foreach (Bankiru.Models.Domain.Club.VM_ForecastSubject item in Model.Subjects)
+        @foreach (Bankiru.Models.Domain.Club.VM_Forecast item in Model.Forecasts)
         {
-        <div class="forecast-prev usd">
-            <div class="header">@Html.Raw(item.Name.Replace(" ","<br />"))</div>
-            @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Alias/*, id = item.Id*/ }, new { @class = "do-forecast" })
+            <div class="forecast-prev @(Model.CurItemId == item.Id ? ("current " + item.Subject.Alias) : (item.Subject.Alias))">
+            <div class="header">@Html.Raw(item.Subject.Name.Replace(" ","<br />"))</div>
+            @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id }, new { @class = "do-forecast" })
             @if (Model.CurItemId != item.Id)
             {
-                <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Alias/*, id = item.Id*/ })</div>
+                <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</div>
             }
         </div>
         }    

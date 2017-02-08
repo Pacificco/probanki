@@ -1,15 +1,16 @@
 ﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
 @using Bankiru.Models.Domain.Club
 @model VM_Forecast
 @{
+    Layout = "~/Views/Shared/Master.cshtml";
+    
     ViewBag.metaTitle = "Прогноз. " + Model.Subject.Name;
     ViewBag.metaDescription = "";
     ViewBag.metaKeywords = "";
-    ViewBag.metaRobots = "noindex, nofollow"; 
-
-    ViewBag.metaRobots = "index,follow";
+    ViewBag.metaRobots = "noindex, nofollow";
     
-    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "club";
 }
 @section left_top
 {
@@ -29,13 +30,24 @@
 { 
     <article id="forecast">        
         <hgroup>
-            <h1>
+            <h1 class="@Model.Subject.Alias">
                 <span>@Bankiru.Models.Helpers.TextHelper.GetForecastName(Model.Subject.Id, Model.ForecastDate)</span>
             </h1>
         </hgroup>
-        <div class="forecast-info">
+        <div class="info">
             <div class="win-amount">Приз лучшему аналитику<br /><span>10 000 рублей</span></div>
             <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
-        </div>      
+        </div>
+        <div class="users">
+            <h2>Новые прогнозы</h2>
+            @if (@Model.Users.Count > 0)
+            {
+                foreach (VM_ForecastUser user in Model.Users)
+                {
+                    
+                }
+            }
+        </div>
+         @*@Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })*@
     </article>
 }

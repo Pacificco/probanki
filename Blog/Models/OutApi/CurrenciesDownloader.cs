@@ -14,7 +14,7 @@ namespace Bankiru.Models.OutApi
     public class CurrenciesDownloader : IHttpModule
     {
         static Timer timer;
-        long _interval = 300000; //5 минут
+        long _interval = 1800000; //30 минут
         static object _synclock = new object();
         static string[] currenciesNames = new string[] { "USD", "EUR" };
         static bool _isDownLoading = false;
