@@ -1,0 +1,1 @@
+alter table ForecastSubjects add Ticker varchar(25) not null default('')

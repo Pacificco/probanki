@@ -11,7 +11,6 @@ using System.Globalization;
 using System.Data.SqlClient;
 using Bankiru.Models.DataBase;
 using Bankiru.Models.Infrastructure;
-using ChartsApi;
 using Bankiru.Models.Domain.Club;
 
 namespace Bankiru.Models.OutApi
@@ -50,7 +49,7 @@ namespace Bankiru.Models.OutApi
                     if (String.IsNullOrEmpty(s.Ticker))
                         continue;
 
-                    rows = _manager.LoadChartData(s.Ticker);
+                    rows = _manager.LoadChartDataFromYahoo(s.Ticker);
                     if (rows == null || rows.Count == 0)
                     {
                         log.Error(String.Format("Ошибка во время загрузки статической информации для графика ({0})!\nНе удалось загрузить данные", s.Name));
@@ -78,12 +77,12 @@ namespace Bankiru.Models.OutApi
         {
             try
             {
-                SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ChartsDataSave.Name, GlobalParams.GetConnection());
+                SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ChartsDataInsert.Name, GlobalParams.GetConnection());
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.CommandTimeout = 15;
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataSave.Params.SubjectId, subjectId);
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataSave.Params.ChartValue, row.open);
-                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataSave.Params.ChartDate, row.Date);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataInsert.Params.SubjectId, subjectId);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataInsert.Params.ChartValue, row.Open);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.ChartsDataInsert.Params.ChartDate, row.Date);
                 lock (GlobalParams._DBAccessLock)
                 {
                     try
@@ -96,7 +95,7 @@ namespace Bankiru.Models.OutApi
                     catch (Exception ex)
                     {
                         log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                            DbStruct.PROCEDURES.ChartsDataSave.Name, ex.ToString()));
+                            DbStruct.PROCEDURES.ChartsDataInsert.Name, ex.ToString()));
                         return false;
                     }
                     finally
@@ -110,7 +109,7 @@ namespace Bankiru.Models.OutApi
             catch (Exception ex)
             {
                 log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                    DbStruct.PROCEDURES.ChartsDataSave.Name, ex.ToString()));
+                    DbStruct.PROCEDURES.ChartsDataInsert.Name, ex.ToString()));
                 return false;
             }
         }

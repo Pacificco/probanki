@@ -1318,13 +1318,13 @@ namespace Bankiru.Models.DataBase
 
             #region ГРАФИКИ
             /// <summary>
-            /// Сохраняет данные для графиков
+            /// Создает запись в таблице графиков
             /// </summary>
-            public static class ChartsDataSave{
+            public static class ChartsDataInsert{
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "ChartsDataSave";
+                public static string Name = "ChartsDataInsert";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
@@ -1344,6 +1344,23 @@ namespace Bankiru.Models.DataBase
                 /// Название хранимой процедуры
                 /// </summary>
                 public static string Name = "ChartsDataDelete";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string SubjectId = "@SubjectId";
+                }
+            }
+            /// <summary>
+            /// Загружает данные графиков
+            /// </summary>
+            public static class ChartsDataView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "ChartsDataView";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
