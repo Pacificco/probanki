@@ -1,7 +1,7 @@
 -- Возвращает топ пользователей - членов клуба
 if exists(select 1 from sysobjects where name = N'ClubTopUsersView' and xtype='P') drop proc ClubTopUsersView
 go
-create proc ClubTopUsersView as	
+create proc ClubTopUsersView (@UsersCount int) as	
 begin	
 	begin try 
 	

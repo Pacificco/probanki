@@ -5,13 +5,21 @@ using System.Web;
 
 namespace Bankiru.Models.Domain
 {
-    public enum VM_UserSex
+    public enum EnumDisableAddUserToForecast
+    {
+        Enable = 0,
+        NonAuthorization = 1,
+        TariffOut = 2,
+        EmptyBalance = 3,
+        AlreadyExists = 4        
+    }
+    public enum EnumUserSex
     {
         Undefined = 0,
         Male,
         Female
     }
-    public enum VM_ForecastTariff
+    public enum EnumForecastTariff
     {
         Undefined = 0,
         Platinum = 1,

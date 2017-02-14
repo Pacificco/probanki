@@ -77,18 +77,6 @@
     <section id="wrapper">
         <div id="column-middle-left">            
             <div id="main">
-                @if (ViewData["InfoMessage"] != null)
-                { 
-                    <div id="info-title">@Convert.ToString(ViewData["InfoMessage"])</div>
-                }
-                @if (ViewData["WarningMessage"] != null)
-                { 
-                    <div id="warning-title">@ViewData["WarningMessage"]</div>
-                }
-                @if (ViewData["ErrorMessage"] != null)
-                { 
-                    <div id="error-title">@Convert.ToString(ViewData["ErrorMessage"])</div>
-                }
                 @RenderSection("middle_top", required: false)
                 @RenderBody()                
                 @RenderSection("middle_bottom", required: false)
@@ -97,14 +85,14 @@
                 @Html.Action("_getModuleSideUserProfile", "Users", null)
                 @RenderSection("left_top", required: false)
 
-                <section id="social-widgets">
+                @*<section id="social-widgets">
                     <h3>Мы в соцсетях</h3>
                     @Html.Action("_getWidget_VK", "Home", null)
                     <div class="clear"></div>
                     @Html.Action("_getWidget_FB", "Home", null)
                     <div class="clear"></div>
                     @Html.Action("_getWidget_OK", "Home", null)
-                </section>
+                </section>*@
 
                 @RenderSection("left_middle", required: false)
                 @RenderSection("left_bottom", required: false)

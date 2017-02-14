@@ -1,5 +1,7 @@
-﻿using Bankiru.Models.Domain.Club;
+﻿using Bankiru.Models.Domain;
+using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.OutApi;
 using Bankiru.Models.Security;
 using System;
 using System.Collections.Generic;
@@ -105,7 +107,7 @@ namespace Bankiru.Controllers
                 {
                     ForecastManager manager = new ForecastManager();
                     List<VM_User> model = new List<VM_User>();
-                    model = manager.GetUsers(15);
+                    model = manager.GetUsers(5);
                     if (model != null)
                     {
                         return PartialView("_moduleClubMembers", model);
@@ -161,6 +163,82 @@ namespace Bankiru.Controllers
                 log.Error(e.ToString());
                 return PartialView(_errPartialPage);
             }            
+        }
+        [ChildActionOnly]        
+        [OutputCache(Duration = 60, VaryByParam = "subjectId")]
+        public PartialViewResult _getModuleChart(byte subjectId)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    ChartManager manager = new ChartManager();
+                    List<ChartObject> model = manager.LoadChartDataFromDb(subjectId);
+                    if (model != null)
+                    {
+                        return PartialView("_moduleChart", model);
+                    }
+                    else
+                    {
+                        log.Error(manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        //[OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        public PartialViewResult _getModuleAddUserToForecast(int forecastId)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    if (String.IsNullOrEmpty(SessionPersister.Username))
+                    {
+                        VM_UserForecastState noneAuthModel = new VM_UserForecastState();
+                        noneAuthModel.AddEnable = false;
+                        noneAuthModel.DisableState = EnumDisableAddUserToForecast.NonAuthorization;
+                        return PartialView("_moduleDisableAddUserToForecast", noneAuthModel);
+                    }
+
+                    ForecastManager manager = new ForecastManager();
+                    VM_UserForecastState model = manager.GetUserForecastState(forecastId, SessionPersister.CurrentUser.Id);
+
+                    if (model.AddEnable)
+                    {
+                        VM_AddUserToForecast user = new VM_AddUserToForecast();
+                        user.ForecastId = forecastId;
+                        user.UserId = SessionPersister.CurrentUser.Id;
+                        user.Value = 0.0F;
+                        return PartialView("_moduleAddUserToForecast", user);
+                    }
+                    else
+                    {
+                        return PartialView("_moduleDisableAddUserToForecast", model);
+                    }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
         }
         #endregion
     }

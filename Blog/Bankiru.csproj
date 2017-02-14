@@ -170,6 +170,7 @@
     </Compile>
     <Compile Include="Models\DataBase\DbStruct.cs" />
     <Compile Include="Models\Domain\Account\AccountManager.cs" />
+    <Compile Include="Models\Domain\Club\VM_AddUserToForecast.cs" />
     <Compile Include="Models\Domain\Club\ForecastManager.cs" />
     <Compile Include="Models\Domain\Club\VM_ClubMember.cs" />
     <Compile Include="Models\Domain\Club\VM_DropDownForecastSubject.cs" />
@@ -180,6 +181,7 @@
     <Compile Include="Models\Domain\Club\VM_ForecastsFilters.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastUser.cs" />
+    <Compile Include="Models\Domain\Club\VM_UserForecastState.cs" />
     <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownArchive.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
@@ -704,6 +706,9 @@
     <Content Include="Views\Users\_moduleHeaderUserProfile.cshtml" />
     <Content Include="Views\Users\_modelSideUserMenu.cshtml" />
     <Content Include="Views\Forecast\_moduleForecastAsHeader.cshtml" />
+    <Content Include="Views\Forecast\_moduleChart.cshtml" />
+    <Content Include="Views\Forecast\_moduleAddUserToForecast.cshtml" />
+    <Content Include="Views\Forecast\_moduleDisableAddUserToForecast.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,20 @@
+﻿@model Bankiru.Models.Domain.Club.VM_UserForecastState
+
+    <div class="disable-add-to-forecast">
+        
+            @switch(Model.DisableState)
+            {
+                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.NonAuthorization:
+                    <div class="message">Чтобы принять участие в прогнозе, Вам необходимо Авторизоваться или Зарегистрироваться.</div>
+                    break;
+                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.TariffOut:
+                    <div class="message">В этом прогнозе Вы не можете принять участие. Согласно Вашему тарифу на этот месяц вы исчерпали лимит прогнозов.</div>
+                    break;
+                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.EmptyBalance:
+                    <div class="message">Чтобы принять участие в прогнозе, Вам необходимо продлить подписку на участие в клубе.</div>
+                    break;
+                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.AlreadyExists:
+                    <div class="message">Вы уже приняли участие в этом прогнозе.</div>
+                    break;                
+            }                
+    </div>

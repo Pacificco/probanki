@@ -142,8 +142,11 @@ namespace Bankiru.Models.Domain.Users
                                     uf.Value = reader.GetDouble(2);
                                     uf.ValueDate = reader.GetDateTime(3);
                                 }
-                                for (int j = 4; j < reader.FieldCount; j++)
-                                    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                uf.Forecast.Id = reader.GetInt32(4);
+                                uf.Forecast.ForecastDate = reader.GetDateTime(5);
+                                uf.Forecast.SubjectId = reader.GetByte(6);
+                                //for (int j = 4; j < reader.FieldCount; j++)
+                                //    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
                                 result.Add(uf);
                             }
                         }
@@ -170,12 +173,23 @@ namespace Bankiru.Models.Domain.Users
             VM_UserProfileInfo profile = new VM_UserProfileInfo();
 
             //Загружаем информацию о пользователе
-            profile.User = GetUser(userId);
-            if (profile.User == null)
-                return null;
+            if (userId == -1)
+            {
+                profile.User = null;
+            }
+            else
+            {
+                profile.User = GetUser(userId);
+                if (profile.User == null)
+                    return null;
+            }
 
             //Загружаем информацию о прогнозах
             profile.ForecastsForMonth = GetUserForecastsForMonth(userId);
+
+            //Загружаем предметы прогнозов
+            ForecastManager manager = new ForecastManager();
+            profile.ForecastSubjects = manager.GetForecastSubjects();
 
             return profile;
         }

@@ -35,6 +35,7 @@ namespace Bankiru.Areas.Admin.Controllers
                         return View(model);
                     }
                     SessionPersister.Username = model.Username;
+                    SessionPersister.CurrentUser = user;
                     return RedirectToAction("Index", "Info");
                 }
                 else

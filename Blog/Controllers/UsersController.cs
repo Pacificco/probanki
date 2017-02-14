@@ -10,10 +10,9 @@ namespace Bankiru.Controllers
 {
     public class UsersController : BaseController
     {
-        
-        
-
+                
         [ChildActionOnly]
+        [OutputCache(Duration = 5)]
         public PartialViewResult _getModuleSideUserProfile()
         {
             try
@@ -24,9 +23,7 @@ namespace Bankiru.Controllers
                     VM_UserProfileInfo profile = null;
                     if(String.IsNullOrEmpty(SessionPersister.Username))
                     {
-                        profile = null;
-                        //profile = new VM_UserProfileInfo();                        
-                        //profile.ForecastsForMonth = manager.GetUserForecastsForMonth(0);
+                        profile = manager.GetUserProfiletInfo(-1);
                     }
                     else
                     {

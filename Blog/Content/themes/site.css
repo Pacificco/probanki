@@ -600,18 +600,20 @@ header {
 #column-left section.org-menu,
 #column-left section.club-menu,
 #column-right section.club-menu,
-#column-left section.side-user-profile {
-    margin: 0 0 10px 0;
+#column-left section.side-user-profile,
+#column-left section.club-users {
+    margin: 10px 0 10px 0;
 }
 #column-left section.org-menu h3,
 #column-left section.club-menu h3,
 #column-right section.club-menu h3,
-#column-left section.side-user-profile h3{
+#column-left section.side-user-profile h3,
+#column-left section.club-users h3{
     text-transform: uppercase;
     color: #ffffff;
     background: none;        
     padding: 10px;
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
     background-color: #374e74;
 }
 #column-left section.org-menu ul,
@@ -1964,6 +1966,33 @@ header {
     color: #2195c9;
     text-transform: uppercase;    
 }
+
+/* Графики
+ -----------------------------------------------------------*/
+.forecast-chart {
+    margin: 10px 0 10px 0;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    padding: 10px 20px;
+}
+.forecast-chart .stat-info {
+    margin-top: 10px;
+}
+.forecast-chart .stat-info span{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Блок Принять участие в прогнозе
+ -----------------------------------------------------------*/
+#forecast .disable-add-to-forecast {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+}
+
 /* Блок Читать также
  -----------------------------------------------------------*/
 #main .related-articles-img {
@@ -2788,6 +2817,63 @@ header {
 }
 #column-left section.side-user-profile .current-forecasts-enddate .caption{
     color: black;
+}
+
+/* Список участников клуба
+-----------------------------------------------------------*/
+#column-left section.club-users {
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+#column-left section.club-users .users{    
+    padding: 0 10px 10px 10px;
+    position: relative;
+}
+#column-left section.club-users .user-info {
+    position: relative;
+    margin: 0 0 10px 0;
+    clear: both;
+    overflow: hidden;
+}
+#column-left section.club-users .avatar {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 6px;
+}
+#column-left section.club-users .avatar .avatar-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    background: url(/Content/lk/avatars/mask.png) 0 0 no-repeat;
+}
+#column-left section.club-users .nic {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    font-size: 1.2em;
+    color: #646464;
+    font-weight: bold;
+}
+#column-left section.club-users .rang {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    color: #646464;
+}
+#column-left section.club-users .user-forecast-info {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    color: #646464;
+    font-size: 0.9em;
+}
+#column-left section.club-users .user-forecast-info span{
+    font-weight: bold;
 }
 
 /* Счетчик 

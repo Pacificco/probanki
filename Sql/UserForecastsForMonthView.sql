@@ -5,23 +5,39 @@ create proc UserForecastsForMonthView (
 	@UserId int
 	) as
 begin
-	if not exists(select 1 from UsersForecastInfo where UserId = @UserId)
-		return 1
-	else begin
 		-- ќпредел€ем период дл€ определени€ прогнозов в текущем мес€це
 		declare @m nvarchar(2) = CAST(MONTH(GETDATE()) as varchar(2))
 		if LEN(@m) = 1 begin set @m = '0' + @m end
-				
+		declare @date datetime = getdate()
+		declare @dayCount varchar(2)
+		set @dayCount = cast(day(dateadd(dd, -day(dateadd(mm, 1, @date)), dateadd(mm, 1, @date))) as varchar(2))
+		declare @curYear varchar(4) 
+		set @curYear = cast(year(getdate()) as varchar(4))
+		declare @dateFrom varchar(25) = @curYear + '-' + @m + '-01 00:00:00'
+		declare @dateTo varchar(25) = @curYear + '-' + @m + '-' + @dayCount + ' 23:59:59'
+		
+		--select Convert(datetime, @dateFrom, 120)
+		--select Convert(datetime, @dateTo, 120)
+		
+		-- ѕрогнозы за текущий мес€ц
+		declare @ForecastsForMonth table (	Id				int			not null,
+											ForecastDate	datetime	not null,											
+											SubjectId		tinyint		not null
+											primary key (Id)
+										)
+		insert @ForecastsForMonth
+		select f.Id, f.ForecastDate, f.SubjectId 
+		from Forecasts f			
+		where f.ForecastDate >= Convert(datetime, @dateFrom, 120) 
+			and f.ForecastDate <= Convert(datetime, @dateTo, 120)
+							
 		select u.Id, u.Nic, fu.Value, fu.ReportDate, f.* 
-		from Forecasts f
+		from @ForecastsForMonth f			
 			left join ForecastsUsers fu on f.Id = fu.ForecastId
-			left join Users u on u.Id = fu.UserId
-		where f.ForecastDate >= '2017-' + @m + '-01 00:00:00' 
-			and f.ForecastDate <= GETDATE()
-			and u.Id = @UserId
-	end
-			
-	return 0
-
+			left join Users u on u.Id = fu.UserId			
+		where fu.UserId = @UserId or fu.UserId is null
+		order by f.ForecastDate
+		
+		return 0
 end
 go

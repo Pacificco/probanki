@@ -1,0 +1,26 @@
+﻿@model Bankiru.Models.Domain.Club.VM_AddUserToForecast
+
+@using (Ajax.BeginForm("AddUserToForecast", "Forecast", null, options, new { id = "form-add-user-to-forecast-ajax" }))
+{            
+    @Html.AntiForgeryToken()
+
+    <div class="add-to-forecast">
+
+         @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.UserId);
+            @Html.HiddenFor(model => model.ForecastId);
+
+        <div class="editor-label">
+                @Html.LabelFor(model => model.Value)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Value)<br />
+                @Html.ValidationMessageFor(model => model.Value)
+            </div>
+
+        <div class="editor-submit">
+            <input class="button-ok" type="submit" value="Сделать прогноз" />
+            <img src="/Content/system/spinning.gif" alt="Запрос..." title="Авторизация" id="spinning-submit-login">
+        </div>
+    </div>
+}

@@ -337,58 +337,7 @@ namespace Bankiru.Models.Domain.Club
                         command.Dispose();
                 }
             }
-        }
-        /// <summary>
-        /// Возвращает список пользователей
-        /// </summary>
-        /// <returns>Список пользователей</returns>
-        public List<VM_User> GetUsers(int limit)
-        {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ClubTopUsersView.Name, GlobalParams.GetConnection());
-            command.CommandType = System.Data.CommandType.StoredProcedure;
-            //command.Parameters.AddWithValue(DbStruct.PROCEDURES.ClubUsersView.Params.Limit, limit);
-            command.CommandTimeout = 15;
-            lock (GlobalParams._DBAccessLock)
-            {
-                try
-                {
-                    List<VM_User> users = new List<VM_User>();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader != null && reader.HasRows)
-                        {
-                            VM_User u = null;
-                            while (reader.Read())
-                            {
-                                u = new VM_User();
-                                u.Id = reader.GetInt32(reader.GetOrdinal("Id"));
-                                u.Nic = reader.GetString(reader.GetOrdinal("Nic"));
-                                u.Avatar = reader.IsDBNull(reader.GetOrdinal("Avatar")) ? 
-                                    "" : reader.GetString(reader.GetOrdinal("Avatar"));
-                                u.ForecastCount = reader.IsDBNull(reader.GetOrdinal("ForecastCount")) ?
-                                    0 : reader.GetInt32(reader.GetOrdinal("ForecastCount"));
-                                u.WinCount = reader.IsDBNull(reader.GetOrdinal("WinCount")) ?
-                                    0 : reader.GetInt32(reader.GetOrdinal("WinCount"));
-                                users.Add(u);
-                            }
-                        }
-                    }                    
-                    return users;
-                }
-                catch (Exception ex)
-                {
-                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.ClubTopUsersView.Name, ex.ToString());
-                    log.Error(_lastError);
-                    return null;
-                }
-                finally
-                {
-                    if (command != null)
-                        command.Dispose();
-                }
-            }
-        }
+        }        
         /// <summary>
         /// Возвращает прогноз по его идентификатору
         /// </summary>
@@ -547,6 +496,105 @@ namespace Bankiru.Models.Domain.Club
         }        
         #endregion
 
+        #region ПОЛЬЗОВАТЕЛИ
+        /// <summary>
+        /// Возвращает список пользователей
+        /// </summary>
+        /// <returns>Список пользователей</returns>
+        public List<VM_User> GetUsers(int limit)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ClubTopUsersView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.ClubTopUsersView.Params.UsersCount, limit);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    List<VM_User> users = new List<VM_User>();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_User u = null;
+                            while (reader.Read())
+                            {
+                                u = new VM_User();
+                                u.Id = reader.GetInt32(reader.GetOrdinal("Id"));
+                                u.Nic = reader.GetString(reader.GetOrdinal("Nic"));
+                                u.Avatar = reader.IsDBNull(reader.GetOrdinal("Avatar")) ?
+                                    "" : reader.GetString(reader.GetOrdinal("Avatar"));
+                                u.ForecastCount = reader.IsDBNull(reader.GetOrdinal("ForecastCount")) ?
+                                    0 : reader.GetInt32(reader.GetOrdinal("ForecastCount"));
+                                u.WinCount = reader.IsDBNull(reader.GetOrdinal("WinCount")) ?
+                                    0 : reader.GetInt32(reader.GetOrdinal("WinCount"));
+                                users.Add(u);
+                            }
+                        }
+                    }
+                    return users;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.ClubTopUsersView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// Возвращает состояние пользователя при добавлении в указанный прогноз
+        /// </summary>
+        /// <param name="forecastId">Идентификатор прогноза</param>
+        /// <returns>Состояние пользователя при добавлении в указанный прогноз</returns>
+        public VM_UserForecastState GetUserForecastState(int forecastId, int userId)
+        {        
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.AddUserToForecastStateView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddUserToForecastStateView.Params.UserId, userId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddUserToForecastStateView.Params.ForecastId, forecastId);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_UserForecastState fs = new VM_UserForecastState();
+                            if (reader.Read())
+                            {
+                                fs.AddEnable = reader.GetBoolean(0);
+                                fs.DisableState = (EnumDisableAddUserToForecast)reader.GetInt32(1);
+                                return fs;
+                            }
+                        }
+                    }
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.AddUserToForecastStateView.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        #endregion
+
         #region ПРЕДМЕТ ПРОГНОЗОВ
         public List<VM_ForecastSubject> GetForecastSubjects()
         {
@@ -601,7 +649,7 @@ namespace Bankiru.Models.Domain.Club
         #endregion
 
         #region ВСПОМАГАТЕЛЬНЫЕ МЕТОДЫ
-        private VM_ForecastSubject _getForecastSubject(string subjectAlias)
+        public VM_ForecastSubject _getForecastSubject(string subjectAlias)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastSubjectView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -662,7 +710,7 @@ namespace Bankiru.Models.Domain.Club
                 }
             }            
         }
-        private List<VM_ForecastSubject> _getForecastSubjects()
+        public List<VM_ForecastSubject> _getForecastSubjects()
         {
             List<VM_ForecastSubject> subjects = new List<VM_ForecastSubject>();
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.ForecastSubjectsView.Name, GlobalParams.GetConnection());

@@ -85,6 +85,10 @@
         else
         {
             <p>На данный момент открытых прогнозов не найдено.</p>
-        }        
+        }
+        @foreach (VM_Forecast item in Model)
+        {        
+            @Html.Action("_getModuleChart", "Forecast", new { subjectId = item.Subject.Id })
+        }
     </section>
 }

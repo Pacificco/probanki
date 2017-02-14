@@ -1283,6 +1283,31 @@ namespace Bankiru.Models.DataBase
                 /// Название хранимой процедуры
                 /// </summary>
                 public static string Name = "ClubTopUsersView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UsersCount = "@UsersCount";
+                }
+            }
+            /// <summary>
+            /// Возвращает состояние пользователя при добавлении в указанный прогноз
+            /// </summary>
+            public static class AddUserToForecastStateView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "AddUserToForecastStateView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
+                    public static string ForecastId = "@ForecastId";
+                }
             }
             #endregion
 

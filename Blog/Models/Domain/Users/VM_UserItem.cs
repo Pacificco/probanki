@@ -13,7 +13,7 @@ namespace Bankiru.Models.Domain.Users
         public string Name { get; set; }
         public string Email { get; set; }
         public bool EmailConfirmed { get; set; }
-        public VM_UserSex Sex { get; set; }
+        public EnumUserSex Sex { get; set; }
         public string LastName { get; set; }
         public string FatherName { get; set; }
         public bool IsActive { get; set; }
@@ -36,7 +36,7 @@ namespace Bankiru.Models.Domain.Users
             Name = String.Empty;
             LastName = String.Empty;
             FatherName = String.Empty;
-            Sex = VM_UserSex.Undefined;
+            Sex = EnumUserSex.Undefined;
             Email = String.Empty;
             EmailConfirmed = false;
             IsSubscribed = false;
@@ -61,7 +61,7 @@ namespace Bankiru.Models.Domain.Users
                     Email = (string)fValue;
                     break;                
                 case "Sex":
-                    Sex = (VM_UserSex)(int)fValue;
+                    Sex = (EnumUserSex)(int)fValue;
                     break;
                 case "LastName":
                     LastName = (string)fValue;

@@ -9,7 +9,7 @@ namespace Bankiru.Models.Domain.Users
     {
         public int UserId { get; set; }
         public double Balance { get; set; }
-        public VM_ForecastTariff Tariff { get; set; }
+        public EnumForecastTariff Tariff { get; set; }
         public byte ForecastTries { get; set; }
         public DateTime? TariffBeginDate { get; set; }
         public DateTime? TariffEndDate { get; set; }
@@ -25,7 +25,7 @@ namespace Bankiru.Models.Domain.Users
         {
             UserId = -1;
             Balance = 0.0F;
-            Tariff = VM_ForecastTariff.Undefined;
+            Tariff = EnumForecastTariff.Undefined;
             ForecastTries = 0;
             TariffBeginDate = null;
             TariffEndDate = null;
@@ -42,7 +42,7 @@ namespace Bankiru.Models.Domain.Users
                     UserId = (int)fValue;
                     break;
                 case "TariffId":
-                    Tariff = (VM_ForecastTariff)(byte)fValue;
+                    Tariff = (EnumForecastTariff)(byte)fValue;
                     break;
                 case "ForecastTries":
                     ForecastTries = (byte)fValue;

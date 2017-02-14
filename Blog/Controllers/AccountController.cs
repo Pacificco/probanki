@@ -186,6 +186,7 @@ namespace Bankiru.Controllers
                         }
 
                         SessionPersister.Username = model.Username;
+                        SessionPersister.CurrentUser = user;
                         SessionPersister.SetTimeout(86400);
 
                         return RedirectToAction("Index", "Home");
@@ -230,6 +231,7 @@ namespace Bankiru.Controllers
                         }
 
                         SessionPersister.Username = model.Username;
+                        SessionPersister.CurrentUser = user;
                         SessionPersister.SetTimeout(86400);
 
                         //return PartialView("_moduleWellcomeBlock", user);

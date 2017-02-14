@@ -6497,3 +6497,441 @@ System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую проце
    в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
    в Bankiru.Models.OutApi.ChartYahooDownloader._saveToDataBase(ChartObject row, Int32 subjectId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartYahooDownloader.cs:строка 91
 ClientConnectionId:40f8707c-56bf-463b-9c87-a20fa27571c4
+ERROR 2017-02-10 11:27:31,820 11371ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 11:29:13,820  7632ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 14:33:04,799 793067ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:13:39,898 87180ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:29:02,371  7098ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:30:53,157 16222ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:32:35,796 118861ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:34:56,639  4663ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-10 15:40:08,140 10161ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 15:48:33,746 621446ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 16:40:22,893 10269ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 16:42:21,185  9540ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 16:44:11,219  6827ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 16:48:07,067 27202ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 17:14:00,331 22328ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 17:16:21,803  4464ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-11 17:47:24,215 18281ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:06:29,481 12114ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:08:23,553  1948ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:09:10,682 49077ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:09:28,260 66655ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:09:43,379 81774ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:20:37,832 736227ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:22:30,585 848980ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:22:58,403 876798ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:24:22,725 961120ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:24:48,165 986560ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:25:39,596 1037991ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:25:54,055 1052450ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:26:08,012 1066407ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:26:16,468 1074863ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:27:03,257 1121652ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:29:45,541 1283936ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:30:15,854 1314249ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:30:56,984 1355379ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:32:02,911 1421306ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:32:13,515 1431910ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:32:41,216 1459611ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:32:52,025 1470420ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:33:37,377 1515772ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:33:55,047 1533442ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:34:01,815 1540210ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:34:04,214 1542609ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:34:09,707 1548102ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:34:33,503 1571898ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:40:40,744   300ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:40:43,015  2571ms ForecastManager        GetUsers           - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Процедуре ClubTopUsersView не переданы параметры и аргументы.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 515
+ClientConnectionId:400e47c7-d429-4d17-8833-a09cebae0d83
+ERROR 2017-02-12 10:40:43,020  2576ms BaseController         tModuleClubMembers - Ошибка во время выполнения хранимой процедуры ClubTopUsersView!
+System.Data.SqlClient.SqlException (0x80131904): Процедуре ClubTopUsersView не переданы параметры и аргументы.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetUsers(Int32 limit) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 515
+ClientConnectionId:400e47c7-d429-4d17-8833-a09cebae0d83
+ERROR 2017-02-12 10:41:14,269 33824ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:41:25,076   662ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:43:54,074 149660ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:44:18,977 174562ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:46:33,112 308698ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:48:48,175 443761ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:50:43,848   271ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:50:58,218   300ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:51:29,436 31518ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:51:39,270   301ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:52:50,017 71048ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:53:49,425 130456ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:53:56,368 137398ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:54:08,231   303ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:54:28,457 20529ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:54:55,721 47793ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:55:05,717 57789ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:55:15,477   304ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:55:25,027  9853ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:55:54,918 39744ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 10:56:29,767 74593ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 13:49:44,835  2192ms UserManager            rForecastsForMonth - Ошибка во время выполнения хранимой процедуры UserForecastsForMonthView!
+System.InvalidCastException: Не удалось привести тип объекта "System.DateTime" к типу "System.String".
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Users.UserManager.GetUserForecastsForMonth(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 141
+ERROR 2017-02-12 13:49:57,421 14777ms UserManager            rForecastsForMonth - Ошибка во время выполнения хранимой процедуры UserForecastsForMonthView!
+System.InvalidCastException: Не удалось привести тип объекта "System.DateTime" к типу "System.String".
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Users.UserManager.GetUserForecastsForMonth(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 141
+ERROR 2017-02-12 13:50:29,069  2188ms UserManager            rForecastsForMonth - Ошибка во время выполнения хранимой процедуры UserForecastsForMonthView!
+System.InvalidCastException: Не удалось привести тип объекта "System.DateTime" к типу "System.String".
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Users.UserManager.GetUserForecastsForMonth(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 141
+ERROR 2017-02-12 13:59:47,410 72766ms UserManager            rForecastsForMonth - Ошибка во время выполнения хранимой процедуры UserForecastsForMonthView!
+System.InvalidCastException: Не удалось привести тип объекта "System.DateTime" к типу "System.String".
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Users.UserManager.GetUserForecastsForMonth(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 141
+ERROR 2017-02-12 19:09:40,237 18665593ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:10:09,895 18695251ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:10:10,347 18695703ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 19:12:51,215  8634ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:13:47,298 64717ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:15:28,748   324ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:16:19,353 50928ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 19:16:19,388 50963ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:00:01,744 6273320ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:00:02,235 6273811ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:01:07,563 6339138ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:01:08,053 6339628ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:02:46,341 6437917ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:02:46,688 6438264ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:07:49,235 6740811ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:07:49,619 6741195ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:12:08,560 7000135ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:12:09,010 7000585ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:22:23,461 7615036ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:22:24,008 7615584ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:23:15,964 7667540ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:23:16,423 7667999ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:23:53,916 7705491ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:23:53,977 7705552ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:24:09,750 7721326ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:24:09,827 7721403ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-12 21:24:22,904   301ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:25:19,582   319ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:26:33,229   330ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:28:14,505 101606ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:28:34,728   311ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:30:14,340   341ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:33:23,248   329ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:33:29,155  6235ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:35:52,204   314ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:36:26,294 34403ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:37:51,129 119238ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-12 21:38:20,701 148810ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-13 15:06:07,398 63015507ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-13 15:06:07,590 63015699ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-13 15:07:32,257 63100367ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Время ожидания операции истекло
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 32
+ERROR 2017-02-13 15:07:32,295 63100405ms ChartYahooDownloader   _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-02-13 15:08:05,353 63133462ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System.Net.Sockets.SocketException: Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера 192.168.1.1:80
+   в System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   в System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 32
+ERROR 2017-02-13 15:08:05,353 63133462ms ChartYahooDownloader   _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-02-14 20:46:47,289 18346ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 20:46:47,322 18379ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 20:46:47,482 18539ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 21:02:18,926 15668ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:02:18,937 15679ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:05:06,621 183363ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 21:07:02,876 44080ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:07:23,929 65133ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:36:34,169 1815373ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:36:34,170 1815374ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:47:34,511 15599ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:47:34,523 15611ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:47:44,334 25423ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 21:50:48,451 12266ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 216
+ERROR 2017-02-14 21:50:48,470 12285ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 21:50:51,432 15247ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:50:51,434 15249ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:51:14,011 15756ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:51:14,029 15774ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:51:26,743 28488ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 21:57:19,145 380890ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 216
+ERROR 2017-02-14 21:57:19,157 380902ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 21:59:01,468 15243ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:59:01,493 15268ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 21:59:20,277 34052ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 216
+ERROR 2017-02-14 21:59:20,304 34079ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 21:59:38,968  7584ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 21:59:47,030 15645ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 21:59:47,039 15654ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 22:00:15,440 44056ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 216
+ERROR 2017-02-14 22:00:15,514 44130ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 22:00:20,714 49329ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 22:01:15,988 104603ms BaseController         uleSideUserProfile - Ошибка во время отображения блока с профилем пользователя!
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.UsersController._getModuleSideUserProfile() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 30
+ERROR 2017-02-14 22:03:41,363  6010ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 22:03:50,947 15593ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 22:03:50,948 15594ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 22:04:25,882 50528ms ForecastManager        tUserForecastState - Ошибка во время выполнения хранимой процедуры AddUserToForecastStateView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "AddUserToForecastStateView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetUserForecastState(Int32 forecastId, Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 567
+ClientConnectionId:736cf024-6c68-4082-9d64-2c489f242e14
+ERROR 2017-02-14 22:04:46,237 70884ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 218
+ERROR 2017-02-14 22:05:17,377 102024ms ForecastManager        tUserForecastState - Ошибка во время выполнения хранимой процедуры AddUserToForecastStateView!
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "AddUserToForecastStateView".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetUserForecastState(Int32 forecastId, Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 567
+ClientConnectionId:736cf024-6c68-4082-9d64-2c489f242e14
+ERROR 2017-02-14 22:05:17,425 102072ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 218
+ERROR 2017-02-14 22:05:55,998 140645ms ForecastManager        tUserForecastState - Ошибка во время выполнения хранимой процедуры AddUserToForecastStateView!
+System.IndexOutOfRangeException: AddEnable
+   в System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   в System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   в Bankiru.Models.Domain.Club.ForecastManager.GetUserForecastState(Int32 forecastId, Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 574
+ERROR 2017-02-14 22:05:56,000 140647ms BaseController         eAddUserToForecast - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Controllers.ForecastController._getModuleAddUserToForecast(Int32 forecastId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\ForecastController.cs:строка 218
+ERROR 2017-02-14 22:06:38,039 13568ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-14 22:06:40,037 15566ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 22:06:40,037 15566ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-14 22:10:35,748 15454ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-14 22:10:35,759 15465ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!

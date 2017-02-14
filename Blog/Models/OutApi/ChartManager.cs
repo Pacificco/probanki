@@ -14,7 +14,7 @@ namespace Bankiru.Models.OutApi
 {
     public class ChartManager
     {
-        private const string _baseUrl = "http://chartapi.finance.yahoo.com/instrument/1.0/SBER.ME/chartdata;type=quote;range=3m/csv/";
+        private const string _baseUrl = "http://chartapi.finance.yahoo.com/instrument/1.0/{0}/chartdata;type=quote;range=3m/csv/";
         public static readonly ILog log = LogManager.GetLogger(typeof(ChartManager));
         private static NumberFormatInfo _numberFormatInfo = new NumberFormatInfo() { NumberDecimalSeparator = "." };
 
@@ -29,7 +29,7 @@ namespace Bankiru.Models.OutApi
 
                 using (WebClient web = new WebClient())
                 {
-                    csvData = web.DownloadString(_baseUrl);
+                    csvData = web.DownloadString(String.Format(_baseUrl, subject));
                 }                
                 
                 return _parseYahooData(csvData);
@@ -111,7 +111,7 @@ namespace Bankiru.Models.OutApi
                                 {
                                     obj = new ChartObject();
                                     obj.SubjectId = reader.GetByte(reader.GetOrdinal("SubjectId"));
-                                    obj.Open = reader.GetDecimal(reader.GetOrdinal("ChartValue"));
+                                    obj.Close = reader.GetDecimal(reader.GetOrdinal("ChartValue"));
                                     obj.Date = reader.GetDateTime(reader.GetOrdinal("ChartDate"));
                                     result.Add(obj);
                                 }

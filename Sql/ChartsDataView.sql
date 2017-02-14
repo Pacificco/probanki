@@ -4,7 +4,7 @@ go
 create proc ChartsDataView (@SubjectId int) as	
 begin	
 
-	select * from ChartsData where SubjectId = @SubjectId
+	select * from ChartsData where SubjectId = @SubjectId order by ChartDate
 	
 end
 go
