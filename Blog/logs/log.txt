@@ -6935,3 +6935,486 @@ System.Net.WebException: Время ожидания операции истекло
    в System.Net.HttpWebRequest.GetResponse()
    в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
 ERROR 2017-02-14 22:10:35,759 15465ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-02-15 20:10:35,899 79215606ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-02-15 20:10:35,929 79215636ms CurrenciesDownloader   CurrenciesRatePrev - Не удалось загрузить курсы валют!
+ERROR 2017-02-16 19:29:33,630  7916ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:8e5efcf6-41c6-4cb9-b1ee-cc832324b1e0
+ERROR 2017-02-16 19:29:33,655  7941ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:8e5efcf6-41c6-4cb9-b1ee-cc832324b1e0
+ERROR 2017-02-16 19:38:03,178  7829ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:678eb371-7595-44e0-be53-7d0bf5ab1ee0
+ERROR 2017-02-16 19:38:03,204  7855ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:678eb371-7595-44e0-be53-7d0bf5ab1ee0
+ERROR 2017-02-16 20:04:59,014 17811ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:f749bd89-06e7-473b-939b-51f3eb21a363
+ERROR 2017-02-16 20:04:59,026 17823ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:f749bd89-06e7-473b-939b-51f3eb21a363
+ERROR 2017-02-17 19:55:12,077  6305ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:456f2d9f-0145-4afb-a98a-65d6710697fb
+ERROR 2017-02-17 19:55:12,089  6317ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:456f2d9f-0145-4afb-a98a-65d6710697fb
+ERROR 2017-02-17 20:11:42,646  8334ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a1698f95-d065-4737-90f9-61c36dcb7f35
+ERROR 2017-02-17 20:11:42,658  8346ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a1698f95-d065-4737-90f9-61c36dcb7f35
+ERROR 2017-02-17 20:28:03,759 12286ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a6bcd655-7677-47f3-9fed-31c58aeb247a
+ERROR 2017-02-17 20:28:03,770 12297ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a6bcd655-7677-47f3-9fed-31c58aeb247a
+ERROR 2017-02-17 20:29:05,842 15047ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:daddf104-0360-4b36-bc6a-73df03c4abfe
+ERROR 2017-02-17 20:29:05,857 15062ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:daddf104-0360-4b36-bc6a-73df03c4abfe
+ERROR 2017-02-17 20:32:43,300 26041ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a40483bc-7d20-4a5a-9c69-d828353a6cb8
+ERROR 2017-02-17 20:32:48,910 31651ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistory!
+System.Data.SqlClient.SqlException (0x80131904): Выполнение запроса процедура "UserBalanceHistory" окончилось неудачно, так как "UserBalanceHistory" является объектом таблица.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:a40483bc-7d20-4a5a-9c69-d828353a6cb8
+ERROR 2017-02-17 21:45:52,322 66437ms UserManager            AddBalance         - Ошибка во время пополнения баланса пользователя!
+Ошибка во время выполнения хранимой процедуры AddBalance.
+ERROR 2017-02-17 21:50:19,971 334086ms UserManager            AddBalance         - Ошибка во время пополнения баланса пользователя!
+Ошибка во время выполнения хранимой процедуры AddBalance.
+ERROR 2017-02-17 21:51:39,493 413608ms UserManager            AddBalance         - Ошибка во время пополнения баланса пользователя!
+Ошибка во время выполнения хранимой процедуры AddBalance.
+ERROR 2017-02-17 21:54:33,585  6386ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:54:33,597  6398ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:55:25,228 58029ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:55:25,230 58031ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:56:13,485 46272ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:56:15,916 48703ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:57:00,039 92827ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 21:57:00,040 92828ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.InvalidCastException: Заданное приведение является недопустимым.
+   в Bankiru.Models.Domain.Users.VM_UserBalanceHistoryItem.SetFieldValue(String fName, Object fValue) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\VM_UserBalanceHistoryItem.cs:строка 49
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 216
+ERROR 2017-02-17 22:06:13,250 19490ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:44432673-f763-4b9b-83ad-67035128390d
+ERROR 2017-02-17 22:06:16,324 22565ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:44432673-f763-4b9b-83ad-67035128390d
+ERROR 2017-02-17 22:06:45,435 51676ms UserManager            AddBalance         - Ошибка во время пополнения баланса пользователя!
+Ошибка во время выполнения хранимой процедуры AddBalance.
+ERROR 2017-02-17 22:09:10,943 17122ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:e75b28ab-611f-4da7-ab30-d3a196c41683
+ERROR 2017-02-17 22:09:13,420 19599ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:e75b28ab-611f-4da7-ab30-d3a196c41683
+ERROR 2017-02-17 22:10:15,950 82129ms UserManager            AddBalance         - Ошибка во время пополнения баланса пользователя!
+Ошибка во время выполнения хранимой процедуры AddBalance.
+ERROR 2017-02-17 22:22:25,329 46853ms UserManager            UserBalanceHistory - Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:9e42d7e2-ca82-44a0-af5f-12beb8e511fa
+ERROR 2017-02-17 22:22:25,344 46868ms UsersController        UserBalanceHistory - Ошибка во время отображения истории баланса пользователя!
+Ошибка во время выполнения хранимой процедуры UserBalanceHistoryView!
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "Sum".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Users.UserManager.GetUserBalanceHistory(Int32 userId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 207
+ClientConnectionId:9e42d7e2-ca82-44a0-af5f-12beb8e511fa
+ERROR 2017-02-17 22:24:51,074 116008ms UserManager            AddBalance         - Ошибка во время выполнения хранимой процедуры AddBalance! System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "AddBalance" ожидает параметр "@Comment", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Users.UserManager.AddBalance(VM_UserAddBalance info) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 252
+ClientConnectionId:5e38341b-4a6a-417e-a02b-6fb42c49e15e
+INFO  2017-02-26 11:25:07,888 533841ms BaseController         Register           - [try register] nic=pacificco, name=Андрей, email=pacificco@mail.ru, sex=1, subscribed=Да
+WARN  2017-02-26 11:25:08,082 534035ms BaseController         Register           - [incorrect register] Указанный Никнейм уже зарегистрирован в системе!
+INFO  2017-02-26 11:25:32,964 558917ms BaseController         Register           - [try register] nic=vasy, name=Андрей, email=pacificco@mail.ru, sex=1, subscribed=Да
+WARN  2017-02-26 11:25:32,964 558917ms BaseController         Register           - [incorrect register] Данные с формы не прошли валидацию!
+INFO  2017-02-26 11:25:56,974 582927ms BaseController         Register           - [try register] nic=vasy, name=Андрей, email=pacificco@mail.ru, sex=1, subscribed=Да
+WARN  2017-02-26 11:25:56,991 582944ms BaseController         Register           - [incorrect register] Указанный Email уже зарегистрирован в системе!
+ERROR 2017-02-26 11:26:38,256 624209ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-26 11:54:15,039 15761ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-27 19:54:54,659 27684ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-02-27 20:01:53,381 143276ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+INFO  2017-02-28 08:39:05,896 239559ms BaseController         Register           - [try register] nic=vasy, name=Вася, email=ybabubudu@mail.ru, sex=1, subscribed=Да
+INFO  2017-02-28 08:43:28,613 502276ms BaseController         Register           - [success register] Успешно!
+ERROR 2017-02-28 20:31:13,461 16850ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 610
+ERROR 2017-02-28 20:31:13,482 16871ms ChartYahooDownloader   Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 610
+ERROR 2017-02-28 20:31:13,488 16877ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 610
+ERROR 2017-02-28 20:31:13,489 16878ms ChartYahooDownloader   Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 610
+ERROR 2017-02-28 20:31:13,535 16924ms BaseController         EmailConfirmed     - System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 42
+ClientConnectionId:00000000-0000-0000-0000-000000000000

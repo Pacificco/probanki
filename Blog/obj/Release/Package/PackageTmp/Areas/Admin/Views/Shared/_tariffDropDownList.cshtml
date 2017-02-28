@@ -1,0 +1,36 @@
+﻿@using Bankiru.Models.Domain.Other
+@model VM_DropDownTariff
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = "НЕ ЗАДАН",
+        Value = "0",
+        Selected = Model.SelectedId == 0 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Платина",
+        Value = "1",
+        Selected = Model.SelectedId == 1 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Золото",
+        Value = "2",
+        Selected = Model.SelectedId == 2 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Серебро",
+        Value = "3",
+        Selected = Model.SelectedId == 3 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Бронза",
+        Value = "4",
+        Selected = Model.SelectedId == 4 ? true : false
+    });
+}
+@Html.DropDownList(Model.Name, _items)

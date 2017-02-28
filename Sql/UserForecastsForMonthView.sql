@@ -1,4 +1,4 @@
--- Список прогнозов, в которых пользователь принял или может принять участие в текущем месяце
+-- ‘писок прогнозов, в которых пользователь принял или может принять участие в текущем месяце
 if exists(select 1 from sysobjects where name = N'UserForecastsForMonthView' and xtype='P') drop proc UserForecastsForMonthView
 go
 create proc UserForecastsForMonthView (

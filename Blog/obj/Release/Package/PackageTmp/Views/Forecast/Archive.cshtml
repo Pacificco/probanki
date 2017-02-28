@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Архив прогнозов";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Архив прогнозов";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";    
+    ViewBag.metaRobots = "index, follow";
+
+    ViewBag.CurrentMenuItem = "club";
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "archive" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="club-archive">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+
+</article>

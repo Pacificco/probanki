@@ -5,6 +5,7 @@ create proc AddUserToForecastStateView (
 	@UserId int, @ForecastId int
 	) as
 begin
+		
 		-- Проверяем баланс пользователя
 		declare @tariff_info table (ForecastEndDate		datetime	not null,											
 									TariffId			tinyint		not null

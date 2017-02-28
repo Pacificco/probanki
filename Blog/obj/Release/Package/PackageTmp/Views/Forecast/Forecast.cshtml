@@ -1,19 +1,23 @@
 ﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
 @using Bankiru.Models.Domain.Club
 @model VM_Forecast
 @{
+    Layout = "~/Views/Shared/Master.cshtml";
+    
     ViewBag.metaTitle = "Прогноз. " + Model.Subject.Name;
     ViewBag.metaDescription = "";
     ViewBag.metaKeywords = "";
-    ViewBag.metaRobots = "noindex, nofollow"; 
-
-    ViewBag.metaRobots = "index,follow";
+    ViewBag.metaRobots = "noindex, nofollow";
     
-    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "club";
+}
+@section scripts{
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 }
 @section left_top
 {
-    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    @*@Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })*@
 }
 @section left_middle
 {
@@ -21,30 +25,33 @@
 }
 @section right_middle
 {
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
     @Html.Action("_getModuleLastNews", "Home")
 }
+@Html.Action("_getModuleForecastAsHeader", "Forecast", new { cur_item = Model.Subject.Id })
 @if (Model != null)
 { 
-    <article id="forecast-detail" style="border:2px dashed #f00; padding:5px; margin:5px;">        
+    <article id="forecast">        
         <hgroup>
-            <h1>
-                <span>@Model.Subject.Name</span>
+            <h1 class="@Model.Subject.Alias">
+                <span>@Bankiru.Models.Helpers.TextHelper.GetForecastName(Model.Subject.Id, Model.ForecastDate)</span>
             </h1>
         </hgroup>
-        <div class="forecast-prev-info">
-                            @if(Model.ForecastDate.AddDays(-2).Date > DateTime.Now.Date)
-                            {
-                                <p> Принять участие в данном прогнозе Вы можете до 
-                                    <time pubdate datetime="@Model.ForecastDate.ToString()">@Model.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
-                                </p>
-                            }
-                            else
-                            {
-                                <p>
-                                    В этом прогнозе уже нельзя принять участия. Результаты прогноза и победитель будут опубликованы на сайте 
-                                    <time pubdate datetime="@Model.ForecastDate.ToString()">@Model.ForecastDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
-                                </p>
-                            }                            
-                        </div>      
+        <div class="info">
+            <div class="win-amount">Приз лучшему аналитику<br /><span>@Model.WinValue рублей</span></div>
+            <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
+        </div>
+        @Html.Action("_getModuleChart", "Forecast", new { subjectId = Model.Subject.Id })
+        @Html.Action("_getModuleAddUserToForecast", "Forecast", new { forecastId = Model.Id })
+        <div class="users">
+            <h2>Прогнозы аналитиков клуба</h2>
+            @if (Model.Users.Count > 0)
+            {
+                foreach (VM_ForecastUser user in Model.Users)
+                {
+                    
+                }
+            }
+        </div>       
     </article>
 }

@@ -27,6 +27,14 @@ namespace Bankiru.Models.Domain
         Silver = 3,
         Bronze = 4
     }
+    public enum EnumClubTariffPeriod
+    {
+        Undefined = 0,
+        Month = 1,
+        Quarter = 2,
+        Half = 3,
+        Year = 4
+    }
     public enum EnumBoolType
     {
         None = 0,

@@ -91,6 +91,9 @@ namespace Bankiru.Areas.Admin.Controllers
                     {
                         if (ModelState.IsValid)
                         {
+                            if (model.Comment == null)
+                                model.Comment = "";
+
                             UserManager manager = new UserManager();                            
                             if (manager.AddBalance(model))
                             {
@@ -209,6 +212,7 @@ namespace Bankiru.Areas.Admin.Controllers
                 {
                     UserManager manager = new UserManager();
                     VM_UserAddBalance balance = new VM_UserAddBalance();
+                    balance.UserId = user_id;
                     return PartialView("_userAddBalanceBlock", balance);
                 }
                 else
@@ -237,7 +241,7 @@ namespace Bankiru.Areas.Admin.Controllers
                         log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + manager.LastError);
                         return PartialView(_errPartialPage);
                     }
-                    return PartialView("userBalanceHistoryBlock", history);
+                    return PartialView("_userBalanceHistoryBlock", history);
                 }
                 else
                 {

@@ -188,7 +188,7 @@ namespace Bankiru
             routes.MapRoute(
                 name: "club_info",
                 url: "club/info",
-                defaults: new { controller = "Forecast", action = "Info" },
+                defaults: new { controller = "Forecast", action = "About" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(

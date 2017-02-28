@@ -49,7 +49,17 @@ namespace Bankiru.Models.Domain.Users
             if (TariffInfo.TariffEndDate == null || ((DateTime)TariffInfo.TariffEndDate) < DateTime.Now)
                 return 0;
 
-            return UserTariffHelper.GetEnabledForecastsCountForMonthByTariff(TariffInfo.Tariff);
+            int tCount = UserTariffHelper.GetEnabledForecastsCountForMonthByTariff(TariffInfo.Tariff);
+            int fCount = (from f in ForecastsForMonth where f.User.Id == User.Id select f.Forecast.Id).Count();
+
+            return tCount - fCount;
+
+            //if (ForecastsForMonth.Count >= 8)
+            //    return tCount;
+            //else if (ForecastsForMonth.Count >= 4)
+            //    return tCount / 2;
+            //else
+            //    return 0;
         }
         public List<VM_ForecastUser> GetForecastsBySubject(int subjectId)
         {

@@ -1,0 +1,23 @@
+﻿@using Bankiru.Models.ViewModels
+@model VM_Menu
+<section class="user-menu">
+    <h3>@Model.Title</h3>
+    <nav>
+        <ul>
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                foreach (VM_MenuItem item in Model.Items)
+                {                
+                    if (item.IsCurrent)
+                    {
+                        <li class = "current"><a href="@item.Alias" title="">@item.Title</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@item.Alias" title="">@item.Title</a></li>
+                    }                
+                }
+            }
+        </ul>
+    </nav>
+</section>

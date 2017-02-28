@@ -1,4 +1,4 @@
--- Обновление прогноза в базе данных
+-- Ћбновление прогноза в базе данных
 if exists(select 1 from sysobjects where name = N'EditForecast' and xtype='P') drop proc EditForecast
 go
 create proc EditForecast (

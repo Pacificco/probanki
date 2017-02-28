@@ -951,18 +951,18 @@ namespace Bankiru.Models.DataBase
             /// <summary>
             /// Возвращает историю изменения баланса пользователя по идентификатору
             /// </summary>
-            public static class UserBalanceHistory
+            public static class UserBalanceHistoryView
             {
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "UserBalanceHistory";
+                public static string Name = "UserBalanceHistoryView";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
                 public static class Params
                 {
-                    public static string Id = "@Id";
+                    public static string UserId = "@UserId";
                 }
             }
             /// <summary>
@@ -1061,7 +1061,7 @@ namespace Bankiru.Models.DataBase
                     public static string UserId = "@UserId";
                     public static string TariffId = "@TariffId";
                     public static string Sum = "@Sum";
-                    public static string Period = "@Period";
+                    public static string PeriodId = "@PeriodId";
                     public static string Comment = "@Comment";
                 }
             }

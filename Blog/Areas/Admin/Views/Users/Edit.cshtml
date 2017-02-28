@@ -133,7 +133,9 @@
 </div>
 
 @Html.Action("_getUserForecastInfoBlock", "Users", new { user_id = Model.Id })
-@Html.Action("_getUserAddBalanceBlock", "Users", new { user_id = Model.Id })
+<div id="user-add-balance-block">
+    @Html.Action("_getUserAddBalanceBlock", "Users", new { user_id = Model.Id })
+</div>
 @Html.Action("_getUserBalanceHistory", "Users", new { user_id = Model.Id })
 
 

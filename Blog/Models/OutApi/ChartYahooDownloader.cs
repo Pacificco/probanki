@@ -18,7 +18,7 @@ namespace Bankiru.Models.OutApi
     public class ChartYahooDownloader : IHttpModule
     {
         static Timer timer;
-        long _interval = 1800000; //1 час
+        long _interval = 3600000; //1 час
         static object _synclock = new object();
         static bool _isDownLoading = false;
         private ChartManager _manager = new ChartManager();

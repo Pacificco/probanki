@@ -36,7 +36,22 @@ h1, h2, h3 {
     padding: 5px;
     font-weight: normal;
 }
-
+.button-blue{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #00adee;
+    color: white;    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 2px solid #32c3ff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.button-blue:hover{
+    background-color: #32c3ff;
+    border: 2px solid #32c3ff;
+}
 
 /* Модальное окно Регистрация/Авторизация
 -----------------------------------------------------------*/
@@ -373,9 +388,10 @@ header {
     float: right;
     text-align:right;    
 }
-#login .login-button img{
+#login .login-button{
     margin-right: 20px;
     margin-top: 43px;
+    display: inline-block;
 }
 #login-block {
     padding-top: 5px;
@@ -949,14 +965,14 @@ header {
     overflow: hidden;
 }
 #register h1{
-    background: none;
-    background: url(/Content/system/h1_bg.gif) center right repeat-x;
-    color: #4b78b9;
-    margin: 13px 5px 10px 5px;
-    padding: 0;
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 10px;    
+    text-transform: uppercase;
 }
 #register h1 span {
-    background: white;
+    background: none;
     padding: 0 8px 0 0;
     text-transform: uppercase;
 }
@@ -1654,19 +1670,31 @@ header {
 
 /* Список прогнозов
 -----------------------------------------------------------*/
-#forecast-list {
+#forecast-list,
+#club-users,
+#club-rules,
+#club-about,
+#club-archive {
     padding: 10px 20px 10px 20px;
     position: relative;    
     overflow: hidden;
 }
-#forecast-list h1{
+#forecast-list h1,
+#club-users h1,
+#club-rules h1,
+#club-about h1,
+#club-archive h1{
     background-color: #374e74;
     color: #ffffff;
     margin: 0 0 5px 0;
     padding: 10px;
     text-transform: uppercase;
 }
-#forecast-list h1 span {
+#forecast-list h1 span,
+#club-users h1 span,
+#club-rules h1 span,
+#club-about h1 span,
+#club-archive h1 span {
     background: white;
     padding: 0 8px 0 0;
     text-transform: uppercase;
@@ -2082,7 +2110,7 @@ header {
     overflow: hidden;
 }
 #feedback h1, #rules h1{
-     background-color: #374e74;
+    background-color: #374e74;
     color: #ffffff;
     margin: 0 0 10px 0;
     padding: 10px;    
@@ -2256,6 +2284,10 @@ header {
 #copyright p.header {
     color: #ffffff;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#copyright a{
+    display: inline-block;
 }
 
 /* Социальные сети
@@ -2817,6 +2849,9 @@ header {
 }
 #column-left section.side-user-profile .current-forecasts-enddate .caption{
     color: black;
+}
+#column-left section.side-user-profile .logout {
+    margin: 10px 0 0 0;
 }
 
 /* Список участников клуба

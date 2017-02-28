@@ -49,13 +49,14 @@ namespace Bankiru.Models.Domain.Account
                     if(objId == null)
                     {
                         _lastError = "Во время регистрации пользователя произошла ошибка!";
-                        log.Error("Во время регистрации пользователя произошла ошибка!");
+                        log.Error("Во время регистрации пользователя произошла ошибка! objId = null");
                         return -1;
                     }
                     int id = Convert.ToInt32(objId.ToString());
                     if (id == 0)
                     {
                         _lastError = "Во время регистрации пользователя произошла ошибка!";
+                        log.Error("Во время регистрации пользователя произошла ошибка! id == 0");
                         return -1;
                     }
                     return id;
@@ -63,7 +64,7 @@ namespace Bankiru.Models.Domain.Account
                 catch (Exception ex)
                 {
                     _lastError = "Во время регистрации пользователя произошла ошибка!";
-                    log.Error(String.Format("Во время регистрации пользователя произошла ошибка!", ex.ToString()));
+                    log.Error(String.Format("Во время регистрации пользователя произошла ошибка!\n{0}", ex.ToString()));
                     return -1;
                 }
                 finally

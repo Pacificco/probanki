@@ -179,11 +179,20 @@
     <File Include="Areas/Admin/Views/Shared/_regionsDropDownList.cshtml">
       <publishTime>02/21/2016 15:23:26</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/Shared/_tariffDropDownList.cshtml">
+      <publishTime>02/16/2017 19:58:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_tariffPeriodDropDownList.cshtml">
+      <publishTime>02/17/2017 20:11:07</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Users/Edit.cshtml">
-      <publishTime>11/29/2016 00:19:12</publishTime>
+      <publishTime>02/17/2017 21:55:21</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Users/List.cshtml">
       <publishTime>10/22/2016 21:19:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/_userAddBalanceBlock.cshtml">
+      <publishTime>02/17/2017 22:18:35</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Users/_userBalanceBlock.cshtml">
       <publishTime>11/27/2016 11:36:51</publishTime>
@@ -191,8 +200,14 @@
     <File Include="Areas/Admin/Views/Users/_userBalanceHistory.cshtml">
       <publishTime>11/27/2016 11:34:55</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/Users/_userBalanceHistoryBlock.cshtml">
+      <publishTime>02/17/2017 20:54:36</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Users/_userForecastInfoBlock.cshtml">
+      <publishTime>02/17/2017 22:45:29</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Users/_usersList.cshtml">
-      <publishTime>11/29/2016 00:08:23</publishTime>
+      <publishTime>12/26/2016 23:15:40</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Users/_usersListFilter.cshtml">
       <publishTime>10/22/2016 21:21:13</publishTime>
@@ -210,7 +225,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>12/26/2016 22:29:15</publishTime>
+      <publishTime>02/28/2017 20:05:32</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -225,7 +240,7 @@
       <publishTime>02/14/2016 00:07:49</publishTime>
     </File>
     <File Include="bin/Currencies.dll">
-      <publishTime>12/08/2016 23:47:24</publishTime>
+      <publishTime>02/26/2017 11:55:34</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>01/21/2016 18:01:35</publishTime>
@@ -3318,7 +3333,7 @@
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/admin_themes/admin.css">
-      <publishTime>10/22/2016 21:34:56</publishTime>
+      <publishTime>01/12/2017 21:29:33</publishTime>
     </File>
     <File Include="Content/admin_themes/arts/art.css">
       <publishTime>12/19/2016 19:28:53</publishTime>
@@ -3369,7 +3384,7 @@
       <publishTime>10/22/2016 22:12:25</publishTime>
     </File>
     <File Include="Content/admin_themes/users/users.css">
-      <publishTime>10/22/2016 21:17:50</publishTime>
+      <publishTime>01/12/2017 21:45:40</publishTime>
     </File>
     <File Include="Content/system/spinning.gif">
       <publishTime>05/15/2016 17:55:20</publishTime>
@@ -3546,7 +3561,7 @@
       <publishTime>04/13/2016 22:33:36</publishTime>
     </File>
     <File Include="Content/themes/site.css">
-      <publishTime>12/22/2016 20:43:52</publishTime>
+      <publishTime>02/27/2017 20:13:31</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/09/2016 21:09:00</publishTime>
@@ -3556,6 +3571,9 @@
     </File>
     <File Include="robots.txt">
       <publishTime>09/21/2016 19:15:01</publishTime>
+    </File>
+    <File Include="Scripts/countdown.js">
+      <publishTime>01/22/2017 14:41:57</publishTime>
     </File>
     <File Include="Scripts/jquery-1.9.0.js">
       <publishTime>02/27/2016 13:18:16</publishTime>
@@ -3621,7 +3639,7 @@
       <publishTime>01/21/2016 18:01:44</publishTime>
     </File>
     <File Include="Scripts/main.js">
-      <publishTime>12/20/2016 22:27:17</publishTime>
+      <publishTime>02/26/2017 11:34:40</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>01/21/2016 18:01:41</publishTime>
@@ -4176,10 +4194,10 @@
       <publishTime>10/15/2016 16:14:24</publishTime>
     </File>
     <File Include="Views/Account/_moduleFormLogin.cshtml">
-      <publishTime>11/24/2016 22:17:07</publishTime>
+      <publishTime>02/26/2017 11:45:37</publishTime>
     </File>
     <File Include="Views/Account/_moduleWellcomeBlock.cshtml">
-      <publishTime>10/20/2016 22:18:47</publishTime>
+      <publishTime>02/26/2017 11:30:45</publishTime>
     </File>
     <File Include="Views/Articles/Art.cshtml">
       <publishTime>12/23/2016 09:34:23</publishTime>
@@ -4250,17 +4268,41 @@
     <File Include="Views/Error/NotFound.cshtml">
       <publishTime>04/13/2016 21:25:31</publishTime>
     </File>
+    <File Include="Views/Forecast/About.cshtml">
+      <publishTime>02/27/2017 19:59:19</publishTime>
+    </File>
+    <File Include="Views/Forecast/Archive.cshtml">
+      <publishTime>02/27/2017 19:59:07</publishTime>
+    </File>
     <File Include="Views/Forecast/Forecast.cshtml">
-      <publishTime>12/21/2016 22:31:32</publishTime>
+      <publishTime>02/14/2017 21:07:44</publishTime>
     </File>
     <File Include="Views/Forecast/List.cshtml">
-      <publishTime>12/21/2016 22:40:48</publishTime>
+      <publishTime>02/12/2017 19:15:21</publishTime>
+    </File>
+    <File Include="Views/Forecast/Rules.cshtml">
+      <publishTime>02/27/2017 19:59:14</publishTime>
+    </File>
+    <File Include="Views/Forecast/Users.cshtml">
+      <publishTime>02/27/2017 19:58:58</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleAddUserToForecast.cshtml">
+      <publishTime>02/14/2017 20:35:25</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleChart.cshtml">
+      <publishTime>02/13/2017 20:31:00</publishTime>
     </File>
     <File Include="Views/Forecast/_moduleClubMembers.cshtml">
-      <publishTime>11/24/2016 21:56:03</publishTime>
+      <publishTime>02/12/2017 10:55:53</publishTime>
     </File>
     <File Include="Views/Forecast/_moduleClubMenu.cshtml">
-      <publishTime>11/24/2016 21:57:22</publishTime>
+      <publishTime>02/27/2017 19:56:53</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleDisableAddUserToForecast.cshtml">
+      <publishTime>02/14/2017 21:00:18</publishTime>
+    </File>
+    <File Include="Views/Forecast/_moduleForecastAsHeader.cshtml">
+      <publishTime>01/30/2017 22:24:28</publishTime>
     </File>
     <File Include="Views/Forecast/_moduleForecastMenu.cshtml">
       <publishTime>11/12/2016 19:26:17</publishTime>
@@ -4314,7 +4356,7 @@
       <publishTime>11/14/2016 22:08:30</publishTime>
     </File>
     <File Include="Views/Shared/Master.cshtml">
-      <publishTime>12/26/2016 22:28:45</publishTime>
+      <publishTime>02/28/2017 20:06:15</publishTime>
     </File>
     <File Include="Views/Shared/PartialError.cshtml">
       <publishTime>01/25/2016 22:53:06</publishTime>
@@ -4350,7 +4392,7 @@
       <publishTime>06/07/2016 22:14:32</publishTime>
     </File>
     <File Include="Views/Shared/_moduleMainMenu.cshtml">
-      <publishTime>11/14/2016 20:40:44</publishTime>
+      <publishTime>02/28/2017 08:31:38</publishTime>
     </File>
     <File Include="Views/Shared/_moduleOrgLettersFilter.cshtml">
       <publishTime>04/25/2016 20:19:58</publishTime>
@@ -4379,6 +4421,15 @@
     <File Include="Views/Shared/_widget_vk.cshtml">
       <publishTime>12/18/2016 23:04:51</publishTime>
     </File>
+    <File Include="Views/Users/_modelSideUserMenu.cshtml">
+      <publishTime>01/22/2017 12:34:33</publishTime>
+    </File>
+    <File Include="Views/Users/_moduleHeaderUserProfile.cshtml">
+      <publishTime>01/21/2017 12:12:22</publishTime>
+    </File>
+    <File Include="Views/Users/_moduleSideUserProfile.cshtml">
+      <publishTime>02/26/2017 11:39:35</publishTime>
+    </File>
     <File Include="Views/Web.config">
       <publishTime>05/10/2016 21:02:09</publishTime>
     </File>
@@ -4386,7 +4437,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/26/2016 22:29:21</publishTime>
+      <publishTime>02/28/2017 20:06:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

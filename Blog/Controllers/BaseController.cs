@@ -321,6 +321,56 @@ namespace Bankiru.Controllers
                 return PartialView(_errPartialPage);
             }
         }
+        [ChildActionOnly]
+        public ActionResult _getTariffDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    VM_DropDownTariff model = new VM_DropDownTariff();
+                    model.SelectedId = selectedId;
+                    model.FirstItem = firstItem;
+                    model.Name = id;
+                    return PartialView("_tariffDropDownList", model);
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getTariffPeriodDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    VM_DropDownTariffPeriod model = new VM_DropDownTariffPeriod();
+                    model.SelectedId = selectedId;
+                    model.FirstItem = firstItem;
+                    model.Name = id;
+                    return PartialView("_tariffPeriodDropDownList", model);
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
         #endregion
 
         #region МОДУЛИ

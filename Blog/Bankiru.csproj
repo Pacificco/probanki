@@ -182,6 +182,8 @@
     <Compile Include="Models\Domain\Club\VM_ForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastUser.cs" />
     <Compile Include="Models\Domain\Club\VM_UserForecastState.cs" />
+    <Compile Include="Models\Domain\Other\VM_DropDownTariff.cs" />
+    <Compile Include="Models\Domain\Other\VM_DropDownTariffPeriod.cs" />
     <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownArchive.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
@@ -417,6 +419,8 @@
     <Content Include="Areas\Admin\Views\Shared\_archiveDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_closeForecast.cshtml" />
     <Content Include="Areas\Admin\Views\Users\_userAddBalanceBlock.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_tariffDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_tariffPeriodDropDownList.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">
@@ -709,6 +713,11 @@
     <Content Include="Views\Forecast\_moduleChart.cshtml" />
     <Content Include="Views\Forecast\_moduleAddUserToForecast.cshtml" />
     <Content Include="Views\Forecast\_moduleDisableAddUserToForecast.cshtml" />
+    <Content Include="Views\Forecast\About.cshtml" />
+    <Content Include="Views\Forecast\Rules.cshtml" />
+    <Content Include="Views\Forecast\Archive.cshtml" />
+    <Content Include="Views\Forecast\Users.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

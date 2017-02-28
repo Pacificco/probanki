@@ -12,7 +12,7 @@ namespace Bankiru.Controllers
     {
                 
         [ChildActionOnly]
-        [OutputCache(Duration = 5)]
+        //[OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public PartialViewResult _getModuleSideUserProfile()
         {
             try

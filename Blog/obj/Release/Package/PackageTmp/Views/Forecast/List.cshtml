@@ -1,18 +1,17 @@
 ﻿@using System.Globalization
 @using Bankiru.Models.Helpers
 @using Bankiru.Models.Domain.Club
+@using Bankiru.Models.Domain.Users
 @model List<VM_Forecast>
 @{  
     Layout = "~/Views/Shared/Master.cshtml";
 
     ViewBag.metaTitle = "Прогнозы";
     ViewBag.metaDescription = "";
-    ViewBag.metaKeywords = "";
-    ViewBag.metaRobots = "noindex, nofollow";    
-}
-@section left_top
-{
-    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    ViewBag.metaKeywords = "";    
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "club";
 }
 @section left_middle
 {
@@ -20,6 +19,7 @@
 }
 @section right_middle
 {
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
     @Html.Action("_getModuleLastNews", "Home")
 }
 @if (Model != null)
@@ -27,9 +27,8 @@
     <section id="forecast-list">
         <hgroup>
             <h1>
-                Открытые прогнозы
-            </h1>
-            <h2>Прогнозы, в которых Вы можете принять участие</h2>
+                Список текущих прогнозов
+            </h1>            
         </hgroup>        
         @if (Model.Count > 0)
         {
@@ -39,28 +38,46 @@
                 {
                     <section class="forecast-prev @item.Subject.Alias">
                         <hgroup>
-                            <h1>@item.Subject.Name</h1>
-                            @if (!String.IsNullOrEmpty(item.Subject.Description))
-                            {
-                                <h2>@item.Subject.Description</h2>
-                            }
+                            <h1>@Html.Raw(item.Subject.Name.Replace(" ","<br />"))</h1>
                         </hgroup>
-                        <div class="forecast-prev-info">
-                            @if(item.ForecastDate.AddDays(-2).Date > DateTime.Now.Date)
+                        <div class="users">                            
+                            @if(item.Users.Count > 0)
                             {
-                                <p> Принять участие в данном прогнозе Вы можете до 
-                                    <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.AddDays(-2).ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
-                                </p>
+                                <p>Новый прогнозы:</p>
+                                foreach(VM_ForecastUser user in item.Users)
+                                {
+                                <div class="user">
+                                    <div class="nic">@user.User.Nic</div>
+                                    <div class="info">
+                                        <div class="avatar">
+                                            @if (String.IsNullOrEmpty(user.User.Avatar))
+                                            {
+                                                <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                                            }
+                                            else
+                                            {
+                                                <img src="~/Content/lk/avatars/@user.User.Avatar" title="" alt="@user.User.Nic" />
+                                             }
+                                            <div class="avater-mask"></div>
+                                            <div class="online-state"></div>
+                                        </div>
+                                        <div class="value">@user.Value</div>
+                                        <div class="value-data">@(((DateTime)user.ValueDate).ToString("dd.MM.yyyy", CultureInfo.CreateSpecificCulture("ru-RU")))</div>
+                                    </div>
+                                </div>
+                                }
                             }
                             else
                             {
+                                <p>Новый прогнозы:</p>
                                 <p>
-                                    В этом прогнозе уже нельзя принять участия. Результаты прогноза и победитель будут опубликованы на сайте 
-                                    <time pubdate datetime="@item.ForecastDate.ToString()">@item.ForecastDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                                    В этом прогнозе еще никто не принял участие.<br />
+                                    Вы можете быть первым.
                                 </p>
                             }
-                            <p>@Html.RouteLink("Подробнее...", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</p>
-                        </div>                        
+                        </div>
+                        @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id }, new {@class = "do-forecast"})
+                        <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</div>
                     </section>                                    
                 }
             </div>
@@ -68,6 +85,10 @@
         else
         {
             <p>На данный момент открытых прогнозов не найдено.</p>
-        }        
+        }
+        @foreach (VM_Forecast item in Model)
+        {        
+            @Html.Action("_getModuleChart", "Forecast", new { subjectId = item.Subject.Id })
+        }
     </section>
 }

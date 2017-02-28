@@ -5,7 +5,7 @@ create proc AddBalance (
 	@UserId int,
 	@TariffId tinyint,	
 	@Sum float,
-	@Period nvarchar(25),
+	@PeriodId int,
 	@Comment nvarchar(255)
 	) as
 begin	
@@ -28,58 +28,74 @@ begin
 			ForecastEndDate datetime null,		
 			Balance float not null
 		) 
-		
-		insert into #tblUserInfo
-			select TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance
-			from UsersForecastInfo where UserId = @UserId
-
-		if not exists (select 1 from #tblUserInfo) begin
-			if @trancount = 0
-				rollback transaction
-			return 2
+		declare @userExists bit = 0
+		if exists (select 1 from UsersForecastInfo where UserId = @UserId) begin
+			set @userExists = 1
+		end else begin
+			set @userExists = 0
 		end
-
-		-- Дата, до которой будет действовать указанный тариф
-		declare @endPeriodDate datetime
-		select @endPeriodDate = GETDATE()
 		
+		if @userExists = 1 begin
+			insert into #tblUserInfo
+				select TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance
+				from UsersForecastInfo where UserId = @UserId
+		end		
+				
+		-- Дата, до которой будет действовать указанный тариф		
 		declare @curEndPeriodDate datetime
-		set @curEndPeriodDate = (select ForecastEndDate from #tblUserInfo)		
+		if exists (select 1 from #tblUserInfo) begin
+			set @curEndPeriodDate = (select ForecastEndDate from #tblUserInfo)	
+		end else begin
+			set @curEndPeriodDate = null
+		end					
 		
+		declare @endPeriodDate datetime
 		if @curEndPeriodDate is null begin
 			set @endPeriodDate = GETDATE()
 		end else begin
 			set @endPeriodDate = @curEndPeriodDate
-		end
-		
+		end		
+				
 		set @endPeriodDate =
-		case @Period
-			when N'month' then
+		case @PeriodId
+			--when N'month' then
+			when 1 then
 				DATEADD(MONTH, 1, @endPeriodDate)
-			when N'quarter' then
+			--when N'quarter' then
+			when 2 then
 				DATEADD(MONTH, 3, @endPeriodDate)
-			when N'half' then 
+			--when N'half' then 
+			when 3 then 
 				DATEADD(MONTH, 6, @endPeriodDate)
-			when N'year' then 
+			--when N'year' then 
+			when 4 then 
 				DATEADD(YEAR, 1, @endPeriodDate)
 		end
-
+		
 		--Количество прогнозов, в которых сможет принять участие пользователь	
 		declare @monthCount int
 		set @monthCount = 		
-		case @Period
-			when N'month' then 1
+		case @PeriodId
+			/*when N'month' then 1
 			when N'quarter' then 3
 			when N'half' then 6
-			when N'year' then 12
+			when N'year' then 12*/
+			when 1 then 1
+			when 2 then 3
+			when 3 then 6
+			when 4 then 12
 		end
-								
+		
 		declare @curTryCount int
-		set @curTryCount = (select ForecastTries from #tblUserInfo)
+		if exists (select 1 from #tblUserInfo) begin
+			set @curTryCount = (select ForecastTries from #tblUserInfo)
+		end else begin
+			set @curTryCount = 0
+		end
 				
 		declare @tryCount int
 		set @tryCount = @monthCount * @TariffId * 2 + @curTryCount
-						
+		
 		-- Определяем решение по таблице решений перехода с тарифа на тариф
 		/*declare @curTariffId datetime
 		set @curTariffId = (select TariffId from #tblUserInfo)
@@ -99,21 +115,28 @@ begin
 		end */
 								
 		-- Обновляем запись в таблице UsersForecastInfo
-		update UsersForecastInfo 
-		set TariffId = @TariffId,
-			ForecastTries = @tryCount,
-			ForecastEndDate = @endPeriodDate,
-			Balance = @Sum
-		where UserId = @UserId
+		if @userExists = 1 begin
+			update UsersForecastInfo 
+			set TariffId = @TariffId,
+				ForecastTries = @tryCount,
+				ForecastEndDate = @endPeriodDate,
+				Balance = @Sum
+			where UserId = @UserId
+		end else begin
+			insert UsersForecastInfo (UserId, TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsTariffLetterSent, UserReportId, ReportDate)
+			values (@UserId, @TariffId, @tryCount, GETDATE(), @endPeriodDate, @Sum, 0, 30, GETDATE())
+		end
+		
 		-- Добавляем запись в архив
 		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,ReportDate,UserReportId)
 			select UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent, GETDATE(),30 
 			from UsersForecastInfo
 			where UserId = @UserId
+					
 		-- Добавляем запись в архив баланса
-		insert into UserBalanceHistory(UserId,Sum,Operation,ReportDate,ReportUserId,Comment) 
-			values (@UserId,@Sum,1,GETDATE(),30,@Comment)
-				
+		insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment) 
+			values (@UserId,@Sum,1,GETDATE(),30,@Comment)		
+		
 		if @trancount = 0
 			commit transaction			
 		return 0

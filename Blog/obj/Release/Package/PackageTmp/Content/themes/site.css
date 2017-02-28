@@ -36,6 +36,138 @@ h1, h2, h3 {
     padding: 5px;
     font-weight: normal;
 }
+.button-blue{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #00adee;
+    color: white;    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 2px solid #32c3ff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.button-blue:hover{
+    background-color: #32c3ff;
+    border: 2px solid #32c3ff;
+}
+
+/* Модальное окно Регистрация/Авторизация
+-----------------------------------------------------------*/
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+    }
+#sign-in-box {
+    display: block;
+}
+#sign-in-box .window {
+    position:absolute;
+    right: 0;
+    /*top: 150px;*/
+    width: 340px; 
+    top: 90px;
+    /*-top: 40px;*/
+    /*width:200px;*/
+    /*height:300px;*/
+    display: none;
+    z-index: 9999;
+    padding: 0;/*20px;*/
+    overflow: hidden;
+    border: 3px solid #dfdfdf;
+    background-color: #ffffff;
+}  
+#sign-in-box #sign-in-dialog {
+    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+}
+#sign-in-box #sign-in-dialog form {
+    margin: 20px;
+}
+#sign-in-box #sign-in-dialog div{
+    position: relative;
+}
+#sign-in-box #sign-in-dialog label{
+    color: #333333;
+    font-size: 1.2em;
+}
+#sign-in-box #sign-in-dialog input[type=text],
+#sign-in-box #sign-in-dialog input[type=password]{
+    color: #000;
+    font-size: 1.3em;
+    border: 1px solid #9ba6b3;
+    padding: 7px 5px;
+    background-color: #fff;
+    margin: 5px 0; 
+    width: 288px;    
+}
+#sign-in-box #sign-in-dialog input[type=submit] {
+    margin-top: 10px;
+    cursor: pointer;
+}
+#sign-in-box #sign-in-dialog .under-sign-in {
+    width: 300px;
+    background-color: #ededee;
+    padding: 10px 20px;
+}
+#sign-in-box #sign-in-dialog .forgot-password {
+    position:absolute;
+    right: 0;
+    top: 3px;
+}
+/*#sign-in-box .top {
+    position:absolute;
+    left:0;
+    top:0;
+    width:300px;
+    height:30px;
+    background: #00adee;
+    padding: 10px;
+    }*/
+
+#sign-in-box #sign-in-dialog .close {
+    background-image: url(/Content/system/socials.png);   
+    background-position: -178px -262px; 
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 10;
+    right: 5px;
+    top: 5px;    
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* Кнопки
+-----------------------------------------------------------*/
+input.button-ok{
+    color: #ffffff;
+    background-color: #00adee;
+    display: block;
+    padding: 7px 15px 7px 15px;
+    border: 2px solid #009cd6;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+input.button-ok:hover{
+    background-color: #10bcfc;
+    border: 2px solid #00adee;
+}
+
+#sign-in-box .content {
+    padding-top: 35px;
+}
+
+
 /* Сообщения
 -----------------------------------------------------------*/
 #error-title {
@@ -142,7 +274,9 @@ img.right-float {
     width: 80px;
     font-size: 1.2em;
 }
-
+#column-left section .side-block-body {
+    padding: 0 10px;
+}
 /* Header
 -----------------------------------------------------------*/
 header {
@@ -254,9 +388,10 @@ header {
     float: right;
     text-align:right;    
 }
-#login .login-button img{
+#login .login-button{
     margin-right: 20px;
     margin-top: 43px;
+    display: inline-block;
 }
 #login-block {
     padding-top: 5px;
@@ -479,20 +614,27 @@ header {
 /* Левая колонка МЕНЮ
 -----------------------------------------------------------*/
 #column-left section.org-menu,
-#column-left section.club-menu {
-    margin: 0 0 10px 0;
+#column-left section.club-menu,
+#column-right section.club-menu,
+#column-left section.side-user-profile,
+#column-left section.club-users {
+    margin: 10px 0 10px 0;
 }
 #column-left section.org-menu h3,
-#column-left section.club-menu h3{
+#column-left section.club-menu h3,
+#column-right section.club-menu h3,
+#column-left section.side-user-profile h3,
+#column-left section.club-users h3{
     text-transform: uppercase;
     color: #ffffff;
     background: none;        
     padding: 10px;
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
     background-color: #374e74;
 }
 #column-left section.org-menu ul,
-#column-left section.club-menu ul{
+#column-left section.club-menu ul,
+#column-right section.club-menu ul{
     position: relative;    
     list-style-type: none;
     margin: 0;
@@ -501,12 +643,14 @@ header {
     /*background: url(/Content/system/org_menu_item_separator_bg.jpg) top right no-repeat;*/
 }
 #column-left section.org-menu ul li,
-#column-left section.club-menu ul li{        
+#column-left section.club-menu ul li,
+#column-right section.club-menu ul li{        
     /*background: url(/Content/system/org_menu_item_separator_bg.jpg) bottom right no-repeat;*/
     border-bottom: 1px solid #dfdfdf;
 }
 #column-left section.org-menu ul li a,
-#column-left section.club-menu ul li a {
+#column-left section.club-menu ul li a,
+#column-right section.club-menu ul a {
     text-decoration: none;
     font-weight: normal;
     color: #373c41;
@@ -517,13 +661,16 @@ header {
 #column-left section.org-menu ul li.current a,
 #column-left section.org-menu ul li.current a:hover,
 #column-left section.club-menu ul li.current a,
-#column-left section.club-menu ul li.current a:hover {
+#column-left section.club-menu ul li.current a:hover,
+#column-right section.club-menu ul li.current a,
+#column-right section.club-menu ul li.current a:hover {
     color: #00adee;
     font-weight: 500;
     background: url(/Content/system/li-marker-arrows-over.png) left center no-repeat;
 }
 #column-left section.org-menu ul li a:hover,
-#column-left section.club-menu ul li a:hover {    
+#column-left section.club-menu ul li a:hover,
+#column-right section.club-menu ul li a:hover {    
     color: #00adee;
     background: url(/Content/system/li-marker-arrows-over.png) left center no-repeat;
 }
@@ -818,14 +965,14 @@ header {
     overflow: hidden;
 }
 #register h1{
-    background: none;
-    background: url(/Content/system/h1_bg.gif) center right repeat-x;
-    color: #4b78b9;
-    margin: 13px 5px 10px 5px;
-    padding: 0;
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 10px;    
+    text-transform: uppercase;
 }
 #register h1 span {
-    background: white;
+    background: none;
     padding: 0 8px 0 0;
     text-transform: uppercase;
 }
@@ -1523,19 +1670,31 @@ header {
 
 /* Список прогнозов
 -----------------------------------------------------------*/
-#forecast-list {
+#forecast-list,
+#club-users,
+#club-rules,
+#club-about,
+#club-archive {
     padding: 10px 20px 10px 20px;
     position: relative;    
     overflow: hidden;
 }
-#forecast-list h1{
+#forecast-list h1,
+#club-users h1,
+#club-rules h1,
+#club-about h1,
+#club-archive h1{
     background-color: #374e74;
     color: #ffffff;
     margin: 0 0 5px 0;
     padding: 10px;
     text-transform: uppercase;
 }
-#forecast-list h1 span {
+#forecast-list h1 span,
+#club-users h1 span,
+#club-rules h1 span,
+#club-about h1 span,
+#club-archive h1 span {
     background: white;
     padding: 0 8px 0 0;
     text-transform: uppercase;
@@ -1549,25 +1708,318 @@ header {
     font-style: italic;
     text-align: left;
 }
-
-#forecast-list .forecasts .forecast-prev {
-    margin: 0 0 40px 0;
+#forecast-list .forecasts {
+    position: relative;
+    overflow: hidden;
 }
-#forecast-list .forecasts .forecast-prev.eur h1{
-    background-color: #6e148c;
+#forecast-list .forecasts .forecast-prev {    
+    position: relative;
+    padding: 0;    
+    width: 155px;    
+    border: 1px solid #e5e5e5;
 }
-#forecast-list .forecasts .forecast-prev.oil h1{
-    background-color: #0d1823;
+#forecast-list .forecasts .forecast-prev.usd {
+    float: left;
+    margin: 5px 11px 10px 0;
 }
-#forecast-list .forecasts .forecast-prev.stock-sberbank h1{
-    background-color: #1a9f29;
+#forecast-list .forecasts .forecast-prev.eur {
+    float: left;
+    margin: 5px 0 10px 0;
+}
+#forecast-list .forecasts .forecast-prev.oil {
+    margin: 5px 0 10px 11px;
+    float: right;
+}
+#forecast-list .forecasts .forecast-prev.sberbank {
+    float: right;
+    margin: 5px 0 10px 0;
+}
+#forecast-list .forecasts .forecast-prev .users{
+    height: 200px;
+    padding: 0 10px 10px 10px;
 }
 #forecast-list .forecasts .forecast-prev.usd h1{
-    background-color: #1e826e;
+    background-color: #741d88;
+}
+#forecast-list .forecasts .forecast-prev.eur h1{
+    background-color: #2195c9;
+}
+#forecast-list .forecasts .forecast-prev.oil h1{
+    background-color: #da9627;
+}
+#forecast-list .forecasts .forecast-prev.sberbank h1{
+    background-color: #17a668;
+}
+#forecast-list .forecasts .forecast-prev .users p{
+    margin: 0 0 5px 0;
+}
+#forecast-list .forecasts .forecast-prev .users .avatar {
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;    
+}
+#forecast-list .forecasts .forecast-prev .users .avatar-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
+    background: url(/Content/lk/avatars/mask-30px.png) 0 0 no-repeat;
+}
+#forecast-list .forecasts .forecast-prev .users .value {
+    position: relative;
+    float: left;
+}
+#forecast-list .forecasts .forecast-prev .users .value-data {
+    position: relative;
+    float: left;
+}
+#forecast-list .forecasts .forecast-prev .do-forecast {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 116px;
+    margin: 0 0 10px 9px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    /*font-weight: 500;*/
+    opacity: 0.8;
+}
+#forecast-list .forecasts .forecast-prev .do-forecast:hover {
+    opacity: 1.0;
+}
+#forecast-list .forecasts .forecast-prev.usd .do-forecast{
+    background-color: #741d88;
+}
+#forecast-list .forecasts .forecast-prev.eur .do-forecast{
+    background-color: #2195c9;
+}
+#forecast-list .forecasts .forecast-prev.oil .do-forecast{
+    background-color: #da9627;
+}
+#forecast-list .forecasts .forecast-prev.sberbank .do-forecast{
+    background-color: #17a668;
+}
+#forecast-list .forecasts .forecast-prev .read-more{
+    padding: 5px 5px 7px 5px;
+    text-align: center;
+}
+#forecast-list .forecasts .forecast-prev .read-more a{
+    color: white;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+#forecast-list .forecasts .forecast-prev.usd .read-more{
+    background-color: #741d88;
+}
+#forecast-list .forecasts .forecast-prev.eur .read-more{
+    background-color: #2195c9;
+}
+#forecast-list .forecasts .forecast-prev.oil .read-more{
+    background-color: #da9627;
+}
+#forecast-list .forecasts .forecast-prev.sberbank .read-more{
+    background-color: #17a668;
 }
 
 /* Прогноз детали
  -----------------------------------------------------------*/
+#forecast-header {
+    position: relative;
+    overflow: hidden;    
+    padding: 10px 20px 0 20px;
+}
+#forecast-header .forecast-prev {    
+    position: relative;
+    padding: 0;    
+    width: 155px;    
+    /*border: 1px solid #e5e5e5;*/
+    margin: 0;
+}
+#forecast-header .forecast-prev.usd {
+    float: left;
+    margin: 5px 13px 0px 0;
+    background-color: #823494;
+}
+#forecast-header .forecast-prev.eur {
+    float: left;
+    margin: 5px 0 0px 0;
+    background-color: #38a0cf;
+}
+#forecast-header .forecast-prev.oil {
+    margin: 5px 0 0px 13px;
+    float: right;
+    background-color: #e1ab52;
+}
+#forecast-header .forecast-prev.sberbank {
+    float: right;
+    margin: 5px 0 0px 0;
+    background-color: #3ab37f;
+}
+#forecast-header .forecast-prev.current{
+    height: 165px;
+}
+#forecast-header .forecast-prev .header{
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#forecast-header .forecast-prev.usd .header{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .header{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .header{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .header{
+    background-color: #17a668;
+}
+#forecast-header .forecast-prev .do-forecast {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 116px;
+    margin: 0 0 10px 9px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ffffff;
+    opacity: 0.8;
+}
+#forecast-header .forecast-prev .do-forecast:hover {
+    opacity: 1.0;
+}
+#forecast-header .forecast-prev.usd .do-forecast{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .do-forecast{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .do-forecast{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .do-forecast{
+    background-color: #17a668;
+}
+#forecast-header .forecast-prev .read-more{
+    padding: 5px 5px 7px 5px;
+    text-align: center;
+}
+#forecast-header .forecast-prev .read-more a{
+    color: white;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+#forecast-header .forecast-prev.usd .read-more{
+    background-color: #741d88;
+}
+#forecast-header .forecast-prev.eur .read-more{
+    background-color: #2195c9;
+}
+#forecast-header .forecast-prev.oil .read-more{
+    background-color: #da9627;
+}
+#forecast-header .forecast-prev.sberbank .read-more{
+    background-color: #17a668;
+}
+#forecast {
+    padding: 0 20px 10px 20px;
+}
+#forecast h1{
+    background-color: #374e74;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#forecast h1.usd{
+    background-color: #741d88;
+}
+#forecast h1.eur{
+    background-color: #2195c9;
+}
+#forecast h1.oil{
+    background-color: #da9627;
+}
+#forecast h1.sberbank{
+    background-color: #17a668;
+}
+#forecast .info {
+    position: relative;
+    margin: 10px;
+    padding-left: 55px;
+    background: url(/Content/system/cap.png) top left no-repeat;
+    overflow: hidden;
+}
+#forecast .win-amount{    
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+#forecast .win-amount span{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #38a0cf;
+}
+#forecast .sponsor{    
+    position: relative;
+    float: right;
+}
+#forecast .sponsor span{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #38a0cf;
+}
+#forecast .users {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+}
+#forecast .users h2{
+    color: #2195c9;
+    text-transform: uppercase;    
+}
+
+/* Графики
+ -----------------------------------------------------------*/
+.forecast-chart {
+    margin: 10px 0 10px 0;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    padding: 10px 20px;
+}
+.forecast-chart .stat-info {
+    margin-top: 10px;
+}
+.forecast-chart .stat-info span{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Блок Принять участие в прогнозе
+ -----------------------------------------------------------*/
+#forecast .disable-add-to-forecast {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+}
 
 /* Блок Читать также
  -----------------------------------------------------------*/
@@ -1658,7 +2110,7 @@ header {
     overflow: hidden;
 }
 #feedback h1, #rules h1{
-     background-color: #374e74;
+    background-color: #374e74;
     color: #ffffff;
     margin: 0 0 10px 0;
     padding: 10px;    
@@ -1832,6 +2284,10 @@ header {
 #copyright p.header {
     color: #ffffff;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#copyright a{
+    display: inline-block;
 }
 
 /* Социальные сети
@@ -1870,4 +2326,621 @@ header {
 }
 #footer-socials .socials_g {
     background-position: -34px -174px;
+}
+
+/* Публикации на главной странице
+-----------------------------------------------------------*/
+#main section.articles {
+    position: relative;
+    margin: 10px 10px 10px 20px;
+    overflow: hidden;
+    padding-right: 10px;
+}
+#main section.articles h1{    
+    background-color: #374e74;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+/*#main section.articles h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}*/
+
+/* Центральная статья
+-----------------------------------------------------------*/
+#main .article-prev {
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dfdfdf;
+}
+#main section.articles .article-prev h1 {
+    background: none;
+    color: #3c4249;
+    margin: 0;
+    font-size: 1.4em;
+    padding: 0;
+}
+#main section.articles .article-prev h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#main .article-prev .article-prev-info p{
+    margin: 5px 0 10px 0;
+}
+#main .article-prev .article-prev-info p time {
+    /*padding: 5px 7px;
+    background-color: #83abe0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;*/
+    color: #6c6d70;    
+    margin: 0 10px 0 0px;
+}
+#main .article-prev .article-prev-info p a {
+    color: #3d66ab;
+    background: url(/Content/system/href-arrows.png) 0px 6px no-repeat;
+    padding-left: 15px;
+    text-transform: uppercase; 
+    margin-left: 10px;
+    font-weight: 700;
+}
+#main .article-prev .article-prev-info p a:hover {
+    text-decoration: none;
+}
+#main .article-prev .article-prev-text {
+    clear: both;
+    padding: 0;
+}
+#main .article-prev .article-prev-text p {
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+#main .article-prev .article-prev-text img{
+    border: 1px solid navy;
+}
+#main .article-prev .article-prev-footer {
+    /*border-top: 1px solid #c4e2ff;*/
+    clear: both;
+    overflow: hidden;
+    /*background: url(/Content/system/art_footer_bg.gif) left top repeat;*/
+    /*height: 30px;*/
+    /*padding-top: 3px;*/
+}
+/*#main .article-prev .article-prev-footer-tab {    
+    position: relative;
+    height: 24px;    
+    background: none;
+}
+#main .article-prev .article-prev-footer-tab-readmore {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+}
+#main .article-prev .article-prev-footer-tab-comments {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+}
+#main .article-prev .article-prev-footer-tab-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 24px;
+    z-index: 3;
+    background: none;
+    background: url(/Content/system/footer_tab_left.png) left top no-repeat;
+}
+#main .article-prev .article-prev-footer-tab-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 24px;
+    z-index: 3;
+    background: none;
+    background: url(/Content/system/footer_tab_right.png) left top no-repeat;
+}*/
+#main .article-prev .article-prev-footer .read-more {
+    position: relative;  
+    float: left;
+}
+#main .article-prev .article-prev-footer .read-more a{
+    color: #ffffff;
+    background-color: #00adee;
+    display: block;    
+    padding: 5px 10px 7px 10px;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+}
+#main .article-prev .article-prev-footer .read-more-comments {
+    position: relative;    
+    float: right;
+    padding-right: 10px;
+}
+#main .article-prev .article-prev-footer .read-more-comments a{
+    position: relative;    
+    color: #6c6d70;
+    display: block;
+    background: url(/Content/system/comment-marker.png) left top no-repeat;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+/* Связанные статьи на главной странице
+-----------------------------------------------------------*/
+#main .related-articles {
+    margin: 0px;
+}
+#main .related-articles p.p-header {
+    font-size: 1.2em;
+    text-transform: uppercase;    
+    color: #ffffff;
+    margin: 10px 0 10px 0;
+    background-color: #374e74;
+    padding: 10px;
+}
+#main .related-articles ul.related-articles-list {
+    margin: 5px 0;
+    list-style-type: none;
+    padding: 0;
+    /*list-style-image: url(/Content/system/li_marker.png);*/
+}
+#main .related-articles ul.related-articles-list li{    
+    background: url(/Content/system/li_marker.png) left center no-repeat;
+    padding: 0 0 3px 15px;
+}
+#main .related-articles ul.related-articles-list li a{
+    color: #3d66ab;    
+    text-decoration: underline;
+    font-weight: 700; 
+}
+#main .related-articles ul.related-articles-list li a:hover {
+    text-decoration: none;
+}
+#main .related-articles ul.related-articles-list li span{
+    color: gray;
+    padding-left: 5px;
+}
+
+/* Список публикаций
+-----------------------------------------------------------*/
+#arts-list {
+    padding: 10px 20px;
+    position: relative;    
+    overflow: hidden;
+}
+#arts-list h1{
+    background-color: #374e74;
+    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 10px;    
+    text-transform: uppercase;
+}
+/*#arts-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}*/
+#arts-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#arts-list .org-list-header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#arts-list .art-list-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+    padding-left: 5px;
+}
+#arts-list .art-list-count span {
+    color: black;
+}
+#arts-list .arts {
+    padding: 0;
+    margin: 0;
+}
+#arts-list .article-prev {
+    border-top: 4px solid #dfdfdf;/*#c8ceda*/
+}
+#arts-list .article-prev h1 {
+    background: none;
+    color: #3c4249;
+    margin: 10px 0 0 0;
+    font-size: 1.3em;
+    padding: 0;
+}
+#arts-list .article-prev h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#arts-list .article-prev-info {
+    margin-top: 5px;
+}
+/*#arts-list .article-prev-text {
+    font-size: 1.1em;
+}*/
+
+/*Старница с публикацией*/
+#article-detail {
+    margin: 10px 20px;
+}
+#article-detail h1 {
+    background: none;
+    color: #6c6d70;
+    margin: 10px 0 1px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 0;
+}
+#article-detail h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#article-detail .article-info p{
+    margin: 5px 0 15px 0;
+}
+#article-detail .article-info p time {    
+    color: #6c6d70;    
+    margin: 0 10px 0 0px;
+}
+#article-detail .article-info p a {
+    color: #3d66ab;
+    background: url(/Content/system/href-arrows.png) 0px 6px no-repeat;
+    padding-left: 15px;
+    text-transform: uppercase; 
+    margin-left: 10px;
+    font-weight: 700;
+}
+#article-detail .article-info p a:hover {
+    text-decoration: none;
+}
+#article-detail .article-text {
+    clear: both;
+}
+#article-detail .article-text p{
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+#article-detail .article-text p.article-author{
+    text-indent: 0px;
+    text-align: right;
+}
+#article-detail .article-text img{
+    border: 1px solid #4c5a6b;
+}
+
+/* Комментарии к публикации */
+#article-comments {
+    padding: 0;
+    margin: 10px 20px;
+    border-top: 2px solid #dfdfdf;
+    border-bottom: 2px solid #dfdfdf;
+}
+#article-comments h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #374e74;        
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    margin-bottom: 10px;
+}
+#article-comments .comments {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#article-comments .comments .item {
+    position: relative;
+    float: left;
+    width: 600px;
+    border: 1px solid #d3dde6;
+    background-color: #f5f6fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#article-comments .comments .odd {
+    float: right;
+}
+#article-comments .comment-author {
+ color: #5180c4;   
+}
+#article-comments .comment-date {
+    color: #71859d;
+    font-size: 0.9em;
+}
+#article-comments .item .art-comment-rating {
+    position: relative;
+    float: right;
+    margin: 0 0 5px 10px;
+}
+#article-comments .item .art-comment-rating span.like{
+    color: green;
+    font-weight: 500;
+}
+#article-comments .item .art-comment-rating span.dislike{
+    color: maroon;
+    font-weight: 500;
+}
+
+/* Форма оставить комментарий */
+.art-comment-form-link{
+    margin-left: 20px;
+}
+.art-comment-form-link span{
+    color: gray;
+    padding-top: 5px;    
+}
+#module-form-comment {    
+    border: 2px dashed #c2cbd7;
+    padding: 20px;
+    margin: 20px 20px 10px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: url(/Content/system/form_review_bg.png) top right no-repeat;
+    background-color: #f5f7f9;
+}
+#module-form-comment h3{
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 5px 0 5px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#form-comment label {
+    color: #75818f;
+}
+#form-comment #UserName{
+    padding: 5px;
+    color: #3c4249;
+    width: 300px;
+}
+#form-comment #CommentText{
+    padding: 5px;
+    color: #3c4249;
+    width: 600px;
+    height: 100px;
+}
+#form-comment #LikeDislike {
+    padding: 5px;
+    color: #39397b;
+    margin-left: 5px;
+}
+#form-comment .editor-field-submit {
+    padding-top: 10px;
+}
+#form-comment input[type=submit] {
+    padding: 5px 10px;
+}
+#spinning-refresh-captcha, #spinning-submit{
+    display: none;
+}
+#comment-created {
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+/* Профиль пользователя (блок)
+-----------------------------------------------------------*/
+#column-left section.side-user-profile {
+    border: 1px solid #e5e5e5; 
+    padding-bottom: 10px;
+}
+#column-left section.side-user-profile .user-info {
+    position: relative;
+    margin: 0 0 10px 0;
+    clear: both;
+    overflow: hidden;
+}
+#column-left section.side-user-profile .avatar {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;    
+}
+#column-left section.side-user-profile .avatar-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 9;
+    background: url(/Content/lk/avatars/mask.png) 0 0 no-repeat;
+}
+#column-left section.side-user-profile .nic {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    font-size: 1.3em;
+    color: #646464;
+    font-weight: bold;
+}
+#column-left section.side-user-profile .rang {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    color: #646464;
+}
+#column-left section.side-user-profile .user-tariff,
+#column-left section.side-user-profile .user-balance {
+    position: relative;
+    margin: 0;
+    clear: both;
+    overflow: hidden;
+    color: #646464;
+}
+#column-left section.side-user-profile .user-tariff span,
+#column-left section.side-user-profile .user-balance span {
+    color: #646464;
+    font-weight: 700;
+}
+#column-left section.side-user-profile .current-forecasts {
+    margin: 10px 0 0 0;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    color: #646464;
+}
+#column-left section.side-user-profile .current-forecasts .caption {
+    font-weight: bold;
+    position: relative;    
+}
+#column-left section.side-user-profile .current-forecasts .forecast {    
+    position: relative;    
+    overflow: hidden;
+    float: left;
+    clear: both;
+    width: 100%; 
+}
+#column-left section.side-user-profile .current-forecasts .subject {
+    position: relative;
+    color: #646464;    
+    float: left;
+    width: 130px;
+}
+#column-left section.side-user-profile .current-forecasts .state {
+    position: relative;
+    float: left;
+}
+#column-left section.side-user-profile .current-forecasts-enddate {
+    margin: 10px 0 0 0;
+}
+#column-left section.side-user-profile .current-forecasts-enddate .caption{
+    color: black;
+}
+#column-left section.side-user-profile .logout {
+    margin: 10px 0 0 0;
+}
+
+/* Список участников клуба
+-----------------------------------------------------------*/
+#column-left section.club-users {
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+#column-left section.club-users .users{    
+    padding: 0 10px 10px 10px;
+    position: relative;
+}
+#column-left section.club-users .user-info {
+    position: relative;
+    margin: 0 0 10px 0;
+    clear: both;
+    overflow: hidden;
+}
+#column-left section.club-users .avatar {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 6px;
+}
+#column-left section.club-users .avatar .avatar-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    background: url(/Content/lk/avatars/mask.png) 0 0 no-repeat;
+}
+#column-left section.club-users .nic {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    font-size: 1.2em;
+    color: #646464;
+    font-weight: bold;
+}
+#column-left section.club-users .rang {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    color: #646464;
+}
+#column-left section.club-users .user-forecast-info {
+    position: relative;
+    padding-left: 10px;
+    float: left;
+    color: #646464;
+    font-size: 0.9em;
+}
+#column-left section.club-users .user-forecast-info span{
+    font-weight: bold;
+}
+
+/* Счетчик 
+-----------------------------------------------------------*/
+#cdt {
+    font-size: 1.3em;
+    color: #646464;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 0 0;
+    font-weight: bold;
+}
+#cdt .number-wrapper {
+    margin: 0;
+    padding: 0 15px;    
+    position: relative;
+}
+#cdt .number {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: #fff;
+    padding: 0 2px;
+    line-height: 8px;
+    text-align: center;
+}      
+#cdt .caption {
+   font-size: 0.7em;
+   position: absolute;
+   top: -15px;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   color: #646464;
+   font-weight: normal;
 }

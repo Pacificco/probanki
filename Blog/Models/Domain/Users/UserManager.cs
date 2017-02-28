@@ -191,13 +191,16 @@ namespace Bankiru.Models.Domain.Users
             ForecastManager manager = new ForecastManager();
             profile.ForecastSubjects = manager.GetForecastSubjects();
 
+            //Информация о тарифах
+            profile.TariffInfo = GetUserTariffInfo(userId);
+
             return profile;
         }
         public List<VM_UserBalanceHistoryItem> GetUserBalanceHistory(int userId)
         {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserBalanceHistory.Name, GlobalParams.GetConnection());
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserBalanceHistoryView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserBalanceHistory.Params.Id, userId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserBalanceHistoryView.Params.UserId, userId);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -214,6 +217,7 @@ namespace Bankiru.Models.Domain.Users
                                 historyItem = new VM_UserBalanceHistoryItem();
                                 for (int j = 0; j < reader.FieldCount; j++)
                                     historyItem.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+                                history.Add(historyItem);
                             }
                         }
                     }
@@ -222,7 +226,7 @@ namespace Bankiru.Models.Domain.Users
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                         DbStruct.PROCEDURES.UserBalanceHistory.Name,
+                         DbStruct.PROCEDURES.UserBalanceHistoryView.Name,
                          ex.ToString());
                     log.Error(_lastError);
                     return null;
@@ -239,9 +243,9 @@ namespace Bankiru.Models.Domain.Users
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.AddBalance.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.UserId, info.UserId);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.TariffId, info.TariffId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.TariffId, (byte)info.TariffId);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Sum, info.Sum);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Period, info.Period);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.PeriodId, info.PeriodId);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddBalance.Params.Comment, info.Comment);
 
             command.CommandTimeout = 15;
@@ -249,27 +253,39 @@ namespace Bankiru.Models.Domain.Users
             {
                 try
                 {
-                    int result = command.ExecuteNonQuery();
-                    switch (result)
+                    if (command.ExecuteNonQuery() == 1)
                     {
-                        case 2:
-                            _lastError = "Ошибка во время пополнения баланса пользователя!\nПользователь не найден.";
-                            log.Error(_lastError);
-                            return false;
-                        case 1:
-                            _lastError = "Ошибка во время пополнения баланса пользователя!\nОшибка во время выполнения хранимой процедуры AddBalance.";
-                            log.Error(_lastError);
-                            return false;
-                        case 0:
-                            return true;
-                        default:
-                            return true;
-
+                        _lastError = "Ошибка во время пополнения баланса пользователя! Ошибка во время выполнения хранимой процедуры AddBalance.";
+                        log.Error(_lastError);
+                        return false;
                     }
+                    else
+                    {
+                        return true;
+                    }
+                    //switch (result)
+                    //{
+                    //    case 2:
+                    //        _lastError = "Ошибка во время пополнения баланса пользователя! Пользователь не найден.";
+                    //        log.Error(_lastError);
+                    //        return false;
+                    //    case 1:
+                    //        _lastError = "Ошибка во время пополнения баланса пользователя! Ошибка во время выполнения хранимой процедуры AddBalance.";
+                    //        log.Error(_lastError);
+                    //        return false;
+                    //    case -1:
+                    //        _lastError = "Ошибка во время пополнения баланса пользователя! Ошибка во время выполнения хранимой процедуры AddBalance.";
+                    //        log.Error(_lastError);
+                    //        return false;
+                    //    case 0:
+                    //        return true;
+                    //    default:
+                    //        return true;
+                    //}
                 }
                 catch (Exception ex)
                 {
-                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
                         DbStruct.PROCEDURES.AddBalance.Name,
                         ex.ToString());
                     log.Error(_lastError);

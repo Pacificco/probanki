@@ -198,9 +198,10 @@ namespace Bankiru.Models.Domain.Club
                 }
                 catch (Exception ex)
                 {
-                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.AddUserToForecast.Name, ex.ToString());
-                    log.Error(_lastError);
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!",
+                        DbStruct.PROCEDURES.AddUserToForecast.Name);
+                    log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!",
+                        DbStruct.PROCEDURES.AddUserToForecast.Name, ex.ToString()));
                     return false;
                 }
                 finally

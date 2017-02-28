@@ -47,7 +47,9 @@
                         <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" />
                     </td>
                     <td class="nic">
-                        @item.Nic
+                        <a href="@Url.Action("Edit", "Users", new { user_id = item.Id })" title="Редактировать @item.Nic">
+                            @item.Nic
+                        </a>
                     </td>
                     <td class="fio">
                         @item.GetFIO()

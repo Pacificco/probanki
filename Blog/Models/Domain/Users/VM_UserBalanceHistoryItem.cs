@@ -37,34 +37,41 @@ namespace Bankiru.Models.Domain.Users
 
         public bool SetFieldValue(string fName, object fValue)
         {
-            switch (fName)
+            try
             {
-                case "Id":
-                    Id = (int)fValue;
-                    break;
-                case "UserId":
-                    UserId = (int)fValue;
-                    break;
-                case "Sum":
-                    Sum = (double)fValue;
-                    break;
-                case "Operation":
-                    Operation = (byte)fValue;
-                    break;
-                case "ReportDate":
-                    ReportDate = (DateTime)fValue;
-                    break;
-                case "ReportUserId":
-                    ReportUserId = (int)fValue;
-                    break;
-                case "Comment":
-                    Comment = (string)fValue;
-                    break;                
-                default:
+                switch (fName)
+                {
+                    case "Id":
+                        Id = (int)fValue;
+                        break;
+                    case "UserId":
+                        UserId = (int)fValue;
+                        break;
+                    case "Balance":
+                        Sum = (double)fValue;
+                        break;
+                    case "Operation":
+                        Operation = (byte)fValue;
+                        break;
+                    case "ReportDate":
+                        ReportDate = (DateTime)fValue;
+                        break;
+                    case "ReportUserId":
+                        ReportUserId = (int)fValue;
+                        break;
+                    case "Comment":
+                        Comment = (string)fValue;
+                        break;
+                    default:
 
-                    return false;
+                        return false;
+                }
+                return true;
             }
-            return true;
+            catch
+            {
+                return false;
+            }
         }
     }
 }

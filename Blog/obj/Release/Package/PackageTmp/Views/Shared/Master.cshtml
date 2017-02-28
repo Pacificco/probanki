@@ -23,17 +23,31 @@
     <meta name="description" content="@ViewBag.metaDescription" />    
     <meta name="keywords" content="@ViewBag.metaKeywords" />
     
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/arts/css")
+    @Styles.Render("~/Content/css")    
     @RenderSection("styles", required: false)
     
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body>    
+<body>
+
+    <!-- Модальное окно Регистрация/Авторизация -->
+    <div id="sign-in-box">
+        <div id="sign-in-dialog" class="window">            
+            @if (!isAuthorized)
+            {
+                @Html.Action("_getModuleLogin", "Account")
+            }
+        </div>
+    </div>
+
+    <!-- Маска, затемняющая фон -->
+    <div id="mask"></div>
+
     <header id="header">
         <div id="header-inner">
             <section id="header-line-top">
@@ -45,15 +59,14 @@
                 <aside id="login">
                     @if (isAuthorized)
                     {
-                         @Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.Username })
+                         @*@Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.Username })*@
                     }
                     else
                     {
-                        /*@Html.Action("_getModuleLogin", "Account")*/
-                        @*<a class="login-button" href="#" title="Регистрация/Вход"><img src="~/Content/system/login-button.png" title="Регистрация / Вход на ProBanki.net" alt="Регистрация/Вход" /></a>*@
+                        @*<a class="login-button button-blue" href="#sign-in-dialog" name="modal" title="Регистрация / Вход на ProBanki.net">Регистрация / Вход</a>*@
                     }                    
-                </aside>
-            </section>            
+                </aside>                
+            </section>                            
         </div>
     </header>
     <div id="top-menu-wrapper">
@@ -62,23 +75,12 @@
     <section id="wrapper">
         <div id="column-middle-left">            
             <div id="main">
-                @if (ViewData["InfoMessage"] != null)
-                { 
-                    <div id="info-title">@Convert.ToString(ViewData["InfoMessage"])</div>
-                }
-                @if (ViewData["WarningMessage"] != null)
-                { 
-                    <div id="warning-title">@ViewData["WarningMessage"]</div>
-                }
-                @if (ViewData["ErrorMessage"] != null)
-                { 
-                    <div id="error-title">@Convert.ToString(ViewData["ErrorMessage"])</div>
-                }
                 @RenderSection("middle_top", required: false)
                 @RenderBody()                
                 @RenderSection("middle_bottom", required: false)
             </div>            
             <div id="column-left">
+                @Html.Action("_getModuleSideUserProfile", "Users", null)
                 @RenderSection("left_top", required: false)
 
                 <section id="social-widgets">
@@ -112,7 +114,7 @@
         <section id="footer-wrapper">
             <div id="copyright">                
                 <p class="header">Реклама на сайте</p>
-                <p><a class="order-advertising" href="/obratnaya-svyaz" title="Заказать рекламу">Заказать</a><br /><br /><br /><br /><br /><br /><br /></p>
+                <a class="button-blue" href="/obratnaya-svyaz" title="Заказать рекламу">Заказать</a><br /><br /><br /><br /><br /><br /><br />
                 <p>© @DateTime.Now.Year.ToString() г. ProBanki.net<p/>                
             </div>
             <div id="footer-menu">
@@ -152,7 +154,7 @@
             </div>
         </section>        
     </footer>
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
     @RenderSection("scripts", required: false)    
@@ -172,6 +174,7 @@
     </script>
 
     <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/countdown.js"></script>
 
 </body>
 </html>

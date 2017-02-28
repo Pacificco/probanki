@@ -37,12 +37,12 @@
        {
            title = "Ревизия"
        })</li>
-        @if(isAuthorized)
+        @if (isAuthorized)
         {
-            <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", null, new
-            {
-                title = "Клуб"
-            })</li>
+       <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", null, new
+       {
+            title = "Клуб"
+       })</li>
         }
         <li class="@Html.GetMenuItemClass("news", Model)">@Html.RouteLink("Новости", "news_items", null, new
        {

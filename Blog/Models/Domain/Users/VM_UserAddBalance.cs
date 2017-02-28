@@ -15,11 +15,11 @@ namespace Bankiru.Models.Domain.Users
         [Range(1,4,ErrorMessage = "Вы не указали тариф!")]
         public int TariffId { get; set; }
         [Display(Name = "Сумма (в руб.)")]
-        [Required(ErrorMessage = "Вы не указали сумму!")]
+        [Range(1,100000,ErrorMessage = "Вы не указали сумму!")]
         public double Sum { get; set; }
         [Display(Name = "Период")]
-        [Range(1, 10, ErrorMessage = "Вы не указали период!")]
-        public string Period { get; set; }
+        [Range(1,4,ErrorMessage = "Вы не указали период!")]
+        public int PeriodId { get; set; }
         [Display(Name = "Комментарий")]        
         [MaxLength(255, ErrorMessage = "Максимальная длина Комментария не должна превышать 255 символов!")]
         public string Comment { get; set; }        

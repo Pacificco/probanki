@@ -81,6 +81,24 @@ namespace Bankiru.Controllers
         {
             return View();
         }
+        [HttpGet]
+        [OutputCache(Duration = 60)]
+        public ActionResult About()
+        {
+            return View();
+        }
+        [HttpGet]
+        [OutputCache(Duration = 60)]
+        public ActionResult Rules()
+        {
+            return View();
+        }
+        [HttpGet]
+        [OutputCache(Duration = 60)]
+        public ActionResult Users()
+        {
+            return View();
+        }
 
         #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]

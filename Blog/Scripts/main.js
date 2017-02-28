@@ -33,7 +33,7 @@ function auth_success(data) {
         $('#mask, .window').hide();
     });
 
-    var id = $('auth-success-mes');
+    var id = $('#auth-success-mes');
     if (id != null) {
         location.reload();
     }

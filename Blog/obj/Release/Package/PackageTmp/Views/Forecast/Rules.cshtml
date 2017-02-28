@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Правила клуба аналитиков";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Правила клуба";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "index, follow";
+
+    ViewBag.CurrentMenuItem = "club";
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "rules" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="club-rules">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+
+</article>
