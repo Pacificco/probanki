@@ -23,7 +23,7 @@ namespace Bankiru.Controllers
 {
     public abstract class BaseController : Controller
     {
-        #region ПОЛЯ И СВОЙСТВА        
+        #region ПОЛЯ И СВОЙСТВА
         /// <summary>
         /// Подключение
         /// </summary>

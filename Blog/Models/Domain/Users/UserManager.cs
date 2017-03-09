@@ -299,6 +299,67 @@ namespace Bankiru.Models.Domain.Users
             } 
         }
 
+        #region РЕДАКТИРОВАНИЕ
+        public bool UpdateUserProfile(VM_User user)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UpdateUserProfile.Name, GlobalParams.GetConnection());
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.UserId, user.Id);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Nic, user.Nic.Trim());
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Name, user.Name.Trim());
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.LastName, 
+                    String.IsNullOrEmpty(user.LastName) ? "" : user.LastName.Trim());
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.FatherName,
+                    String.IsNullOrEmpty(user.FatherName) ? "" : user.FatherName.Trim());
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Email, user.Email.Trim());
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Sex, (int)user.Sex);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.IsSubscribed, user.IsSubscribed);
+
+                command.CommandTimeout = 15;
+                lock (GlobalParams._DBAccessLock)
+                {
+                    try
+                    {
+                        int result = command.ExecuteNonQuery();
+                        if (result == 1)
+                        {
+                            _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!",
+                            DbStruct.PROCEDURES.AddBalance.Name);
+                            log.Error(_lastError);
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
+                            DbStruct.PROCEDURES.AddBalance.Name,
+                            ex.ToString());
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    finally
+                    {
+                        if (command != null)
+                            command.Dispose();
+                    }
+                } 
+                return true;
+            }
+            catch(Exception ex)
+            {
+                _lastError = ex.ToString();
+                log.Error(_lastError);
+                return false;
+            }
+        }
+        #endregion
+
         #region ЧАСТНЫЕ МЕТОДЫ
         private int _getUsersTotalCount(VM_UsersFilters filter)
         {

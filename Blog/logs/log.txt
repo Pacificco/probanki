@@ -7418,3 +7418,65 @@ ERROR 2017-02-28 20:31:13,535 16924ms BaseController         EmailConfirmed     
    в System.Data.SqlClient.SqlConnection.Open()
    в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 42
 ClientConnectionId:00000000-0000-0000-0000-000000000000
+ERROR 2017-03-02 22:13:17,653 22794ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:14:02,756   524ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:14:42,183   253ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:15:01,394 19464ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:15:22,502 40571ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:17:06,849   262ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-02 22:17:15,436  4732ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:05:59,888 155597ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:20:25,509   289ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:20:52,446 27226ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:39:22,558 1137338ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:42:33,775   311ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:43:06,935 33470ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:43:11,524 38060ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:48:37,453 15205ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:55:39,155 40621ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:56:27,437 25847ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-05 13:56:36,382 34792ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 20:01:43,445 52203ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 20:16:13,622  9444ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 20:41:09,726 62644ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 20:53:29,295 117205ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 23:08:18,527 15300ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 23:11:45,631 222405ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:13:13,203 309977ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:13:23,039 319813ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:15:14,787 13436ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-09 23:15:22,647 21296ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:15:54,715 53364ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:16:51,407 110056ms UserManager            UpdateUserProfile  - System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
+ERROR 2017-03-09 23:19:26,664  9286ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.

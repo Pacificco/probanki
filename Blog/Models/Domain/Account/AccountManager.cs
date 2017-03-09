@@ -223,10 +223,14 @@ namespace Bankiru.Models.Domain.Account
                 }
             }
         }
-        public bool MailExists(string email)
+        public bool MailExists(string email, int? user_id = null)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.MailExists.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
+            if (user_id == null)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.MailExists.Params.UserId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.MailExists.Params.UserId, (int)user_id);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.MailExists.Params.Email, email.Trim());
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
@@ -252,10 +256,14 @@ namespace Bankiru.Models.Domain.Account
                 }
             }
         }
-        public bool NicExists(string nic)
+        public bool NicExists(string nic, int? user_id = null)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.NicExists.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
+            if (user_id == null)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.NicExists.Params.UserId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.NicExists.Params.UserId, (int)user_id);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.NicExists.Params.Nic, nic.Trim());
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)

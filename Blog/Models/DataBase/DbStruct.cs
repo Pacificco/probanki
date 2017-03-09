@@ -820,6 +820,7 @@ namespace Bankiru.Models.DataBase
                 /// </summary>
                 public static class Params
                 {
+                    public static string UserId = "@UserId";
                     public static string Email = "@Email";
                 }
             }
@@ -837,7 +838,8 @@ namespace Bankiru.Models.DataBase
                 /// </summary>
                 public static class Params
                 {
-                    public static string Nic = "@Nic";
+                    public static string UserId = "@UserId";
+                    public static string Nic = "@Nic";                    
                 }
             }
             /// <summary>
@@ -1063,6 +1065,30 @@ namespace Bankiru.Models.DataBase
                     public static string Sum = "@Sum";
                     public static string PeriodId = "@PeriodId";
                     public static string Comment = "@Comment";
+                }
+            }
+            /// <summary>
+            /// Обновляет данные пользователя в базе данных
+            /// </summary>
+            public static class UpdateUserProfile
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UpdateUserProfile";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
+                    public static string Name = "@Name";
+                    public static string Email = "@Email";
+                    public static string Sex = "@Sex";
+                    public static string LastName = "@LastName";
+                    public static string FatherName = "@FatherName";
+                    public static string IsSubscribed = "@IsSubscribed";
+                    public static string Nic = "@Nic";
                 }
             }
             #endregion

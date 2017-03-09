@@ -718,6 +718,8 @@
     <Content Include="Views\Forecast\Archive.cshtml" />
     <Content Include="Views\Forecast\Users.cshtml" />
     <Content Include="Views\Shared\NotFound.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

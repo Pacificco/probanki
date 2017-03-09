@@ -135,21 +135,21 @@ namespace Bankiru
                         
             #region ПОЛЬЗОВАТЕЛИ
             routes.MapRoute(
-                name: "user_forecast",
+                name: "user_profile",
+                url: "lk/{user_id}/{action}",
+                defaults: new { controller = "Users", action = "Index" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            routes.MapRoute(
+                name: "user_forecasts",
                 url: "lk/{user_id}/forecasts/{section_id}/{item_id}",
                 defaults: new { controller = "Users", action = "Forecasts", section_id = "dollar" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
-                name: "user_info",
-                url: "lk/{user_id}/info/{section_id}/",
-                defaults: new { controller = "Users", action = "Info", section_id = "main" },
-                namespaces: new[] { "Bankiru.Controllers" }
-            );
-            routes.MapRoute(
                 name: "user_archive",
-                url: "lk/{user_id}/archive/{item_id}",
-                defaults: new { controller = "Users", action = "Archive", item_id = UrlParameter.Optional },
+                url: "lk/{user_id}/archive/{page}",
+                defaults: new { controller = "Users", action = "Archive", page = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             #endregion

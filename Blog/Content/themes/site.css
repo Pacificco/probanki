@@ -151,12 +151,13 @@ input.button-ok{
     color: #ffffff;
     background-color: #00adee;
     display: block;
-    padding: 7px 15px 7px 15px;
+    padding: 10px 15px 10px 15px;
     border: 2px solid #009cd6;
     text-decoration: none;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    cursor: pointer;
 }
 input.button-ok:hover{
     background-color: #10bcfc;
@@ -616,6 +617,7 @@ header {
 #column-left section.org-menu,
 #column-left section.club-menu,
 #column-right section.club-menu,
+#column-left section.user-menu,
 #column-left section.side-user-profile,
 #column-left section.club-users {
     margin: 10px 0 10px 0;
@@ -623,6 +625,7 @@ header {
 #column-left section.org-menu h3,
 #column-left section.club-menu h3,
 #column-right section.club-menu h3,
+#column-left section.user-menu h3,
 #column-left section.side-user-profile h3,
 #column-left section.club-users h3{
     text-transform: uppercase;
@@ -634,6 +637,7 @@ header {
 }
 #column-left section.org-menu ul,
 #column-left section.club-menu ul,
+#column-left section.user-menu ul,
 #column-right section.club-menu ul{
     position: relative;    
     list-style-type: none;
@@ -644,12 +648,14 @@ header {
 }
 #column-left section.org-menu ul li,
 #column-left section.club-menu ul li,
+#column-left section.user-menu ul li,
 #column-right section.club-menu ul li{        
     /*background: url(/Content/system/org_menu_item_separator_bg.jpg) bottom right no-repeat;*/
     border-bottom: 1px solid #dfdfdf;
 }
 #column-left section.org-menu ul li a,
 #column-left section.club-menu ul li a,
+#column-left section.user-menu ul li a,
 #column-right section.club-menu ul a {
     text-decoration: none;
     font-weight: normal;
@@ -662,6 +668,8 @@ header {
 #column-left section.org-menu ul li.current a:hover,
 #column-left section.club-menu ul li.current a,
 #column-left section.club-menu ul li.current a:hover,
+#column-left section.user-menu ul li.current a,
+#column-left section.user-menu ul li.current a:hover,
 #column-right section.club-menu ul li.current a,
 #column-right section.club-menu ul li.current a:hover {
     color: #00adee;
@@ -670,6 +678,7 @@ header {
 }
 #column-left section.org-menu ul li a:hover,
 #column-left section.club-menu ul li a:hover,
+#column-left section.user-menu ul li a:hover,
 #column-right section.club-menu ul li a:hover {    
     color: #00adee;
     background: url(/Content/system/li-marker-arrows-over.png) left center no-repeat;
@@ -1674,6 +1683,8 @@ header {
 #club-users,
 #club-rules,
 #club-about,
+#user-profile,
+#user-profile-editor,
 #club-archive {
     padding: 10px 20px 10px 20px;
     position: relative;    
@@ -1683,6 +1694,8 @@ header {
 #club-users h1,
 #club-rules h1,
 #club-about h1,
+#user-profile h1,
+#user-profile-editor h1,
 #club-archive h1{
     background-color: #374e74;
     color: #ffffff;
@@ -1694,6 +1707,8 @@ header {
 #club-users h1 span,
 #club-rules h1 span,
 #club-about h1 span,
+#user-profile h1 span,
+#user-profile-editor h1 span,
 #club-archive h1 span {
     background: white;
     padding: 0 8px 0 0;
@@ -2102,6 +2117,26 @@ header {
     font-size: 1.2em;
 }
 
+/* Личный кабинет
+-----------------------------------------------------------*/
+#user-profile h2,
+#user-profile-editor h2{
+    font-size: 1.2em;
+    color: #374e74;
+    margin: 10px 0 10px 0;
+    padding: 7px;
+    background-color: #e1f0ff;
+}
+#user-profile div {
+    color: gray;
+    margin-bottom: 10px;
+}
+#user-profile div span {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
 /* Форма обратной связи
 -----------------------------------------------------------*/
 #feedback, #rules {
@@ -2196,6 +2231,26 @@ header {
 }
 .page-nav a img {
     margin-bottom: -5px;
+}
+
+/* Формы
+-----------------------------------------------------------*/
+.stat-block label{
+    color: gray;
+}
+.stat-block input[type=text],
+.stat-block select {
+    color: black;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.stat-block input[type=checkbox] {
+    color: black;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.stat-block input[type=submit] {
+    margin-top: 25px;
 }
 
 /* Поделиться в социальных сетях
