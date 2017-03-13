@@ -17,7 +17,7 @@
             {
                 <li>@Html.RouteLink("Профиль", "user_profile", new { user_id = userId, action = "Index" }, new { title = "Профиль" })</li>
             }
-            @if (Model.Equals("club-info"))
+            @if (Model.Equals("club"))
             {
                 <li class = "current">@Html.RouteLink("Подписка в клубе", "user_profile", new { user_id = userId, action = "Club" }, new { title = "Подписка в клубе" })</li>
             }
@@ -25,22 +25,22 @@
             {
                 <li>@Html.RouteLink("Подписка в клубе", "user_profile", new { user_id = userId, action = "Club" }, new { title = "Подписка в клубе" })</li>
             }
-            @if(Model.Equals("archive"))
-            {
-                <li class = "current">@Html.RouteLink("Архив платежей", "user_archive", new { user_id = userId }, new { title = "Архив платежей" })</li>
-            }
-            else
-            {
-                <li>@Html.RouteLink("Архив платежей", "user_archive", new { user_id = userId }, new { title = "Архив платежей" })</li>
-            }
             @if(Model.Equals("forecasts"))
             {
-                <li class = "current">@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId }, new { title = "Мои прогнозы" })</li>
+                <li class = "current">@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId, action = "Forecasts" }, new { title = "Мои прогнозы" })</li>
             }
             else
             {
-                <li>@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId }, new { title = "Мои прогнозы" })</li>
+                <li>@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId, action = "Forecasts" }, new { title = "Мои прогнозы" })</li>
             }
+            @if(Model.Equals("archive"))
+            {
+                <li class = "current">@Html.RouteLink("Архив прогнозов", "user_archive", new { user_id = userId, action = "Archive" }, new { title = "Архив прогнозов" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Архив прогнозов", "user_archive", new { user_id = userId, action = "Archive" }, new { title = "Архив прогнозов" })</li>
+            }            
         </ul>
     </nav>
 </section>

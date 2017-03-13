@@ -31,8 +31,8 @@ begin
 		set @newId = SCOPE_IDENTITY()
 		
 		--Создаем запись в таблице UsersForecastInfo		
-		insert UsersForecastInfo(UserId,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,ReportDate,UserReportId,Balance)
-		values(@newId,0,0,null,null,0,GETDATE(),2,0)		
+		insert UsersForecastInfo(UserId,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,ReportDate,UserReportId,Balance,IsConfirmed)
+		values(@newId,0,0,null,null,0,GETDATE(),2,0,0)
 		
 		if @trancount = 0
 			commit transaction

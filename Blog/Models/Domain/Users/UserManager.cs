@@ -298,6 +298,21 @@ namespace Bankiru.Models.Domain.Users
                 }
             } 
         }
+        public bool SendAddBalanceLetter(VM_UserAddBalance info)
+        {
+            try
+            {
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _lastError = String.Format("Ошибка во время отправки письма с реквизитами для пополнения баланса!\n{0}",
+                    ex.ToString());
+                log.Error(_lastError);
+                return false;
+            }
+        }
 
         #region РЕДАКТИРОВАНИЕ
         public bool UpdateUserProfile(VM_User user)

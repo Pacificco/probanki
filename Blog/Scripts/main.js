@@ -40,7 +40,15 @@ function auth_success(data) {
 
     //alert('OK!');
 };
+//Успешное пополнение баланса пользователя
+function add_balance_success(data) {
+    var id = $('#add-balance-success-mes');
+    if (id != null) {
+        location.reload();
+    }
 
+    //alert('OK!');
+};
 //Фиксирование главного меню в верху страницы
 jQuery(function ($) {
     $(window).scroll(function () {

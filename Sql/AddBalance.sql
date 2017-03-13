@@ -26,7 +26,8 @@ begin
 			ForecastTries tinyint not null,
 			ForecastBeginDate datetime null,
 			ForecastEndDate datetime null,		
-			Balance float not null
+			Balance float not null,
+			IsConfirmed bit null
 		) 
 		declare @userExists bit = 0
 		if exists (select 1 from UsersForecastInfo where UserId = @UserId) begin
@@ -37,18 +38,18 @@ begin
 		
 		if @userExists = 1 begin
 			insert into #tblUserInfo
-				select TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance
+				select TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsConfirmed
 				from UsersForecastInfo where UserId = @UserId
 		end		
-				
+						
 		-- Дата, до которой будет действовать указанный тариф		
 		declare @curEndPeriodDate datetime
-		if exists (select 1 from #tblUserInfo) begin
+		if exists (select 1 from #tblUserInfo where IsConfirmed = 1 and ForecastEndDate > GETDATE()) begin			
 			set @curEndPeriodDate = (select ForecastEndDate from #tblUserInfo)	
-		end else begin
+		end else begin			
 			set @curEndPeriodDate = null
 		end					
-		
+
 		declare @endPeriodDate datetime
 		if @curEndPeriodDate is null begin
 			set @endPeriodDate = GETDATE()
@@ -86,16 +87,25 @@ begin
 			when 4 then 12
 		end
 		
+		declare @fCount int
+		set @fCount = 		
+		case @TariffId
+			when 1 then 4
+			when 2 then 3
+			when 3 then 2
+			when 4 then 1
+		end
+		
 		declare @curTryCount int
-		if exists (select 1 from #tblUserInfo) begin
+		if exists (select 1 from #tblUserInfo where IsConfirmed = 1 and ForecastEndDate > GETDATE()) begin
 			set @curTryCount = (select ForecastTries from #tblUserInfo)
 		end else begin
 			set @curTryCount = 0
 		end
 				
 		declare @tryCount int
-		set @tryCount = @monthCount * @TariffId * 2 + @curTryCount
-		
+		set @tryCount = @monthCount * @fCount * 2 + @curTryCount
+				
 		-- Определяем решение по таблице решений перехода с тарифа на тариф
 		/*declare @curTariffId datetime
 		set @curTariffId = (select TariffId from #tblUserInfo)
@@ -120,22 +130,24 @@ begin
 			set TariffId = @TariffId,
 				ForecastTries = @tryCount,
 				ForecastEndDate = @endPeriodDate,
-				Balance = @Sum
+				Balance = @Sum,
+				ReportDate = GETDATE(),
+				IsConfirmed = 0
 			where UserId = @UserId
 		end else begin
-			insert UsersForecastInfo (UserId, TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsTariffLetterSent, UserReportId, ReportDate)
-			values (@UserId, @TariffId, @tryCount, GETDATE(), @endPeriodDate, @Sum, 0, 30, GETDATE())
+			insert UsersForecastInfo (UserId, TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsTariffLetterSent, IsConfirmed, UserReportId, ReportDate)
+			values (@UserId, @TariffId, @tryCount, GETDATE(), @endPeriodDate, @Sum, 0, 0, 30, GETDATE())
 		end
 		
 		-- Добавляем запись в архив
-		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,ReportDate,UserReportId)
-			select UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent, GETDATE(),30 
+		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,ReportDate,UserReportId)
+			select UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,GETDATE(),30 
 			from UsersForecastInfo
 			where UserId = @UserId
 					
 		-- Добавляем запись в архив баланса
-		insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment) 
-			values (@UserId,@Sum,1,GETDATE(),30,@Comment)		
+		insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment,TariffId,PeriodId) 
+			values (@UserId,@Sum,1,GETDATE(),30,@Comment,@TariffId,@PeriodId)		
 		
 		if @trancount = 0
 			commit transaction			

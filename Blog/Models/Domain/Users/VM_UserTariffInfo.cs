@@ -8,6 +8,7 @@ namespace Bankiru.Models.Domain.Users
     public class VM_UserTariffInfo
     {
         public int UserId { get; set; }
+        public bool IsConfirmed { get; set; }
         public double Balance { get; set; }
         public EnumForecastTariff Tariff { get; set; }
         public byte ForecastTries { get; set; }
@@ -24,6 +25,7 @@ namespace Bankiru.Models.Domain.Users
         public void Clear()
         {
             UserId = -1;
+            IsConfirmed = false;
             Balance = 0.0F;
             Tariff = EnumForecastTariff.Undefined;
             ForecastTries = 0;
@@ -64,7 +66,10 @@ namespace Bankiru.Models.Domain.Users
                     break;
                 case "Balance":
                     Balance = (double)fValue;
-                    break;                
+                    break;
+                case "IsConfirmed":
+                    IsConfirmed = fValue == DBNull.Value ? false : (bool)fValue;
+                    break;
                 default:
 
                     return false;

@@ -7480,3 +7480,33 @@ ERROR 2017-03-09 23:16:51,407 110056ms UserManager            UpdateUserProfile 
    в Bankiru.Models.Domain.Users.UserManager.UpdateUserProfile(VM_User user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 313
 ERROR 2017-03-09 23:19:26,664  9286ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
 Сервер вернул пустой ответ.
+ERROR 2017-03-13 18:45:59,765 22821ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 19:06:01,886  8293ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 19:07:40,503  7898ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 19:12:18,948 12906ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 19:55:28,130 10514ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:04:14,577  7741ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:26:40,495   270ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:26:53,545 13319ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:26:58,951 18726ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:53:55,746 10929ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:54:44,458 10065ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 20:58:56,223 16883ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 22:36:18,263 43428ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 23:13:22,364  9349ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-13 23:14:35,205  7756ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.

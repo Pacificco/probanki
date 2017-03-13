@@ -11,7 +11,7 @@ namespace Bankiru.Models.Domain.Users
     {
         [HiddenInput]
         public int UserId { get; set; }
-        [Display(Name = "Тариф")]
+        [Display(Name = "Кол-во площадок")]
         [Range(1,4,ErrorMessage = "Вы не указали тариф!")]
         public int TariffId { get; set; }
         [Display(Name = "Сумма (в руб.)")]
@@ -22,6 +22,8 @@ namespace Bankiru.Models.Domain.Users
         public int PeriodId { get; set; }
         [Display(Name = "Комментарий")]        
         [MaxLength(255, ErrorMessage = "Максимальная длина Комментария не должна превышать 255 символов!")]
-        public string Comment { get; set; }        
+        public string Comment { get; set; }
+        [Display(Name = "Сообщение уб успешном пополнении баланса")]
+        public string SuccessMessage { get; set; }
     }
 }

@@ -4,13 +4,13 @@
     string url = String.Format("{2}/Account/EmailConfirmed?user_id={0}&token={1}",
         Model.UserId,
         Model.Token,
-        "http://localhost:9461"
+        "http://probanki.net"
         );
 }
 <html>
     <body>
         <h1>@String.Format("Здравствуйте, {0}!", Model.UserName)</h1>
-        <p>Вы успешно заркгистрировались на сайте ProBanki.net и стали участников нашего Клуба.</p>
+        <p>Вы успешно зарегистрировались на сайте ProBanki.net и стали участником нашего Клуба.</p>
         <p>Для продолжения регистрации перейдите по ссылке ниже:</p>
         <p><a href="@url" target="_blank" title = "Завершить регистрацию">Подтвердить Email и завершить регистрацию</a></p>
         <p> </p>

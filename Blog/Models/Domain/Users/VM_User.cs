@@ -87,7 +87,7 @@ namespace Bankiru.Models.Domain.Users
         [Display(Name = "Забанин")]
         public bool IsBan { get; set; }
 
-        [Display(Name = "Пользователь был забанин")]
+        [Display(Name = "Пользователь был забанен")]
         [DataType(DataType.Date)]
         public DateTime? BanDate { get; set; }
 

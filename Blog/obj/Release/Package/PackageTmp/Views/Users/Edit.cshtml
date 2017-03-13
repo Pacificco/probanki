@@ -1,0 +1,123 @@
+﻿@model Bankiru.Models.Domain.Users.VM_User
+@{
+    ViewBag.Title = "Редактирование профиля";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Профиль";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "profile";
+
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = " - ",
+        Value = "0",
+        Selected = Model.Sex == 0 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Мужской",
+        Value = "1",
+        Selected = Model.Sex == 1 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Женский",
+        Value = "2",
+        Selected = Model.Sex == 2 ? true : false
+    });   
+}
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = ViewBag.CurrentMenuItem })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="user-profile-editor">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    @using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        
+        <div class="stat-block">
+            <h2>Основная информация об аккаунте</h2>
+            <div class="stat-block-body editor-account">                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Nic)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Nic)
+                    @Html.ValidationMessageFor(model => model.Nic)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>                
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsSubscribed) @Html.LabelFor(model => model.IsSubscribed)
+                    @Html.ValidationMessageFor(model => model.IsSubscribed)
+                </div>                
+            </div>
+        </div>
+        
+        <div class="stat-block">
+            <h2>Персональные данные</h2>
+            <div class="stat-block-body editor-personal-data">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.LastName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.LastName)
+                    @Html.ValidationMessageFor(model => model.LastName)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.FatherName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.FatherName)
+                    @Html.ValidationMessageFor(model => model.FatherName)
+                </div>
+                <div class="editor-label">
+                @Html.LabelFor(model => model.Sex)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("Sex", _items)<br />
+                @Html.ValidationMessageFor(model => model.Sex)
+            </div>
+            </div>
+        </div>
+        
+        <div class="stat-block">            
+            <div class="stat-block-body editor-submit">                
+                <div class="editor-field">
+                    <input type="submit" value="Сохранить изменения" class="button-ok"/>
+                </div>
+            </div>
+        </div>
+    }
+</article>
+

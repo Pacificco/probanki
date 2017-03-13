@@ -6,7 +6,7 @@ begin
 	declare @result int
 	select @result=0
 
-	if not exists(select 1 from UsersForecastInfo where UserId = @UserId)
+	if not exists(select 1 from UsersForecastInfo where UserId = @UserId and IsConfirmed = 1 and ForecastEndDate > GETDATE())
 		select @result=0
 	else begin
 		-- Определяем период для определения количества участий в прогнозах в текущем месяце

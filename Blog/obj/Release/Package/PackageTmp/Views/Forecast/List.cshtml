@@ -8,10 +8,17 @@
 
     ViewBag.metaTitle = "Прогнозы";
     ViewBag.metaDescription = "";
-    ViewBag.metaKeywords = "";    
+    ViewBag.metaKeywords = "";
     ViewBag.metaRobots = "noindex, nofollow";
 
     ViewBag.CurrentMenuItem = "club";
+}
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+{
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
 }
 @section left_middle
 {
@@ -26,10 +33,9 @@
 {
     <section id="forecast-list">
         <hgroup>
-            <h1>
-                Список текущих прогнозов
-            </h1>            
-        </hgroup>        
+            <h1>Список текущих прогнозов
+            </h1>
+        </hgroup>
         @if (Model.Count > 0)
         {
             <div class="forecasts">
@@ -38,13 +44,13 @@
                 {
                     <section class="forecast-prev @item.Subject.Alias">
                         <hgroup>
-                            <h1>@Html.Raw(item.Subject.Name.Replace(" ","<br />"))</h1>
+                            <h1>@Html.Raw(item.Subject.Name.Replace(" ", "<br />"))</h1>
                         </hgroup>
-                        <div class="users">                            
-                            @if(item.Users.Count > 0)
+                        <div class="users">
+                            @if (item.Users.Count > 0)
                             {
                                 <p>Новый прогнозы:</p>
-                                foreach(VM_ForecastUser user in item.Users)
+                                foreach (VM_ForecastUser user in item.Users)
                                 {
                                 <div class="user">
                                     <div class="nic">@user.User.Nic</div>
@@ -57,7 +63,7 @@
                                             else
                                             {
                                                 <img src="~/Content/lk/avatars/@user.User.Avatar" title="" alt="@user.User.Nic" />
-                                             }
+                                            }
                                             <div class="avater-mask"></div>
                                             <div class="online-state"></div>
                                         </div>
@@ -76,7 +82,7 @@
                                 </p>
                             }
                         </div>
-                        @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id }, new {@class = "do-forecast"})
+                        @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id }, new { @class = "do-forecast" })
                         <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</div>
                     </section>                                    
                 }

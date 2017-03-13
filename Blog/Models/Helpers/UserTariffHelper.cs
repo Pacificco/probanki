@@ -30,15 +30,51 @@ namespace Bankiru.Models.Helpers
             switch (tariff)
             {
                 case EnumForecastTariff.Platinum:
-                    return "Платинум";
+                    return "4 площадки";
                 case EnumForecastTariff.Gold:
-                    return "Золото";
+                    return "3 площадки";
                 case EnumForecastTariff.Silver:
-                    return "Серебро";
+                    return "2 площадки";
                 case EnumForecastTariff.Bronze:
-                    return "Бронза";
+                    return "1 площадка";
                 default:
                     return "?";
+            }
+        }
+        public static double CalcPaymentSum(EnumForecastTariff tariff, EnumClubTariffPeriod period)
+        {
+            int k = -1;
+            switch(period)
+            {
+                case EnumClubTariffPeriod.Month:
+                    k = 1;
+                    break;
+                    case EnumClubTariffPeriod.Quarter:
+                    k = 3;
+                    break;
+                    case EnumClubTariffPeriod.Half:
+                    k = 6;
+                    break;
+                    case EnumClubTariffPeriod.Year:
+                    k = 12;
+                    break;
+            }
+
+            if(k == -1)
+                return 0.0F;
+
+            switch(tariff)
+            {
+                case EnumForecastTariff.Platinum:
+                    return k * 1199.0F;
+                case EnumForecastTariff.Gold:
+                    return k * 999.0F;
+                case EnumForecastTariff.Silver:
+                    return k * 699.0F;
+                case EnumForecastTariff.Bronze:
+                    return k * 499.0F;
+                default:
+                    return 0.0F;
             }
         }
     }

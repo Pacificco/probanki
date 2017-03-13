@@ -8,13 +8,14 @@ begin
 		
 		-- Проверяем баланс пользователя
 		declare @tariff_info table (ForecastEndDate		datetime	not null,											
-									TariffId			tinyint		not null
+									TariffId			tinyint		not null,
+									IsConfirmed			bit			null
 									)		
 		insert @tariff_info
-		select uf.ForecastEndDate, uf.TariffId
+		select uf.ForecastEndDate, uf.TariffId, uf.IsConfirmed
 			from UsersForecastInfo uf 
 			where uf.UserId = @UserId				
-		declare @tariff bit = (select case when ForecastEndDate > getdate() then cast(1 as bit) else cast(0 as bit) end from @tariff_info)								
+		declare @tariff bit = (select case when ForecastEndDate > getdate() and IsConfirmed = 1 then cast(1 as bit) else cast(0 as bit) end from @tariff_info)								
 		-- Если подписка уже закончилась
 		if @tariff = 0 begin
 			select cast(0 as bit), 3;

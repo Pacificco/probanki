@@ -37,11 +37,11 @@
             }
             @if(Model.Equals("users"))
             {
-                <li class = "current">@Html.RouteLink("Члены клуба", "club_users", null, new { title = "Члены клуба" })</li>
+                <li class = "current">@Html.RouteLink("Аналитики клуба", "club_users", null, new { title = "Аналитики клуба" })</li>
             }
             else
             {
-                <li>@Html.RouteLink("Члены клуба", "club_users", null, new { title = "Члены клуба" })</li>
+                <li>@Html.RouteLink("Аналитики клуба", "club_users", null, new { title = "Аналитики клуба" })</li>
             }
         </ul>
     </nav>

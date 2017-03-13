@@ -1,4 +1,51 @@
-﻿@using Bankiru.Models.ViewModels
+﻿@model string
+@{
+    string userId = String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username) ? String.Empty :
+        Bankiru.Models.Security.SessionPersister.CurrentUser.Id.ToString();
+}
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+{
+<section class="user-menu">
+    <h3>Личный кабинет</h3>
+    <nav>
+        <ul>
+            @if(Model.Equals("profile"))
+            {
+                <li class = "current">@Html.RouteLink("Профиль", "user_profile", new { user_id = userId, action = "Index" }, new { title = "Профиль" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Профиль", "user_profile", new { user_id = userId, action = "Index" }, new { title = "Профиль" })</li>
+            }
+            @if (Model.Equals("club"))
+            {
+                <li class = "current">@Html.RouteLink("Подписка в клубе", "user_profile", new { user_id = userId, action = "Club" }, new { title = "Подписка в клубе" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Подписка в клубе", "user_profile", new { user_id = userId, action = "Club" }, new { title = "Подписка в клубе" })</li>
+            }
+            @if(Model.Equals("forecasts"))
+            {
+                <li class = "current">@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId, action = "Forecasts" }, new { title = "Мои прогнозы" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Мои прогнозы", "user_forecasts", new { user_id = userId, action = "Forecasts" }, new { title = "Мои прогнозы" })</li>
+            }
+            @if(Model.Equals("archive"))
+            {
+                <li class = "current">@Html.RouteLink("Архив прогнозов", "user_archive", new { user_id = userId, action = "Archive" }, new { title = "Архив прогнозов" })</li>
+            }
+            else
+            {
+                <li>@Html.RouteLink("Архив прогнозов", "user_archive", new { user_id = userId, action = "Archive" }, new { title = "Архив прогнозов" })</li>
+            }            
+        </ul>
+    </nav>
+</section>
+}
+@*@using Bankiru.Models.ViewModels
 @model VM_Menu
 <section class="user-menu">
     <h3>@Model.Title</h3>
@@ -20,4 +67,4 @@
             }
         </ul>
     </nav>
-</section>
+</section>*@

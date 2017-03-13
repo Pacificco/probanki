@@ -204,6 +204,16 @@ input.button-ok:hover{
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+.warning-mes {
+    background-color: #ffdcbb;
+    border: dashed 1px #dc7505;
+    color: black;
+    font-size: 1.1em;
+    padding: 10px;
+}
+.warning-mes p {
+    margin: 0;
+}
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {
@@ -2809,7 +2819,7 @@ header {
 #form-comment input[type=submit] {
     padding: 5px 10px;
 }
-#spinning-refresh-captcha, #spinning-submit{
+#spinning-refresh-captcha, #spinning-submit, #spinning-balance-submit{
     display: none;
 }
 #comment-created {
@@ -2998,4 +3008,58 @@ header {
    width: 100%;
    color: #646464;
    font-weight: normal;
+}
+
+/* Пополнение баланса пользователя 
+-----------------------------------------------------------*/
+#form-add-balance {
+    margin-bottom: 20px;
+}
+#user-add-balance-block .editor-row {
+    clear: both;
+    overflow: hidden;
+
+}
+#user-add-balance-block .editor-column{
+    float: left;
+    margin-right: 5px; 
+}
+#user-add-balance-block .editor-field input[type=text],
+#user-add-balance-block .editor-field select{
+    padding: 5px;
+    border: 1px solid #9ba6b3;
+}
+/*#user-add-balance-block #TariffId {
+    width: 150px;
+}*/
+#user-add-balance-block #Sum {
+    width: 100px;
+}
+/*#user-add-balance-block #Period {
+    width: 200px;
+}*/
+#user-add-balance-block #Comment {
+    width: 280px;
+}
+#spinning-balance-submit {
+    display: none;
+}
+#user-add-balance-block .stat-block input[type=submit] {
+    margin-top: 15px;
+}
+
+/* История баланса пользователя 
+-----------------------------------------------------------*/
+#user-balance-history-block span.date{
+    color: gray;
+    font-size: 0.9em;
+}
+#user-balance-history-block span.sum{
+    color: #38a0cf;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#user-balance-history-block span.comment{
+    color: black;
+    font-size: 1.0em;
 }

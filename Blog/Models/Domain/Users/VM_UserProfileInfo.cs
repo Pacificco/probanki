@@ -14,7 +14,7 @@ namespace Bankiru.Models.Domain.Users
         public VM_UserTariffInfo TariffInfo { get; set; }
         public List<VM_ForecastUser> ForecastsForMonth { get; set; }
         public int ForecastTriesForMonth { get; set; }
-        public List<VM_ForecastSubject> ForecastSubjects { get; set; }
+        public List<VM_ForecastSubject> ForecastSubjects { get; set; }        
         #endregion
 
         public VM_UserProfileInfo()

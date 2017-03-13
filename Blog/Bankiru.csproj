@@ -720,6 +720,13 @@
     <Content Include="Views\Shared\NotFound.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Club.cshtml" />
+    <Content Include="Views\Users\Archive.cshtml" />
+    <Content Include="Views\Users\_userAddBalanceBlock.cshtml" />
+    <Content Include="Views\Users\_userBalanceHistoryBlock.cshtml" />
+    <Content Include="Views\Users\_userForecastInfoBlock.cshtml" />
+    <Content Include="Views\Shared\_tariffDropDownList.cshtml" />
+    <Content Include="Views\Shared\_tariffPeriodDropDownList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

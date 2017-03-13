@@ -1,5 +1,7 @@
-﻿using Bankiru.Models.Domain.Account;
+﻿using Bankiru.Models.Domain;
+using Bankiru.Models.Domain.Account;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.Helpers;
 using Bankiru.Models.Security;
 using System;
 using System.Collections.Generic;
@@ -168,7 +170,7 @@ namespace Bankiru.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Forecasts(int user_id)
+        public ActionResult Club(int user_id)
         {
             if (!_isUserValid(user_id))
                 return RedirectToAction("Index", "Home", null);
@@ -201,9 +203,68 @@ namespace Bankiru.Controllers
                 return RedirectToAction("Error", "Error", null);
             }
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        public ActionResult AddBalanceAjax(VM_UserAddBalance model)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    if (Request.IsAjaxRequest())
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            if (model.Comment == null)
+                                model.Comment = "";
 
+                            UserManager manager = new UserManager();
+                            model.Sum = UserTariffHelper.CalcPaymentSum((EnumForecastTariff)model.TariffId, (EnumClubTariffPeriod)model.PeriodId);
+                            if (manager.AddBalance(model))
+                            {
+                                if (manager.SendAddBalanceLetter(model))
+                                {
+                                    return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
+                                }
+                                else
+                                {
+                                    return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
+                                }
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("", "Ошибка во время выполнения запроса!");
+                                return PartialView("_userAddBalanceBlock", model);
+                            }
+                        }
+                        else
+                        {
+                            return PartialView("_userAddBalanceBlock", model);
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Ошибка запроса к серверу!");
+                        return PartialView("_userAddBalanceBlock", model);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Ошибка подключения к серверу!");
+                    return PartialView("_userAddBalanceBlock", model);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(String.Format("Ошибка в методе AddBalanceAjax!\n", ex.ToString()));
+                ModelState.AddModelError("", "Ошибка запроса к серверу!");
+                return PartialView("_userAddBalanceBlock", model);
+            }
+        }
+
+        #region ДОЧЕРНИЕ МЕТОДЫ                
         [ChildActionOnly]
-        //[OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public PartialViewResult _getModuleSideUserProfile()
         {
             try
@@ -248,6 +309,87 @@ namespace Bankiru.Controllers
                 return PartialView(_errPartialPage);
             }
         }
+        [ChildActionOnly]
+        public PartialViewResult _getUserForecastInfoBlock(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    VM_UserProfileInfo info = manager.GetUserProfiletInfo(user_id);
+                    if (info == null)
+                    {
+                        log.Error("Ошибка во время отображения блока с информацией о прогнозах пользователя!\r\n" + manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                    return PartialView("_userForecastInfoBlock", info);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения блока с информацией о прогнозах пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения блока с информацией о прогнозах пользователя!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getUserAddBalanceBlock(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    VM_UserAddBalance balance = new VM_UserAddBalance();
+                    balance.UserId = user_id;
+                    return PartialView("_userAddBalanceBlock", balance);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения блока для пополнения баланса пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения блока для пополнения баланса пользователя!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getUserBalanceHistory(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    List<VM_UserBalanceHistoryItem> history = manager.GetUserBalanceHistory(user_id);
+                    if (history == null)
+                    {
+                        log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                    return PartialView("_userBalanceHistoryBlock", history);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        #endregion
 
         private bool _isUserValid(int user_id)
         {

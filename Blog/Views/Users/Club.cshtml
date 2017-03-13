@@ -1,0 +1,58 @@
+﻿@model Bankiru.Models.Domain.Users.VM_User
+@{
+    ViewBag.Title = "Редактирование профиля";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Профиль";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "club";
+
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = " - ",
+        Value = "0",
+        Selected = Model.Sex == 0 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Мужской",
+        Value = "1",
+        Selected = Model.Sex == 1 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Женский",
+        Value = "2",
+        Selected = Model.Sex == 2 ? true : false
+    });   
+}
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = ViewBag.CurrentMenuItem })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="user-profile-editor">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    
+    @Html.Action("_getUserForecastInfoBlock", "Users", new { user_id = Model.Id })
+    <div id="user-add-balance-block">
+        @Html.Action("_getUserAddBalanceBlock", "Users", new { user_id = Model.Id })
+    </div>
+    @Html.Action("_getUserBalanceHistory", "Users", new { user_id = Model.Id })
+
+</article>
+
