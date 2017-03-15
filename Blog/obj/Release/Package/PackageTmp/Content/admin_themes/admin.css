@@ -61,6 +61,29 @@ textarea {
     margin: 0 0 5px 0;
 }
 
+/* Сообщения
+-----------------------------------------------------------*/
+.warning-mes {
+    background-color: #ffdcbb;
+    border: dashed 1px #dc7505;
+    color: black;
+    font-size: 1.1em;
+    padding: 10px;
+}
+.warning-mes p {
+    margin: 0;
+}
+.success-mes {
+    background-color: #c5fac6;
+    border: dashed 1px #017d00;
+    color: black;
+    font-size: 1.1em;
+    padding: 10px;
+}
+.success-mes p {
+    margin: 0;
+}
+
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error {

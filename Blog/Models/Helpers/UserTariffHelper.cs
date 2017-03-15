@@ -41,6 +41,22 @@ namespace Bankiru.Models.Helpers
                     return "?";
             }
         }
+        public static string GetTariffPeriodName(EnumClubTariffPeriod period)
+        {
+            switch (period)
+            {
+                case EnumClubTariffPeriod.Month:
+                    return "1 месяц";
+                case EnumClubTariffPeriod.Quarter:
+                    return "3 месяца";
+                case EnumClubTariffPeriod.Half:
+                    return "6 месяцев";
+                case EnumClubTariffPeriod.Year:
+                    return "12 месяцев";
+                default:
+                    return "?";
+            }
+        }
         public static double CalcPaymentSum(EnumForecastTariff tariff, EnumClubTariffPeriod period)
         {
             int k = -1;

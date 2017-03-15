@@ -87,9 +87,9 @@
     </article>
     @section middle_bottom
     {        
-        <div class="org-reviews-form-link"><a href="#href-form-review" title="Оставить отзыв">
+        @*<div class="org-reviews-form-link"><a href="#href-form-review" title="Оставить отзыв">
                 <img src="~/Content/system/leave_org_review.png" title="Оставить отзыв" alt="Оставить отзыв" /></a>                
-            </div>
+            </div>*@
         @Html.Action("_getModuleLastReviews", "Home", new { org_id = Model.Id})
         <div class="org-reviews-readmore">
             <a href="@Url.RouteUrl("org_reviews", new { org_id = Model.Alias })" title="Читать все отзывы @Model.Title">Читать все отзывы</a>

@@ -129,6 +129,33 @@ namespace Bankiru.Areas.Admin.Controllers
                 return PartialView("_userAddBalanceBlock", model);
             }
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PaymentConfirmed(VM_User user)
+        {
+            try
+            {
+                if (user.Id <= 0)
+                    return RedirectToAction("Edit", "Users", new { user_id = user.Id });
+
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    if (!manager.PaymentConfirmed(user.Id))
+                        log.Error("[payment_confirmed] " + manager.LastError);
+                    return RedirectToAction("Edit", "Users", new { user_id = user.Id});
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "Users", new { user_id = user.Id });
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("[payment_confirmed] " + ex.ToString());
+                return RedirectToAction("Edit", "Users", new { user_id = user.Id });
+            }
+        }
         
         #region ДОЧЕРНИЕ МЕТОДЫ        
         [ChildActionOnly]

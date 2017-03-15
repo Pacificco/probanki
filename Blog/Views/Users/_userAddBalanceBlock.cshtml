@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.UserId)
 
         <div class="stat-block">
-            <h2>Пополнение пользователя и смена тарифа</h2>
+            <h2>Продление подписки и смена тарифа</h2>
             <div class="stat-block-body">
                 <div class="editor-row">
                     <div class="editor-column">
@@ -75,14 +75,14 @@
 
                 <div class="editor-row">
                     <div class="editor-field">
-                        <input type="submit" value="Пополнить баланс" class="button-ok" />
+                        <input type="submit" value="Продлить подписку" class="button-ok" />
                         <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" id="spinning-balance-submit" />
                     </div>
                 </div>
 
                 @if (!String.IsNullOrEmpty(Model.SuccessMessage))
                 {
-                    <p id="SuccessMessage">Запрос на пополнение баланса успешно отправлен!</p>
+                    <p id="SuccessMessage">Запрос на продление подписки успешно отправлен!</p>
                 }
             </div>
         </div>     

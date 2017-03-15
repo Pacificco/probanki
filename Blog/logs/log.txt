@@ -7510,3 +7510,67 @@ ERROR 2017-03-13 23:13:22,364  9349ms ForecastManager        rrentForecastUsers 
 Сервер вернул пустой ответ.
 ERROR 2017-03-13 23:14:35,205  7756ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
 Сервер вернул пустой ответ.
+ERROR 2017-03-15 19:24:18,537 13547ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+INFO  2017-03-15 19:25:04,716 59726ms BaseController         AddBalanceAjax     - [success email payment] Пытаемся отправить письмо с реквизитами!
+ERROR 2017-03-15 19:25:48,774 103784ms BaseController         AddBalanceAjax     - [error email payment] Ошибка во время отправки Email!
+ActionMailer.Net.NoViewsFoundException: You must provide a view for this email.  Views should be named _emailTariffPayment.html.txt.cshtml or _emailTariffPayment.html.html.cshtml (or aspx for WebFormsViewEngine) depending on the format you wish to render.
+   в ActionMailer.Net.Mvc.EmailResult.AddMessageViews(ControllerContext context) в c:\Dev\actionmailer\src\ActionMailer.Net.Mvc\EmailResult.cs:строка 159
+   в ActionMailer.Net.Mvc.EmailResult.ExecuteResult(ControllerContext context) в c:\Dev\actionmailer\src\ActionMailer.Net.Mvc\EmailResult.cs:строка 98
+   в ActionMailer.Net.Mvc.MailerBase.Email(String viewName, Object model, String masterName, Boolean trimBody) в c:\Dev\actionmailer\src\ActionMailer.Net.Mvc\MailerBase.cs:строка 166
+   в Bankiru.Controllers.EmailController.SendEmailTariffPayment(EmailModel model, VM_TariffPaymentEmail user) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\EmailController.cs:строка 82
+   в Bankiru.Controllers.UsersController.AddBalanceAjax(VM_UserAddBalance model) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\UsersController.cs:строка 251
+ERROR 2017-03-15 19:26:39,228 33154ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+INFO  2017-03-15 19:26:53,830 47756ms BaseController         AddBalanceAjax     - [success email payment] Пытаемся отправить письмо с реквизитами!
+INFO  2017-03-15 19:27:02,345 56272ms BaseController         AddBalanceAjax     - [success email payment] Успешно!
+ERROR 2017-03-15 19:55:06,254 20774ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+Сервер вернул пустой ответ.
+ERROR 2017-03-15 20:11:38,072 17374ms UserManager            PaymentConfirmed   - Ошибка во время выполнения хранимой процедуры PaymentConfirmed! System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "PaymentConfirmed".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Users.UserManager.PaymentConfirmed(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 341
+ClientConnectionId:1aa41c0a-ac89-4ca5-91e2-8803e1b18850
+ERROR 2017-03-15 20:11:38,084 17386ms UsersController        PaymentConfirmed   - [payment_confirmed] Ошибка во время выполнения хранимой процедуры PaymentConfirmed! System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "PaymentConfirmed".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Users.UserManager.PaymentConfirmed(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 341
+ClientConnectionId:1aa41c0a-ac89-4ca5-91e2-8803e1b18850
+ERROR 2017-03-15 20:12:14,246 53549ms UserManager            PaymentConfirmed   - Ошибка во время выполнения хранимой процедуры PaymentConfirmed! System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "PaymentConfirmed".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Users.UserManager.PaymentConfirmed(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 341
+ClientConnectionId:1aa41c0a-ac89-4ca5-91e2-8803e1b18850
+ERROR 2017-03-15 20:12:14,246 53549ms UsersController        PaymentConfirmed   - [payment_confirmed] Ошибка во время выполнения хранимой процедуры PaymentConfirmed! System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "PaymentConfirmed".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Users.UserManager.PaymentConfirmed(Int32 id) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Users\UserManager.cs:строка 341
+ClientConnectionId:1aa41c0a-ac89-4ca5-91e2-8803e1b18850

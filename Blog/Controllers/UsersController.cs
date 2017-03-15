@@ -1,7 +1,9 @@
 ﻿using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Account;
+using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Users;
 using Bankiru.Models.Helpers;
+using Bankiru.Models.OutApi;
 using Bankiru.Models.Security;
 using System;
 using System.Collections.Generic;
@@ -221,22 +223,46 @@ namespace Bankiru.Controllers
 
                             UserManager manager = new UserManager();
                             model.Sum = UserTariffHelper.CalcPaymentSum((EnumForecastTariff)model.TariffId, (EnumClubTariffPeriod)model.PeriodId);
-                            if (manager.AddBalance(model))
-                            {
-                                if (manager.SendAddBalanceLetter(model))
-                                {
-                                    return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
-                                }
-                                else
-                                {
-                                    return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
-                                }
-                            }
-                            else
+                            if (!manager.AddBalance(model))
                             {
                                 ModelState.AddModelError("", "Ошибка во время выполнения запроса!");
                                 return PartialView("_userAddBalanceBlock", model);
                             }
+
+                            //Отправка письма с реквизитами
+                            try
+                            {
+                                log.Info("[success email payment] Пытаемся отправить письмо с реквизитами!");
+
+                                VM_User user = manager.GetUser(model.UserId, false);
+
+                                EmailModel emailModel = new EmailModel();
+                                emailModel.From = "no-reply@probanki.net";
+                                emailModel.Subject = "Подписка на ProBanki.net";
+                                emailModel.To = user.Email;
+
+                                VM_TariffPaymentEmail emailData = new VM_TariffPaymentEmail();
+                                emailData.Tariff = UserTariffHelper.GetTariffName((EnumForecastTariff)model.TariffId);
+                                emailData.Period = UserTariffHelper.GetTariffPeriodName((EnumClubTariffPeriod)model.PeriodId);
+                                emailData.UserName = user.Name;
+                                emailData.Sum = model.Sum;
+
+                                var mailController = new EmailController();
+                                var email = mailController.SendEmailTariffPayment(emailModel, emailData);
+                                email.Deliver();
+
+                                log.Info("[success email payment] Успешно!");
+
+                                manager.PaymentEmailSend(model.UserId);
+                            }
+                            catch (Exception ex)
+                            {
+                                log.Error("[error email payment] Ошибка во время отправки Email!\r\n" + ex.ToString());
+                                ModelState.AddModelError("", "Ошибка во время отправки письма на электронную почту!");
+                                return PartialView("_userAddBalanceBlock", model);
+                            }
+
+                            return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
                         }
                         else
                         {

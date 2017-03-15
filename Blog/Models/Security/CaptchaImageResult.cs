@@ -48,7 +48,7 @@ namespace Bankiru.Models.Security
             
             string randomString = GetCaptchaString(_totalCharactersToDisplay);
             context.HttpContext.Session["captcha_code"] = randomString;
-            g.DrawString(randomString, new Font("Courier", 16), getHatchBrush(), 10, 2);
+            g.DrawString(randomString, new Font("Arial", 16), getHatchBrush(), 10, 2);
             return bmp;
         }
 

@@ -46,9 +46,9 @@ namespace Bankiru.Models.Helpers
                 case 2:
                     return String.Format("Текущие прогнозы курса евро на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 case 3:
-                    return String.Format("Текущие прогнозы стоимости нефти на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Текущие прогнозы стоимости курса акций Роснефти на Мосбирже на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 case 4:
-                    return String.Format("Текущие прогнозы акций Сбербанка на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Текущие прогнозы акций Сбербанка на Мосбирже на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 default:
                     return "Текущие прогнозы";
             }

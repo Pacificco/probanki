@@ -298,19 +298,62 @@ namespace Bankiru.Models.Domain.Users
                 }
             } 
         }
-        public bool SendAddBalanceLetter(VM_UserAddBalance info)
+        public bool PaymentEmailSend(int id)
         {
-            try
-            {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.PaymentEmailSend.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.PaymentEmailSend.Params.UserId, id);
 
-                return true;
-            }
-            catch (Exception ex)
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
             {
-                _lastError = String.Format("Ошибка во время отправки письма с реквизитами для пополнения баланса!\n{0}",
-                    ex.ToString());
-                log.Error(_lastError);
-                return false;
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
+                        DbStruct.PROCEDURES.PaymentEmailSend.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            } 
+        }
+        public bool PaymentConfirmed(int id)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.PaymentConfirmed.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.PaymentConfirmed.Params.UserId, id);
+
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
+                        DbStruct.PROCEDURES.PaymentConfirmed.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
             }
         }
 

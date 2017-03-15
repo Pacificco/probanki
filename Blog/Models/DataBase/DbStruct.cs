@@ -1068,6 +1068,40 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Подтверждает поступление средств для указанного пользователя
+            /// </summary>
+            public static class PaymentConfirmed
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "PaymentConfirmed";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";                    
+                }
+            }
+            /// <summary>
+            /// Подтверждает отправку письма пользователя при продлении подписки
+            /// </summary>
+            public static class PaymentEmailSend
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "PaymentEmailSend";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
+                }
+            }
+            /// <summary>
             /// Обновляет данные пользователя в базе данных
             /// </summary>
             public static class UpdateUserProfile

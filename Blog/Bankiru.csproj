@@ -181,6 +181,7 @@
     <Compile Include="Models\Domain\Club\VM_ForecastsFilters.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastUser.cs" />
+    <Compile Include="Models\Domain\Club\VM_TariffPaymentEmail.cs" />
     <Compile Include="Models\Domain\Club\VM_UserForecastState.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownTariff.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownTariffPeriod.cs" />
@@ -727,6 +728,7 @@
     <Content Include="Views\Users\_userForecastInfoBlock.cshtml" />
     <Content Include="Views\Shared\_tariffDropDownList.cshtml" />
     <Content Include="Views\Shared\_tariffPeriodDropDownList.cshtml" />
+    <Content Include="Views\Email\_emailTariffPayment.html.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

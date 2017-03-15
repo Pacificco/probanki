@@ -214,6 +214,16 @@ input.button-ok:hover{
 .warning-mes p {
     margin: 0;
 }
+.success-mes {
+    background-color: #c5fac6;
+    border: dashed 1px #017d00;
+    color: black;
+    font-size: 1.1em;
+    padding: 10px;
+}
+.success-mes p {
+    margin: 0;
+}
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {

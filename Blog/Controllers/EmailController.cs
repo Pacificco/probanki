@@ -1,5 +1,6 @@
 ﻿using ActionMailer.Net.Mvc;
 using Bankiru.Models.Domain.Account;
+using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Other;
 using Bankiru.Models.OutApi;
 using System;
@@ -62,7 +63,7 @@ namespace Bankiru.Controllers
         public EmailResult SendEmailRegister(EmailModel model, VM_UserEmailConfirmed user)
         {
             To.Add(model.To);
-            To.Add("info@probanki.net");
+            To.Add("support@probanki.net");
             From = model.From;
             Subject = model.Subject;
             MessageEncoding = Encoding.UTF8;
@@ -70,10 +71,21 @@ namespace Bankiru.Controllers
             return Email("_emailRegister", user);
         }
         [ChildActionOnly]
+        public EmailResult SendEmailTariffPayment(EmailModel model, VM_TariffPaymentEmail user)
+        {
+            To.Add(model.To);
+            To.Add("support@probanki.net");
+            From = model.From;
+            Subject = model.Subject;
+            MessageEncoding = Encoding.UTF8;
+            //Subject = "По на ProBanki.net";
+            return Email("_emailTariffPayment", user);
+        }
+        [ChildActionOnly]
         public EmailResult SendEmailPasswordRecover(EmailModel model, VM_UserEmailConfirmed user)
         {
             To.Add(model.To);
-            To.Add("info@probanki.net");
+            To.Add("support@probanki.net");
             From = model.From;
             Subject = model.Subject;
             MessageEncoding = Encoding.UTF8;
