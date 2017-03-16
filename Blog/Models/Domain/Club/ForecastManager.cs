@@ -627,6 +627,7 @@ namespace Bankiru.Models.Domain.Club
                                 fs.MetaNoFollow = reader.GetBoolean(reader.GetOrdinal("MetaNoFollow"));
                                 fs.MetaNoIndex = reader.GetBoolean(reader.GetOrdinal("MetaNoIndex"));
                                 fs.Ticker = reader.GetString(reader.GetOrdinal("Ticker"));
+                                fs.SourceType = reader.GetString(reader.GetOrdinal("SourceType"));
                                 forecasts.Add(fs);
                             }
                         }

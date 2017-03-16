@@ -15,16 +15,16 @@ using Bankiru.Models.Domain.Club;
 
 namespace Bankiru.Models.OutApi
 {
-    public class ChartYahooDownloader : IHttpModule
+    public class ChartDownloader : IHttpModule
     {
         static Timer timer;
-        long _interval = 3600000; //1 час
+        long _interval = 7200000; //2 час
         static object _synclock = new object();
         static bool _isDownLoading = false;
         private ChartManager _manager = new ChartManager();
         private List<VM_ForecastSubject> _subjects;
 
-        public static readonly ILog log = LogManager.GetLogger(typeof(ChartYahooDownloader));
+        public static readonly ILog log = LogManager.GetLogger(typeof(ChartDownloader));
 
         public void Init(HttpApplication app)
         {
@@ -43,13 +43,23 @@ namespace Bankiru.Models.OutApi
             _isDownLoading = true;
             try
             {
-                List<ChartObject> rows;
+                List<ChartObject> rows = null;
                 foreach (VM_ForecastSubject s in _subjects)
                 {
                     if (String.IsNullOrEmpty(s.Ticker))
                         continue;
+                    if (String.IsNullOrEmpty(s.SourceType))
+                        continue;
 
-                    rows = _manager.LoadChartDataFromYahoo(s.Ticker);
+                    switch(s.SourceType)
+                    {
+                        case "cbr":
+                            rows = _manager.LoadChartDataFromCBR(s.Ticker);
+                            break;
+                        case "yahoo":
+                            rows = _manager.LoadChartDataFromYahoo(s.Ticker);
+                            break;
+                    }
                     if (rows == null || rows.Count == 0)
                     {
                         log.Error(String.Format("Ошибка во время загрузки статической информации для графика ({0})!\nНе удалось загрузить данные", s.Name));

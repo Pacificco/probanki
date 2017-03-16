@@ -11,7 +11,7 @@
     <meta charset="utf-8" />    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <base href="http://probanki.net/" />
+    @*<base href="http://probanki.net/" />*@
     
     <link rel="shortcut icon" type="image/x-icon" href="http://probanki.net/favicon.ico" />
 	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
@@ -83,14 +83,14 @@
                 @Html.Action("_getModuleSideUserProfile", "Users", null)                
                 @RenderSection("left_top", required: false)
 
-                <section id="social-widgets">
+                @*<section id="social-widgets">
                     <h3>Мы в соцсетях</h3>
                     @Html.Action("_getWidget_VK", "Home", null)
                     <div class="clear"></div>
                     @Html.Action("_getWidget_FB", "Home", null)
                     <div class="clear"></div>
                     @Html.Action("_getWidget_OK", "Home", null)
-                </section>
+                </section>*@
 
                 @RenderSection("left_middle", required: false)
                 @RenderSection("left_bottom", required: false)
@@ -120,7 +120,7 @@
             <div id="footer-menu">
                 <div class="footer-menu-column">
                     <p class="header">Главная</p>
-                    <p class="menu-items">                                                <a href="#" title="Клуб аналитиков">Клуб аналитиков</a><br />                        @*@Html.RouteLink("Клуб аналитиков", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />*@                        @Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />                        @Html.RouteLink("Ревизия", "art_items", new { cat_id = "revizija" }, new { title = "Ревизия" })<br />                        @Html.RouteLink("Интервью", "art_items", new { cat_id = "intervju" }, new { title = "Интервью" })<br />                        @Html.RouteLink("Мнения", "art_items", new { cat_id = "mnenija" }, new { title = "Мнения" })<br />                        @Html.RouteLink("Лирика", "art_items", new { cat_id = "lirika" }, new { title = "Лирика" }) 
+                    <p class="menu-items">                                                @*<a href="#" title="Клуб аналитиков">Клуб аналитиков</a><br />*@                        @Html.RouteLink("Клуб аналитиков", "club_info", null)<br />                        @Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />                        @Html.RouteLink("Ревизия", "art_items", new { cat_id = "revizija" }, new { title = "Ревизия" })<br />                        @Html.RouteLink("Интервью", "art_items", new { cat_id = "intervju" }, new { title = "Интервью" })<br />                        @Html.RouteLink("Мнения", "art_items", new { cat_id = "mnenija" }, new { title = "Мнения" })<br />                        @Html.RouteLink("Лирика", "art_items", new { cat_id = "lirika" }, new { title = "Лирика" }) 
                     </p>
                 </div>
                 <div class="footer-menu-column">
@@ -158,7 +158,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
     @RenderSection("scripts", required: false)    
-    @Html.Action("_getModuleCounters", "Home", null);
+@*    @Html.Action("_getModuleCounters", "Home", null);
 
     <div id="fb-root"></div>
     <script>
@@ -171,7 +171,7 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-    </script>
+    </script>*@
 
     <script src="~/Scripts/main.js"></script>
     <script src="~/Scripts/countdown.js"></script>

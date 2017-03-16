@@ -35,7 +35,8 @@ function auth_success(data) {
 
     var id = $('#auth-success-mes');
     if (id != null) {
-        location.reload();
+        //location.reload();
+        window.location = "club/forecasts";
     }
 
     //alert('OK!');
