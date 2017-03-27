@@ -1,20 +1,35 @@
 ﻿@model Bankiru.Models.Domain.Club.VM_UserForecastState
 
-    <div class="disable-add-to-forecast">
-        
-            @switch(Model.DisableState)
-            {
-                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.NonAuthorization:
-                    <div class="message">Чтобы принять участие в прогнозе, Вам необходимо Авторизоваться или Зарегистрироваться.</div>
-                    break;
-                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.TariffOut:
-                    <div class="message">В этом прогнозе Вы не можете принять участие. Согласно Вашему тарифу на этот месяц вы исчерпали лимит прогнозов.</div>
-                    break;
-                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.EmptyBalance:
-                    <div class="message">Чтобы принять участие в прогнозе, Вам необходимо продлить подписку на участие в клубе.</div>
-                    break;
-                case Bankiru.Models.Domain.EnumDisableAddUserToForecast.AlreadyExists:
-                    <div class="message">Вы уже приняли участие в этом прогнозе.</div>
-                    break;                
-            }                
-    </div>
+<div class="disable-add-to-forecast">
+
+    @switch (Model.DisableState)
+    {
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.NonAuthorization:
+        <div class="message">Чтобы принять участие в прогнозе, Вам необходимо Авторизоваться или Зарегистрироваться.</div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.TariffOut:
+        <div class="message">В этом прогнозе Вы не можете принять участие. Согласно Вашему тарифу на этот месяц вы исчерпали лимит прогнозов.</div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.EmptyBalance:
+        <div class="message">Чтобы принять участие в прогнозе, Вам необходимо продлить подписку на участие в клубе.</div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.AlreadyExists:
+        <div class="message">Вы уже приняли участие в этом прогнозе.</div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.ForecastFrozen:
+        <div class="message">
+            К сожалению, Вы уже не можете принять участие в этом прогнозе.<br />
+            До оглашения результатов осталось менее двух дней.
+        </div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.ForecastClosed:
+        <div class="message">В этом прогнозе нельзя принять участие, так как он уже закрыт.</div>
+            break;
+        case Bankiru.Models.Domain.EnumDisableAddUserToForecast.InternalError:
+        <div class="message">По техническим причинам в данный момент Вы не можете принять участие в текущем прогнозе.</div>
+            break;
+        default:
+        <div class="message">Вы не можете принять участие в этом прогнозе.</div>
+            break;
+    }
+</div>

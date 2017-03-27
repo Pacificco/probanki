@@ -178,9 +178,12 @@ namespace Bankiru.Models.Domain.Club
         /// <param name="forecastId">Идентификатор прогноза</param>
         /// <param name="userId">Идентификатор пользователя</param>
         /// <param name="value">Значение</param>
+        /// <param name="disableState">Статус запрета</param>
         /// <returns>Логическое значение</returns>
-        public bool AddUserToForecast(int forecastId, int userId, double value)
+        public bool AddUserToForecast(int forecastId, int userId, double value, out EnumDisableAddUserToForecast disableState)
         {
+            disableState = EnumDisableAddUserToForecast.Undefined;
+
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.AddUserToForecast.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.AddUserToForecast.Params.ForecastId, forecastId);
@@ -191,10 +194,25 @@ namespace Bankiru.Models.Domain.Club
             {
                 try
                 {
-                    if (command.ExecuteNonQuery() == 1)
+                    VM_UserForecastState fs = null;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                fs = new VM_UserForecastState();
+                                fs.AddEnable = reader.GetBoolean(0);
+                                fs.DisableState = (EnumDisableAddUserToForecast)reader.GetInt32(1);                                
+                            }
+                        }
+                    }
+                    if (fs == null)
                         return false;
-                    else
+                    if (fs.AddEnable)
                         return true;
+                    disableState = fs.DisableState;
+                    return false;
                 }
                 catch (Exception ex)
                 {

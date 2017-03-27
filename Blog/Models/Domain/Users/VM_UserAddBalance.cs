@@ -15,7 +15,7 @@ namespace Bankiru.Models.Domain.Users
         [Range(1,4,ErrorMessage = "Вы не указали тариф!")]
         public int TariffId { get; set; }
         [Display(Name = "Сумма (в руб.)")]
-        [Range(1,100000,ErrorMessage = "Вы не указали сумму!")]
+        [Required(ErrorMessage = "Вы не указали сумму!")]
         public double Sum { get; set; }
         [Display(Name = "Период")]
         [Range(1,4,ErrorMessage = "Вы не указали период!")]

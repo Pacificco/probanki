@@ -38,18 +38,41 @@
             </h1>
         </hgroup>
         <div class="info">
-            <div class="win-amount">Приз лучшему аналитику<br /><span>@Model.WinValue рублей</span></div>
+            <div class="win-amount">Приз лучшему аналитику<br /><span>@Model.WinAmount рублей</span></div>
             <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
         </div>
-        @Html.Action("_getModuleChart", "Forecast", new { subjectId = Model.Subject.Id })
-        @Html.Action("_getModuleAddUserToForecast", "Forecast", new { forecastId = Model.Id })
+        @Html.Action("_getModuleChart", "Rates", new { subjectId = Model.Subject.Id })
+        <div id="user-add-to-forecast" class="@Model.Subject.Alias">
+            @Html.Action("_getModuleAddUserToForecast", "Forecast", new { forecastId = Model.Id })
+        </div>
         <div class="users">
             <h2>Прогнозы аналитиков клуба</h2>
             @if (Model.Users.Count > 0)
             {
-                foreach (VM_ForecastUser user in Model.Users)
+                foreach (VM_ForecastUser u in Model.Users)
                 {
-                    
+                    <div class="user">
+                    <div class="avatar">
+                        @if (String.IsNullOrEmpty(u.User.Avatar))
+                        {
+                            <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/lk/avatars/@u.User.Avatar" title="" alt="@u.User.Nic" />
+                        }
+                        <div class="avatar-mask"></div>
+                        <div class="online-state"></div>
+                    </div>                    
+                    <div class="user-forecast-info">
+                        <span class="nic">@u.User.Nic</span><br />
+                        Прогноз: <span class="value">@u.Value</span>&nbsp;&nbsp;&nbsp;Дата прогноза: 
+                        @if (u.ValueDate != null)
+                        {
+                            <span class="date">@(((DateTime)u.ValueDate).ToString("dd.MM.yyyy HH.mm"))</span>
+                        }
+                    </div>
+                </div>
                 }
             }
         </div>       

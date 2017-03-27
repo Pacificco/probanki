@@ -292,6 +292,31 @@ namespace Bankiru.Areas.Admin.Controllers
                 return PartialView(_errPartialPage);
             }
         }
+        [ChildActionOnly]
+        public ActionResult _getForecastCloseBlock(int forecast_id, DateTime next_forecast_date)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    VM_ForecastCloseInfo model = new VM_ForecastCloseInfo();
+                    model.FactValue = 0.0F;
+                    model.NextForecastDate = next_forecast_date;
+                    model.ForecastId = forecast_id;
+                    return PartialView("_forecastCloseBlock", model);
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = _errMassage;
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.ErrorMessage = e.ToString();
+                return PartialView(_errPartialPage);
+            }
+        }
         #endregion
 
         #region ДОП МЕТОДЫ

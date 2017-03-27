@@ -1,0 +1,43 @@
+﻿@using Bankiru.Models.Domain.Club
+@model List<VM_ForecastSubject>
+@{  
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "rates";
+}
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+{
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <section id="rates-list">
+        <hgroup>
+            <h1>Курсы валют</h1>
+        </hgroup>        
+            <div class="rates">
+                @foreach (VM_ForecastSubject item in Model)
+                {
+                    @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Id })                   
+                }
+            </div>
+    </section>
+}

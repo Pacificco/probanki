@@ -163,8 +163,8 @@ namespace Bankiru
             );
             routes.MapRoute(
                 name: "club_forecast_adduser",
-                url: "club/forecasts/{subject_id}/{id}/adduser",
-                defaults: new { controller = "Forecast", action = "AddUser", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
+                url: "club/forecasts/adduser",
+                defaults: new { controller = "Forecast", action = "AddUserToForecast"},
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             routes.MapRoute(
@@ -173,6 +173,12 @@ namespace Bankiru
                 defaults: new { controller = "Forecast", action = "Forecast" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
+            //routes.MapRoute(
+            //    name: "club_forecast_action",
+            //    url: "club/forecasts/{forecast_id}/{action}",
+            //    defaults: new { controller = "Forecast" },
+            //    namespaces: new[] { "Bankiru.Controllers" }
+            //);
             routes.MapRoute(
                 name: "club_forecasts",
                 url: "club/forecasts",
@@ -204,6 +210,15 @@ namespace Bankiru
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             #endregion            
+
+            #region КУРСЫ ВАЛЮТ И КАТЕРОВКИ
+            routes.MapRoute(
+                name: "rates",
+                url: "kurs-valjut",
+                defaults: new { controller = "Rates", action = "Index" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            #endregion
 
             #region СТАТИЧЕСКИЕ СТРАНИЦЫ
             routes.MapRoute(

@@ -144,7 +144,10 @@ namespace Bankiru.Controllers
                     if(!user.UpdateEmailConfirmed())
                         return View("Error");
 
-                    return View("EmailSuccsessConfirmed");
+                    VM_UserLogin model = new VM_UserLogin();
+                    model.Username = user.Email;
+                    model.Password = user.Password;
+                    return View("EmailSuccsessConfirmed", model);
                 }
                 else
                 {
@@ -189,7 +192,7 @@ namespace Bankiru.Controllers
                         SessionPersister.CurrentUser = user;
                         SessionPersister.SetTimeout(86400);
 
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("List", "Forecast");
                     }
                     else
                     {

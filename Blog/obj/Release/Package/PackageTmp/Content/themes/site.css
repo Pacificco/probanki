@@ -2024,10 +2024,54 @@ header {
     font-weight: 500;
     margin-top: 10px;
     position: relative;
+    overflow: hidden;
 }
 #forecast .users h2{
     color: #2195c9;
     text-transform: uppercase;    
+}
+
+#forecast .users .user-info {
+    position: relative;
+    margin: 0 0 10px 0;
+    clear: both;
+    overflow: hidden;
+}
+#forecast .users .avatar {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 6px;
+}
+#forecast .users .avatar .avatar-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+    background: url(/Content/lk/avatars/mask.png) 0 0 no-repeat;
+}
+#forecast .users .user-forecast-info {
+    position: relative;
+    padding-left: 10px;
+    float: left;    
+    color: #6c6d70;
+}
+#forecast .users .user-forecast-info .nic {
+    font-size: 1.3em;    
+    font-weight: bold;
+    color: #646464;
+}
+#forecast .users .user-forecast-info .value {
+    font-size: 1.3em;
+    color: #38a0cf;
+    font-weight: bold;
+}
+#forecast .users .user-forecast-info .date {
+    color: #000000;
+    font-weight: bold;
 }
 
 /* Графики
@@ -2049,10 +2093,10 @@ header {
 /* Блок Принять участие в прогнозе
  -----------------------------------------------------------*/
 #forecast .disable-add-to-forecast {
-    padding: 10px 20px;
-    border: 1px solid #e5e5e5;
+    /*padding: 10px 20px;
+    border: 1px solid #e5e5e5;*/
     font-weight: 500;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     position: relative;
 }
 
@@ -3072,4 +3116,36 @@ header {
 #user-balance-history-block span.comment{
     color: black;
     font-size: 1.0em;
+}
+
+/* Блок для создания прогноза
+-----------------------------------------------------------*/
+#user-add-to-forecast {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+#user-add-to-forecast p {
+    margin: 0;
+}
+#user-add-to-forecast .editor-row {
+    clear: both;
+    overflow: hidden;
+
+}
+#user-add-to-forecast .editor-column{
+    float: left;
+    margin-right: 5px; 
+}
+#user-add-to-forecast .editor-column input[type=text] {
+    width: 100px;
+}
+#user-add-to-forecast .editor-column input[type=submit] {
+    margin-top: 34px;
+}
+#user-add-to-forecast .editor-column label{
+    margin: 0;
+}
+#spinning-add-to-forecast{
+    display: none;
 }

@@ -1,6 +1,7 @@
 ﻿using Bankiru.Controllers;
 using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.Helpers;
 using Bankiru.Models.Security;
 using log4net;
 using System;
@@ -94,14 +95,15 @@ namespace Bankiru.Areas.Admin.Controllers
                             if (model.Comment == null)
                                 model.Comment = "";
 
-                            UserManager manager = new UserManager();                            
+                            UserManager manager = new UserManager();
+                            model.Sum = UserTariffHelper.CalcPaymentSum((EnumForecastTariff)model.TariffId, (EnumClubTariffPeriod)model.PeriodId);
                             if (manager.AddBalance(model))
                             {
-                                return PartialView("_userAddBalanceBlock", new VM_UserAddBalance());
+                                return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
                             }
                             else
                             {
-                                ModelState.AddModelError("","Ошибка во время пополнения баланса!<br />" + manager.LastError);
+                                ModelState.AddModelError("", "Ошибка во время выполнения запроса!<br />" + manager.LastError);
                                 return PartialView("_userAddBalanceBlock", model);
                             }
                         }

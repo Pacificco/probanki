@@ -18,6 +18,9 @@ namespace Bankiru
             bundles.Add(new ScriptBundle("~/bundles/forms").Include(
                         "~/Scripts/jquery.form.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/maskedinput").Include(
+                        "~/Scripts/jquery.maskedinput.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));

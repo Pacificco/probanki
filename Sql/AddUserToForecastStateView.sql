@@ -16,14 +16,15 @@ begin
 			from UsersForecastInfo uf 
 			where uf.UserId = @UserId				
 		declare @tariff bit = (select case when ForecastEndDate > getdate() and IsConfirmed = 1 then cast(1 as bit) else cast(0 as bit) end from @tariff_info)								
-		-- Если подписка уже закончилась
+		-- Если тариф не определен / нет подписки
 		if @tariff = 0 begin
 			select cast(0 as bit), 3;
 			return 0;
 		end 
 			
 		-- Проверяем число прогнозов за текущий месяц
-		declare @tryCount int = dbo.GetUserForecastTryCountForThisMonth(@UserId)						
+		declare @tariffId tinyint = (select TariffId from @tariff_info)
+		declare @tryCount int = dbo.GetUserForecastTryCountForThisMonth(@UserId, @tariffId)
 		-- Если подписка уже закончилась
 		if @tryCount = 0 begin
 			select cast(0 as bit), 2;
@@ -33,6 +34,12 @@ begin
 		-- Проверяем на участие в указанном прогнозе
 		if exists(select 1 from ForecastsUsers fu where fu.UserId = @UserId and fu.ForecastId = @ForecastId) begin
 			select cast(0 as bit), 4;
+			return 0;
+		end
+		
+		declare @fDate datetime = (select ForecastDate from Forecasts where Id = @ForecastId)		
+		if getdate() > (dateadd(dd, -2, @fDate)) begin
+			select cast(0 as bit), 5;
 			return 0;
 		end
 		

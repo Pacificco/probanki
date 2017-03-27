@@ -42,15 +42,41 @@ namespace Bankiru.Models.Helpers
             switch(subjectId)
             {
                 case 1:
-                    return String.Format("Текущие прогнозы курса доллара на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Аналитики прогнозируют: Курс доллара (ЦБ РФ) на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 case 2:
-                    return String.Format("Текущие прогнозы курса евро на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Аналитики прогнозируют: Курс евро (ЦБ РФ) на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 case 3:
-                    return String.Format("Текущие прогнозы стоимости курса акций Роснефти на Мосбирже на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Аналитики прогнозируют: Курс акций Роснефти (на Мосбирже) на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 case 4:
-                    return String.Format("Текущие прогнозы акций Сбербанка на Мосбирже на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
+                    return String.Format("Аналитики прогнозируют: Курс акций Сбербанка (на Мосбирже) на {0}", endDate.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU")));
                 default:
                     return "Текущие прогнозы";
+            }
+        }
+        /// <summary>
+        /// Выполняет попытку привести строковое значение в тип double
+        /// </summary>
+        /// <param name="value">Строковое значение</param>
+        /// <param name="success">Флаг успешного или не успешного приведения значения</param>
+        /// <returns>Число</returns>
+        public static double DoubleParse(string value, out bool success)
+        {
+            try
+            {
+                string v = value.Replace(".", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+                v = v.Replace(",", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+                if (v.Last().ToString() == System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator)
+                {
+                    v += "0";
+                }
+                double result = double.Parse(v);
+                success = true;
+                return result;
+            }
+            catch
+            {
+                success = false;
+                return 0.0F;
             }
         }
     }

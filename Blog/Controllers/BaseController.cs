@@ -800,7 +800,7 @@ namespace Bankiru.Controllers
         }
         #endregion
 
-        #region ДОПОЛНИТЕЛЬНЫЕ МЕТОДЫ
+        #region CAPTCHA
         [HttpPost]
         [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public ActionResult CaptchaAjax()
@@ -826,7 +826,7 @@ namespace Bankiru.Controllers
         [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public CaptchaImageResult ShowCaptchaImage()
         {
-            return new CaptchaImageResult(100, 30, 5);
+            return new CaptchaImageResult(140, 50, 5);
         }
         #endregion
     }

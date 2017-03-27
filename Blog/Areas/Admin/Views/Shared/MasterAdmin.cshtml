@@ -97,16 +97,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
     @RenderSection("scripts", required: false)
-    <script>
-        $().ready(function () {
-            //var doc_h = $(document).height();
-            //var wrap_h = $("#wrapper").height();
-            ////alert(wrap_h + " = " + doc_h);
-            //if (doc_h > wrap_h) {
-            //    var h = doc_h - $("header").height() - $("footer").height() - $("#main-title").height() - 20;
-            //    $("#content").css("height", h + "px");
-            //}
-        });
-    </script>
+    <script src="~/Scripts/main-admin.js"></script>
 </body>
 </html>

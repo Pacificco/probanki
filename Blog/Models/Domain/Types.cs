@@ -11,7 +11,11 @@ namespace Bankiru.Models.Domain
         NonAuthorization = 1,
         TariffOut = 2,
         EmptyBalance = 3,
-        AlreadyExists = 4        
+        AlreadyExists = 4,
+        ForecastFrozen = 5,
+        ForecastClosed = 6,
+        Undefined = 99,
+        InternalError = 100
     }
     public enum EnumUserSex
     {

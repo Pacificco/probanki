@@ -8,11 +8,11 @@ namespace Bankiru.Models.Domain.Account
 {
     public class VM_UserRegistration
     {
-        [Display(Name = "Имя (Никнейм)")]
+        [Display(Name = "Никнейм (должен быть уникальным, виден всем участникам клуба)")]
         [Required(ErrorMessage = "Поле \"Никнейм\" обязательно для заполнения!")]
         public string NicName { get; set; }
-                
-        [Display(Name = "Имя")]
+
+        [Display(Name = "Имя (видно только администрации сайта)")]
         [Required(ErrorMessage = "Поле \"Имя\" обязательно для заполнения!")]
         public string Name { get; set; }
 
@@ -20,13 +20,13 @@ namespace Bankiru.Models.Domain.Account
         [Range(1,2, ErrorMessage = "Поле \"Пол\" обязательно для заполнения!")]
         public int Sex { get; set; }
 
-        [Display(Name = "Электронная почта")]
+        [Display(Name = "Электронная почта (будет использоваться как логин для входа на сайт)")]
         [Required(ErrorMessage = "Поле \"Email\" обязательно для заполнения!")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Не корректный Email!")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный Email!")]
         //[DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Display(Name = "Пароль")]
+        [Display(Name = "Пароль (минимум 6 символов)")]
         [Required(ErrorMessage = "Задайте пароль!")]
         [MaxLength(16, ErrorMessage = "Максимальная длина пароля 16 символов!")]
         [MinLength(6, ErrorMessage = "Минимальная длина пароля 6 символов!")]

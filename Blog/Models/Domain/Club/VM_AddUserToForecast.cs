@@ -24,6 +24,12 @@ namespace Bankiru.Models.Domain.Club
         /// Значение ставки
         /// </summary>
         [Display(Name = "Ваш прогноз")]
-        public double Value { get; set; }
+        [Required(ErrorMessage = "Вы не указали значение прогноза!")]
+        public string Value { get; set; }
+        /// <summary>
+        /// Сообщение об успешном принятии значения прогноза
+        /// </summary>
+        [Display(Name = "Сообщение об успешном принятии значения прогноза")]        
+        public string SuccessMessage { get; set; }
     }
 }

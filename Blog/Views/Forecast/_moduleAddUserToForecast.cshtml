@@ -1,26 +1,47 @@
 ﻿@model Bankiru.Models.Domain.Club.VM_AddUserToForecast
-
+@{
+    AjaxOptions options = new AjaxOptions()
+    {
+        HttpMethod = "post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "user-add-to-forecast",
+        LoadingElementId = "spinning-add-to-forecast",
+        Url = "/club/forecasts/adduser",
+        OnComplete = "add_user_to_forecast_success"
+    };
+}
 @using (Ajax.BeginForm("AddUserToForecast", "Forecast", null, options, new { id = "form-add-user-to-forecast-ajax" }))
-{            
-    @Html.AntiForgeryToken()
+{                
+    <p>Вы можете принять участие в этом прогнозе.</p>    
+    <div class="stat-block">
+        <div class="stat-block-body">
 
-    <div class="add-to-forecast">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.UserId)
+            @Html.HiddenFor(model => model.ForecastId)
 
-         @Html.AntiForgeryToken()
-            @Html.HiddenFor(model => model.UserId);
-            @Html.HiddenFor(model => model.ForecastId);
-
-        <div class="editor-label">
-                @Html.LabelFor(model => model.Value)
+            <div class="editor-row">
+                <div class="editor-column">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Value)<br />
+                        @Html.ValidationMessageFor(model => model.Value)
+                    </div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-submit">
+                        <input class="button-ok" type="submit" value="Сделать прогноз" />
+                        <img src="/Content/system/spinning.gif" alt="Запрос..." title="Запрос на сервер" id="spinning-add-to-forecast">
+                    </div>
+                </div>
             </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Value)<br />
-                @Html.ValidationMessageFor(model => model.Value)
-            </div>
-
-        <div class="editor-submit">
-            <input class="button-ok" type="submit" value="Сделать прогноз" />
-            <img src="/Content/system/spinning.gif" alt="Запрос..." title="Авторизация" id="spinning-submit-login">
+            @if (!String.IsNullOrEmpty(Model.SuccessMessage))
+            {
+                <p id="add-user-to-forecast-success">Выш прогноз принят.</p>
+            }            
+            @Html.ValidationSummary(true)
         </div>
     </div>
 }

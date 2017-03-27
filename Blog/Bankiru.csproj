@@ -164,6 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\OrgsController.cs" />
+    <Compile Include="Controllers\RatesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -175,6 +176,7 @@
     <Compile Include="Models\Domain\Club\VM_ClubMember.cs" />
     <Compile Include="Models\Domain\Club\VM_DropDownForecastSubject.cs" />
     <Compile Include="Models\Domain\Club\VM_Forecast.cs" />
+    <Compile Include="Models\Domain\Club\VM_ForecastCloseInfo.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastHeader.cs" />
     <Compile Include="Models\Domain\Club\VM_Forecasts.cs" />
     <Compile Include="Models\Domain\Club\VM_ForecastMenuItem.cs" />
@@ -426,6 +428,7 @@
     <Content Include="Areas\Admin\Views\Users\_userAddBalanceBlock.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_tariffDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_tariffPeriodDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Forecast\_forecastCloseBlock.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">
@@ -454,6 +457,7 @@
     <Content Include="Scripts\JsActions\load-comments.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\main-admin.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
@@ -715,7 +719,7 @@
     <Content Include="Views\Users\_moduleHeaderUserProfile.cshtml" />
     <Content Include="Views\Users\_modelSideUserMenu.cshtml" />
     <Content Include="Views\Forecast\_moduleForecastAsHeader.cshtml" />
-    <Content Include="Views\Forecast\_moduleChart.cshtml" />
+    <Content Include="Views\Rates\_moduleChart.cshtml" />
     <Content Include="Views\Forecast\_moduleAddUserToForecast.cshtml" />
     <Content Include="Views\Forecast\_moduleDisableAddUserToForecast.cshtml" />
     <Content Include="Views\Forecast\About.cshtml" />
@@ -733,6 +737,7 @@
     <Content Include="Views\Shared\_tariffDropDownList.cshtml" />
     <Content Include="Views\Shared\_tariffPeriodDropDownList.cshtml" />
     <Content Include="Views\Email\_emailTariffPayment.html.cshtml" />
+    <Content Include="Views\Rates\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

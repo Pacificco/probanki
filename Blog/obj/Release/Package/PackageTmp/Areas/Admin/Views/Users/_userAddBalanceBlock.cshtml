@@ -6,8 +6,8 @@
         InsertionMode = InsertionMode.Replace,
         UpdateTargetId = "user-add-balance-block",
         LoadingElementId = "spinning-balance-submit",
-        Url = "/Admin/Users/AddBalanceAjax"
-
+        Url = "/Admin/Users/AddBalanceAjax",
+        OnComplete = "add_balance_success"
     };
 }
 @*<div id="user-add-balance-block">*@
@@ -50,10 +50,11 @@
 
                     <div class="editor-column">
                         <div class="editor-label">
-                            @Html.LabelFor(model => model.Sum)
+                            @Html.LabelFor(model => model.Sum)                            
                         </div>
                         <div class="editor-field">
-                            @Html.EditorFor(model => model.Sum)
+                            @*@Html.EditorFor(model => model.Sum)*@
+                            <input class="text-box single-line input-validation-error" data-val="true" data-val-required="Вы не указали сумму!" id="Sum" name="Sum" type="text" value="0" readonly>
                         </div>
                     </div>
 

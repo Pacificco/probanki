@@ -48,7 +48,61 @@ namespace Bankiru.Models.Security
             
             string randomString = GetCaptchaString(_totalCharactersToDisplay);
             context.HttpContext.Session["captcha_code"] = randomString;
-            g.DrawString(randomString, new Font("Arial", 16), getHatchBrush(), 10, 2);
+
+            int symbolWidth = (_captchaWidth - 20) / randomString.Length;
+            int x = 7;
+            int y = 5;
+            //using (HatchBrush hatchBrush = new HatchBrush
+            //(
+            //    HatchStyle.DottedGrid,
+            //    Color.LightGreen,
+            //    Color.White
+            //))
+            //{
+            using (Font font = new Font("Arial", 22, FontStyle.Regular))
+            {
+                using (StringFormat strFormat = new StringFormat(StringFormatFlags.NoWrap | StringFormatFlags.NoClip))
+                {
+                    using (SolidBrush brush = new SolidBrush(Color.White))
+                    {
+                        foreach (char ch in randomString)
+                        {
+                            g.DrawString(ch.ToString(),
+                            font,
+                            brush,
+                            x,
+                            y,
+                            strFormat);
+
+                            if (y == 5)
+                                y += 3;
+                            else
+                                y = 5;
+                            x += symbolWidth;
+                        }
+                    }
+                }
+            }
+            //}
+            //g.DrawString(randomString, new Font("Arial", 20), getHatchBrush(), 10, 2);
+
+            Random rand = new Random();
+            Pen pen = new Pen(Color.DarkGreen);
+            int rAng = 30;
+            int y1 = 5;
+            int y2 = 5;
+
+            y1 = rand.Next(_captchaHeight - 10);
+            y2 = rand.Next(_captchaHeight - 10);
+            g.DrawLine(pen, 3, 5 + y1, _captchaWidth - 5, 5 + y2);
+            pen.Color = Color.Yellow;
+            y1 = rand.Next(_captchaHeight - 10);
+            y2 = rand.Next(_captchaHeight - 10);
+            g.DrawLine(pen, 3, 5 + y1, _captchaWidth - 5, 5 + y2);
+            pen.Color = Color.Navy;
+            y1 = rand.Next(_captchaHeight - 10);
+            y2 = rand.Next(_captchaHeight - 10);
+            g.DrawLine(pen, 3, 5 + y1, _captchaWidth - 5, 5 + y2);
             return bmp;
         }
 
@@ -73,7 +127,7 @@ namespace Bankiru.Models.Security
                     intCount = intCount + 1;
                 }
             }
-            return strCaptchaString.ToLower();
+            return strCaptchaString.ToUpper();
         }
 
         private Brush getHatchBrush()
