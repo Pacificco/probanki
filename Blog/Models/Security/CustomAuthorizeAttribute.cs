@@ -13,7 +13,7 @@ namespace Bankiru.Models.Security
     {
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            if (String.IsNullOrEmpty(SessionPersister.Username))
+            if (String.IsNullOrEmpty(SessionPersister.UserEmail))
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary(new { controller = "Account", action = "Login" })
@@ -22,7 +22,7 @@ namespace Bankiru.Models.Security
             else
             {
                 AccountManager _manager = new AccountManager();
-                VM_User user = _manager.FindUser(SessionPersister.Username);
+                VM_User user = _manager.FindUser(SessionPersister.UserEmail);
                 
                 if (user == null)
                     filterContext.Result = new RedirectToRouteResult(

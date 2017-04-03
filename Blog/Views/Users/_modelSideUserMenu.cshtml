@@ -1,9 +1,9 @@
 ﻿@model string
 @{
-    string userId = String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username) ? String.Empty :
-        Bankiru.Models.Security.SessionPersister.CurrentUser.Id.ToString();
+    string userId = String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail) ? String.Empty :
+        Bankiru.Models.Security.SessionPersister.UserId.ToString();
 }
-@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
 {
 <section class="user-menu">
     <h3>Личный кабинет</h3>

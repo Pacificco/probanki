@@ -26,15 +26,13 @@ $(document).ready(function () {
     //    $('.window').hide();
     //});
 
-    $('#currencies-body .currency').mouseenter(function () {
-        $(this).css('cursor','pointer');
-        $(this).css('background-color', '#47608a');
-    }).mouseleave(function ()
-    {
-        $(this).css('background', 'none');
-    }).click(function ()
-    {
-        window.location = 'kurs-valjut';
+    $('#currencies-body').mouseenter(function () {
+        $(this).css('cursor', 'pointer');
+        //$(this).css('background-color', '#47608a');
+    }).mouseleave(function () {
+        //$(this).css('background', 'none');
+    }).click(function () {
+        window.location = 'currency';
     });
 
 });

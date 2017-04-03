@@ -165,12 +165,14 @@ namespace Bankiru.Controllers
 
         #region АВТОРИЗАЦИЯ
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View(new VM_UserLogin());
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Login(VM_UserLogin model)
         {
             try
@@ -188,8 +190,11 @@ namespace Bankiru.Controllers
                             return View(model);
                         }
 
-                        SessionPersister.Username = model.Username;
-                        SessionPersister.CurrentUser = user;
+                        SessionPersister.UserEmail = model.Username;
+                        SessionPersister.UserNic = user.Nic;
+                        SessionPersister.UserName = user.Name;
+                        SessionPersister.UserId = user.Id;
+                        //SessionPersister.CurrentUser = user;
                         SessionPersister.SetTimeout(86400);
 
                         return RedirectToAction("List", "Forecast");
@@ -230,11 +235,14 @@ namespace Bankiru.Controllers
                         {
                             ModelState.AddModelError("", "Не верный логин или пароль!");
                             model.Password = "";
+                            model.AuthSuccessMes = "";
                             return PartialView("_moduleFormLogin", model);
                         }
 
-                        SessionPersister.Username = model.Username;
-                        SessionPersister.CurrentUser = user;
+                        SessionPersister.UserEmail = model.Username;
+                        SessionPersister.UserName = user.Name;
+                        SessionPersister.UserNic = user.Nic;
+                        SessionPersister.UserId = user.Id;
                         SessionPersister.SetTimeout(86400);
 
                         //return PartialView("_moduleWellcomeBlock", user);
@@ -263,6 +271,7 @@ namespace Bankiru.Controllers
         }
         [HttpGet]        
         [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        [AllowAnonymous]
         public PartialViewResult LoginAjax()
         {
             try
@@ -286,8 +295,10 @@ namespace Bankiru.Controllers
         [HttpGet]
         public ActionResult Logout()
         {
-            SessionPersister.Username = String.Empty;
-            SessionPersister.CurrentUser = null;
+            SessionPersister.UserEmail = String.Empty;
+            SessionPersister.UserName = String.Empty;
+            SessionPersister.UserNic = String.Empty;
+            SessionPersister.UserId = 0;
             return RedirectToAction("Index", "Home");
         }
         #endregion
@@ -458,8 +469,8 @@ namespace Bankiru.Controllers
                             return View(model);
                         }
 
-                        SessionPersister.Username = String.Empty;
-                        SessionPersister.CurrentUser = null;
+                        SessionPersister.Clear();
+                        //SessionPersister.CurrentUser = null;
 
                         log.Info("[success change_password] Успешно!");
                         return View("ChangePasswordSuccess");

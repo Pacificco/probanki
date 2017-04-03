@@ -41,8 +41,8 @@
             <div class="win-amount">Приз лучшему аналитику<br /><span>@Model.WinAmount рублей</span></div>
             <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
         </div>
-        @Html.Action("_getModuleChart", "Forecast", new { subjectId = Model.Subject.Id })
-        <div id="user-add-to-forecast">
+        @Html.Action("_getModuleChart", "Rates", new { subjectId = Model.Subject.Id })
+        <div id="user-add-to-forecast" class="@Model.Subject.Alias">
             @Html.Action("_getModuleAddUserToForecast", "Forecast", new { forecastId = Model.Id })
         </div>
         <div class="users">

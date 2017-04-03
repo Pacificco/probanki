@@ -289,7 +289,7 @@ namespace Bankiru.Controllers
             }
         }
 
-        #region ДОЧЕРНИЕ МЕТОДЫ                
+        #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]
         public PartialViewResult _getModuleSideUserProfile()
         {
@@ -299,13 +299,13 @@ namespace Bankiru.Controllers
                 {
                     UserManager manager = new UserManager();
                     VM_UserProfileInfo profile = null;
-                    if(String.IsNullOrEmpty(SessionPersister.Username))
+                    if(String.IsNullOrEmpty(SessionPersister.UserEmail))
                     {
                         profile = manager.GetUserProfiletInfo(-1);
                     }
                     else
                     {
-                        profile = manager.GetUserProfiletInfo(SessionPersister.CurrentUser.Id);
+                        profile = manager.GetUserProfiletInfo(SessionPersister.UserId);
                     }                    
                     return PartialView("_moduleSideUserProfile", profile);
                 }
@@ -322,7 +322,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 60, VaryByParam = "cur_item")]
+        //[OutputCache(Duration = 60, VaryByParam = "cur_item")]
         public PartialViewResult _getModuleSideUserMenu(string cur_item = "none")
         {
             try
@@ -421,11 +421,11 @@ namespace Bankiru.Controllers
         {
             try
             {
-                if (String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+                if (String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
                     return false;
-                if (Bankiru.Models.Security.SessionPersister.CurrentUser == null)
-                    return false;
-                if (Bankiru.Models.Security.SessionPersister.CurrentUser.Id != user_id)
+                //if (Bankiru.Models.Security.SessionPersister.CurrentUser == null)
+                //    return false;
+                if (Bankiru.Models.Security.SessionPersister.UserId != user_id)
                     return false;
                 return true;
             }

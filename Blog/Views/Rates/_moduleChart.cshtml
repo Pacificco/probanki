@@ -45,12 +45,12 @@
             case 3:
                 lineColor = "#da9627";
                 lineBackColor = "#ffffe6";
-                chartTitle = "Динамика курса Роснефти за последние 3 месяца";
+                chartTitle = "Динамика курса акций Роснефти за последние 3 месяца";
                 break;
             case 4:
                 lineColor = "#17a668";
                 lineBackColor = "#ebfff5";
-                chartTitle = "Динамика акций Сбербанка за последние 3 месяца";
+                chartTitle = "Динамика курса акций Сбербанка за последние 3 месяца";
                 break;
         }
     }
@@ -73,11 +73,11 @@
 
             var options = {
                 hAxis: {
-                    title: 'Временная шкала',
+                    title: '',
                     format: 'dd.MM.yy'
                 },
                 vAxis: {
-                    title: 'Стоимость'
+                    title: 'Стоимость, руб.'
                 },
                 title: '@chartTitle',
                 tooltip: {

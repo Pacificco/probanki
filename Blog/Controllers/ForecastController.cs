@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Bankiru.Controllers
 {
-    //[CustomAuthorize(Roles = "admin,club_member")]
+    [CustomAuthorize(Roles = "admin,club_member")]
     public class ForecastController : BaseController
     {
         [HttpGet]
@@ -84,18 +84,20 @@ namespace Bankiru.Controllers
         }
         [HttpGet]
         [OutputCache(Duration = 60)]
+        [AllowAnonymous]
         public ActionResult About()
         {
             return View();
         }
         [HttpGet]
         [OutputCache(Duration = 60)]
+        [AllowAnonymous]
         public ActionResult Rules()
         {
             return View();
         }
         [HttpGet]
-        [OutputCache(Duration = 60)]
+        [OutputCache(Duration = 60)]        
         public ActionResult Users()
         {
             return View();
@@ -316,7 +318,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
-                    if (String.IsNullOrEmpty(SessionPersister.Username))
+                    if (String.IsNullOrEmpty(SessionPersister.UserEmail))
                     {
                         VM_UserForecastState noneAuthModel = new VM_UserForecastState();
                         noneAuthModel.AddEnable = false;
@@ -325,13 +327,13 @@ namespace Bankiru.Controllers
                     }
 
                     ForecastManager manager = new ForecastManager();
-                    VM_UserForecastState model = manager.GetUserForecastState(forecastId, SessionPersister.CurrentUser.Id);
+                    VM_UserForecastState model = manager.GetUserForecastState(forecastId, SessionPersister.UserId);
 
                     if (model.AddEnable)
                     {
                         VM_AddUserToForecast user = new VM_AddUserToForecast();
                         user.ForecastId = forecastId;
-                        user.UserId = SessionPersister.CurrentUser.Id;
+                        user.UserId = SessionPersister.UserId;
                         user.Value = "";// 0.0F;
                         return PartialView("_moduleAddUserToForecast", user);
                     }

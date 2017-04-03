@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Bankiru.Areas.Admin.Controllers
 {
+    //[CustomAuthorize(Roles = "admin")]
     public class AccountController : BaseController
     {
         [HttpGet]
@@ -34,8 +35,11 @@ namespace Bankiru.Areas.Admin.Controllers
                         model.Password = "";
                         return View(model);
                     }
-                    SessionPersister.Username = model.Username;
-                    SessionPersister.CurrentUser = user;
+                    SessionPersister.UserEmail = model.Username;
+                    SessionPersister.UserName = user.Name;
+                    SessionPersister.UserNic = user.Nic;
+                    SessionPersister.UserId = user.Id;
+
                     return RedirectToAction("Index", "Info");
                 }
                 else
@@ -50,12 +54,11 @@ namespace Bankiru.Areas.Admin.Controllers
                 return RedirectToAction("Error", "Error", null);
             }
         }
-
+        [HttpGet]
         public ActionResult Logout()
         {
-            SessionPersister.Username = String.Empty;
+            SessionPersister.UserEmail = String.Empty;
             return RedirectToAction("Login");
         }
-
     }
 }

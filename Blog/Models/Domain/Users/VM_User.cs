@@ -51,7 +51,7 @@ namespace Bankiru.Models.Domain.Users
         [Display(Name = "Активен")]
         public bool IsActive{ get; set; }
 
-        [Display(Name = "Подписан на рассылку")]
+        [Display(Name = "Подписка на рассылку")]
         public bool IsSubscribed{ get; set; }
 
         [Display(Name = "Ник")]

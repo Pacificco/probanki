@@ -13645,3 +13645,437 @@ ERROR 2017-03-27 22:41:58,556   979ms ForecastManager        SetFieldValue      
 ERROR 2017-03-27 22:41:58,558   981ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
 ERROR 2017-03-27 22:41:58,558   981ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
 ERROR 2017-03-27 22:41:58,559   982ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:09,989 246622ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:10,066 246699ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:10,067 246700ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:10,067 246700ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:10,128 246761ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-28 22:25:27,694 264327ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:27,850 264483ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:27,853 264486ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:27,853 264486ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-28 22:25:27,854 264487ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+INFO  2017-03-28 22:26:38,547 335180ms BaseController         AddBalanceAjax     - [success email payment] Пытаемся отправить письмо с реквизитами!
+INFO  2017-03-28 22:26:40,623 337256ms BaseController         AddBalanceAjax     - [success email payment] Успешно!
+ERROR 2017-03-29 09:51:18,702 41415334ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-03-29 09:51:18,717 41415349ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-03-29 10:21:18,653 43215285ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-03-29 10:21:18,666 43215298ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-03-29 10:21:18,667 43215299ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-03-29 10:21:18,669 43215301ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-03-29 10:21:18,670 43215302ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-03-29 10:21:32,924 43229556ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-03-29 10:21:32,924 43229556ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-03-29 10:21:32,925 43229557ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-03-29 10:21:44,959 43241592ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-03-29 10:21:44,960 43241593ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-03-29 10:21:56,964 43253596ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-03-29 10:21:56,965 43253597ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-03-29 10:51:18,679 45015311ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-03-29 10:51:18,680 45015312ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-03-29 19:52:06,175 18422ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-03-29 19:52:06,236 18483ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-03-29 19:52:06,248 18495ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-03-29 19:52:06,248 18495ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-03-29 19:52:06,304 18551ms BaseController         Index              - System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 42
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+ERROR 2017-03-29 21:16:32,331 18375ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:16:32,345 18389ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:16:32,346 18390ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:16:32,346 18390ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:16:32,400 18444ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-29 21:21:32,740 318783ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:32,907 318950ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:32,919 318962ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:32,919 318962ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:32,920 318963ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:36,979 323022ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:36,980 323023ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:36,980 323023ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:36,980 323023ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:37,005 323048ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-29 21:21:40,651 326694ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:51,596 337639ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:51,597 337640ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:51,597 337640ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:51,598 337641ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:21:51,626 337669ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-29 21:22:16,151 362194ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:22:16,152 362195ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:22:16,152 362195ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:22:16,152 362195ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:22:16,187 362230ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-29 21:25:54,922 580965ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:25:54,943 580986ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:25:54,943 580986ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:25:54,944 580987ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-29 21:25:54,945 580988ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:12,476 79082ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:12,519 79125ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:12,519 79125ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:12,562 79168ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:12,732 79338ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 20:18:45,138 111744ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:45,138 111744ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:45,138 111744ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:45,139 111745ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:18:45,197 111803ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 20:19:48,001 174607ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:48,001 174607ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:48,001 174607ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:48,002 174608ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:48,045 174651ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 20:19:54,166 180772ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:54,166 180772ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:54,166 180772ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:54,166 180772ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:19:54,188 180794ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 20:20:12,647 199253ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:20:12,817 199423ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:20:12,821 199427ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:20:12,821 199427ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 20:20:12,821 199427ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 21:59:01,197 61340ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 21:59:01,213 61356ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 21:59:01,213 61356ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 21:59:01,213 61356ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 21:59:01,263 61406ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:02:44,598 107192ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:02:44,614 107208ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:02:44,614 107208ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:02:44,614 107208ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:02:44,653 107247ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:07:20,112 194833ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:20,125 194846ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:20,125 194846ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:20,125 194846ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:20,163 194884ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:07:45,492 220212ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:45,492 220212ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:45,493 220213ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:45,493 220213ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:45,547 220267ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:07:52,910 227631ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:52,910 227631ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:52,910 227631ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:52,911 227632ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:07:52,935 227656ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:08:10,475 245196ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:08:10,475 245196ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:08:10,475 245196ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:08:10,476 245197ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:08:10,500 245221ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:09:18,562 313282ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:09:18,563 313283ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:09:18,563 313283ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:09:18,563 313283ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:09:18,610 313330ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:12:20,710 495430ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:12:20,710 495430ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:12:20,711 495431ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:12:20,711 495431ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:12:20,743 495463ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:14:25,337 620057ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:14:25,337 620057ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:14:25,337 620057ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:14:25,338 620058ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:14:25,370 620090ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:15:10,488 665209ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:10,489 665210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:10,489 665210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:10,489 665210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:10,511 665232ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:15:17,452 672172ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:17,452 672172ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:17,453 672173ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:17,453 672173ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:15:17,479 672199ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:18:33,004 29536ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:18:33,020 29552ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:18:33,020 29552ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:18:33,020 29552ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:18:33,058 29590ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-03-30 22:23:49,149 345681ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:23:49,150 345682ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:23:49,150 345682ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:23:49,150 345682ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-03-30 22:23:49,185 345717ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-01 04:18:12,812 108009344ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 04:18:12,815 108009347ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 04:18:12,819 108009351ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 04:18:12,821 108009353ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 04:18:12,822 108009354ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-04-01 04:18:27,075 108023607ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 04:18:27,076 108023608ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 04:18:27,076 108023608ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-04-01 04:18:39,109 108035641ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 04:18:39,109 108035641ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-04-01 04:18:51,113 108047645ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 04:18:51,113 108047645ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-04-01 04:48:12,795 109809327ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 04:48:12,796 109809328ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 05:18:12,833 111609365ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 05:18:12,834 111609366ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 05:48:12,834 113409366ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 05:48:12,835 113409367ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 06:18:12,801 115209333ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 06:18:12,802 115209334ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 06:18:12,826 115209358ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 06:18:12,826 115209358ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 06:18:12,827 115209359ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-04-01 06:18:27,080 115223613ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 06:18:27,081 115223614ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 06:18:27,081 115223614ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-04-01 06:18:39,084 115235616ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 06:18:39,085 115235617ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-04-01 06:18:51,088 115247620ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 06:18:51,089 115247621ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-04-01 06:48:12,829 117009361ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 06:48:12,830 117009362ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 07:18:12,841 118809374ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 07:18:12,842 118809375ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 07:48:12,844 120609377ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 07:48:12,845 120609378ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 08:18:12,807 122409340ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 08:18:12,808 122409341ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 08:18:12,808 122409341ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-04-01 08:18:12,833 122409366ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-04-01 08:18:12,833 122409366ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-04-01 08:18:27,061 122423593ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-04-01 08:18:27,061 122423593ms ChartManager           adChartDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-04-01 08:18:27,062 122423594ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-04-01 08:18:39,063 122435595ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 08:18:39,064 122435596ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-04-01 08:18:51,065 122447597ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'chartapi.finance.yahoo.com'
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-04-01 08:18:51,066 122447598ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные

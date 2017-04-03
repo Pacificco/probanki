@@ -79,6 +79,41 @@ namespace Bankiru.Areas.Admin.Controllers
                 return View(_errPage);
             }
         }
+        [HttpGet]
+        public ActionResult Delete(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager _manager = new UserManager();
+                    if (true)//_manager.DeleteUser(user_id))
+                    {
+                        ViewBag.InfoMessage = String.Format("Пользователь успешно удален.");
+                        VM_UsersFilters f = _getUsersFiltersFromCookie(HttpContext.Request.Cookies["user_filters"]);
+                        if (f == null)
+                            return RedirectToAction("List");
+                        else
+                            return RedirectToAction("List", f.GetFilterAsRouteValues(_getUsersListPageFromCookie(HttpContext.Request.Cookies["user_filters"])));
+                    }
+                    else
+                    {
+                        ViewBag.ErrorMessage = _manager.LastError;
+                        return RedirectToAction("Error", "Error", null);
+                    }
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = _errMassage;
+                    return RedirectToAction("Error", "Error", null);
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.ErrorMessage = e.ToString();
+                return RedirectToAction("Error", "Error", null);
+            }
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
@@ -159,7 +194,7 @@ namespace Bankiru.Areas.Admin.Controllers
             }
         }
         
-        #region ДОЧЕРНИЕ МЕТОДЫ        
+        #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]
         public ActionResult _getUsersList(VM_Users model)
         {

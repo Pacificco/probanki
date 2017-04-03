@@ -5,7 +5,7 @@
     @switch (Model.DisableState)
     {
         case Bankiru.Models.Domain.EnumDisableAddUserToForecast.NonAuthorization:
-        <div class="message">Чтобы принять участие в прогнозе, Вам необходимо Авторизоваться или Зарегистрироваться.</div>
+        <div class="message">Чтобы принять участие в прогнозе, Вам необходимо @Html.ActionLink("Авторизоваться", "Login", "Account", null, new { title = "Авторизация в Клубе аналитиков" }) или @Html.ActionLink("Зарегистрироваться", "Register", "Account", null, new { title = "Регистрация в Клубе аналитиков" }).</div>
             break;
         case Bankiru.Models.Domain.EnumDisableAddUserToForecast.TariffOut:
         <div class="message">В этом прогнозе Вы не можете принять участие. Согласно Вашему тарифу на этот месяц вы исчерпали лимит прогнозов.</div>

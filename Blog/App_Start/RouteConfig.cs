@@ -214,7 +214,7 @@ namespace Bankiru
             #region КУРСЫ ВАЛЮТ И КАТЕРОВКИ
             routes.MapRoute(
                 name: "rates",
-                url: "kurs-valjut",
+                url: "currency",
                 defaults: new { controller = "Rates", action = "Index" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );

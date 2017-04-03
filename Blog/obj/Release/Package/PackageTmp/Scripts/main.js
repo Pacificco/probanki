@@ -24,7 +24,26 @@ $(document).ready(function () {
     //$('#mask').click(function () {
     //    $(this).hide();
     //    $('.window').hide();
-    //});    
+    //});
+
+    //$('#currencies-body .currency').mouseenter(function () {
+    //    $(this).css('cursor', 'pointer');
+    //    $(this).css('background-color', '#47608a');
+    //}).mouseleave(function () {
+    //    $(this).css('background', 'none');
+    //}).click(function () {
+    //    window.location = 'currency';
+    //});
+
+    $('#currencies-body').mouseenter(function () {
+        $(this).css('cursor', 'pointer');
+        //$(this).css('background-color', '#47608a');
+    }).mouseleave(function () {
+        //$(this).css('background', 'none');
+    }).click(function () {
+        window.location = 'currency';
+    });
+
 });
 //Успешная авторизация
 function auth_success(data) {    
@@ -113,6 +132,14 @@ function add_user_to_forecast_success(data) {
         location.reload();
     }
 };
+//Маски ввода для прогнозов
+jQuery(function ($) {
+    $.mask.definitions['~'] = '[+-]';
+    $('.eur #form-add-user-to-forecast-ajax #Value').mask("99,9999");
+    $('.usd  #form-add-user-to-forecast-ajax #Value').mask("99.9999");
+    $('.oil  #form-add-user-to-forecast-ajax #Value').mask("999.9999");
+    $('.sberbank  #form-add-user-to-forecast-ajax #Value').mask("999.9999");
+});
 //Фиксирование главного меню в верху страницы
 jQuery(function ($) {
     $(window).scroll(function () {

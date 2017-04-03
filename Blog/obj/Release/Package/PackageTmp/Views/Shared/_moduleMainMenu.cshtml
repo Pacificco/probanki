@@ -44,6 +44,7 @@
             title = "Клуб"
        })</li>
         }
+        <li class="@Html.GetMenuItemClass("rates", Model)">@Html.RouteLink("Курсы валют", "rates", null, new { title = "Курсы валют" })
         <li class="@Html.GetMenuItemClass("news", Model)">@Html.RouteLink("Новости", "news_items", null, new
        {
            title = "Новости"

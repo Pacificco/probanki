@@ -141,7 +141,7 @@ begin
 		
 		-- Добавляем запись в архив
 		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,ReportDate,UserReportId)
-			select UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,GETDATE(),30 
+			select UserId,Balance,TariffId,ForecastTries,case when ForecastBeginDate is null then getdate() else ForecastBeginDate end,ForecastEndDate,IsTariffLetterSent,IsConfirmed,GETDATE(),30 
 			from UsersForecastInfo
 			where UserId = @UserId
 					

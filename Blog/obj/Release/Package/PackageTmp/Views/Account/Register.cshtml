@@ -44,7 +44,7 @@
             <span>Регистрация в клубе Probanki.net</span>
         </h1>        
     </hgroup>
-    <div>Перед регистрацией ознакомтесь с Правилами членства в клубе.</div>
+    <div>Перед регистрацией ознакомтесь с @Html.RouteLink("Правилами", "club_rules", null, new { title = "Правила участия в Клубе аналитиков" }) участия в Клубе аналитиков.</div>
     <div id="register-block">
 
         @using (Html.BeginForm("Register", "Account", null, FormMethod.Post, new { id = "form-register" }))
@@ -113,6 +113,7 @@
                 @Html.ValidationMessageFor(model => model.CaptchaCode)
             </div>
         
+            <p>Информацию можно будет изменить в личном кабинете после регистрации.</p>
             <p>
                 <input id="login-submit" type="submit" value="Зарегистрироваться" />
             </p>

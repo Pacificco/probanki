@@ -48,8 +48,7 @@
                         </hgroup>
                         <div class="users">
                             @if (item.Users.Count > 0)
-                            {
-                                <p>Новый прогнозы:</p>
+                            {                                
                                 foreach (VM_ForecastUser user in item.Users)
                                 {
                                 <div class="user">
@@ -94,7 +93,7 @@
         }
         @foreach (VM_Forecast item in Model)
         {        
-            @Html.Action("_getModuleChart", "Forecast", new { subjectId = item.Subject.Id })
+            @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Subject.Id })
         }
     </section>
 }
