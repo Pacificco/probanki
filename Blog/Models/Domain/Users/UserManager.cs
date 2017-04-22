@@ -113,7 +113,10 @@ namespace Bankiru.Models.Domain.Users
             List<VM_ForecastUser> result = new List<VM_ForecastUser>();
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastsForMonthView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsForMonthView.Params.UserId, userId);
+            if(userId == -1)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsForMonthView.Params.UserId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsForMonthView.Params.UserId, userId);
             command.CommandTimeout = 15;
             lock (GlobalParams._DBAccessLock)
             {
@@ -145,6 +148,7 @@ namespace Bankiru.Models.Domain.Users
                                 uf.Forecast.Id = reader.GetInt32(4);
                                 uf.Forecast.ForecastDate = reader.GetDateTime(5);
                                 uf.Forecast.SubjectId = reader.GetByte(6);
+                                uf.Forecast.IsClosed = reader.GetBoolean(7);
                                 //for (int j = 4; j < reader.FieldCount; j++)
                                 //    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
                                 result.Add(uf);
@@ -157,6 +161,85 @@ namespace Bankiru.Models.Domain.Users
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
                         DbStruct.PROCEDURES.UserForecastsForMonthView.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public List<VM_ForecastUser> GetUserForecasts(int userId, string subject)
+        {
+            ForecastManager manager = new ForecastManager();
+            List<VM_ForecastUser> result = new List<VM_ForecastUser>();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserForecastsView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            if (userId == -1)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsView.Params.UserId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsView.Params.UserId, userId);
+            if (subject == "all")
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsView.Params.SubjectId, DBNull.Value);
+            else
+            {                
+                VM_ForecastSubject sub = manager._getForecastSubject(subject);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserForecastsView.Params.SubjectId, sub.Id);
+            }
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_ForecastUser uf = null;
+                            while (reader.Read())
+                            {
+                                uf = new VM_ForecastUser();
+                                  
+                                // Прогноз                              
+                                for (int j = 2; j < reader.FieldCount; j++)
+                                    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+
+                                // Победитель
+                                if (reader.IsDBNull(0))
+                                {
+                                    uf.Forecast.Winner.Clear();
+                                }
+                                else
+                                {
+                                    //uf.Forecast.Winner.Id = reader.GetInt32(0);
+                                    uf.Forecast.Winner.Nic = reader.GetString(0);
+                                    uf.Forecast.Winner.Avatar = reader.GetString(1);
+                                    uf.Forecast.Winner.Rang = reader.GetString(2);
+                                }
+                                uf.Value = reader.IsDBNull(3) ? null : (double?)reader.GetDouble(3);
+                                uf.ValueDate = reader.IsDBNull(4) ? null : (DateTime?)reader.GetDateTime(4);
+                                result.Add(uf);
+                            }
+                        }
+                    }
+                    if (result.Count > 0)
+                    {
+                        //Предмет прогноза
+                        List<VM_ForecastSubject> subjects = manager._getForecastSubjects();
+                        if (subjects == null)
+                            return null;
+                        foreach (VM_ForecastUser f in result)
+                            f.Forecast.Subject.Assign(subjects.FirstOrDefault(s => s.Id == f.Forecast.Subject.Id));
+                    }
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.UserForecastsView.Name,
                         ex.ToString());
                     log.Error(_lastError);
                     return null;

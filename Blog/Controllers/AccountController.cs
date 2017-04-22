@@ -172,7 +172,6 @@ namespace Bankiru.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [AllowAnonymous]
         public ActionResult Login(VM_UserLogin model)
         {
             try
@@ -220,39 +219,48 @@ namespace Bankiru.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        [OutputCache(Duration = 1, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public ActionResult LoginAjax(VM_UserLogin model)
         {
             try
             {
-                if (_connected || !Request.IsAjaxRequest())
+                if (_connected)
                 {
-                    if (ModelState.IsValid)
+                    if (Request.IsAjaxRequest())
                     {
-                        AccountManager _manager = new AccountManager();
-                        VM_User user = _manager.Login(model.Username, model.Password);
-                        if (user == null)
+                        if (ModelState.IsValid)
                         {
-                            ModelState.AddModelError("", "Не верный логин или пароль!");
-                            model.Password = "";
-                            model.AuthSuccessMes = "";
+                            AccountManager _manager = new AccountManager();
+                            VM_User user = _manager.Login(model.Username, model.Password);
+                            if (user == null)
+                            {
+                                ModelState.AddModelError("", "Не верный логин или пароль!");
+                                model.Password = "";
+                                //model.AuthSuccessMes = "";
+                                return PartialView("_moduleFormLogin", model);
+                            }
+                            else
+                            {
+                                SessionPersister.UserEmail = model.Username;
+                                SessionPersister.UserName = user.Name;
+                                SessionPersister.UserNic = user.Nic;
+                                SessionPersister.UserId = user.Id;
+                                SessionPersister.SetTimeout(86400);
+
+                                //return PartialView("_moduleWellcomeBlock", user);
+                                model.AuthSuccessMes = "Вы успешно авторизовались!";
+                                return PartialView("_moduleFormLogin", model);
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Ошибка авторизации!");
                             return PartialView("_moduleFormLogin", model);
                         }
-
-                        SessionPersister.UserEmail = model.Username;
-                        SessionPersister.UserName = user.Name;
-                        SessionPersister.UserNic = user.Nic;
-                        SessionPersister.UserId = user.Id;
-                        SessionPersister.SetTimeout(86400);
-
-                        //return PartialView("_moduleWellcomeBlock", user);
-                        model.AuthSuccessMes = "Вы успешно авторизовались!";
-                        return PartialView("_moduleFormLogin", model);
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Ошибка авторизации!");
-                        return PartialView("_moduleFormLogin", model);
+                        return PartialView(_errPartialPage);
                     }
                 }
                 else
@@ -270,15 +278,21 @@ namespace Bankiru.Controllers
             }
         }
         [HttpGet]        
-        [OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
-        [AllowAnonymous]
+        //[OutputCache(Duration = 3600, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
         public PartialViewResult LoginAjax()
         {
             try
             {
-                if (_connected || !Request.IsAjaxRequest())
+                if (_connected)
                 {
-                    return PartialView("_moduleFormLogin", new VM_UserLogin());
+                    if (Request.IsAjaxRequest())
+                    {
+                        return PartialView("_moduleFormLogin", new VM_UserLogin());
+                    }
+                    else
+                    {
+                        return PartialView(_errPartialPage);
+                    }
                 }
                 else
                 {

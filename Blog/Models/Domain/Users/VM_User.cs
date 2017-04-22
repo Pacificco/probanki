@@ -67,6 +67,9 @@ namespace Bankiru.Models.Domain.Users
         [Display(Name = "Аватарка")]
         public string Avatar { get; set; }
 
+        [Display(Name = "Ранг")]
+        public string Rang { get; set; }
+
         [Display(Name = "Страна")]
         public string Country { get; set; }
 

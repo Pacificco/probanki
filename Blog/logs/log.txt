@@ -14079,3 +14079,481 @@ ERROR 2017-04-01 08:18:51,065 122447597ms ChartManager           ChartDataFromYa
    в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
 ERROR 2017-04-01 08:18:51,066 122447598ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
 Не удалось загрузить данные
+ERROR 2017-04-03 20:03:34,499 94667ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:03:34,512 94680ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:03:34,513 94681ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:03:34,513 94681ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:03:34,600 94768ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:05:35,319  4345ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:35,333  4359ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:35,334  4360ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:35,334  4360ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:35,346  4372ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:05:52,896 21922ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:52,896 21922ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:52,897 21923ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:52,897 21923ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:05:52,907 21933ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:10:30,056 137409ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:10:30,073 137426ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:10:30,074 137427ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:10:30,074 137427ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:10:30,104 137457ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:20:42,427 51214ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:20:42,442 51229ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:20:42,442 51229ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:20:42,442 51229ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:20:42,474 51261ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:23:21,277 210065ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:23:21,278 210066ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:23:21,278 210066ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:23:21,278 210066ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:23:21,303 210091ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 20:42:42,084 27026ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:42:42,096 27038ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:42:42,097 27039ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:42:42,097 27039ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 20:42:42,125 27067ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 22:00:21,660 17109ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:00:21,676 17125ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:00:21,677 17126ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:00:21,677 17126ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:00:21,681 17130ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 22:34:20,315 21166ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:20,329 21180ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:20,330 21181ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:20,330 21181ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:20,359 21210ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 22:34:29,035 29885ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:29,196 30046ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:29,199 30049ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:29,199 30049ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:34:29,200 30050ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:52:44,539 16356ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-04-03 22:52:44,550 16367ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-04-03 22:52:44,555 16372ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-04-03 22:52:44,555 16372ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 628
+ERROR 2017-04-03 22:58:59,009 108586ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:58:59,024 108601ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:58:59,024 108601ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:58:59,025 108602ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 22:58:59,029 108606ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-03 23:02:43,969 26137ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 23:02:43,989 26157ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 23:02:43,989 26157ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 23:02:43,990 26158ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-03 23:02:44,017 26185ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-18 18:15:12,650 133347ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:12,684 133381ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:12,684 133381ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:12,685 133382ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:12,809 133506ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-18 18:15:28,083 148780ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:28,320 149017ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:28,323 149020ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:28,323 149020ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:15:28,323 149020ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:16:34,302 35142ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:16:34,315 35155ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:16:34,316 35156ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:16:34,316 35156ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 18:16:34,353 35193ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-18 21:17:37,865 10268386ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,880 10268401ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,880 10268401ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,880 10268401ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,880 10268401ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,881 10268402ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,881 10268402ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:17:37,881 10268402ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:18:21,689 10312210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:18:21,689 10312210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:18:21,689 10312210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:18:21,690 10312211ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-18 21:18:21,704 10312225ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-19 20:23:34,325 12300ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:34,341 12316ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:34,342 12317ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:34,342 12317ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:34,383 12358ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-19 20:23:38,101 16076ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:38,329 16304ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:38,331 16306ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:38,332 16307ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:23:38,332 16307ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:33:33,576 611551ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:33:58,328 636303ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:33:58,329 636304ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:33:58,330 636305ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:33:58,330 636305ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:21,114  9001ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:21,127  9014ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:21,128  9015ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:21,128  9015ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:21,160  9047ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-19 20:35:26,317 14203ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:26,524 14410ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:26,526 14412ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:26,527 14413ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:35:26,528 14414ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:37:56,623 164510ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:37:56,640 164527ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:37:56,641 164528ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:37:56,642 164529ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:37:56,642 164529ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:38:13,232 181119ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:39:14,969 242855ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:39:14,969 242855ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:39:14,970 242856ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:39:14,970 242856ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:39:14,994 242880ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-19 20:40:08,470 296356ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:40:08,470 296356ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:40:08,471 296357ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:40:08,471 296357ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:42:10,080 417966ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
+System.Data.SqlTypes.SqlNullValueException: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+   в System.Data.SqlClient.SqlBuffer.get_String()
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в Bankiru.Models.Domain.Club.ForecastManager._getCurrentForecastUsers(Int32[] forecasIds) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 828
+ERROR 2017-04-19 20:43:31,637 11309ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:43:31,650 11322ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:43:31,650 11322ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:43:31,651 11323ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:51:50,441 510114ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:51:50,441 510114ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:51:50,442 510115ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:51:50,442 510115ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:52:47,898 567571ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:52:47,899 567572ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:52:47,899 567572ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:52:47,900 567573ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:53:39,818 619491ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:53:39,818 619491ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:53:39,819 619492ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:53:39,819 619492ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:54:59,815 699488ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:54:59,816 699489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:54:59,816 699489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:54:59,816 699489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:56:06,466 766138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:56:06,467 766139ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:56:06,467 766139ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:56:06,467 766139ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:57:05,356 825029ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:57:05,357 825030ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:57:05,357 825030ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:57:05,358 825031ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:35,710 975382ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:35,710 975382ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:35,711 975383ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:35,711 975383ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:45,086 984759ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:45,086 984759ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:45,087 984760ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 20:59:45,087 984760ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:16,352 1016025ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:16,353 1016026ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:16,353 1016026ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:16,354 1016027ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:22,085 1021758ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:22,085 1021758ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:22,085 1021758ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:00:22,085 1021758ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:12,816 1072489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:12,816 1072489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:12,816 1072489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:12,816 1072489ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:29,323 1088996ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:29,324 1088997ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:29,324 1088997ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:29,324 1088997ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:53,465 1113137ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:53,466 1113138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:53,466 1113138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:01:53,466 1113138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:04,896 1124569ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:04,896 1124569ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:04,897 1124570ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:04,897 1124570ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:14,065 1133737ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:14,065 1133737ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:14,066 1133738ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:14,066 1133738ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:53,850  4732ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:53,864  4746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:53,864  4746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:02:53,864  4746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:39,531 50412ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:39,533 50414ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:39,533 50414ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:39,534 50415ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:50,909 61791ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:50,910 61792ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:50,911 61793ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:03:50,912 61794ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:04:13,539 84420ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:04:13,539 84420ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:04:13,540 84421ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:04:13,540 84421ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:01,079 131961ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:01,080 131962ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:01,080 131962ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:01,081 131963ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:05,764 136645ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:05,765 136646ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:05,765 136646ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:05,765 136646ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:16,653 147535ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:16,654 147536ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:16,655 147537ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:05:16,655 147537ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:06:02,555 193437ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:06:02,555 193437ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:06:02,556 193438ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:06:02,556 193438ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:03,221  3951ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:03,235  3965ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:03,235  3965ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:03,236  3966ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:28,720 14327ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:28,733 14340ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:28,734 14341ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:14:28,734 14341ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:32:58,775 1124383ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:32:58,776 1124384ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:32:58,776 1124384ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:32:58,797 1124405ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:45:27,310 1872918ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:45:27,310 1872918ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:45:27,311 1872919ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:45:27,311 1872919ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:48:59,138 2084746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:48:59,138 2084746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:48:59,138 2084746ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-19 21:48:59,139 2084747ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:07:31,565 8730956ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:07:31,596 8730987ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:07:31,596 8730987ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:07:31,597 8730988ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:49:14,531 11233922ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:49:14,532 11233923ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:49:14,532 11233923ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:49:14,532 11233923ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:50:01,818 11281210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:50:01,818 11281210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:50:01,818 11281210ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:50:01,819 11281211ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:54:42,141 11561533ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:54:42,142 11561534ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:54:42,142 11561534ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:54:42,142 11561534ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:08,843 11648235ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:09,169 11648561ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:09,175 11648567ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:09,176 11648568ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:09,176 11648568ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:53,769 11693160ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:53,769 11693160ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:53,769 11693160ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:56:53,769 11693160ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:59:41,418 11860809ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:59:41,451 11860842ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:59:41,452 11860843ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:59:41,453 11860844ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 11:59:41,453 11860844ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 16:32:11,063 48690ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 16:32:11,233 48860ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 16:32:11,234 48861ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 16:32:11,234 48861ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:27:02,170 3339797ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:27:02,171 3339798ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:27:02,171 3339798ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:27:02,171 3339798ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:49:45,956 1145178ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:49:45,982 1145204ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:49:45,983 1145205ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:49:45,983 1145205ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:51:56,857 1276079ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:51:56,858 1276080ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:51:56,858 1276080ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:51:56,858 1276080ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:53:33,815 1373037ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:53:33,815 1373037ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:53:33,816 1373038ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:53:33,816 1373038ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:54:06,449 1405671ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:54:06,450 1405672ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:54:06,450 1405672ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:54:06,450 1405672ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:56:59,457 1578679ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:56:59,471 1578693ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:56:59,499 1578721ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:56:59,499 1578721ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:56:59,500 1578722ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:57:08,721 1587943ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:58:15,912 1655134ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:58:15,915 1655137ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:58:15,916 1655138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:58:15,916 1655138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 17:58:15,916 1655138ms ForecastManager        SetFieldValue      - Поле FactValue не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,481 10616ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,494 10629ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,495 10630ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,495 10630ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,495 10630ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,496 10631ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,496 10631ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,496 10631ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,496 10631ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,496 10631ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,497 10632ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,497 10632ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,497 10632ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,497 10632ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,497 10632ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:26:42,498 10633ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,285 166420ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,285 166420ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,285 166420ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,286 166421ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,286 166421ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,286 166421ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,286 166421ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,287 166422ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,287 166422ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,287 166422ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,287 166422ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,287 166422ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,288 166423ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,288 166423ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,288 166423ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:29:18,288 166423ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,469 239604ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,469 239604ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,469 239604ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,470 239605ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,470 239605ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,470 239605ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,470 239605ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,470 239605ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,471 239606ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,471 239606ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,471 239606ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,471 239606ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,471 239606ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,472 239607ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,472 239607ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:30:31,472 239607ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,579 277714ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,579 277714ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,580 277715ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,580 277715ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,580 277715ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,580 277715ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,580 277715ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,581 277716ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,581 277716ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,581 277716ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,581 277716ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,581 277716ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,582 277717ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,582 277717ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,582 277717ms ForecastManager        SetFieldValue      - Поле WinnerRang не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-04-22 20:31:09,582 277717ms ForecastManager        SetFieldValue      - Поле Value не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!

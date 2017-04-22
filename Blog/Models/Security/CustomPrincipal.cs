@@ -22,7 +22,7 @@ namespace Bankiru.Models.Security
         public bool IsInRole(string role)
         {
             var roles = role.Split(new char[] { ',' });
-            return roles.Any(r => this.Account.Rols.Contains(r));
+            return roles.Any(r => this.Account.Rols.Contains(r.Trim()));
         }
     }
 }

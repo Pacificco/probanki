@@ -13,7 +13,7 @@
 
     ViewBag.CurrentMenuItem = "club";
 }
-@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
 {
 @section left_top
 {
@@ -57,13 +57,13 @@
                                         <div class="avatar">
                                             @if (String.IsNullOrEmpty(user.User.Avatar))
                                             {
-                                                <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                                                <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" width="30" />
                                             }
                                             else
                                             {
                                                 <img src="~/Content/lk/avatars/@user.User.Avatar" title="" alt="@user.User.Nic" />
                                             }
-                                            <div class="avater-mask"></div>
+                                            <div class="avatar-mask"></div>
                                             <div class="online-state"></div>
                                         </div>
                                         <div class="value">@user.Value</div>
@@ -86,14 +86,18 @@
                     </section>                                    
                 }
             </div>
+            foreach (VM_Forecast item in Model)
+            {        
+                @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Subject.Id })
+            }
         }
         else
         {
-            <p>На данный момент открытых прогнозов не найдено.</p>
-        }
-        @foreach (VM_Forecast item in Model)
-        {        
-            @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Subject.Id })
-        }
+            <p>На данный момент открытых прогнозов нет.</p>
+            for (int i = 1; i < 5; i++ )
+            {        
+                @Html.Action("_getModuleChart", "Rates", new { subjectId = i })
+            }    
+        }        
     </section>
 }

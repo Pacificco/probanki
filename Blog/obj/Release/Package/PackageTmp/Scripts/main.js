@@ -26,15 +26,6 @@ $(document).ready(function () {
     //    $('.window').hide();
     //});
 
-    //$('#currencies-body .currency').mouseenter(function () {
-    //    $(this).css('cursor', 'pointer');
-    //    $(this).css('background-color', '#47608a');
-    //}).mouseleave(function () {
-    //    $(this).css('background', 'none');
-    //}).click(function () {
-    //    window.location = 'currency';
-    //});
-
     $('#currencies-body').mouseenter(function () {
         $(this).css('cursor', 'pointer');
         //$(this).css('background-color', '#47608a');
@@ -46,15 +37,17 @@ $(document).ready(function () {
 
 });
 //Успешная авторизация
-function auth_success(data) {    
+function auth_success(data) {
     //Закрытие диалоговых окон
     $('.window .close').click(function (e) {
         e.preventDefault();
         $('#mask, .window').hide();
     });
 
-    var id = $('#auth-success-mes');
-    if (id != null) {        
+    //var id = $('#auth-success-mes');
+    if ($("#auth-success-mes").length){
+    //if (id != null) {
+        //alert("Успешная авторизация!");        
         var new_location = "/club/forecasts";
         window.location = new_location;
     }

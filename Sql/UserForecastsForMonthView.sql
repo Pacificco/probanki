@@ -1,4 +1,4 @@
--- ‘писок прогнозов, в которых пользователь принял или может принять участие в текущем месяце
+-- Cписок прогнозов, в которых пользователь принял или может принять участие в текущем месяце
 if exists(select 1 from sysobjects where name = N'UserForecastsForMonthView' and xtype='P') drop proc UserForecastsForMonthView
 go
 create proc UserForecastsForMonthView (
@@ -22,22 +22,35 @@ begin
 		-- Прогнозы за текущий месяц
 		declare @ForecastsForMonth table (	Id				int			not null,
 											ForecastDate	datetime	not null,											
-											SubjectId		tinyint		not null
+											SubjectId		tinyint		not null,
+											IsClosed		bit			not null
 											primary key (Id)
 										)
 		insert @ForecastsForMonth
-		select f.Id, f.ForecastDate, f.SubjectId 
+		select f.Id, f.ForecastDate, f.SubjectId, f.IsClosed 
 		from Forecasts f			
 		where f.ForecastDate >= Convert(datetime, @dateFrom, 120) 
 			and f.ForecastDate <= Convert(datetime, @dateTo, 120)
-							
-		select u.Id, u.Nic, fu.Value, fu.ReportDate, f.* 
-		from @ForecastsForMonth f			
-			left join ForecastsUsers fu on f.Id = fu.ForecastId
-			left join Users u on u.Id = fu.UserId			
-		where fu.UserId = @UserId or fu.UserId is null
-		order by f.ForecastDate
+			
+		if @UserId is null begin
+						
+			select null, null, null, null, f.* 
+			from @ForecastsForMonth f			
+				--left join ForecastsUsers fu on f.Id = fu.ForecastId --and fu.UserId = 25
+				--left join Users u on u.Id = fu.UserId			
+			--where fu.UserId = @UserId --or fu.UserId is null
+			order by f.ForecastDate
 		
-		return 0
+		end else begin
+		
+			select u.Id, u.Nic, fu.Value, fu.ReportDate, f.* 
+			from @ForecastsForMonth f			
+				left join ForecastsUsers fu on f.Id = fu.ForecastId and fu.UserId = @UserId
+				left join Users u on u.Id = fu.UserId
+			--where fu.UserId = @UserId --or fu.UserId is null
+			order by f.ForecastDate
+		
+		end
+c
 end
 go

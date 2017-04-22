@@ -23,8 +23,10 @@ namespace Bankiru.Models.Domain.Club
         [Display(Name = "Закрыт")]
         public bool IsClosed { get; set; }
         public VM_User Winner { get; set; }
-        [Display(Name = "Значение прогноза")]
+        [Display(Name = "Значение победившего прогноза")]
         public double WinValue { get; set; }
+        [Display(Name = "Фактическое значение")]
+        public double FactValue { get; set; }
         [Display(Name = "Сумма выигрыша")]
         public double WinAmount { get; set; }
         [Display(Name = "Дата окончания прогноза")]
@@ -55,6 +57,7 @@ namespace Bankiru.Models.Domain.Club
             Winner = new VM_User();
             WinValue = 0.0F;
             WinAmount = 0.0F;
+            FactValue = 0.0F;
             ForecastDate = DateTime.Now;
             CreateDate = DateTime.Now;
             ReportDate = DateTime.Now;
@@ -93,6 +96,9 @@ namespace Bankiru.Models.Domain.Club
                     break;
                 case "WinValue":
                     WinValue = fValue == DBNull.Value ? 0.0F : (double)fValue;
+                    break;
+                case "FactValue":
+                    FactValue = fValue == DBNull.Value ? 0.0F : (double)fValue;
                     break;
                 case "WinAmount":
                     WinAmount = fValue == DBNull.Value ? 0.0f : (double)fValue;

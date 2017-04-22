@@ -13,6 +13,9 @@ namespace Bankiru.Models.Security
     {
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
+            if (filterContext.IsChildAction)
+                return;
+
             if (String.IsNullOrEmpty(SessionPersister.UserEmail))
             {
                 filterContext.Result = new RedirectToRouteResult(

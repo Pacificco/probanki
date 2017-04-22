@@ -13,9 +13,10 @@ begin
 			select * from Forecasts f where f.IsClosed = 1 and f.SubjectId = @SubjectId order by f.ForecastDate desc
 	end else begin -- не архивные прогнозы
 		if @SubjectId is null
-			select * from Forecasts f where f.IsClosed = 0 order by f.SubjectId		-- все
+			select * from Forecasts f where f.IsClosed = 0 and f.ForecastDate > GETDATE() order by f.SubjectId		-- все
 		else
-			select * from Forecasts f where f.IsClosed = 0 and f.SubjectId = @SubjectId order by f.ForecastDate desc
+			select * from Forecasts f where f.IsClosed = 0 and f.ForecastDate > GETDATE() 
+				and f.SubjectId = @SubjectId order by f.ForecastDate desc
 	end
 end
 go

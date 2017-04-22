@@ -1838,13 +1838,18 @@ header {
 #forecast-list .forecasts .forecast-prev .users p{
     margin: 0 0 5px 0;
 }
-#forecast-list .forecasts .forecast-prev .users .avatar {
+#forecast-list .user {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+#forecast-list .user .info .avatar {
     position: relative;
     float: left;
     width: 30px;
     height: 30px;    
+    margin-top: 5px;
 }
-#forecast-list .forecasts .forecast-prev .users .avatar-mask {
+#forecast-list .user .info .avatar-mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -1853,13 +1858,28 @@ header {
     z-index: 9;
     background: url(/Content/lk/avatars/mask-30px.png) 0 0 no-repeat;
 }
-#forecast-list .forecasts .forecast-prev .users .value {
+#forecast-list .user .nic {
     position: relative;
-    float: left;
+    /*float: left;*/
+    font-size: 1.2em;
+    color: #646464;
+    font-weight: bold;
+    clear: both;
+    padding-bottom: 5px;
 }
-#forecast-list .forecasts .forecast-prev .users .value-data {
+#forecast-list .user .value {
     position: relative;
     float: left;
+    font-size: 1.1em;
+    color: #646464;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#forecast-list .user .value-data {
+    position: relative;
+    float: left;
+    font-size: 0.8em;
+    padding-left: 10px;
 }
 #forecast-list .forecasts .forecast-prev .do-forecast {
     display: block;
@@ -3007,11 +3027,14 @@ header {
     position: relative;
     color: #646464;    
     float: left;
-    width: 130px;
+    width: 150px;
 }
 #column-left section.side-user-profile .current-forecasts .state {
     position: relative;
     float: left;
+}
+#column-left section.side-user-profile .current-forecasts .state img {
+    margin-left: 5px;
 }
 #column-left section.side-user-profile .current-forecasts-enddate {
     margin: 10px 0 0 0;
@@ -3060,7 +3083,7 @@ header {
     padding-left: 10px;
     float: left;
     font-size: 1.2em;
-    color: #646464;
+    color: #3791c1;
     font-weight: bold;
 }
 #column-left section.club-users .rang {

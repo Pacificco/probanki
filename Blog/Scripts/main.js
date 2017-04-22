@@ -37,15 +37,17 @@ $(document).ready(function () {
 
 });
 //Успешная авторизация
-function auth_success(data) {    
+function auth_success(data) {
     //Закрытие диалоговых окон
     $('.window .close').click(function (e) {
         e.preventDefault();
         $('#mask, .window').hide();
     });
 
-    var id = $('#auth-success-mes');
-    if (id != null) {        
+    //var id = $('#auth-success-mes');
+    if ($("#auth-success-mes").length){
+    //if (id != null) {
+        //alert("Успешная авторизация!");        
         var new_location = "/club/forecasts";
         window.location = new_location;
     }

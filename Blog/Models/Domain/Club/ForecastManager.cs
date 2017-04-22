@@ -825,7 +825,8 @@ namespace Bankiru.Models.Domain.Club
                                 user = new VM_ForecastUser();
                                 user.User.Id = reader.GetInt32(reader.GetOrdinal("UserId"));
                                 user.User.Nic = reader.GetString(reader.GetOrdinal("Nic"));
-                                user.User.Avatar = reader.GetString(reader.GetOrdinal("Avatar"));
+                                user.User.Avatar = reader.IsDBNull(reader.GetOrdinal("Avatar")) ? String.Empty :
+                                    reader.GetString(reader.GetOrdinal("Avatar"));
                                 user.Forecast.Id = reader.GetInt32(reader.GetOrdinal("ForecastId"));
                                 user.ValueDate = reader.IsDBNull(reader.GetOrdinal("ReportDate")) ? null : (DateTime?)reader.GetDateTime(reader.GetOrdinal("ReportDate"));
                                 user.Value = reader.GetDouble(reader.GetOrdinal("Value"));                                                                

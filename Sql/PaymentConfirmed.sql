@@ -8,5 +8,10 @@ begin
 
 	update UsersForecastInfo set IsConfirmed = 1 where UserId = @UserId
 	
+	-- Добавляем запись в архив баланса
+	insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment,TariffId,PeriodId) 
+	select ui.UserId, ui.Balance, 1, GETDATE(),30, '', ui.TariffId, ui.PeriodId
+	from UsersForecastInfo ui
+	
 end
 go

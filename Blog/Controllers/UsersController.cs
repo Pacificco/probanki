@@ -13,6 +13,7 @@ using System.Web.Mvc;
 
 namespace Bankiru.Controllers
 {
+    [CustomAuthorize(Roles = "admin, club_member")]
     public class UsersController : BaseController
     {        
         [HttpGet]
@@ -138,7 +139,7 @@ namespace Bankiru.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Archive(int user_id)
+        public ActionResult Archive(int user_id, string subject = "all")
         {
             try
             {
@@ -148,7 +149,7 @@ namespace Bankiru.Controllers
                 if (_connected)
                 {
                     UserManager _manager = new UserManager();
-                    VM_User model = _manager.GetUser(user_id);
+                    List<VM_ForecastUser> model = _manager.GetUserForecasts(user_id, subject);
                     if (model != null)
                     {
                         return View(model);
@@ -156,7 +157,8 @@ namespace Bankiru.Controllers
                     else
                     {
                         ViewBag.ErrorMessage = _manager.LastError;
-                        return View("NotFound");
+                        //return View("NotFound");
+                        return View("Archive", null);
                     }
                 }
                 else
@@ -322,7 +324,6 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        //[OutputCache(Duration = 60, VaryByParam = "cur_item")]
         public PartialViewResult _getModuleSideUserMenu(string cur_item = "none")
         {
             try
@@ -364,6 +365,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
+        [AllowAnonymous]
         public PartialViewResult _getUserAddBalanceBlock(int user_id)
         {
             try
@@ -417,6 +419,7 @@ namespace Bankiru.Controllers
         }
         #endregion
 
+        [AllowAnonymous]
         private bool _isUserValid(int user_id)
         {
             try

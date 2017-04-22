@@ -135,19 +135,19 @@ begin
 				IsConfirmed = 0
 			where UserId = @UserId
 		end else begin
-			insert UsersForecastInfo (UserId, TariffId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsTariffLetterSent, IsConfirmed, UserReportId, ReportDate)
-			values (@UserId, @TariffId, @tryCount, GETDATE(), @endPeriodDate, @Sum, 0, 0, 30, GETDATE())
+			insert UsersForecastInfo (UserId, TariffId, PeriodId, ForecastTries, ForecastBeginDate, ForecastEndDate, Balance, IsTariffLetterSent, IsConfirmed, UserReportId, ReportDate)
+			values (@UserId, @TariffId, @PeriodId, @tryCount, GETDATE(), @endPeriodDate, @Sum, 0, 0, 30, GETDATE())
 		end
 		
 		-- Добавляем запись в архив
-		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,ReportDate,UserReportId)
-			select UserId,Balance,TariffId,ForecastTries,case when ForecastBeginDate is null then getdate() else ForecastBeginDate end,ForecastEndDate,IsTariffLetterSent,IsConfirmed,GETDATE(),30 
+		insert into UsersForecastInfoArchive(UserId,Balance,TariffId,PeriodId,ForecastTries,ForecastBeginDate,ForecastEndDate,IsTariffLetterSent,IsConfirmed,ReportDate,UserReportId)
+			select UserId,Balance,TariffId,PeriodId,ForecastTries,case when ForecastBeginDate is null then getdate() else ForecastBeginDate end,ForecastEndDate,IsTariffLetterSent,IsConfirmed,GETDATE(),30 
 			from UsersForecastInfo
 			where UserId = @UserId
 					
 		-- Добавляем запись в архив баланса
-		insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment,TariffId,PeriodId) 
-			values (@UserId,@Sum,1,GETDATE(),30,@Comment,@TariffId,@PeriodId)		
+		--insert into UserBalanceHistory(UserId,Balance,Operation,ReportDate,ReportUserId,Comment,TariffId,PeriodId) 
+			--values (@UserId,@Sum,1,GETDATE(),30,@Comment,@TariffId,@PeriodId)		
 		
 		if @trancount = 0
 			commit transaction			

@@ -2,7 +2,7 @@
 @model string
 @{
     bool isAuthorized = false;
-    if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.Username))
+    if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
     {
         isAuthorized = true;
     }
