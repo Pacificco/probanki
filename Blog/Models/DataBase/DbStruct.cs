@@ -1353,6 +1353,16 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Возвращает список последних победителей
+            /// </summary>
+            public static class LastForecastWinnersView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "LastForecastWinnersView";
+            }
+            /// <summary>
             /// Возвращает членов клуба
             /// </summary>
             public static class ClubTopUsersView

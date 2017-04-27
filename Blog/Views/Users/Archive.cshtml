@@ -60,21 +60,20 @@
                     }
 
                     @* Предмет *@
-                    <div>
-                        @Html.Raw(fu.Forecast.Subject.Name.Replace(" ", "<br />"))
-                    </div>
-
-                    @* Дата *@
-                    @if (fu.Forecast.IsClosed)
-                    {
-                        <div class="date">Прогноз на @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU")))</div>
+                    <div class="subject">
+                        @Html.Raw(fu.Forecast.Subject.Name)
+                        @* Дата *@
+                        @if (fu.Forecast.IsClosed)
+                        {
+                            <span class="date close-date">(прогноз на @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))))</span>
                         
-                    }
-                    else
-                    {
-                        <div class="date">Открыт до @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU")))</div>
-                    }
-
+                        }
+                        else
+                        {
+                            <span class="date open-date">(открыт до @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))))</span>
+                        }
+                    </div>
+                    
                      @*Победитель*@
                     @if (fu.Forecast.Winner.Id > 0)
                     {

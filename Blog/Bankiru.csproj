@@ -739,6 +739,7 @@
     <Content Include="Views\Shared\_tariffPeriodDropDownList.cshtml" />
     <Content Include="Views\Email\_emailTariffPayment.html.cshtml" />
     <Content Include="Views\Rates\Index.cshtml" />
+    <Content Include="Views\Forecast\_moduleLastForecastWinners.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

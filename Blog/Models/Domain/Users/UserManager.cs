@@ -204,7 +204,7 @@ namespace Bankiru.Models.Domain.Users
                                 uf = new VM_ForecastUser();
                                   
                                 // Прогноз                              
-                                for (int j = 2; j < reader.FieldCount; j++)
+                                for (int j = 5; j < reader.FieldCount; j++)
                                     uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
 
                                 // Победитель

@@ -32,16 +32,17 @@ begin
 			
 				select u.Nic as 'WinnerName', u.Avatar as 'WinnerAvater', u.Rang as 'WinnerRang', fu.Value, fu.ReportDate, f.*
 				from Forecasts f 
-					left join Users u on u.Id = f.Winner
+					left join Users u on u.Id = f.Winner and u.Id = @UserId
 					left join ForecastsUsers fu on fu.ForecastId = f.Id and fu.UserId = @UserId
+				where fu.Value is not null
 				order by f.ForecastDate desc
 			
 			end else begin
 						
 				select u.Nic as 'WinnerName', u.Avatar as 'WinnerAvater', u.Rang as 'WinnerRang', fu.Value, fu.ReportDate, f.*
-				from Forecasts f left join Users u on u.Id = f.Winner
+				from Forecasts f left join Users u on u.Id = f.Winner and u.Id = @UserId
 					left join ForecastsUsers fu on fu.ForecastId = f.Id and fu.UserId = @UserId
-				where f.SubjectId = @SubjectId
+				where f.SubjectId = @SubjectId and fu.Value is not null
 				order by f.ForecastDate desc
 			
 			end

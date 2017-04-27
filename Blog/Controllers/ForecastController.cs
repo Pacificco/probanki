@@ -78,9 +78,35 @@ namespace Bankiru.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Archive()
+        public ActionResult Archive(string subject = "all")
         {
-            return View();
+            try
+            {                
+                if (_connected)
+                {
+                    UserManager _manager = new UserManager();
+                    List<VM_ForecastUser> model = _manager.GetUserForecasts(-1, subject);
+                    if (model != null)
+                    {
+                        return View(model);
+                    }
+                    else
+                    {
+                        ViewBag.ErrorMessage = _manager.LastError;
+                        return View("Archive", null);
+                    }
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = _errMassage;
+                    return RedirectToAction("Error", "Error", null);
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.ErrorMessage = e.ToString();
+                return RedirectToAction("Error", "Error", null);
+            }
         }
         [HttpGet]
         [OutputCache(Duration = 60)]
@@ -341,6 +367,30 @@ namespace Bankiru.Controllers
                     {
                         return PartialView("_moduleDisableAddUserToForecast", model);
                     }
+                }
+                else
+                {
+                    log.Error(_errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        [OutputCache(Duration = 60)]
+        public PartialViewResult _getModuleLastForecastWinners()
+        {
+            try
+            {
+                if (_connected)
+                {                    
+                    ForecastManager manager = new ForecastManager();
+                    List<VM_ForecastUser> model = manager.GetLastForecastWinners();
+                    return PartialView("_moduleLastForecastWinners", model);
                 }
                 else
                 {

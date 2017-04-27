@@ -512,6 +512,76 @@ namespace Bankiru.Models.Domain.Club
                         command.Dispose();
                 }
             }
+        }
+        /// <summary>
+        /// Возвращает список последних победителей
+        /// </summary>
+        /// <returns>Список прогнозов и победителей</returns>
+        public List<VM_ForecastUser> GetLastForecastWinners()
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.LastForecastWinnersView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;            
+            command.CommandTimeout = 15;
+            List<VM_ForecastUser> result = new List<VM_ForecastUser>();
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_ForecastUser uf = null;
+                            while (reader.Read())
+                            {
+                                uf = new VM_ForecastUser();
+
+                                // Прогноз                              
+                                for (int j = 3; j < reader.FieldCount; j++)
+                                    uf.Forecast.SetFieldValue(reader.GetName(j), reader.GetValue(j));
+
+                                // Победитель
+                                if (reader.IsDBNull(0))
+                                {
+                                    uf.Forecast.Winner.Clear();
+                                }
+                                else
+                                {
+                                    //uf.Forecast.Winner.Id = reader.GetInt32(0);
+                                    uf.Forecast.Winner.Nic = reader.GetString(0);
+                                    uf.Forecast.Winner.Avatar = reader.GetString(1);
+                                    uf.Forecast.Winner.Rang = reader.GetString(2);
+                                }                                
+                                result.Add(uf);
+                            }
+                        }
+                    }
+                    if (result.Count > 0)
+                    {
+                        //Предмет прогноза
+                        ForecastManager manager = new ForecastManager();
+                        List<VM_ForecastSubject> subjects = manager._getForecastSubjects();
+                        if (subjects == null)
+                            return null;
+                        foreach (VM_ForecastUser f in result)
+                            f.Forecast.Subject.Assign(subjects.FirstOrDefault(s => s.Id == f.Forecast.Subject.Id));
+                    }
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                        DbStruct.PROCEDURES.UserForecastsView.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
         }        
         #endregion
 
