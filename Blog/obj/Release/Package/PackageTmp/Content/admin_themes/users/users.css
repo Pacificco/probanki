@@ -101,14 +101,14 @@
 
 /*Баланс
 --------------------------------------------------------------------*/
-#user-add-balance-block .editor-row {
+/*#user-add-balance-block .editor-row {
     clear: both;
     overflow: hidden;
 }
 #user-add-balance-block .editor-column{
     float: left;
     margin-right: 5px; 
-}
+}*/
 #user-add-balance-block .editor-field input[type=text],
 #user-add-balance-block .editor-field select{
     padding: 5px;

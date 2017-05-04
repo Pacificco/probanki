@@ -252,7 +252,7 @@ namespace Bankiru.Controllers
                 ModelState.AddModelError("", "Ошибка запроса к серверу!");
                 return PartialView("_moduleAddUserToForecast", model);
             }
-        }
+        }        
         #endregion
 
         #region ДОЧЕРНИЕ МЕТОДЫ

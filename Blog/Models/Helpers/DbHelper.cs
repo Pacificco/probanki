@@ -1,4 +1,5 @@
 ﻿using Bankiru.Models.DataBase;
+using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Orgs;
 using Bankiru.Models.Domain.Other;
 using Bankiru.Models.Infrastructure;
@@ -107,6 +108,61 @@ namespace Bankiru.Models.Helpers
                 return "<p>" + result + "</p>";
             else
                 return result;
+        }
+        /// <summary>
+        /// Возвращает дату и время в формате, использующемся в SQL-запросах
+        /// </summary>
+        /// <param name="Value">Дата и время</param>
+        /// /// <param name="dFormat">Возвращаемый формат дата и время</param>
+        /// <returns>Строка</returns>
+        public static string FormatSQLDateTime(DateTime Value, SQLDateFormat dFormat)
+        {
+            string Result = String.Empty;
+            switch (dFormat)
+            {
+                case SQLDateFormat.sdfDateTime:
+                    Result += Value.Year.ToString();
+                    Result += Value.Month.ToString().Length == 1 ? "0" + Value.Month.ToString() : Value.Month.ToString();
+                    Result += Value.Day.ToString().Length == 1 ? "0" + Value.Day.ToString() : Value.Day.ToString();
+                    Result += " ";
+
+                    Result += Value.Hour.ToString().Length == 1 ? "0" + Value.Hour.ToString() : Value.Hour.ToString();
+                    Result += ":";
+                    Result += Value.Minute.ToString().Length == 1 ? "0" + Value.Minute.ToString() : Value.Minute.ToString();
+                    Result += ":";
+                    Result += Value.Second.ToString().Length == 1 ? "0" + Value.Second.ToString() : Value.Second.ToString();
+
+                    Result = Result.Trim();
+                    break;
+                case SQLDateFormat.sdfDate:
+                    Result += Value.Year.ToString();
+                    Result += Value.Month.ToString().Length == 1 ? "0" + Value.Month.ToString() : Value.Month.ToString();
+                    Result += Value.Day.ToString().Length == 1 ? "0" + Value.Day.ToString() : Value.Day.ToString();
+                    break;
+                case SQLDateFormat.sdfTime:
+                    Result += Value.Hour.ToString().Length == 1 ? "0" + Value.Hour.ToString() : Value.Hour.ToString();
+                    Result += ":";
+                    Result += Value.Minute.ToString().Length == 1 ? "0" + Value.Minute.ToString() : Value.Minute.ToString();
+                    Result += ":";
+                    Result += Value.Second.ToString().Length == 1 ? "0" + Value.Second.ToString() : Value.Second.ToString();
+                    break;
+                case SQLDateFormat.sdfDateTime_TimeMin:
+                    Result += Value.Year.ToString();
+                    Result += Value.Month.ToString().Length == 1 ? "0" + Value.Month.ToString() : Value.Month.ToString();
+                    Result += Value.Day.ToString().Length == 1 ? "0" + Value.Day.ToString() : Value.Day.ToString();
+                    Result += " ";
+                    Result += "00:00:00";
+                    break;
+                case SQLDateFormat.sdfDateTime_TimeMax:
+                    Result += Value.Year.ToString();
+                    Result += Value.Month.ToString().Length == 1 ? "0" + Value.Month.ToString() : Value.Month.ToString();
+                    Result += Value.Day.ToString().Length == 1 ? "0" + Value.Day.ToString() : Value.Day.ToString();
+                    Result += " ";
+                    Result += "23:59:59";
+                    break;
+            }
+
+            return "'" + Result + "'";
         }
     }
 }

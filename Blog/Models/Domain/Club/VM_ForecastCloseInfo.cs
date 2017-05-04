@@ -13,8 +13,10 @@ namespace Bankiru.Models.Domain.Club
         [Display(Name = "Идентификатор")]
         public int ForecastId { get; set; }
         [Display(Name = "Фактическое значение")]
-        public double FactValue { get; set; }
+        public string FactValue { get; set; }
         [Display(Name = "Дата следующего прогноза")]
-        public DateTime NextForecastDate { get; set; }
+        public DateTime NextForecastDate { get; set; }        
+        [Display(Name = "Сообщение об успешном закрытии прогноза")]
+        public string SuccessMessage { get; set; }
     }
 }

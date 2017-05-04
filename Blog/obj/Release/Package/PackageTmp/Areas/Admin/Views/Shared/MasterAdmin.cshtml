@@ -20,6 +20,13 @@
                 <ul id="top-menu">
                     <li><a href="@Url.Action("Index", "Info")" title="">Главная</a></li>
                     <li>
+                        <a href="#" title="">Модули</a>
+                        <ul>
+                            <li><a href="@Url.Action("List", "Forecast")" title="">Прогнозы</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
                         <a href="@Url.Action("List", "Users")" title="">Пользователи</a>
                         <ul>
                             <li><a href="@Url.Action("List", "Users")" title="">Пользователи</a></li>                            
@@ -47,14 +54,7 @@
                     </li>
                     <li>
                         <a href="@Url.Action("List", "News")" title="">Новости</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">Модули</a>
-                        <ul>
-                            <li><a href="@Url.Action("List", "Forecast")" title="">Прогнозы</a></li>
-                        </ul>
-
-                    </li>
+                    </li>                    
                 </ul>
             </nav>
 

@@ -25,6 +25,19 @@ begin
 		primary key (Id) 
 	)
 	
+	if @IsClosed is null begin
+		if @SubjectId is null
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
+				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id				
+		else
+			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
+				select row_number() OVER (order by f.CreateDate desc, f.SubjectId) AS RowNumber, 
+					f.Id,f.SubjectId,fs.Name,f.IsClosed,f.Winner,f.WinValue,f.WinAmount,f.ForecastDate,f.CreateDate,0
+				from Forecasts f join ForecastSubjects fs on f.SubjectId = fs.Id
+				where f.SubjectId = @SubjectId
+	end else 
 	if @IsClosed = 1 begin
 		if @SubjectId is null
 			insert #tblForecasts(RowNum,Id,SubjectId,SubjectName,IsClosed,Winner,WinValue,WinAmount,ForecastDate,CreateDate,UserCount)			
@@ -66,8 +79,8 @@ begin
 	group by f.Id
 	
 	update #tblForecasts
-	set UserCount = fu.UserCount
-	from #tblForecasts f join #tblForecastsUsers fu on f.Id = fu.Id
+	set UserCount = case when fu.UserCount is null then 0 else fu.UserCount end
+	from #tblForecasts f left join #tblForecastsUsers fu on f.Id = fu.Id
 	
 	select * from #tblForecasts where RowNum >= @RowBegin and RowNum <= @RowEnd order by RowNum
 	

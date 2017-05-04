@@ -1755,6 +1755,7 @@ header {
 #club-about,
 #user-profile,
 #user-profile-editor,
+#user-archive,
 #club-archive {
     padding: 10px 20px 10px 20px;
     position: relative;    
@@ -1766,6 +1767,7 @@ header {
 #club-about h1,
 #user-profile h1,
 #user-profile-editor h1,
+#user-archive h1,
 #club-archive h1{
     background-color: #374e74;
     color: #ffffff;
@@ -1779,6 +1781,7 @@ header {
 #club-about h1 span,
 #user-profile h1 span,
 #user-profile-editor h1 span,
+#user-archive h1 span,
 #club-archive h1 span {
     background: white;
     padding: 0 8px 0 0;
@@ -1931,6 +1934,53 @@ header {
 }
 #forecast-list .forecasts .forecast-prev.sberbank .read-more{
     background-color: #17a668;
+}
+
+/* Победители предыдущих прогнозов
+ -----------------------------------------------------------*/
+#last-forecast-winners {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #e5e5e5;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#last-forecast-winners h2 {
+    color: #2195c9;
+    text-transform: uppercase;
+    font-style: normal;
+    margin: 5px 0 15px 0;
+}
+#last-forecast-winners .forecast {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#last-forecast-winners .forecast .open-state,
+#last-forecast-winners .forecast .close-state{
+    text-transform: uppercase;    
+    text-align: left;
+}
+#last-forecast-winners .forecast .open-state {
+    color: #38a76a;    
+}
+#last-forecast-winners .forecast .close-state{
+    color: gray;    
+}
+#last-forecast-winners .forecast .subject {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#last-forecast-winners .forecast .date {
+    text-transform: none;
+    font-weight: normal;        
+    padding-left: 5px;
+}
+#last-forecast-winners .forecast .open-date {
+    color: black;
+}
+#last-forecast-winners .forecast .close-date{
+    color: gray;
 }
 
 /* Прогноз детали
@@ -2270,6 +2320,41 @@ header {
     font-size: 1.1em;
     font-weight: 500;
 }
+
+/* Личный кабинет - Мои прогнозы
+-----------------------------------------------------------*/
+#user-archive .forecast {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#user-archive .forecast .open-state,
+#user-archive .forecast .close-state{
+    text-transform: uppercase;    
+    text-align: left;
+}
+#user-archive .forecast .open-state {
+    color: #38a76a;    
+}
+#user-archive .forecast .close-state{
+    color: gray;    
+}
+#user-archive .forecast .subject {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#user-archive .forecast .date {
+    text-transform: none;
+    font-weight: normal;        
+    padding-left: 5px;
+}
+#user-archive .forecast .open-date {
+    color: black;
+}
+#user-archive .forecast .close-date{
+    color: gray;
+}
+
 
 /* Форма обратной связи
 -----------------------------------------------------------*/
@@ -3027,11 +3112,14 @@ header {
     position: relative;
     color: #646464;    
     float: left;
-    width: 130px;
+    width: 150px;
 }
 #column-left section.side-user-profile .current-forecasts .state {
     position: relative;
     float: left;
+}
+#column-left section.side-user-profile .current-forecasts .state img {
+    margin-left: 5px;
 }
 #column-left section.side-user-profile .current-forecasts-enddate {
     margin: 10px 0 0 0;
@@ -3080,7 +3168,7 @@ header {
     padding-left: 10px;
     float: left;
     font-size: 1.2em;
-    color: #646464;
+    color: #3791c1;
     font-weight: bold;
 }
 #column-left section.club-users .rang {

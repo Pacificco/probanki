@@ -14,17 +14,17 @@
                 <th class="title">Прогноз</th>
                 <th class="subject">Категория</th>
                 <th class="win-amount">Выигрыш</th>
-                <th class="result-at">Дата результатов</th>
+                <th class="result-at">Дата создания</th>
                 <th class="id">Id</th>
             </tr>
             @foreach (VM_Forecast item in Model.Items)
             {
                 <tr class="@classEvel">
                     <td class="tools">
-                        <a class="del-forecast" data-forecast-name="Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))" href="@Url.Action("Del", "Forecast", new { id = item.Id })" title="Удалить Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))">
-                            <img src="~/Content/system/del.png" title="Удалить Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))" alt="Удалить" />
+                        <a class="del-forecast" data-forecast-name="Прогноз на @item.ForecastDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))" href="@Url.Action("Del", "Forecast", new { id = item.Id })" title="Удалить Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))">
+                            <img src="~/Content/system/del.png" title="Удалить Прогноз на @item.ForecastDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))" alt="Удалить" />
                         </a>
-                        <a href="@Url.Action("Edit", "Forecast", new { id = item.Id })" title="Редактировать Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))">
+                        <a href="@Url.Action("Edit", "Forecast", new { id = item.Id })" title="Редактировать Прогноз на @item.ForecastDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))">
                             <img src="~/Content/system/edit.png" title="Редактировать" />
                         </a>
                     </td>
@@ -40,7 +40,7 @@
                         @*<img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" />*@
                     </td>
                     <td class="title">
-                        <a href="@Url.Action("Edit", "Forecast", new { id = item.Id })" title="">Прогноз от @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</a>
+                        <a href="@Url.Action("Edit", "Forecast", new { id = item.Id })" title="">Прогноз от @item.ForecastDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</a>
                     </td>
                     <td class="subject">
                         @item.Subject.Name
@@ -49,7 +49,7 @@
                         @item.WinAmount.ToString("#.##") руб.
                     </td>  
                     <td class="result-at">
-                        @item.ForecastDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))
+                        @item.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))
                     </td>
                     <td class="id">
                         @item.Id.ToString()

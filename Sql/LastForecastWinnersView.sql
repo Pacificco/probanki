@@ -1,4 +1,4 @@
--- Cписок прогнозов, в которых пользователь прин€л участие
+-- ѕобедители последних закрытых прогнозов
 if exists(select 1 from sysobjects where name = N'LastForecastWinnersView' and xtype='P') drop proc LastForecastWinnersView
 go
 create proc LastForecastWinnersView as

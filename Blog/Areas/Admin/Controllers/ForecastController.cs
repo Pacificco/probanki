@@ -1,6 +1,7 @@
 ﻿using Bankiru.Controllers;
 using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Club;
+using Bankiru.Models.Helpers;
 using Bankiru.Models.Security;
 using System;
 using System.Collections.Generic;
@@ -248,6 +249,67 @@ namespace Bankiru.Areas.Admin.Controllers
                 return Json(new { resultMessage = "ERROR" });
             }
         }
+        [HttpPost]
+        public ActionResult AjaxClose(VM_ForecastCloseInfo model)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    if (Request.IsAjaxRequest())
+                    {
+                        if (ModelState.IsValid)
+                        {
+                            ForecastManager manager = new ForecastManager();
+
+                            if (String.IsNullOrEmpty(model.FactValue))
+                            {
+                                model.SuccessMessage = String.Empty;
+                                ModelState.AddModelError("", "Вы не указали фактическое значение прогноза!");
+                                return PartialView("_moduleAddUserToForecast", model);
+                            }
+
+                            bool success = false;
+                            double value = TextHelper.DoubleParse(model.FactValue, out success);
+                            if (!success)
+                            {
+                                model.SuccessMessage = String.Empty;
+                                ModelState.AddModelError("", "Вы задали некорректное фактическое значение!");
+                                return PartialView("_forecastCloseBlock", model);
+                            }
+
+                            if (!manager.CloseForecast(model.ForecastId, value, model.NextForecastDate))
+                            {
+                                model.SuccessMessage = String.Empty;
+                                ModelState.AddModelError("", "Ошибка во время закрытия прогноза!");
+                                return PartialView("_forecastCloseBlock", model);
+                            }
+                            return PartialView("_forecastCloseBlock", new VM_AddUserToForecast() { SuccessMessage = "Успешно!" });
+                        }
+                        else
+                        {
+                            return PartialView("_forecastCloseBlock", model);
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Ошибка запроса к серверу!");
+                        return PartialView("_forecastCloseBlock", model);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Ошибка подключения к серверу!");
+                    return PartialView("_forecastCloseBlock", model);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(String.Format("Ошибка в методе AjaxClose!\n", ex.ToString()));
+                ModelState.AddModelError("", "Ошибка запроса к серверу!");
+                return PartialView("_forecastCloseBlock", model);
+            }
+        }
 
         #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]
@@ -300,7 +362,7 @@ namespace Bankiru.Areas.Admin.Controllers
                 if (_connected)
                 {
                     VM_ForecastCloseInfo model = new VM_ForecastCloseInfo();
-                    model.FactValue = 0.0F;
+                    model.FactValue = "";
                     model.NextForecastDate = next_forecast_date;
                     model.ForecastId = forecast_id;
                     return PartialView("_forecastCloseBlock", model);

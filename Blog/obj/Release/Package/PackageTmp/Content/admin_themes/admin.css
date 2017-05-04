@@ -413,6 +413,14 @@ header nav {
     padding: 5px 0;
     margin: 0;
 }
+.stat-block .stat-block-body .editor-row {
+    clear: both;
+    overflow: hidden;
+}
+.stat-block .stat-block-body .editor-column{
+    float: left;
+    margin-right: 5px; 
+}
 
 /* Кнопки
 -----------------------------------------------------------*/

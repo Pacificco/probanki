@@ -1,5 +1,6 @@
 ﻿using Bankiru.Models.DataBase;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.Helpers;
 using Bankiru.Models.Infrastructure;
 using Bankiru.Models.Security;
 using log4net;
@@ -234,17 +235,27 @@ namespace Bankiru.Models.Domain.Club
         /// </summary>
         /// <param name="forecastDate">Дата окончания прогноза</param>
         /// <returns>Логическое значение</returns>
-        public bool CloseForecasts(DateTime forecastDate)
+        public bool CloseForecast(int forecastId, double factValue, DateTime newForecastDate)
         {
-            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CloseForecasts.Name, GlobalParams.GetConnection());
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.CloseForecast.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CloseForecasts.Params.ForecastDate, forecastDate);
-            command.CommandTimeout = 15;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CloseForecast.Params.FactValue, factValue);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CloseForecast.Params.ForecastId, forecastId);
+            DateTime forecastDate = new DateTime(newForecastDate.Year, newForecastDate.Month, newForecastDate.Day, 23, 59, 59);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.CloseForecast.Params.NewForecastDate, forecastDate);
+                //DbHelper.FormatSQLDateTime(newForecastDate, SQLDateFormat.sdfDateTime_TimeMax));
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = DbType.Int32;
+            returnValue.Direction = ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 30;
             lock (GlobalParams._DBAccessLock)
             {
                 try
                 {
-                    if (command.ExecuteNonQuery() == 1)
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
                         return false;
                     else
                         return true;
@@ -252,7 +263,7 @@ namespace Bankiru.Models.Domain.Club
                 catch (Exception ex)
                 {
                     _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
-                        DbStruct.PROCEDURES.CloseForecasts.Name, ex.ToString());
+                        DbStruct.PROCEDURES.CloseForecast.Name, ex.ToString());
                     log.Error(_lastError);
                     return false;
                 }

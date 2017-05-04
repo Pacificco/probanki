@@ -63,3 +63,10 @@ function set_tariff_sum() {
 
     $('#form-add-balance #Sum').val(sum);
 };
+//Успешное закрытие прогноза
+function forecast_closed_success(data) {
+    var id = $('#forecast-closed-success-mes');
+    if (id != null) {
+        location.reload();
+    }
+};

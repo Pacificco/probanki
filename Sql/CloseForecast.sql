@@ -2,8 +2,9 @@
 if exists(select 1 from sysobjects where name = N'CloseForecast' and xtype='P') drop proc CloseForecast
 go
 create proc CloseForecast (
-	@ForecastId int,
-	@FactValue float
+	@ForecastId			int,
+	@FactValue			float,
+	@NewForecastDate	datetime
 	) as
 begin
 	
@@ -14,14 +15,29 @@ begin
 
 	begin try 
 	
-		if @trancount = 0
-			begin transaction
-	
 		if @FactValue is null 
 			return 1
-			
+	
+		if @trancount = 0
+			begin transaction
+		
+		-- Закрываем текущий прогноз
 		update Forecasts set IsClosed = 1, FactValue = @FactValue where Id = @ForecastId
-		exec DefineForecastWinner @ForecastId
+		
+		-- Создаем новый
+		insert Forecasts(IsClosed,CreateDate,FactValue,ForecastDate,ReportDate,ReportUserId,SubjectId,WinAmount,WinValue,Winner)
+			select 0, GETDATE(), null, @NewForecastDate, GETDATE(),25, f.SubjectId, f.WinAmount, null, null
+			from Forecasts f where f.Id = @ForecastId
+		
+		-- Определяем победителя текущего прогноза
+		declare @result int
+		exec @result = DefineForecastWinner @ForecastId
+		--select '@result = ', @result
+		if @result = 1 begin
+			if @trancount = 0
+				rollback transaction
+			return 1
+		end
 		
 		if @trancount = 0
 			commit transaction
@@ -58,6 +74,8 @@ begin
 			
 		declare @factValue float = (select FactValue from Forecasts where Id = @ForecastId)
 		
+			--select '@factValue = ',  @factValue
+		
 		if @factValue is null
 			return 1
 		
@@ -70,47 +88,55 @@ begin
 			set @WinUser = (select top 1 fu.Value from ForecastsUsers fu 
 									where fu.ForecastId = @ForecastId and fu.Value = @ExecValue
 									order by fu.ReportDate)
-			if @WinUser is null
-				return 1
-			
-			update Forecasts set WinValue = @ExecValue, Winner = @WinUser where Id = @ForecastId
+				--select '@WinUser = ',  @WinUser
+					
+			if @WinUser is not null
+				update Forecasts set WinValue = @ExecValue, Winner = @WinUser where Id = @ForecastId
 		
 		end else begin
 				
 			declare @LowValue float = (select MAX(fu.Value) from ForecastsUsers fu 
 										where fu.ForecastId = @ForecastId and fu.Value < @factValue)
+				--select '@LowValue = ',  @LowValue
 										
 			declare @HighValue float = (select MIN(fu.Value) from ForecastsUsers fu 
 										where fu.ForecastId = @ForecastId and fu.Value > @factValue)
+				--select '@HighValue = ' ,  @HighValue
 					
 			declare @DifLowValue float = 9999;
 			if @LowValue is not null begin
 				set @DifLowValue =  @factValue - @LowValue
 			end
 			
+				--select '@DifLowValue', @DifLowValue
+			
 			declare @DifHighValue float = 9999;
 			if @HighValue is not null begin
 				set @DifHighValue =  @HighValue - @factValue
 			end
+			
+				--select '@DifHighValue = ' ,  @DifHighValue
 			
 			if @DifLowValue < @DifHighValue begin
 			
 				set @WinUser = (select top 1 fu.Value from ForecastsUsers fu 
 									where fu.ForecastId = @ForecastId and fu.Value = @LowValue
 									order by fu.ReportDate)
+									
+					--select '@WinUser = ' ,  @WinUser		
+								
 				if @WinUser is null
-					return 1	
-					
-				update Forecasts set WinValue = @LowValue, Winner = @WinUser where Id = @ForecastId
+					update Forecasts set WinValue = @LowValue, Winner = @WinUser where Id = @ForecastId
 						
 			end else begin
 				set @WinUser = (select top 1 fu.Value from ForecastsUsers fu 
 									where fu.ForecastId = @ForecastId and fu.Value = @HighValue
 									order by fu.ReportDate)
-				if @WinUser is null
-					return 1
+									
+					--select '@WinUser = ' ,  @WinUser	
 					
-				update Forecasts set WinValue = @HighValue, Winner = @WinUser where Id = @ForecastId
+				if @WinUser is null
+					update Forecasts set WinValue = @HighValue, Winner = @WinUser where Id = @ForecastId
 			end
 
 		end

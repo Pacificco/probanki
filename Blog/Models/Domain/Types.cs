@@ -5,6 +5,14 @@ using System.Web;
 
 namespace Bankiru.Models.Domain
 {
+    public enum SQLDateFormat
+    {
+        sdfDateTime, 
+        sdfDate, 
+        sdfTime, 
+        sdfDateTime_TimeMin, 
+        sdfDateTime_TimeMax
+    }
     public enum EnumDisableAddUserToForecast
     {
         Enable = 0,

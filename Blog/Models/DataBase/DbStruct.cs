@@ -1244,18 +1244,20 @@ namespace Bankiru.Models.DataBase
             /// <summary>
             /// Закрывает прогнозы по указанной дате
             /// </summary>
-            public static class CloseForecasts
+            public static class CloseForecast
             {
                 /// <summary>
                 /// Название хранимой процедуры
                 /// </summary>
-                public static string Name = "CloseForecasts";
+                public static string Name = "CloseForecast";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>
                 public static class Params
                 {
-                    public static string ForecastDate = "@ForecastDate";
+                    public static string ForecastId = "@ForecastId";
+                    public static string FactValue = "@FactValue";
+                    public static string NewForecastDate = "@NewForecastDate";
                 }
             }
             /// <summary>

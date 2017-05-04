@@ -37,11 +37,7 @@
 }
 
 
-/*Новая организация
---------------------------------------------------------------------*/
-
-
-/*Редактирование организации
+/*Редактирование прогноз
 --------------------------------------------------------------------*/
 #forecast-editor .editor-field input[type=text],
 #forecast-editor .editor-field select{
@@ -79,14 +75,16 @@
     border: 1px solid #9ba6b3;
 }
 #forecast-editor .editor-title .closed {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: red;
 }
 #forecast-editor .editor-title .open {
-    font-size: 1.1em;
+    font-size: 1.4em;
     color: green;
 }
-
+#forecast-editor .forecast-date {
+    font-weight: 500; 
+}
 #forecast-editor .editor-main input[type=text]{
     width: 930px;
 }
@@ -104,8 +102,35 @@
 }
 
 #forecast-editor input[type=submit]{
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-    cursor: pointer;
+    /*width: 100px;
+    height: 30px;*/
+    margin-top: 10px;
+    /*cursor: pointer;*/
+}
+
+/*Закрытие прогноза
+--------------------------------------------------------------------*/
+#spinning-forecast-close-submit{
+    display: none;
+}
+#form-forecast-close .editor-field input[type=text],
+#form-forecast-close .editor-field select{
+    padding: 5px;
+    border: 1px solid #9ba6b3;
+}
+#form-forecast-close .editor-field input[type=date] {
+    width: 200px;
+    padding: 3px;
+    border: 1px solid #9ba6b3;
+}
+#form-forecast-close .validation-summary-errors{
+    margin: 0 0 20px 0;
+}
+#form-forecast-close .validation-summary-errors ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#form-forecast-close .validation-summary-errors ul li{
+    font-weight: normal;
 }

@@ -160,7 +160,7 @@ namespace Bankiru
                 url: "club/forecasts/{subject_id}/{id}/adduser_ajax",
                 defaults: new { controller = "Forecast", action = "AddUserAjax", subject_id = UrlParameter.Optional, id = UrlParameter.Optional },
                 namespaces: new[] { "Bankiru.Controllers" }
-            );
+            );            
             routes.MapRoute(
                 name: "club_forecast_adduser",
                 url: "club/forecasts/adduser",
