@@ -5,6 +5,8 @@ create proc AddUserToForecastStateView (
 	@UserId int, @ForecastId int
 	) as
 begin
+	
+	begin try
 		
 		-- Проверяем баланс пользователя
 		declare @tariff_info table (ForecastEndDate		datetime	not null,											
@@ -24,8 +26,9 @@ begin
 			
 		-- Проверяем число прогнозов за текущий месяц
 		declare @tariffId tinyint = (select TariffId from @tariff_info)
-		declare @tryCount int = dbo.GetUserForecastTryCountForThisMonth(@UserId, @tariffId)
-		-- Если подписка уже закончилась
+		--declare @tryCount int = dbo.GetUserForecastTryCountForThisMonth(@UserId, @tariffId)
+		declare @tryCount int = dbo.GetUserForecastTryCountForThisForecasts(@UserId, @tariffId)	-- u0201459_probanki_user
+		-- Если количество прогнозов исчерпано
 		if @tryCount = 0 begin
 			select cast(0 as bit), 2;
 			return 0;
@@ -37,6 +40,7 @@ begin
 			return 0;
 		end
 		
+		-- В прогнозе уже нельзя принять участие
 		declare @fDate datetime = (select ForecastDate from Forecasts where Id = @ForecastId)		
 		if getdate() > (dateadd(dd, -2, @fDate)) begin
 			select cast(0 as bit), 5;
@@ -46,5 +50,13 @@ begin
 		-- Возможно принять участие в указанном прогнозе
 		select cast(1 as bit), 0;			
 		return 0
+
+	end try 
+	begin catch 
+		select cast(0 as bit), 3;
+			return 0;
+		return 1
+	end catch
+	
 end
 go

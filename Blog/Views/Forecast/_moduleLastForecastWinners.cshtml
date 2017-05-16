@@ -51,14 +51,21 @@
                         }
                     </div>
                     
+                    @*Приз*@
+                    <div>Приз: <span class="win-amount">@fu.Forecast.WinAmount.ToString() руб.</span></div>
+
                      @*Победитель*@
                     @if (fu.Forecast.Winner.Id > 0)
                     {
                         <div class="winner">
                             Победитель: <span class="winner-nic">@fu.Forecast.Winner.Id</span><br />
-                            Победивший прогноз: <span class="winner-value">@fu.Forecast.WinValue.ToString("##.####")</span><br />
+                            Прогноз победителя: <span class="winner-value">@fu.Forecast.WinValue.ToString("##.####")</span><br />
                             Фактическое значение: <span class="fact-value">@fu.Forecast.FactValue.ToString("##.####")</span>
                         </div>
+                    }
+                    else
+                    {
+                        <div class="no-winner">Победителя нет.</div>
                     }
 
                     @*Прогноз текущего пользователя*@

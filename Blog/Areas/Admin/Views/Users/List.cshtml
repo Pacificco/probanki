@@ -65,6 +65,16 @@
                 }
             })
         });
+
+        // Удаление пользователя
+        $("#content .del-user").click(function (event) {
+            var userName = $(this).attr("data-user-name");
+            if (!confirm("Вы действительно хотите удалить " + orgName + "?"))
+            {
+                event.preventDefault();
+            }
+        });
+    
     </script>
 }
 @Html.Action("_getUsersListFilter", "Users", new { filter = Model.Filters })

@@ -1143,6 +1143,23 @@ namespace Bankiru.Models.DataBase
                     public static string Nic = "@Nic";
                 }
             }
+            /// <summary>
+            /// Удаляет пользователя из базы данных
+            /// </summary>
+            public static class UserDelete
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UserDelete";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";                    
+                }
+            }
             #endregion
 
             #region ПРОГНОЗЫ

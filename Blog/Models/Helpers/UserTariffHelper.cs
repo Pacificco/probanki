@@ -30,13 +30,13 @@ namespace Bankiru.Models.Helpers
             switch (tariff)
             {
                 case EnumForecastTariff.Platinum:
-                    return "4 площадки";
+                    return "Платина";
                 case EnumForecastTariff.Gold:
-                    return "3 площадки";
+                    return "Золото";
                 case EnumForecastTariff.Silver:
-                    return "2 площадки";
+                    return "Серебро";
                 case EnumForecastTariff.Bronze:
-                    return "1 площадка";
+                    return "Бронза";
                 default:
                     return "?";
             }
@@ -46,13 +46,13 @@ namespace Bankiru.Models.Helpers
             switch (period)
             {
                 case EnumClubTariffPeriod.Month:
-                    return "1 месяц";
+                    return "Платина";
                 case EnumClubTariffPeriod.Quarter:
-                    return "3 месяца";
+                    return "Золото";
                 case EnumClubTariffPeriod.Half:
-                    return "6 месяцев";
+                    return "Серебро";
                 case EnumClubTariffPeriod.Year:
-                    return "12 месяцев";
+                    return "Бронза";
                 default:
                     return "?";
             }

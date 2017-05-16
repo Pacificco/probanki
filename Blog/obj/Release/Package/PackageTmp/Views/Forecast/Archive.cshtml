@@ -73,7 +73,9 @@
                             <span class="date open-date">(открыт до @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))))</span>
                         }
                     </div>
-                    
+                    @*Приз*@
+                    <div>Приз: <span class="win-amount">@fu.Forecast.WinAmount.ToString() руб.</span></div>
+
                      @*Победитель*@
                     @if (fu.Forecast.Winner.Id > 0)
                     {
@@ -82,6 +84,17 @@
                             Победивший прогноз: <span class="winner-value">@fu.Forecast.WinValue.ToString("##.####")</span><br />
                             Фактическое значение: <span class="fact-value">@fu.Forecast.FactValue.ToString("##.####")</span>
                         </div>
+                    }
+                    else
+                    {
+                        if (fu.Forecast.IsClosed)
+                        {
+                            <div class="no-winner">Победителя нет.</div>
+                        }
+                        else
+                        {
+                            <div class="no-winner">Победитель еще не определен.</div>
+                        }
                     }
 
                     @*Прогноз текущего пользователя*@

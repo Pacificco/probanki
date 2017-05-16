@@ -336,6 +336,20 @@ header {
     margin-top: 9px;    
 }
 
+/* Курсы валют
+-----------------------------------------------------------*/
+#info-board {    
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+#info-board h3{
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #374e74;    
+    padding: 10px;
+    margin: 0;
+}
 
 /* Курсы валют
 -----------------------------------------------------------*/
@@ -2150,7 +2164,12 @@ header {
     color: #2195c9;
     text-transform: uppercase;    
 }
-
+#forecast .users .user {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 7px;
+}
 #forecast .users .user-info {
     position: relative;
     margin: 0 0 10px 0;

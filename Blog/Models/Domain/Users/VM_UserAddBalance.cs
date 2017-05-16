@@ -11,7 +11,7 @@ namespace Bankiru.Models.Domain.Users
     {
         [HiddenInput]
         public int UserId { get; set; }
-        [Display(Name = "Кол-во площадок")]
+        [Display(Name = "Тариф")]
         [Range(1,4,ErrorMessage = "Вы не указали тариф!")]
         public int TariffId { get; set; }
         [Display(Name = "Сумма (в руб.)")]

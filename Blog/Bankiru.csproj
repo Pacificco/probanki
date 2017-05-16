@@ -277,6 +277,7 @@
     <Compile Include="Models\OutApi\NewsDownloader.cs" />
     <Compile Include="Models\OutApi\ChartDownloader.cs" />
     <Compile Include="Models\OutApi\Robokassa\RobokassaManager.cs" />
+    <Compile Include="Models\OutApi\UsersAutoControl.cs" />
     <Compile Include="Models\Security\CaptchaImageResult.cs" />
     <Compile Include="Models\Security\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\Security\CustomPrincipal.cs" />

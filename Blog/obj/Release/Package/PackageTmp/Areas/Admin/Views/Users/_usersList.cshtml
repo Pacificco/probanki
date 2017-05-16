@@ -24,7 +24,7 @@
                 {
                 <tr class="@classEvel">
                     <td class="tools">
-                        <a class="del-user" data-art-name="@item.Nic" href="@Url.Action("Del", "Users", new { user_id = item.Id })" title="Удалить @item.Nic">
+                        <a class="del-user" data-user-name="@item.Nic" href="@Url.Action("Del", "Users", new { user_id = item.Id })" title="Удалить @item.Nic">
                             <img src="~/Content/system/del.png" title="Удалить @item.Nic" alt="Удалить" />
                         </a>
                         <a href="@Url.Action("Edit", "Users", new { user_id = item.Id })" title="Редактировать @item.Nic">

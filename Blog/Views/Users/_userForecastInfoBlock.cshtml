@@ -7,7 +7,7 @@
         @*<div class="stat-block-body">*@
             @if (Model.TariffInfo.TariffEndDate >= DateTime.Now)
             {                
-                <p>Ткущий тариф: <strong>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</strong></p>
+                <p>Текущий тариф: <strong>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</strong></p>
                 if (@Model.TariffInfo.TariffEndDate == null)
                 { 
                     <p>Действителен до: <strong>Период не определен!</strong></p>

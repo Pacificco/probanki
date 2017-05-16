@@ -80,14 +80,14 @@ namespace Bankiru.Areas.Admin.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Delete(int user_id)
+        public ActionResult Del(int user_id)
         {
             try
             {
                 if (_connected)
                 {
                     UserManager _manager = new UserManager();
-                    if (true)//_manager.DeleteUser(user_id))
+                    if (_manager.DeleteUser(user_id))
                     {
                         ViewBag.InfoMessage = String.Format("Пользователь успешно удален.");
                         VM_UsersFilters f = _getUsersFiltersFromCookie(HttpContext.Request.Cookies["user_filters"]);

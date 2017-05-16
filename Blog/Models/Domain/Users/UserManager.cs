@@ -457,24 +457,25 @@ namespace Bankiru.Models.Domain.Users
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Email, user.Email.Trim());
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.Sex, (int)user.Sex);
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.UpdateUserProfile.Params.IsSubscribed, user.IsSubscribed);
-
+                SqlParameter returnValue = new SqlParameter();
+                returnValue.DbType = System.Data.DbType.Int32;
+                returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+                returnValue.Value = 1;
+                command.Parameters.Add(returnValue);
                 command.CommandTimeout = 15;
                 lock (GlobalParams._DBAccessLock)
                 {
                     try
                     {
-                        int result = command.ExecuteNonQuery();
-                        if (result == 1)
+                        command.ExecuteNonQuery();
+                        if ((int)returnValue.Value == 1)
                         {
                             _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!",
                             DbStruct.PROCEDURES.AddBalance.Name);
                             log.Error(_lastError);
                             return false;
                         }
-                        else
-                        {
-                            return true;
-                        }
+                        return true;
                     }
                     catch (Exception ex)
                     {
@@ -490,9 +491,58 @@ namespace Bankiru.Models.Domain.Users
                             command.Dispose();
                     }
                 } 
-                return true;
             }
             catch(Exception ex)
+            {
+                _lastError = ex.ToString();
+                log.Error(_lastError);
+                return false;
+            }
+        }
+        public bool DeleteUser(int id)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UserDelete.Name, GlobalParams.GetConnection());
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UserDelete.Params.UserId, id);
+                SqlParameter returnValue = new SqlParameter();
+                returnValue.DbType = System.Data.DbType.Int32;
+                returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+                returnValue.Value = 1;
+                command.Parameters.Add(returnValue);
+                command.CommandTimeout = 15;
+                lock (GlobalParams._DBAccessLock)
+                {
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        if ((int)returnValue.Value == 1)
+                        {
+                            _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!",
+                            DbStruct.PROCEDURES.UserDelete.Name);
+                            log.Error(_lastError);
+                            return false;
+                        }
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
+                            DbStruct.PROCEDURES.UserDelete.Name,
+                            ex.ToString());
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    finally
+                    {
+                        if (command != null)
+                            command.Dispose();
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
             {
                 _lastError = ex.ToString();
                 log.Error(_lastError);

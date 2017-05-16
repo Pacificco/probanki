@@ -28,10 +28,10 @@ begin
 			Nic				= @Nic
 		where Id = @UserId
 		
-		select 1 as returnResult
+		return 0
 	end try 
 	begin catch 
-		select 0 as returnResult
+		return 1
 	end catch
     
 end

@@ -7,7 +7,7 @@
         UpdateTargetId = "forecast-close-block",
         LoadingElementId = "spinning-forecast-close-submit",
         Url = "/Admin/Forecast/AjaxClose",
-        OnComplete = "forecast_close_success"
+        OnComplete = "forecast_closed_success"
     };
 }
 @using (Ajax.BeginForm("Close", "Forecast", option, new { id = "form-forecast-close" }))

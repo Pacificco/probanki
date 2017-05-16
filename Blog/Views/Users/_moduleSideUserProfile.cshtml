@@ -40,13 +40,13 @@
 
             <div class="user-tariff-info">
                 <div class="tariff">
-                    Статус: <span>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</span><br />
+                    Тариф: <span>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</span><br />
                     <span>(прогнозов <span class="used-forecasts-count">@Model.GetUsedForecastsCountForMonth()</span> из 
                 <span class="enabled-forecasts-count">@Model.GetEnabledForecastsCountForMonth()</span>)</span>
                 </div>
-                <div class="balance">
+                @*<div class="balance">
                     Баланс: <span>@Model.TariffInfo.Balance руб.</span>
-                </div>
+                </div>*@
             </div>
         }
         else
