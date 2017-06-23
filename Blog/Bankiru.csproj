@@ -254,6 +254,7 @@
     <Compile Include="Models\Domain\Users\VM_UsersFilters.cs" />
     <Compile Include="Models\Domain\Users\VM_Users.cs" />
     <Compile Include="Models\Domain\Users\VM_UserTariffInfo.cs" />
+    <Compile Include="Models\Domain\Users\VM_UserTariffRequest.cs" />
     <Compile Include="Models\Helpers\CustomHtmlHelper.cs" />
     <Compile Include="Models\Helpers\ConvertHelper.cs" />
     <Compile Include="Models\Helpers\DbHelper.cs" />
@@ -287,6 +288,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Banners\Right\вуц-охрана-труда_v1_2.png" />
+    <Content Include="Banners\Right\вуц-охрана-труда_v2_2.png" />
     <Content Include="Content\admin_themes\arts\art.css" />
     <Content Include="Content\admin_themes\arts\table.css" />
     <Content Include="Content\admin_themes\comments\comments.css" />
@@ -741,6 +744,7 @@
     <Content Include="Views\Email\_emailTariffPayment.html.cshtml" />
     <Content Include="Views\Rates\Index.cshtml" />
     <Content Include="Views\Forecast\_moduleLastForecastWinners.cshtml" />
+    <Content Include="Views\Users\_userTariffRequestsHistoryBlock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

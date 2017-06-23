@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -19,9 +20,10 @@ namespace Bankiru.Models.OutApi
     {        
         public static readonly ILog log = LogManager.GetLogger(typeof(ChartManager));
         private static NumberFormatInfo _numberFormatInfo = new NumberFormatInfo() { NumberDecimalSeparator = "." };
+        private static CultureInfo provider = CultureInfo.CreateSpecificCulture("ru-RU");
 
         private string _lastError;
-        public string LastError { get; set; }
+        public string LastError { get { return _lastError; } }
 
         #region YAHOO CHARTS
         public List<ChartObject> LoadChartDataFromYahoo(string subject)
@@ -34,7 +36,6 @@ namespace Bankiru.Models.OutApi
                 {
                     csvData = web.DownloadString(String.Format(baseUrl, subject));
                 }                
-                
                 return _parseYahooData(csvData);
             }
             catch(Exception ex)
@@ -86,12 +87,58 @@ namespace Bankiru.Models.OutApi
                 }
                 return result;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 log.Error(ex.ToString());
                 return null;
             }
         }        
+
+        public ChartObject LoadQuotesDataFromYahoo(string subject)
+        {
+            try
+            {
+                string csvData;
+                WebRequest req = WebRequest.Create(String.Format("https://finance.yahoo.com/d/quotes.csv?s={0}&f=sl1d1t1c1ohgv&e=.csv", subject));
+                using (StreamReader inp = new StreamReader(req.GetResponse().GetResponseStream()))
+                {                    
+                    csvData = inp.ReadLine();
+                    inp.Close();
+                }
+                return _parseYahooQuotesData(csvData);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return null;
+            }
+        }
+        private ChartObject _parseYahooQuotesData(string csvData)
+        {
+            try
+            {
+                ChartObject obj = new ChartObject();
+                string[] cols = csvData.Replace("\r", "").Split(',');
+
+                obj.Close = Convert.ToDecimal(cols[1], _numberFormatInfo);                
+                obj.High = Convert.ToDecimal(cols[6], _numberFormatInfo);
+                obj.Low = Convert.ToDecimal(cols[7], _numberFormatInfo);
+                obj.Open = Convert.ToDecimal(cols[5], _numberFormatInfo);
+                obj.Volume = Convert.ToDecimal(cols[8], _numberFormatInfo);
+
+                string[] colsDateString = cols[2].Replace("\"","").Split('/');
+
+                obj.Date = Convert.ToDateTime(String.Format("{0}.{1}.{2} 00:00:00", colsDateString[1],
+                    colsDateString[0], colsDateString[2]), provider);
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return null;
+            }
+        }                
         #endregion
 
         #region CBR CHARTS
@@ -143,6 +190,57 @@ namespace Bankiru.Models.OutApi
                     }
                 }
                 return result;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return null;
+            }
+        }
+
+        public ChartObject LoadQuotesDataFromCBR(string subject)
+        {
+            try
+            {
+                XML_CBRAnswer xmlAnswer = null;
+                DateTime date = DateTime.Now.ToUniversalTime();
+                WebResponseCBRAnswer answer = WebRequestsCBR.GetCurrentCourses(date, date, subject);
+                if (answer.HttpCode == 200) //успешный  запрос
+                {
+                    using (XmlReader xmlReader = new XmlTextReader(answer.Stream))
+                    {
+                        XmlSerializer xmlSerializer = new XmlSerializer(typeof(XML_CBRAnswer));
+                        xmlAnswer = (XML_CBRAnswer)xmlSerializer.Deserialize(xmlReader);
+                    }
+                }
+                else
+                {
+                    log.Error("Не удалось загрузить динамику курса валют!");
+                    return null;
+                }
+                if (xmlAnswer == null)
+                    return null;
+                return _parseCBRQuotesData(xmlAnswer);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.ToString());
+                return null;
+            }
+        }
+        private ChartObject _parseCBRQuotesData(XML_CBRAnswer xmlData)
+        {
+            try
+            {                
+                if (xmlData.CurrencyItems != null && xmlData.CurrencyItems.Length > 0)
+                {
+                    ChartObject chartItem = new ChartObject();
+                    var item = xmlData.CurrencyItems.First();
+                    chartItem.Date = DateTime.Parse(item.Date);
+                    chartItem.Close = Convert.ToDecimal(item.Value);
+                    return chartItem;
+                }
+                return null;
             }
             catch (Exception ex)
             {

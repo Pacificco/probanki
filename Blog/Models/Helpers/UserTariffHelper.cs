@@ -41,18 +41,34 @@ namespace Bankiru.Models.Helpers
                     return "?";
             }
         }
+        public static string GetTariffName(int tariffId)
+        {
+            switch (tariffId)
+            {
+                case 1:
+                    return "Платина";
+                case 2:
+                    return "Золото";
+                case 3:
+                    return "Серебро";
+                case 4:
+                    return "Бронза";
+                default:
+                    return "?";
+            }
+        }
         public static string GetTariffPeriodName(EnumClubTariffPeriod period)
         {
             switch (period)
             {
                 case EnumClubTariffPeriod.Month:
-                    return "Платина";
+                    return "1 месяц";
                 case EnumClubTariffPeriod.Quarter:
-                    return "Золото";
+                    return "3 месяца";
                 case EnumClubTariffPeriod.Half:
-                    return "Серебро";
+                    return "6 месяцев";
                 case EnumClubTariffPeriod.Year:
-                    return "Бронза";
+                    return "12 месяцев";
                 default:
                     return "?";
             }

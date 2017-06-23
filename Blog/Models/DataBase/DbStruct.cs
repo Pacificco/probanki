@@ -1086,6 +1086,58 @@ namespace Bankiru.Models.DataBase
                 }
             }
             /// <summary>
+            /// Создает/редактирует заявку на продление подписки пользователя
+            /// </summary>
+            public static class UsersTariffRequestsEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UsersTariffRequestsEdit";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    /// <summary>
+                    /// Тип операции: 
+                    /// 1 - Создаем заявку, 
+                    /// 2 - Проставляем оплату,
+                    /// 3 - Отменяем заявку,
+                    /// 4 - Архивируем заявку,
+                    /// 5 - Удаляем заявку
+                    /// </summary>
+                    public static string Operation = "@Operation";
+                    public static string Id = "@Id";
+                    public static string UserId = "@UserId";
+                    public static string TariffId = "@TariffId";
+                    public static string PeriodId = "@PeriodId";
+                    public static string Sum = "@Sum";
+                    public static string IsPaid = "@IsPaid";
+                    public static string PaidDate = "@PaidDate";
+                    public static string PaymentInfo = "@PaymentInfo";                    
+                    public static string Comment = "@Comment";
+                }
+            }
+            /// <summary>
+            /// Возвращает заявки пользователя на подписки
+            /// </summary>
+            public static class UsersTariffRequestsView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "UsersTariffRequestsView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string UserId = "@UserId";
+                    public static string IsArchive = "@IsArchive";
+                }
+            }
+            /// <summary>
             /// Подтверждает поступление средств для указанного пользователя
             /// </summary>
             public static class PaymentConfirmed
@@ -1457,6 +1509,25 @@ namespace Bankiru.Models.DataBase
                 /// Название хранимой процедуры
                 /// </summary>
                 public static string Name = "ChartsDataInsert";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    public static string SubjectId = "@SubjectId";
+                    public static string ChartDate = "@ChartDate";
+                    public static string ChartValue = "@ChartValue";
+                }
+            }
+            /// <summary>
+            /// Создает или обновляет запись в таблице графиков
+            /// </summary>
+            public static class QuotesDataEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "QuotesDataEdit";
                 /// <summary>
                 /// Параметры хранимой процедуры                 
                 /// </summary>

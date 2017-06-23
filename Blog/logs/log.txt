@@ -15626,3 +15626,53 @@ ERROR 2017-05-13 13:05:06,258 1092523ms ForecastManager        rrentForecastUser
 Сервер вернул пустой ответ.
 ERROR 2017-05-13 13:07:12,195 1218460ms ForecastManager        rrentForecastUsers - Ошибка во время загрузки пользователей текущих прогнозов!
 Сервер вернул пустой ответ.
+ERROR 2017-05-28 21:47:14,119 13442ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (404) Не найден.
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-05-28 21:47:14,202 13525ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-05-28 21:47:14,585 13908ms ChartManager           ChartDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (404) Не найден.
+   в System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   в System.Net.WebClient.DownloadString(Uri address)
+   в System.Net.WebClient.DownloadString(String address)
+   в Bankiru.Models.OutApi.ChartManager.LoadChartDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 35
+ERROR 2017-05-28 21:47:14,585 13908ms ChartDownloader        _loadCharts        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:10:01,784 109537ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:10:05,391 113144ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:10:11,060 118813ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:10:19,242 126995ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:11:03,645 40245ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:11:03,662 40262ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:11:04,023 40623ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:11:04,023 40623ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:13:02,177 50667ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:13:02,198 50688ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-06-23 20:13:04,651 53142ms ChartManager           rseYahooQuotesData - System.FormatException: Строка не распознана как действительное значение DateTime.
+   в System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   в System.Convert.ToDateTime(String value, IFormatProvider provider)
+   в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
+ERROR 2017-06-23 20:13:04,651 53142ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные

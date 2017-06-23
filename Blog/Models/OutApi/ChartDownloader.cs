@@ -35,7 +35,7 @@ namespace Bankiru.Models.OutApi
                 log.Error(manager.LastError);
                 return;
             }
-            timer = new Timer(new TimerCallback(_loadCharts), null, 0, _interval);
+            timer = new Timer(new TimerCallback(_loadQuotes), null, 0, _interval);
         }
         private void _loadCharts(object obj)
         {
@@ -72,6 +72,47 @@ namespace Bankiru.Models.OutApi
                             _saveToDataBase(row, s.Id);
                         }
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время загрузки статической информации для графиков!\n" + ex.ToString());
+            }
+            finally
+            {
+                _isDownLoading = false;
+            }
+        }
+        private void _loadQuotes(object obj)
+        {
+            if (_isDownLoading) return;
+            _isDownLoading = true;
+            try
+            {
+                ChartObject row = null;
+                foreach (VM_ForecastSubject s in _subjects)
+                {
+                    if (String.IsNullOrEmpty(s.Ticker))
+                        continue;
+                    if (String.IsNullOrEmpty(s.SourceType))
+                        continue;
+
+                    switch (s.SourceType)
+                    {
+                        case "cbr":
+                            row = _manager.LoadQuotesDataFromCBR(s.Ticker);
+                            break;
+                        case "yahoo":
+                            row = _manager.LoadQuotesDataFromYahoo(s.Ticker);
+                            break;
+                    }
+                    if (row == null)
+                    {
+                        log.Error(String.Format("Ошибка во время загрузки статической информации для графика ({0})!\nНе удалось загрузить данные", s.Name));
+                        continue;
+                    }
+
+                    _saveQoutesToDataBase(row, s.Id);
                 }
             }
             catch (Exception ex)
@@ -120,6 +161,46 @@ namespace Bankiru.Models.OutApi
             {
                 log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
                     DbStruct.PROCEDURES.ChartsDataInsert.Name, ex.ToString()));
+                return false;
+            }
+        }
+        private bool _saveQoutesToDataBase(ChartObject row, int subjectId)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.QuotesDataEdit.Name, GlobalParams.GetConnection());
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.CommandTimeout = 15;
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.QuotesDataEdit.Params.SubjectId, subjectId);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.QuotesDataEdit.Params.ChartValue, row.Close);
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.QuotesDataEdit.Params.ChartDate, row.Date);
+                lock (GlobalParams._DBAccessLock)
+                {
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                            return false;
+                        else
+                            return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                            DbStruct.PROCEDURES.QuotesDataEdit.Name, ex.ToString()));
+                        return false;
+                    }
+                    finally
+                    {
+                        if (command != null)
+                            command.Dispose();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
+                    DbStruct.PROCEDURES.QuotesDataEdit.Name, ex.ToString()));
                 return false;
             }
         }

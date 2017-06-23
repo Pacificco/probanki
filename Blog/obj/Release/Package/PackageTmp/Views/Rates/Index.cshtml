@@ -31,6 +31,10 @@
             <div class="rates">
                 @foreach (VM_ForecastSubject item in Model)
                 {
+                    //if (item.Id > 2)
+                    //{
+                    //    continue;
+                    //}
                     @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Id })                   
                 }
             </div>

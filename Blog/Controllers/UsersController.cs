@@ -290,6 +290,48 @@ namespace Bankiru.Controllers
                 return PartialView("_userAddBalanceBlock", model);
             }
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [OutputCache(Duration = 36, VaryByParam = "none", Location = System.Web.UI.OutputCacheLocation.None, NoStore = true)]
+        public ActionResult CreateUserTariffRequest(VM_UserAddBalance model)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    if (ModelState.IsValid)
+                    {
+                        if (model.Comment == null)
+                            model.Comment = "";
+
+                        UserManager manager = new UserManager();
+                        model.Sum = UserTariffHelper.CalcPaymentSum((EnumForecastTariff)model.TariffId, (EnumClubTariffPeriod)model.PeriodId);
+                        if (!manager.CreateUserTariffRequest(model))
+                        {
+                            ModelState.AddModelError("", "Ошибка во время выполнения запроса!");
+                            return PartialView("_userAddBalanceBlock", model);
+                        }
+                                                
+                        return PartialView("_userAddBalanceBlock", new VM_UserAddBalance() { SuccessMessage = "Успешно!" });
+                    }
+                    else
+                    {
+                        return PartialView("_userAddBalanceBlock", model);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Ошибка подключения к серверу!");
+                    return PartialView("_userAddBalanceBlock", model);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(String.Format("Ошибка в методе AddBalanceAjax!\n", ex.ToString()));
+                ModelState.AddModelError("", "Ошибка запроса к серверу!");
+                return PartialView("_userAddBalanceBlock", model);
+            }
+        }
 
         #region ДОЧЕРНИЕ МЕТОДЫ
         [ChildActionOnly]
@@ -414,6 +456,34 @@ namespace Bankiru.Controllers
             catch (Exception ex)
             {
                 log.Error("Ошибка во время отображения истории баланса пользователя!\r\n" + ex.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public PartialViewResult _getUserTariffRequestHistory(int user_id)
+        {
+            try
+            {
+                if (_connected)
+                {
+                    UserManager manager = new UserManager();
+                    List<VM_UserTariffRequest> history = manager.GetUserTariffRequests(user_id, null);
+                    if (history == null)
+                    {
+                        log.Error("Ошибка во время отображения истории подписок пользователя!\r\n" + manager.LastError);
+                        return PartialView(_errPartialPage);
+                    }
+                    return PartialView("_userTariffRequestsHistoryBlock", history);
+                }
+                else
+                {
+                    log.Error("Ошибка во время отображения истории подписок пользователя!\r\n" + _errMassage);
+                    return PartialView(_errPartialPage);
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Ошибка во время отображения истории подписок пользователя!\r\n" + ex.ToString());
                 return PartialView(_errPartialPage);
             }
         }

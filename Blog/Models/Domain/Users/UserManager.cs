@@ -1,5 +1,6 @@
 ﻿using Bankiru.Models.DataBase;
 using Bankiru.Models.Domain.Club;
+using Bankiru.Models.Helpers;
 using Bankiru.Models.Infrastructure;
 using log4net;
 using System;
@@ -321,6 +322,329 @@ namespace Bankiru.Models.Domain.Users
                 }
             } 
         }
+                
+        // Заявки на подписку
+        public bool CreateUserTariffRequest(VM_UserAddBalance info)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Operation, 1);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Id, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.UserId, info.UserId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.TariffId, (byte)info.TariffId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Sum, info.Sum);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PeriodId, info.PeriodId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.IsPaid, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaidDate, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaymentInfo, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Comment, info.Comment);
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!  [Создание]",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!  [Создание] {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool PayUserTariffRequest(int requestId, DateTime paidDate)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Operation, 2);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Id, requestId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.UserId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.TariffId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Sum, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PeriodId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.IsPaid, 1);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaidDate, paidDate);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaymentInfo, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Comment, DBNull.Value);
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Оплата]",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Оплата] {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool CancelUserTariffRequest(int requestId)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Operation, 3);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Id, requestId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.UserId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.TariffId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Sum, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PeriodId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.IsPaid, 1);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaidDate, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaymentInfo, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Comment, DBNull.Value);
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Отмена]",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Отмена] {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool ArchiveUserTariffRequest(int requestId)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Operation, 4);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Id, requestId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.UserId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.TariffId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Sum, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PeriodId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.IsPaid, 1);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaidDate, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaymentInfo, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Comment, DBNull.Value);
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Архив]",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Архив] {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public bool DeleteUserTariffRequest(int requestId)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Operation, 5);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Id, requestId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.UserId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.TariffId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Sum, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PeriodId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.IsPaid, 1);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaidDate, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.PaymentInfo, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsEdit.Params.Comment, DBNull.Value);
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Удаление]",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! [Удаление] {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsEdit.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        public List<VM_UserTariffRequest> GetUserTariffRequests(int userId, bool? isArchve)
+        {
+            List<VM_UserTariffRequest> requests = new List<VM_UserTariffRequest>();
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.UsersTariffRequestsView.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsView.Params.UserId, userId);
+            if (isArchve == null)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsView.Params.IsArchive, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.UsersTariffRequestsView.Params.IsArchive, (bool)isArchve);
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader != null && reader.HasRows)
+                        {
+                            VM_UserTariffRequest r = new VM_UserTariffRequest();
+                            r.Id = reader.GetInt32(reader.GetOrdinal("Id"));
+                            r.UserId = reader.GetInt32(reader.GetOrdinal("UserId"));
+                            r.TariffId = reader.GetByte(reader.GetOrdinal("TariffId"));
+                            r.PeriodId = reader.GetString(reader.GetOrdinal("PeriodId"));
+                            r.Sum = reader.GetDouble(reader.GetOrdinal("Sum"));
+                            r.IsPaid = reader.GetBoolean(reader.GetOrdinal("IsPaid"));
+                            r.PaidDate = reader.IsDBNull(reader.GetOrdinal("PaidDate")) ? (DateTime?)null :
+                                reader.GetDateTime(reader.GetOrdinal("PaidDate"));
+                            r.PaymentInfo = reader.GetString(reader.GetOrdinal("PaymentInfo"));
+                            r.IsArchive = reader.GetBoolean(reader.GetOrdinal("IsArchive"));
+                            r.ArchiveDate = reader.IsDBNull(reader.GetOrdinal("ArchiveDate")) ? (DateTime?)null : 
+                                reader.GetDateTime(reader.GetOrdinal("ArchiveDate"));
+                            r.CreateDate = reader.GetDateTime(reader.GetOrdinal("CreateDate"));
+                            r.Returned = reader.GetBoolean(reader.GetOrdinal("Returned"));
+                            r.ReturnedDate = reader.IsDBNull(reader.GetOrdinal("ReturnedDate")) ? (DateTime?)null : 
+                                reader.GetDateTime(reader.GetOrdinal("ReturnedDate"));
+
+                            //r.PeriodName = UserTariffHelper.GetTariffName(r.PeriodId);
+
+                            requests.Add(r);
+                        }
+                    }
+                    return requests;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}! {1}",
+                        DbStruct.PROCEDURES.UsersTariffRequestsView.Name,
+                        ex.ToString());
+                    log.Error(_lastError);
+                    return null;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+
+        //Устаревшее
         public bool AddBalance(VM_UserAddBalance info)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.AddBalance.Name, GlobalParams.GetConnection());
@@ -379,7 +703,7 @@ namespace Bankiru.Models.Domain.Users
                     if (command != null)
                         command.Dispose();
                 }
-            } 
+            }
         }
         public bool PaymentEmailSend(int id)
         {

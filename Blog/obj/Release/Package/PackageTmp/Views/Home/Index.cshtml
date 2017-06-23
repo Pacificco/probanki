@@ -23,6 +23,13 @@
 {
     @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true})
 }
+@section banners_right_top{
+    <section class="banner">
+        <a href="http://www.ot.vrn.ru" title="Охрана труда" target="_blank">
+            <img src="~/Banners/Right/вуц-охрана-труда_v1_2.png" title="Охрана труда" alt="Охрана труда" />
+        </a>
+    </section>
+}
 @section right_middle
 {
     @Html.Action("_getModuleLastNews", "Home")
