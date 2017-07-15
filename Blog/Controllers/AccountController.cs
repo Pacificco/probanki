@@ -194,7 +194,7 @@ namespace Bankiru.Controllers
                         SessionPersister.UserName = user.Name;
                         SessionPersister.UserId = user.Id;
                         //SessionPersister.CurrentUser = user;
-                        SessionPersister.SetTimeout(86400);
+                        //SessionPersister.SetTimeout(86400);
 
                         return RedirectToAction("List", "Forecast");
                     }
@@ -245,7 +245,9 @@ namespace Bankiru.Controllers
                                 SessionPersister.UserName = user.Name;
                                 SessionPersister.UserNic = user.Nic;
                                 SessionPersister.UserId = user.Id;
-                                SessionPersister.SetTimeout(86400);
+                                //SessionPersister.SetTimeout(86400);
+
+                                
 
                                 //return PartialView("_moduleWellcomeBlock", user);
                                 model.AuthSuccessMes = "Вы успешно авторизовались!";

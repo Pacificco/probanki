@@ -84,10 +84,10 @@ namespace Bankiru.Models.Security
             }
         }
 
-        public static void SetTimeout(int timeOut)
-        {
-            HttpContext.Current.Session.Timeout = timeOut;
-        }
+        //public static void SetTimeout(int timeOut)
+        //{
+        //    HttpContext.Current.Session.Timeout = timeOut;
+        //}
         public static void Clear()
         {
             HttpContext.Current.Session[nameSessionVar] = String.Empty;

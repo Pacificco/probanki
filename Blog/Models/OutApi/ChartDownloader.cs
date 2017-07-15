@@ -90,6 +90,7 @@ namespace Bankiru.Models.OutApi
             try
             {
                 ChartObject row = null;
+                ChartObject row2 = null;
                 foreach (VM_ForecastSubject s in _subjects)
                 {
                     if (String.IsNullOrEmpty(s.Ticker))
@@ -100,7 +101,8 @@ namespace Bankiru.Models.OutApi
                     switch (s.SourceType)
                     {
                         case "cbr":
-                            row = _manager.LoadQuotesDataFromCBR(s.Ticker);
+                            row = _manager.LoadQuotesDataFromCBR(s.Ticker, DateTime.Now);
+                            row2 = _manager.LoadQuotesDataFromCBR(s.Ticker, _getDateForSBR());
                             break;
                         case "yahoo":
                             row = _manager.LoadQuotesDataFromYahoo(s.Ticker);
@@ -111,8 +113,9 @@ namespace Bankiru.Models.OutApi
                         log.Error(String.Format("Ошибка во время загрузки статической информации для графика ({0})!\nНе удалось загрузить данные", s.Name));
                         continue;
                     }
-
                     _saveQoutesToDataBase(row, s.Id);
+                    if (row2 != null)
+                        _saveQoutesToDataBase(row2, s.Id);
                 }
             }
             catch (Exception ex)
@@ -240,6 +243,25 @@ namespace Bankiru.Models.OutApi
                 log.Error(String.Format("Ошибка во время выполнения хранимой процедуры {0}!\n{1}",
                     DbStruct.PROCEDURES.ChartsDataDelete.Name, ex.ToString()));
                 return false;
+            }
+        }
+        private DateTime _getDateForSBR()
+        {
+            switch(DateTime.Now.DayOfWeek)
+            {
+                case DayOfWeek.Monday:
+                case DayOfWeek.Tuesday:
+                case DayOfWeek.Wednesday:
+                case DayOfWeek.Thursday:
+                    return DateTime.Now.AddDays(1);
+                case DayOfWeek.Friday:
+                    return DateTime.Now.AddDays(3);
+                case DayOfWeek.Saturday:
+                    return DateTime.Now.AddDays(2);
+                case DayOfWeek.Sunday:
+                    return DateTime.Now.AddDays(1);
+                default:
+                    return DateTime.Now.AddDays(1);
             }
         }
 

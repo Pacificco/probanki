@@ -198,12 +198,12 @@ namespace Bankiru.Models.OutApi
             }
         }
 
-        public ChartObject LoadQuotesDataFromCBR(string subject)
+        public ChartObject LoadQuotesDataFromCBR(string subject, DateTime? requestDate)
         {
             try
             {
                 XML_CBRAnswer xmlAnswer = null;
-                DateTime date = DateTime.Now.ToUniversalTime();
+                DateTime date = requestDate == null ? DateTime.Now.ToUniversalTime() : ((DateTime)requestDate).ToUniversalTime();
                 WebResponseCBRAnswer answer = WebRequestsCBR.GetCurrentCourses(date, date, subject);
                 if (answer.HttpCode == 200) //успешный  запрос
                 {
@@ -218,6 +218,7 @@ namespace Bankiru.Models.OutApi
                     log.Error("Не удалось загрузить динамику курса валют!");
                     return null;
                 }
+                
                 if (xmlAnswer == null)
                     return null;
                 return _parseCBRQuotesData(xmlAnswer);

@@ -706,7 +706,7 @@ namespace Bankiru.Controllers
             }
         }
         [ChildActionOnly]
-        [OutputCache(Duration = 86400)]
+        [OutputCache(Duration = 120)]
         public ActionResult _getModuleCounters()
         {
             return PartialView("_moduleCounters");

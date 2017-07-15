@@ -15676,3 +15676,31 @@ ERROR 2017-06-23 20:13:04,651 53142ms ChartManager           rseYahooQuotesData 
    в Bankiru.Models.OutApi.ChartManager._parseYahooQuotesData(String csvData) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 131
 ERROR 2017-06-23 20:13:04,651 53142ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
 Не удалось загрузить данные
+ERROR 2017-07-15 19:35:39,535 121792ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-15 19:35:40,177 122435ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System.Net.Sockets.SocketException: Сделана попытка выполнить операцию на объекте, не являющемся сокетом 212.40.192.49:80
+   в System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   в System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-15 19:35:40,267 122525ms CurrenciesDownloader   CurrenciesRatePrev - Не удалось загрузить курсы валют!
+ERROR 2017-07-15 19:35:40,541 122799ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-15 19:48:54,014 42159ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System.Net.Sockets.SocketException: Сделана попытка выполнить операцию на объекте, не являющемся сокетом 212.40.192.49:80
+   в System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   в System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-15 19:48:54,028 42173ms CurrenciesDownloader   CurrenciesRatePrev - Не удалось загрузить курсы валют!
+ERROR 2017-07-15 19:48:54,030 42175ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System.Net.Sockets.SocketException: Получен недопустимый аргумент 212.40.192.49:80
+   в System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   в System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-15 19:48:54,030 42175ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
