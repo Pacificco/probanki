@@ -434,7 +434,9 @@
     <Content Include="Areas\Admin\Views\Shared\_tariffDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_tariffPeriodDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_forecastCloseBlock.cshtml" />
-    <None Include="Properties\PublishProfiles\Probanki.pubxml" />
+    <None Include="Properties\PublishProfiles\Probanki.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="robots.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

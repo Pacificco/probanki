@@ -92,9 +92,9 @@ namespace Bankiru.Models.OutApi
                 log.Error(ex.ToString());
                 return null;
             }
-        }        
+        }
 
-        public ChartObject LoadQuotesDataFromYahoo(string subject)
+        public List<ChartObject> LoadQuotesDataFromYahoo(string subject)
         {
             try
             {
@@ -113,10 +113,12 @@ namespace Bankiru.Models.OutApi
                 return null;
             }
         }
-        private ChartObject _parseYahooQuotesData(string csvData)
+        private List<ChartObject> _parseYahooQuotesData(string csvData)
         {
             try
             {
+                List<ChartObject> objs = new List<ChartObject>();
+
                 ChartObject obj = new ChartObject();
                 string[] cols = csvData.Replace("\r", "").Split(',');
 
@@ -131,7 +133,8 @@ namespace Bankiru.Models.OutApi
                 obj.Date = Convert.ToDateTime(String.Format("{0}.{1}.{2} 00:00:00", colsDateString[1],
                     colsDateString[0], colsDateString[2]), provider);
 
-                return obj;
+                objs.Add(obj);
+                return objs;
             }
             catch (Exception ex)
             {
@@ -198,13 +201,13 @@ namespace Bankiru.Models.OutApi
             }
         }
 
-        public ChartObject LoadQuotesDataFromCBR(string subject, DateTime? requestDate)
+        public List<ChartObject> LoadQuotesDataFromCBR(string subject, DateTime? requestDate)
         {
             try
             {
                 XML_CBRAnswer xmlAnswer = null;
                 DateTime date = requestDate == null ? DateTime.Now.ToUniversalTime() : ((DateTime)requestDate).ToUniversalTime();
-                WebResponseCBRAnswer answer = WebRequestsCBR.GetCurrentCourses(date, date, subject);
+                WebResponseCBRAnswer answer = WebRequestsCBR.GetCurrentCourses(DateTime.Now.ToUniversalTime(), date, subject);
                 if (answer.HttpCode == 200) //успешный  запрос
                 {
                     using (XmlReader xmlReader = new XmlTextReader(answer.Stream))
@@ -229,17 +232,23 @@ namespace Bankiru.Models.OutApi
                 return null;
             }
         }
-        private ChartObject _parseCBRQuotesData(XML_CBRAnswer xmlData)
+        private List<ChartObject> _parseCBRQuotesData(XML_CBRAnswer xmlData)
         {
             try
             {                
                 if (xmlData.CurrencyItems != null && xmlData.CurrencyItems.Length > 0)
                 {
-                    ChartObject chartItem = new ChartObject();
-                    var item = xmlData.CurrencyItems.First();
-                    chartItem.Date = DateTime.Parse(item.Date);
-                    chartItem.Close = Convert.ToDecimal(item.Value);
-                    return chartItem;
+                    List<ChartObject> chartItems = new List<ChartObject>();
+                    ChartObject chartItem = null;
+                    foreach(var item in xmlData.CurrencyItems)
+                    {
+                        chartItem = new ChartObject();
+                        chartItem.Date = DateTime.Parse(item.Date);
+                        chartItem.Close = Convert.ToDecimal(item.Value);
+                        chartItems.Add(chartItem);
+                    }
+                    //var item = xmlData.CurrencyItems.First();                    
+                    return chartItems;
                 }
                 return null;
             }

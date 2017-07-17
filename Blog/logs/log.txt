@@ -15704,3 +15704,798 @@ System.Net.WebException: Невозможно соединиться с удаленным сервером ---> System
    в System.Net.HttpWebRequest.GetResponse()
    в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
 ERROR 2017-07-15 19:48:54,030 42175ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-15 23:30:18,719 19057ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:30:18,729 19067ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:30:18,895 19233ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:30:18,895 19233ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:33:24,621 45115ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:33:31,203 51696ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:34:06,738 87231ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:34:06,739 87232ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:37:03,680 24054ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:37:03,691 24065ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:37:03,872 24246ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:37:03,872 24246ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:36,406 21201ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:36,414 21209ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:36,421 21216ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:36,422 21217ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:55,719 18371ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:55,730 18382ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:55,735 18387ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:40:55,736 18388ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:52:09,898 18661ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:52:09,908 18671ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:52:10,060 18823ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:52:10,060 18823ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:53:25,819 18729ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:53:25,830 18740ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:53:26,039 18949ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-15 23:53:26,039 18949ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:02:10,131 18693ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:02:10,142 18704ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:02:10,290 18852ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:02:10,290 18852ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:04:35,156 163718ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 00:04:35,156 163718ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-07-16 12:40:42,038 15079ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-16 12:40:48,316 21358ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-16 12:46:38,279  3531ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-16 12:46:38,578  3830ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 12:49:57,930 13626ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 12:49:58,406 14102ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:37:23,470   771ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:37:23,668   969ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:41:11,773   468ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:41:12,166   861ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:50:39,404   345ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:50:39,703   644ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:51:34,308   393ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:51:34,606   691ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:55:04,394   466ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:55:04,616   688ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:58:35,235   358ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:58:35,568   691ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:59:17,054   362ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 13:59:17,390   698ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:01:25,259   443ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:01:25,553   737ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:03:10,932   471ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:03:11,330   869ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:08:11,149  1174ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:08:11,641  1666ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:14:24,757   551ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:14:25,051   845ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:15:24,479   532ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:15:24,790   843ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:16:01,219   615ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:16:01,523   919ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:18:31,759   545ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:18:32,092   878ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:19:49,591   682ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:19:49,782   873ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:21:43,155   692ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:21:43,390   927ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:24:39,054   554ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:24:39,457   957ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:26:03,460   671ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:26:03,658   869ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:26:43,746   661ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:26:44,118  1033ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:27:55,255   587ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:27:55,577   909ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:30:23,888   694ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:30:24,072   878ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:31:59,699   623ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:31:59,947   871ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:33:51,280  1080ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:33:51,651  1451ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:35:51,825   613ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:35:52,221  1009ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:36:49,343   604ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:36:49,639   900ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:39:01,579   663ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:39:01,998  1082ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:44:09,323   583ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:44:09,722   982ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:46:39,835   582ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:46:40,133   879ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:54:27,078   662ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 14:54:27,378   962ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:02:35,302  3657ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:02:35,315  3670ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:02:35,347  3702ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:02:35,348  3703ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:02:38,673  7028ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:02:38,673  7028ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:02:38,673  7028ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:02:44,875 13229ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:02:44,876 13230ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:02:48,117 16471ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:02:48,117 16471ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:02:48,117 16471ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:04:19,821  3627ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:04:19,833  3639ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:04:19,903  3709ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:04:19,904  3710ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:04:23,028  6834ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:04:23,028  6834ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:04:23,028  6834ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:04:26,299 10105ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:04:26,299 10105ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:04:29,628 13433ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:04:29,628 13433ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:04:29,628 13433ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:05:11,625  3646ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:05:11,645  3666ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:05:11,648  3669ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:05:11,650  3671ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:05:14,915  6936ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:05:14,915  6936ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:05:14,915  6936ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:05:18,199 10220ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:05:18,199 10220ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:05:21,459 13479ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:05:21,460 13480ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:05:21,460 13480ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:10:52,185  3596ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:10:52,198  3609ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:10:55,164  6575ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:10:55,164  6575ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:10:55,501  6912ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:10:55,502  6913ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:10:55,502  6913ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:10:58,627 10038ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:10:58,627 10038ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:11:01,821 13232ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:11:01,821 13232ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:11:01,821 13232ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:15:09,913  3613ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:15:09,926  3626ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:15:09,998  3698ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:15:09,999  3699ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:15:13,190  6890ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:15:13,190  6890ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:15:13,190  6890ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:15:16,435 10134ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:15:16,436 10135ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:15:19,671 13370ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:15:19,671 13370ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:15:19,671 13370ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:16:10,501  3646ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:16:10,514  3659ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:16:10,530  3675ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:16:10,531  3676ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:16:13,801  6946ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:16:13,801  6946ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:16:13,801  6946ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:16:17,085 10230ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:16:17,085 10230ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:16:20,370 13515ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:16:20,371 13516ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:16:20,371 13516ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:17:24,985  3573ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:17:24,996  3584ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:17:25,000  3588ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-07-17 15:17:25,001  3589ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-07-17 15:17:28,214  6802ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:17:28,214  6802ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:17:28,214  6802ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:17:31,513 10101ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:17:31,514 10102ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:17:46,555 25143ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-07-17 15:17:46,556 25144ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-07-17 15:17:46,556 25144ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:19:21,521   648ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:19:21,723   850ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:21:13,312  3556ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:21:13,561  3805ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:21:39,613   810ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:21:39,860  1057ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:22:51,813   554ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:22:52,216   957ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:26:11,105   672ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:26:11,287   854ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:28:09,729   735ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:28:09,932   938ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:29:09,527   656ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:29:09,719   848ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:31:40,632   701ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:31:41,025  1094ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:33:37,551   570ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:33:37,837   856ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:44:02,442   685ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:44:02,641   884ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:45:08,570   668ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:45:08,798   896ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:48:03,294   652ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:48:03,492   850ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:48:59,969   726ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:49:00,363  1120ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:57:21,841   717ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 15:57:22,268  1144ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:02:42,627   657ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:02:43,025  1055ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:07:41,546   594ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:07:41,793   841ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:12:52,708   689ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:12:53,107  1088ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:18:38,698   730ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:18:38,883   915ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:25:53,584   695ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:25:53,813   924ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:29:58,841   666ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:29:59,031   856ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:30:46,189   667ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:30:46,389   867ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:31:29,720   672ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:31:29,917   869ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:33:04,848   678ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:33:05,045   875ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:34:43,929   643ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:34:44,130   844ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:35:43,655   567ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:35:44,045   957ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:36:23,114   715ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:36:23,294   895ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:39:05,426   710ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:39:05,831  1115ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:40:40,192   573ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:40:40,591   972ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:41:34,813   749ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:41:35,016   952ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:42:54,793   654ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:42:55,188  1049ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:46:14,436   639ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:46:14,730   933ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:55:59,152   664ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 16:55:59,369   881ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 18:55:59,128 7200639ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 18:55:59,317 7200828ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:06:08,266   700ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:06:08,466   900ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:36:20,184   757ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:36:20,381   954ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:49:38,963   579ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:49:39,392  1008ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:55:11,519   728ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:55:11,714   923ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:55:57,864   698ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:55:58,062   896ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:56:38,205   679ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:56:38,398   872ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:57:45,106   714ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 20:57:45,312   920ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:25:32,552   634ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:25:32,746   828ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:31:28,436   631ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:31:28,633   828ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:34:58,465   561ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:34:58,844   940ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:37:46,521   539ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:37:46,922   940ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:40:21,338   687ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:40:21,735  1084ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:41:23,591   639ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:41:23,787   835ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:59:29,809 120784ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 22:59:30,106 121081ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-07-17 23:06:08,291 394873ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-07-17 23:06:08,485 395067ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные

@@ -6,6 +6,5 @@ D:\Проекты\ASP.NET MVC\Bankiru\Currencies\obj\Release\Currencies.pdb
 D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Release\Currencies.dll
 D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Release\Currencies.pdb
 D:\Проекты\ASP.NET MVC\probanki_net\Currencies\bin\Release\log4net.dll
-D:\Проекты\ASP.NET MVC\probanki_net\Currencies\obj\Release\Currencies.csprojResolveAssemblyReference.cache
 D:\Проекты\ASP.NET MVC\probanki_net\Currencies\obj\Release\Currencies.dll
 D:\Проекты\ASP.NET MVC\probanki_net\Currencies\obj\Release\Currencies.pdb

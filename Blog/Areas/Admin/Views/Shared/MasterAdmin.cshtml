@@ -58,11 +58,11 @@
                 </ul>
             </nav>
 
-            @if (!String.IsNullOrEmpty(@Bankiru.Models.Security.SessionPersister.UserEmail))
+            @if (!String.IsNullOrEmpty(@CessInvest.Models.Security.SessionPersister.UserEmail))
             {
                 <div class="login">
                     <p>
-                        <span class="username">@Bankiru.Models.Security.SessionPersister.UserNic (@Bankiru.Models.Security.SessionPersister.UserEmail)</span>
+                        <span class="username">@CessInvest.Models.Security.SessionPersister.UserNic (@CessInvest.Models.Security.SessionPersister.UserEmail)</span>
                         <a href="@Url.Action("Logout", "Account")" title="Выйти из панели управления">Выйти</a>
                     </p>
                 </div>

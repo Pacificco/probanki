@@ -89,8 +89,8 @@ namespace Bankiru.Models.OutApi
             _isDownLoading = true;
             try
             {
-                ChartObject row = null;
-                ChartObject row2 = null;
+                List<ChartObject> rows = null;
+                //ChartObject row2 = null;
                 foreach (VM_ForecastSubject s in _subjects)
                 {
                     if (String.IsNullOrEmpty(s.Ticker))
@@ -101,21 +101,22 @@ namespace Bankiru.Models.OutApi
                     switch (s.SourceType)
                     {
                         case "cbr":
-                            row = _manager.LoadQuotesDataFromCBR(s.Ticker, DateTime.Now);
-                            row2 = _manager.LoadQuotesDataFromCBR(s.Ticker, _getDateForSBR());
+                            //rows = _manager.LoadQuotesDataFromCBR(s.Ticker, null);
+                            rows = _manager.LoadQuotesDataFromCBR(s.Ticker, _getDateForSBR());
                             break;
                         case "yahoo":
-                            row = _manager.LoadQuotesDataFromYahoo(s.Ticker);
+                            rows = _manager.LoadQuotesDataFromYahoo(s.Ticker);
                             break;
                     }
-                    if (row == null)
+                    if (rows == null)
                     {
                         log.Error(String.Format("Ошибка во время загрузки статической информации для графика ({0})!\nНе удалось загрузить данные", s.Name));
                         continue;
                     }
-                    _saveQoutesToDataBase(row, s.Id);
-                    if (row2 != null)
-                        _saveQoutesToDataBase(row2, s.Id);
+                    foreach(var row in rows)
+                        _saveQoutesToDataBase(row, s.Id);
+                    //if (row2 != null)
+                    //    _saveQoutesToDataBase(row2, s.Id);
                 }
             }
             catch (Exception ex)

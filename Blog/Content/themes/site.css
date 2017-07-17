@@ -959,7 +959,7 @@ header {
 -----------------------------------------------------------*/
 #main .last-reviews {
     position: relative;
-    padding: 0;
+    padding: 10px;
     margin: 10px;
     border-top: 2px dashed #d2dde6;
 }
@@ -996,7 +996,7 @@ header {
 #main .review-main-column {
     position: relative;
     float: right;
-    width: 580px;
+    width: 565px;
     border: 1px solid #d3dde6;
     background-color: #f5f6fa;
     padding: 10px;

@@ -112,7 +112,7 @@
                         <div class="review-arrow"></div>
                         <div class="review-raiting @ratingClass">Оценка <span class="review-raiting-value">@item.Rating</span></div>
                         <div class="review-author">
-                            @item.UserName (<time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>)
+                            @item.UserName (<time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>)
                         </div>
                         <div class="review-text">
                             @Html.Raw(Bankiru.Models.Helpers.ConvertHelper.TextToHtmlParagraphs(item.ReviewText, 255, ref needMoreLink))
