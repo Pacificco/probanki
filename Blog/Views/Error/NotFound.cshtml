@@ -1,24 +1,161 @@
 ﻿@{
-    Layout = null;
+    bool isAuthorized = false;
+    if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
+    {
+        isAuthorized = true;
+    }
+
+    ViewBag.metaTitle = "Ошибка 404";
+    ViewBag.metaDescription = "Ошибка 404";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    Layout = null; 
 }
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    @*<base href="http://probanki.net/" />*@
+    
+    <link rel="shortcut icon" type="image/x-icon" href="http://probanki.net/favicon.ico" />
+	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
+    
     <meta name="viewport" content="width=device-width" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Страница не найдена</title>
-    @Styles.Render("~/Content/errors/css")
+    <meta name="robots" content="@ViewBag.metaRobots" />    
+    
+    <title>@ViewBag.metaTitle</title>    
+    <meta name="description" content="@ViewBag.metaDescription" />    
+    <meta name="keywords" content="@ViewBag.metaKeywords" />
+    
+    @Styles.Render("~/Content/css")    
+        
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
-<body>
-    <section class="error-404">
-        <h1>
-            Ошибка 404
-        </h1>
-        <h2>
-            Неправильно набран адрес, или такой страницы на сайте не существует
-        </h2>
-        <p><a title="Вернуться на главную" href="/">Вернуться на главную</a></p>
+<body style="background-color: #0d1823">
+
+    <!-- Модальное окно Регистрация/Авторизация -->
+    <div id="sign-in-box">
+        <div id="sign-in-dialog" class="window">            
+            @if (!isAuthorized)
+            {
+                @Html.Action("_getModuleLogin", "Account")
+            }
+        </div>
+    </div>
+
+    <!-- Маска, затемняющая фон -->
+    <div id="mask"></div>
+
+    <header id="header">
+        <div id="header-inner">
+            <section id="header-line-top">
+                <div id="logo">
+                    <a href="/" title="Профессиональное мнение о финансовом рынке РФ простыми словами.">
+                        <img src="~/Content/system/logo.png" title="Профессиональное мнение о финансовом рынке РФ простыми словами." alt="Мнение экспертов о финансовом рынке РФ простыми словами." />
+                    </a>
+                </div>
+                <aside id="login">
+                    @if (isAuthorized)
+                    {
+                         @*@Html.Action("_getModuleWellcomeBlock", "Account", new { user_name = Bankiru.Models.Security.SessionPersister.UserEmail })*@
+                    }
+                    else
+                    {                        
+                        @*<a class="login-button button-blue" href="#sign-in-dialog" name="modal" title="Регистрация / Вход на ProBanki.net">Регистрация / Вход</a>*@
+                    }                    
+                </aside>                
+            </section>                            
+        </div>
+    </header>
+    <div id="top-menu-wrapper">
+        @Html.Action("_getModuleMainMenu", "Home", new { current_item = String.IsNullOrEmpty(ViewBag.CurrentMenuItem) ? "" : ViewBag.CurrentMenuItem })
+    </div>
+    <section id="wrapper" style="background-color: #0d1823">
+        <div id="column-middle-left" style="background-color: #0d1823">            
+            <div id="main">
+                <section id="error-404" class="text-content">
+                    <hgroup>
+                        <h1>404</h1>    
+                        <h2>Что-то пошло не так<br />Запрошенная страница не найдена</h2>
+                    </hgroup>
+                    <p><a class="button-blue" title="Вернуться на главную" href="/">Вернуться на главную</a></p>
+                </section>
+            </div>
+        </div>        
+        <div id="wrapper2" style="background-color: #0d1823"></div>        
     </section>
+    <footer id="footer" style="border: none;">
+        <section id="footer-wrapper">
+            <div id="copyright">                
+                <p class="header">Реклама на сайте</p>
+                <a class="button-blue" href="/obratnaya-svyaz" title="Заказать рекламу">Заказать</a><br /><br /><br /><br /><br /><br /><br />
+                <p>© @DateTime.Now.Year.ToString() г. ProBanki.net<p/>                
+            </div>
+            <div id="footer-menu">
+                <div class="footer-menu-column">
+                    <p class="header">Главная</p>
+                    <p class="menu-items">                                                                        @*@Html.RouteLink("Клуб аналитиков", "club_info", null)<br />*@                        @Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />                        @Html.RouteLink("Ревизия", "art_items", new { cat_id = "revizija" }, new { title = "Ревизия" })<br />                        @Html.RouteLink("Интервью", "art_items", new { cat_id = "intervju" }, new { title = "Интервью" })<br />                        @Html.RouteLink("Мнения", "art_items", new { cat_id = "mnenija" }, new { title = "Мнения" })<br />                        @Html.RouteLink("Лирика", "art_items", new { cat_id = "lirika" }, new { title = "Лирика" }) 
+                    </p>
+                </div>
+                <div class="footer-menu-column">
+                    <p class="header">Главная</p>
+                    <p class="menu-items">        
+                        <a href="/orgs/banki" title="Банки">Банки</a><br />
+                        <a href="/orgs/investicionnie-kompanii" title="Инвестиционные компании">Инвестиционные компании</a><br />
+                        <a href="/orgs/kollektorskie-kompanii" title="Коллекторские компании">Коллекторские компании</a><br />
+                        <a href="/orgs/lombardy" title="Ломбарды">Ломбарды</a><br />
+                        <a href="/orgs/mfo" title="МФО">МФО</a><br />
+                        <a href="/orgs/npf" title="НПФ">НПФ</a><br />
+                        <a href="/orgs/strahovie-kompanii" title="Страховые компании">Страховые компании</a><br />
+                        <a href="/orgs/juridicheskie-kompanii" title="Юридические компании">Юридические компании</a>
+                    </p>
+                </div>
+                <div class="footer-menu-column">
+                    <p class="header">Информация</p>
+                    <p class="menu-items">        
+                        <a href="/news" title="Новости">Новости</a><br />                        <a href="/rules" title="Правила">Правила</a><br />                        <a href="/obratnaya-svyaz" title="Обратная связь">Обратная связь</a>
+                    </p>
+                </div>
+            </div>
+            <div id="footer-socials">
+                <p>Мы в соцсетях:</p>
+                <p>
+                    <a class="socials_vk" href="https://vk.com/clubprobanki" rel="nofollow" target="_blank" title="ВКонтакте"></a>&nbsp;
+                    <a class="socials_fb" href="https://www.facebook.com/probanki.net" rel="nofollow" target="_blank" title="Facebook"></a>&nbsp;        
+                    <a class="socials_ok" href="https://ok.ru/probanki" rel="nofollow" target="_blank" title="Одноклассники"></a>
+                    <a class="socials_g" href="https://plus.google.com/u/0/110087866878155894485" rel="nofollow" target="_blank" title="Google+"></a>
+                </p>
+            </div>
+        </section>        
+    </footer>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")    
+    
+@*    @Html.Action("_getModuleCounters", "Home", null);
+    <div id="fb-root"></div>
+    <script>
+
+        (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>*@
+        
+    @*<script src="~/Scripts/jquery.maskedinput.min.js"></script>*@
+    <script src="~/Scripts/main.js"></script>
+    @*<script src="~/Scripts/countdown.js"></script>*@
+
 </body>
 </html>

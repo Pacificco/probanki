@@ -263,6 +263,13 @@ namespace Bankiru
             );
             //404
             routes.MapRoute(
+                name: "NotFound",
+                url: "{*url}",
+                defaults: new { controller = "Error", action = "Http404" },
+                namespaces: new[] { "CessInvest.Controllers" }
+            );
+            //Остальное
+            routes.MapRoute(
                 name: "404_catch_all",
                 url: "{*catchall}",
                 defaults: new { controller = "Error", action = "NotFound" },

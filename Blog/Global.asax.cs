@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bankiru.Controllers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,53 @@ namespace Bankiru
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            HttpContext ctx = HttpContext.Current;
+
+            Exception ex = ctx.Server.GetLastError();
+            var httpException = ex as HttpException;
+            ctx.Response.Clear();
+            RequestContext rc = ((MvcHandler)ctx.CurrentHandler).RequestContext;
+            rc.RouteData.Values.Clear();
+            rc.RouteData.Values.Add("controller", "Error");
+            rc.RouteData.Values.Add("url", ctx.Request.Url.OriginalString);
+            IController controller = new ErrorController();
+
+            var context = new ControllerContext(rc, (ControllerBase)controller);
+
+            var viewResult = new ViewResult();
+            if (httpException != null)
+            {
+                switch (httpException.GetHttpCode())
+                {
+                    case 404:
+                        viewResult.ViewName = "NotFound";
+                        rc.RouteData.Values.Add("action", "Http404");
+                        break;
+                    case 500:
+                        viewResult.ViewName = "InternalError";
+                        rc.RouteData.Values.Add("action", "Http404");
+                        break;
+                    default:
+                        viewResult.ViewName = "Error";
+                        rc.RouteData.Values.Add("action", "Http404");
+                        break;
+                }
+            }
+            else
+            {
+                viewResult.ViewName = "Error";
+                rc.RouteData.Values.Add("action", "Http404");
+            }
+
+            viewResult.ViewData.Model = null;
+            //viewResult.ViewData.Model = new HandleErrorInfo(ex, context.RouteData.GetRequiredString("controller"), context.RouteData.GetRequiredString("action"));
+            viewResult.ExecuteResult(context);
+
+            ctx.Server.ClearError();
         }
     }
 }

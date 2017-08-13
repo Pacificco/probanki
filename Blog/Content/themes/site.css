@@ -168,6 +168,35 @@ input.button-ok:hover{
     padding-top: 35px;
 }
 
+/* Ошибка 404
+-----------------------------*/
+#error-404 {
+    padding: 70px 70px 70px 0;
+}
+#error-404 h1{
+    text-align: center;
+    color: #8ac64d;
+    font-size: 12.0em;
+    font-weight: 900;
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    line-height: 1.0em;
+}
+#error-404 h2{
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    font-family: Verdana;
+    padding: 40px 0 40px 0;
+}
+#error-404 p {
+    text-align: center;    
+}
+#error-404 p a {
+    font-size: 1.2em;
+    font-family: Verdana;
+}
 
 /* Сообщения
 -----------------------------------------------------------*/
@@ -2889,9 +2918,9 @@ header {
 }
 #article-detail h1 {
     background: none;
-    color: #6c6d70;
+    color: #3c4249;
     margin: 10px 0 1px 0;
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-transform: uppercase;
     padding: 0;
 }
@@ -2899,7 +2928,7 @@ header {
     color: #3c4249;
     font-size: 1.1em;
     font-weight: normal;
-    margin: 0;
+    margin: 0 10px 0 0;
     padding: 0;
     font-style: italic;
     text-align: right;
