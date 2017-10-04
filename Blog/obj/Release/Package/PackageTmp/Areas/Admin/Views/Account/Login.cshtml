@@ -1,0 +1,57 @@
+﻿@model Bankiru.Models.Domain.Account.VM_UserLogin
+@{
+    ViewBag.Title = "Пожалуйста, авторизуйтесь";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/admin/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div id="login-block">
+        @if (!String.IsNullOrEmpty(ViewBag.ErrorMessage))
+        { 
+            <div class="error">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+
+            @Html.AntiForgeryToken()
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Username)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Username)<br />
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password)<br />
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+
+            <p>
+                <input id="login-submit" type="submit" value="Войти" />
+            </p>      
+        }
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+</body>
+</html>

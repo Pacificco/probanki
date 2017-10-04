@@ -4,6 +4,8 @@
     {
         isAuthorized = true;
     }
+
+    bool isDebug = true;
 }
 <!DOCTYPE html>
 <html>
@@ -11,7 +13,10 @@
     <meta charset="utf-8" />    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    @*<base href="http://probanki.net/" />*@
+    @if (!isDebug)
+    {
+        <base href="http://probanki.net/" />
+    }
     
     <link rel="shortcut icon" type="image/x-icon" href="http://probanki.net/favicon.ico" />
 	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
@@ -23,6 +28,9 @@
     <meta name="description" content="@ViewBag.metaDescription" />    
     <meta name="keywords" content="@ViewBag.metaKeywords" />
     
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
     @Styles.Render("~/Content/css")    
     @RenderSection("styles", required: false)
     
@@ -83,15 +91,17 @@
                 @Html.Action("_getModuleSideUserProfile", "Users", null)                
                 @RenderSection("left_top", required: false)
                 
-                @*<section id="social-widgets">
-                    <h3>Мы в соцсетях</h3>
-                    @Html.Action("_getWidget_VK", "Home", null)
-                    <div class="clear"></div>
-                    @Html.Action("_getWidget_FB", "Home", null)
-                    <div class="clear"></div>
-                    @Html.Action("_getWidget_OK", "Home", null)
-                </section>*@
-
+                @if (!isDebug)
+                {
+                    <section id="social-widgets">
+                        <h3>Мы в соцсетях</h3>
+                        @Html.Action("_getWidget_VK", "Home", null)
+                        <div class="clear"></div>
+                        @Html.Action("_getWidget_FB", "Home", null)
+                        <div class="clear"></div>
+                        @Html.Action("_getWidget_OK", "Home", null)
+                    </section>
+                }
                 @RenderSection("left_middle", required: false)
                 @RenderSection("left_bottom", required: false)
             </div>
@@ -166,20 +176,21 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
     @RenderSection("scripts", required: false)    
-    
-@*    @Html.Action("_getModuleCounters", "Home", null);
-    <div id="fb-root"></div>
-    <script>
+    @if (!isDebug)
+    {
+        @Html.Action("_getModuleCounters", "Home", null);
+        <div id="fb-root"></div>
+        <script>
 
-        (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-    </script>*@
-        
+            (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+        </script>
+    }
     <script src="~/Scripts/jquery.maskedinput.min.js"></script>
     <script src="~/Scripts/main.js"></script>
     <script src="~/Scripts/countdown.js"></script>

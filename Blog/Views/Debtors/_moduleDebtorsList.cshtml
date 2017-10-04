@@ -1,0 +1,48 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@using System.Globalization
+@model List<VM_Debtor>
+
+@{
+    CultureInfo _cultureInfo = new CultureInfo("ru-RU");
+    _cultureInfo.NumberFormat.NumberGroupSeparator = " ";
+    _cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <table id="debtors-list">
+        <tr>
+            <th class="th-region">Регион</th>
+            <th class="th-added-date">Дата добавления</th>
+            <th class="th-debtor-type">Должник</th>
+            <th class="th-debt-created-date">Дата образования долга</th>
+            <th class="th-debt-amount">Сумма долга</th>
+            <th class="th-sale-price">Цена продажи</th>
+        </tr>
+
+
+        @foreach (VM_Debtor item in Model.Items)
+    {
+            <tr>
+                <td>@item.RegionName</td>
+                <td><time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("MMM yyyy", _cultureInfo)</time></td>
+                <td>@item.DebtorTypeName</td>
+                <td><time pubdate datetime="@item.DebtCreatedDate.ToString()">@item.DebtCreatedDate.ToString("MMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time></td>
+                <td>@item.DebtAmount.ToString(_cultureInfo)</td>
+                <td>@item.SalePrice.ToString(_cultureInfo)</td>
+            </tr>
+                }
+    </table>
+        }
+        else
+        {
+    <p>В данном разделе еще нет публикаций.</p>
+        }
+
+@if (Model.Items.Count > 0)
+        {
+    @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("art_items", new
+       {
+           cat_id = Model.CurrentCategory.Id > 0 ? Model.CurrentCategory.Alias : "",
+           page = x
+       }))    

@@ -220,6 +220,15 @@ namespace Bankiru
             );
             #endregion
 
+            #region ДОЛЖНИКИ
+            routes.MapRoute(
+                name: "debtors",
+                url: "debtors",
+                defaults: new { controller = "Debtors", action = "List" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            #endregion
+
             #region СТАТИЧЕСКИЕ СТРАНИЦЫ
             routes.MapRoute(
                 name: "rules",
@@ -266,7 +275,7 @@ namespace Bankiru
                 name: "NotFound",
                 url: "{*url}",
                 defaults: new { controller = "Error", action = "Http404" },
-                namespaces: new[] { "CessInvest.Controllers" }
+                namespaces: new[] { "Bankiru.Controllers" }
             );
             //Остальное
             routes.MapRoute(

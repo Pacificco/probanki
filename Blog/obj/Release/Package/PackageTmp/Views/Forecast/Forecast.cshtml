@@ -1,0 +1,80 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
+@using Bankiru.Models.Domain.Club
+@model VM_Forecast
+@{
+    Layout = "~/Views/Shared/Master.cshtml";
+    
+    ViewBag.metaTitle = "Прогноз. " + Model.Subject.Name;
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+    
+    ViewBag.CurrentMenuItem = "club";
+}
+@section scripts{
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+}
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@Html.Action("_getModuleForecastAsHeader", "Forecast", new { cur_item = Model.Subject.Id })
+@if (Model != null)
+{ 
+    <article id="forecast">        
+        <hgroup>
+            <h1 class="@Model.Subject.Alias">
+                <span>@Bankiru.Models.Helpers.TextHelper.GetForecastName(Model.Subject.Id, Model.ForecastDate)</span>
+            </h1>
+        </hgroup>
+        <div class="info">
+            <div class="win-amount">Приз лучшему аналитику<br /><span>@Model.WinAmount рублей</span></div>
+            <div class="sponsor">Спонсор прогноза:<br /><span>ООО Известная контора</span></div>
+        </div>
+        @Html.Action("_getModuleChart", "Rates", new { subjectId = Model.Subject.Id })
+        <div id="user-add-to-forecast" class="@Model.Subject.Alias">
+            @Html.Action("_getModuleAddUserToForecast", "Forecast", new { forecastId = Model.Id })
+        </div>
+        <div class="users">
+            <h2>Прогнозы аналитиков клуба</h2>
+            @if (Model.Users.Count > 0)
+            {
+                foreach (VM_ForecastUser u in Model.Users)
+                {
+                    <div class="user">
+                    <div class="avatar">
+                        @if (String.IsNullOrEmpty(u.User.Avatar))
+                        {
+                            <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/lk/avatars/@u.User.Avatar" title="" alt="@u.User.Nic" />
+                        }
+                        <div class="avatar-mask"></div>
+                        <div class="online-state"></div>
+                    </div>                    
+                    <div class="user-forecast-info">
+                        <span class="nic">@u.User.Nic</span><br />
+                        Прогноз: <span class="value">@(((double)u.Value).ToString("##.####"))</span>&nbsp;&nbsp;&nbsp;Время совершения прогноза участником: 
+                        @if (u.ValueDate != null)
+                        {
+                            <span class="date">@(((DateTime)u.ValueDate).ToString("dd.MM.yyyy HH.mm"))</span>
+                        }
+                    </div>
+                </div>
+                }
+            }
+        </div>       
+    </article>
+}

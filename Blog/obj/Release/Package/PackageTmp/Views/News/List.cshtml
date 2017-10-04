@@ -1,0 +1,86 @@
+﻿@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.News
+@using System.Globalization
+@using Bankiru.Models.Infrastructure
+@model VM_NewsList
+@{
+    ViewBag.metaTitle = "Новости дня России и мира онлайн. Последние новости финансового рынка.";
+    ViewBag.metaDescription = "Новости сегодня. Новости экономики, финансового рынка и банковской сферы. Новости валютного рынка и курсов валют. Последние новости России и мира.";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "index, follow";
+
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.CurrentMenuItem = "news";
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{
+    <section id="news-list">
+        <hgroup>
+            <h1>
+                Новости
+            </h1>
+            <h2>Новости дня России и мира, обзор событий последней недели:</h2>
+        </hgroup>
+        <div class="news-list-header">
+            <div class="news-list-count">Всего: <span>@Model.PagingInfo.TotalItems</span></div>
+        </div>
+        @if (Model.Items.Count > 0)
+        {
+
+            for (int i = 0; i < Model.Items.Count; i++)
+            {
+            <p class="news-item">
+                <time pubdate datetime="@Model.Items.ElementAt(i).PublishedAt.AddHours(3)">@Model.Items.ElementAt(i).PublishedAt.AddHours(3).ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time> @Model.Items.ElementAt(i).Title @Html.RouteLink("Читать новость...", "news_item", new { news_id = Model.Items.ElementAt(i).Alias }, new { title = Model.Items.ElementAt(i).Title })
+            </p>
+            }
+            
+@*
+            if (Model.Items.Count < 4)
+            {
+            <ul class="news">
+                @foreach (VM_NewsItem item in Model.Items)
+                {
+                    <li>
+                        <time pubdate datetime="@item.PublishedAt.AddHours(3)">@item.PublishedAt.AddHours(3).ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                        @Html.RouteLink(@item.Title, "news_item", new { news_id = item.Alias }, new { title = item.Title })
+                    </li>                                    
+                }
+            </ul>
+            }
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    <p class="news-item">
+                        <time pubdate datetime="@Model.Items.ElementAt(i).PublishedAt.AddHours(3)">@Model.Items.ElementAt(i).PublishedAt.AddHours(3).ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time> @Model.Items.ElementAt(i).Title @Html.RouteLink("Читать новость...", "news_item", new { news_id = Model.Items.ElementAt(i).Alias }, new { title = Model.Items.ElementAt(i).Title })
+                    </p>
+                }
+            <ul class="news">
+                @for (int i = 3; i < Model.Items.Count; i++)
+                {
+                    <li>
+                        <time pubdate datetime="@Model.Items.ElementAt(i).PublishedAt.AddHours(3)">@Model.Items.ElementAt(i).PublishedAt.AddHours(3).ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                        @Html.RouteLink(@Model.Items.ElementAt(i).Title, "news_item", new { news_id = Model.Items.ElementAt(i).Alias }, new { title = Model.Items.ElementAt(i).Title })
+                    </li>                                    
+                }
+            </ul>
+            }*@
+        }
+        @if (Model.Items.Count > 0)
+        {
+            @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("news_items", new { page = x }))
+        }
+    </section>
+}

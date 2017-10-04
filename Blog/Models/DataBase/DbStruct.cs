@@ -1573,6 +1573,165 @@ namespace Bankiru.Models.DataBase
                 }
             }
             #endregion
+
+            #region ДОЛЖНИКИ
+            /// <summary>
+            /// Процедура возвращает список должников согласно заданным фильтрам
+            /// </summary>
+            public static class DebtorsView
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "DebtorsView";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    /// <summary>
+                    /// Публикация
+                    /// </summary>
+                    public static string Published = "@Published";
+                    /// <summary>
+                    /// Идентификатор должника
+                    /// </summary>
+                    public static string DebtorId = "@DebtorId";
+                    /// <summary>
+                    /// Регион
+                    /// </summary>
+                    public static string RegionId = "@RegionId";
+                    /// <summary>
+                    /// Дата образования долга
+                    /// </summary>
+                    public static string DebtCreatedRange = "@DebtCreatedRange";
+                    /// <summary>
+                    /// Сумма долга
+                    /// </summary>
+                    public static string DebtAmountRange = "@DebtAmountRange";
+                    /// <summary>
+                    /// Цена продажи
+                    /// </summary>
+                    public static string SalePriceRange = "@SalePriceRange";
+                    /// <summary>
+                    /// Решение суда
+                    /// </summary>
+                    public static string CourtDecisionTypeId = "@CourtDecisionTypeId";
+                    /// <summary>
+                    /// Лицо (тип должника)
+                    /// </summary>
+                    public static string DebtorTypeId = "@DebtorTypeId";
+                    /// <summary>
+                    /// Сущность долга
+                    /// </summary>
+                    public static string DebtEssenceTypeId = "@DebtEssenceTypeId";
+                    /// <summary>
+                    /// Первоначальный кредитор
+                    /// </summary>
+                    public static string OriginalCreditorTypeId = "@OriginalCreditorTypeId";
+                    /// <summary>
+                    /// Продавец долга
+                    /// </summary>
+                    public static string DebtSellerTypeId = "@DebtSellerTypeId";
+                    /// <summary>
+                    /// Количество выводимых записей
+                    /// </summary>
+                    public static string RecFrom = "@RecFrom";
+                    /// <summary>
+                    /// Номер записи, начиная с которой нужно вывести записи
+                    /// </summary>
+                    public static string RecTo = "@RecTo";
+                }
+            }
+            /// <summary>
+            /// Процедура редактирует записи в таблице должников
+            /// </summary>
+            public static class DebtorsEdit
+            {
+                /// <summary>
+                /// Название хранимой процедуры
+                /// </summary>
+                public static string Name = "DebtorsEdit";
+                /// <summary>
+                /// Параметры хранимой процедуры                 
+                /// </summary>
+                public static class Params
+                {
+                    /// <summary>
+                    /// Тип операции: 1 - Создать, 2 - Изменить, 3 - Удалить, 4 - Архивировать, 5 - Закрыть должника
+                    /// </summary>
+                    public static string Operation = "@Operation";
+                    /// <summary>
+                    /// Идентификатор должника
+                    /// </summary>
+                    public static string Id = "@Id";
+                    /// <summary>
+                    /// Тип должника
+                    /// </summary>
+                    public static string DebtorTypeId = "@DebtorTypeId";
+                    /// <summary>
+                    /// Опубликован
+                    /// </summary>
+                    public static string Published = "@Published";
+                    /// <summary>
+                    /// Первоначальный кредитор
+                    /// </summary>
+                    public static string OriginalCreditorTypeId = "@OriginalCreditorTypeId";
+                    /// <summary>
+                    /// Регион должника
+                    /// </summary>
+                    public static string RegionId = "@RegionId";
+                    /// <summary>
+                    /// Населенный пункт
+                    /// </summary>
+                    public static string Locality = "@Locality";
+                    /// <summary>
+                    /// Сущность долга
+                    /// </summary>
+                    public static string DebtEssenceTypeId = "@DebtEssenceTypeId";
+                    /// <summary>
+                    /// Решение суда
+                    /// </summary>
+                    public static string CourtDecisionTypeId = "@CourtDecisionTypeId";
+                    /// <summary>
+                    /// Дата образования долга
+                    /// </summary>
+                    public static string DebtCreatedDate = "@DebtCreatedDate";
+                    /// <summary>
+                    /// Сумма долга
+                    /// </summary>
+                    public static string DebtAmount = "@DebtAmount";
+                    /// <summary>
+                    /// Сумма долга
+                    /// </summary>
+                    public static string SalePrice = "@SalePrice";
+                    /// <summary>
+                    /// Продавец долга
+                    /// </summary>
+                    public static string DebtSellerTypeId = "@DebtSellerTypeId";
+                    /// <summary>
+                    /// Контактное лицо
+                    /// </summary>
+                    public static string ContactPerson = "@ContactPerson";
+                    /// <summary>
+                    /// Контактный телефон
+                    /// </summary>
+                    public static string ContactPhone = "@ContactPhone";
+                    /// <summary>
+                    /// Дополнительный контактный телефон
+                    /// </summary>
+                    public static string DopPhone = "@DopPhone";
+                    /// <summary>
+                    /// Email
+                    /// </summary>
+                    public static string Email = "@Email";
+                    /// <summary>
+                    /// Дополнительный комментарий
+                    /// </summary>
+                    public static string Comment = "@Comment";
+                }
+            }
+            #endregion
         }
     }
 }

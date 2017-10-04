@@ -158,6 +158,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DebtorsController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\ForecastController.cs" />
@@ -185,6 +186,11 @@
     <Compile Include="Models\Domain\Club\VM_ForecastUser.cs" />
     <Compile Include="Models\Domain\Club\VM_TariffPaymentEmail.cs" />
     <Compile Include="Models\Domain\Club\VM_UserForecastState.cs" />
+    <Compile Include="Models\Domain\Debtors\VM_Debtor.cs" />
+    <Compile Include="Models\Domain\Debtors\DebtorsFilter.cs" />
+    <Compile Include="Models\Domain\Debtors\DebtorsManager.cs" />
+    <Compile Include="Models\Domain\Debtors\VM_Debtors.cs" />
+    <Compile Include="Models\Domain\Debtors\VM_DebtorsFilter.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownTariff.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownTariffPeriod.cs" />
     <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
@@ -748,6 +754,9 @@
     <Content Include="Views\Forecast\_moduleLastForecastWinners.cshtml" />
     <Content Include="Views\Users\_userTariffRequestsHistoryBlock.cshtml" />
     <Content Include="Views\Error\InternalError.cshtml" />
+    <Content Include="Views\Debtors\List.cshtml" />
+    <Content Include="Views\Debtors\Debtor.cshtml" />
+    <Content Include="Views\Debtors\_moduleDebtorsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

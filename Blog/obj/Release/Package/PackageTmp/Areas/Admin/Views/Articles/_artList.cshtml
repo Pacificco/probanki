@@ -1,0 +1,91 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Articles
+@model VM_Articles
+@{
+    bool evel = true;
+    string classEvel = "odd";    
+}
+<div class="art-list">
+    <table class="arts">
+        <tbody>
+            <tr>
+                <th class="tools"></th>
+                <th class="published">А</th>
+                <th class="title">Название статьи</th>
+                <th class="category">Категория</th>
+                <th class="comments">Комментариев</th>
+                <th class="published-at">Дата публикации</th>
+                <th class="created-at">Дата создания</th>
+                <th class="id">Id</th>
+            </tr>
+            @foreach (VM_ArtItem item in Model.Items)
+            {
+                <tr class="@classEvel">
+                    <td class="tools">
+                        <a class="del-art" data-art-name="@item.Title" href="@Url.Action("Del", "Articles", new { id = item.Id })" title="Удалить @item.Title">
+                            <img src="~/Content/system/del.png" title="Удалить @item.Title" alt="Удалить" />
+                        </a>
+                        <a href="@Url.Action("Edit", "Articles", new { id = item.Id })" title="Редактировать @item.Title">
+                            <img src="~/Content/system/edit.png" title="Редактировать" />
+                        </a>
+                    </td>
+                    <td class="published">
+                        @if (item.IsActive)
+                        {
+                            <a href="@Url.RouteUrl("admin_articles", new { action = "Active", id = item.Id })" title="Активна" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                            @*<a href="@Url.Action("Activate", "Articles", new { id = item.Id })" title="Активна" class="active-state" id="art_@item.Id">*@
+                                <img src="~/Content/system/active.png" title="Активна" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@Url.RouteUrl("admin_articles", new { action = "Disactivate", id = item.Id })" title="Не активна" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                            @*<a href="@Url.Action("Disactivate", "Articles", new { id = item.Id })" title="Не активна" class="active-state" id="art_@item.Id">*@
+                                <img src="~/Content/system/disactive.png" title="Не активна" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" />
+                    </td>
+                    <td class="title">
+                        <a href="@Url.Action("Edit", "Articles", new { id = item.Id })" title="">@item.Title</a>
+                        @if (item.IsCentral)
+                        {
+                            <br /><span>(центральная публикация)</span>
+                        }
+                    </td>
+                    <td class="category">
+                        @item.Category.Title
+                    </td>
+                    <td class="comments">
+                        @if (item.CommentsInfo != null)
+                        {
+                            @item.CommentsInfo.CommentsCount.ToString()
+                        }
+                        else
+                        {
+                            @String.Format("-");
+                        }
+                    </td>
+                    <td class="published-at">                        
+                        @item.PublishedAt.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))
+                    </td>
+                    <td class="created-at">
+                        @item.CreatedAt.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))
+                    </td>
+                    <td class="id">
+                        @item.Id.ToString()
+                    </td>
+                </tr>
+                        evel = !evel;
+                        if (evel)
+                        {
+                            classEvel = "odd";
+                        }
+                        else
+                        {
+                            classEvel = "evel";
+                        }
+            }
+        </tbody>
+    </table>
+</div>

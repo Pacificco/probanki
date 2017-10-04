@@ -1,0 +1,42 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Comments
+@model Bankiru.Models.Domain.Comments.VM_Comments
+@{
+    bool evel = true;
+    string classEvel = "odd";
+}
+@if (Model.Items != null && Model.Items.Count > 0)
+{
+    <section id="article-comments">
+        <h3>Комментарии</h3>
+        <div class="comments">
+            @foreach (VM_CommentItem item in Model.Items)
+            {                
+                <div class="item @classEvel">
+                    @*<div class="art-comment-rating">
+                        <span class="like">+@item.LikeCount.ToString()</span> <span class="dislike">-@item.DisLikeCount.ToString()</span>
+                    </div>*@
+                    <span class="comment-author">
+                        @item.Author
+                    </span> 
+                    <span class="comment-date">
+                        <time pubdate datetime="@item.CreatedAt">@item.CreatedAt.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                    </span>
+                    <br />
+                    <span class="comment-text">
+                        @Html.Raw(item.CommentText)
+                    </span>                    
+                </div>
+                evel = !evel;
+                if (evel)
+                {
+                    classEvel = "odd";
+                }
+                else
+                {
+                    classEvel = "evel";
+                }   
+            }
+        </div>
+    </section>
+}

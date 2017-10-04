@@ -1,0 +1,183 @@
+﻿@using System.Globalization
+@using Bankiru.Models.OutApi
+@model List<ChartObject>
+@{    
+    string lineData = "";
+    NumberFormatInfo _numberFormatInfo = new NumberFormatInfo() { NumberDecimalSeparator = "." };
+    foreach (var obj in Model)
+    {
+        lineData += String.Format(", [new Date({0},{1},{2}),{3},'{4}']",
+            obj.Date.Year,
+            obj.Date.Month - 1,
+            obj.Date.Day,
+            obj.Close.ToString("N", _numberFormatInfo),//);
+            "Текст подсказки");
+            //obj.Date.ToString("dd.MM.yyyy<br />", CultureInfo.CreateSpecificCulture("ru-RU")) + obj.Close.ToString("N", _numberFormatInfo));
+    }
+    decimal maxValue = 0m;
+    decimal minValue = 0m;
+    if (!String.IsNullOrEmpty(lineData))
+    {
+        lineData = lineData.Substring(2);
+        maxValue = (from m in Model select m.Close).Max();
+        minValue = (from m in Model select m.Close).Min();
+    }
+
+    //lineData = "[new Date(2017,02,02),5],[new Date(2017,01,30),10]";
+
+    string lineColor = "#da9627";
+    string lineBackColor = "#ffffe6";
+    string chartTitle = "Динамика за последние 3 месяца";
+    string valueFormat = "000.0000";
+    if (Model != null && Model.Count > 0)
+    {
+        switch (Model.First().SubjectId)
+        {
+            case 1:
+                lineColor = "#741d88";
+                lineBackColor = "#ffebff";
+                chartTitle = "Динамика курса Доллара за последние 3 месяца";
+                valueFormat = "00.0000";
+                break;
+            case 2:
+                lineColor = "#2195c9";
+                lineBackColor = "#f0faff";
+                chartTitle = "Динамика курса Евро за последние 3 месяца";
+                valueFormat = "00.0000";
+                break;
+            case 3:
+                lineColor = "#da9627";
+                lineBackColor = "#ffffe6";
+                chartTitle = "Динамика курса акций Роснефти за последние 3 месяца";
+                valueFormat = "000.0000";
+                break;
+            case 4:
+                lineColor = "#17a668";
+                lineBackColor = "#ebfff5";
+                chartTitle = "Динамика курса акций Сбербанка за последние 3 месяца";
+                valueFormat = "000.0000";
+                break;
+        }
+    }
+}
+@if (Model != null && Model.Count > 0)
+{
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        //google.charts.load('current', { packages: ['corechart', 'line'] });
+        //google.charts.setOnLoadCallback(drawChart);
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Дата');
+            data.addColumn('number', 'Стоимость');
+            data.addColumn({ type: 'string', role: 'tooltip', 'p': { 'html': true } });
+
+            @*data.addRows([@lineData]);*@
+
+            var options = {
+                hAxis: {
+                    title: '',
+                    format: 'dd.MM.yy'
+                },
+                vAxis: {
+                    title: 'Стоимость, руб.'
+                },
+                title: '@chartTitle',
+                //tooltip: {
+                //    format: 'dd.MM.yy'
+                //},
+                //legend: { position: 'none' },
+                legend: 'none',
+                width: 620,
+                height: 300,
+                backgroundColor: '@lineBackColor',
+                colors: ['@lineColor'],
+                series: {
+                    0: {
+                        lineWidth: 2
+                    }
+                },
+                tooltip: { isHtml: true }
+            };
+
+            @{
+                string d = "5/23/2017";
+                string n = "";
+                string s = "Строка";            
+            }
+            
+            @*arr2[0] = new Date('@(d)');
+            arr2[1] = parseFloat('@(n.ToString("N", _numberFormatInfo))');
+            arr2[2] = '@(s)';
+            arr[0] = arr2;
+            arr2 = new Array();
+            arr2[0] = new Date(2017, 6, 23);
+            arr2[1] = 59.88;
+            arr2[2] = '?';
+            arr[1] = arr2;*@
+
+            var arr = new Array();            
+            var i = 0;
+            @foreach (var obj in Model)
+            {
+                d = String.Format("{0}/{1}/{2}", obj.Date.Month - 1, obj.Date.Day, obj.Date.Year);
+                n = obj.Close.ToString("N", _numberFormatInfo);
+                s = "<p>Текст подсказки<br />Строка 2</p>";  
+                <text>            
+                arr2 = new Array();
+                arr2[0] = new Date('@(d)');
+                arr2[1] = parseFloat('@(n)');
+                arr2[2] = createCustomHTMLContent('@obj.Date.ToString("dd.MM.yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))', '@obj.Close.ToString(valueFormat, _numberFormatInfo)');//'@(s)';
+                arr[i] = arr2;
+                i++;
+                </text>
+                //lineData += String.Format(", [new Date({0},{1},{2}),{3},'{4}']",
+                //    obj.Date.Year,
+                //    obj.Date.Month - 1,
+                //    obj.Date.Day,
+                //    obj.Close.ToString("N", _numberFormatInfo),//);
+                //    "Текст подсказки");
+                //obj.Date.ToString("dd.MM.yyyy<br />", CultureInfo.CreateSpecificCulture("ru-RU")) + obj.Close.ToString("N", _numberFormatInfo));
+            }
+
+            data.addRows(arr);
+            @*data.addRows([@lineData]);*@
+            //data.addRows([
+            //    [new Date(2017, 5, 23), 60.15, new String('Текст подсказки')],
+            //    [new Date(2017, 6, 15), 59.88, new String('Текст подсказки')]
+            //]);
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_@Model.First().SubjectId'));
+            chart.draw(data, options);
+            @*var chart = new google.visualization.LineChart(document.getElementById('chart_@Model.First().SubjectId'));
+            chart.draw(dataTable, options);*@
+        }
+        function createCustomHTMLContent(value1, value2) {
+            return '<div style="padding:5px 5px 5px 5px;">' +
+                'Дата: <strong>' + value1 + '</strong>' +
+                '<br/>' +
+                'Стоимость: <strong>' + value2 + '</strong>' +
+                '</div>';
+        }
+    </script>
+
+    <div class="forecast-chart">
+        @if(Model == null || Model.Count == 0)
+        {
+            <div id="chart_div"></div>
+        }
+        else
+        {
+            <div id="chart_@Model.First().SubjectId"></div>
+        }
+        <div class="stat-info">
+            Максимум: <span>@maxValue</span><br />
+            Минимум: <span>@minValue</span>
+        </div>
+    </div>
+    
+}

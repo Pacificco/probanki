@@ -1,0 +1,36 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@model VM_Debtors
+
+@{
+    Layout = "~/Views/Shared/Master.cshtml";
+    
+    ViewBag.Title = "Биржа долгов";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";    
+}
+
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+
+@if (Model != null)
+{
+    <section id="debtors-page">
+        <hgroup>                            
+            <h1>Биржа долгов</h1>
+            <h2>Биржа долгов подзаголовок</h2>
+        </hgroup>
+        
+        @Html.Action("_getModuleDebtorsListFilter", "Debtors", new { show_article_link = true })
+        <div class="debtors-list">
+            @Html.Action("_getModuleDebtorsList", "Debtors", new { show_article_link = true })
+        </div>
+        @Html.Action("_getModuleDebtorForm", "Debtors", new { show_article_link = true })
+    </section>
+}

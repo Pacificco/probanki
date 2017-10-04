@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "О клубе аналитиков";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "О клубе аналитиков";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";    
+    ViewBag.metaRobots = "index, follow";
+
+    ViewBag.CurrentMenuItem = "club";
+}
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "about" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="club-about">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    <p>Клуб аналитиков (далее «КЛУБ») организован администрацией портала ProBanki.net  для общения людей, интересующихся финансами и инвестициями, а также для получения ими новых знаний и опыта в этой сфере.</p>
+    <p>Участник КЛУБА (далее «УЧАСТНИК») – физическое или юридическое лицо, прошедшее регистрацию в КЛУБЕ в соответствии с Правилами КЛУБА (см. раздел «Правила КЛУБА»).</p>
+    <p>КЛУБ предоставляет УЧАСТНИКАМ следующие возможности:</p>
+    <ul>
+    <li>подписка на рассылку новостей КЛУБА и портала ProBanki.net,</li>
+    <li>скидки и льготы на услуги организаций - спонсоров КЛУБА и рекламодателей портала ProBanki.net,</li>
+    <li>участие в конкурсах по прогнозированию курсов валют, акций и прочих финансовых показателей,</li>
+    <li>прочие льготы и привилегии.</li>
+    </ul>
+    <p>КЛУБ функционирует в соответствии с Правилами КЛУБА (см. раздел «Правила КЛУБА»).</p>
+</article>

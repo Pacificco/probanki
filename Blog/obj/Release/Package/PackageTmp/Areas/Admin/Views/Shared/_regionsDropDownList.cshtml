@@ -1,0 +1,35 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Other
+@model VM_DropDownRegions
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    if (Model.FirstItem != EnumFirstDropDownItem.None)
+    {
+        SelectListItem firstItem = new SelectListItem();
+        switch (Model.FirstItem)
+        {
+            case EnumFirstDropDownItem.All:
+                firstItem.Text = "ВСЕ";
+                break;
+            case EnumFirstDropDownItem.NotSelected:
+                firstItem.Text = "Не выбрана";
+                break;
+        }
+        firstItem.Value = Guid.Empty.ToString();
+        firstItem.Selected = Model.SelectedId == Guid.Empty ? true : false;
+        _items.Add(firstItem);
+    }
+    if(Model.Items != null && Model.Items.Count > 0)
+    {
+        foreach(VM_Region item in Model.Items)
+        {
+            _items.Add(new SelectListItem() {
+                Text = item.FormalName + " " + item.ShortName,
+                Value = item.AoGuid.ToString(),
+                Selected = Model.SelectedId == item.AoGuid ? true : false
+            });
+        }
+    }
+    
+}
+@Html.DropDownList(Model.Name, _items)

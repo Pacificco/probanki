@@ -1,0 +1,42 @@
+﻿@using Bankiru.Models.Domain.Club
+@model List<VM_ForecastSubject>
+@{  
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Курс валют: курс доллара, курс евро. Цена на нефть, акции Сбербанка.";
+    ViewBag.metaDescription = "Курс валют ЦБ РФ на сегодня, динамика курса доллара и курса евро. Цена на нефть — динамика марки Brent на Московской бирже. Стоимость акций Сбербанка.";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "index, follow";
+
+    ViewBag.CurrentMenuItem = "rates";
+}
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
+{
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
+}
+@section right_middle
+{    
+    @Html.Action("_getModuleLastNews", "Home")
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <section id="rates-list">
+        <hgroup>
+            <h1>Курсы валют</h1>
+        </hgroup>        
+            <div class="rates">
+                @foreach (VM_ForecastSubject item in Model)
+                {
+                    //if (item.Id > 2)
+                    //{
+                    //    continue;
+                    //}
+                    @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Id })                   
+                }
+            </div>
+    </section>
+}

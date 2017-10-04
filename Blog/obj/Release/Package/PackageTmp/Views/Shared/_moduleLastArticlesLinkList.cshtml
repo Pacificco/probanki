@@ -1,0 +1,18 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Articles
+@model List<VM_ArtItem>
+@if (Model!= null && Model.Count > 0)
+{
+    <section class="related-articles">
+        <p class="p-header">Читайте также:</p>
+        <ul class="related-articles-list">
+            @foreach (VM_ArtItem item in Model)
+            {
+                <li>
+                    @Html.RouteLink(item.Title, "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
+                     @*<span>(@item.Category.Title)</span>*@
+                </li>
+            }
+        </ul>
+    </section>
+}

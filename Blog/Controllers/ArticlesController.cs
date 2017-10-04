@@ -68,19 +68,20 @@ namespace Bankiru.Controllers
                     else
                     {
                         ViewBag.ErrorMessage = _manager.LastError;
-                        return RedirectToAction("NotFound", "Error", null);
+                        return View("NotFound");
                     }
                 }
                 else
                 {
                     ViewBag.ErrorMessage = _errMassage;
-                    return RedirectToAction("Error", "Error", null);
+                    return View("Error");
                 }
             }
             catch (Exception e)
             {
-                ViewBag.ErrorMessage = e.ToString();
-                return RedirectToAction("Error", "Error", null);
+                log.Error(e.ToString());
+                return View("Error");
+                //return RedirectToAction("Error", "Error", null);
             }
         }
 

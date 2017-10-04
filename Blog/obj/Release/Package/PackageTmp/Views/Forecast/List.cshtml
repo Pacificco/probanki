@@ -1,0 +1,104 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.Club
+@using Bankiru.Models.Domain.Users
+@model List<VM_Forecast>
+@{  
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Прогнозы";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "club";
+}
+@if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
+{
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = "none" })
+}
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "forecasts" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{
+    <section id="forecast-list">
+        <hgroup>
+            <h1>Список текущих прогнозов</h1>
+        </hgroup>
+        @if (Model.Count > 0)
+        {
+            <div class="forecasts">
+
+                @foreach (VM_Forecast item in Model)
+                {
+                    <section class="forecast-prev @item.Subject.Alias">
+                        <hgroup>
+                            <h1>@Html.Raw(item.Subject.Name.Replace(" ", "<br />"))</h1>
+                        </hgroup>
+                        <div class="users">
+                            @if (item.Users.Count > 0)
+                            {                                
+                                foreach (VM_ForecastUser user in item.Users)
+                                {
+                                <div class="user">
+                                    <div class="nic">@user.User.Nic</div>
+                                    <div class="info">
+                                        <div class="avatar">
+                                            @if (String.IsNullOrEmpty(user.User.Avatar))
+                                            {
+                                                <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" width="30" />
+                                            }
+                                            else
+                                            {
+                                                <img src="~/Content/lk/avatars/@user.User.Avatar" title="" alt="@user.User.Nic" />
+                                            }
+                                            <div class="avatar-mask"></div>
+                                            <div class="online-state"></div>
+                                        </div>
+                                        <div class="value">@user.Value</div>
+                                        <div class="value-data">@(((DateTime)user.ValueDate).ToString("dd.MM.yyyy", CultureInfo.CreateSpecificCulture("ru-RU")))</div>
+                                    </div>
+                                </div>
+                                }
+                            }
+                            else
+                            {
+                                <p>Новый прогнозы:</p>
+                                <p>
+                                    В этом прогнозе еще никто не принял участие.<br />
+                                    Вы можете стать первым.
+                                </p>
+                            }
+                        </div>
+                        @Html.RouteLink("Сделать прогноз", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id }, new { @class = "do-forecast" })
+                        <div class="read-more">@Html.RouteLink("Подробнее", "club_forecast", new { subject_id = item.Subject.Alias, id = item.Id })</div>
+                    </section>                                    
+                }
+            </div>
+            @Html.Action("_getModuleLastForecastWinners", "Forecast", null)
+            foreach (VM_Forecast item in Model)
+            {        
+                @Html.Action("_getModuleChart", "Rates", new { subjectId = item.Subject.Id })
+            }
+        }
+        else
+        {
+            <p>На данный момент открытых прогнозов нет.</p>
+            @Html.Action("_getModuleLastForecastWinners", "Forecast", null)
+            for (int i = 1; i < 5; i++ )
+            {        
+                @Html.Action("_getModuleChart", "Rates", new { subjectId = i })
+            }    
+        }        
+    </section>
+}

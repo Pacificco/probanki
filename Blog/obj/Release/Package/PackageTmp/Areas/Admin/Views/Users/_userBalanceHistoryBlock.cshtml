@@ -1,0 +1,24 @@
+﻿@using Bankiru.Models.Domain.Users
+@model List<VM_UserBalanceHistoryItem>
+<div id="user-balance-history-block">
+    <div class="stat-block">
+        <h2>Пополнение баланса пользователя</h2>
+        <div class="stat-block-body">
+            @if (Model.Count > 0)
+            {
+                foreach (VM_UserBalanceHistoryItem item in Model)
+                {
+                    <p>
+                        <span class="date">@item.ReportDate.ToString("dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))</span>
+                        <span class="sum">@item.Sum.ToString("N")</span>
+                        <span class="tariff"> (@item.Comment)</span>
+                    </p>
+                }
+            }
+            else
+            {
+                <p>Пользователь еще ни разу не пополнял баланс.</p>
+            }
+        </div>
+    </div>
+</div>

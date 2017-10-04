@@ -1,0 +1,53 @@
+﻿@model Bankiru.Models.Domain.Account.VM_UserLogin
+@{
+    ViewBag.Title = "Авторизуйтесь";
+    Layout = "~/Views/Shared/Master.cshtml";
+    ViewBag.metaTitle = "Авторизация на сайте Probanki.net";
+    ViewBag.metaRobots = "noindex,nofollow";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<section id="authorization">
+    <hgroup>
+        <h1>
+            <span>Авторизация в клубе Probanki.net</span>
+        </h1>
+    </hgroup>
+    @using (Html.BeginForm("Login", "Account", null, FormMethod.Post, new { id = "form-auth" }))
+    {            
+        @Html.AntiForgeryToken()
+
+        <div class="form-sign-in-wrapper">
+
+            <div class="editor-label-email">
+                @Html.LabelFor(model => model.Username)<br />
+                @Html.EditorFor(model => model.Username)
+            </div>
+            <div class="editor-label-password">
+                @Html.LabelFor(model => model.Password)<br />
+                @Html.EditorFor(model => model.Password)<br />
+                @Html.ActionLink("Забыли пароль?", "PasswordRecover", "Account", null, new { title = "Забыли пароль?", @class = "forgot-password" })
+            </div>
+            <div class="form-sign-in-valid-mes">
+                @Html.ValidationMessageFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Username)
+                @Html.ValidationSummary(true)
+            </div>
+            <div class="editor-label-submit">
+                <input class="button-ok" type="submit" value="Войти" />                
+            </div>
+        </div>        
+    }
+</section>

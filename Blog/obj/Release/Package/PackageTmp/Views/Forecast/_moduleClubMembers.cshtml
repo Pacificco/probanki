@@ -1,0 +1,33 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain.Users
+@model List<VM_User>
+@if (Model != null && Model.Count > 0)
+{
+    <section class="club-users">
+        <h3>Топ-5 участников клуба</h3>
+        <div class="users">
+            @foreach (VM_User u in Model)
+            {                
+                <div class="user-info">
+                    <div class="avatar">
+                        @if (String.IsNullOrEmpty(u.Avatar))
+                        {
+                            <img src="~/Content/lk/avatars/anonymous.jpg" title="" alt="Гость" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/lk/avatars/@u.Avatar" title="" alt="@u.Nic" />
+                        }
+                        <div class="avatar-mask"></div>
+                        <div class="online-state"></div>
+                    </div>
+                    <div class="nic">@u.Nic</div>
+                    <div class="rang">Ранг не определен</div>
+                    <div class="user-forecast-info">
+                        Прогнозов: <span>@u.ForecastCount</span>&nbsp;&nbsp;&nbsp;Побед: <span>@u.WinCount</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+}

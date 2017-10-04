@@ -1,0 +1,112 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain
+@model Bankiru.Models.Domain.Club.VM_Forecast
+@{
+    ViewBag.Title = "Создание нового прогноза";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles {
+    @Styles.Render("~/Content/admin/forecasts/css")
+    @*<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*@
+}
+<div class="back-to-list">
+    @Html.ActionLink("Вернуться к списку", "List")
+</div>
+<div id="forecast-editor">
+    @using (Html.BeginForm("Edit", "Forecast", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.IsClosed)
+
+        <div class="editor-title">
+            <p>
+                @if (Model.IsClosed)
+                {
+                    <span class="closed">Прогноз закрыт</span><br />
+                }
+                else
+                {
+                    <span class="open">Прогноз открыт</span><br />
+                }
+                Прогноз от <span class="forecast-date">@Model.CreateDate.ToString("dd.MM.yyyy HH:mm", CultureInfo.CreateSpecificCulture("ru-RU"))</span>
+            </p>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.ForecastDate)
+            </div>
+            <div class="editor-field">
+                <input class="text-box single-line" data-val="true" data-val-date="Поле Дата результатов должно содержать дату." data-val-required="Требуется поле Дата результатов." id="ForecastDate" name="ForecastDate" type="date" value="@Model.ForecastDate.ToString("yyyy-MM-dd")">
+                @Html.ValidationMessageFor(model => model.ForecastDate)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SubjectId)
+            </div>
+            <div class="editor-field">
+                @Html.Action("_getForecastSubjectDropDownList", "Forecast", new
+               {
+                   selectedId = Model.SubjectId,
+                   firstItem = EnumFirstDropDownItem.NotSelected,
+                   id = "SubjectId"
+               })
+                @Html.ValidationMessageFor(model => model.SubjectId)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.WinAmount)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.WinAmount) руб.
+                @Html.ValidationMessageFor(model => model.WinAmount)
+            </div>
+            @if (Model.Winner == null || Model.Winner.Id <= 0)
+            {
+                if(Model.IsClosed)
+                {
+                    <p class="no-winner text-red">Победитель прогноза не определен!</p>
+                }
+                else
+                {
+                    <p class="winner text-navy">Победитель прогноза еще не определен.</p>
+                }
+            }
+            else
+            {
+                <p class="winner">
+                    Победитель прогноза: <span class="winner-nic">@Model.Winner.Nic</span>
+                    Победивший прогноз: <span class="winner-value">@Model.WinValue.ToString("##.####")</span>
+                    Фактическое значение: <span class="fact-value">@Model.FactValue.ToString("##.####")</span>
+                </p>
+            }
+        
+            <input type="submit" value="Сохранить" class="button-ok" />
+        </div>
+    }
+</div>
+@if(!Model.IsClosed)
+{
+    <div id="forecast-close-block">
+        @Html.Action("_getForecastCloseBlock", "Forecast", new { forecast_id = Model.Id, next_forecast_date = Model.ForecastDate.AddDays(15) })
+    </div>
+}
+
+@section scripts{
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#ForecastDate").datepicker({
+                minDate: -20,
+                maxDate: "+1M",
+                dateFormat: "dd-mm-yy"
+            });
+        });
+        $(function () {
+            $("#NextForecastDate").datepicker({
+                minDate: -20,
+                maxDate: "+1M",
+                dateFormat: "dd-mm-yy"
+            });
+        });
+
+    </script>
+}

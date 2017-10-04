@@ -1,0 +1,101 @@
+﻿@using Bankiru.Models.Domain.Club
+@model List<VM_ForecastUser>
+@{
+    ViewBag.Title = "Мои прогнозы";
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.metaTitle = "Архив прогнозов";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "forecasts";
+}
+@section left_top
+{
+    @Html.Action("_getModuleSideUserMenu", "Users", new { cur_item = ViewBag.CurrentMenuItem })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleClubMembers", "Forecast", null)
+}
+@section right_middle
+{
+    @Html.Action("_getModuleClubMenu", "Forecast", new { cur_item = "none" })
+    @Html.Action("_getModuleLastNews", "Home")
+}
+<article id="user-archive">
+    <hgroup>
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+
+    @if (Model == null)
+    {
+        <p class="text-red">
+            По техническим причинам архив прогнозов временно не доступен.<br />
+            В ближайшее время данная проблема будет устранена.
+        </p>
+        <p>Приносим Вам свои извинения за временные неудобства.</p>
+    }
+    else
+    {
+        if (Model.Count == 0)
+        {
+        <p>Архив прогнозов пуст.</p>
+        }
+        else
+        {
+            foreach (VM_ForecastUser fu in Model)
+            {
+                <div class="forecast">
+
+                    @* Архив/Открыт *@
+                    @if (fu.Forecast.IsClosed)
+                    {
+                        <div class="close-state">Архив</div>
+                    }
+                    else
+                    {
+                        <div class="open-state">Открытый прогноз</div>
+                    }
+
+                    @* Предмет *@
+                    <div class="subject">
+                        @Html.Raw(fu.Forecast.Subject.Name)
+                        @* Дата *@
+                        @if (fu.Forecast.IsClosed)
+                        {
+                            <span class="date close-date">(прогноз на @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))))</span>
+                        
+                        }
+                        else
+                        {
+                            <span class="date open-date">(открыт до @((fu.Forecast.ForecastDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU"))))</span>
+                        }
+                    </div>
+                    
+                     @*Победитель*@
+                    @if (fu.Forecast.Winner.Id > 0)
+                    {
+                        <div class="winner">
+                            Победитель: <span class="winner-nic">@fu.Forecast.Winner.Id</span><br />
+                            Победивший прогноз: <span class="winner-value">@fu.Forecast.WinValue.ToString("##.####")</span><br />
+                            Фактическое значение: <span class="fact-value">@fu.Forecast.FactValue.ToString("##.####")</span>
+                        </div>
+                    }
+
+                    @*Прогноз текущего пользователя*@
+                    @if(fu.Value != null)
+                    {
+                        <div class="owner">                            
+                            Ваш прогноз: <span class="owner-value">@(((double)fu.Value).ToString("##.####"))</span><br />
+                            Дата прогноза: <span class="owner-date">@(((DateTime)fu.ValueDate).ToString("dd.MM.yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("ru-RU")))</span>
+                        </div>
+                    }
+
+                </div>                
+            }
+        }
+    }
+
+</article>

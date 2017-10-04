@@ -1,0 +1,25 @@
+﻿@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.Comments
+@model VM_Comments
+@{
+    ViewBag.Title = "Список комментариев";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles{
+    @Styles.Render("~/Content/admin/comments/css")
+}
+@section scripts
+{
+    <script>
+        $("#content .del-comment").click(function (event) {            
+            if (!confirm("Вы действительно хотите удалить этот комментарий?"))
+            {
+                event.preventDefault();
+            }
+        });
+    </script>
+}
+@Html.Action("_getCommentListFilter", "Comments", new {filter = Model.Filters })
+@Html.Action("_getCommentList", "Comments", new { model = Model})
+@Html.PageLinks(@Model.PagingInfo, x => Url.Action("List", "Comments", new { Confirmed = (int)Model.Filters.Confirmed,
+    CommentText = Model.Filters.CommentText, IsActive = (int)Model.Filters.IsActive, page = x }))

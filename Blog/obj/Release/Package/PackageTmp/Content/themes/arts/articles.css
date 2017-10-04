@@ -1,0 +1,433 @@
+﻿/* Публикации на главной странице
+-----------------------------------------------------------*/
+#main section.articles {
+    position: relative;
+    margin: 10px 10px 10px 20px;
+    overflow: hidden;
+    padding-right: 10px;
+}
+#main section.articles h1{    
+    background-color: #374e74;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+/*#main section.articles h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}*/
+
+/* Центральная статья
+-----------------------------------------------------------*/
+#main .article-prev {
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dfdfdf;
+}
+#main section.articles .article-prev h1 {
+    background: none;
+    color: #3c4249;
+    margin: 0;
+    font-size: 1.4em;
+    padding: 0;
+}
+#main section.articles .article-prev h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#main .article-prev .article-prev-info p{
+    margin: 5px 0 10px 0;
+}
+#main .article-prev .article-prev-info p time {
+    /*padding: 5px 7px;
+    background-color: #83abe0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;*/
+    color: #6c6d70;    
+    margin: 0 10px 0 0px;
+}
+#main .article-prev .article-prev-info p a {
+    color: #3d66ab;
+    background: url(/Content/system/href-arrows.png) 0px 6px no-repeat;
+    padding-left: 15px;
+    text-transform: uppercase; 
+    margin-left: 10px;
+    font-weight: 700;
+}
+#main .article-prev .article-prev-info p a:hover {
+    text-decoration: none;
+}
+#main .article-prev .article-prev-text {
+    clear: both;
+    padding: 0;
+}
+#main .article-prev .article-prev-text p {
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+#main .article-prev .article-prev-text img{
+    border: 1px solid navy;
+}
+#main .article-prev .article-prev-footer {
+    /*border-top: 1px solid #c4e2ff;*/
+    clear: both;
+    overflow: hidden;
+    /*background: url(/Content/system/art_footer_bg.gif) left top repeat;*/
+    /*height: 30px;*/
+    /*padding-top: 3px;*/
+}
+/*#main .article-prev .article-prev-footer-tab {    
+    position: relative;
+    height: 24px;    
+    background: none;
+}
+#main .article-prev .article-prev-footer-tab-readmore {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+}
+#main .article-prev .article-prev-footer-tab-comments {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+}
+#main .article-prev .article-prev-footer-tab-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 24px;
+    z-index: 3;
+    background: none;
+    background: url(/Content/system/footer_tab_left.png) left top no-repeat;
+}
+#main .article-prev .article-prev-footer-tab-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 24px;
+    z-index: 3;
+    background: none;
+    background: url(/Content/system/footer_tab_right.png) left top no-repeat;
+}*/
+#main .article-prev .article-prev-footer .read-more {
+    position: relative;  
+    float: left;
+}
+#main .article-prev .article-prev-footer .read-more a{
+    color: #ffffff;
+    background-color: #00adee;
+    display: block;    
+    padding: 5px 10px 7px 10px;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+}
+#main .article-prev .article-prev-footer .read-more-comments {
+    position: relative;    
+    float: right;
+    padding-right: 10px;
+}
+#main .article-prev .article-prev-footer .read-more-comments a{
+    position: relative;    
+    color: #6c6d70;
+    display: block;
+    background: url(/Content/system/comment-marker.png) left top no-repeat;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+/* Связанные статьи на главной странице
+-----------------------------------------------------------*/
+#main .related-articles {
+    margin: 0px;
+}
+#main .related-articles p.p-header {
+    font-size: 1.2em;
+    text-transform: uppercase;    
+    color: #ffffff;
+    margin: 10px 0 10px 0;
+    background-color: #374e74;
+    padding: 10px;
+}
+#main .related-articles ul.related-articles-list {
+    margin: 5px 0;
+    list-style-type: none;
+    padding: 0;
+    /*list-style-image: url(/Content/system/li_marker.png);*/
+}
+#main .related-articles ul.related-articles-list li{    
+    background: url(/Content/system/li_marker.png) left center no-repeat;
+    padding: 0 0 3px 15px;
+}
+#main .related-articles ul.related-articles-list li a{
+    color: #3d66ab;    
+    text-decoration: underline;
+    font-weight: 700; 
+}
+#main .related-articles ul.related-articles-list li a:hover {
+    text-decoration: none;
+}
+#main .related-articles ul.related-articles-list li span{
+    color: gray;
+    padding-left: 5px;
+}
+
+/* Список публикаций
+-----------------------------------------------------------*/
+#arts-list {
+    padding: 10px 20px;
+    position: relative;    
+    overflow: hidden;
+}
+#arts-list h1{
+    background-color: #374e74;
+    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 10px;    
+    text-transform: uppercase;
+}
+/*#arts-list h1 span {
+    background: white;
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}*/
+#arts-list h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#arts-list .org-list-header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#arts-list .art-list-count {
+    position: relative;
+    font-size: 1.2em;
+    color: #75818f;    
+    margin-top: 5px;
+    padding-left: 5px;
+}
+#arts-list .art-list-count span {
+    color: black;
+}
+#arts-list .arts {
+    padding: 0;
+    margin: 0;
+}
+#arts-list .article-prev {
+    border-top: 4px solid #dfdfdf;/*#c8ceda*/
+}
+#arts-list .article-prev h1 {
+    background: none;
+    color: #3c4249;
+    margin: 10px 0 0 0;
+    font-size: 1.3em;
+    padding: 0;
+}
+#arts-list .article-prev h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#arts-list .article-prev-info {
+    margin-top: 5px;
+}
+/*#arts-list .article-prev-text {
+    font-size: 1.1em;
+}*/
+
+/*Старница с публикацией*/
+#article-detail {
+    margin: 10px 20px;
+}
+#article-detail h1 {
+    background: none;
+    color: #6c6d70;
+    margin: 10px 0 1px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 0;
+}
+#article-detail h2 {
+    color: #3c4249;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+#article-detail .article-info p{
+    margin: 5px 0 15px 0;
+}
+#article-detail .article-info p time {    
+    color: #6c6d70;    
+    margin: 0 10px 0 0px;
+}
+#article-detail .article-info p a {
+    color: #3d66ab;
+    background: url(/Content/system/href-arrows.png) 0px 6px no-repeat;
+    padding-left: 15px;
+    text-transform: uppercase; 
+    margin-left: 10px;
+    font-weight: 700;
+}
+#article-detail .article-info p a:hover {
+    text-decoration: none;
+}
+#article-detail .article-text {
+    clear: both;
+}
+#article-detail .article-text p{
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+#article-detail .article-text p.article-author{
+    text-indent: 0px;
+    text-align: right;
+}
+#article-detail .article-text img{
+    border: 1px solid #4c5a6b;
+}
+
+/* Комментарии к публикации */
+#article-comments {
+    padding: 0;
+    margin: 10px 20px;
+    border-top: 2px solid #dfdfdf;
+    border-bottom: 2px solid #dfdfdf;
+}
+#article-comments h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #374e74;        
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    margin-bottom: 10px;
+}
+#article-comments .comments {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#article-comments .comments .item {
+    position: relative;
+    float: left;
+    width: 600px;
+    border: 1px solid #d3dde6;
+    background-color: #f5f6fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#article-comments .comments .odd {
+    float: right;
+}
+#article-comments .comment-author {
+ color: #5180c4;   
+}
+#article-comments .comment-date {
+    color: #71859d;
+    font-size: 0.9em;
+}
+#article-comments .item .art-comment-rating {
+    position: relative;
+    float: right;
+    margin: 0 0 5px 10px;
+}
+#article-comments .item .art-comment-rating span.like{
+    color: green;
+    font-weight: 500;
+}
+#article-comments .item .art-comment-rating span.dislike{
+    color: maroon;
+    font-weight: 500;
+}
+
+/* Форма оставить комментарий */
+.art-comment-form-link{
+    margin-left: 20px;
+}
+.art-comment-form-link span{
+    color: gray;
+    padding-top: 5px;    
+}
+#module-form-comment {    
+    border: 2px dashed #c2cbd7;
+    padding: 20px;
+    margin: 20px 20px 10px 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: url(/Content/system/form_review_bg.png) top right no-repeat;
+    background-color: #f5f7f9;
+}
+#module-form-comment h3{
+    text-transform: uppercase;
+    color: #4b78b9;
+    background: none;        
+    padding: 5px 5px 0 5px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#form-comment label {
+    color: #75818f;
+}
+#form-comment #UserName{
+    padding: 5px;
+    color: #3c4249;
+    width: 300px;
+}
+#form-comment #CommentText{
+    padding: 5px;
+    color: #3c4249;
+    width: 600px;
+    height: 100px;
+}
+#form-comment #LikeDislike {
+    padding: 5px;
+    color: #39397b;
+    margin-left: 5px;
+}
+#form-comment .editor-field-submit {
+    padding-top: 10px;
+}
+#form-comment input[type=submit] {
+    padding: 5px 10px;
+}
+#spinning-refresh-captcha, #spinning-submit{
+    display: none;
+}
+#comment-created {
+    font-size: 1.1em;
+    margin-left: 10px;
+}

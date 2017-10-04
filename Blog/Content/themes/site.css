@@ -1,6 +1,6 @@
 ﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Helvetica, Sans-Serif, Verdana;
+    font-size: 0.95em;
+    font-family: 'Ubuntu','Open Sans Condensed', Sans-Serif, "Segoe UI", Helvetica, Sans-Serif, Verdana;
     color: #232323;   
     /*background:url(/Content/system/bg-body.png) top left repeat-x;*/
     background-color: #ffffff;
@@ -8,14 +8,22 @@
     padding: 0;
     width: 100%;
 }
-textarea, input, select {    
-    font-family: Sans-Serif, "Segoe UI", Verdana, Helvetica;
-    font-size: 1.0em;
+textarea, input, select, p, label {    
+    font-family: 'Ubuntu','Open Sans Condensed', Sans-Serif, "Segoe UI", Verdana, Helvetica;    
+}
+h1, h2, h3, h4{    
+    font-family: 'Open Sans Condensed', Sans-Serif, "Segoe UI", Verdana, Helvetica;
+    font-size: 1.3em;
+    font-weight: 500;
 }
 header, footer, nav, section, aside, article {
     display: block;
     margin: 0;
     padding: 0;
+}
+p {
+    line-height: 1.3em;
+    color: #333333;
 }
 div {
      margin: 0;
@@ -158,6 +166,7 @@ input.button-ok{
     -webkit-border-radius: 3px;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 1.2em;
 }
 input.button-ok:hover{
     background-color: #10bcfc;
@@ -178,7 +187,7 @@ input.button-ok:hover{
     color: #8ac64d;
     font-size: 12.0em;
     font-weight: 900;
-    font-family: Helvetica;
+    font-family: 'Ubuntu',Helvetica;
     margin: 0;
     padding: 0;
     line-height: 1.0em;
@@ -187,7 +196,7 @@ input.button-ok:hover{
     text-align: center;
     color: white;
     font-size: 1.2em;
-    font-family: Verdana;
+    font-family: 'Open Sans Condensed', Sans-Serif, Verdana;
     padding: 40px 0 40px 0;
 }
 #error-404 p {
@@ -195,7 +204,7 @@ input.button-ok:hover{
 }
 #error-404 p a {
     font-size: 1.2em;
-    font-family: Verdana;
+    font-family: 'Ubuntu','Open Sans Condensed', Sans-Serif, Verdana;
 }
 
 /* Сообщения
@@ -375,6 +384,8 @@ header {
 #info-board h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background-color: #374e74;    
     padding: 10px;
     margin: 0;
@@ -390,9 +401,11 @@ header {
 #currencies h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background-color: #374e74;
     /*background: url(/Content/system/right_column_h3_bg.png) top left no-repeat;*/
-    padding: 10px;
+    padding: 5px 10px;
     margin: 0;
 }
 #currencies-body {    
@@ -440,7 +453,7 @@ header {
 }
 #currencies .currency-rate {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 500;
     color: #ffffff;    
 }
@@ -542,8 +555,10 @@ header {
 #authorization h1{
     background-color: #374e74;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 0 0 10px 0;
-    padding: 10px;    
+    padding: 5px 10px;    
     text-transform: uppercase;
 }
 #authorization h1 span {
@@ -635,8 +650,8 @@ header {
 #top-menu ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.0em;
-    /*font-family: "Arial";*/
+    font-size: 1.2em;
+    font-family: 'Open Sans Condensed';
     text-transform: uppercase;
     height: 40px;
     display: table-cell;
@@ -743,8 +758,10 @@ header {
 #column-left section.club-users h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background: none;        
-    padding: 10px;
+    padding: 5px 10px;
     margin: 0 0 10px 0;
     background-color: #374e74;
 }
@@ -755,9 +772,7 @@ header {
     position: relative;    
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    font-size: 1.0em;
-    /*background: url(/Content/system/org_menu_item_separator_bg.jpg) top right no-repeat;*/
+    padding: 0;        
 }
 #column-left section.org-menu ul li,
 #column-left section.club-menu ul li,
@@ -771,8 +786,11 @@ header {
 #column-left section.user-menu ul li a,
 #column-right section.club-menu ul a {
     text-decoration: none;
-    font-weight: normal;
-    color: #373c41;
+    font-weight: lighter;
+    font-size: 1.3em;
+    font-family: 'Open Sans Condensed';
+    color: #6d6d6f;
+    /*color: #373c41;*/
     padding: 7px 10px 10px 18px;
     display: block;
     background: url(/Content/system/li-marker-arrows.png) left center no-repeat;
@@ -786,7 +804,7 @@ header {
 #column-right section.club-menu ul li.current a,
 #column-right section.club-menu ul li.current a:hover {
     color: #00adee;
-    font-weight: 500;
+    /*font-weight: 500;*/
     background: url(/Content/system/li-marker-arrows-over.png) left center no-repeat;
 }
 #column-left section.org-menu ul li a:hover,
@@ -805,6 +823,8 @@ header {
 #social-widgets h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background: none;        
     padding: 10px;
     margin: 0 0 10px 0;
@@ -829,8 +849,10 @@ header {
 #column-left section.last-comments h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background: none;        
-    padding: 10px;
+    padding: 5px 10px;
     margin: 0 0 10px 0;
     background-color: #374e74;
 }
@@ -843,7 +865,7 @@ header {
     background: url(/Content/system/left_column_item_separator.png) center top repeat-x;
 }
 #column-left section.last-comments ul.comments li{
-    margin: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
     padding: 10px;    
     /*background: url(/Content/system/left_column_item_separator.png) center bottom repeat-x;*/
     background-color: #fafafa;
@@ -931,9 +953,11 @@ header {
 #column-right section.last-news h3{
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background-color: #374e74;
     /*background: url(/Content/system/right_column_h3_bg.png) top left no-repeat;*/    
-    padding: 10px;
+    padding: 5px 10px;
     margin: 5px 0;
 }
 #column-right section.last-news ul.news{
@@ -944,7 +968,7 @@ header {
     font-size: 0.95em;
 }
 #column-right section.last-news ul.news li{
-    margin: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
     background-color: #fafafa;
     /*background-color: rgba(90,105,124,0.54);*/
     padding: 7px;
@@ -961,11 +985,18 @@ header {
 }
 #column-right section.last-news ul.news li span.news-date {
     color: #6c6d70;
+    font-size: 0.9em;
     font-weight: bold;
+    display: block;
+    padding-bottom: 7px;
+}
+#column-right section.last-news ul.news li span.news-readmore {
+    display: block;
+    padding-top: 5px;
 }
 #column-right section.last-news ul.news li span.news-readmore a{
     color: #3d66ab;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: underline;
 }
 #column-right section.last-news ul.news li span.news-readmore a:hover {
@@ -1012,6 +1043,8 @@ header {
 #main .last-reviews h3 {
     text-transform: uppercase;
     color: #4b78b9;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background: none;        
     padding: 5px 0 10px 10px;
     margin: 5px 0 0 0;
@@ -1089,8 +1122,10 @@ header {
 #register h1{
     background-color: #374e74;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 0 0 10px 0;
-    padding: 10px;    
+    padding: 5px 10px;    
     text-transform: uppercase;
 }
 #register h1 span {
@@ -1141,6 +1176,8 @@ header {
     background: none;
     background: url(/Content/system/h1_bg.gif) center right repeat-x;
     color: #4b78b9;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 13px 5px 10px 5px;
     padding: 0;
 }
@@ -1184,6 +1221,8 @@ header {
     background: none;
     background: url(/Content/system/h1_bg.gif) center right repeat-x;
     color: #4b78b9;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 13px 5px 10px 5px;
     padding: 0;
 }
@@ -1226,21 +1265,24 @@ header {
 }
 #orgs-list h1{
     background-color: #374e74;
-    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     color: #ffffff;
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 #orgs-list h1 span {
     background: white;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     padding: 0 8px 0 0;
     text-transform: uppercase;
 }
 #orgs-list h2 {
     color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    font-size: 1.3em;
+    font-weight: 600;
     margin: 0 0 5px 0;
     padding: 0 10px 0 5px;
     font-style: italic;
@@ -1335,10 +1377,11 @@ header {
 #org-detail h1,
 #org-review-detail h1{
     background-color: #374e74;
-    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     color: #ffffff;
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 /*#org-detail h1 span,
@@ -1483,7 +1526,10 @@ header {
 #module-form-review h3{
     text-transform: uppercase;
     color: #4b78b9;
-    background: none;        
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    background: none;     
+    font-weight: 600;   
     padding: 5px 5px 0 5px;
     margin: 0;
     margin-bottom: 10px;
@@ -1663,10 +1709,11 @@ header {
 }
 #news-list h1{
     background-color: #374e74;
-    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     color: #ffffff;
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 #news-list h1 span {
@@ -1675,9 +1722,10 @@ header {
     text-transform: uppercase;
 }
 #news-list h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333; /*#3c4249;*/
+    font-size: 1.3em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0 0 5px 0;
     padding: 0 10px 0 5px;
     font-style: italic;
@@ -1740,7 +1788,8 @@ header {
     background: none;
     color: #6c6d70;
     margin: 10px 0 10px 0;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     text-transform: uppercase;
     padding: 0;
     font-weight: 700;
@@ -1815,7 +1864,7 @@ header {
     background-color: #374e74;
     color: #ffffff;
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 #forecast-list h1 span,
@@ -2139,8 +2188,10 @@ header {
 #forecast h1{
     background-color: #374e74;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 #forecast h1.usd{
@@ -2274,12 +2325,13 @@ header {
     margin: 0px;
 }
 #main .related-articles-img p.p-header {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     text-transform: uppercase;    
     color: #ffffff;
     margin: 10px 0 10px 0;
     background-color: #374e74;
-    padding: 10px;
+    padding: 5px 10px;
 }
 #main .related-articles-img ul.related-articles-list {
     margin: 5px 0;
@@ -2300,12 +2352,12 @@ header {
 }
 #main .related-articles-img ul.related-articles-list li img {
     width: 99%;
-    border: 1px solid #374e74;
+    /*border: 1px solid #374e74;*/
 }
 #main .related-articles-img ul.related-articles-list li a{
     color: #3d66ab;    
     text-decoration: underline;
-    font-weight: 700; 
+    font-weight: 500; 
 }
 #main .related-articles-img ul.related-articles-list li a:hover {
     text-decoration: none;
@@ -2414,8 +2466,10 @@ header {
 #feedback h1, #rules h1{
     background-color: #374e74;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     margin: 0 0 10px 0;
-    padding: 10px;    
+    padding: 5px 10px;    
     text-transform: uppercase;
 }
 #feedback h1 span, #rules h1 span {
@@ -2424,9 +2478,10 @@ header {
     text-transform: uppercase;
 }
 #feedback h2, #rules h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333;
+    font-size: 1.3em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0 0 5px 0;
     padding: 0 10px 0 5px;
     font-style: italic;
@@ -2661,7 +2716,9 @@ header {
 #main section.articles h1{    
     background-color: #374e74;
     color: #ffffff;
-    padding: 10px;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    padding: 5px 10px;
     margin: 0 0 10px 0;
     text-transform: uppercase;
 }
@@ -2674,23 +2731,26 @@ header {
 /* Центральная статья
 -----------------------------------------------------------*/
 #main .article-prev {
-    margin: 10px 0 10px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #dfdfdf;
+    margin: 10px 0 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
 }
 #main section.articles .article-prev h1 {
     background: none;
     color: #3c4249;
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.5em;
+    font-family: 'Open Sans Condensed';
+    font-weight: lighter;
     padding: 0;
 }
 #main section.articles .article-prev h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333; /*#3c4249;*/
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0 10px 0 0;
-    padding: 0;
+    padding: 5px 0;
     font-style: italic;
     text-align: right;
 }
@@ -2712,7 +2772,8 @@ header {
     padding-left: 15px;
     text-transform: uppercase; 
     margin-left: 10px;
-    font-weight: 700;
+    font-weight: normal;
+    font-size: 0.9em;
 }
 #main .article-prev .article-prev-info p a:hover {
     text-decoration: none;
@@ -2724,10 +2785,10 @@ header {
 #main .article-prev .article-prev-text p {
     text-indent: 30px;
     text-align: justify;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
 }
 #main .article-prev .article-prev-text img{
-    border: 1px solid navy;
+    /*border: 1px solid navy;*/
 }
 #main .article-prev .article-prev-footer {
     /*border-top: 1px solid #c4e2ff;*/
@@ -2846,10 +2907,11 @@ header {
 }
 #arts-list h1{
     background-color: #374e74;
-    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     color: #ffffff;
     margin: 0 0 10px 0;
-    padding: 10px;    
+    padding: 5px 10px;    
     text-transform: uppercase;
 }
 /*#arts-list h1 span {
@@ -2858,9 +2920,10 @@ header {
     text-transform: uppercase;
 }*/
 #arts-list h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333; /*#3c4249;*/
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0 0 5px 0;
     padding: 0 10px 0 5px;
     font-style: italic;
@@ -2887,19 +2950,22 @@ header {
     margin: 0;
 }
 #arts-list .article-prev {
-    border-top: 4px solid #dfdfdf;/*#c8ceda*/
+    /*border-top: 4px solid #dfdfdf;*/    /*#c8ceda*/
 }
 #arts-list .article-prev h1 {
     background: none;
     color: #3c4249;
     margin: 10px 0 0 0;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    font-weight: lighter;
     padding: 0;
 }
 #arts-list .article-prev h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333; /*#3c4249;*/
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0;
     padding: 0;
     font-style: italic;
@@ -2920,21 +2986,24 @@ header {
     background: none;
     color: #3c4249;
     margin: 10px 0 1px 0;
-    font-size: 1.4em;
+    font-size: 1.5em;
+    font-family: 'Open Sans Condensed';
+    font-weight: lighter;
     text-transform: uppercase;
     padding: 0;
 }
 #article-detail h2 {
-    color: #3c4249;
-    font-size: 1.1em;
-    font-weight: normal;
+    color: #333333; /*#3c4249;*/
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
     margin: 0 10px 0 0;
     padding: 0;
     font-style: italic;
     text-align: right;
 }
 #article-detail .article-info p{
-    margin: 5px 0 15px 0;
+    margin: 5px 0 10px 0;
 }
 #article-detail .article-info p time {    
     color: #6c6d70;    
@@ -2946,7 +3015,8 @@ header {
     padding-left: 15px;
     text-transform: uppercase; 
     margin-left: 10px;
-    font-weight: 700;
+    font-weight: normal;
+    font-size: 0.9em;
 }
 #article-detail .article-info p a:hover {
     text-decoration: none;
@@ -2957,14 +3027,14 @@ header {
 #article-detail .article-text p{
     text-indent: 30px;
     text-align: justify;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
 }
 #article-detail .article-text p.article-author{
     text-indent: 0px;
     text-align: right;
 }
 #article-detail .article-text img{
-    border: 1px solid #4c5a6b;
+    /*border: 1px solid #4c5a6b;*/
 }
 
 /* Комментарии к публикации */
@@ -2977,8 +3047,10 @@ header {
 #article-comments h3 {
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     background-color: #374e74;        
-    padding: 10px;
+    padding: 5px 10px;
     margin: 5px 0 5px 0;
     margin-bottom: 10px;
 }
@@ -2988,6 +3060,7 @@ header {
     padding: 10px;
     position: relative;
     overflow: hidden;
+    line-height: 1.4em;
 }
 #article-comments .comments .item {
     position: relative;
@@ -3005,7 +3078,8 @@ header {
     float: right;
 }
 #article-comments .comment-author {
- color: #5180c4;   
+    color: #3d66ab;/*#5180c4;*/   
+    font-weight: 700;
 }
 #article-comments .comment-date {
     color: #71859d;
@@ -3046,6 +3120,9 @@ header {
 #module-form-comment h3{
     text-transform: uppercase;
     color: #4b78b9;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    font-weight: 600;
     background: none;        
     padding: 5px 5px 0 5px;
     margin: 0;
@@ -3365,10 +3442,11 @@ header {
 }
 #rates-list h1{
     background-color: #374e74;
-    /*background: url(/Content/system/h1_bg.gif) center right repeat-x;*/
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
     color: #ffffff;
     margin: 0 0 5px 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
 }
 #rates-list h1 span {

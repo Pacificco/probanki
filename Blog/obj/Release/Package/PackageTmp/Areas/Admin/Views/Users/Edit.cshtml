@@ -1,0 +1,153 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Domain
+@model Bankiru.Models.Domain.Users.VM_User
+@{
+    ViewBag.Title = Model.Nic + " (" + Model.Rols[0] + ")";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles{
+    @Styles.Render("~/Content/admin/users/css")
+    @Scripts.Render("~/bundles/jqueryui");
+}
+<div class="back-to-list">
+    @Html.ActionLink("Вернуться к списку", "List")
+</div>
+<div id="user-editor">
+
+    @using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)            
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        
+        <div class="stat-block">
+            <h2>Основная информация об аккаунте</h2>
+            <div class="stat-block-body editor-account">
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsActive)
+                    @if (Model.IsActive)
+                    {
+                        <label class="editor-label-green">Активен</label>
+                    }
+                    else
+                    {
+                        <label class="editor-label-red">Не Активен</label>
+                    }
+                    @Html.ValidationMessageFor(model => model.IsActive)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Nic)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Nic)
+                    @Html.ValidationMessageFor(model => model.Nic)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.EmailConfirmed) @Html.LabelFor(model => model.EmailConfirmed)
+                    @Html.ValidationMessageFor(model => model.EmailConfirmed)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsSubscribed) @Html.LabelFor(model => model.IsSubscribed)
+                    @Html.ValidationMessageFor(model => model.IsSubscribed)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.IsBan) @Html.LabelFor(model => model.IsBan)
+                    @Html.ValidationMessageFor(model => model.IsBan)
+                </div>
+                @if (Model.IsBan & Model.BanDate != null)
+                {
+                    <div class="editor-field editor-field-bandate">
+                        Пользователь был забанин: <strong>@(((DateTime)Model.BanDate).ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU")))</strong>
+                    </div>
+                }
+                <div class="editor-field editor-field-regdate">
+                    Зарегистрирован на сайте: <strong>@Model.RegistrationDate.ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU"))</strong>
+                </div>
+                @if (Model.LastVisitDate != null)
+                {
+                    <div class="editor-field editor-field-lastvisitdate">
+                        Последний раз был на сайте: <strong>@(((DateTime)Model.LastVisitDate).ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU")))</strong>
+                    </div>
+                }
+                <div class="editor-field">
+                    Роль: <strong>@Model.Rols[0].ToString()</strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stat-block">
+            <h2>Персональные данные пользователя</h2>
+            <div class="stat-block-body editor-personal-data">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.LastName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.LastName)
+                    @Html.ValidationMessageFor(model => model.LastName)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.FatherName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.FatherName)
+                    @Html.ValidationMessageFor(model => model.FatherName)
+                </div>
+            </div>
+        </div>
+        
+        <div class="stat-block">
+            <h2>Дополнительная информация</h2>
+            <div class="stat-block-body editor-dop-info">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Comment)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Comment)
+                    @Html.ValidationMessageFor(model => model.Comment)
+                </div>
+            </div>
+        </div>
+        
+        <div class="stat-block">            
+            <div class="stat-block-body editor-submit">                
+                <div class="editor-field">
+                    <input type="submit" value="Сохранить изменения" class="button-ok"/>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@Html.Action("_getUserForecastInfoBlock", "Users", new { user_id = Model.Id })
+<div id="user-add-balance-block">
+    @Html.Action("_getUserAddBalanceBlock", "Users", new { user_id = Model.Id })
+</div>
+@Html.Action("_getUserBalanceHistory", "Users", new { user_id = Model.Id })
+
+
+@section scripts{
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            theme: "modern",
+            selector: '#Comment',
+            language: "ru_RU",
+            height: "60",
+            plugins: "image imagetools code link textcolor"
+        });
+    </script>
+}

@@ -1,0 +1,39 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Helpers
+@model Bankiru.Models.Domain.Users.VM_UserProfileInfo
+@*<div class="user-balance-block">
+    <div class="stat-block">*@
+        <h2>Информация о тарифе и статусе пользователя в Клубе аналитиков</h2>
+        @*<div class="stat-block-body">*@
+            @if (Model.TariffInfo.TariffEndDate >= DateTime.Now)
+            {                
+                <p>Текущий тариф: <strong>@UserTariffHelper.GetTariffName(Model.TariffInfo.Tariff)</strong></p>
+                if (@Model.TariffInfo.TariffEndDate == null)
+                { 
+                    <p>Действителен до: <strong>Период не определен!</strong></p>
+                }
+                else
+                {
+                    <p>Действителен до: <strong>@(((DateTime)Model.TariffInfo.TariffEndDate).ToString("dd.MM.yyyy (HH:mm)", CultureInfo.CreateSpecificCulture("ru-RU")))</strong></p>
+                }
+                <p>Последнее поступление средств: <strong>@Model.TariffInfo.Balance руб.</strong></p>
+                <p>В текущем месяце осталось прогнозов: <strong>@Model.GetEnabledForecastsCountForMonth()</strong></p>
+                <p>Всего неиспользованных прогнозов: <strong>@Model.TariffInfo.ForecastTries</strong></p>
+                
+                if (!Model.TariffInfo.IsConfirmed)
+                {
+                    <div class="warning-mes">
+                        <p>ВНИМАНИЕ!</p>
+                        <p>Заявленный Вами тариф еще не оплачен!<br />
+                            На Ваш электронный ящик было отправлено письмо с реквизитами к оплате.
+                        </p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Текущий период не оплачен!</p>
+            }
+        @*</div>*@
+@*    </div>
+</div>*@

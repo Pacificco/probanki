@@ -1,0 +1,29 @@
+﻿@using Bankiru.Models.Domain
+@using Bankiru.Models.Domain.Comments
+@model VM_CommentsFilters
+<div id="comments-filters">
+    @using (Html.BeginForm("List","Comments", FormMethod.Get))
+    {
+        @Html.ValidationSummary(true)        
+        <div class="editor-field editor-field-title">
+            @Html.LabelFor(model => model.CommentText)
+            @Html.EditorFor(model => model.CommentText)
+            @Html.ValidationMessageFor(model => model.CommentText)
+        </div>        
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.IsActive)
+            @Html.Action("_getActiveDropDownList", "Comments", new { selectedId = Model.IsActive, 
+           firstItem = EnumFirstDropDownItem.All, id = "IsActive" })
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.Confirmed)
+            @Html.Action("_getConfirmDropDownList", "Comments", new { selectedId = Model.Confirmed, 
+           firstItem = EnumFirstDropDownItem.All, id = "Confirmed" })
+            @Html.ValidationMessageFor(model => model.Confirmed)
+        </div>
+        <div class="editor-field editor-field-submit">
+            <input type="submit" value="Показать" />
+        </div>        
+    }
+</div>

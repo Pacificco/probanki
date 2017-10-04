@@ -1,0 +1,155 @@
+﻿@using System.Globalization
+@using Bankiru.Models.Helpers
+@using Bankiru.Models.Domain.Articles
+@model VM_Articles
+@{
+    if (Model.CurrentCategory.Id > 0)
+    //{
+    //    ViewBag.metaTitle = Model.CurrentCategory.MetaTitle;
+    //    ViewBag.metaDescription = Model.CurrentCategory.Description;
+    //    ViewBag.metaKeywords = Model.CurrentCategory.MetaKeywords;
+    //    ViewBag.metaRobots = String.Format("{0},{1}",
+    //        Model.CurrentCategory.MetaNoIndex ? "noindex" : "index",
+    //        Model.CurrentCategory.MetaNoFollow ? "nofollow" : "follow");
+    //}
+    //else
+    {
+        //ViewBag.metaTitle = "ProBanki.net - " + @Model.CurrentCategory.Title;
+        ViewBag.metaDescription = "";
+        ViewBag.metaKeywords = "";
+        ViewBag.metaRobots = "index, follow";
+    }
+
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    string desc = String.Empty;
+    string feedBackLink = Html.RouteLink("oбратная связь", "feedback", null, new { title = "Обратная связь" }).ToString();
+    switch (Model.CurrentCategory.Id)
+    {
+        case 1: ViewBag.CurrentMenuItem = "statii";
+            ViewBag.metaTitle = "Статьи экспертов об экономике РФ. Публикация статей по тематике.";
+            ViewBag.metaDescription = "Статьи на новостном портале ProBanki — размышления авторов об экономике и субъектах финансового рынка. Читайте профессиональное мнение простыми словами.";
+            
+            desc = "Размышления авторов об экономике и субъектах финансового рынка.<br />" +
+            "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
+            break;
+        case 2: ViewBag.CurrentMenuItem = "intervju";
+            ViewBag.metaTitle = "Интервью с экспертами об экономике, финансах и банковской сфере.";
+            ViewBag.metaDescription = "Интервью на новостном портале ProBanki — обсуждение юридических услуг, защиты интересов перед банками, микрофинансовыми организациями, коллекторами.";
+            
+            desc = "Наши специалисты беседуют с интересными людьми.";
+            break;
+        case 3: ViewBag.CurrentMenuItem = "mnenija";
+            ViewBag.metaTitle = "Мнения экспертов об экономике РФ. Публикация статей по тематике.";
+            ViewBag.metaDescription = "Мнения экспертов на новостном портале ProBanki по наиболее злободневным и дискуссионным темам. Открытое обсуждение с авторами публикаций.";
+            
+            desc = "Авторы выражают свое мнение по наиболее злободневным и дискуссионным темам.<br />" +
+            "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
+            break;
+        case 7: ViewBag.CurrentMenuItem = "lirika";
+            ViewBag.metaTitle = "Лирика - раздел на новостном портале ProBanki для мнений на разные темы.";
+            ViewBag.metaDescription = "В разделе лирика наши авторы выражают свое мнение о фильмах, книгах, телепередачах и многом другом. Вы также можете разместить статью на нашем сайте.";
+            
+            desc = "В данном разделе наши авторы выражают свое мнение о фильмах, книгах, телепередачах и многом другом.<br />" +
+            "Для размещения на нашем сайте Вашей статьи - отправьте текст на эл.почту в разделе " + feedBackLink + ".";
+            break;
+        case 8: ViewBag.CurrentMenuItem = "revizija";
+            ViewBag.metaTitle = "Ревизии финансовых учреждений проведенные сотрудниками ProBanki.";
+            ViewBag.metaDescription = "В рубрике ревизия, на портале ProBanki, наши эксперты - сотрудники отдела мониторинга, публикуют свое впечатление о посещенных финансовых учреждениях.";
+            
+            desc = "В данном разделе наши эксперты публикуют свое впечатление о посещенных финансовых учреждениях.";
+            break;
+        default:
+            desc = "";
+            ViewBag.CurrentMenuItem = "";
+            break;
+    }
+
+    int n = Model.PagingInfo.GetFirstNumInCurrentPage();
+}
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+@section right_middle
+{
+    @Html.Action("_getModuleLastNews", "Home")
+}
+@if (Model != null)
+{
+    <section id="arts-list">
+        <hgroup>            
+                @if (Model.CurrentCategory.Id > 0)
+                {
+                    <h1>@Model.CurrentCategory.Title</h1>
+                }
+                else
+                {
+                    <h1>Публикации</h1>
+                }            
+            <h2>@Html.Raw(desc)</h2>
+        </hgroup>
+        <div class="art-list-header">
+            <div class="art-list-count">Всего: <span>@Model.PagingInfo.TotalItems</span></div>
+        </div>
+        @if (Model.Items.Count > 0)
+        {
+            <div class="arts">
+
+                @foreach (VM_ArtItem item in Model.Items)
+                {
+                    <article class="article-prev">
+                        <hgroup>
+                            <h1>@item.Title</h1>
+                            @if (!String.IsNullOrEmpty(item.SubTitle))
+                            {
+                                <h2>@item.SubTitle</h2>
+                            }
+                        </hgroup>
+                        <div class="article-prev-info">
+                            <p>
+                                <time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("dd MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time>
+                                @Html.RouteLink(item.Category.Title, "art_items", new { cat_id = item.Category.Alias }, new { title = item.Category.Title })
+                            </p>
+                        </div>
+                        <div class="article-prev-text">
+                            @Html.Raw(item.TextPrev)
+                        </div>
+                        <div class="article-prev-footer">
+                            <div class="article-prev-footer-tab article-prev-footer-tab-readmore">
+                                <div class="article-prev-footer-tab-left"></div>
+                                <div class="read-more">
+                                    @Html.RouteLink("Читать полностью...", "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
+                                </div>
+                                <div class="article-prev-footer-tab-right"></div>
+                            </div>
+                            <div class="article-prev-footer-tab article-prev-footer-tab-comments">
+                                <div class="article-prev-footer-tab-left"></div>
+                                <div class="read-more-comments">
+                                    @Html.RouteLink(String.Format("{0}", item.CommentsInfo.CommentsCount), "art_item", new { art_id = item.Alias, cat_id = item.Category.Alias }, new { title = item.Title })
+                                </div>
+                                <div class="article-prev-footer-tab-right"></div>
+                            </div>
+                        </div>
+                    </article>                                    
+                }
+            </div>
+        }
+        else
+        {
+            <p>В данном разделе еще нет публикаций.</p>
+        }
+        @if (Model.Items.Count > 0)
+        {
+            @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("art_items", new
+       {
+           cat_id = Model.CurrentCategory.Id > 0 ? Model.CurrentCategory.Alias : "",
+           page = x
+       }))
+        }
+    </section>
+}

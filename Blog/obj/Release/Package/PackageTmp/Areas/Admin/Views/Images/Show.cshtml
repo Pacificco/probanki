@@ -1,0 +1,35 @@
+﻿@using Bankiru.Models.Helpers
+@model Bankiru.Models.Domain.Images.VM_ImageFile
+@{
+    ViewBag.Title = "Галерея изображений";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+    string source = @"Images" + Model.FilePath + Model.FileName;
+}
+@section styles{
+    @Styles.Render("~/Content/admin/images/css")
+}
+@section adminTools{
+    <div id="admin-tools">
+        @if (Model == null)
+        {
+            <p class="error">Вы сейчас здесь: <span>путь не определен</span></p>
+        }
+        else
+        {
+            @Html.BreadCrumbsLinks(Model.BreadCrumbs, x => Url.Action("Index", "Images", new { path = x }))
+        }
+    </div>
+}
+<div id="folder-content">
+    @if (Model != null)
+    {        
+        <div id="image-details">
+            <p class="image-name"><strong>\@source</strong></p>
+            <img src="~/@source" title="@Model.FileName" alt="Изображение" />
+        </div>
+    }
+    else
+    {
+        <p class="error">Путь к изображению не определен!</p>
+    }
+</div>

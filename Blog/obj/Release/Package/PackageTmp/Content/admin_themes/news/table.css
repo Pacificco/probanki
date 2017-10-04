@@ -1,0 +1,72 @@
+﻿table.news {
+    width: 980px;
+    border: 2px solid #c8ceda;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.news tr {
+    background: #ffffff;
+}
+table.news tr.evel {
+    background: #f4f5f8;
+}
+table.news td {
+    border-right: 1px solid #c8ceda;
+}
+table.news th {
+    background: #3d3d3d;
+    background: url(/Content/system/bg-dark-strips.gif) top left repeat;
+    color: white;
+    font-weight: normal;
+}
+table.news td.tools, table.news td.published, 
+table.news td.created-at, table.news td.id, 
+table.news td.author{
+    text-align: center;
+}
+table.news th.tools {
+    width: 7%;
+    text-align: center;
+}
+table.news th.published {
+    width: 3%;
+    text-align: center;
+}
+table.news th.author {
+    width: 15%;
+    text-align: center;
+}
+table.news th.title {
+    width: 50%;
+}
+table.news th.created-at {
+    text-align: center;
+    width: 12%;
+}
+table.news th.id {
+    width: 3%;
+    text-align: center;
+}
+table.news td {
+    border-bottom: 1px solid #c8ceda;
+}
+table.news td {
+    padding: 5px;
+}
+table.news th {
+    padding: 8px 4px;
+}
+table.news td a{
+    color: #5280c5;
+    text-decoration: underline; 
+}
+table.news td a:hover{
+    color: #5f88be;
+    text-decoration: none; 
+}
+table.news td.published img {
+    cursor: pointer;
+}
+.news-list table.news img.indicator {
+    display: none;
+}
