@@ -104,18 +104,33 @@ namespace Bankiru.Models.Domain.Debtors
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorId, DBNull.Value);
             else
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorId, (int)filter.DebtorId);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.CourtDecisionTypeId, filter.CourtDecisionType);
+            if(filter.CourtDecisionType == EnumCourtDecisionType.Undefind)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.CourtDecisionTypeId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.CourtDecisionTypeId, (int)filter.CourtDecisionType);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtAmountRange, filter.DebtAmountRange);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtCreatedRange, filter.DebtCreatedRange);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtEssenceTypeId, filter.DebtEssenceType);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorTypeId, filter.DebtorType);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtSellerTypeId, filter.DebtSellerType);
+            if(filter.DebtEssenceType == EnumDebtEssenceType.Undefind)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtEssenceTypeId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtEssenceTypeId, (int)filter.DebtEssenceType);
+            if (filter.DebtorType == EnumDebtorType.Undefind)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorTypeId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorTypeId, (int)filter.DebtorType);
+            if (filter.DebtSellerType == EnumDebtSellerType.Undefind)
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtSellerTypeId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtSellerTypeId, filter.DebtSellerType);
             if(filter.RegionId == null)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.RegionId, DBNull.Value);
             else
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.RegionId, (Guid)filter.RegionId);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.SalePriceRange, filter.SalePriceRange);
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.OriginalCreditorTypeId, filter.OriginalCreditorType);
+            if (filter.OriginalCreditorType == EnumOriginalCreditorType.Undefind)
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.OriginalCreditorTypeId, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.OriginalCreditorTypeId, (int)filter.OriginalCreditorType);
 
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.RecFrom, recNoFrom);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.RecTo, recNoTo);
@@ -161,6 +176,13 @@ namespace Bankiru.Models.Domain.Debtors
                                 d.Comment = reader.GetString(reader.GetOrdinal("Comment"));
                                 d.CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"));
                                 d.UpdatedAt = reader.GetDateTime(reader.GetOrdinal("UpdatedAt"));
+
+                                d.RegionName = reader.GetString(reader.GetOrdinal("RegionName"));
+                                d.DebtorTypeName = reader.GetString(reader.GetOrdinal("DebtorTypeName"));
+                                d.OriginalCreditorTypeName = reader.GetString(reader.GetOrdinal("OriginalCreditorTypeName"));
+                                d.CourtDecisionTypeName = reader.GetString(reader.GetOrdinal("CourtDecisionTypeName"));
+                                d.DebtSellerTypeName = reader.GetString(reader.GetOrdinal("DebtSellerTypeName"));
+                                d.DebtEssenceTypeName = reader.GetString(reader.GetOrdinal("DebtEssenceTypeName"));
                                 debtors.Add(d);
                             }
                         }

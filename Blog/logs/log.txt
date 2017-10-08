@@ -16670,3 +16670,203 @@ ClientConnectionId:b98abafe-c7bf-48f6-b2da-2a4753061f21
 ERROR 2017-10-04 23:18:15,441 28842ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
 ERROR 2017-10-04 23:18:16,398 29799ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
 ERROR 2017-10-04 23:18:16,402 29803ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:45:53,481 50354ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:45:54,032 50904ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:45:54,036 50908ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:46:32,228 89101ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:46:32,246 89119ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:46:32,257 89130ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:47:30,530 147403ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:47:30,536 147409ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:47:30,541 147414ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:07,118 24830ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:07,987 25699ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:07,991 25703ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:48,346 66057ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:48,351 66062ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:51:48,356 66067ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:52:34,426 20791ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:52:35,341 21706ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:52:35,345 21710ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:55:56,220 222584ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:55:56,249 222613ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:55:56,259 222623ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:56:09,156 235520ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:56:09,176 235540ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:56:09,186 235550ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:57:54,029 340393ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:57:54,044 340408ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:57:54,050 340414ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:59:24,968 431332ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:59:24,986 431350ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 20:59:24,994 431358ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 21:00:29,240 495604ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 21:00:29,258 495622ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-05 21:00:29,264 495628ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-07 17:53:16,978 57159ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-07 17:55:10,777  1435ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-07 17:56:54,811 13940ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-07 17:58:16,858 95987ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-07 18:00:54,953  8570ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 16:29:19,661  1728ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:29:19,825  1892ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:29:20,990  3057ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:29:21,068  3135ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:32:04,717   421ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:32:04,804   508ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:34:27,575   351ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:34:27,692   468ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:40:59,708   361ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:40:59,831   484ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:50:58,075   396ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:50:58,164   485ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:50:59,280  1601ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 16:50:59,354  1675ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:09:29,413   387ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:09:29,505   479ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:17:42,355   407ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:17:42,460   512ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:19:20,103   411ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:19:20,191   499ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:28:50,556   365ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 17:28:50,645   454ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:13:50,676   366ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:13:50,824   514ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:31:46,762   400ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:31:46,857   495ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:34:54,884   349ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:34:55,002   467ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:49:16,423   382ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 18:49:16,656   615ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 19:04:14,945   355ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 19:04:15,080   490ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:46:56,231   388ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:46:56,345   502ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:47:00,466   329ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:47:00,561   424ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:49:51,034   454ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:49:51,123   543ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:52:55,217   365ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:52:55,305   453ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:52:59,197   301ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:52:59,311   415ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:55:51,450   398ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:55:51,556   504ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:08,351   322ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:08,439   410ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:49,211   348ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:49,326   463ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:50,371  1508ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:57:50,448  1585ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:58:03,275  1185ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:58:03,371  1281ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:58:04,421  2331ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:58:04,499  2409ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:59:14,322  1274ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:59:14,409  1361ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:59:43,755   336ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 21:59:43,844   425ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:03:03,260 199841ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 22:03:21,730   359ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:03:21,853   482ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:03:22,930  1559ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:03:23,006  1635ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:03:23,177  1806ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 22:12:58,460   354ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:12:58,579   473ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:12:59,428  1322ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 22:13:00,539  2433ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 22:13:53,245 55139ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-08 22:20:47,102   366ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:20:47,236   500ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:20:51,443   365ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:20:51,529   451ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:24:24,729   348ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:24:24,876   495ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:28:20,895   354ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:28:20,985   444ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:28:22,020  1479ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:28:22,096  1555ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:29:59,218   325ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:29:59,306   413ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:34:01,867   336ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:34:01,957   426ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-08 22:34:03,193  1662ms BaseController         Http404            - NotFound - http://localhost:9461/debtors

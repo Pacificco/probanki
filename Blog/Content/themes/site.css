@@ -698,10 +698,13 @@ header {
     background-color: white;
     z-index: -1;
 }
+#wrapper .wrapper2-2columns{
+    width: 100%;
+}
 
 /* Центральная и левая колонка
 -----------------------------------------------------------*/
-#column-middle-left {
+#column-middle-left{
     position: relative;
     float: left;
     margin: 0;
@@ -709,7 +712,14 @@ header {
     padding: 0;
     background-color: #ffffff;
 }
-
+#wrapper .column-middle-2columns {
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #ffffff;
+}
 /* Левая колонка
 -----------------------------------------------------------*/
 #column-left {
@@ -720,6 +730,11 @@ header {
     padding: 0;
     background: none;
     /*background: url(/Content/system/left_column_bg.jpg) top right repeat-y;*/
+}
+#wrapper .column-left-2columns{
+    width: 19.5%;
+    float: none;
+    overflow: hidden;
 }
 #column-left-top {
     position: absolute;
@@ -912,6 +927,10 @@ header {
     padding: 0;
     background: none;
     overflow:hidden;
+}
+
+#wrapper .column-main-2columns{
+    width: 80.5%;
 }
 
 /* Правая колонка
@@ -3453,4 +3472,67 @@ header {
     background: white;
     padding: 0 8px 0 0;
     text-transform: uppercase;
+}
+
+
+/* Биржа должников
+-----------------------------------------------------------*/
+#debtors-page {
+    padding: 10px 20px;
+    position: relative;    
+    overflow: hidden;
+}
+#debtors-page h1{
+    background-color: #374e74;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 5px 10px;    
+    text-transform: uppercase;
+}
+#debtors-page h2 {
+    color: #333333; 
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+#wrapper-debtors-list {
+    overflow: hidden;
+}
+#debtors-list-loading {
+    display: none;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 99;
+}
+#debtors-list {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+#debtors-list tr {
+    display: table-row;
+}
+#debtors-list th,
+#debtors-list td {
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+    margin: 0;
+    text-align: center;
+}
+#debtors-list th {
+    font-size: 0.9em;
+}
+#debtors-list td span.read-more {    
+    border-bottom: 1px dotted navy;
 }

@@ -1,0 +1,25 @@
+﻿@using Bankiru.Models.Domain.Other
+@using Bankiru.Models.Domain
+@model VM_StringDropDown
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = Model.FirstItem == EnumFirstDropDownItem.All ? "За весь период" : "Не задан",
+        Value = "0",
+        Selected = Model.SelectedId == 0 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "за месяц",
+        Value = "1",
+        Selected = Model.SelectedId == 1 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "за год",
+        Value = "2",
+        Selected = Model.SelectedId == 2 ? true : false
+    });
+}
+@Html.DropDownList(Model.Name, _items)

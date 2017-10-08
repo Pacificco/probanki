@@ -224,7 +224,7 @@ namespace Bankiru
             routes.MapRoute(
                 name: "debtors",
                 url: "debtors",
-                defaults: new { controller = "Debtors", action = "List" },
+                defaults: new { controller = "Debtors", action = "Index" },
                 namespaces: new[] { "Bankiru.Controllers" }
             );
             #endregion

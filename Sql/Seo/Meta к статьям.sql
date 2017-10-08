@@ -1,0 +1,2 @@
+select a.Id as Id, 'http://probanki.net/publikacii/' + cat.Alias + '/' + a.Alias as 'Url', a.MetaTitle as 'Title', a.MetaDesc as 'Descriptions', a.MetaKeys as 'Keys'
+from Articles a join Categories cat on a.CategoryId = cat.Id

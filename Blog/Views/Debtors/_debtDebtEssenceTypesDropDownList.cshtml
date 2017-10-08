@@ -1,0 +1,36 @@
+﻿@using Bankiru.Models.Domain.Other
+@model VM_StringDropDown
+@{
+    List<SelectListItem> _items = new List<SelectListItem>();
+    _items.Add(new SelectListItem()
+    {
+        Text = "Любая",
+        Value = "0",
+        Selected = Model.SelectedId == 0 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Банковский кредит",
+        Value = "1",
+        Selected = Model.SelectedId == 1 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Займ МФО",
+        Value = "2",
+        Selected = Model.SelectedId == 2 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Частный долг",
+        Value = "3",
+        Selected = Model.SelectedId == 3 ? true : false
+    });
+    _items.Add(new SelectListItem()
+    {
+        Text = "Прочее",
+        Value = "4",
+        Selected = Model.SelectedId == 4 ? true : false
+    });
+}
+@Html.DropDownList(Model.Name, _items)

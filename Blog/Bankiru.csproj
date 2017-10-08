@@ -195,6 +195,8 @@
     <Compile Include="Models\Domain\Other\VM_DropDownTariffPeriod.cs" />
     <Compile Include="Models\Domain\Other\VM_MenuItem.cs" />
     <Compile Include="Models\Domain\Other\VM_DropDownArchive.cs" />
+    <Compile Include="Models\Domain\Other\VM_StringDropDown.cs" />
+    <Compile Include="Models\Domain\Other\VM_BoolDropDown.cs" />
     <Compile Include="Models\Domain\Users\VM_User.cs" />
     <Compile Include="Models\Domain\Account\VM_UserChangePassword.cs" />
     <Compile Include="Models\Domain\Account\VM_UserEmailConfirmed.cs" />
@@ -754,9 +756,21 @@
     <Content Include="Views\Forecast\_moduleLastForecastWinners.cshtml" />
     <Content Include="Views\Users\_userTariffRequestsHistoryBlock.cshtml" />
     <Content Include="Views\Error\InternalError.cshtml" />
-    <Content Include="Views\Debtors\List.cshtml" />
-    <Content Include="Views\Debtors\Debtor.cshtml" />
+    <Content Include="Views\Debtors\_moduleDebtorForm.cshtml" />
+    <Content Include="Views\Debtors\_moduleDebtorDetails.cshtml" />
     <Content Include="Views\Debtors\_moduleDebtorsList.cshtml" />
+    <Content Include="Views\Debtors\Index.cshtml" />
+    <Content Include="Views\Debtors\_moduleDebtorsFilter.cshtml" />
+    <Content Include="Views\Shared\Master_2.cshtml" />
+    <Content Include="Views\Debtors\_debtDebtorTypesDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtOriginalCreditorTypesDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtCourtDecisionTypesDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtDebtSellerTypesDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtDebtEssenceTypesDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtDebtCreatedRangeDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtDebtAmountRangeDropDownList.cshtml" />
+    <Content Include="Views\Debtors\_debtSalePriceRangeDropDownList.cshtml" />
+    <Content Include="Views\Shared\_regionsDropDownList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

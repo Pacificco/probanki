@@ -1,14 +1,16 @@
 ﻿@using Bankiru.Models.Domain.Debtors
+@using Bankiru.Models.Helpers
 @using System.Globalization
-@model List<VM_Debtor>
+@model VM_Debtors
 
 @{
     CultureInfo _cultureInfo = new CultureInfo("ru-RU");
     _cultureInfo.NumberFormat.NumberGroupSeparator = " ";
     _cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
+    _cultureInfo.NumberFormat.NumberDecimalDigits = 2;
 }
 
-@if (Model != null && Model.Count > 0)
+@if (Model != null && Model.Items.Count > 0)
 {
     <table id="debtors-list">
         <tr>
@@ -18,6 +20,7 @@
             <th class="th-debt-created-date">Дата образования долга</th>
             <th class="th-debt-amount">Сумма долга</th>
             <th class="th-sale-price">Цена продажи</th>
+            <th class="th-read-more"></th>
         </tr>
 
 
@@ -25,24 +28,26 @@
     {
             <tr>
                 <td>@item.RegionName</td>
-                <td><time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("MMM yyyy", _cultureInfo)</time></td>
+                <td><time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("MMMM yyyy", _cultureInfo)</time></td>
                 <td>@item.DebtorTypeName</td>
-                <td><time pubdate datetime="@item.DebtCreatedDate.ToString()">@item.DebtCreatedDate.ToString("MMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time></td>
-                <td>@item.DebtAmount.ToString(_cultureInfo)</td>
-                <td>@item.SalePrice.ToString(_cultureInfo)</td>
+                <td><time pubdate datetime="@item.DebtCreatedDate.ToString()">@item.DebtCreatedDate.ToString("MMMM yyyy", CultureInfo.CreateSpecificCulture("ru-RU"))</time></td>
+                <td>@item.DebtAmount.ToString("C2",_cultureInfo)</td>
+                <td>@item.SalePrice.ToString("C2",_cultureInfo)</td>
+                <td><span class="read-more">Подробнее</span></td>
             </tr>
                 }
     </table>
         }
         else
         {
-    <p>В данном разделе еще нет публикаций.</p>
+    <p>Должников не найдено!</p>
         }
 
 @if (Model.Items.Count > 0)
-        {
-    @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("art_items", new
+{
+    @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("debtors", new
        {
-           cat_id = Model.CurrentCategory.Id > 0 ? Model.CurrentCategory.Alias : "",
+           filter = Model.Filters,
            page = x
-       }))    
+       }))
+        }  
