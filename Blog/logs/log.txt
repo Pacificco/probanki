@@ -16870,3 +16870,746 @@ ERROR 2017-10-08 22:34:01,867   336ms ChartDownloader        _loadQuotes        
 ERROR 2017-10-08 22:34:01,957   426ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
 Не удалось загрузить данные
 ERROR 2017-10-08 22:34:03,193  1662ms BaseController         Http404            - NotFound - http://localhost:9461/debtors
+ERROR 2017-10-09 12:42:58,776   910ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:42:58,925  1059ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:43:00,164  2298ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:43:00,248  2382ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:43:15,471  1352ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:43:15,617  1498ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:47:27,956 253837ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-09 12:47:27,956 253837ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-09 12:47:27,957 253838ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-09 12:47:27,957 253838ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-09 12:47:27,958 253839ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-09 12:47:31,611 257492ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-09 12:47:31,612 257493ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-09 12:47:31,612 257493ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-09 13:47:27,643 3853524ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-09 13:47:27,644 3853525ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-09 14:17:27,643 5653524ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-09 14:17:27,644 5653525ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-11 11:03:25,108 48694289ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-11 11:03:25,162 48694343ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-11 11:33:25,098 50494279ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-11 11:33:25,099 50494280ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-11 11:33:25,388 50494569ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-11 11:33:25,390 50494571ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-11 11:33:25,391 50494572ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-11 11:33:29,113 50498294ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-11 11:33:29,114 50498295ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-11 11:33:29,114 50498295ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-13 22:35:35,246 425299ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:35,681 425734ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:35,687 425740ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:35,693 425746ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:35,703 425756ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:46,257 436310ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:46,267 436320ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:46,278 436331ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:46,289 436342ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:46,296 436349ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:47,460 437514ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:47,470 437524ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:47,479 437533ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:47,489 437543ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:35:47,495 437549ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:36:02,362 452415ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:36:02,371 452424ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:36:02,378 452431ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:36:02,387 452440ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-13 22:36:02,393 452446ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-15 04:28:39,205 108009258ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 04:28:39,360 108009413ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 06:28:39,193 115209246ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 06:28:39,272 115209325ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 08:28:39,218 122409271ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 08:28:39,312 122409365ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 10:28:39,197 129609250ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 10:28:39,300 129609353ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 12:28:39,217 136809271ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 12:28:39,329 136809383ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 14:28:39,228 144009281ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 14:28:39,361 144009414ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 16:28:39,232 151209285ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 16:28:39,330 151209383ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 18:28:39,231 158409284ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 18:28:39,462 158409515ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 20:28:39,294 165609347ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 20:28:39,731 165609784ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-15 22:28:39,300 172809354ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-15 22:28:39,410 172809464ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 00:28:39,337 180009390ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 00:28:39,759 180009813ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 02:28:39,305 187209358ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 02:28:39,407 187209460ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 04:28:39,640 194409694ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 04:28:39,781 194409835ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 06:28:46,644 201616697ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 06:28:46,763 201616816ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 08:28:39,292 208809345ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 08:28:39,400 208809453ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 10:28:39,320 216009373ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 10:28:39,425 216009478ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 15:28:44,516 234014569ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-16 15:28:44,719 234014772ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-16 20:00:19,920 107158ms CurrenciesDownloader   LoadCurrencies     - Ошибка во время загрузки курсов валют!
+System.InvalidOperationException: В документе XML (160, 11) присутствует ошибка. ---> System.Net.WebException: Запрос был прерван: Запрос отменен.
+   в System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.Xml.XmlTextReaderImpl.ReadData()
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadString()
+   в System.Xml.XmlTextReader.ReadString()
+   в System.Xml.XmlReader.ReadElementString()
+   в Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderXML_Answer.Read2_XML_CurrencyItem(Boolean isNullable, Boolean checkType)
+   в Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderXML_Answer.Read3_XML_Answer(Boolean isNullable, Boolean checkType)
+   в Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderXML_Answer.Read4_ValCurs()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   в System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   в Bankiru.Models.OutApi.CurrenciesDownloader.LoadCurrencies(Object obj) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CurrenciesDownloader.cs:строка 49
+ERROR 2017-10-16 20:00:19,933 107171ms ChartManager           dQuotesDataFromCBR - System.InvalidOperationException: В документе XML (4, 11) присутствует ошибка. ---> System.Net.WebException: Запрос был прерван: Соединение было неожиданно закрыто.
+   в System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.Xml.XmlTextReaderImpl.ReadData()
+   в System.Xml.XmlTextReaderImpl.EatWhitespaces(StringBuilder sb)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Xml.Serialization.XmlSerializationReader.ReadEndElement()
+   в Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderXML_CBRAnswer.Read3_XML_CBRAnswer(Boolean isNullable, Boolean checkType)
+   в Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderXML_CBRAnswer.Read4_ValCurs()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   в System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromCBR(String subject, Nullable`1 requestDate) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 216
+ERROR 2017-10-16 20:00:19,942 107180ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:00:20,388 107626ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:00:23,240 110478ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:00:23,264 110502ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:00:23,278 110516ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:00:23,287 110525ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:12:33,208 147767ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.Dictionary`2.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 51
+ERROR 2017-10-16 20:12:33,226 147785ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:12:34,033 148592ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:12:34,143 148702ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:12:34,150 148709ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:12:34,156 148715ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:15:48,045 59134ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 53
+ERROR 2017-10-16 20:15:48,059 59148ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:15:48,812 59901ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:15:48,825 59914ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:15:48,831 59920ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:15:48,836 59925ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:16:26,293 97382ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 53
+ERROR 2017-10-16 20:16:26,295 97384ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:16:26,303 97392ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:16:26,318 97407ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:16:26,324 97413ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:16:26,328 97417ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:17:20,786 151875ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 53
+ERROR 2017-10-16 20:17:20,788 151877ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:25:34,113 645202ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:25:34,135 645224ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:25:34,142 645231ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:25:34,147 645236ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:27:19,313   426ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:27:19,801   914ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:27:21,900  3012ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:27:21,915  3027ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:27:21,929  3041ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:27:21,938  3050ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:28:15,240 47300ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor, Int32 page) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:28:15,253 47313ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:28:15,575 47635ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:28:15,630 47690ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:28:15,636 47696ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:28:15,640 47700ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:08,704   474ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:30:09,163   933ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:09,533  1303ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:30:09,732  1502ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:10,537  2307ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:30:10,941  2711ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,123  2893ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,123  2893ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,123  2893ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,138  2908ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,138  2908ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,138  2908ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,152  2922ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,152  2922ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,152  2922ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,160  2930ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,160  2930ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,160  2930ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,575  3345ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:30:11,577  3347ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,582  3352ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,588  3358ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,594  3364ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:30:11,599  3369ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:34:55,411  1211ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-16 20:34:55,421  1221ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:34:55,451  1251ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-16 20:34:55,451  1251ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:36:12,331 65425ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:36:12,345 65439ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:13,135 66229ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:13,218 66312ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:13,226 66320ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:13,231 66325ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:47,462 100556ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:36:48,934 102028ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:48,945 102039ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:48,962 102056ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:48,968 102062ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:48,973 102067ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:52,244 105339ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:36:53,389 106484ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:53,395 106490ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:53,408 106503ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:53,414 106509ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:36:53,418 106513ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:42,593 215688ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:38:44,443 217537ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:44,473 217567ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:44,488 217582ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:44,495 217589ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:44,501 217595ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:45,116 218210ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:38:45,118 218212ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:45,124 218218ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:45,136 218230ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:45,143 218237ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:45,147 218241ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:38:56,889 229984ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-16 20:38:56,896 229991ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-16 20:38:56,896 229991ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:38:56,897 229992ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-16 20:38:56,897 229992ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-16 20:39:11,167 244261ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-16 20:39:11,167 244261ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-16 20:39:11,167 244261ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:39:23,190 256284ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-16 20:39:23,191 256285ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-10-16 20:48:07,539 780633ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:48:07,541 780635ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:48:07,551 780645ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:48:07,565 780659ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:48:07,572 780666ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:48:07,577 780671ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:49:52,298 885392ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:49:52,322 885416ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:49:52,332 885426ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:49:52,346 885440ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:49:52,352 885446ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:49:52,357 885451ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:10,401  4197ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:56:11,866  5661ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:56:12,278  6073ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:12,278  6073ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,449  9244ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,449  9244ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,480  9275ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,480  9275ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,494  9289ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,494  9289ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,503  9298ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:15,503  9298ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:17,328 11123ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:56:17,331 11126ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:17,339 11134ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:17,352 11147ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:17,358 11153ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:56:17,363 11158ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:57:36,494 90290ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:57:38,012 91808ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:57:38,026 91822ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:57:38,115 91911ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:57:38,124 91920ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:57:38,129 91925ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:59:25,478 199273ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 20:59:25,481 199276ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:59:25,497 199292ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:59:25,511 199306ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:59:25,518 199313ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 20:59:25,523 199318ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:15:58,019   466ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:15:58,413   860ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:16:00,497  2944ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:16:00,511  2958ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:16:00,523  2970ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:16:00,532  2979ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:23:24,872 447318ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:23:24,875 447321ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:23:24,889 447335ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:23:24,898 447344ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:23:24,905 447351ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:23:24,910 447356ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:25:15,744 45378ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:25:19,987 49621ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:25:25,288 54922ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:25:35,793 65427ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:25:41,689 71323ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:25:45,592 75226ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:38:12,985 822619ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:38:15,409 825043ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:38:15,422 825056ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:38:15,439 825073ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:38:15,447 825081ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:38:15,453 825087ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:39:48,428 918062ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:39:49,130 918764ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:39:49,149 918783ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:39:49,171 918805ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:39:49,178 918812ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:39:49,184 918818ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:41:31,849   560ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:41:32,270   981ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:41:34,159  2870ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:41:34,174  2885ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:41:34,187  2898ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:41:34,195  2906ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:45:31,375 167359ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:47:52,221 308205ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:47:52,853 308837ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:47:52,861 308845ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:47:52,867 308851ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:47:52,872 308856ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:04,842 42139ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:50:08,148 45444ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:16,383 53680ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:16,409 53706ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:16,416 53713ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:16,422 53719ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:50:54,638 91935ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 21:51:41,985 139281ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:51:41,998 139294ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:51:42,006 139302ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:51:42,014 139310ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 21:51:42,066 139362ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:01:45,148 523256ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 22:01:55,188 533296ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:01:56,010 534118ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:01:56,074 534182ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:01:56,089 534197ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:01:56,098 534206ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:03:10,802 608910ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 22:03:21,751 619859ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:03:24,433 622541ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:03:24,459 622567ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:03:24,472 622580ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:03:24,479 622587ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:05:26,791 744899ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 55
+ERROR 2017-10-16 22:15:43,026 1361134ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:15:43,053 1361161ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:15:43,074 1361182ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:15:43,085 1361193ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:15:43,093 1361201ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:20:59,332 190051ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 63
+ERROR 2017-10-16 22:23:20,927 331645ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:23:21,315 332033ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:23:21,322 332040ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:23:21,329 332047ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:23:21,334 332052ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:24:55,533 77848ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 63
+ERROR 2017-10-16 22:25:11,650 93965ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:25:12,045 94360ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:25:12,050 94365ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:25:12,055 94370ms BaseController         Http404            - NotFound - http://localhost:9461/Debtors/Debtor
+ERROR 2017-10-16 22:26:31,895 47538ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 63
+ERROR 2017-10-16 22:28:00,547 136190ms BaseController         Debtor             - System.InvalidOperationException: Коллекция была изменена; невозможно выполнить операцию перечисления.
+   в System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   в System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   в System.Collections.Generic.List`1.Enumerator.MoveNext()
+   в Bankiru.Controllers.DebtorsController.Debtor(VM_Debtor debtor) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Controllers\DebtorsController.cs:строка 63
+ERROR 2017-10-17 10:28:37,853 43204656ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-17 10:28:37,892 43204695ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-17 10:28:37,944 43204747ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-17 10:28:37,960 43204763ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-17 10:28:37,961 43204764ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-17 10:28:41,615 43208418ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-17 10:28:41,615 43208418ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-17 10:28:41,615 43208418ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-17 11:28:37,840 46804643ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-17 11:28:37,841 46804644ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-17 14:28:37,794 57604597ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-17 14:28:37,795 57604598ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-17 14:28:37,803 57604606ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-17 14:28:37,804 57604607ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-17 14:28:37,805 57604608ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-17 14:28:41,478 57608282ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-10-17 14:28:41,479 57608283ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-10-17 14:28:41,480 57608284ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-17 15:58:37,790 63004593ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-17 15:58:37,791 63004594ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-17 21:24:55,790 100546ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsEdit" ожидает параметр "@Locality", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:c6d7273a-aadb-4460-95ff-4aa8d2c576a8
+ERROR 2017-10-17 21:54:37,896   358ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных bigint к int.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:8136e3de-4c77-4ae6-98f2-18a363e9ca44
+ERROR 2017-10-17 21:55:35,698 58160ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных bigint к int.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:8136e3de-4c77-4ae6-98f2-18a363e9ca44
+ERROR 2017-10-17 21:56:24,293   325ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных bigint к int.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:7220ec74-f2cb-4d8c-a82b-09b501a0c937
+ERROR 2017-10-17 21:56:24,418   450ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных bigint к int.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:7220ec74-f2cb-4d8c-a82b-09b501a0c937
+ERROR 2017-10-17 21:57:11,433 47464ms DebtorsManager         EditDebtor         - Ошибка во время создания/обновления должника в базе данных DebtorsEdit!
+System.Data.SqlClient.SqlException (0x80131904): Ошибка при преобразовании типа данных bigint к int.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager.EditDebtor(Debtor debtor, Int32 operation) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 248
+ClientConnectionId:7220ec74-f2cb-4d8c-a82b-09b501a0c937
+ERROR 2017-10-18 10:26:28,228 45004260ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-18 10:26:28,285 45004317ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-18 12:56:28,141 54004172ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-18 12:56:28,142 54004173ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-18 14:56:28,127 61204158ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-18 14:56:28,127 61204158ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-19 15:50:13,410 63004229ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-10-19 15:50:13,502 63004321ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!

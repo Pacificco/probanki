@@ -166,6 +166,7 @@ input.button-ok{
     -webkit-border-radius: 3px;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 1.2em;
 }
 input.button-ok:hover{
     background-color: #10bcfc;
@@ -208,7 +209,7 @@ input.button-ok:hover{
 
 /* Сообщения
 -----------------------------------------------------------*/
-#error-title {
+.error-title {
     background-color: #ffc7c7;
     border: dashed 1px maroon;
     color: red;
@@ -219,7 +220,7 @@ input.button-ok:hover{
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-#warning-title {
+.warning-title {
     background-color: #ffdcbb;
     border: dashed 1px #dc7505;
     color: black;
@@ -230,7 +231,7 @@ input.button-ok:hover{
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-#info-title {
+.info-title {
     background-color: #dcf8ff;
     border: dashed 1px navy;
     color: navy;
@@ -697,10 +698,13 @@ header {
     background-color: white;
     z-index: -1;
 }
+#wrapper .wrapper2-2columns{
+    width: 100%;
+}
 
 /* Центральная и левая колонка
 -----------------------------------------------------------*/
-#column-middle-left {
+#column-middle-left{
     position: relative;
     float: left;
     margin: 0;
@@ -708,7 +712,14 @@ header {
     padding: 0;
     background-color: #ffffff;
 }
-
+#wrapper .column-middle-2columns {
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #ffffff;
+}
 /* Левая колонка
 -----------------------------------------------------------*/
 #column-left {
@@ -719,6 +730,11 @@ header {
     padding: 0;
     background: none;
     /*background: url(/Content/system/left_column_bg.jpg) top right repeat-y;*/
+}
+#wrapper .column-left-2columns{
+    width: 19.5%;
+    float: none;
+    overflow: hidden;
 }
 #column-left-top {
     position: absolute;
@@ -911,6 +927,10 @@ header {
     padding: 0;
     background: none;
     overflow:hidden;
+}
+
+#wrapper .column-main-2columns{
+    width: 80.5%;
 }
 
 /* Правая колонка
@@ -3452,4 +3472,275 @@ header {
     background: white;
     padding: 0 8px 0 0;
     text-transform: uppercase;
+}
+
+
+/* Биржа должников
+-----------------------------------------------------------*/
+#debtors-page {
+    padding: 10px 20px;
+    position: relative;    
+    overflow: hidden;
+}
+#debtors-page h1{
+    background-color: #374e74;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 5px 10px;    
+    text-transform: uppercase;
+}
+#debtors-page h2 {
+    color: #333333; 
+    font-size: 0.9em;
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
+}
+
+/* Фильтр должников
+-----------------------------------------------------------*/
+#debtor-filter{
+    clear: both;
+    float:left;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#debtor-filter .editor-field{
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+#debtor-filter input[type=text],
+#debtor-filter select{     
+     border: 1px solid #c9d3df;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#debtor-filter .editor-field label {
+     font-size: 0.8em;
+     display: block;
+     padding: 0 0 5px 0;
+     color: #5d5d5d;
+}
+#debtor-filter .editor-field-region select{
+     width: 200px;
+}
+#debtor-filter .editor-field-created-range select{
+     width: 180px;
+}
+#debtor-filter input[type=submit] {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+/* Список должников
+-----------------------------------------------------------*/
+#wrapper-debtors-list {
+    clear: both;
+    /*float:left;
+    position: relative;*/
+    margin-top: 20px;
+}
+#wrapper-debtors-list {
+    overflow: hidden;
+}
+#debtors-list-loading {
+    display: none;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 99;
+}
+#debtors-list {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+#debtors-list tr {
+    display: table-row;
+}
+#debtors-list th,
+#debtors-list td {
+    padding: 10px 5px;
+    border-bottom: 1px solid #c9d3df;
+    margin: 0;
+    text-align: center;
+}
+#debtors-list th {
+    font-size: 0.9em;
+}
+#debtors-list td a.read-more {    
+    border-bottom: 1px dotted navy;
+    cursor: pointer;
+    text-decoration: none;
+}
+#debtors-list td a.read-more:hover {    
+    border-bottom: none;
+    color: #3d66ab;
+}
+
+/* Детали должника
+-----------------------------------------------------------*/
+#debtors-list .debtor-details {    
+    border-left: 8px solid #00aded;
+    display: none;
+}
+#debtors-list .left-column {
+    float: left;
+    width: 48%;
+    text-align: left;    
+}
+#debtors-list .section-header {
+    padding: 6px 10px;
+    background-color: #c9d3df;    
+    overflow: hidden;
+    position: relative;
+    clear: both;
+}
+#debtors-list .section-header span{
+    font-weight: bold;
+}
+#debtors-list .debtor-info{
+    padding: 3%;
+    color: #2c2c2c;
+    float:left;
+    width: 94%;
+}
+#debtors-list .debtor-info div {
+    clear: both;    
+    background: url(/Content/system/dot-gray.gif) bottom left repeat-x;
+    position:relative;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+#debtors-list .debtor-info div.clear {
+    background: none;    
+    height: 10px;
+}
+#debtors-list .debtor-info .field-name {
+    float:left;    
+    background-color: white;
+    padding-right: 5px;
+}
+#debtors-list .debtor-info .field-value {
+    float:right;    
+    display: block;
+    background-color: white;
+    padding-left: 3px;
+}
+#debtors-list .debtor-info .sale-price{
+    font-weight: bold;
+}
+#debtors-list .right-column {
+    float: right;
+    width: 48%;
+    text-align: left;
+}
+#debtors-list .debtor-contacts{
+    padding: 3%;
+    color: #2c2c2c;
+    float:left;
+    width: 94%;
+    overflow: hidden;
+    position: relative;
+    clear: both;
+}
+#debtors-list .debtor-contacts div{
+    float:left;
+    width: 50%;
+    padding-bottom: 10px;
+}
+#debtors-list .debtor-contacts div span{
+    font-weight: bold;
+}
+#debtors-list .debtor-comment {
+    padding: 3%;
+    color: #2c2c2c;
+    float:left;
+    width: 94%;    
+    position: relative;
+    clear: both;
+}
+
+/* Форма создания должников
+-----------------------------------------------------------*/
+#wrapper-debtor-form {
+    clear: both;
+    float:left;
+    position: relative;
+}
+#debtor-form {
+    width: 926px;
+}
+#form-debtor td{
+    width: 33.3%;
+    vertical-align: top;
+    padding: 2px;
+}
+#form-debtor .editor-field{
+    margin: 0;
+    padding: 5px;
+    float: left;
+}
+#form-debtor select,
+#form-debtor input{
+    margin: 0;
+    padding: 3px 5px;
+}
+#form-debtor .editor-field label {
+     font-size: 0.8em;
+     display: block;
+     padding: 0 0 5px 0;
+     color: #5d5d5d;
+}
+#form-debtor .editor-field label:after {
+    content: ' *'
+}
+#form-debtor select{
+     width: 280px;
+     border: 1px solid #c9d3df;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#form-debtor input[type=text],
+#form-debtor input[type=date],
+#form-debtor textarea{
+     width: 270px;
+     border: 1px solid #c9d3df;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#form-debtor #AgreementAccept {
+    width: 20px;
+}
+#form-debtor #CaptchaCode {
+    width: 130px;
+}
+#form-debtor .editor-field-agreement-accept {
+    font-size: 0.9em;
+}
+#form-debtor .field-validation-error{
+    display: block;
+    clear: both;
+    font-size: 0.9em;
+}
+#form-debtor input[type=submit] {
+    width: 140px;
+    padding: 5px;
 }

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Bankiru.Models.Helpers;
+using Bankiru.Models.Infrastructure;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -7,9 +10,192 @@ using System.Web.Mvc;
 namespace Bankiru.Models.Domain.Debtors
 {
     /// <summary>
-    /// Должник
+    /// Должник (модель)
     /// </summary>
     public class VM_Debtor
+    {
+        #region ПОЛЯ И СВОЙСТВА
+        /// <summary>
+        /// Идентификатор должника
+        /// </summary>
+        [HiddenInput]
+        public int Id { get; set; }
+        /// <summary>
+        /// Опубликован
+        /// </summary>
+        [Display(Name = "Активен")]
+        public bool Published { get; set; }
+        /// <summary>
+        /// Тип должника
+        /// </summary>
+        [Display(Name = "Должник")]
+        [Required(ErrorMessage = "Необходимо указать Должника!")]
+        [Range(1, 100, ErrorMessage = "Необходимо указать Должника!")]
+        public int DebtorType { get; set; }
+        /// <summary>
+        /// Первоначальный кредитор
+        /// </summary>
+        [Display(Name = "Первоначальный кредитор")]
+        [Range(1, 100, ErrorMessage = "Необходимо указать Первоначального кредитора!")]
+        public int OriginalCreditorType { get; set; }
+        /// <summary>
+        /// Регион должника
+        /// </summary>
+        [Display(Name = "Регион")]
+        public Guid RegionId { get; set; }
+        /// <summary>
+        /// Населенный пункт
+        /// </summary>
+        [Display(Name = "Населенный пункт")]
+        public string Locality { get; set; }
+        /// <summary>
+        /// Сущность долга
+        /// </summary>
+        [Display(Name = "Сущность долга")]
+        [Range(1, 100, ErrorMessage = "Необходимо указать Сущность долга!")]
+        public int DebtEssenceType { get; set; }
+        /// <summary>
+        /// Решение суда
+        /// </summary>
+        [Display(Name = "Решение суда")]
+        [Range(1, 100, ErrorMessage = "Необходимо указать Решение суда!")]
+        public int CourtDecisionType { get; set; }
+        /// <summary>
+        /// Дата образования долга
+        /// </summary>
+        [Display(Name = "Дата образования долга")]
+        public DateTime DebtCreatedDate { get; set; }
+        /// <summary>
+        /// Сумма долга
+        /// </summary>
+        [Display(Name = "Сумма долга")]
+        //[Range(10, 1000000000000, ErrorMessage = "Укажите корректное значение Суммы долга")]
+        [Required(ErrorMessage = "Необходимо указать Сумму долга!")]
+        public string DebtAmount { get; set; }
+        /// <summary>
+        /// Сумма долга
+        /// </summary>        
+        [Display(Name = "Цена продажи")]
+        [Required(ErrorMessage = "Необходимо указать Цену продажи!")]
+        public string SalePrice { get; set; }
+        /// <summary>
+        /// Продавец долга
+        /// </summary>
+        [Display(Name = "Продавец долга")]
+        [Range(1, 100, ErrorMessage = "Необходимо указать Продавца долга!")]
+        public int DebtSellerType { get; set; }
+        /// <summary>
+        /// Контактное лицо
+        /// </summary>
+        [Display(Name = "Контактное лицо")]
+        [Required(ErrorMessage = "Укажите контактное лицо!")]
+        public string ContactPerson { get; set; }
+        /// <summary>
+        /// Контактный телефон
+        /// </summary>
+        [Display(Name = "Контактный телефон")]
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "Укажите контактный телефон!")]
+        public string ContactPhone { get; set; }
+        /// <summary>
+        /// Дополнительный контактный телефон
+        /// </summary>
+        [Display(Name = "Дополнительный телефон")]
+        [DataType(DataType.Text)]
+        public string DopPhone { get; set; }
+        /// <summary>
+        /// Email
+        /// </summary>
+        [Display(Name = "Email")]
+        //[DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Укажите Email")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный Email!")]
+        public string Email { get; set; }
+        /// <summary>
+        /// Дополнительный комментарий
+        /// </summary>
+        [Display(Name = "Дополнительный комментарий")]
+        [DataType(DataType.MultilineText)]
+        [MaxLength(2000, ErrorMessage = "Максимальная длина комментария не должна превышать 2000 символов!")]
+        public string Comment { get; set; }
+        /// <summary>
+        /// Дата создания записи в базе данных
+        /// </summary>
+        [Display(Name = "Дата создания записи")]
+        public DateTime CreatedAt { get; set; }
+        /// <summary>
+        /// Дата обновления записи в базе данных
+        /// </summary>
+        [Display(Name = "Дата изменения записи")]
+        public DateTime UpdatedAt { get; set; }
+        /// <summary>
+        /// Архивная запись
+        /// </summary>
+        [Display(Name = "Архивная")]
+        public bool IsArchived { get; set; }
+        /// <summary>
+        /// Соглашение принято
+        /// </summary>
+        public bool AgreementAccept { get; set; }
+        /// <summary>
+        /// Дата архивации
+        /// </summary>
+        [Display(Name = "Дата архивации")]
+        public DateTime? ArchivedDate { get; set; }
+        [Display(Name = "Введите код с картинки")]
+        [Required(ErrorMessage = "Код с картинки указан не верно!")]
+        public string CaptchaCode { get; set; }
+
+        /// <summary>
+        /// Сообщение об успешном создании
+        /// </summary>
+        [HiddenInput]
+        public EnumEditState EditState { get; set; }        
+        #endregion
+
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
+        public VM_Debtor()
+        {
+            Clear();
+        }
+        /// <summary>
+        /// Очищает объект
+        /// </summary>
+        public void Clear()
+        {
+            Id = 0;
+            Published = true;
+            DebtorType = 0;
+            OriginalCreditorType = 0;
+            RegionId = Guid.Empty;
+            Locality = String.Empty;
+            DebtEssenceType = 0;
+            CourtDecisionType = 0;
+            DebtCreatedDate = DateTime.Now;
+            DebtAmount = String.Empty;
+            SalePrice = String.Empty;
+            DebtSellerType = 0;
+            ContactPerson = String.Empty;
+            ContactPhone = String.Empty;
+            DopPhone = String.Empty;
+            Email = String.Empty;
+            Comment = String.Empty;
+            CreatedAt = DateTime.Now;
+            UpdatedAt = DateTime.Now;
+            IsArchived = false;
+            ArchivedDate = null;
+
+            CaptchaCode = String.Empty;
+            AgreementAccept = false;
+        }
+    }
+
+    /// <summary>
+    /// Должник
+    /// </summary>
+    public class Debtor
     {
         #region ПОЛЯ И СВОЙСТВА
         /// <summary>
@@ -54,10 +240,10 @@ namespace Bankiru.Models.Domain.Debtors
         public decimal DebtAmount { get; set; }
         /// <summary>
         /// Сумма долга
-        /// </summary>
+        /// </summary>        
         public decimal SalePrice { get; set; }
         /// <summary>
-        /// Тип продавца долга
+        /// Продавец долга
         /// </summary>
         public EnumDebtSellerType DebtSellerType { get; set; }
         /// <summary>
@@ -67,11 +253,11 @@ namespace Bankiru.Models.Domain.Debtors
         /// <summary>
         /// Контактный телефон
         /// </summary>
-        public int ContactPhone { get; set; }
+        public Int64 ContactPhone { get; set; }
         /// <summary>
         /// Дополнительный контактный телефон
         /// </summary>
-        public int? DopPhone { get; set; }
+        public Int64? DopPhone { get; set; }
         /// <summary>
         /// Email
         /// </summary>
@@ -96,36 +282,30 @@ namespace Bankiru.Models.Domain.Debtors
         /// Дата архивации
         /// </summary>
         public DateTime? ArchivedDate { get; set; }
-
+        
         /// <summary>
         /// Наименование региона
         /// </summary>
-        [HiddenInput]
         public string RegionName { get; set; }
         /// <summary>
         /// Наименование Типа должника
         /// </summary>
-        [HiddenInput]
         public string DebtorTypeName { get; set; }
         /// <summary>
         /// Наименование Первоначального кредитора
         /// </summary>
-        [HiddenInput]
         public string OriginalCreditorTypeName { get; set; }
         /// <summary>
         /// Наименование Сущности долга
         /// </summary>
-        [HiddenInput]
-        public string DebtEssenceTypeName { get; set; }        
+        public string DebtEssenceTypeName { get; set; }
         /// <summary>
         /// Наименование Решения суда
         /// </summary>
-        [HiddenInput]
         public string CourtDecisionTypeName { get; set; }
         /// <summary>
         /// Наименование Типа продавца долга
         /// </summary>
-        [HiddenInput]
         public string DebtSellerTypeName { get; set; }
 
 
@@ -142,7 +322,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public VM_Debtor()
+        public Debtor()
         {
             Clear();
         }
@@ -181,6 +361,97 @@ namespace Bankiru.Models.Domain.Debtors
             DebtSellerTypeName = String.Empty;
 
             _lastError = String.Empty;
+        }
+        /// <summary>
+        /// Присваивает значения модели должника
+        /// </summary>
+        /// <param name="model">Модель должника</param>
+        /// <param name="modelErrors">Ошибки в модели</param>
+        /// <returns>Логическое значение</returns>
+        public bool Assign(VM_Debtor model, out Dictionary<string, string> modelErrors)
+        {
+            modelErrors = new Dictionary<string, string>();
+            try
+            {
+                Id = model.Id;
+                Published = model.Published;
+                DebtorType = (EnumDebtorType)model.DebtorType;
+                OriginalCreditorType = (EnumOriginalCreditorType)model.OriginalCreditorType;
+                if (model.RegionId == Guid.Empty)
+                {
+                    modelErrors.Add("RegionId", "Необходимо указать регион!");
+                    RegionId = Guid.Empty;
+                }
+                else
+                    RegionId = model.RegionId;
+                Locality = model.Locality;
+                DebtEssenceType = (EnumDebtEssenceType)model.DebtEssenceType;
+                CourtDecisionType = (EnumCourtDecisionType)model.CourtDecisionType;
+                DebtCreatedDate = model.DebtCreatedDate;
+                decimal d = 0m;
+                if (!TextHelper.DecimalParse(model.DebtAmount, out d))
+                {
+                    modelErrors.Add("DebtAmount", "Некорректное значение Суммы долга!");
+                    DebtAmount = 0m;
+                }
+                else
+                    DebtAmount = d;
+                d = 0m;
+                if (!TextHelper.DecimalParse(model.SalePrice, out d))
+                {
+                    modelErrors.Add("DebtAmount", "Некорректное значение Цены продажи!");
+                    SalePrice = 0m;
+                }
+                else
+                    SalePrice = d;                 
+                DebtSellerType = (EnumDebtSellerType)model.DebtSellerType;
+                ContactPerson = model.ContactPerson;
+                string phoneString = TextHelper.GetAsDigits(model.ContactPhone.Replace("+7",""));
+                if (phoneString.Length != 10)
+                {
+                    modelErrors.Add("ContactPhone", "Некорректное значение Контактного телефона!");
+                    ContactPhone = 0;
+                }
+                else
+                    ContactPhone = Int64.Parse(phoneString);
+                if (String.IsNullOrEmpty(model.DopPhone))
+                {
+                    DopPhone = 0;
+                }
+                else
+                {
+                    phoneString = TextHelper.GetAsDigits(model.DopPhone.Replace("+7", ""));
+                    if (phoneString.Length != 10)
+                    {
+                        modelErrors.Add("DopPhone", "Некорректное значение Дополнительного телефона!");
+                        DopPhone = 0;
+                    }
+                    else
+                        DopPhone = Int64.Parse(phoneString);
+                }
+                Email = model.Email;
+                Comment = model.Comment;
+                CreatedAt = model.CreatedAt;
+                UpdatedAt = model.UpdatedAt;
+                IsArchived = false;
+                ArchivedDate = null;
+
+                RegionName = String.Empty;
+                DebtorTypeName = String.Empty;
+                OriginalCreditorTypeName = String.Empty;
+                DebtEssenceTypeName = String.Empty;
+                CourtDecisionTypeName = String.Empty;
+                DebtSellerTypeName = String.Empty;
+
+                _lastError = String.Empty;
+
+                return modelErrors.Count == 0 ? true : false;
+            }
+            catch(Exception ex)
+            {
+                modelErrors.Add("", "Ошибка во время проверки корректности введенных данных. Повторите попытку позже.");
+                return false;
+            }
         }
     }
 
@@ -297,5 +568,23 @@ namespace Bankiru.Models.Domain.Debtors
         /// Физическое лицо
         /// </summary>
         PhysicalPerson
+    }
+    /// <summary>
+    /// Тип продавца долга
+    /// </summary>
+    public enum EnumEditState
+    {
+        None = 0,
+        Creating,
+        Created,
+        Edit,
+        Editing,
+        Deleted,
+        Deleting,
+        Activated,
+        Disactivated,
+        Confirmed,
+        UnConfirmed,
+        Error
     }
 }

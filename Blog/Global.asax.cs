@@ -1,4 +1,5 @@
 ﻿using Bankiru.Controllers;
+using Bankiru.Models.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,7 @@ namespace Bankiru
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
+            GlobalParams.Initialize();
         }
 
         protected void Application_Error(object sender, EventArgs e)

@@ -34,7 +34,12 @@ $(document).ready(function () {
     }).click(function () {
         window.location = 'currency';
     });
-
+        
+    //Биржа должников
+    $('#debtors-list .read-more').click(function (e) {       
+        e.preventDefault();        
+        showDebtorDetails();
+    })
 });
 //Успешная авторизация
 function auth_success(data) {
@@ -132,6 +137,10 @@ jQuery(function ($) {
     $('.usd  #form-add-user-to-forecast-ajax #Value').mask("99.9999");
     $('.oil  #form-add-user-to-forecast-ajax #Value').mask("999.9999");
     $('.sberbank  #form-add-user-to-forecast-ajax #Value').mask("999.9999");
+
+    $('#form-debtor #ContactPhone').mask("+7(999) 99-99-999");
+    $('#form-debtor #DopPhone').mask("+7(999) 99-99-999");
+    //$('#form-debtor #DebtAmount').maskMoney();
 });
 //Фиксирование главного меню в верху страницы
 jQuery(function ($) {
@@ -144,3 +153,23 @@ jQuery(function ($) {
         }
     });
 });
+
+//Биржа должников
+function showDebtorDetails() {
+    var debtor_id = $('#debtors-list .read-more').attr('data-debtor-id');    
+    var d = $('#debtors-list .debtor-details-' + debtor_id);
+    if (d != null) {
+        if (d.css("display") == "none")  // Показываем подробности
+        {
+            d.css("display", "table-row");
+            $('#debtors-list .read-more').text('Скрыть');
+            $('#debtors-list .debtor-list-item-' + debtor_id).css('border-left', '8px solid #00aded');
+        }
+        else  // Скрываем подробности
+        {
+            d.css("display", "none");
+            $('#debtors-list .read-more').text('Подробнее');
+            $('#debtors-list .debtor-list-item-' + debtor_id).css('border-left', 'none');
+        }
+    }
+};

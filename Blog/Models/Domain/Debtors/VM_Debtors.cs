@@ -12,13 +12,13 @@ namespace Bankiru.Models.Domain.Debtors
     public class VM_Debtors
     {
         public VM_DebtorsFilter Filters { get; set; }
-        public List<VM_Debtor> Items { get; set; }
+        public List<Debtor> Items { get; set; }
         public VM_PagingInfo PagingInfo { get; set; }
 
         public VM_Debtors()
         {
             Filters = new VM_DebtorsFilter();
-            Items = new List<VM_Debtor>();
+            Items = new List<Debtor>();
             PagingInfo = new VM_PagingInfo();
         }
     }

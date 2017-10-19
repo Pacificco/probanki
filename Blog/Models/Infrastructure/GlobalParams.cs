@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 
@@ -62,12 +63,22 @@ namespace Bankiru.Models.Infrastructure
             }
         }        
         #endregion
-
-        #region ВРЕМЯ
+        
+        #region КУЛЬТУРА И ЛОКАЦИЯ
+        public static CultureInfo LocalCultureInfo = new CultureInfo("ru-RU");
         /// <summary>
         /// Впеменная зона
         /// </summary>
         public static TimeZoneInfo MoscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
         #endregion
+
+
+        public static void Initialize()
+        {
+            LocalCultureInfo.NumberFormat.NumberGroupSeparator = " ";
+            LocalCultureInfo.NumberFormat.NumberDecimalSeparator = ".";
+            LocalCultureInfo.NumberFormat.NumberDecimalDigits = 2;
+            LocalCultureInfo.NumberFormat.CurrencySymbol = " руб.";
+        }
     }
 }

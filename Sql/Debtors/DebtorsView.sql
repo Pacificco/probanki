@@ -42,8 +42,8 @@ begin
 			,SalePrice					money
 			,DebtSellerTypeId			int
 			,ContactPerson				nvarchar(255)
-			,ContactPhone				int
-			,DopPhone					int
+			,ContactPhone				bigint
+			,DopPhone					bigint
 			,Email						varchar(129)
 			,Comment					nvarchar(2000)
 			,CreatedAt					datetime

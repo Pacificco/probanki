@@ -1,12 +1,14 @@
 ﻿using Bankiru.Models.Domain;
 using Bankiru.Models.Domain.Comments;
 using Bankiru.Models.Domain.Users;
+using Bankiru.Models.Infrastructure;
 using Bankiru.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 
@@ -78,6 +80,43 @@ namespace Bankiru.Models.Helpers
                 success = false;
                 return 0.0F;
             }
+        }
+        /// <summary>
+        /// Выполняет попытку привести строковое значение в тип decimal
+        /// </summary>
+        /// <param name="value">Строковое значение</param>
+        /// <param name="result">Число</param>
+        /// <returns>Логическое значение</returns>
+        public static bool DecimalParse(string value, out decimal result)
+        {
+            try
+            {
+                string v = value.Replace(".", GlobalParams.LocalCultureInfo.NumberFormat.NumberDecimalSeparator);
+                v = v.Replace(",", GlobalParams.LocalCultureInfo.NumberFormat.NumberDecimalSeparator);
+                if (v.Last().ToString() == GlobalParams.LocalCultureInfo.NumberFormat.NumberDecimalSeparator)
+                {
+                    v += "0";
+                }
+                result = decimal.Parse(v, GlobalParams.LocalCultureInfo);
+                return true;
+            }
+            catch
+            {
+                result = 0;
+                return false;
+            }
+        }
+        /// <summary>
+        /// Возвращает только цифры из указанной строки
+        /// </summary>
+        /// <param name="value">Строка</param>
+        /// <returns>Цифры</returns>
+        public static string GetAsDigits(string value)
+        {
+            string pattern = @"[^0-9]";
+            string target = "";
+            Regex regex = new Regex(pattern);
+            return regex.Replace(value, target);
         }
     }
 }

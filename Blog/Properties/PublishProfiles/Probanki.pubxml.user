@@ -234,7 +234,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>09/18/2017 22:19:04</publishTime>
+      <publishTime>10/19/2017 23:14:43</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -3570,7 +3570,7 @@
       <publishTime>04/13/2016 22:33:36</publishTime>
     </File>
     <File Include="Content/themes/site.css">
-      <publishTime>09/19/2017 14:08:27</publishTime>
+      <publishTime>10/19/2017 22:57:58</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/09/2016 21:09:00</publishTime>
@@ -3651,7 +3651,7 @@
       <publishTime>05/10/2017 21:10:41</publishTime>
     </File>
     <File Include="Scripts/main.js">
-      <publishTime>04/03/2017 22:33:34</publishTime>
+      <publishTime>10/19/2017 23:10:32</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>01/21/2016 18:01:41</publishTime>
@@ -4244,6 +4244,45 @@
     <File Include="Views/Club/_moduleUserForecastList.cshtml">
       <publishTime>11/12/2016 14:16:55</publishTime>
     </File>
+    <File Include="Views/Debtors/Index.cshtml">
+      <publishTime>10/18/2017 21:57:09</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtCourtDecisionTypesDropDownList.cshtml">
+      <publishTime>10/08/2017 22:22:42</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtDebtAmountRangeDropDownList.cshtml">
+      <publishTime>10/08/2017 21:35:19</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtDebtCreatedRangeDropDownList.cshtml">
+      <publishTime>10/08/2017 21:38:01</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtDebtEssenceTypesDropDownList.cshtml">
+      <publishTime>10/08/2017 22:32:35</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtDebtorTypesDropDownList.cshtml">
+      <publishTime>10/08/2017 22:24:17</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtDebtSellerTypesDropDownList.cshtml">
+      <publishTime>10/08/2017 22:32:01</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtOriginalCreditorTypesDropDownList.cshtml">
+      <publishTime>10/08/2017 22:31:49</publishTime>
+    </File>
+    <File Include="Views/Debtors/_debtSalePriceRangeDropDownList.cshtml">
+      <publishTime>10/08/2017 21:33:00</publishTime>
+    </File>
+    <File Include="Views/Debtors/_moduleDebtorDetails.cshtml">
+      <publishTime>10/19/2017 21:41:19</publishTime>
+    </File>
+    <File Include="Views/Debtors/_moduleDebtorForm.cshtml">
+      <publishTime>10/18/2017 21:57:32</publishTime>
+    </File>
+    <File Include="Views/Debtors/_moduleDebtorsFilter.cshtml">
+      <publishTime>10/18/2017 22:20:07</publishTime>
+    </File>
+    <File Include="Views/Debtors/_moduleDebtorsList.cshtml">
+      <publishTime>10/19/2017 23:08:50</publishTime>
+    </File>
     <File Include="Views/Email/_emailInfo.html.cshtml">
       <publishTime>07/18/2016 22:45:47</publishTime>
     </File>
@@ -4383,7 +4422,10 @@
       <publishTime>11/14/2016 22:08:30</publishTime>
     </File>
     <File Include="Views/Shared/Master.cshtml">
-      <publishTime>09/18/2017 22:18:50</publishTime>
+      <publishTime>10/19/2017 23:14:30</publishTime>
+    </File>
+    <File Include="Views/Shared/Master_2.cshtml">
+      <publishTime>10/08/2017 17:20:57</publishTime>
     </File>
     <File Include="Views/Shared/NotFound.cshtml">
       <publishTime>02/28/2017 20:33:49</publishTime>
@@ -4442,6 +4484,9 @@
     <File Include="Views/Shared/_partialView.cshtml">
       <publishTime>06/14/2016 07:24:25</publishTime>
     </File>
+    <File Include="Views/Shared/_regionsDropDownList.cshtml">
+      <publishTime>10/08/2017 21:49:25</publishTime>
+    </File>
     <File Include="Views/Shared/_tariffDropDownList.cshtml">
       <publishTime>05/14/2017 18:01:43</publishTime>
     </File>
@@ -4497,7 +4542,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/19/2017 14:08:34</publishTime>
+      <publishTime>10/19/2017 23:14:44</publishTime>
     </File>
   </ItemGroup>
 </Project>

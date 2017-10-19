@@ -61,7 +61,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// </summary>
         /// <param name="debtorId">Идентификатор должника</param>
         /// <returns>Модель должника</returns>
-        public VM_Debtor GetDebtor(int debtorId)
+        public Debtor GetDebtor(int debtorId)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace Bankiru.Models.Domain.Debtors
                 sqlfilter.Assign(filter);
 
                 int totalCount = 0;
-                List<VM_Debtor> Items = _getDebtors(sqlfilter, 1, 1, out totalCount);
+                List<Debtor> Items = _getDebtors(sqlfilter, 1, 1, out totalCount);
 
                 if (Items == null || Items.Count == 0)
                     return null;                
@@ -93,7 +93,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// <param name="recNoTo">Номер последней строки</param>
         /// <param name="totalCount">Общее количество записей, удовлетворяющих фильтру</param>
         /// <returns>Список должников</returns>
-        public List<VM_Debtor> _getDebtors(DebtorsFilter filter, int recNoFrom, int recNoTo, out int totalCount)
+        public List<Debtor> _getDebtors(DebtorsFilter filter, int recNoFrom, int recNoTo, out int totalCount)
         {
             totalCount = 0;
 
@@ -147,15 +147,15 @@ namespace Bankiru.Models.Domain.Debtors
             {
                 try
                 {
-                    List<VM_Debtor> debtors = new List<VM_Debtor>();
+                    List<Debtor> debtors = new List<Debtor>();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader != null && reader.HasRows)
                         {
-                            VM_Debtor d = null;
+                            Debtor d = null;
                             while (reader.Read())
                             {
-                                d = new VM_Debtor();
+                                d = new Debtor();
                                 d.Id = reader.GetInt32(reader.GetOrdinal("Id"));
                                 d.DebtorType = (EnumDebtorType)reader.GetInt32(reader.GetOrdinal("DebtorTypeId"));
                                 d.Published = reader.GetBoolean(reader.GetOrdinal("Published"));
@@ -169,9 +169,9 @@ namespace Bankiru.Models.Domain.Debtors
                                 d.SalePrice = reader.GetDecimal(reader.GetOrdinal("SalePrice"));
                                 d.DebtSellerType = (EnumDebtSellerType)reader.GetInt32(reader.GetOrdinal("DebtSellerTypeId"));
                                 d.ContactPerson = reader.GetString(reader.GetOrdinal("ContactPerson"));
-                                d.ContactPhone = reader.GetInt32(reader.GetOrdinal("ContactPhone"));
-                                d.DopPhone = reader.IsDBNull(reader.GetOrdinal("DopPhone")) ? null : 
-                                    (int?)reader.GetInt32(reader.GetOrdinal("DopPhone"));
+                                d.ContactPhone = reader.GetInt64(reader.GetOrdinal("ContactPhone"));
+                                d.DopPhone = reader.IsDBNull(reader.GetOrdinal("DopPhone")) ? null :
+                                    (Int64?)(reader.GetInt64(reader.GetOrdinal("DopPhone")));
                                 d.Email = reader.GetString(reader.GetOrdinal("Email"));
                                 d.Comment = reader.GetString(reader.GetOrdinal("Comment"));
                                 d.CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt"));
@@ -211,7 +211,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// <param name="debtor">Должник</param>
         /// <param name="operation">Тип операции</param>
         /// <returns>Логическое значение</returns>
-        public bool EditDebtor(VM_Debtor debtor, int operation)
+        public bool EditDebtor(Debtor debtor, int operation)
         {
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.DebtorsEdit.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;

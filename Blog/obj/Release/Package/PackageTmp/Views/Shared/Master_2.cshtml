@@ -7,26 +7,24 @@
 
     string _currentController = ViewContext.RequestContext.RouteData.Values["controller"].ToString();
     int _templateColumnsCount = 3;
-    switch (_currentController)
+    switch(_currentController)
     {
         case "Debtors":
             _templateColumnsCount = 2;
-            break;
+        break;
     }
-
+    
     string columnMiddleClassName = "";
     string columnLeftClassName = "";
     string columnMainClassName = "";
-    string columnWrapper2ClassName = "";
-    if (_templateColumnsCount == 2)
+    if(_templateColumnsCount == 2)
     {
         columnMiddleClassName = "column-middle-2columns";
         columnLeftClassName = "column-left-2columns";
         columnMainClassName = "column-main-2columns";
-        columnWrapper2ClassName = "wrapper2-2columns";
     }
     
-    bool isDebug = false;
+    bool isDebug = true;
 }
 <!DOCTYPE html>
 <html>
@@ -102,12 +100,12 @@
         @Html.Action("_getModuleMainMenu", "Home", new { current_item = String.IsNullOrEmpty(ViewBag.CurrentMenuItem) ? "" : ViewBag.CurrentMenuItem })
     </div>
     <section id="wrapper">
-        <div id="column-middle-left" class="@columnMiddleClassName">            
-            <div id="main" class="@columnMainClassName">
+            <div id="column-middle-left" class="@columnMiddleClassName">
+            <div id="main" class="@columnMainClassName">                
                 @RenderSection("middle_top", required: false)
                 @RenderBody()                
                 @RenderSection("middle_bottom", required: false)
-            </div>            
+            </div>       
             <div id="column-left" class="@columnLeftClassName">
                 @Html.Action("_getModuleSideUserProfile", "Users", null)                
                 @RenderSection("left_top", required: false)
@@ -127,30 +125,7 @@
                 @RenderSection("left_bottom", required: false)
             </div>
         </div>
-        @if(_templateColumnsCount == 3)
-        {
-        <div id="column-right">
-            <section id="currencies">         
-                <h3>Курсы валют</h3>
-                <div id="currencies-body">
-                    <p>Курс ЦБ РФ на @Bankiru.Models.OutApi.CurrenciesManager.RateDate</p>
-                    @Html.Raw(Bankiru.Models.OutApi.CurrenciesManager.CurrenciesToHtml())
-                    <p class="read-more">@Html.RouteLink("Подробнее...", "rates", null, new { title = "Курсы валют" })</p>
-                </div>
-            </section>
-            @RenderSection("banners_right_top", required: false)            
-            @*<section id="info-board">         
-                <h3>Доска объявлений</h3>
-                <div>
-                    <p>Сообщение.</p>                    
-                </div>
-            </section>*@
-            @RenderSection("right_top", required: false)
-            @RenderSection("right_middle", required: false)
-            @RenderSection("right_bottom", required: false)            
-        </div>
-        }
-        <div id="wrapper2" class="@columnWrapper2ClassName"></div>        
+        <div id="wrapper2"></div>        
     </section>
     <footer id="footer">
         <section id="footer-wrapper">
@@ -207,12 +182,12 @@
         <script>
 
             (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
     }
     <script src="~/Scripts/jquery.maskedinput.min.js"></script>
