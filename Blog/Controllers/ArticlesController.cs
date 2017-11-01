@@ -18,38 +18,35 @@ namespace Bankiru.Controllers
         {
             try
             {
-                if (_connected)
-                {                    
-                    ArtsManager _manager = new ArtsManager();
-                    VM_Articles model = _manager.GetArts(cat_id, page);
-                    if (!String.IsNullOrEmpty(cat_id))
-                    {
-                        model.CurrentCategory = _manager.GetCategory(cat_id);
-                        if (model.CurrentCategory == null)
-                        {
-                            return RedirectToAction("Error", "Error", null);
-                        }
-                    }                    
-                    if (model != null)
-                    {                        
-                        return View(model);
-                    }
-                    else
-                    {
-                        ViewBag.ErrorMessage = _manager.LastError;
-                        return RedirectToAction("Error", "Error", null);
-                    }
-                }
-                else
+                if (!_connected)
                 {
                     ViewBag.ErrorMessage = _errMassage;
-                    return RedirectToAction("Error", "Error", null);
+                    return InvokeHttp500(HttpContext);
+                }
+
+                ArtsManager _manager = new ArtsManager();
+                VM_Articles model = _manager.GetArts(cat_id, page);
+                if (!String.IsNullOrEmpty(cat_id))
+                {
+                    model.CurrentCategory = _manager.GetCategory(cat_id);
+                    if (model.CurrentCategory == null)
+                    {
+                        return InvokeHttp404(HttpContext);
+                    }
+                }
+
+                if (model != null)
+                    return View(model);
+                else
+                {
+                    log.Error(_manager.LastError);
+                    return InvokeHttp404(HttpContext);
                 }
             }
             catch (Exception e)
             {
                 ViewBag.ErrorMessage = e.ToString();
-                return RedirectToAction("Error", "Error", null);
+                return InvokeHttp500(HttpContext);
             }
         }
         [HttpGet]
@@ -57,31 +54,26 @@ namespace Bankiru.Controllers
         {
             try
             {
-                if (_connected)
-                {
-                    ArtsManager _manager = new ArtsManager();
-                    VM_Article model = _manager.GetArt(art_id);
-                    if (model != null)
-                    {
-                        return View(model);
-                    }
-                    else
-                    {
-                        ViewBag.ErrorMessage = _manager.LastError;
-                        return View("NotFound");
-                    }
-                }
-                else
+                if (!_connected)
                 {
                     ViewBag.ErrorMessage = _errMassage;
-                    return View("Error");
+                    return InvokeHttp500(HttpContext);
+                }
+                ArtsManager _manager = new ArtsManager();
+                VM_Article model = _manager.GetArt(art_id);
+
+                if (model != null)
+                    return View(model);
+                else
+                {
+                    log.Error(_manager.LastError);
+                    return InvokeHttp404(HttpContext);
                 }
             }
             catch (Exception e)
             {
                 log.Error(e.ToString());
-                return View("Error");
-                //return RedirectToAction("Error", "Error", null);
+                return InvokeHttp500(HttpContext);
             }
         }
 
@@ -114,7 +106,7 @@ namespace Bankiru.Controllers
                         else
                         {
                             ViewBag.ErrorMessage = _manager.LastError;
-                            return RedirectToAction("Error", "Error", null);
+                            return InvokeHttp500(HttpContext);
                         }
                     }
                     else
@@ -125,13 +117,13 @@ namespace Bankiru.Controllers
                 else
                 {
                     ViewBag.ErrorMessage = _errMassage;
-                    return RedirectToAction("Error", "Error", null);
+                    return InvokeHttp500(HttpContext);
                 }
             }
             catch (Exception e)
             {
                 ViewBag.ErrorMessage = e.ToString();
-                return RedirectToAction("Error", "Error", null);
+                return InvokeHttp500(HttpContext);
             }
         }
         [HttpPost]

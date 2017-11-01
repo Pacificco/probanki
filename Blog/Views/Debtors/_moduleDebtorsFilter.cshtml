@@ -3,17 +3,18 @@
 @model VM_DebtorsFilter
 @{
     AjaxOptions _ajaxOptions = new AjaxOptions();
-    _ajaxOptions.HttpMethod = "POST";
+    _ajaxOptions.HttpMethod = "GET";
     _ajaxOptions.InsertionMode = InsertionMode.Replace;
     _ajaxOptions.LoadingElementDuration = 3000;
     _ajaxOptions.LoadingElementId = "";
-    //_ajaxOptions.OnSuccess = "";
+    _ajaxOptions.OnSuccess = "updateDebtorDetailsDOM";
     //_ajaxOptions.OnFailure = "";
     _ajaxOptions.UpdateTargetId = "wrapper-debtors-list";
     _ajaxOptions.Url = "debtors/_getModuleDebtorsList";
 }
 <div id="debtors-filter">
-    @using (Ajax.BeginForm("Debtors", "_getModuleDebtorsList", _ajaxOptions, new { id = "debtor-filter" }))
+    @using (Ajax.BeginForm(controllerName: "Debtors", actionName: "_getModuleDebtorsList", ajaxOptions: _ajaxOptions, 
+        routeValues: new { id = "debtor-filter" }))
     {
         @Html.ValidationSummary(true)        
         <div class="editor-field editor-field-region">
@@ -52,7 +53,7 @@
        {
            selectedId = Model.SalePriceRange,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtSalePriceRange"
+           id = "SalePriceRange"
        })
             @Html.ValidationMessageFor(model => model.SalePriceRange)
         </div>
@@ -62,7 +63,7 @@
        {
            selectedId = Model.CourtDecisionType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtCourtDecisionType"
+           id = "CourtDecisionType"
        })
             @Html.ValidationMessageFor(model => model.CourtDecisionType)
         </div>
@@ -72,7 +73,7 @@
        {
            selectedId = Model.DebtorType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtDebtorType"
+           id = "DebtorType"
        })
             @Html.ValidationMessageFor(model => model.DebtorType)
         </div>
@@ -92,7 +93,7 @@
        {
            selectedId = Model.OriginalCreditorType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtOriginalCreditorType"
+           id = "OriginalCreditorType"
        })
             @Html.ValidationMessageFor(model => model.OriginalCreditorType)
         </div>

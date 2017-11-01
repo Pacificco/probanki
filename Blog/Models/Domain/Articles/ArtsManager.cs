@@ -2331,7 +2331,7 @@ namespace Bankiru.Models.Domain.Articles
                     return 3;
                 case "lirika":
                     return 7;
-                case "revizija":
+                case "obzor-bankov":
                     return 8;
                 default:
                     return -1;
@@ -2345,7 +2345,7 @@ namespace Bankiru.Models.Domain.Articles
                 case 2: return "intervju";
                 case 3: return "mnenija";
                 case 7: return "lirika";
-                case 8: return "revizija";
+                case 8: return "obzor-bankov";
                 default:
                     return "";
             }
@@ -2358,7 +2358,7 @@ namespace Bankiru.Models.Domain.Articles
                 case 2: return "Интервью";
                 case 3: return "Мнения";
                 case 7: return "Лирика";
-                case 8: return "Ревизия";
+                case 8: return "Обзор банков";
                 default:
                     return "";
             }
@@ -2403,7 +2403,7 @@ namespace Bankiru.Models.Domain.Articles
                 case 7:
                     return "Лирика";
                 case 8:
-                    return "Ревизия";
+                    return "Обзор банков";
                 default:
                     return "?";
             }

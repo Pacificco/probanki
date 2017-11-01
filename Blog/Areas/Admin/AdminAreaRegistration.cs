@@ -51,6 +51,12 @@ namespace Bankiru.Areas.Admin
                namespaces: new[] { "Bankiru.Areas.Admin.Controllers" }
            );
             context.MapRoute(
+               name: "admin_debtors",
+               url: "Admin/Debtors/{action}/{id}",
+               defaults: new { controller = "Debtors", action = "List", id = UrlParameter.Optional },
+               namespaces: new[] { "Bankiru.Areas.Admin.Controllers" }
+           );
+            context.MapRoute(
                 name: "admin_comments",
                 url: "Admin/Comments/{action}/{id}",
                 defaults: new { controller = "Comments", action = "List", id = UrlParameter.Optional },

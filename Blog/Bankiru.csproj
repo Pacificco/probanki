@@ -155,6 +155,7 @@
     <Compile Include="Areas\Admin\Controllers\OrgsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ReviewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DebtorsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -167,6 +168,8 @@
     <Compile Include="Controllers\OrgsController.cs" />
     <Compile Include="Controllers\RatesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\SchoolController.cs" />
+    <Compile Include="Controllers\TVController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -313,6 +316,17 @@
     <Content Include="Content\admin_themes\orgs\review.css" />
     <Content Include="Content\admin_themes\users\users.css" />
     <Content Include="Content\admin_themes\users\table.css" />
+    <Content Include="Content\admin_themes\debtors\table.css" />
+    <Content Include="Content\admin_themes\debtors\debtors.css" />
+    <Content Include="Content\system\dev-page-bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\system\dev-page-bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\system\not-found.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\system\spinning.gif" />
     <Content Include="Content\themes\arts\articles.css" />
     <Content Include="Content\themes\arts\comments.css" />
@@ -442,6 +456,18 @@
     <Content Include="Areas\Admin\Views\Shared\_tariffDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_tariffPeriodDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Forecast\_forecastCloseBlock.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtorsFilter.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtorsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtCourtDecisionTypesDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtDebtAmountRangeDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtDebtCreatedRangeDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtDebtEssenceTypesDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtDebtorTypesDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtDebtSellerTypesDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtOriginalCreditorTypesDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\_debtSalePriceRangeDropDownList.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml">
       <SubType>Designer</SubType>
     </None>
@@ -692,7 +718,7 @@
     <Content Include="Views\News\Show.cshtml" />
     <Content Include="Views\Orgs\NewReview.cshtml" />
     <Content Include="Views\Home\Feedback.cshtml" />
-    <Content Include="Views\Shared\_moduleMainMenu.cshtml" />
+    <Content Include="Views\Shared\_moduleMainMenu_old.cshtml" />
     <Content Include="Views\Home\Rules.cshtml" />
     <Content Include="Views\Email\_emailSupport.html.cshtml" />
     <Content Include="Views\Email\_emailInfo.html.cshtml" />
@@ -771,6 +797,10 @@
     <Content Include="Views\Debtors\_debtDebtAmountRangeDropDownList.cshtml" />
     <Content Include="Views\Debtors\_debtSalePriceRangeDropDownList.cshtml" />
     <Content Include="Views\Shared\_regionsDropDownList.cshtml" />
+    <Content Include="Views\Shared\_moduleMainMenu.cshtml" />
+    <Content Include="Views\TV\Index.cshtml" />
+    <Content Include="Views\School\Index.cshtml" />
+    <Content Include="Views\Shared\DevPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

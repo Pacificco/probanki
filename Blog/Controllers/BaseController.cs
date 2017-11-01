@@ -3,6 +3,7 @@ using Bankiru.Models.Domain.Account;
 using Bankiru.Models.Domain.Articles;
 using Bankiru.Models.Domain.Club;
 using Bankiru.Models.Domain.Comments;
+using Bankiru.Models.Domain.Debtors;
 using Bankiru.Models.Domain.News;
 using Bankiru.Models.Domain.Orgs;
 using Bankiru.Models.Domain.OrgsCategories;
@@ -372,6 +373,146 @@ namespace Bankiru.Controllers
                 return PartialView(_errPartialPage);
             }
         }
+
+        #region СПИСКИ ДЛЯ БИРЖИ ДОЛЖНИКОВ
+        [ChildActionOnly]
+        public ActionResult _getDebtCreatedRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtDebtCreatedRangeDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getDebtAmountRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtDebtAmountRangeDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getDebtSalePriceRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtSalePriceRangeDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getCourtDecisionTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtCourtDecisionTypesDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getDebtorTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtDebtorTypesDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getDebtEssenceTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtDebtEssenceTypesDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getOriginalCreditorTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtOriginalCreditorTypesDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        [ChildActionOnly]
+        public ActionResult _getDebtSellerTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
+        {
+            try
+            {
+                VM_StringDropDown model = new VM_StringDropDown();
+                model.FirstItem = firstItem;
+                model.Name = id;
+                model.SelectedId = selectedId;
+                return PartialView("_debtDebtSellerTypesDropDownList", model);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.ToString());
+                return PartialView(_errPartialPage);
+            }
+        }
+        #endregion
+
         #endregion
 
         #region МОДУЛИ
@@ -831,10 +972,6 @@ namespace Bankiru.Controllers
         }
         #endregion
 
-        #region ДОЛЖНИКИ
-        
-        #endregion
-
         #region Http404 handling
         protected override void HandleUnknownAction(string actionName)
         {
@@ -843,6 +980,20 @@ namespace Bankiru.Controllers
                 this.InvokeHttp404(HttpContext);
         }
         public ActionResult InvokeHttp404(HttpContextBase httpContext)
+        {
+            IController errorController = new ErrorController();
+            var errorRoute = new RouteData();
+            errorRoute.Values.Add("controller", "Error");
+            errorRoute.Values.Add("action", "Http404");
+            errorRoute.Values.Add("url", httpContext.Request.Url.OriginalString);
+            errorController.Execute(new RequestContext(httpContext, errorRoute));
+
+            return new EmptyResult();
+        }
+        #endregion
+
+        #region Http500 handling
+        public ActionResult InvokeHttp500(HttpContextBase httpContext)
         {
             IController errorController = new ErrorController();
             var errorRoute = new RouteData();

@@ -145,7 +145,7 @@ namespace Bankiru.Models.Domain.Images
         private bool _isFileValidate(string fileName)
         {
             foreach (string f in _allowFormats)
-                if (fileName.IndexOf(f) != -1)
+                if (fileName.ToLower().IndexOf(f) != -1)
                     return true;
             return false;
         }

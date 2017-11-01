@@ -1,18 +1,45 @@
 ﻿@using Bankiru.Models.Helpers
 @model string
-@{
+@*@{
     bool isAuthorized = false;
     if (!String.IsNullOrEmpty(Bankiru.Models.Security.SessionPersister.UserEmail))
     {
         isAuthorized = true;
     }
-}
+}*@
 <nav id="top-menu">
-    <ul>
+    <ul class="level-1">
         <li class="@Html.GetMenuItemClass("home", Model)">@Html.RouteLink("Главная", "default", new { controller = "", action = "" }, new
        {
            title = "ProBanki.net"
        })</li>
+        <li class="@Html.GetMenuItemClass("orgs", Model)">@Html.RouteLink("Организации", "org_items", new { cat_id = "" }, new
+       {
+           title = "Организации"
+       })</li>        
+        <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб аналитиков", "club_info", null, new
+       {
+           title = "Клуб аналитиков"
+       })</li>        
+        <li class="@Html.GetMenuItemClass("debtors", Model)">@Html.RouteLink("Биржа долгов", "debtors", null, new
+       {
+           title = "Биржа долгов"
+       })</li>
+        <li class="@Html.GetMenuItemClass("school", Model)">@Html.RouteLink("Школа инвесторов", "school", null, new
+       {
+           title = "Школа инвесторов"
+       })</li>
+        <li class="@Html.GetMenuItemClass("rates", Model)">@Html.RouteLink("Курсы валют", "rates", null, new
+        {
+            title = "Курсы валют"
+        })
+        <li class="@Html.GetMenuItemClass("tv", Model)">@Html.RouteLink("Пробанки ТВ", "tv", null, new
+       {
+           title = "Пробанки ТВ"
+       })</li>
+    </ul>
+
+    <ul class="level-2">        
         <li class="@Html.GetMenuItemClass("statii", Model)">@Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new
        {
            title = "Статьи"
@@ -29,26 +56,14 @@
        {
            title = "Лирика"
        })</li>
-        <li class="@Html.GetMenuItemClass("orgs", Model)">@Html.RouteLink("Организации", "org_items", new { cat_id = "" }, new
+        <li class="@Html.GetMenuItemClass("obzor-bankov", Model)">@Html.RouteLink("Обзор банков", "art_items", new { cat_id = "obzor-bankov" }, new
        {
-           title = "Организации"
-       })</li>
-        <li class="@Html.GetMenuItemClass("revizija", Model)">@Html.RouteLink("Ревизия", "art_items", new { cat_id = "revizija" }, new
-       {
-           title = "Ревизия"
-       })</li>
-        @if (isAuthorized)
-        {
-       <li class="@Html.GetMenuItemClass("club", Model)">@Html.RouteLink("Клуб", "club_forecasts", null, new
-       {
-            title = "Клуб"
-       })</li>
-        }
-        <li class="@Html.GetMenuItemClass("rates", Model)">@Html.RouteLink("Курсы валют", "rates", null, new { title = "Курсы валют" })
+           title = "Обзор банков"
+       })</li>     
         <li class="@Html.GetMenuItemClass("news", Model)">@Html.RouteLink("Новости", "news_items", null, new
        {
            title = "Новости"
-       })</li>
+       })</li>   
         <li class="@Html.GetMenuItemClass("rules", Model)">@Html.RouteLink("Правила сайта", "rules", null, new
        {
            title = "Правила сайта"

@@ -177,34 +177,52 @@ input.button-ok:hover{
     padding-top: 35px;
 }
 
+/* Ошибка 500
+-----------------------------*/
+#error-500 {
+    padding: 100px 70px 70px 0;
+    background: url(/Content/system/not-found.png) center 100px no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+#error-500 p {
+    text-align: center;    
+    padding-top: 250px;
+}
+#error-500 p a {
+    font-size: 1.2em;
+    font-family: 'Ubuntu','Open Sans Condensed', Sans-Serif, Verdana;
+}
+
 /* Ошибка 404
 -----------------------------*/
 #error-404 {
-    padding: 70px 70px 70px 0;
-}
-#error-404 h1{
-    text-align: center;
-    color: #8ac64d;
-    font-size: 12.0em;
-    font-weight: 900;
-    font-family: 'Ubuntu',Helvetica;
-    margin: 0;
-    padding: 0;
-    line-height: 1.0em;
-}
-#error-404 h2{
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    font-family: 'Open Sans Condensed', Sans-Serif, Verdana;
-    padding: 40px 0 40px 0;
+    padding: 100px 0px 70px 0;
+    background: url(/Content/system/not-found.png) center 100px no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 #error-404 p {
     text-align: center;    
+    padding-top: 250px;
 }
-#error-404 p a {
+/*#error-404 p a {
     font-size: 1.2em;
     font-family: 'Ubuntu','Open Sans Condensed', Sans-Serif, Verdana;
+}*/
+
+/* Страница в разработке
+-----------------------------------------------------------*/
+#dev-page {
+    padding: 100px 0 70px 0;
+    background: url(/Content/system/dev-page-bg.png) center 120px no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#dev-page p{
+    text-align: center;
+    padding-top: 200px;
 }
 
 /* Сообщения
@@ -640,6 +658,13 @@ header {
     margin: 0;
     padding: 0;
     position: relative;
+    clear: both;
+}
+#top-menu ul.level-2 {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    float: left;
 }
 #top-menu ul li {
     float: left;
@@ -647,17 +672,31 @@ header {
     margin: 0px;    
     padding: 0px;
 }
-#top-menu ul li a {
+#top-menu ul.level-1 li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-family: 'Open Sans Condensed';
     text-transform: uppercase;
     height: 40px;
-    display: table-cell;
+    /*display: table-cell;*/
+    display: block;
     vertical-align: middle;
-    padding: 0px 10px 5px 10px;
+    padding: 0 0 3px 0;
+    margin: 0 27px 0 0;
     border-bottom: 0px solid #00adee;
+}
+#top-menu ul.level-2 li a {    
+    color: #ffffff;
+    font-size: 1.0em;
+    font-weight: normal;
+    font-family: 'Ubuntu';
+    text-transform: none;        
+    padding: 0px 2px 3px 0px;
+    margin-right: 20px;    
+    background: url(/Content/system/dot-white.gif) bottom left repeat-x;
+    text-decoration: none;
+    display: block;
 }
 #top-menu ul li:hover {
     /*background-color: white;
@@ -666,16 +705,20 @@ header {
     -webkit-border-radius: 6px;
     border-radius: 6px;*/
 }
-#top-menu ul li.current a,
-#top-menu ul li a:hover {    
+#top-menu ul.level-1 li.current a,
+#top-menu ul.level-1 li a:hover {    
     /*-moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;    
     background-color: #87afe2;
     color: white;*/     
-    padding: 0px 10px 0px 10px;
-    height: 40px;
-    border-bottom: 5px solid #00adee;
+    padding: 0;
+    /*height: 50px;*/
+    border-bottom: 3px solid #00adee;
+}
+#top-menu ul.level-2 li.current a,
+#top-menu ul.level-2 li a:hover {    
+    background: none;
 }
 
 /* Wrapper
@@ -698,8 +741,18 @@ header {
     background-color: white;
     z-index: -1;
 }
-#wrapper .wrapper2-2columns{
+#wrapper .wrapper2-2columns,
+#single-wrapper{
     width: 100%;
+}
+#single-column{
+    width: 1200px;    
+    padding: 0 0 0 0;
+    margin: 0 auto;
+    position: relative;
+    background: none;
+    overflow: hidden;
+    /*background: url(/Content/system/right_column_top.png) 908px 0px no-repeat;*/
 }
 
 /* Центральная и левая колонка
@@ -753,6 +806,39 @@ header {
     width: 100%;
     height: 50px;
     z-index: 1;
+}
+
+/* Общие стили страниц
+-----------------------------------------------------------*/
+#main .standart-page {
+    padding: 10px 20px 10px 20px;
+    position: relative;    
+    overflow: hidden;
+}
+#main .standart-page h1{
+    background-color: #374e74;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+#main .standart-page h1 span {
+    background: white;
+    font-size: 1.4em;
+    font-family: 'Open Sans Condensed';
+    padding: 0 8px 0 0;
+    text-transform: uppercase;
+}
+#main .standart-page h2 {
+    color: #3c4249;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    padding: 0 10px 0 5px;
+    font-style: italic;
+    text-align: left;
 }
 
 /* Левая колонка МЕНЮ
@@ -3495,10 +3581,10 @@ header {
     color: #333333; 
     font-size: 0.9em;
     font-family: 'Ubuntu';
-    font-weight: lighter;
+    font-weight: bold;
     margin: 0 0 5px 0;
     padding: 0 10px 0 5px;
-    font-style: italic;
+    font-style: normal;
     text-align: left;
 }
 
@@ -3510,6 +3596,7 @@ header {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 #debtor-filter .editor-field{
     margin: 0;
@@ -3529,16 +3616,24 @@ header {
      display: block;
      padding: 0 0 5px 0;
      color: #5d5d5d;
+     text-transform: lowercase;
 }
 #debtor-filter .editor-field-region select{
-     width: 200px;
+     width: 360px;
 }
 #debtor-filter .editor-field-created-range select{
-     width: 180px;
+     width: 150px;
+}
+#debtor-filter .editor-field-court-decision select{
+     width: 90px;
+}
+#debtor-filter .editor-field-original-creditor {
+    width: 190px;
 }
 #debtor-filter input[type=submit] {
-    padding: 5px 10px;
+    padding: 7px 40px;
     margin-top: 10px;
+    font-size: 0.9em;
 }
 
 /* Список должников
@@ -3680,6 +3775,7 @@ header {
     clear: both;
     float:left;
     position: relative;
+    margin-top: 10px;
 }
 #debtor-form {
     width: 926px;
@@ -3704,6 +3800,7 @@ header {
      display: block;
      padding: 0 0 5px 0;
      color: #5d5d5d;
+     text-transform: lowercase;
 }
 #form-debtor .editor-field label:after {
     content: ' *'
@@ -3743,4 +3840,12 @@ header {
 #form-debtor input[type=submit] {
     width: 140px;
     padding: 5px;
+}
+#wrapper-debtor-form p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+#wrapper-debtor-form .editor-field-submit {
+    
 }

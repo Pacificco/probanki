@@ -5,7 +5,9 @@
     ViewBag.Title = "Биржа долгов";
     ViewBag.metaDescription = "";
     ViewBag.metaKeywords = "";
-    ViewBag.metaRobots = "noindex, nofollow";    
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "debtors";
 }
 
 @section left_top
@@ -20,13 +22,16 @@
 <section id="debtors-page">
     <hgroup>
         <h1>Биржа долгов</h1>
-        <h2>Биржа долгов подзаголовок</h2>
+        <h2>В данном разделе публикуются объявления с предложениями о продаже/уступке права требования (цессии) финансовых обязательств юридических и физических лиц.</h2>
     </hgroup>
 
     @Html.Action("_getModuleDebtorsFilter", "Debtors", new { filter = new VM_DebtorsFilter() })
     <div id="wrapper-debtors-list">
-        @Html.Action("_list", "Debtors", new { filter = new VM_DebtorsFilter(), page = 1 })
-    </div>    
+        @Html.Action("_list", "Debtors", new { filter = new VM_DebtorsFilter(), page = ViewBag.DebtorsListPage })
+    </div>
+    <div id="create-debtor-button">
+        <a class="button-blue" href="#" title="Разместить объявление">Разместить объявление</a>
+    </div>
     <div id="wrapper-debtor-form">        
         @Html.Action("_getModuleDebtorForm", "Debtors", new { model = new VM_Debtor() })
     </div>

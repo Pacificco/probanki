@@ -3,7 +3,7 @@
 @model VM_DebtorsFilter
 @{
     AjaxOptions _ajaxOptions = new AjaxOptions();
-    _ajaxOptions.HttpMethod = "POST";
+    _ajaxOptions.HttpMethod = "GET";
     _ajaxOptions.InsertionMode = InsertionMode.Replace;
     _ajaxOptions.LoadingElementDuration = 3000;
     _ajaxOptions.LoadingElementId = "";
@@ -52,7 +52,7 @@
        {
            selectedId = Model.SalePriceRange,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtSalePriceRange"
+           id = "SalePriceRange"
        })
             @Html.ValidationMessageFor(model => model.SalePriceRange)
         </div>
@@ -62,7 +62,7 @@
        {
            selectedId = Model.CourtDecisionType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtCourtDecisionType"
+           id = "CourtDecisionType"
        })
             @Html.ValidationMessageFor(model => model.CourtDecisionType)
         </div>
@@ -72,7 +72,7 @@
        {
            selectedId = Model.DebtorType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtDebtorType"
+           id = "DebtorType"
        })
             @Html.ValidationMessageFor(model => model.DebtorType)
         </div>
@@ -92,7 +92,7 @@
        {
            selectedId = Model.OriginalCreditorType,
            firstItem = EnumFirstDropDownItem.All,
-           id = "DebtOriginalCreditorType"
+           id = "OriginalCreditorType"
        })
             @Html.ValidationMessageFor(model => model.OriginalCreditorType)
         </div>

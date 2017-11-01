@@ -36,10 +36,7 @@ $(document).ready(function () {
     });
         
     //Биржа должников
-    $('#debtors-list .read-more').click(function (e) {       
-        e.preventDefault();        
-        showDebtorDetails();
-    })
+    updateDebtorDetailsDOM();
 });
 //Успешная авторизация
 function auth_success(data) {
@@ -155,21 +152,35 @@ jQuery(function ($) {
 });
 
 //Биржа должников
-function showDebtorDetails() {
-    var debtor_id = $('#debtors-list .read-more').attr('data-debtor-id');    
+function showDebtorDetails(debtor_id) {
+    //var debtor_id = element.attr('data-debtor-id');//$('#debtors-list .read-more').attr('data-debtor-id');
+    //alert(debtor_id);
     var d = $('#debtors-list .debtor-details-' + debtor_id);
     if (d != null) {
         if (d.css("display") == "none")  // Показываем подробности
         {
             d.css("display", "table-row");
-            $('#debtors-list .read-more').text('Скрыть');
+            $('#debtors-list .debtor-list-item-' + debtor_id + ' .read-more').text('Скрыть');
             $('#debtors-list .debtor-list-item-' + debtor_id).css('border-left', '8px solid #00aded');
         }
         else  // Скрываем подробности
         {
             d.css("display", "none");
-            $('#debtors-list .read-more').text('Подробнее');
+            $('#debtors-list .debtor-list-item-' + debtor_id + ' .read-more').text('Подробнее');
             $('#debtors-list .debtor-list-item-' + debtor_id).css('border-left', 'none');
         }
     }
+};
+//Биржа должников - подключение действий после обновления списка должников через Ajax
+function updateDebtorDetailsDOM() {
+    $('#debtors-list .read-more').click(function (e) {
+        e.preventDefault();
+        showDebtorDetails($(this).attr('data-debtor-id'));
+    });
+    $('#wrapper-debtor-form').css('display', 'none');
+    $('#create-debtor-button .button-blue').click(function (e) {
+        e.preventDefault();
+        $('#wrapper-debtor-form').css('display', 'block');
+        $(this).css('display', 'none');
+    });
 };

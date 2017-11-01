@@ -10,7 +10,9 @@
     ViewBag.metaKeywords = "";
     ViewBag.metaRobots = "noindex, nofollow";
 
-    Layout = null; 
+    Layout = null;
+
+    bool isDebug = false;
 }
 <!DOCTYPE html>
 <html>
@@ -18,7 +20,10 @@
     <meta charset="utf-8" />    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <base href="http://probanki.net/" />
+    @if (!isDebug)
+    {
+        <base href="http://probanki.net/" />
+    }
     
     <link rel="shortcut icon" type="image/x-icon" href="http://probanki.net/favicon.ico" />
 	<link rel="shortcut icon" type="image/png" href="http://probanki.net/favicon.png" />
@@ -30,7 +35,10 @@
     <meta name="description" content="@ViewBag.metaDescription" />    
     <meta name="keywords" content="@ViewBag.metaKeywords" />
     
-    @Styles.Render("~/Content/css")    
+    @Styles.Render("~/Content/css")  
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
         
     @Scripts.Render("~/bundles/modernizr")
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -79,18 +87,12 @@
         @Html.Action("_getModuleMainMenu", "Home", new { current_item = String.IsNullOrEmpty(ViewBag.CurrentMenuItem) ? "" : ViewBag.CurrentMenuItem })
     </div>
     <section id="wrapper" style="background-color: #0d1823">
-        <div id="column-middle-left" style="background-color: #0d1823">            
-            <div id="main">
-                <section id="error-404" class="text-content">
-                    <hgroup>
-                        <h1>404</h1>    
-                        <h2>Что-то пошло не так<br />Запрошенная страница не найдена</h2>
-                    </hgroup>
+        <div id="single-column" style="background-color: #0d1823">
+                <section id="error-404" class="text-content">                    
                     <p><a class="button-blue" title="Вернуться на главную" href="/">Вернуться на главную</a></p>
                 </section>
-            </div>
         </div>        
-        <div id="wrapper2" style="background-color: #0d1823"></div>        
+        <div id="single-wrapper" style="background-color: #0d1823"></div>
     </section>
     <footer id="footer" style="border: none;">
         <section id="footer-wrapper">
@@ -102,7 +104,7 @@
             <div id="footer-menu">
                 <div class="footer-menu-column">
                     <p class="header">Главная</p>
-                    <p class="menu-items">                                                                        @*@Html.RouteLink("Клуб аналитиков", "club_info", null)<br />*@                        @Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />                        @Html.RouteLink("Ревизия", "art_items", new { cat_id = "revizija" }, new { title = "Ревизия" })<br />                        @Html.RouteLink("Интервью", "art_items", new { cat_id = "intervju" }, new { title = "Интервью" })<br />                        @Html.RouteLink("Мнения", "art_items", new { cat_id = "mnenija" }, new { title = "Мнения" })<br />                        @Html.RouteLink("Лирика", "art_items", new { cat_id = "lirika" }, new { title = "Лирика" }) 
+                    <p class="menu-items">                                                                        @*@Html.RouteLink("Клуб аналитиков", "club_info", null)<br />*@                        @Html.RouteLink("Статьи", "art_items", new { cat_id = "statii" }, new { title = "Статьи" })<br />                        @Html.RouteLink("Обзор банков", "art_items", new { cat_id = "obzor-bankov" }, new { title = "Обзор банков" })<br />                        @Html.RouteLink("Интервью", "art_items", new { cat_id = "intervju" }, new { title = "Интервью" })<br />                        @Html.RouteLink("Мнения", "art_items", new { cat_id = "mnenija" }, new { title = "Мнения" })<br />                        @Html.RouteLink("Лирика", "art_items", new { cat_id = "lirika" }, new { title = "Лирика" }) 
                     </p>
                 </div>
                 <div class="footer-menu-column">
@@ -139,23 +141,8 @@
     
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")    
-    
-@*    @Html.Action("_getModuleCounters", "Home", null);
-    <div id="fb-root"></div>
-    <script>
-
-        (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-    </script>*@
-        
-    @*<script src="~/Scripts/jquery.maskedinput.min.js"></script>*@
+    @Html.Action("_getModuleCounters", "Home", null);
     <script src="~/Scripts/main.js"></script>
-    @*<script src="~/Scripts/countdown.js"></script>*@
 
 </body>
 </html>

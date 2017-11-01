@@ -1,0 +1,84 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@using Bankiru.Models.Helpers
+@model VM_DebtorsFilter
+@{
+    ViewBag.Title = "Список должников";
+    Layout = "~/Areas/Admin/Views/Shared/MasterAdmin.cshtml";
+}
+@section styles{
+    @Styles.Render("~/Content/admin/debtors/css")
+}
+@section adminTools{
+    <div id="admin-tools">
+        <p>@Html.ActionLink("Создать нового должника", "New")</p>
+    </div>
+}
+@section scripts
+{
+    <script>        
+        //Активность
+        jQuery(function ($) {
+            $('.active-change').click(function (e) {
+                e.preventDefault();
+
+                var itemId = $(this).attr("data-item-id");                
+                var aTitle = $(this).attr("title");
+
+                var isActive = "true";
+                if (aTitle == "Активный") {
+                    isActive = "false";
+                }
+
+                var imgName = '.img-active-' + itemId;
+                var aName = '.a-active-' + itemId;
+                var imgSrc = $(imgName).attr("src");
+                $(imgName).attr("src", "/Content/system/spinning.gif");
+
+                if (itemId != null) {
+                    $.ajax({
+                        url: '/Admin/Debtors/AjaxActive/' + itemId + '?is_active=' + isActive,
+                        success: function (data) {
+                            if (data != null) {
+                                if (data.resultMessage == "OK") {
+                                    if (isActive == "false") {
+                                        $(imgName).attr("src", "/Content/system/disactive.png");
+                                        $(imgName).attr("title", "Не активный");
+                                        $(aName).attr("data-is-active", "true");
+                                        $(aName).attr("title", "Не активный");
+                                    }
+                                    else {
+                                        $(imgName).attr("src", "/Content/system/active.png");
+                                        $(imgName).attr("title", "Активный");
+                                        $(aName).attr("data-is-active", "false");
+                                        $(aName).attr("title", "Активный");
+                                    }
+                                }
+                                else {
+                                    $(imgName).attr("src", imgSrc);
+                                }
+                            }
+                            else {
+                                $(imgName).attr("src", imgSrc);
+                            };
+                        },
+                        type: 'Post'
+                    });
+                }
+            })
+        });
+
+        // Удаление пользователя
+        $("#content .del-debtor").click(function (event) {
+            var debtorName = $(this).attr("data-debtor-name");
+            if (!confirm("Вы действительно хотите удалить " + debtorName + "?"))
+            {
+                event.preventDefault();
+            }
+        });
+    
+    </script>
+}
+    @Html.Action("_getModuleDebtorsFilter", "Debtors", new { filter = Model })
+    <div id="wrapper-debtors-list">
+        @Html.Action("_list", "Debtors", new { filter = Model, page = ViewBag.DebtorsListPage })
+    </div>

@@ -1,0 +1,32 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@{
+    Layout = "~/Views/Shared/Master.cshtml";
+
+    ViewBag.Title = "Школа инвесторов";
+    ViewBag.metaDescription = "";
+    ViewBag.metaKeywords = "";
+    ViewBag.metaRobots = "noindex, nofollow";
+
+    ViewBag.CurrentMenuItem = "school";
+}
+
+@section left_top
+{
+    @Html.Action("_getModuleOrgMenu", "Home", new { cur_id = -1 })
+}
+@section left_middle
+{
+    @Html.Action("_getModuleLastComments", "Home", new { show_article_link = true })
+}
+
+<section id="scool-page" class="standart-page">
+    <hgroup>
+        <h1>Школа инвесторов</h1>
+        @*<h2></h2>*@
+    </hgroup>
+        
+    <p>
+      Раздел находится в стадии разработки.  
+    </p>
+    
+</section>

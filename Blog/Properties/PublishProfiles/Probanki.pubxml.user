@@ -234,7 +234,7 @@
       <publishTime>03/10/2016 23:21:29</publishTime>
     </File>
     <File Include="bin/Bankiru.dll">
-      <publishTime>10/19/2017 23:14:43</publishTime>
+      <publishTime>10/26/2017 20:46:38</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
@@ -247,6 +247,15 @@
     </File>
     <File Include="bin/CKFinder_Watermark.dll">
       <publishTime>02/14/2016 00:07:49</publishTime>
+    </File>
+    <File Include="bin/Content/system/dev-page-bg.jpg">
+      <publishTime>10/23/2017 09:07:00</publishTime>
+    </File>
+    <File Include="bin/Content/system/dev-page-bg.png">
+      <publishTime>10/23/2017 20:57:13</publishTime>
+    </File>
+    <File Include="bin/Content/system/not-found.png">
+      <publishTime>10/25/2017 20:39:11</publishTime>
     </File>
     <File Include="bin/Currencies.dll">
       <publishTime>07/17/2017 14:02:58</publishTime>
@@ -3395,6 +3404,15 @@
     <File Include="Content/admin_themes/users/users.css">
       <publishTime>05/02/2017 18:54:26</publishTime>
     </File>
+    <File Include="Content/system/dev-page-bg.jpg">
+      <publishTime>10/23/2017 09:07:00</publishTime>
+    </File>
+    <File Include="Content/system/dev-page-bg.png">
+      <publishTime>10/23/2017 20:57:13</publishTime>
+    </File>
+    <File Include="Content/system/not-found.png">
+      <publishTime>10/25/2017 20:39:11</publishTime>
+    </File>
     <File Include="Content/system/spinning.gif">
       <publishTime>05/15/2016 17:55:20</publishTime>
     </File>
@@ -3570,7 +3588,7 @@
       <publishTime>04/13/2016 22:33:36</publishTime>
     </File>
     <File Include="Content/themes/site.css">
-      <publishTime>10/19/2017 22:57:58</publishTime>
+      <publishTime>10/25/2017 21:25:07</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/09/2016 21:09:00</publishTime>
@@ -3651,7 +3669,7 @@
       <publishTime>05/10/2017 21:10:41</publishTime>
     </File>
     <File Include="Scripts/main.js">
-      <publishTime>10/19/2017 23:10:32</publishTime>
+      <publishTime>10/21/2017 11:54:52</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>01/21/2016 18:01:41</publishTime>
@@ -4176,7 +4194,7 @@
       <publishTime>02/27/2016 13:18:16</publishTime>
     </File>
     <File Include="Sitemap.xml">
-      <publishTime>09/21/2016 19:44:49</publishTime>
+      <publishTime>10/25/2017 22:02:10</publishTime>
     </File>
     <File Include="Views/Account/ChangePassword.cshtml">
       <publishTime>10/16/2016 19:59:22</publishTime>
@@ -4212,7 +4230,7 @@
       <publishTime>02/26/2017 11:30:45</publishTime>
     </File>
     <File Include="Views/Articles/Art.cshtml">
-      <publishTime>12/23/2016 09:34:23</publishTime>
+      <publishTime>10/23/2017 20:47:40</publishTime>
     </File>
     <File Include="Views/Articles/Article.cshtml">
       <publishTime>01/24/2016 19:04:05</publishTime>
@@ -4221,7 +4239,7 @@
       <publishTime>02/12/2016 22:41:21</publishTime>
     </File>
     <File Include="Views/Articles/List.cshtml">
-      <publishTime>12/22/2016 08:54:52</publishTime>
+      <publishTime>10/23/2017 20:47:39</publishTime>
     </File>
     <File Include="Views/Articles/_categoriesMenu.cshtml">
       <publishTime>04/14/2016 22:19:26</publishTime>
@@ -4245,40 +4263,40 @@
       <publishTime>11/12/2016 14:16:55</publishTime>
     </File>
     <File Include="Views/Debtors/Index.cshtml">
-      <publishTime>10/18/2017 21:57:09</publishTime>
+      <publishTime>10/21/2017 14:51:47</publishTime>
     </File>
     <File Include="Views/Debtors/_debtCourtDecisionTypesDropDownList.cshtml">
-      <publishTime>10/08/2017 22:22:42</publishTime>
+      <publishTime>10/21/2017 12:02:29</publishTime>
     </File>
     <File Include="Views/Debtors/_debtDebtAmountRangeDropDownList.cshtml">
       <publishTime>10/08/2017 21:35:19</publishTime>
     </File>
     <File Include="Views/Debtors/_debtDebtCreatedRangeDropDownList.cshtml">
-      <publishTime>10/08/2017 21:38:01</publishTime>
+      <publishTime>10/21/2017 11:39:17</publishTime>
     </File>
     <File Include="Views/Debtors/_debtDebtEssenceTypesDropDownList.cshtml">
-      <publishTime>10/08/2017 22:32:35</publishTime>
+      <publishTime>10/21/2017 12:03:21</publishTime>
     </File>
     <File Include="Views/Debtors/_debtDebtorTypesDropDownList.cshtml">
-      <publishTime>10/08/2017 22:24:17</publishTime>
+      <publishTime>10/21/2017 12:03:19</publishTime>
     </File>
     <File Include="Views/Debtors/_debtDebtSellerTypesDropDownList.cshtml">
-      <publishTime>10/08/2017 22:32:01</publishTime>
+      <publishTime>10/21/2017 12:03:18</publishTime>
     </File>
     <File Include="Views/Debtors/_debtOriginalCreditorTypesDropDownList.cshtml">
-      <publishTime>10/08/2017 22:31:49</publishTime>
+      <publishTime>10/21/2017 12:03:15</publishTime>
     </File>
     <File Include="Views/Debtors/_debtSalePriceRangeDropDownList.cshtml">
-      <publishTime>10/08/2017 21:33:00</publishTime>
+      <publishTime>10/21/2017 12:03:16</publishTime>
     </File>
     <File Include="Views/Debtors/_moduleDebtorDetails.cshtml">
-      <publishTime>10/19/2017 21:41:19</publishTime>
+      <publishTime>10/21/2017 20:45:27</publishTime>
     </File>
     <File Include="Views/Debtors/_moduleDebtorForm.cshtml">
-      <publishTime>10/18/2017 21:57:32</publishTime>
+      <publishTime>10/21/2017 13:13:56</publishTime>
     </File>
     <File Include="Views/Debtors/_moduleDebtorsFilter.cshtml">
-      <publishTime>10/18/2017 22:20:07</publishTime>
+      <publishTime>10/22/2017 16:56:02</publishTime>
     </File>
     <File Include="Views/Debtors/_moduleDebtorsList.cshtml">
       <publishTime>10/19/2017 23:08:50</publishTime>
@@ -4320,13 +4338,13 @@
       <publishTime>08/13/2017 14:46:14</publishTime>
     </File>
     <File Include="Views/Error/InternalError.cshtml">
-      <publishTime>08/13/2017 14:46:18</publishTime>
+      <publishTime>10/27/2017 14:02:26</publishTime>
     </File>
     <File Include="Views/Error/NotFound.cshtml">
-      <publishTime>08/13/2017 15:42:50</publishTime>
+      <publishTime>10/27/2017 14:02:10</publishTime>
     </File>
     <File Include="Views/Forecast/About.cshtml">
-      <publishTime>05/16/2017 22:34:29</publishTime>
+      <publishTime>10/21/2017 14:49:58</publishTime>
     </File>
     <File Include="Views/Forecast/Archive.cshtml">
       <publishTime>05/14/2017 17:09:07</publishTime>
@@ -4412,6 +4430,12 @@
     <File Include="Views/Rates/_moduleChart.cshtml">
       <publishTime>07/17/2017 22:42:20</publishTime>
     </File>
+    <File Include="Views/School/Index.cshtml">
+      <publishTime>10/23/2017 08:49:36</publishTime>
+    </File>
+    <File Include="Views/Shared/DevPage.cshtml">
+      <publishTime>10/25/2017 20:48:39</publishTime>
+    </File>
     <File Include="Views/Shared/EditorTemplates/tinymce_full.cshtml">
       <publishTime>02/27/2016 14:25:24</publishTime>
     </File>
@@ -4422,10 +4446,10 @@
       <publishTime>11/14/2016 22:08:30</publishTime>
     </File>
     <File Include="Views/Shared/Master.cshtml">
-      <publishTime>10/19/2017 23:14:30</publishTime>
+      <publishTime>10/25/2017 21:31:36</publishTime>
     </File>
     <File Include="Views/Shared/Master_2.cshtml">
-      <publishTime>10/08/2017 17:20:57</publishTime>
+      <publishTime>10/23/2017 20:47:51</publishTime>
     </File>
     <File Include="Views/Shared/NotFound.cshtml">
       <publishTime>02/28/2017 20:33:49</publishTime>
@@ -4464,7 +4488,10 @@
       <publishTime>06/07/2016 22:14:32</publishTime>
     </File>
     <File Include="Views/Shared/_moduleMainMenu.cshtml">
-      <publishTime>03/30/2017 21:56:10</publishTime>
+      <publishTime>10/23/2017 20:47:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_moduleMainMenu_old.cshtml">
+      <publishTime>10/23/2017 20:47:53</publishTime>
     </File>
     <File Include="Views/Shared/_moduleOrgLettersFilter.cshtml">
       <publishTime>04/25/2016 20:19:58</publishTime>
@@ -4485,7 +4512,7 @@
       <publishTime>06/14/2016 07:24:25</publishTime>
     </File>
     <File Include="Views/Shared/_regionsDropDownList.cshtml">
-      <publishTime>10/08/2017 21:49:25</publishTime>
+      <publishTime>10/21/2017 12:04:29</publishTime>
     </File>
     <File Include="Views/Shared/_tariffDropDownList.cshtml">
       <publishTime>05/14/2017 18:01:43</publishTime>
@@ -4501,6 +4528,9 @@
     </File>
     <File Include="Views/Shared/_widget_vk.cshtml">
       <publishTime>12/18/2016 23:04:51</publishTime>
+    </File>
+    <File Include="Views/TV/Index.cshtml">
+      <publishTime>10/21/2017 14:49:29</publishTime>
     </File>
     <File Include="Views/Users/Archive.cshtml">
       <publishTime>05/14/2017 15:49:19</publishTime>
@@ -4542,7 +4572,7 @@
       <publishTime>01/21/2016 22:19:45</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/19/2017 23:14:44</publishTime>
+      <publishTime>10/27/2017 14:03:10</publishTime>
     </File>
   </ItemGroup>
 </Project>

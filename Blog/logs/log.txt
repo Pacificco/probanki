@@ -17613,3 +17613,1449 @@ System.Net.WebException: Слишком много попыток автоматического перенаправления.
    в System.Net.HttpWebRequest.GetResponse()
    в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
 ERROR 2017-10-19 15:50:13,502 63004321ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-10-21 11:16:33,851   693ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-21 11:16:33,879   721ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-10-21 11:16:33,912   754ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-21 11:16:33,912   754ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-10-21 11:16:34,133   975ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-21 11:16:34,133   975ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-10-21 11:16:34,158  1000ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-21 11:16:34,158  1000ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-10-21 14:27:06,871 307171ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=9
+ERROR 2017-10-21 14:27:41,696 341996ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:20,362   332ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,717  1687ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,721  1691ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,724  1694ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,726  1696ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,729  1699ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,732  1702ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,734  1704ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,737  1707ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,740  1710ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,744  1714ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,749  1719ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,753  1723ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,757  1727ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,761  1731ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,765  1735ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,769  1739ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,773  1743ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,778  1748ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,782  1752ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,787  1757ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,791  1761ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,796  1766ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,801  1771ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,807  1777ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,812  1782ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,817  1787ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,823  1793ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,829  1799ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,834  1804ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:21,841  1811ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About
+ERROR 2017-10-21 14:29:35,090 15059ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,097 15066ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,101 15070ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,105 15074ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,109 15078ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,114 15083ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,119 15088ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,124 15093ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,132 15101ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,135 15104ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,139 15108ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,142 15111ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,146 15115ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,150 15119ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,154 15123ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,157 15126ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,167 15136ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,172 15141ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,177 15146ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,183 15152ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,188 15157ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,192 15161ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,198 15167ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,203 15172ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,208 15177ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,215 15184ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,220 15189ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,225 15194ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,231 15200ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,237 15206ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:35,243 15212ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,524 32493ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,532 32501ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,537 32506ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,543 32512ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,550 32519ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,555 32524ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,558 32527ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,562 32531ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,566 32535ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,570 32539ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,574 32543ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,578 32547ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,583 32552ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,587 32556ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,592 32561ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,597 32566ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,602 32571ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,607 32576ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,612 32581ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,617 32586ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,622 32591ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,627 32596ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,632 32601ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,637 32606ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,643 32612ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,649 32618ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,654 32623ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,666 32635ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,672 32641ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,678 32647ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:29:52,684 32653ms BaseController         Http404            - NotFound - http://localhost:9461/Home/About?Length=8
+ERROR 2017-10-21 14:31:02,012 101981ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,018 101987ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,024 101993ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,030 101999ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,036 102005ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,039 102008ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,044 102013ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,047 102016ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,051 102020ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,056 102025ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,061 102030ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,065 102034ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,068 102037ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,072 102041ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,076 102045ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,080 102049ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,085 102054ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,089 102058ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,094 102063ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,099 102068ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,103 102072ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,109 102078ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,113 102082ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,119 102088ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,125 102094ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,130 102099ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,135 102104ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,142 102111ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,154 102123ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:31:02,161 102130ms BaseController         Http404            - NotFound - http://localhost:9461/Forecasts/About
+ERROR 2017-10-21 14:43:29,078 17054ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-21 14:43:29,091 17067ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-21 14:43:29,097 17073ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-21 14:43:29,098 17074ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 13:29:35,093  7901ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:29:35,339  8147ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:30:54,821   733ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:30:54,947   859ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:31:08,869   609ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:31:09,159   899ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:30,287 142027ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:30,526 142266ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:49,687   503ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:49,908   724ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:51,986  2802ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:33:52,064  2880ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:34:18,354   837ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:34:18,451   934ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:34:19,774  2257ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:34:19,932  2415ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:41:37,928  1126ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:41:38,045  1243ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:42:10,205 33402ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,576 35774ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,583 35781ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,590 35788ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,597 35795ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,604 35802ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,611 35809ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,617 35815ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,625 35823ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,631 35829ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,638 35836ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:12,646 35844ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,258 57456ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,263 57461ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,267 57465ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,271 57469ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,275 57473ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,280 57478ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,286 57484ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,293 57491ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,299 57497ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,303 57501ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,307 57505ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:42:34,311 57509ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,772 254970ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,781 254979ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,785 254983ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,789 254987ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,793 254991ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,798 254996ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,802 255000ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,806 255004ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,811 255009ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,817 255015ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,821 255019ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,825 255023ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:45:51,837 255035ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:47:02,414 325611ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:47:02,486 325683ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,495 325692ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,499 325696ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,503 325700ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,507 325704ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,513 325710ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,517 325714ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,521 325718ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,526 325723ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,530 325727ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,534 325731ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:47:02,539 325736ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:51:41,431  1067ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:51:41,553  1189ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 13:52:55,338 74973ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,154 75789ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,158 75793ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,162 75797ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,166 75801ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,169 75804ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,174 75809ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,178 75813ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,182 75817ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,186 75821ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,191 75826ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 13:52:56,195 75830ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:00:53,605 553240ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:00:53,614 553249ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:01:07,384 567019ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:01:07,389 567024ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:04:39,446 779081ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:04:43,251 782886ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:04:57,100   709ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:04:57,253   862ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:10:24,687 328295ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:10:28,785 332394ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:10:50,018 353627ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,371 445980ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,377 445986ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,381 445990ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,384 445993ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,387 445996ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,392 446001ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,397 446006ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,402 446011ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:12:22,408 446017ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:13:19,184   945ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:13:19,308  1069ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:13:20,454  2215ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:13:20,535  2296ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:13:27,864   733ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:13:27,997   866ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:37:00,040 1412908ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,850 1413718ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,854 1413722ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,857 1413725ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,862 1413730ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,866 1413734ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,870 1413738ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,873 1413741ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,877 1413745ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,882 1413750ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,886 1413754ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:00,889 1413757ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:37:04,333   618ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:37:04,464   749ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:39:04,489 120773ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Время ожидания операции истекло
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-10-22 14:39:04,489 120773ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:42:05,891 302176ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:43:57,669 413953ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,820 1116104ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,829 1116113ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,835 1116119ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,841 1116125ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,846 1116130ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,852 1116136ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,857 1116141ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,860 1116144ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,864 1116148ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:55:39,869 1116153ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:56:03,934   723ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:56:04,080   869ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:58:03,137  1104ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:58:03,380  1347ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 14:58:07,751  5718ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,146  8112ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,151  8117ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,154  8120ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,158  8124ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,162  8128ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,166  8132ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,170  8136ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,173  8139ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,178  8144ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,182  8148ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:10,185  8151ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:12,285 10251ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 14:58:12,293 10259ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 15:00:23,294 141261ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 15:00:23,304 141271ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 15:00:30,156   988ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 15:00:30,298  1130ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 15:01:34,511   924ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 15:01:34,627  1040ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 15:02:48,902 75314ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 15:03:19,120 105533ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 15:04:29,111   836ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 15:04:29,271   996ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:03:15,154  1002ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:03:15,322  1170ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:15:30,159 736007ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:15:33,963 739811ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:16:01,688   523ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:16:01,794   629ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:17:04,069 62904ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:17:04,194 63029ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:19:45,447 224281ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:46,872 225706ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:47,323 226157ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:47,671 226505ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:48,015 226849ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:48,345 227179ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:48,639 227474ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:48,836 227671ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:48,986 227821ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:49,121 227956ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:49,278 228113ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:19:49,638 228473ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,644 270479ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,651 270486ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,656 270491ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,662 270497ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,667 270502ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,672 270507ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,677 270512ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,682 270517ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:20:31,686 270521ms BaseController         Http404            - NotFound - http://localhost:9461/debtors/_getModuleDebtorsList
+ERROR 2017-10-22 16:56:14,498   919ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:56:14,672  1093ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:57:41,396   646ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-22 16:57:41,570   820ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-22 17:08:27,873 16937ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,896 16960ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,906 16970ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,906 16970ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,953 17017ms BaseController         tModuleDebtorsList - System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 43
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+ERROR 2017-10-22 17:08:27,979 17043ms ForecastManager        etForecastSubjects - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,979 17043ms ChartDownloader        Init               - Ошибка во время выполнения хранимой процедуры ForecastSubjectsView!
+System.InvalidOperationException: ExecuteReader: Свойство Connection не инициализировано.
+   в System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Club.ForecastManager.GetForecastSubjects() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Club\ForecastManager.cs:строка 709
+ERROR 2017-10-22 17:08:27,981 17045ms BaseController         Index              - System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 43
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+ERROR 2017-10-22 17:08:31,892 20957ms BaseController         Index              - System.Data.SqlClient.SqlException (0x80131904): При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): Не удается найти указанный файл
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Bankiru.Models.Infrastructure.GlobalParams.GetConnection() в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Infrastructure\GlobalParams.cs:строка 43
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+ERROR 2017-10-23 08:47:42,521  4746ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:47:42,656  4881ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:49:00,414   519ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:49:00,534   639ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:50:14,728   466ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:50:14,873   611ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:57:14,156   401ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 08:57:14,267   512ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:00:49,204   472ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:00:49,323   591ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:04:00,065   447ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:04:00,188   570ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:05:37,901   445ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-23 09:05:38,025   569ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-25 21:16:00,241  8803ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:17:00,556   358ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:17:22,635 22437ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:18:08,511   414ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:20:38,287 150190ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:20:45,618 157521ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:21:10,825 182728ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:22:48,741   360ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:23:37,872 49490ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:23:44,921 56540ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:23:56,976 68594ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju-ghgj
+ERROR 2017-10-25 21:29:01,418  6738ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju/karera
+ERROR 2017-10-25 21:29:11,645 16964ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju/karera
+ERROR 2017-10-25 21:29:24,688   328ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju/karera
+ERROR 2017-10-25 21:31:08,732 76845ms BaseController         Art                - 
+ERROR 2017-10-25 21:31:08,747 76860ms BaseController         Http404            - NotFound - http://localhost:9461/publikacii/intervju/karera-23
+ERROR 2017-10-28 22:27:27,120 106903ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,193 106976ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,196 106979ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,204 106987ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,210 106993ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,218 107001ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,224 107007ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:27,231 107014ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,045 107828ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,049 107832ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,052 107835ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,056 107839ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,059 107842ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,061 107844ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,064 107847ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,067 107850ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,070 107853ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,073 107856ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,076 107859ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:27:28,080 107863ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,802 169584ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,807 169589ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,810 169592ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,813 169595ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,816 169598ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,819 169601ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,822 169604ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:29,825 169607ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,631 183414ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,634 183417ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,637 183420ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,640 183423ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,642 183425ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,645 183428ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,648 183431ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,652 183435ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,655 183438ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,657 183440ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,660 183443ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:28:43,664 183447ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:34,019  6495ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,218  7694ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,221  7697ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,227  7703ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,232  7708ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,238  7714ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,244  7720ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:30:35,250  7726ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:31,084 14399ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,124 16438ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,127 16441ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,133 16447ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,140 16454ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,146 16460ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,153 16467ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:32:33,159 16473ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:29,621 28031ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,636 51046ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,640 51050ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,646 51056ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,653 51063ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,661 51071ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,668 51078ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:37:52,675 51085ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:14,989 20055ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,008 20074ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,012 20078ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,043 20109ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,050 20116ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,057 20123ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,064 20130ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:38:15,071 20137ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:10,871 25733ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,962 26824ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,965 26827ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,969 26831ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,973 26835ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,977 26839ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,981 26843ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:40:11,984 26846ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:21,799 96661ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:23,890 98752ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:25,290 100152ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:26,627 101489ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:27,843 102705ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:29,091 103953ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:30,314 105177ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:41:33,677 108539ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:48,400  9030ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,702 10332ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,705 10335ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,710 10340ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,716 10346ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,722 10352ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,728 10358ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:44:49,733 10363ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-28 22:45:04,986 25616ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:45:14,751 35382ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:46:38,800 14627ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:46:57,771 33598ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:47:00,093 35921ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,094 35922ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,094 35922ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,094 35922ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,095 35923ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,096 35924ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,096 35924ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,096 35924ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:00,096 35924ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-10-28 22:47:03,658 39486ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:50:48,127  3752ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:55:54,875  5895ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-28 22:57:11,885 82905ms BaseController         Http404            - NotFound - http://localhost:9461/Content/admin/debtors/css
+ERROR 2017-10-29 03:14:56,537 14402285ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 03:14:56,666 14402414ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 05:14:56,528 21602276ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 05:14:56,614 21602362ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 07:14:56,589 28802338ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 07:14:56,708 28802457ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 09:14:56,532 36002281ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 09:14:56,616 36002365ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 11:14:56,593 43202342ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 11:14:56,845 43202594ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:09:14,386  2805ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:09:14,644  3063ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:11:21,586   471ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:11:21,706   591ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:12:19,325 58210ms DebtorsController      _getDebtorsList    - Попытка обратиться к методу _debtorsList не через Ajax!
+ERROR 2017-10-29 12:19:16,502   470ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:19:16,622   590ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:21:42,150   387ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:21:42,272   509ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:22:08,348 26584ms DebtorsController      _getDebtorsList    - Попытка обратиться к методу _debtorsList не через Ajax!
+ERROR 2017-10-29 12:22:44,628  2729ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:22:44,922  3023ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:24:45,230 123331ms DebtorsController      _getDebtorsList    - Попытка обратиться к методу _debtorsList не через Ajax!
+ERROR 2017-10-29 12:25:29,296  2029ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:25:29,485  2218ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:26:47,209   442ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:26:47,313   546ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:27:12,316   745ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:27:12,410   839ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:11,520  1101ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:11,605  1186ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:13,425  3006ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:13,505  3086ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:24,007   737ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:24,141   871ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:25,186  1916ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:31:25,262  1992ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:48:20,146  1122ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:48:20,259  1235ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:51:32,746 193722ms ChartManager           dQuotesDataFromCBR - System.Net.WebException: Запрос был прерван: Запрос отменен.
+   в System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.Xml.XmlTextReaderImpl.InitStreamInput(Uri baseUri, String baseUriStr, Stream stream, Byte[] bytes, Int32 byteCount, Encoding encoding)
+   в System.Xml.XmlTextReaderImpl..ctor(String url, Stream input, XmlNameTable nt)
+   в System.Xml.XmlTextReader..ctor(Stream input)
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromCBR(String subject, Nullable`1 requestDate) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 213
+ERROR 2017-10-29 12:51:32,747 193723ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:51:32,869 193845ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:51:59,565   874ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:51:59,659   968ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:52:55,168   763ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 12:52:55,294   889ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 13:00:27,767   359ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 13:00:27,875   467ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-29 13:00:32,584  5176ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,855  6447ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,858  6450ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,863  6455ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,868  6460ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,874  6466ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,879  6471ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:00:33,885  6477ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,183 196775ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,190 196782ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,192 196784ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,195 196787ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,198 196790ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,201 196793ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,205 196797ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:03:44,208 196800ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-29 13:05:00,342   725ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-10-29 13:05:00,525   908ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-10-31 17:48:18,703 189799086ms ChartDownloader        veQoutesToDataBase - Ошибка во время выполнения хранимой процедуры QuotesDataEdit!
+System.Data.SqlClient.SqlException (0x80131904): Истекло время ожидания (Timeout). Время ожидания истекло до завершения операции или сервер не отвечает. ---> System.ComponentModel.Win32Exception (0x80004005): Время ожидания операции истекло
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   в System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   в System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   в System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   в System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   в Bankiru.Models.OutApi.ChartDownloader._saveQoutesToDataBase(ChartObject row, Int32 subjectId) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartDownloader.cs:строка 185
+ClientConnectionId:8f75a19a-c6ab-4568-bd15-850e777ebd6d
+ERROR 2017-10-31 17:48:55,252 189835635ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:00,898 189841281ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:00,901 189841284ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:00,978 189841361ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:00,993 189841376ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:00,999 189841382ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:01,009 189841392ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-10-31 17:49:01,014 189841397ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:10,996 38352ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,059 38415ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,062 38418ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,069 38425ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,075 38431ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,082 38438ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,089 38445ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:54:11,096 38452ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:16,712 123553ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:17,773 124614ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:18,693 125534ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:19,570 126411ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:20,478 127319ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:22,007 128848ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:23,327 130168ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:56:24,567 131408ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:20,583 24495ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,505 49416ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,521 49432ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,532 49443ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,545 49456ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,553 49464ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,560 49471ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:45,568 49479ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,967 52879ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,971 52883ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,974 52886ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,978 52890ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,981 52893ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,984 52896ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,987 52899ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:48,990 52902ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,120 54032ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,125 54037ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,128 54040ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,131 54043ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,134 54046ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,138 54050ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,141 54053ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:50,144 54056ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,181 55093ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,185 55097ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,188 55100ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,191 55103ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,195 55107ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,198 55110ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,202 55114ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:51,221 55133ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,318 56230ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,323 56235ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,328 56240ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,331 56243ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,335 56247ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,338 56250ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,341 56253ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:52,345 56257ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,469 57381ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,473 57385ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,477 57389ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,480 57392ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,484 57396ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,487 57399ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,491 57403ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 21:59:53,495 57407ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,916 70828ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,920 70832ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,925 70837ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,931 70843ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,936 70848ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,940 70852ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,943 70855ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,947 70859ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,957 70869ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,960 70872ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,964 70876ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,968 70880ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,971 70883ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,976 70888ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,979 70891ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,983 70895ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,990 70902ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,994 70906ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:06,997 70909ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,001 70913ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,006 70918ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,009 70921ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,013 70925ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,016 70928ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,025 70937ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,028 70940ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,032 70944ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,036 70948ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,039 70951ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,043 70955ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,047 70959ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,051 70963ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,058 70970ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,062 70974ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,066 70978ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,089 71001ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,093 71005ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,098 71010ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,101 71013ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,106 71018ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,113 71025ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,116 71028ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,120 71032ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,124 71036ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,128 71040ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,132 71044ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,136 71048ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,140 71052ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,147 71059ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,151 71063ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,155 71067ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,159 71071ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,163 71075ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,168 71080ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,172 71084ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,177 71089ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,184 71096ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,189 71101ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,194 71106ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,198 71110ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,202 71114ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,206 71118ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,210 71122ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,214 71126ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,222 71134ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,226 71138ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,231 71143ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,235 71147ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,239 71151ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,243 71155ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,247 71159ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,252 71164ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,260 71172ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,265 71177ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,270 71182ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,274 71186ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,279 71191ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,302 71214ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,310 71222ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,315 71227ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,323 71235ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,328 71240ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,333 71245ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,337 71249ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,342 71254ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,346 71258ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,350 71262ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,355 71267ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,363 71275ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,367 71279ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,373 71285ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,377 71289ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,381 71293ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,386 71298ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,390 71302ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,395 71307ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,403 71315ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,408 71320ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,412 71324ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,416 71328ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,421 71333ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,425 71337ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,430 71342ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,435 71347ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,443 71355ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,447 71359ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,452 71364ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,457 71369ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,461 71373ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,466 71378ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,475 71387ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,480 71392ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,488 71400ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,493 71405ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,498 71410ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,503 71415ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,508 71420ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,512 71424ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,517 71429ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,523 71435ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,532 71444ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,537 71449ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,542 71454ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,547 71459ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,553 71465ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,559 71471ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,567 71479ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,572 71484ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,580 71492ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,585 71497ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,590 71502ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,595 71507ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,601 71513ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,606 71518ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,611 71523ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,616 71528ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,624 71536ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,630 71542ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,638 71550ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,643 71555ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,648 71560ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,654 71566ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,659 71571ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,664 71576ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,679 71591ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,684 71596ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,689 71601ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,695 71607ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,700 71612ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,706 71618ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,711 71623ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,716 71628ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,724 71636ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,730 71642ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,735 71647ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,742 71654ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,747 71659ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,753 71665ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,758 71670ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,763 71675ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,773 71685ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,778 71690ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,787 71699ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,792 71704ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,798 71710ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,804 71716ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,809 71721ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,815 71727ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,825 71737ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,831 71743ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,836 71748ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,842 71754ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,848 71760ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,853 71765ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,860 71772ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,868 71780ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,878 71790ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,883 71795ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,889 71801ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,894 71806ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,903 71815ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,910 71822ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,915 71827ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,922 71834ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,931 71843ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,937 71849ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,943 71855ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,953 71865ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,959 71871ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,964 71876ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,970 71882ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,976 71888ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,985 71897ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,993 71905ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:07,999 71911ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,006 71918ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,012 71924ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,018 71930ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,024 71936ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,029 71941ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,042 71954ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,048 71960ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,054 71966ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,077 71989ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,083 71995ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,090 72002ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,096 72008ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,105 72017ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,114 72026ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,120 72032ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,126 72038ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,132 72044ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,138 72050ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,147 72059ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,153 72065ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,159 72071ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,168 72080ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,175 72087ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,181 72093ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,187 72099ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,203 72115ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,210 72122ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,216 72128ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,222 72134ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,232 72144ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,238 72150ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,245 72157ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,255 72167ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,262 72174ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,269 72181ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,276 72188ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,282 72194ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,292 72204ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,302 72214ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,308 72220ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,315 72227ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,321 72233ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,327 72239ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,334 72246ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,343 72255ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,353 72265ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,360 72272ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,366 72278ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,373 72285ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,380 72292ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,387 72299ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,396 72308ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,403 72315ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,412 72324ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,420 72332ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,426 72338ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,432 72344ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,442 72354ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,449 72361ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,456 72368ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,463 72375ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,473 72385ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,483 72395ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,490 72402ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,496 72408ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,503 72415ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,510 72422ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,517 72429ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,524 72436ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,540 72452ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,548 72460ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,556 72468ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,563 72475ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,570 72482ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,577 72489ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,585 72497ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,592 72504ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,602 72514ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,610 72522ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,617 72529ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,625 72537ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,632 72544ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,644 72556ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,652 72564ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,660 72572ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,672 72584ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,684 72596ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,692 72604ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,699 72611ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,706 72618ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,713 72625ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,721 72633ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,729 72641ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,741 72653ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,748 72660ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,757 72669ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,764 72676ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,772 72684ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,779 72691ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,786 72698ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,798 72710ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,809 72721ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,816 72728ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,824 72736ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,831 72743ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,839 72751ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,846 72758ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,854 72766ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,861 72773ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,872 72784ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,879 72791ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,887 72799ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,895 72807ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,902 72814ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,910 72822ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,918 72830ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,926 72838ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,938 72850ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,950 72862ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,958 72870ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,965 72877ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,973 72885ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,980 72892ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,990 72902ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:08,998 72910ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,008 72920ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,016 72928ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,023 72935ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,031 72943ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,039 72951ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,046 72958ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,053 72965ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,061 72973ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,081 72993ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,090 73002ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,098 73010ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,105 73017ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,113 73025ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,121 73033ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,129 73041ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,137 73049ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,147 73059ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,155 73067ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,163 73075ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,171 73083ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,179 73091ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,187 73099ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,195 73107ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,212 73124ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,224 73136ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,232 73144ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,240 73152ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,248 73160ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,256 73168ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,264 73176ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,274 73186ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,283 73195ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,298 73210ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,306 73218ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,314 73226ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,327 73239ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,336 73248ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,344 73256ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,352 73264ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,360 73272ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,372 73284ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,380 73292ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,389 73301ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,398 73310ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,406 73318ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,414 73326ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,422 73334ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,430 73342ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,442 73354ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,454 73366ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,462 73374ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,471 73383ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,479 73391ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,487 73399ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,496 73408ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,505 73417ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,515 73427ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,524 73436ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,532 73444ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,541 73453ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,551 73463ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,565 73477ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,574 73486ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,582 73494ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,594 73506ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,603 73515ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,613 73525ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,622 73534ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,631 73543ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,640 73552ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,648 73560ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,658 73570ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,675 73587ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,683 73595ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,691 73603ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,700 73612ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,709 73621ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,717 73629ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,731 73643ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,740 73652ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,752 73664ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,761 73673ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,769 73681ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,778 73690ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,787 73699ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,795 73707ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,805 73717ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,814 73726ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,826 73738ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,835 73747ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,844 73756ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,853 73765ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,862 73774ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,871 73783ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,885 73797ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,894 73806ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,912 73824ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,926 73838ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,935 73847ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,944 73856ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,954 73866ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,963 73875ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,976 73888ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:09,985 73897ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,001 73913ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,009 73921ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,018 73930ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,027 73939ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,036 73948ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,048 73960ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,058 73970ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,067 73979ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,087 73999ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,097 74009ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,106 74018ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,115 74027ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,124 74036ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,133 74045ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,142 74054ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,152 74064ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,164 74076ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,175 74087ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,184 74096ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,193 74105ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,207 74119ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,216 74128ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,225 74137ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:10,235 74147ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:54,213 39662ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,226 40675ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,230 40679ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,236 40685ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,242 40691ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,249 40698ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,256 40705ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:55,263 40712ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,368 44817ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,373 44822ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,378 44827ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,384 44833ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,389 44838ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,393 44842ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,398 44847ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:00:59,403 44852ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,489 45938ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,493 45942ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,496 45945ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,499 45948ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,503 45952ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,506 45955ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,509 45958ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:00,512 45961ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,275 62724ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,281 62730ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,286 62735ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,290 62739ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,293 62742ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,297 62746ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,301 62750ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:17,304 62753ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,342 63791ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,345 63794ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,349 63798ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,353 63802ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,356 63805ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,359 63808ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,363 63812ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,367 63816ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,958 64407ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,962 64411ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,967 64416ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,971 64420ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,974 64423ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,978 64427ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,982 64431ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:01:18,986 64435ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,748 140198ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,754 140204ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,758 140208ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,763 140213ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,768 140218ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,772 140222ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,777 140227ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:34,782 140232ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,747 144196ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,752 144201ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,756 144205ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,760 144209ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,763 144212ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,767 144216ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,771 144220ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:02:38,774 144223ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,000 166449ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,005 166454ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,008 166457ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,011 166460ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,014 166463ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,017 166466ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,020 166469ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:03:01,023 166472ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:21,689 52727ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:23,620 54658ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:24,565 55603ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:25,607 56645ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:26,374 57412ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:27,217 58255ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:28,070 59108ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:07:29,271 60309ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,277 378315ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,283 378321ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,287 378325ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,290 378328ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,294 378332ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,298 378336ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,302 378340ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:12:47,305 378343ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors
+ERROR 2017-11-01 22:20:18,092 342146ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,150 342204ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,153 342207ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,159 342213ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,165 342219ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,171 342225ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,178 342232ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 22:20:18,185 342239ms BaseController         Http404            - NotFound - http://localhost:9461/Admin/Debtors?CourtDecisionType=0&DebtAmountRange=0&DebtCreatedRange=0&DebtEssenceType=0&DebtorType=0&DebtSellerType=0&OriginalCreditorType=0&RegionId=00000000-0000-0000-0000-000000000000&SalePriceRange=0&page=1
+ERROR 2017-11-01 23:04:54,063  1219ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:04:54,073  1229ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-01 23:04:54,245  1401ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:04:54,246  1402ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-01 23:07:09,167  1686ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:07:09,177  1696ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-01 23:07:09,451  1970ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:07:09,451  1970ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-01 23:14:39,840   907ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:14:39,850   917ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-01 23:14:40,043  1110ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-01 23:14:40,043  1110ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные

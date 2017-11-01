@@ -44,9 +44,24 @@ else
 
 @if (Model.Items.Count > 0)
 {
-    @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("debtors", new
+    
+    @Html.PageLinks(@Model.PagingInfo, x => Url.Action("Index", "Debtors", new
        {
-           filter = Model.Filters,
+           CourtDecisionType = (int)Model.Filters.CourtDecisionType,
+           DebtAmountRange = Model.Filters.DebtAmountRange,
+           DebtCreatedRange = Model.Filters.DebtCreatedRange,
+           DebtEssenceType = (int)Model.Filters.DebtEssenceType,
+           DebtorType = (int)Model.Filters.DebtorType,
+           DebtSellerType = (int)Model.Filters.DebtSellerType,
+           OriginalCreditorType = (int)Model.Filters.OriginalCreditorType,
+           RegionId = Model.Filters.RegionId,
+           SalePriceRange = Model.Filters.SalePriceRange,           
            page = x
        }))
+    
+    /*@Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl(routeName: "debtors", routeValues: new
+       {           
+           filter = Model.Filters,
+           page = x
+       }))*/
 }

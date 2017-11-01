@@ -11,14 +11,6 @@ namespace Bankiru.Controllers
 {
     public class DebtorsController : BaseController
     {
-        public int idin = 1;
-
-        public DebtorsController() : base()
-        {
-            idin = 2;
-        }
-
-
         [HttpGet]
         public ActionResult Index(VM_DebtorsFilter filter, int page = 1)
         {
@@ -26,6 +18,7 @@ namespace Bankiru.Controllers
             {
                 if (_connected)
                 {
+                    ViewBag.DebtorsListPage = page;
                     return View();                    
                 }
                 else
@@ -109,7 +102,7 @@ namespace Bankiru.Controllers
                 if (_connected)
                 {
                     DebtorsManager manager = new DebtorsManager();
-                    VM_Debtors model = manager.GetDebtors(filter, page);                    
+                    VM_Debtors model = manager.GetDebtors(filter, page);
                     if (model != null)
                         return PartialView("_moduleDebtorsList", model);
                     else
@@ -177,7 +170,8 @@ namespace Bankiru.Controllers
             }
         }
 
-        [HttpPost]
+        //[HttpPost]
+        [HttpGet]
         public ActionResult _getModuleDebtorsList(VM_DebtorsFilter filter, int page = 1)
         {
             try
@@ -215,7 +209,7 @@ namespace Bankiru.Controllers
             }
         }
         [HttpPost]
-        public ActionResult _getModuleDebtorDetails(int debtor_id)
+        public ActionResult _getModuleDebtorDetailsById(int debtor_id)
         {
             try
             {
@@ -268,145 +262,6 @@ namespace Bankiru.Controllers
                 return PartialView(_errPartialPage);
             }
         }
-
-        #region СПИСКИ ДЛЯ ФИЛЬТРОВ
-        [ChildActionOnly]
-        public ActionResult _getDebtCreatedRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtDebtCreatedRangeDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getDebtAmountRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtDebtAmountRangeDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getDebtSalePriceRangeDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtSalePriceRangeDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getCourtDecisionTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtCourtDecisionTypesDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getDebtorTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtDebtorTypesDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getDebtEssenceTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtDebtEssenceTypesDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getOriginalCreditorTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtOriginalCreditorTypesDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        [ChildActionOnly]
-        public ActionResult _getDebtSellerTypesDropDownList(int selectedId, EnumFirstDropDownItem firstItem, string id)
-        {
-            try
-            {
-                VM_StringDropDown model = new VM_StringDropDown();
-                model.FirstItem = firstItem;
-                model.Name = id;
-                model.SelectedId = selectedId;
-                return PartialView("_debtDebtSellerTypesDropDownList", model);
-            }
-            catch (Exception e)
-            {
-                log.Error(e.ToString());
-                return PartialView(_errPartialPage);
-            }
-        }
-        #endregion
 
     }
 }

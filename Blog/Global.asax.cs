@@ -56,11 +56,11 @@ namespace Bankiru
                         break;
                     case 500:
                         viewResult.ViewName = "InternalError";
-                        rc.RouteData.Values.Add("action", "Http404");
+                        rc.RouteData.Values.Add("action", "Http500");
                         break;
                     default:
                         viewResult.ViewName = "Error";
-                        rc.RouteData.Values.Add("action", "Http404");
+                        rc.RouteData.Values.Add("action", "Http500");
                         break;
                 }
             }

@@ -89,6 +89,11 @@ namespace Bankiru
                 "~/Content/admin_themes/forecasts/forecast.css",
                 "~/Content/admin_themes/forecasts/table.css"
                 ));
+            //Биржа должников
+            bundles.Add(new StyleBundle("~/Content/admin/debtors/css").Include(
+                "~/Content/admin_themes/debtors/debtors.css",
+                "~/Content/admin_themes/debtors/table.css"
+                ));
             //Галерея изображений
             bundles.Add(new StyleBundle("~/Content/admin/images/css").Include(
                 "~/Content/admin_themes/images/images.css"                

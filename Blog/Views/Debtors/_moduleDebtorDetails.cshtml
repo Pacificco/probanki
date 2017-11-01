@@ -14,7 +14,7 @@
             <div><span class="field-name">Первоначальный кредитор</span><span class="field-value">@Model.OriginalCreditorTypeName</span></div>
             <div><span class="field-name">Регион должника</span><span class="field-value">@Model.RegionName</span></div>
             <div><span class="field-name">Населенный пункт</span><span class="field-value">@Model.Locality</span></div>
-            <div><span class="field-name">Дата образования долга</span><span class="field-value">@Model.CreatedAt.ToString("MMMM yyyy", GlobalParams.LocalCultureInfo)</span></div>
+            <div><span class="field-name">Дата образования долга</span><span class="field-value">@Model.DebtCreatedDate.ToString("MMMM yyyy", GlobalParams.LocalCultureInfo)</span></div>
             <div><span class="field-name">Сущность долга</span><span class="field-value">@Model.DebtEssenceTypeName</span></div>
             <div><span class="field-name">Решение суда</span><span class="field-value">@Model.CourtDecisionTypeName</span></div>
             <div class="clear"></div>

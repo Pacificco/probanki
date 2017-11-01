@@ -1,0 +1,76 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@using Bankiru.Models.Infrastructure
+@using Bankiru.Models.Helpers
+@using System.Globalization
+@model VM_Debtors
+@{
+    bool evel = true;
+    string classEvel = "odd";    
+}
+@if (Model != null && Model.Items.Count > 0)
+{
+    <table class="debtors">
+        <tr>
+            <th class="tools"></th>
+            <th class="region">Регион</th>
+            <th class="added-date">Дата добавления</th>
+            <th class="debtor-type">Должник</th>
+            <th class="debt-created-date">Дата образования долга</th>
+            <th class="debt-amount">Сумма долга</th>
+            <th class="sale-price">Цена продажи</th>
+            <th class="id">Id</th>
+        </tr>
+
+
+        @foreach (Debtor item in Model.Items)
+        {
+            <tr class="@classEvel">
+                <td class="tools">
+                    <a class="del-debtor" data-user-name="@item.ContactPerson" href="@Url.Action("Del", "Debtors", new { debtor_id = item.Id })" title="Удалить @item.ContactPerson">
+                            <img src="~/Content/system/del.png" title="Удалить @item.ContactPerson" alt="Удалить" />
+                        </a>
+                        <a href="@Url.Action("Edit", "Debtors", new { debtor_id = item.Id })" title="Редактировать @item.ContactPerson">
+                            <img src="~/Content/system/edit.png" title="Редактировать" />
+                        </a>
+                </td>
+                <td class="region">@item.RegionName</td>
+                <td class="added-date"><time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("MMMM yyyy", GlobalParams.LocalCultureInfo)</time></td>
+                <td class="debtor-type">@item.DebtorTypeName</td>
+                <td class="debt-created-date"><time pubdate datetime="@item.DebtCreatedDate.ToString()">@item.DebtCreatedDate.ToString("MMMM yyyy", GlobalParams.LocalCultureInfo)</time></td>
+                <td class="debt-amount">@item.DebtAmount.ToString("C2", GlobalParams.LocalCultureInfo)</td>
+                <td class="sale-price">@item.SalePrice.ToString("C2", GlobalParams.LocalCultureInfo)</td>                
+                <td class="id">@item.Id.ToString()</td>                
+            </tr>  
+            evel = !evel;
+            if (evel)
+            {
+                classEvel = "odd";
+            }
+            else
+            {
+                classEvel = "evel";
+            }          
+        }
+    </table>
+}
+else
+{
+    <p>Должников не найдено!</p>
+}
+
+@if (Model.Items.Count > 0)
+{
+    @Html.PageLinks(@Model.PagingInfo, x => Url.Action("List", "Debtors", new
+       {
+           CourtDecisionType = (int)Model.Filters.CourtDecisionType,
+           DebtAmountRange = Model.Filters.DebtAmountRange,
+           DebtCreatedRange = Model.Filters.DebtCreatedRange,
+           DebtEssenceType = (int)Model.Filters.DebtEssenceType,
+           DebtorType = (int)Model.Filters.DebtorType,
+           DebtSellerType = (int)Model.Filters.DebtSellerType,
+           OriginalCreditorType = (int)Model.Filters.OriginalCreditorType,
+           RegionId = Model.Filters.RegionId,
+           SalePriceRange = Model.Filters.SalePriceRange,           
+           page = x
+       }))
+}

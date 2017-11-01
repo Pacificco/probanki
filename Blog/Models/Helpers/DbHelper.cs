@@ -18,7 +18,7 @@ namespace Bankiru.Models.Helpers
         public static List<VM_Region> GetRegions()
         {
             string SQLQuery = _sqlGetRegions();
-            List<VM_Region> cats = new List<VM_Region>();
+            List<VM_Region> regions = new List<VM_Region>();
             SqlCommand _command = null;
             SqlDataReader _reader = null;
             lock (GlobalParams._DBAccessLock)
@@ -37,7 +37,7 @@ namespace Bankiru.Models.Helpers
                     {
                         while (_reader.Read())
                         {
-                            cats.Add(new VM_Region()
+                            regions.Add(new VM_Region()
                             {
                                 AoGuid = _reader.GetGuid(0),
                                 FormalName = _reader.GetString(1),
@@ -64,7 +64,16 @@ namespace Bankiru.Models.Helpers
                     }
                 }
             }
-            return cats;
+            regions.Sort((a, b) => {
+                if (a.ShortName == "г" & b.ShortName == "г")
+                    return a.FormalName.CompareTo(b.FormalName);
+                if (a.ShortName == "г")
+                    return -1;
+                if (b.ShortName == "г")
+                    return 1;
+                return a.FormalName.CompareTo(b.FormalName);
+            });
+            return regions;
         }
         private static string _sqlGetRegions()
         {

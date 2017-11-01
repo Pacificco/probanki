@@ -1,0 +1,114 @@
+﻿@using Bankiru.Models.Domain.Debtors
+@using Bankiru.Models.Domain
+@model VM_DebtorsFilter
+@{
+    AjaxOptions _ajaxOptions = new AjaxOptions();
+    _ajaxOptions.HttpMethod = "GET";
+    _ajaxOptions.InsertionMode = InsertionMode.Replace;
+    _ajaxOptions.LoadingElementDuration = 3000;
+    _ajaxOptions.LoadingElementId = "";
+    //_ajaxOptions.OnSuccess = "";
+    //_ajaxOptions.OnFailure = "";
+    _ajaxOptions.UpdateTargetId = "wrapper-debtors-list";
+    _ajaxOptions.Url = "debtors/List";
+}
+<div id="debtors-filter">
+    @using (Html.BeginForm(controllerName: "Debtors", actionName: "List", htmlAttributes: new { id = "debtor-filter" }, routeValues: null, method: FormMethod.Get))
+    {
+        @Html.ValidationSummary(true)        
+        <div class="editor-field editor-field-region">
+            @Html.LabelFor(model => model.RegionId)
+            @Html.Action("_getRegionsDropDownList", "Debtors", new
+       {
+           selectedId = Model.RegionId,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "RegionId"
+       })
+            @Html.ValidationMessageFor(model => model.RegionId)
+        </div>
+        <div class="editor-field editor-field-created-range">
+            @Html.LabelFor(model => model.DebtCreatedRange)
+            @Html.Action("_getDebtCreatedRangeDropDownList", "Debtors", new
+       {
+           selectedId = Model.DebtCreatedRange,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "DebtCreatedRange"
+       })
+            @Html.ValidationMessageFor(model => model.DebtCreatedRange)
+        </div>
+        <div class="editor-field editor-field-amount-range">
+            @Html.LabelFor(model => model.DebtAmountRange)
+            @Html.Action("_getDebtAmountRangeDropDownList", "Debtors", new
+       {
+           selectedId = Model.DebtAmountRange,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "DebtAmountRange"
+       })
+            @Html.ValidationMessageFor(model => model.DebtAmountRange)
+        </div>
+        <div class="editor-field editor-field-sale-price-range">
+            @Html.LabelFor(model => model.SalePriceRange)
+            @Html.Action("_getDebtSalePriceRangeDropDownList", "Debtors", new
+       {
+           selectedId = Model.SalePriceRange,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "SalePriceRange"
+       })
+            @Html.ValidationMessageFor(model => model.SalePriceRange)
+        </div>
+        <div class="editor-field editor-field-court-decision">
+            @Html.LabelFor(model => model.CourtDecisionType)
+            @Html.Action("_getCourtDecisionTypesDropDownList", "Debtors", new
+       {
+           selectedId = Model.CourtDecisionType,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "CourtDecisionType"
+       })
+            @Html.ValidationMessageFor(model => model.CourtDecisionType)
+        </div>
+        <div class="editor-field editor-field-debtor-type">
+            @Html.LabelFor(model => model.DebtorType)
+            @Html.Action("_getDebtorTypesDropDownList", "Debtors", new
+       {
+           selectedId = Model.DebtorType,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "DebtorType"
+       })
+            @Html.ValidationMessageFor(model => model.DebtorType)
+        </div>
+        <div class="editor-field editor-field-essence-type">
+            @Html.LabelFor(model => model.DebtEssenceType)
+            @Html.Action("_getDebtEssenceTypesDropDownList", "Debtors", new
+       {
+           selectedId = Model.DebtEssenceType,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "DebtEssenceType"
+       })
+            @Html.ValidationMessageFor(model => model.DebtEssenceType)
+        </div>
+        <div class="editor-field editor-field-original-creditor">
+            @Html.LabelFor(model => model.OriginalCreditorType)
+            @Html.Action("_getOriginalCreditorTypesDropDownList", "Debtors", new
+       {
+           selectedId = Model.OriginalCreditorType,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "OriginalCreditorType"
+       })
+            @Html.ValidationMessageFor(model => model.OriginalCreditorType)
+        </div>
+        <div class="editor-field editor-field-seller-type">
+            @Html.LabelFor(model => model.DebtSellerType)
+            @Html.Action("_getDebtSellerTypesDropDownList", "Debtors", new
+       {
+           selectedId = Model.DebtSellerType,
+           firstItem = EnumFirstDropDownItem.All,
+           id = "DebtSellerType"
+       })
+            @Html.ValidationMessageFor(model => model.DebtSellerType)
+        </div>
+                
+        <div class="editor-field editor-field-submit">
+            <input type="submit" value="Применить фильтр" class="button-ok" />
+        </div>        
+    }
+</div>

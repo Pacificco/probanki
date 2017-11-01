@@ -204,9 +204,9 @@ begin
 			Name	nvarchar(120)	not null
 			primary key (Id)
 		)
-		if @DebtorId is not null and @DebtorId > 0 begin		
+		if @DebtorTypeId is not null and @DebtorTypeId > 0 begin		
 			insert @debtors(Id, Name) 
-			select t.Id, t.Name from DebtorTypes t where t.Id = @DebtorId
+			select t.Id, t.Name from DebtorTypes t where t.Id = @DebtorTypeId
 		end else begin		
 			insert @debtors(Id, Name)
 			select t.Id, t.Name from DebtorTypes t

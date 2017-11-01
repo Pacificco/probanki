@@ -50,3 +50,6 @@ D:\Проекты\ASP.NET MVC\probanki_net\Blog\bin\ru\System.Web.WebPages.Razor
 D:\Проекты\ASP.NET MVC\probanki_net\Blog\obj\Debug\Bankiru.csprojResolveAssemblyReference.cache
 D:\Проекты\ASP.NET MVC\probanki_net\Blog\obj\Debug\Bankiru.dll
 D:\Проекты\ASP.NET MVC\probanki_net\Blog\obj\Debug\Bankiru.pdb
+D:\Проекты\ASP.NET MVC\probanki_net\Blog\bin\Content\system\dev-page-bg.jpg
+D:\Проекты\ASP.NET MVC\probanki_net\Blog\bin\Content\system\dev-page-bg.png
+D:\Проекты\ASP.NET MVC\probanki_net\Blog\bin\Content\system\not-found.png

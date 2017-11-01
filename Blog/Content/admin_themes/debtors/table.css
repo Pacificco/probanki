@@ -1,0 +1,50 @@
+﻿table.debtors {
+    width: 980px;
+    border: 2px solid #c8ceda;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.debtors tr {
+    background: #ffffff;
+}
+table.debtors tr.evel {
+    background: #f4f5f8;
+}
+table.debtors td {
+    border-right: 1px solid #c8ceda;
+}
+table.debtors th {
+    background: #3d3d3d;
+    background: url(/Content/system/bg-dark-strips.gif) top left repeat;
+    color: white;
+    font-weight: normal;
+}
+table.debtors td.tools, table.debtors td.debt-amount, table.debtors td.region, table.debtors td.debtor-type,
+table.debtors td.added-date, table.debtors td.id, table.debtors td.debt-created-date, table.debtors td.sale-price{
+    text-align: center;
+}
+table.debtors td {
+    border-bottom: 1px solid #c8ceda;
+}
+table.debtors td {
+    padding: 5px;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+table.debtors th {
+    padding: 8px 4px;
+}
+table.debtors td a{
+    color: #5280c5;
+    text-decoration: underline; 
+}
+table.debtors td a:hover{
+    color: #5f88be;
+    text-decoration: none; 
+}
+table.debtors td a img {
+    cursor: pointer;
+}
+.debtors-list table.debtors img.indicator {
+    display: none;
+}

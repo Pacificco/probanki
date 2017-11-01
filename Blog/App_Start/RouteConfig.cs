@@ -229,6 +229,24 @@ namespace Bankiru
             );
             #endregion
 
+            #region ШКОЛА ИНВЕСТОРОВ
+            routes.MapRoute(
+                name: "school",
+                url: "school-investors",
+                defaults: new { controller = "School", action = "Index" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            #endregion
+
+            #region TV
+            routes.MapRoute(
+                name: "tv",
+                url: "tv",
+                defaults: new { controller = "TV", action = "Index" },
+                namespaces: new[] { "Bankiru.Controllers" }
+            );
+            #endregion
+
             #region СТАТИЧЕСКИЕ СТРАНИЦЫ
             routes.MapRoute(
                 name: "rules",

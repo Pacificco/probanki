@@ -34,7 +34,7 @@
                     @Html.Action("_getDebtorTypesDropDownList", "Debtors", new
        {
            selectedId = Model.DebtorType,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "DebtorType"
        })
                     @Html.ValidationMessageFor(model => model.DebtorType)
@@ -62,7 +62,7 @@
                     @Html.Action("_getOriginalCreditorTypesDropDownList", "Debtors", new
        {
            selectedId = Model.OriginalCreditorType,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "OriginalCreditorType"
        })
                     @Html.ValidationMessageFor(model => model.OriginalCreditorType)
@@ -84,7 +84,7 @@
                     @Html.Action("_getRegionsDropDownList", "Debtors", new
        {
            selectedId = Model.RegionId,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "RegionId"
        })
                     @Html.ValidationMessageFor(model => model.RegionId)
@@ -96,7 +96,7 @@
                     @Html.Action("_getDebtSellerTypesDropDownList", "Debtors", new
        {
            selectedId = Model.DebtSellerType,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "DebtSellerType"
        })
                     @Html.ValidationMessageFor(model => model.DebtSellerType)
@@ -121,7 +121,7 @@
             <td>
                 <div class="editor-field editor-field-contact-person">
                     @Html.LabelFor(model => model.ContactPerson)
-                    @Html.EditorFor(model => model.ContactPerson)
+                    @Html.EditorFor(model => model.ContactPerson, new { htmlAttributes = new { placeholder = "Введите телефон" } })                    
                     @Html.ValidationMessageFor(model => model.ContactPerson)
                 </div>
             </td>
@@ -143,7 +143,7 @@
                     @Html.Action("_getDebtEssenceTypesDropDownList", "Debtors", new
        {
            selectedId = Model.DebtEssenceType,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "DebtEssenceType"
        })
                     @Html.ValidationMessageFor(model => model.DebtEssenceType)
@@ -167,7 +167,7 @@
                     @Html.Action("_getCourtDecisionTypesDropDownList", "Debtors", new
        {
            selectedId = Model.CourtDecisionType,
-           firstItem = EnumFirstDropDownItem.All,
+           firstItem = EnumFirstDropDownItem.NotSelected,
            id = "CourtDecisionType"
        })
                     @Html.ValidationMessageFor(model => model.CourtDecisionType)
@@ -202,7 +202,7 @@
                 </div>
             </td>
             <td>
-                <p>Текст</p>
+                <p>Администрация портала Probanki.net оставляет за собой право не размещать объявление без указания причин. Для того, чтобы снять объявление с публикации, обратитесь к модераторам сайта через форму обратной связи.</p>
             </td>
         </tr>
     </table>           

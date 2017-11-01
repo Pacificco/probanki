@@ -46,14 +46,14 @@ namespace Bankiru.Models.Domain.Debtors
             sqlfilter.Assign(filter);
 
             int totalCount = 0;
+            debtors.PagingInfo.ItemsPerPage = _recPerPage;
+            debtors.PagingInfo.CurrentPage = page;
+
             debtors.Items = _getDebtors(sqlfilter, debtors.PagingInfo.GetNumberFrom(), debtors.PagingInfo.GetNumberTo(), out totalCount);
             if (debtors.Items == null)
                 return null;
-
-            debtors.PagingInfo.ItemsPerPage = _recPerPage;
+            
             debtors.PagingInfo.SetData(page, totalCount);
-            debtors.PagingInfo.CurrentPage = page;
-
             return debtors;
         }
         /// <summary>

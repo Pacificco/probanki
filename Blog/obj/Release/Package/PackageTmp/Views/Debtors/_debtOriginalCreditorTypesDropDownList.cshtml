@@ -4,7 +4,7 @@
     List<SelectListItem> _items = new List<SelectListItem>();
     _items.Add(new SelectListItem()
     {
-        Text = "Любой",
+        Text = Model.FirstItem == Bankiru.Models.Domain.EnumFirstDropDownItem.NotSelected ? "" : "Любой",
         Value = "0",
         Selected = Model.SelectedId == 0 ? true : false
     });
