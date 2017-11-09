@@ -19059,3 +19059,970 @@ ERROR 2017-11-01 23:14:40,043  1110ms ChartManager           uotesDataFromYahoo 
    в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
 ERROR 2017-11-01 23:14:40,043  1110ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
 Не удалось загрузить данные
+ERROR 2017-11-02 01:14:40,046 7201113ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 01:14:40,047 7201114ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 01:14:40,222 7201288ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 01:14:40,223 7201289ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 03:14:39,958 14401025ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 03:14:39,958 14401025ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 03:14:40,140 14401207ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 03:14:40,140 14401207ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 05:14:39,987 21601054ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 05:14:39,987 21601054ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 05:14:40,167 21601234ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 05:14:40,167 21601234ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 07:14:39,987 28801054ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 07:14:39,988 28801055ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 07:14:40,165 28801232ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 07:14:40,166 28801233ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 09:14:39,942 36001009ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 09:14:39,943 36001010ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 09:14:40,121 36001188ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 09:14:40,121 36001188ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 11:14:39,918 43200984ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 11:14:39,919 43200985ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 11:14:40,104 43201170ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 11:14:40,104 43201170ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 12:14:43,003 46804070ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Слишком много попыток автоматического перенаправления.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-02 12:14:43,005 46804072ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-02 13:14:40,323 50401390ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 13:14:40,404 50401471ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 13:14:40,584 50401651ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 13:14:40,584 50401651ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 15:14:40,006 57601073ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 15:14:40,014 57601081ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 15:14:40,188 57601255ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 15:14:40,188 57601255ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 17:14:40,081 64801148ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 17:14:40,081 64801148ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 17:14:40,258 64801325ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 17:14:40,259 64801326ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 19:14:40,016 72001083ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 19:14:40,028 72001095ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 19:14:40,207 72001274ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 19:14:40,208 72001275ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 21:14:40,072 79201139ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 21:14:40,073 79201140ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 21:14:40,330 79201397ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 21:14:40,330 79201397ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-02 23:14:40,093 86401160ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 23:14:40,094 86401161ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-02 23:14:40,383 86401450ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (999) Request denied.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-02 23:14:40,383 86401450ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-03 01:14:40,386 93601453ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 01:14:40,387 93601454ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-03 01:14:40,565 93601632ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 01:14:40,565 93601632ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-03 03:14:40,197 100801264ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 03:14:40,198 100801265ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-03 03:14:40,373 100801440ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 03:14:40,387 100801454ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-03 05:14:40,107 108001174ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 05:14:40,108 108001175ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-03 05:14:40,366 108001433ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-03 05:14:40,366 108001433ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:15:26,208 10192ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:15:26,269 10253ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:15:26,464 10448ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:15:26,464 10448ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:16:14,718  3041ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:16:14,727  3050ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:16:14,916  3239ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:16:14,916  3239ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:16:32,988 21311ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:32,995 21318ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:32,996 21319ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:32,997 21320ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:32,998 21321ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:32,999 21322ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,000 21323ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,001 21324ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,002 21325ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,002 21325ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,003 21326ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,004 21327ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,005 21328ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:33,006 21329ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:16:49,801  1211ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:16:49,814  1224ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:16:50,021  1431ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:16:50,022  1432ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:22:00,726 312135ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:22:00,726 312135ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:22:00,907 312316ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:22:00,907 312316ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:29:37,125  1166ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:29:37,137  1178ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:29:37,296  1337ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:29:37,297  1338ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:29:39,613  3654ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:29:39,613  3654ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:29:39,770  3811ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:29:39,771  3812ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:34:39,052 303093ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,054 303095ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,054 303095ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,055 303096ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,055 303096ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,056 303097ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,056 303097ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,057 303098ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,057 303098ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,057 303098ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,058 303099ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,058 303099ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,059 303100ms ForecastManager        SetFieldValue      - Поле RowNum не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:34:39,059 303100ms ForecastManager        SetFieldValue      - Поле UserCount не определено в классе Bankiru.Models.Domain.Club.VM_Forecast!
+ERROR 2017-11-08 19:43:45,179  1019ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:43:45,189  1029ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 19:43:45,365  1205ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 19:43:45,365  1205ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:00:01,710  1020ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:00:01,722  1032ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:00:01,900  1210ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:00:01,900  1210ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:01:48,301   911ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:01:48,311   921ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:01:48,489  1099ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:01:48,489  1099ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:01:50,089  2699ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:01:50,089  2699ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:01:50,260  2870ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:01:50,260  2870ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:16:54,919   900ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:16:54,930   911ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 20:16:55,108  1088ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 20:16:55,108  1088ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:17:07,888 7213868ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:17:07,905 7213885ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:17:08,108 7214088ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:17:08,108 7214088ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:28:34,082 7900062ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:28:34,082 7900062ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:28:34,091 7900071ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:28:34,091 7900071ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:30:58,528   716ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:30:58,538   726ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:30:58,540   728ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:30:58,540   728ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:31:00,593  2781ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:31:00,593  2781ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:31:01,595  3783ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:31:01,596  3784ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:40:10,005 15485ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'download.finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:40:10,042 15522ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:40:22,160 27640ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'download.finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:40:22,161 27641ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:48:11,386   950ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:48:11,396   960ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 22:48:11,558  1122ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 22:48:11,558  1122ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:26:23,314  4219ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:26:23,324  4229ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:26:23,506  4411ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:26:23,506  4411ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:30:42,997  1528ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:30:43,007  1538ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:30:43,269  1800ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:30:43,269  1800ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:30:57,306  1263ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:30:57,315  1272ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-08 23:30:57,511  1468ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-08 23:30:57,511  1468ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 01:30:57,449 7201405ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 01:30:57,450 7201406ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 01:30:57,633 7201589ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 01:30:57,634 7201590ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 03:30:57,262 14401218ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 03:30:57,263 14401219ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 03:30:57,441 14401397ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 03:30:57,442 14401398ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 05:30:58,528 21602484ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 05:30:58,529 21602485ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 05:31:00,957 21604913ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 05:31:00,958 21604914ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 07:01:10,879 27014836ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 07:01:10,881 27014838ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 07:31:10,864 28814821ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 07:31:10,889 28814846ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 07:31:10,904 28814861ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 07:31:10,904 28814861ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 07:31:10,905 28814862ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-11-09 07:31:25,159 28829115ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 07:31:25,159 28829115ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 07:31:25,160 28829116ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-11-09 07:31:37,164 28841120ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 07:31:37,164 28841120ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 07:31:49,168 28853124ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 07:31:49,168 28853124ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 08:01:10,875 30614832ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 08:01:10,876 30614833ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 08:31:10,876 32414833ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 08:31:10,877 32414834ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 09:01:10,879 34214835ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 09:01:10,880 34214836ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 09:31:10,876 36014832ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 09:31:10,876 36014832ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 09:31:10,878 36014834ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 09:31:10,878 36014834ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-11-09 09:31:10,877 36014833ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 09:31:25,132 36029088ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 09:31:25,133 36029089ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 09:31:25,133 36029089ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-11-09 09:31:37,137 36041093ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 09:31:37,137 36041093ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 09:31:49,140 36053097ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 09:31:49,140 36053097ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 10:01:10,872 37814828ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 10:01:10,873 37814829ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 10:31:10,887 39614843ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 10:31:10,888 39614844ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 11:01:10,888 41414844ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 11:01:10,889 41414845ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 11:31:10,879 43214835ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 11:31:10,879 43214835ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Currencies.WebRequestsCBR.GetCurrentCourses(DateTime today, WebProxy proxy) в d:\Проекты\ASP.NET MVC\probanki_net\Currencies\WebRequestsCBR.cs:строка 37
+ERROR 2017-11-09 11:31:10,881 43214837ms CurrenciesDownloader   LoadCurrencies     - Не удалось загрузить курсы валют!
+ERROR 2017-11-09 11:31:10,880 43214836ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 11:31:10,882 43214838ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс доллара)!
+Не удалось загрузить данные
+ERROR 2017-11-09 11:31:25,136 43229092ms WebRequestsCBR         GetCurrentCourses  - [currencies]
+System.Net.WebException: Невозможно разрешить удаленное имя: 'www.cbr.ru'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.CBR.WebRequestsCBR.GetCurrentCourses(DateTime from, DateTime to, String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\CBR\WebRequestsCBR.cs:строка 40
+ERROR 2017-11-09 11:31:25,137 43229093ms ChartManager           dQuotesDataFromCBR - Не удалось загрузить динамику курса валют!
+ERROR 2017-11-09 11:31:25,137 43229093ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Курс евро)!
+Не удалось загрузить данные
+ERROR 2017-11-09 11:31:37,141 43241097ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 11:31:37,142 43241098ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 11:31:49,144 43253100ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Невозможно разрешить удаленное имя: 'finance.yahoo.com'
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 11:31:49,144 43253100ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:09:20,333  3750ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:09:20,390  3807ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:09:20,580  3997ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:09:20,580  3997ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:18:45,765  1721ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:18:45,777  1733ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:18:46,313  2269ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:18:46,314  2270ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:20:44,586  1016ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:20:44,597  1027ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:20:44,781  1211ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:20:44,781  1211ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:21:25,968  1577ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:21:25,978  1587ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:21:26,184  1793ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:21:26,184  1793ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:29:48,158   995ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:29:48,168  1005ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:29:48,331  1168ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:29:48,332  1169ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:49:03,347  1570ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:49:03,357  1580ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:49:03,555  1778ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:49:03,563  1786ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:49:16,148  1309ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:49:16,196  1357ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 19:49:16,372  1533ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 19:49:16,372  1533ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:48:21,843  1035ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:48:21,853  1045ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:48:22,030  1222ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:48:22,031  1223ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:52:56,108  1417ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:52:56,119  1428ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:52:56,316  1625ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:52:56,316  1625ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:53:14,925 20234ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:53:14,925 20234ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 20:53:15,120 20429ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 20:53:15,120 20429ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:05:51,436  1121ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:05:51,446  1131ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:05:51,663  1348ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:05:51,663  1348ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:06:06,825   982ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:06:06,835   992ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:06:06,999  1156ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:06:07,000  1157ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:41,684  1553ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:41,694  1563ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:41,897  1766ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:41,897  1766ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:42,460  2329ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:42,460  2329ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:42,631  2500ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:42,631  2500ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:54,258  1449ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:54,268  1459ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:08:54,460  1651ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:08:54,461  1652ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:13:12,835  2396ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:13:12,845  2406ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:13:13,043  2604ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:13:13,043  2604ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:15:54,049 163610ms DebtorsManager         _getDebtors        - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:15:54,067 163628ms BaseController         _list              - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:16:22,909 192471ms DebtorsManager         _getDebtors        - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:17:12,756 242317ms BaseController         _list              - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:18:41,233 330794ms DebtorsManager         _getDebtors        - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:18:41,234 330795ms BaseController         _list              - Ошибка во время загрузки должников из базы данных DebtorsView!
+System.Data.SqlClient.SqlException (0x80131904): Процедура или функция "DebtorsView" ожидает параметр "@Published", который не был указан.
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader()
+   в Bankiru.Models.Domain.Debtors.DebtorsManager._getDebtors(DebtorsFilter filter, Int32 recNoFrom, Int32 recNoTo, Int32& totalCount) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\Domain\Debtors\DebtorsManager.cs:строка 151
+ClientConnectionId:d7eef953-82d1-401d-8d44-cdfa15e9feab
+ERROR 2017-11-09 21:20:12,947  1088ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:20:12,956  1097ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:20:13,124  1265ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:20:13,124  1265ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:31:48,458   906ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:31:48,468   916ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:31:48,641  1089ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:31:48,641  1089ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:34:42,018  1195ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:34:42,049  1226ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:34:42,210  1387ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:34:42,211  1388ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:38:22,793   905ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:38:22,804   916ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:38:22,998  1110ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:38:22,998  1110ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:40:04,035   933ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:40:04,046   944ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:40:04,209  1107ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:40:04,209  1107ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:40:24,194 21092ms DebtorsManager         DeleteDebtor       - Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 21:40:24,195 21093ms BaseController         Del                - Ошибка во время удаления должника с Id=2! Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 21:40:38,272  1605ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:40:38,283  1616ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:40:38,502  1835ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 21:40:38,502  1835ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 21:44:20,150 223483ms DebtorsManager         DeleteDebtor       - Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 21:44:20,152 223485ms BaseController         Del                - Ошибка во время удаления должника с Id=2! Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 21:59:27,846 1131179ms DebtorsManager         DeleteDebtor       - Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 21:59:27,846 1131179ms BaseController         Del                - Ошибка во время удаления должника с Id=4! Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 22:07:38,780 1622113ms DebtorsManager         DeleteDebtor       - Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 22:07:38,781 1622114ms BaseController         Del                - Ошибка во время удаления должника с Id=4! Ошибка во время выполнения хранимой процедуры DebtorsEdit!
+Операция 3.
+ERROR 2017-11-09 22:28:20,272   961ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:28:20,296   985ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:28:20,461  1150ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:28:20,461  1150ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:30:37,988   974ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:30:37,999   985ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:30:38,162  1148ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:30:38,163  1149ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:31:37,571  1312ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:31:37,581  1322ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:31:37,759  1500ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:31:37,759  1500ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:35:00,764  1516ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:35:00,775  1527ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:35:00,966  1718ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:35:00,966  1718ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:39:13,661   928ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:39:13,671   938ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:39:13,835  1102ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:39:13,835  1102ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:42:06,867   980ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:42:06,877   990ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:42:07,042  1155ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:42:07,042  1155ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:51:09,178   999ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:51:09,190  1011ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:51:09,372  1193ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:51:09,372  1193ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:54:22,604   967ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:54:22,615   978ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 22:54:22,804  1167ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 22:54:22,804  1167ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 23:01:47,318  1225ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 23:01:47,328  1235ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 23:01:47,555  1462ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 23:01:47,555  1462ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные
+ERROR 2017-11-09 23:04:11,085   898ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 23:04:11,095   908ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Роснефти)!
+Не удалось загрузить данные
+ERROR 2017-11-09 23:04:11,279  1092ms ChartManager           uotesDataFromYahoo - System.Net.WebException: Удаленный сервер возвратил ошибку: (403) Запрещено.
+   в System.Net.HttpWebRequest.GetResponse()
+   в Bankiru.Models.OutApi.ChartManager.LoadQuotesDataFromYahoo(String subject) в d:\Проекты\ASP.NET MVC\probanki_net\Blog\Models\OutApi\ChartManager.cs:строка 103
+ERROR 2017-11-09 23:04:11,279  1092ms ChartDownloader        _loadQuotes        - Ошибка во время загрузки статической информации для графика (Акции Сбербанка)!
+Не удалось загрузить данные

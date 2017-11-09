@@ -1658,7 +1658,7 @@ namespace Bankiru.Models.DataBase
                 public static class Params
                 {
                     /// <summary>
-                    /// Тип операции: 1 - Создать, 2 - Изменить, 3 - Удалить, 4 - Архивировать, 5 - Закрыть должника
+                    /// Тип операции: 1 - Создать, 2 - Изменить, 3 - Удалить, 4 - Архивировать, 5 - Активность
                     /// </summary>
                     public static string Operation = "@Operation";
                     /// <summary>

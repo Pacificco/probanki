@@ -134,7 +134,7 @@ begin
 				when 3 then 300000
 				when 4 then 500000
 				when 5 then 1000000
-				when 6 then 1000000000
+				when 6 then 1000000000				
 			end
 		end
 		-- Сумма долга ------------------------------------
@@ -153,8 +153,8 @@ begin
 				when 5 then 500000
 				when 6 then 1000000
 			end
-			set @debtAmountTo =
-			case @salePriceTo
+			set @salePriceTo =
+			case @SalePriceRange
 				when 1 then 50000
 				when 2 then 100000	
 				when 3 then 300000
@@ -262,46 +262,92 @@ begin
 		-- Продавец долга ------------------------------------
 		--select * from @debtSellers
 		
-		insert @tempDebtors
-		select *  
-		from (
-			select row_number() over (order by DebtCreatedDate desc) as RowIndex
-					,d.Id
-					,d.DebtorTypeId
-					,d.Published
-					,d.OriginalCreditorTypeId
-					,d.RegionId
-					,d.Locality
-					,d.DebtEssenceTypeId
-					,d.CourtDecisionTypeId
-					,d.DebtCreatedDate
-					,d.DebtAmount
-					,d.SalePrice
-					,d.DebtSellerTypeId
-					,d.ContactPerson
-					,d.ContactPhone
-					,d.DopPhone
-					,d.Email
-					,d.Comment
-					,d.CreatedAt
-					,d.UpdatedAt	
-					,r.Name as 'RegionName'
-					,dt.Name as 'DebtorTypeName'
-					,oc.Name as 'OriginalCreditorTypeName'
-					,cd.Name as 'CourtDecisionTypeName'
-					,s.Name as 'DebtSellerTypeName'
-					,e.Name as 'DebtEssenceTypeName'					
-			from Debtors d
-				join @regions r on d.RegionId = r.Id
-				join @courtDecisions cd on d.CourtDecisionTypeId = cd.Id
-				join @debtors dt on d.DebtorTypeId = dt.Id
-				join @debtEssences e on d.DebtEssenceTypeId = e.Id
-				join @originalCreditors oc on d.OriginalCreditorTypeId = oc.Id
-				join @debtSellers s on d.DebtSellerTypeId = s.Id
-			where d.DebtAmount >= @debtAmountFrom and d.DebtAmount < @debtAmountTo and
-				d.SalePrice >= @salePriceFrom and d.SalePrice < @salePriceTo and
-				d.Published = @Published
-		) as result
+		if @Published is null begin
+		
+			insert @tempDebtors
+			select *  
+			from (
+				select row_number() over (order by DebtCreatedDate desc) as RowIndex
+						,d.Id
+						,d.DebtorTypeId
+						,d.Published
+						,d.OriginalCreditorTypeId
+						,d.RegionId
+						,d.Locality
+						,d.DebtEssenceTypeId
+						,d.CourtDecisionTypeId
+						,d.DebtCreatedDate
+						,d.DebtAmount
+						,d.SalePrice
+						,d.DebtSellerTypeId
+						,d.ContactPerson
+						,d.ContactPhone
+						,d.DopPhone
+						,d.Email
+						,d.Comment
+						,d.CreatedAt
+						,d.UpdatedAt	
+						,r.Name as 'RegionName'
+						,dt.Name as 'DebtorTypeName'
+						,oc.Name as 'OriginalCreditorTypeName'
+						,cd.Name as 'CourtDecisionTypeName'
+						,s.Name as 'DebtSellerTypeName'
+						,e.Name as 'DebtEssenceTypeName'					
+				from Debtors d
+					join @regions r on d.RegionId = r.Id
+					join @courtDecisions cd on d.CourtDecisionTypeId = cd.Id
+					join @debtors dt on d.DebtorTypeId = dt.Id
+					join @debtEssences e on d.DebtEssenceTypeId = e.Id
+					join @originalCreditors oc on d.OriginalCreditorTypeId = oc.Id
+					join @debtSellers s on d.DebtSellerTypeId = s.Id
+				where d.DebtAmount >= @debtAmountFrom and d.DebtAmount < @debtAmountTo and
+					d.SalePrice >= @salePriceFrom and d.SalePrice < @salePriceTo					
+			) as result
+		
+		end else begin
+		
+			insert @tempDebtors
+			select *  
+			from (
+				select row_number() over (order by DebtCreatedDate desc) as RowIndex
+						,d.Id
+						,d.DebtorTypeId
+						,d.Published
+						,d.OriginalCreditorTypeId
+						,d.RegionId
+						,d.Locality
+						,d.DebtEssenceTypeId
+						,d.CourtDecisionTypeId
+						,d.DebtCreatedDate
+						,d.DebtAmount
+						,d.SalePrice
+						,d.DebtSellerTypeId
+						,d.ContactPerson
+						,d.ContactPhone
+						,d.DopPhone
+						,d.Email
+						,d.Comment
+						,d.CreatedAt
+						,d.UpdatedAt	
+						,r.Name as 'RegionName'
+						,dt.Name as 'DebtorTypeName'
+						,oc.Name as 'OriginalCreditorTypeName'
+						,cd.Name as 'CourtDecisionTypeName'
+						,s.Name as 'DebtSellerTypeName'
+						,e.Name as 'DebtEssenceTypeName'					
+				from Debtors d
+					join @regions r on d.RegionId = r.Id
+					join @courtDecisions cd on d.CourtDecisionTypeId = cd.Id
+					join @debtors dt on d.DebtorTypeId = dt.Id
+					join @debtEssences e on d.DebtEssenceTypeId = e.Id
+					join @originalCreditors oc on d.OriginalCreditorTypeId = oc.Id
+					join @debtSellers s on d.DebtSellerTypeId = s.Id
+				where d.DebtAmount >= @debtAmountFrom and d.DebtAmount < @debtAmountTo and
+					d.SalePrice >= @salePriceFrom and d.SalePrice < @salePriceTo and
+					d.Published = @Published
+			) as result
+		
+		end
 		
 		select @TotalCount = (select COUNT(1) from @tempDebtors)
 		select * from @tempDebtors as result

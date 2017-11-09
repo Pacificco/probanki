@@ -468,6 +468,7 @@
     <Content Include="Areas\Admin\Views\Debtors\_debtDebtSellerTypesDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Debtors\_debtOriginalCreditorTypesDropDownList.cshtml" />
     <Content Include="Areas\Admin\Views\Debtors\_debtSalePriceRangeDropDownList.cshtml" />
+    <Content Include="Areas\Admin\Views\Debtors\New.cshtml" />
     <None Include="Properties\PublishProfiles\Probanki.pubxml">
       <SubType>Designer</SubType>
     </None>

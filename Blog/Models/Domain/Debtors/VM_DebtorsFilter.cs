@@ -16,9 +16,9 @@ namespace Bankiru.Models.Domain.Debtors
         /// Публикация
         /// </summary>        
         [Display(Name = "Активность")]
-        public bool Published { get; set; }
+        public EnumBoolType Published { get; set; }
         /// <summary>
-        /// Тип должника
+        /// Идентификатор должника
         /// </summary>
         [Display(Name = "Id")]
         [HiddenInput]
@@ -74,7 +74,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// </summary>
         public VM_DebtorsFilter()
         {
-            Published = true;
+            Published = EnumBoolType.True;
             DebtorId = 0;
             DebtorType = EnumDebtorType.Undefind;
             OriginalCreditorType = EnumOriginalCreditorType.Undefind;

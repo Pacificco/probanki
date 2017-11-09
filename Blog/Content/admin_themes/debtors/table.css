@@ -23,12 +23,16 @@ table.debtors td.tools, table.debtors td.debt-amount, table.debtors td.region, t
 table.debtors td.added-date, table.debtors td.id, table.debtors td.debt-created-date, table.debtors td.sale-price{
     text-align: center;
 }
+table.debtors td.tools a,
+table.debtors td.tools a img{
+    text-decoration: none;
+}
 table.debtors td {
     border-bottom: 1px solid #c8ceda;
 }
 table.debtors td {
     padding: 5px;
-    font-size: 0.9em;
+    /*font-size: 0.9em;*/
     vertical-align: middle;
 }
 table.debtors th {
@@ -45,6 +49,6 @@ table.debtors td a:hover{
 table.debtors td a img {
     cursor: pointer;
 }
-.debtors-list table.debtors img.indicator {
+#wrapper-debtors-list table.debtors img.indicator {
     display: none;
 }

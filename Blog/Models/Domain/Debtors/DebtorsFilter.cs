@@ -13,7 +13,7 @@ namespace Bankiru.Models.Domain.Debtors
         /// <summary>
         /// Публикация
         /// </summary>
-        public bool Published { get; set; }
+        public bool? Published { get; set; }
         /// <summary>
         /// Идентификатор должника
         /// </summary>
@@ -85,7 +85,18 @@ namespace Bankiru.Models.Domain.Debtors
         /// <param name="obj">Фильтр должников с Front End</param>
         public void Assign(VM_DebtorsFilter obj)
         {
-            Published = obj.Published;
+            switch (obj.Published)
+            {
+                case EnumBoolType.True:
+                    Published = true;
+                    break;
+                case EnumBoolType.False:
+                    Published = false;
+                    break;
+                case EnumBoolType.None:
+                    Published = null;
+                    break;
+            }            
             DebtorId = obj.DebtorId == 0 ? null : (int?)obj.DebtorId;
             DebtorType = obj.DebtorType;
             OriginalCreditorType = obj.OriginalCreditorType;

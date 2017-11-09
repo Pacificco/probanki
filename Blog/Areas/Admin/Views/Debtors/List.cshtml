@@ -70,7 +70,7 @@
         // Удаление пользователя
         $("#content .del-debtor").click(function (event) {
             var debtorName = $(this).attr("data-debtor-name");
-            if (!confirm("Вы действительно хотите удалить " + debtorName + "?"))
+            if (!confirm("Вы действительно хотите удалить должника '" + debtorName + "'?"))
             {
                 event.preventDefault();
             }

@@ -15,7 +15,14 @@
 <div id="debtors-filter">
     @using (Html.BeginForm(controllerName: "Debtors", actionName: "List", htmlAttributes: new { id = "debtor-filter" }, routeValues: null, method: FormMethod.Get))
     {
-        @Html.ValidationSummary(true)        
+        @Html.ValidationSummary(true)      
+        
+        <div class="editor-field editor-field-active">
+            @Html.LabelFor(model => model.Published)
+            @Html.Action("_getActiveDropDownList", "Debtors", new { selectedId = Model.Published, 
+           firstItem = EnumFirstDropDownItem.All, id = "Published" })
+            @Html.ValidationMessageFor(model => model.Published)
+        </div>          
         <div class="editor-field editor-field-region">
             @Html.LabelFor(model => model.RegionId)
             @Html.Action("_getRegionsDropDownList", "Debtors", new
@@ -108,7 +115,7 @@
         </div>
                 
         <div class="editor-field editor-field-submit">
-            <input type="submit" value="Применить фильтр" class="button-ok" />
+            <input type="submit" value="Применить фильтр" />
         </div>        
     }
 </div>

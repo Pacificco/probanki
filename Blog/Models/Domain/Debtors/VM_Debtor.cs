@@ -187,6 +187,37 @@ namespace Bankiru.Models.Domain.Debtors
             IsArchived = false;
             ArchivedDate = null;
 
+            CaptchaCode = "";
+            AgreementAccept = false;
+        }
+        /// <summary>
+        /// Присваивает значения указанного объекта
+        /// </summary>
+        /// <param name="obj">Должник</param>
+        public void Assign(Debtor obj)
+        {
+            Id = obj.Id;
+            Published = obj.Published;
+            DebtorType = (int)obj.DebtorType;
+            OriginalCreditorType = (int)obj.OriginalCreditorType;
+            RegionId = obj.RegionId;
+            Locality = obj.Locality;
+            DebtEssenceType = (int)obj.DebtEssenceType;
+            CourtDecisionType = (int)obj.CourtDecisionType;
+            DebtCreatedDate = obj.DebtCreatedDate;
+            DebtAmount = obj.DebtAmount.ToString(GlobalParams.LocalCultureInfo);
+            SalePrice = obj.SalePrice.ToString(GlobalParams.LocalCultureInfo);
+            DebtSellerType = (int)obj.DebtSellerType;
+            ContactPerson = obj.ContactPerson;
+            ContactPhone = obj.ContactPhone.ToString();
+            DopPhone = obj.DopPhone == 0 ? String.Empty : obj.DopPhone.ToString();
+            Email = obj.Email;
+            Comment = obj.Comment;
+            CreatedAt = obj.CreatedAt;
+            UpdatedAt = obj.UpdatedAt;
+            IsArchived = obj.IsArchived;
+            ArchivedDate = obj.ArchivedDate;
+
             CaptchaCode = String.Empty;
             AgreementAccept = false;
         }

@@ -7,11 +7,13 @@
     bool evel = true;
     string classEvel = "odd";    
 }
+
 @if (Model != null && Model.Items.Count > 0)
 {
     <table class="debtors">
         <tr>
             <th class="tools"></th>
+            <th class="published">А</th>
             <th class="region">Регион</th>
             <th class="added-date">Дата добавления</th>
             <th class="debtor-type">Должник</th>
@@ -26,13 +28,28 @@
         {
             <tr class="@classEvel">
                 <td class="tools">
-                    <a class="del-debtor" data-user-name="@item.ContactPerson" href="@Url.Action("Del", "Debtors", new { debtor_id = item.Id })" title="Удалить @item.ContactPerson">
+                    <a class="del-debtor" data-debtor-name="@item.ContactPerson" href="@Url.Action("Del", "Debtors", new { id = item.Id })" title="Удалить @item.ContactPerson">
                             <img src="~/Content/system/del.png" title="Удалить @item.ContactPerson" alt="Удалить" />
                         </a>
-                        <a href="@Url.Action("Edit", "Debtors", new { debtor_id = item.Id })" title="Редактировать @item.ContactPerson">
+                        <a href="@Url.Action("Edit", "Debtors", new { id = item.Id })" title="Редактировать @item.ContactPerson">
                             <img src="~/Content/system/edit.png" title="Редактировать" />
                         </a>
                 </td>
+                <td class="published">
+                        @if (item.Published)
+                        {
+                            <a href="@Url.RouteUrl("admin_debtors", new { action = "Active", id = item.Id })" title="Активный" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                                <img src="~/Content/system/active.png" title="Активный" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@Url.RouteUrl("admin_debtors", new { action = "Disactivate", id = item.Id })" title="Не активный" class="active-change a-active-@item.Id" data-item-id="@item.Id" data-is-active="false">
+                                <img src="~/Content/system/disactive.png" title="Не активный" class="img-active-@item.Id" />
+                            </a>
+                        }
+                        <img src="~/Content/system/spinning.gif" title="Подождите..." class="indicator" />
+                    </td>
                 <td class="region">@item.RegionName</td>
                 <td class="added-date"><time pubdate datetime="@item.CreatedAt.ToString()">@item.CreatedAt.ToString("MMMM yyyy", GlobalParams.LocalCultureInfo)</time></td>
                 <td class="debtor-type">@item.DebtorTypeName</td>
@@ -62,6 +79,7 @@ else
 {
     @Html.PageLinks(@Model.PagingInfo, x => Url.Action("List", "Debtors", new
        {
+           Published = (int)Model.Filters.Published,
            CourtDecisionType = (int)Model.Filters.CourtDecisionType,
            DebtAmountRange = Model.Filters.DebtAmountRange,
            DebtCreatedRange = Model.Filters.DebtCreatedRange,

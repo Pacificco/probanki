@@ -99,7 +99,10 @@ namespace Bankiru.Models.Domain.Debtors
 
             SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.DebtorsView.Name, GlobalParams.GetConnection());
             command.CommandType = System.Data.CommandType.StoredProcedure;
-            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.Published, filter.Published);
+            if (filter.Published == null)
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.Published, DBNull.Value);
+            else
+                command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.Published, (bool)filter.Published);
             if (filter.DebtorId == null)
                 command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsView.Params.DebtorId, DBNull.Value);
             else
@@ -345,6 +348,70 @@ namespace Bankiru.Models.Domain.Debtors
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Operation, 3);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Id, debtorId);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Published, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.CourtDecisionTypeId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtAmount, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtCreatedDate, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtEssenceTypeId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtorTypeId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtSellerTypeId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.RegionId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.SalePrice, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.OriginalCreditorTypeId, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Locality, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Comment, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.ContactPerson, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.ContactPhone, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DopPhone, DBNull.Value);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Email, DBNull.Value);
+
+            SqlParameter returnValue = new SqlParameter();
+            returnValue.DbType = System.Data.DbType.Int32;
+            returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+            returnValue.Value = 1;
+            command.Parameters.Add(returnValue);
+
+            command.CommandTimeout = 15;
+            lock (GlobalParams._DBAccessLock)
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    if ((int)returnValue.Value == 1)
+                    {
+                        _lastError = String.Format("Ошибка во время выполнения хранимой процедуры {0}!\nОперация {1}.",
+                            DbStruct.PROCEDURES.DebtorsEdit.Name, 3);
+                        log.Error(_lastError);
+                        return false;
+                    }
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    _lastError = String.Format("Ошибка во время создания/обновления должника в базе данных {0}!\n{1}",
+                        DbStruct.PROCEDURES.DebtorsEdit.Name, ex.ToString());
+                    log.Error(_lastError);
+                    return false;
+                }
+                finally
+                {
+                    if (command != null)
+                        command.Dispose();
+                }
+            }
+        }
+        /// <summary>
+        /// Изменяет активность указанного должника
+        /// </summary>
+        /// <param name="debtorId">Должник</param>
+        /// <param name="activeState">Состояние активности</param>
+        /// <returns>Логическое значение</returns>
+        public bool SetDebtorActive(int debtorId, bool activeState)
+        {
+            SqlCommand command = new SqlCommand(DbStruct.PROCEDURES.DebtorsEdit.Name, GlobalParams.GetConnection());
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Operation, 5);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Id, debtorId);
+            command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.Published, activeState);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.CourtDecisionTypeId, DBNull.Value);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtAmount, DBNull.Value);
             command.Parameters.AddWithValue(DbStruct.PROCEDURES.DebtorsEdit.Params.DebtCreatedDate, DBNull.Value);

@@ -6,7 +6,7 @@
 if exists(select 1 from sysobjects where name = N'DebtorsEdit' and xtype='P') drop proc DebtorsEdit
 go
 create proc DebtorsEdit (
-	@Operation				int,					-- Тип операции: 1 - Создать, 2 - Изменить, 3 - Удалить, 4 - Архивировать, 5 - Закрыть должника
+	@Operation				int,					-- Тип операции: 1 - Создать, 2 - Изменить, 3 - Удалить, 4 - Архивировать, 5 - Активность
 	@Id						int,					-- Идентификатор должника
 	@DebtorTypeId			int,					-- Тип должника
 	@Published				bit,					-- Опубликован
@@ -167,9 +167,7 @@ begin
 					,@curDate
 			From Debtors 
 			where Id = @Id
-			
-			delete Debtors where Id = @Id
-			
+						
 		end else
 		if @Operation = 5 begin		-- Изменяет активность
 			
@@ -186,6 +184,6 @@ begin
 		if @trancount = 0	
 			rollback transaction
 		return 1
-	end catch 
+	end catch
 end
 go
